@@ -8,3 +8,5 @@ Disallow: /mentions-legales.html
 Disallow: /confidentialite.html
 
 Sitemap: https://altos.fr/sitemap.xml
+
+//alto est passé par là
