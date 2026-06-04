@@ -1,0 +1,1122 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>ALTOS — Tech optimiste</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0a0d10;
+    --bg-2: #11151a;
+    --bg-3: #1a2028;
+    --ink: #e8ecef;
+    --ink-2: #a8b0b8;
+    --ink-3: #6b7480;
+    --line: #1f2630;
+    --line-2: #2a3340;
+    --accent: #c4f542;          /* electric lime */
+    --accent-2: #66d9ff;        /* cyan */
+    --warm: #ff9466;            /* warm complement */
+    --sans: "Space Grotesk", system-ui, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, monospace;
+    --r: 16px;
+    --anim: 1;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  body { overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--accent); color: var(--bg); }
+
+  /* ─── Backdrop grid ─── */
+  body::before {
+    content: ""; position: fixed; inset: 0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.4;
+    z-index: 0;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  }
+  body > * { position: relative; z-index: 1; }
+
+  /* ─── Reusable ─── */
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+  .tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px; letter-spacing: 0.04em;
+    padding: 6px 12px;
+    border: 1px solid var(--line-2);
+    border-radius: 999px;
+    color: var(--ink-2);
+    background: rgba(255,255,255,0.02);
+  }
+  .tag::before {
+    content: ""; width: 6px; height: 6px;
+    background: var(--accent); border-radius: 50%;
+    box-shadow: 0 0 12px var(--accent);
+    animation: pulse calc(2s / var(--anim, 1)) ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-family: var(--sans);
+    font-weight: 500; font-size: 14px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform .25s, background .25s, color .25s, box-shadow .25s, border-color .25s;
+  }
+  .btn--primary { background: var(--accent); color: var(--bg); }
+  .btn--primary:hover {
+    transform: translateY(calc(-2px * var(--anim)));
+    box-shadow: 0 8px 24px -8px var(--accent), 0 0 0 1px var(--accent);
+  }
+  .btn--ghost { border-color: var(--line-2); color: var(--ink); }
+  .btn--ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .btn .arrow { transition: transform .25s; }
+  .btn:hover .arrow { transform: translateX(calc(3px * var(--anim))); }
+
+  .reveal { opacity: 0; transform: translateY(calc(20px * var(--anim))); transition: opacity .8s ease, transform .8s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* ─── NAV ─── */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(18px);
+    background: color-mix(in srgb, var(--bg) 70%, transparent);
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s;
+  }
+  .nav.scrolled { border-bottom-color: var(--line); }
+  .nav__inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 32px;
+    max-width: 1280px; margin: 0 auto;
+  }
+  .logo {
+    display: flex; align-items: center; gap: 10px;
+    font-weight: 600; font-size: 18px;
+    letter-spacing: -0.02em;
+  }
+  .logo__mark {
+    width: 28px; height: 28px;
+    border-radius: 8px;
+    background: var(--accent);
+    color: var(--bg);
+    display: grid; place-items: center;
+    font-size: 14px; font-weight: 700;
+    position: relative;
+  }
+  .logo__mark::after {
+    content: ""; position: absolute; inset: -4px;
+    border-radius: 12px;
+    background: var(--accent);
+    opacity: 0.25; filter: blur(8px);
+    z-index: -1;
+  }
+  .nav__links { display: flex; gap: 28px; font-size: 14px; }
+  .nav__links a { color: var(--ink-2); transition: color .2s; }
+  .nav__links a:hover { color: var(--ink); }
+  .nav__status {
+    display: flex; align-items: center; gap: 6px;
+    font-family: var(--mono); font-size: 11px;
+    color: var(--ink-3);
+  }
+  .nav__status::before {
+    content: ""; width: 6px; height: 6px;
+    background: var(--accent); border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent);
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    padding: 80px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero__orb {
+    position: absolute;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--accent) 0%, transparent 60%);
+    opacity: 0.15;
+    filter: blur(40px);
+    top: -200px; right: -200px;
+    z-index: 0;
+    animation: float calc(20s / var(--anim, 1)) ease-in-out infinite;
+  }
+  .hero__orb-2 {
+    position: absolute;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--accent-2) 0%, transparent 60%);
+    opacity: 0.1;
+    filter: blur(40px);
+    bottom: -100px; left: -100px;
+    z-index: 0;
+    animation: float calc(25s / var(--anim, 1)) ease-in-out infinite reverse;
+  }
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(40px, -30px) scale(1.1); }
+  }
+  .hero__inner { position: relative; z-index: 1; text-align: center; }
+  .hero h1 {
+    font-weight: 500;
+    font-size: clamp(56px, 9vw, 128px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    margin: 24px 0 32px;
+    max-width: 1100px;
+    margin-left: auto; margin-right: auto;
+  }
+  .hero h1 .glow {
+    color: var(--accent);
+    text-shadow: 0 0 40px color-mix(in srgb, var(--accent) 50%, transparent);
+  }
+  .hero h1 .blur {
+    color: var(--ink-2);
+  }
+  .hero__sub {
+    font-size: 19px;
+    color: var(--ink-2);
+    max-width: 600px;
+    margin: 0 auto 36px;
+    line-height: 1.5;
+  }
+  .hero__cta { display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .hero__stats {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 80px;
+    padding: 32px;
+    border: 1px solid var(--line-2);
+    border-radius: var(--r);
+    background: color-mix(in srgb, var(--bg-2) 80%, transparent);
+    backdrop-filter: blur(8px);
+  }
+  .hero__stat { text-align: left; padding: 0 12px; border-left: 1px solid var(--line); }
+  .hero__stat:first-child { border-left: none; }
+  .hero__stat strong {
+    display: block;
+    font-size: 36px; font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .hero__stat span { font-size: 13px; color: var(--ink-2); line-height: 1.4; display: block; }
+
+  /* Live terminal */
+  .term {
+    margin-top: 64px;
+    background: var(--bg-2);
+    border: 1px solid var(--line-2);
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+    max-width: 760px;
+    margin-left: auto; margin-right: auto;
+    box-shadow: 0 30px 60px -30px rgba(0,0,0,0.6);
+  }
+  .term__head {
+    display: flex; align-items: center; gap: 8px;
+    padding: 12px 16px;
+    background: var(--bg-3);
+    border-bottom: 1px solid var(--line);
+    font-family: var(--mono); font-size: 11px;
+    color: var(--ink-3);
+  }
+  .term__dots { display: flex; gap: 6px; }
+  .term__dots span { width: 10px; height: 10px; border-radius: 50%; }
+  .term__dots span:nth-child(1) { background: #ff5f57; }
+  .term__dots span:nth-child(2) { background: #febc2e; }
+  .term__dots span:nth-child(3) { background: #28c840; }
+  .term__title { margin-left: 12px; }
+  .term__body {
+    padding: 20px 24px;
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--ink-2);
+  }
+  .term__line { display: block; }
+  .term__line.user::before { content: "$ "; color: var(--accent); }
+  .term__line.out { color: var(--ink); }
+  .term__line.warn { color: var(--warm); }
+  .term__line.ok { color: var(--accent); }
+  .term__caret {
+    display: inline-block;
+    width: 8px; height: 14px;
+    background: var(--accent);
+    margin-left: 4px;
+    vertical-align: middle;
+    animation: blink calc(1s / var(--anim, 1)) steps(2) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* ─── WHY ─── */
+  .why { padding: 120px 0; }
+  .why__head {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 60px; margin-bottom: 64px; align-items: end;
+  }
+  .why h2, .services h2, .process h2, .cases h2, .testi h2, .blog h2, .cta h2 {
+    font-weight: 500;
+    font-size: clamp(40px, 5.5vw, 72px);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-top: 16px;
+  }
+  .why h2 .glow, .services h2 .glow, .cta h2 .glow { color: var(--accent); }
+  .why__lead { font-size: 17px; color: var(--ink-2); line-height: 1.55; max-width: 460px; }
+
+  .why__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .why__cell {
+    background: var(--bg-2);
+    border: 1px solid var(--line-2);
+    border-radius: var(--r);
+    padding: 28px;
+    transition: transform .35s, border-color .35s, background .35s;
+    position: relative;
+    overflow: hidden;
+  }
+  .why__cell::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(400px at var(--mx,50%) var(--my,0%), color-mix(in srgb, var(--accent) 8%, transparent), transparent 60%);
+    opacity: 0;
+    transition: opacity .3s;
+    pointer-events: none;
+  }
+  .why__cell:hover { transform: translateY(calc(-3px * var(--anim))); border-color: var(--line-2); }
+  .why__cell:hover::before { opacity: 1; }
+  .why__cell__icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    background: var(--bg-3);
+    border: 1px solid var(--line-2);
+    display: grid; place-items: center;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+  .why__cell h3 { font-size: 19px; font-weight: 500; letter-spacing: -0.01em; margin-bottom: 8px; }
+  .why__cell p { color: var(--ink-2); font-size: 14px; line-height: 1.55; }
+  .why__cell__num {
+    position: absolute; top: 24px; right: 24px;
+    font-family: var(--mono); font-size: 11px;
+    color: var(--ink-3);
+  }
+
+  /* ─── SERVICES ─── */
+  .services { padding: 120px 0; }
+  .services__head {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 60px; align-items: end; margin-bottom: 56px;
+  }
+  .services__grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .scard {
+    background: linear-gradient(180deg, var(--bg-2), var(--bg));
+    border: 1px solid var(--line-2);
+    border-radius: var(--r);
+    padding: 32px;
+    min-height: 320px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    cursor: pointer;
+    transition: border-color .3s, transform .35s;
+    position: relative;
+    overflow: hidden;
+  }
+  .scard:hover { border-color: var(--accent); transform: translateY(calc(-3px * var(--anim))); }
+  .scard::before {
+    content: ""; position: absolute;
+    bottom: -50%; right: -50%;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, var(--accent), transparent 60%);
+    opacity: 0; transition: opacity .35s;
+  }
+  .scard:hover::before { opacity: 0.15; }
+  .scard__top { display: flex; justify-content: space-between; align-items: start; }
+  .scard__num { font-family: var(--mono); font-size: 12px; color: var(--ink-3); }
+  .scard__icon {
+    width: 56px; height: 56px;
+    border-radius: 12px;
+    background: var(--bg-3);
+    border: 1px solid var(--line-2);
+    display: grid; place-items: center;
+    color: var(--accent);
+    margin-bottom: 24px;
+  }
+  .scard h3 {
+    font-size: 32px; font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+  .scard p { color: var(--ink-2); font-size: 15px; line-height: 1.5; }
+  .scard__tools {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-top: 20px;
+  }
+  .scard__tools span {
+    font-family: var(--mono); font-size: 11px;
+    padding: 4px 10px;
+    border: 1px solid var(--line-2);
+    border-radius: 999px;
+    color: var(--ink-2);
+  }
+
+  /* ─── PROCESS ─── */
+  .process { padding: 120px 0; }
+  .process h2 { margin-bottom: 64px; }
+  .process h2 i { color: var(--accent); font-style: normal; }
+  .process__rail {
+    position: relative;
+    padding: 32px 0;
+  }
+  .process__rail::before {
+    content: ""; position: absolute;
+    top: 50%; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--line-2) 10%, var(--line-2) 90%, transparent);
+  }
+  .process__steps {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    position: relative;
+  }
+  .pstep {
+    background: var(--bg-2);
+    border: 1px solid var(--line-2);
+    border-radius: var(--r);
+    padding: 24px;
+    transition: transform .3s, border-color .3s;
+    position: relative;
+  }
+  .pstep:hover { transform: translateY(calc(-4px * var(--anim))); border-color: var(--accent); }
+  .pstep__num {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--bg-3);
+    border: 1px solid var(--line-2);
+    display: grid; place-items: center;
+    font-family: var(--mono); font-weight: 600;
+    font-size: 13px;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .pstep h3 { font-size: 20px; font-weight: 500; margin-bottom: 8px; letter-spacing: -0.01em; }
+  .pstep p { color: var(--ink-2); font-size: 14px; line-height: 1.5; }
+  .pstep__time {
+    margin-top: 16px;
+    font-family: var(--mono); font-size: 11px;
+    color: var(--ink-3);
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+
+  /* ─── CASES ─── */
+  .cases { padding: 120px 0; }
+  .cases__head {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 60px; margin-bottom: 56px; align-items: end;
+  }
+  .cases__grid {
+    display: grid; grid-template-columns: 1.4fr 1fr;
+    gap: 16px;
+  }
+  .case {
+    background: var(--bg-2);
+    border: 1px solid var(--line-2);
+    border-radius: var(--r);
+    padding: 36px;
+    min-height: 360px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .35s, border-color .35s;
+  }
+  .case:hover { transform: translateY(calc(-3px * var(--anim))); border-color: var(--accent); }
+  .case--feat {
+    background: linear-gradient(135deg, var(--bg-2), color-mix(in srgb, var(--accent) 20%, var(--bg-2)));
+    border-color: color-mix(in srgb, var(--accent) 30%, var(--line-2));
+  }
+  .case__cat { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.04em; }
+  .case h3 {
+    font-size: 28px; font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 12px 0;
+    max-width: 480px;
+  }
+  .case p { color: var(--ink-2); font-size: 14px; line-height: 1.5; max-width: 460px; }
+  .case__metric { display: flex; align-items: baseline; gap: 12px; margin-top: 32px; }
+  .case__metric strong {
+    font-size: 56px; font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .case__metric span { font-size: 13px; color: var(--ink-2); line-height: 1.4; }
+  .case__chart {
+    position: absolute; right: 30px; bottom: 30px;
+    opacity: 0.5;
+  }
+
+  /* ─── TESTI ─── */
+  .testi { padding: 120px 0; }
+  .testi h2 { margin-bottom: 56px; }
+  .testi__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .quote {
+    background: var(--bg-2);
+    border: 1px solid var(--line-2);
+    border-radius: var(--r);
+    padding: 32px;
+    transition: border-color .3s, transform .3s;
+  }
+  .quote:hover { border-color: var(--line-2); transform: translateY(calc(-2px * var(--anim))); }
+  .quote__stars { display: flex; gap: 4px; color: var(--accent); margin-bottom: 16px; }
+  .quote p {
+    font-size: 18px; line-height: 1.5;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+    margin-bottom: 24px;
+  }
+  .quote__who { display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid var(--line); }
+  .quote__avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--bg-3);
+    border: 1px solid var(--line-2);
+    display: grid; place-items: center;
+    font-size: 14px; font-weight: 600;
+    color: var(--accent);
+  }
+  .quote__name { font-size: 14px; font-weight: 500; }
+  .quote__role { font-size: 12px; color: var(--ink-3); }
+
+  /* ─── BLOG ─── */
+  .blog { padding: 120px 0; }
+  .blog__head { display: flex; justify-content: space-between; align-items: end; margin-bottom: 48px; }
+  .blog__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .post {
+    background: var(--bg-2);
+    border: 1px solid var(--line-2);
+    border-radius: var(--r);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .35s, border-color .35s;
+    display: flex; flex-direction: column;
+  }
+  .post:hover { transform: translateY(calc(-4px * var(--anim))); border-color: var(--accent); }
+  .post__cover {
+    aspect-ratio: 4/3;
+    background: var(--bg-3);
+    display: grid; place-items: center;
+    border-bottom: 1px solid var(--line-2);
+    overflow: hidden;
+    position: relative;
+  }
+  .post__cover-1 { background: radial-gradient(circle at 30% 30%, color-mix(in srgb, var(--accent) 30%, var(--bg-3)), var(--bg-3)); }
+  .post__cover-2 { background: radial-gradient(circle at 70% 30%, color-mix(in srgb, var(--accent-2) 30%, var(--bg-3)), var(--bg-3)); }
+  .post__cover-3 { background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--warm) 30%, var(--bg-3)), var(--bg-3)); }
+  .post__cover svg { width: 50%; height: auto; opacity: 0.85; transition: transform .8s; }
+  .post:hover .post__cover svg { transform: scale(calc(1 + .1 * var(--anim))); }
+  .post__body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+  .post__cat { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.04em; text-transform: uppercase; }
+  .post h3 { font-size: 19px; font-weight: 500; line-height: 1.2; margin: 8px 0 12px; letter-spacing: -0.01em; }
+  .post__meta { font-family: var(--mono); font-size: 11px; color: var(--ink-3); margin-top: auto; padding-top: 12px; }
+
+  /* ─── CTA ─── */
+  .cta {
+    padding: 140px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta::before {
+    content: ""; position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, var(--accent) 0%, transparent 60%);
+    opacity: 0.08;
+    filter: blur(40px);
+  }
+  .cta__inner { position: relative; z-index: 1; }
+  .cta h2 {
+    font-size: clamp(56px, 9vw, 120px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    margin: 24px 0 32px;
+  }
+  .cta__sub { font-size: 18px; color: var(--ink-2); max-width: 540px; margin: 0 auto 36px; line-height: 1.5; }
+  .cta__btns { display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .cta__details {
+    display: inline-flex; gap: 32px; flex-wrap: wrap; justify-content: center;
+    margin-top: 64px; padding-top: 32px;
+    border-top: 1px solid var(--line);
+    font-family: var(--mono); font-size: 12px;
+    color: var(--ink-3);
+  }
+  .cta__details a { color: var(--ink-2); }
+  .cta__details a:hover { color: var(--accent); }
+
+  /* ─── FOOTER ─── */
+  .foot {
+    padding: 60px 0 32px;
+    border-top: 1px solid var(--line);
+  }
+  .foot__top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; border-bottom: 1px solid var(--line); }
+  .foot__top h4 { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px; }
+  .foot__top ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .foot__top a { font-size: 14px; color: var(--ink-2); transition: color .2s; }
+  .foot__top a:hover { color: var(--accent); }
+  .foot__brand p { color: var(--ink-2); font-size: 14px; line-height: 1.5; max-width: 360px; margin-top: 16px; }
+  .foot__bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 24px; font-family: var(--mono); font-size: 11px;
+    color: var(--ink-3);
+  }
+
+  @media (max-width: 900px) {
+    .hero__stats, .why__head, .why__grid, .services__head, .services__grid, .cases__grid, .testi__grid, .blog__grid, .process__steps, .cases__head, .foot__top { grid-template-columns: 1fr; gap: 16px; }
+    .hero__stat { border-left: none; border-top: 1px solid var(--line); padding-top: 12px; }
+    .hero__stat:first-child { border-top: none; padding-top: 0; }
+    .nav__links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#" class="logo">
+      <span class="logo__mark">A</span>
+      <span>altos</span>
+    </a>
+    <div class="nav__links">
+      <a href="#services">Services</a>
+      <a href="#cases">Cas clients</a>
+      <a href="#process">Process</a>
+      <a href="#blog">Blog</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px">
+      <span class="nav__status">Groupement actif · 2026</span>
+      <a href="#contact" class="btn btn--primary">
+        Diagnostic gratuit
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero__orb"></div>
+  <div class="hero__orb-2"></div>
+  <div class="wrap hero__inner">
+    <span class="tag reveal">Groupement · Ambassadeurs IA · TPE & PME</span>
+    <h1 class="reveal">
+      Le numérique qui<br/>
+      <span class="glow">automatise</span>, code et<br/>
+      <span class="blur">ramène vos clients.</span>
+    </h1>
+    <p class="hero__sub reveal">Un groupement d'experts métiers qui assemble automatisation, applications sur-mesure, sites web et SEO pour les TPE qui n'ont pas de temps à perdre.</p>
+    <div class="hero__cta reveal">
+      <a class="btn btn--primary" href="#contact">
+        Diagnostic 30 min, gratuit
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="#services">Explorer nos services</a>
+    </div>
+
+    <div class="hero__stats reveal">
+      <div class="hero__stat">
+        <strong>4</strong>
+        <span>spécialités, un seul interlocuteur</span>
+      </div>
+      <div class="hero__stat">
+        <strong>FR</strong>
+        <span>groupement actif partout en France</span>
+      </div>
+      <div class="hero__stat">
+        <strong>7-14j</strong>
+        <span>premier livrable, pas un PowerPoint</span>
+      </div>
+      <div class="hero__stat">
+        <strong>100%</strong>
+        <span>devis transparents, forfait fixe</span>
+      </div>
+    </div>
+
+    <div class="term reveal">
+      <div class="term__head">
+        <div class="term__dots"><span></span><span></span><span></span></div>
+        <span class="term__title">~ altos / diagnostic.sh</span>
+      </div>
+      <div class="term__body">
+        <span class="term__line user">altos --diagnose "boulangerie 4 pers · 30 appels/jour"</span>
+        <span class="term__line">→ Analyse en cours...</span>
+        <span class="term__line warn">⚠  Identifié : 4h/jour passées au téléphone</span>
+        <span class="term__line warn">⚠  Identifié : pas d'historique commande</span>
+        <span class="term__line ok">✓ Solution : mini-app de précommande + relances SMS</span>
+        <span class="term__line ok">✓ Délai : 10 jours · ROI estimé : ×2,4 marge horaire</span>
+        <span class="term__line user">altos --book "diag-gratuit"<span class="term__caret"></span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="wrap">
+    <div class="why__head">
+      <div>
+        <span class="tag reveal">Pourquoi ALTOS</span>
+        <h2 class="reveal">Un <span class="glow">groupement</span><br/>d'experts métiers.</h2>
+      </div>
+      <p class="why__lead reveal">Vous parlez à des artisans du numérique. Chacun maître de son métier, tous engagés auprès de dirigeants de TPE comme vous.</p>
+    </div>
+
+    <div class="why__grid">
+      <div class="why__cell reveal">
+        <span class="why__cell__num">01</span>
+        <div class="why__cell__icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="3.5"/><circle cx="16" cy="16" r="3.5"/><path d="M9 9l4 4"/></svg>
+        </div>
+        <h3>Experts métiers réunis</h3>
+        <p>Un dev, un automaticien, un référenceur, un designer. Pas de profils «&nbsp;hybrides&nbsp» qui bricolent tout, des spécialistes qui livrent.</p>
+      </div>
+      <div class="why__cell reveal">
+        <span class="why__cell__num">02</span>
+        <div class="why__cell__icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="3"/><path d="M11 2v4M11 16v4M2 11h4M16 11h4"/></svg>
+        </div>
+        <h3>Ambassadeurs IA</h3>
+        <p>L'IA, on l'utilise quand elle vous fait gagner — pas pour faire bien sur la slide. Agents, automation, génération.</p>
+      </div>
+      <div class="why__cell reveal">
+        <span class="why__cell__num">03</span>
+        <div class="why__cell__icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="9"/><path d="M2 11h18M11 2c3 3 3 15 0 18M11 2c-3 3-3 15 0 18"/></svg>
+        </div>
+        <h3>Toute la France</h3>
+        <p>Visio, déplacement, atelier sur place. Notre groupement est distribué — moins de bureaux, plus d'écoute.</p>
+      </div>
+      <div class="why__cell reveal">
+        <span class="why__cell__num">04</span>
+        <div class="why__cell__icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="16" height="16" rx="2"/><path d="M3 8h16M8 3v16"/></svg>
+        </div>
+        <h3>Devis transparents</h3>
+        <p>Forfait clair, livraisons hebdo, pas de surprise. Vous savez ce que vous payez, semaine après semaine.</p>
+      </div>
+      <div class="why__cell reveal">
+        <span class="why__cell__num">05</span>
+        <div class="why__cell__icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="9"/><path d="M11 6v5l3 2"/></svg>
+        </div>
+        <h3>Livraison rapide</h3>
+        <p>Premier livrable en 7-14 jours. On itère vite, on évite les usines à gaz, on livre ce qui sert vraiment.</p>
+      </div>
+      <div class="why__cell reveal">
+        <span class="why__cell__num">06</span>
+        <div class="why__cell__icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+        </div>
+        <h3>Sans jargon</h3>
+        <p>On parle votre langue. Comptes-rendus simples, démos vidéo, doc utilisable, formations courtes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="services__head">
+      <div>
+        <span class="tag reveal">Services</span>
+        <h2 class="reveal">Quatre savoir-faire,<br/>un seul <span class="glow">interlocuteur</span>.</h2>
+      </div>
+      <p class="why__lead reveal">L'IA ne remplace pas l'expertise — elle l'amplifie. C'est avec ce principe qu'on construit chacune de vos missions.</p>
+    </div>
+
+    <div class="services__grid">
+      <div class="scard reveal">
+        <div>
+          <div class="scard__top">
+            <div class="scard__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h6l3-8 3 16 3-8h3"/></svg>
+            </div>
+            <span class="scard__num">01</span>
+          </div>
+          <h3>Automatisation</h3>
+          <p>Vos tâches répétitives — devis, relances, planning, stock — exécutées sans vous, 24/7. Workflows visuels, agents IA, intégrations sur-mesure.</p>
+        </div>
+        <div class="scard__tools">
+          <span>n8n</span><span>Make</span><span>Zapier</span><span>Agents IA</span><span>Webhooks</span>
+        </div>
+      </div>
+
+      <div class="scard reveal">
+        <div>
+          <div class="scard__top">
+            <div class="scard__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6M14 4l-4 16"/></svg>
+            </div>
+            <span class="scard__num">02</span>
+          </div>
+          <h3>Vibe coding</h3>
+          <p>Applications métier sur-mesure livrées en jours, pas en mois. Outils internes, dashboards, mini-saas pour votre activité.</p>
+        </div>
+        <div class="scard__tools">
+          <span>React</span><span>Supabase</span><span>Next.js</span><span>API</span><span>Mobile</span>
+        </div>
+      </div>
+
+      <div class="scard reveal">
+        <div>
+          <div class="scard__top">
+            <div class="scard__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>
+            </div>
+            <span class="scard__num">03</span>
+          </div>
+          <h3>Sites internet</h3>
+          <p>Vitrines, e-commerces, prises de rendez-vous. Rapides, beaux, faciles à mettre à jour vous-même. SEO et perfs intégrés.</p>
+        </div>
+        <div class="scard__tools">
+          <span>Webflow</span><span>Framer</span><span>Shopify</span><span>WordPress</span><span>CMS sur-mesure</span>
+        </div>
+      </div>
+
+      <div class="scard reveal">
+        <div>
+          <div class="scard__top">
+            <div class="scard__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="6"/><path d="M14 14l6 6"/></svg>
+            </div>
+            <span class="scard__num">04</span>
+          </div>
+          <h3>SEO local</h3>
+          <p>Apparaissez quand vos clients vous cherchent. Google My Business, contenu, technique — la trinité qui marche.</p>
+        </div>
+        <div class="scard__tools">
+          <span>GMB</span><span>Schema</span><span>Backlinks</span><span>Contenu IA</span><span>Audit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="wrap">
+    <span class="tag reveal">Méthode</span>
+    <h2 class="reveal">On commence par écouter,<br/>on finit par <i>livrer</i>.</h2>
+    <div class="process__rail">
+      <div class="process__steps">
+        <div class="pstep reveal">
+          <div class="pstep__num">01</div>
+          <h3>Diagnostic</h3>
+          <p>30 min en visio. On identifie les gisements de temps et de revenus.</p>
+          <div class="pstep__time">~ 30 min · Gratuit</div>
+        </div>
+        <div class="pstep reveal">
+          <div class="pstep__num">02</div>
+          <h3>Cadrage</h3>
+          <p>Devis chiffré, planning semaine par semaine. Tout est limpide.</p>
+          <div class="pstep__time">~ 48h · Forfait fixe</div>
+        </div>
+        <div class="pstep reveal">
+          <div class="pstep__num">03</div>
+          <h3>Construction</h3>
+          <p>L'expert métier prend la main. Démo chaque vendredi.</p>
+          <div class="pstep__time">~ 1 à 6 sem.</div>
+        </div>
+        <div class="pstep reveal">
+          <div class="pstep__num">04</div>
+          <h3>Mise en route</h3>
+          <p>Formation, doc, support 30 jours. Et on reste joignables après.</p>
+          <div class="pstep__time">~ 30 j. · Inclus</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="cases" id="cases">
+  <div class="wrap">
+    <div class="cases__head">
+      <div>
+        <span class="tag reveal">Réalisations</span>
+        <h2 class="reveal">Du concret,<br/>pas du <span class="glow">storytelling</span>.</h2>
+      </div>
+      <p class="why__lead reveal">Quelques projets récents. Le détail, on vous le raconte de vive voix — chaque histoire est différente.</p>
+    </div>
+
+    <div style="display: grid; gap: 16px;">
+      <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 16px;">
+        <div class="case case--feat reveal">
+          <div>
+            <span class="case__cat">01 · Boulangerie · Toulouse</span>
+            <h3>Une appli de précommande qui a remplacé 30 appels par jour.</h3>
+            <p>Mini-app de commande client, intégrée à la caisse, avec relances SMS automatiques. Livré en 10 jours.</p>
+          </div>
+          <div class="case__metric">
+            <strong>−4h</strong>
+            <span>de téléphone<br/>par jour</span>
+          </div>
+        </div>
+        <div class="case reveal">
+          <div>
+            <span class="case__cat">02 · Cabinet comptable</span>
+            <h3>Devis automatisés en 90&nbsp;sec.</h3>
+            <p>Workflow n8n branché au CRM. Plus de copier-coller, plus d'oublis.</p>
+          </div>
+          <div class="case__metric">
+            <strong>×3</strong>
+            <span>volume<br/>traité</span>
+          </div>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1.4fr; gap: 16px;">
+        <div class="case reveal">
+          <div>
+            <span class="case__cat">03 · Paysagiste · Bretagne</span>
+            <h3>Du 8e au 1er résultat sur Google.</h3>
+            <p>Refonte du site, fiche établissement, 12 articles ciblés.</p>
+          </div>
+          <div class="case__metric">
+            <strong>+180%</strong>
+            <span>demandes<br/>entrantes</span>
+          </div>
+        </div>
+        <div class="case reveal">
+          <div>
+            <span class="case__cat">04 · Atelier mécanique</span>
+            <h3>Site + agent IA pour la prise de RDV la nuit.</h3>
+            <p>Le bot répond aux clients hors horaires, qualifie le besoin, propose un créneau et envoie un récap.</p>
+          </div>
+          <div class="case__metric">
+            <strong>62%</strong>
+            <span>de RDV pris<br/>hors horaires</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi">
+  <div class="wrap">
+    <span class="tag reveal">Témoignages</span>
+    <h2 class="reveal">Des dirigeants qui ne<br/>reviendraient pas <span class="glow">en arrière</span>.</h2>
+    <div class="testi__grid">
+      <div class="quote reveal">
+        <div class="quote__stars">★★★★★</div>
+        <p>«&nbsp;On a récupéré quasi une journée par semaine. Et le plus surprenant : ils m'expliquent ce qu'ils font, je comprends, je peux ajuster.&nbsp»</p>
+        <div class="quote__who">
+          <div class="quote__avatar">M</div>
+          <div>
+            <div class="quote__name">Marie C.</div>
+            <div class="quote__role">Atelier de couture · Lyon</div>
+          </div>
+        </div>
+      </div>
+      <div class="quote reveal">
+        <div class="quote__stars">★★★★★</div>
+        <p>«&nbsp;J'avais peur que l'IA, ce soit pour les grosses boîtes. ALTOS a installé un truc simple, et ça marche tout seul depuis 6 mois.&nbsp»</p>
+        <div class="quote__who">
+          <div class="quote__avatar">J</div>
+          <div>
+            <div class="quote__name">Jean-Pierre L.</div>
+            <div class="quote__role">Plombier · Vienne (38)</div>
+          </div>
+        </div>
+      </div>
+      <div class="quote reveal">
+        <div class="quote__stars">★★★★★</div>
+        <p>«&nbsp;Le devis est arrivé en 48h, le site en 3 semaines. Pas de blabla, pas de surfacturation. Ils livrent ce qu'ils annoncent.&nbsp»</p>
+        <div class="quote__who">
+          <div class="quote__avatar">S</div>
+          <div>
+            <div class="quote__name">Sophie D.</div>
+            <div class="quote__role">Fleuriste · Montpellier</div>
+          </div>
+        </div>
+      </div>
+      <div class="quote reveal">
+        <div class="quote__stars">★★★★★</div>
+        <p>«&nbsp;Un seul interlocuteur, et derrière, ils font appel au bon spécialiste. C'est limpide, et ça change tout.&nbsp»</p>
+        <div class="quote__who">
+          <div class="quote__avatar">A</div>
+          <div>
+            <div class="quote__name">Anne B.</div>
+            <div class="quote__role">Restauratrice · Bordeaux</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog" id="blog">
+  <div class="wrap">
+    <div class="blog__head">
+      <div>
+        <span class="tag reveal">Blog</span>
+        <h2 class="reveal">Ce qu'on apprend,<br/>on l'<span class="glow">écrit</span>.</h2>
+      </div>
+      <a href="#" class="btn btn--ghost">Tous les articles</a>
+    </div>
+    <div class="blog__grid">
+      <article class="post reveal">
+        <div class="post__cover post__cover-1">
+          <svg viewBox="0 0 100 100" fill="none" stroke="var(--accent)" stroke-width="1.5"><circle cx="50" cy="50" r="30"/><path d="M30 50h40M50 30v40"/></svg>
+        </div>
+        <div class="post__body">
+          <span class="post__cat">Automatisation</span>
+          <h3>5 tâches qu'une TPE peut automatiser dès demain (sans coder).</h3>
+          <div class="post__meta">8 min · 14 avr. 2026</div>
+        </div>
+      </article>
+      <article class="post reveal">
+        <div class="post__cover post__cover-2">
+          <svg viewBox="0 0 100 100" fill="none" stroke="var(--accent-2)" stroke-width="1.5"><path d="M30 30l-15 20 15 20M70 30l15 20-15 20M55 25L45 75"/></svg>
+        </div>
+        <div class="post__body">
+          <span class="post__cat">Vibe coding</span>
+          <h3>Pourquoi votre prochain outil interne sera une appli sur-mesure.</h3>
+          <div class="post__meta">6 min · 2 avr.</div>
+        </div>
+      </article>
+      <article class="post reveal">
+        <div class="post__cover post__cover-3">
+          <svg viewBox="0 0 100 100" fill="none" stroke="var(--warm)" stroke-width="1.5"><circle cx="40" cy="40" r="20"/><path d="M55 55l20 20"/></svg>
+        </div>
+        <div class="post__body">
+          <span class="post__cat">SEO Local</span>
+          <h3>Le guide pas-à-pas de la fiche Google qui ramène vraiment des clients.</h3>
+          <div class="post__meta">12 min · 21 mars</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="wrap cta__inner">
+    <span class="tag reveal">Premier pas</span>
+    <h2 class="reveal">Discutons<br/><span class="glow">trente minutes</span>.</h2>
+    <p class="cta__sub reveal">Diagnostic gratuit, sans engagement. On regarde votre activité, on identifie 1 à 3 chantiers à fort impact, et vous repartez avec une feuille de route — qu'on travaille ensemble ou non.</p>
+    <div class="cta__btns reveal">
+      <a class="btn btn--primary" href="#">
+        Réserver un créneau
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="mailto:bonjour@altos.fr">Nous écrire</a>
+    </div>
+    <div class="cta__details">
+      <span>📍 FR · Toute la France</span>
+      <a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div class="foot__brand">
+        <a href="#" class="logo">
+          <span class="logo__mark">A</span>
+          <span>altos</span>
+        </a>
+        <p>Groupement d'experts métiers et d'ambassadeurs IA, au service des TPE et PME françaises.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Automatisation</a></li>
+          <li><a href="#">Vibe coding</a></li>
+          <li><a href="#">Sites internet</a></li>
+          <li><a href="#">SEO local</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Groupement</h4>
+        <ul>
+          <li><a href="#">Méthode</a></li>
+          <li><a href="#">Cas clients</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Suivre</h4>
+        <ul>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span>© 2026 ALTOS — Groupement</span>
+      <span>Mentions · Confidentialité</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in'), i * 50);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const nav = document.getElementById('nav');
+  document.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Cursor-follow glow on cards
+  document.querySelectorAll('.why__cell').forEach(cell => {
+    cell.addEventListener('mousemove', (e) => {
+      const r = cell.getBoundingClientRect();
+      cell.style.setProperty('--mx', `${e.clientX - r.left}px`);
+      cell.style.setProperty('--my', `${e.clientY - r.top}px`);
+    });
+  });
+
+  // Animation intensity from parent
+  window.addEventListener('message', (e) => {
+    if (e.data && e.data.type === 'set-anim') {
+      document.documentElement.style.setProperty('--anim', e.data.value);
+    }
+  });
+</script>
+</body>
+</html>

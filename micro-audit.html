@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Micro-audit IA gratuit · 3 minutes — Bilan personnalisé · ALTOS</title>
+<meta name="description" content="Dix questions, trois minutes, un bilan IA personnalisé. Identifiez vos gisements d'automatisation et vos quick wins en quelques clics. Gratuit, sans engagement." />
+<meta name="keywords" content="audit IA gratuit, bilan automatisation TPE, diagnostic IA PME, quick wins IA, autoévaluation IA" />
+<meta name="author" content="Nicolas Darcos" />
+<link rel="canonical" href="https://altos.fr/micro-audit.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ALTOS" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://altos.fr/micro-audit.html" />
+<meta property="og:title" content="Micro-audit IA gratuit · 3 minutes — Bilan personnalisé · ALTOS" />
+<meta property="og:description" content="Dix questions, trois minutes, un bilan IA personnalisé. Identifiez vos gisements d'automatisation et vos quick wins en quelques clics. Gratuit, sans engagement." />
+<meta property="og:image" content="https://altos.fr/assets/og-default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="ALTOS — Ambassadeur IA pour PME" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Micro-audit IA gratuit · 3 minutes — Bilan personnalisé · ALTOS" />
+<meta name="twitter:description" content="Dix questions, trois minutes, un bilan IA personnalisé. Identifiez vos gisements d'automatisation et vos quick wins en quelques clics. Gratuit, sans engagement." />
+<meta name="twitter:image" content="https://altos.fr/assets/og-default.png" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-weight='900' fill='%23ffffff'%3EA%3C/text%3E%3Ccircle cx='48' cy='52' r='4' fill='%23ff5b14'/%3E%3C/svg%3E" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #fff;
+    --ink: #0a0a0a;
+    --ink-2: #2c2c2c;
+    --ink-3: #767676;
+    --line: #e2e2e2;
+    --paper: #f4f1ec;
+    --accent: #ff5b14;
+    --acid: #d9ff3c;
+    --display: "Fraunces", "Times New Roman", serif;
+    --sans: "Inter", system-ui, sans-serif;
+    --mono: "DM Mono", ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  body { overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--ink); color: var(--acid); }
+  button { font-family: inherit; cursor: pointer; }
+
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+  .num { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.1em; text-transform: uppercase; }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--ink); }
+  .nav__inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 18px 32px; max-width: 1320px; margin: 0 auto; }
+  .logo { font-family: var(--display); font-weight: 900; font-size: 22px; letter-spacing: -0.04em; }
+  .logo i { font-style: italic; color: var(--accent); }
+  .nav__links { display: flex; gap: 32px; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .nav__links a { transition: color .2s; }
+  .nav__links a:hover { color: var(--accent); }
+  .nav__cta { display: flex; justify-content: flex-end; align-items: center; gap: 14px; }
+  .nav__time { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.08em; }
+
+  /* HERO STRIP */
+  .hero-strip {
+    background: var(--ink); color: var(--bg);
+    padding: 64px 0 56px;
+    border-bottom: 1px solid var(--ink);
+  }
+  .hero-strip__top {
+    display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px; font-family: var(--mono); font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.55);
+    max-width: 1320px; margin: 0 auto 40px; padding: 0 32px;
+  }
+  .hero-strip__top div + div { text-align: center; }
+  .hero-strip__top div:last-child { text-align: right; }
+  .hero-strip h1 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(48px, 7vw, 104px);
+    line-height: 0.95; letter-spacing: -0.04em;
+    max-width: 1320px; margin: 0 auto; padding: 0 32px;
+  }
+  .hero-strip h1 i { font-style: italic; color: var(--accent); }
+  .hero-strip h1 .acid { color: var(--acid); font-style: italic; }
+  .hero-strip__sub {
+    max-width: 1320px; margin: 36px auto 0; padding: 0 32px;
+    display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px;
+    align-items: end;
+  }
+  .hero-strip__lede {
+    font-size: 18px; line-height: 1.55;
+    color: rgba(255,255,255,0.78); max-width: 56ch;
+  }
+  .hero-strip__lede strong { color: var(--acid); font-weight: 500; }
+  .hero-strip__meta {
+    font-family: var(--mono); font-size: 11px;
+    color: rgba(255,255,255,0.55);
+    text-transform: uppercase; letter-spacing: 0.1em;
+    display: grid; gap: 6px;
+  }
+  .hero-strip__meta b { color: var(--bg); font-weight: 500; }
+
+  /* PROGRESS */
+  .progress-wrap {
+    position: sticky; top: 67px; z-index: 30;
+    background: var(--bg); border-bottom: 1px solid var(--ink);
+    padding: 14px 0;
+  }
+  .progress {
+    max-width: 1320px; margin: 0 auto; padding: 0 32px;
+    display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center;
+  }
+  .progress__label { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-3); }
+  .progress__label b { color: var(--ink); font-weight: 500; }
+  .progress__bar { height: 2px; background: var(--line); position: relative; overflow: hidden; }
+  .progress__fill { position: absolute; inset: 0 auto 0 0; width: 0%; background: var(--accent); transition: width .5s cubic-bezier(.7,0,.3,1); }
+  .progress__pct { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.08em; min-width: 36px; text-align: right; }
+
+  /* QUIZ */
+  .quiz { padding: 96px 0 120px; min-height: 70vh; }
+  .quiz__wrap { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+  .step { display: none; }
+  .step.active { display: block; animation: stepIn .55s cubic-bezier(.16,1,.3,1); }
+  @keyframes stepIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+  .q-cat { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; }
+  .q-num { font-family: var(--display); font-style: italic; font-size: 14px; color: var(--ink-3); margin-left: 12px; }
+  .q-title {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(32px, 4.2vw, 56px);
+    line-height: 1.05; letter-spacing: -0.025em;
+    margin: 20px 0 12px; max-width: 28ch;
+  }
+  .q-title i { font-style: italic; color: var(--accent); }
+  .q-title mark { background: var(--acid); padding: 0 8px; }
+  .q-hint { font-size: 15px; color: var(--ink-3); line-height: 1.55; max-width: 60ch; margin-bottom: 48px; }
+
+  .opts { display: grid; gap: 14px; max-width: 800px; }
+  .opt {
+    display: grid; grid-template-columns: auto 1fr auto;
+    gap: 20px; align-items: center;
+    padding: 22px 26px;
+    border: 1px solid var(--ink); background: var(--bg);
+    text-align: left; font-family: var(--sans); font-size: 17px;
+    color: var(--ink); transition: background .2s, color .2s, transform .2s;
+    cursor: pointer;
+  }
+  .opt:hover { background: var(--paper); }
+  .opt.selected { background: var(--ink); color: var(--bg); }
+  .opt.selected .opt__num { color: var(--acid); }
+  .opt.selected .opt__arrow { opacity: 1; transform: translateX(0); }
+  .opt__num { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.1em; min-width: 28px; }
+  .opt__label { line-height: 1.4; }
+  .opt__label small { display: block; font-size: 13px; color: var(--ink-3); margin-top: 4px; }
+  .opt.selected .opt__label small { color: rgba(255,255,255,0.6); }
+  .opt__arrow { opacity: 0; transform: translateX(-6px); transition: opacity .25s, transform .25s; }
+
+  .step__nav {
+    margin-top: 56px; padding-top: 24px;
+    border-top: 1px solid var(--line);
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  }
+  .nav-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 22px; border: 1px solid var(--ink);
+    background: var(--bg); color: var(--ink);
+    font-size: 14px; font-weight: 500; font-family: var(--sans);
+    transition: background .25s, color .25s;
+  }
+  .nav-btn:hover:not(:disabled) { background: var(--ink); color: var(--bg); }
+  .nav-btn--primary { background: var(--ink); color: var(--bg); }
+  .nav-btn--primary:hover:not(:disabled) { background: var(--accent); border-color: var(--accent); }
+  .nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+  /* CONTACT STEP */
+  .contact-step .q-title { max-width: 22ch; }
+  .form-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
+    max-width: 720px; margin-top: 36px;
+  }
+  .field { display: flex; flex-direction: column; gap: 8px; }
+  .field--full { grid-column: 1 / -1; }
+  .field label { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-3); }
+  .field input {
+    border: none; border-bottom: 1px solid var(--ink);
+    padding: 12px 0; background: transparent;
+    font-family: var(--sans); font-size: 17px; color: var(--ink);
+    outline: none; transition: border-color .2s;
+  }
+  .field input:focus { border-color: var(--accent); }
+  .field input.invalid { border-color: var(--accent); }
+  .consent { font-size: 13px; color: var(--ink-3); line-height: 1.5; max-width: 60ch; margin-top: 24px; }
+  .consent a { text-decoration: underline; }
+
+  /* BILAN */
+  .bilan { padding: 96px 0 120px; background: var(--paper); border-top: 1px solid var(--ink); }
+  .bilan__head { max-width: 1320px; margin: 0 auto 56px; padding: 0 32px; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: end; }
+  .bilan__head h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(40px, 5.5vw, 80px);
+    line-height: 0.98; letter-spacing: -0.03em;
+  }
+  .bilan__head h2 i { font-style: italic; color: var(--accent); }
+  .bilan__head .num { color: var(--ink); }
+  .bilan__download {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 24px;
+    background: var(--ink); color: var(--bg);
+    font-size: 14px; font-weight: 500;
+    transition: background .25s;
+    border: none;
+  }
+  .bilan__download:hover { background: var(--accent); }
+
+  .bilan__grid { max-width: 1320px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; }
+
+  .score-card {
+    background: var(--ink); color: var(--bg);
+    padding: 40px 36px;
+    display: flex; flex-direction: column; gap: 24px;
+    position: sticky; top: 90px; align-self: start;
+  }
+  .score-card__label { font-family: var(--mono); font-size: 11px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; }
+  .score-card__num {
+    font-family: var(--display); font-weight: 400; font-style: italic;
+    font-size: 140px; line-height: 0.9; color: var(--acid);
+    letter-spacing: -0.04em;
+  }
+  .score-card__num small { font-size: 28px; color: rgba(255,255,255,0.5); font-style: normal; margin-left: 8px; }
+  .score-card__profile { font-family: var(--display); font-size: 22px; line-height: 1.2; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.15); }
+  .score-card__profile small { display: block; font-family: var(--mono); font-size: 11px; color: var(--acid); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 10px; }
+  .score-card__estimate { font-family: var(--mono); font-size: 12px; color: rgba(255,255,255,0.65); line-height: 1.5; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.15); }
+  .score-card__estimate b { color: var(--acid); font-weight: 500; }
+
+  .bilan-section { margin-bottom: 56px; }
+  .bilan-section h3 { font-family: var(--display); font-weight: 400; font-size: 32px; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 24px; }
+  .bilan-section h3 .num { display: block; font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
+
+  .heatmap { display: grid; gap: 8px; }
+  .heat-row { display: grid; grid-template-columns: 1fr auto; gap: 16px; padding: 14px 18px; background: var(--bg); border: 1px solid var(--line); align-items: center; }
+  .heat-row__label { font-size: 14px; color: var(--ink-2); }
+  .heat-row__bar { display: flex; gap: 3px; }
+  .heat-row__cell { width: 14px; height: 14px; background: var(--line); }
+  .heat-row__cell.on-1 { background: var(--acid); }
+  .heat-row__cell.on-2 { background: #ffce47; }
+  .heat-row__cell.on-3 { background: var(--accent); }
+
+  .quickwins { display: grid; gap: 14px; }
+  .qw {
+    background: var(--bg); border: 1px solid var(--ink);
+    padding: 28px;
+    display: grid; grid-template-columns: 44px 1fr auto; gap: 24px; align-items: start;
+  }
+  .qw__num { font-family: var(--display); font-style: italic; font-size: 36px; color: var(--accent); line-height: 1; }
+  .qw__body h4 { font-family: var(--display); font-weight: 400; font-size: 22px; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 8px; }
+  .qw__body p { font-size: 14px; line-height: 1.55; color: var(--ink-2); margin-bottom: 10px; }
+  .qw__stack { font-family: var(--mono); font-size: 11px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.08em; }
+  .qw__gain {
+    font-family: var(--display); font-style: italic;
+    font-size: 22px; color: var(--ink); text-align: right;
+    white-space: nowrap;
+  }
+  .qw__gain small { display: block; font-family: var(--mono); font-size: 10px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.1em; font-style: normal; margin-top: 4px; }
+
+  /* CTA bilan */
+  .bilan-cta {
+    margin-top: 56px; padding: 40px;
+    background: var(--ink); color: var(--bg);
+    display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center;
+  }
+  .bilan-cta h4 { font-family: var(--display); font-weight: 400; font-size: 28px; line-height: 1.15; letter-spacing: -0.01em; max-width: 22ch; }
+  .bilan-cta h4 i { font-style: italic; color: var(--acid); }
+  .bilan-cta .btn-acid {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 24px;
+    background: var(--accent); color: var(--bg);
+    font-size: 14px; font-weight: 500;
+  }
+  .bilan-cta .btn-acid:hover { background: var(--acid); color: var(--ink); }
+
+  /* FOOTER */
+  footer { background: var(--ink); color: var(--bg); padding: 48px 0 24px; }
+  footer .wrap { display: grid; grid-template-columns: 2fr 1fr; gap: 48px; }
+  footer .left p { font-size: 14px; max-width: 56ch; color: rgba(255,255,255,0.7); line-height: 1.55; }
+  footer .right { text-align: right; font-family: var(--mono); font-size: 11px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; }
+  footer .right a { color: var(--bg); text-transform: none; letter-spacing: 0; display: block; margin-top: 6px; }
+  footer .right a:hover { color: var(--accent); }
+
+  /* Hidden state during reveal */
+  .hidden { display: none !important; }
+
+  @media (max-width: 900px) {
+    .hero-strip__top { grid-template-columns: 1fr 1fr; }
+    .hero-strip__sub { grid-template-columns: 1fr; gap: 32px; }
+    .bilan__grid { grid-template-columns: 1fr; }
+    .score-card { position: relative; top: auto; }
+    .bilan__head { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+    .bilan-cta { grid-template-columns: 1fr; }
+    .qw { grid-template-columns: 32px 1fr; }
+    .qw__gain { grid-column: 2 / 3; text-align: left; }
+    .nav__links { display: none; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Micro-audit IA — ALTOS",
+  "url": "https://altos.fr/micro-audit.html",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "Questionnaire interactif en 10 questions pour identifier les gisements d'automatisation IA d'une TPE/PME.",
+  "offers": {"@type":"Offer","price":"0","priceCurrency":"EUR"},
+  "provider": {"@type":"Organization","name":"ALTOS","url":"https://altos.fr"},
+  "breadcrumb": {
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Accueil","item":"https://altos.fr/"},
+      {"@type":"ListItem","position":2,"name":"Micro-audit","item":"https://altos.fr/micro-audit.html"}
+    ]
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="logo">ALTOS<i>.</i></a>
+    <div class="nav__links">
+      <a href="index.html#services">Services</a>
+      <a href="cas-usage.html">Cas d'usage</a>
+      <a href="index.html#process">Méthode</a>
+      <a href="index.html#blog">Journal</a>
+    </div>
+    <div class="nav__cta">
+      <span class="nav__time" id="now"></span>
+      <a class="btn" href="https://cal.com/nicolas-darcos-uldxct/30min" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}' style="padding:12px 20px;font-size:13px;background:var(--ink);color:var(--bg);display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ink)">Diagnostic 30 min</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO STRIP -->
+<section class="hero-strip" id="audit-app">
+  <div class="hero-strip__top">
+    <div>Issue n°03 — Micro-audit</div>
+    <div>3 minutes</div>
+    <div>10 questions</div>
+    <div>Bilan PDF gratuit</div>
+  </div>
+  <h1>
+    Trois minutes,<br/>
+    dix <i>questions</i>,<br/>
+    un <span class="acid">bilan</span> en main.
+  </h1>
+  <div class="hero-strip__sub">
+    <p class="hero-strip__lede">
+      Ce micro-audit reprend la grille que nous appliquons en début de mission. Il situe votre maturité opérationnelle, identifie vos <strong>quick wins prioritaires</strong> et estime le temps que vous pouvez récupérer sur les 12 prochains mois. À l'arrivée, un bilan PDF activable — chez nous ou ailleurs.
+    </p>
+    <div class="hero-strip__meta">
+      <div><b>10</b> questions à choix unique</div>
+      <div><b>0 €</b> · aucune obligation</div>
+      <div><b>RGPD</b> — données non revendues</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRESS -->
+<div class="progress-wrap" id="progressWrap">
+  <div class="progress">
+    <div class="progress__label">Question <b id="qCurrent">1</b> / <b>11</b></div>
+    <div class="progress__bar"><div class="progress__fill" id="progressFill"></div></div>
+    <div class="progress__pct" id="progressPct">9 %</div>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<section class="quiz" id="quiz">
+  <div class="quiz__wrap">
+    <div id="steps"></div>
+  </div>
+</section>
+
+<!-- BILAN (hidden initially) -->
+<section class="bilan hidden" id="bilan">
+  <div class="bilan__head">
+    <div>
+      <span class="num">§ Bilan express — <span id="bilanName">Votre profil</span></span>
+      <h2>Vos <i>gisements</i><br/>identifiés.</h2>
+    </div>
+    <button class="bilan__download" id="downloadPdf">
+      Télécharger le bilan PDF
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 2v8M3 7l4 4 4-4M2 12h10"/></svg>
+    </button>
+  </div>
+
+  <div class="bilan__grid">
+    <aside class="score-card">
+      <span class="score-card__label">Score d'opportunité</span>
+      <div class="score-card__num"><span id="scoreVal">—</span><small>/30</small></div>
+      <div class="score-card__profile">
+        <small>Profil dominant</small>
+        <span id="profileName">—</span>
+      </div>
+      <div class="score-card__estimate">
+        Gain potentiel estimé : <b id="estimateHours">—</b>.<br/>
+        ROI typique sur missions équivalentes : <b id="estimateRoi">—</b>.
+      </div>
+    </aside>
+
+    <div>
+      <div class="bilan-section">
+        <h3>
+          <span class="num">§ 01 — Cartographie</span>
+          Vos zones de friction.
+        </h3>
+        <div class="heatmap" id="heatmap"></div>
+      </div>
+
+      <div class="bilan-section">
+        <h3>
+          <span class="num">§ 02 — Recommandations</span>
+          Trois quick wins prioritaires.
+        </h3>
+        <div class="quickwins" id="quickwins"></div>
+      </div>
+
+      <div class="bilan-cta">
+        <h4>On en parle <i>trente minutes</i> ? Diagnostic offert, sans engagement.</h4>
+        <a class="btn-acid" href="https://cal.com/nicolas-darcos-uldxct/30min" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>
+          Réserver un créneau
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="left">
+      <p><b style="color:var(--bg)">Note méthodologique —</b> Ce micro-audit s'appuie sur la grille de diagnostic utilisée par Altos sur plus de 120 missions PME/TPE conduites en 2024-26. Il ne remplace pas un audit flash IA (1 journée, restitution comprise, financement OPCO possible), mais en donne une première lecture. Vos réponses ne sont stockées qu'à des fins de génération du bilan et de prise de contact.</p>
+    </div>
+    <div class="right">
+      <div>Altos · 2026</div>
+      <a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a>
+      <a href="index.html">← Retour à l'accueil</a>
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+    </div>
+  </div>
+</footer>
+
+<script src="micro-audit.js"></script>
+
+<!-- Cal.com embed (popup mode) -->
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "diag30", {origin:"https://cal.com"});
+Cal.ns.diag30("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+Synthèse Audit Flash IA 
+NOM DE L’ENTREPRISE : APPLICATION FROID
+NUMERO DE DOSSIER : 26-118940
+NOM DU CONSEILLER OPCO : Delphine BOUIN
+Durée de l’accompagnement en jours :
+Dates d’intervention
+Signatures
+Dates de RDV
+Entreprise
+Le Cercle des Entrepreneurs
+Réunion de cadrage : 
+20 mars 2026
+Diagnostic des pratiques : 
+02 avril 2026
+Préconisations / Plan d’action :
+16 avril 2026
+Sommaire
+I.Résumé3
+II.Contexte de l’entreprise4
+i.Historique et activité4
+ii.Structure organisationnelle4
+III.Diagnostic des pratiques IA7
+iii.Processus Métier7
+iv.Compétences et ressources10
+v.Données et sécurité11
+vi.Organisation12
+vii.Cadre réglementaire12
+IV.Cas d’usage IA et accompagnement préconisés14
+V.Synthèse et plan d’action18
+Synthèse graphique18
+VI.SWOT19
+VII.Plan d’action détaillé20
+Résumé
+Applications Froid dispose d’une base organisationnelle solide, d’une équipe métier expérimentée et d’outils déjà en place. L’enjeu principal n’est pas d’ajouter de nouveaux outils de manière isolée, mais de mieux structurer les flux existants, de réduire les ressaisies et de sécuriser les processus les plus sensibles.
+Les cas d’usage prioritaires identifiés sont les suivants :
+fluidification du traitement du SAV et des urgences ;
+assistance au chiffrage et à la consultation fournisseurs ;
+modernisation de la gestion des contrats d’entretien ;
+allègement des tâches administratives et comptables ;
+mise en place d’un tableau de bord de pilotage ;
+assistance à la réponse aux appels d’offres ;
+structuration de la communication et de la marque employeur.
+La priorité de mise en œuvre porte sur les sujets ayant un impact direct sur la qualité de service, la réactivité et la charge interne, en particulier le SAV, le chiffrage, l’administratif et le pilotage. La démarche recommandée repose sur une transformation progressive, concrète et adaptée à une TPME, avec des tests sur des cas réels, des règles d’usage simples et une validation humaine sur les étapes sensibles.
+L’accompagnement de l’entreprise vise à mettre en place des automatisations à partir de scénarios conçus sous Make ou n8n, selon les choix retenus par le client dans le plan d’action. L’intervention débute par un rendez-vous de sensibilisation aux enjeux de l’IA et par la validation des priorités opérationnelles. Elle se poursuit par une phase de recherche, de conception et d’adaptation des solutions aux besoins de l’entreprise. Enfin, un accompagnement opérationnel est assuré pour la mise en œuvre des cas d’usage retenus.
+Contexte de l’entreprise
+Historique et activité
+Applications Froid est une entreprise créée en 1991, reprise une première fois en 2015 par Madame Besson, puis de nouveau en 2021 par l’équipe de direction actuellement en place. L’entreprise est aujourd’hui dirigée sous forme de SAS par deux associés, Yoan AMARGER et Frédéric BERLEMOT.
+La répartition des responsabilités entre les deux dirigeants est clairement structurée. Frédéric BERLEMOT pilote principalement les activités de service après-vente et de maintenance, tandis que Yoan AMARGER intervient sur les fonctions support, le développement commercial, la gestion ainsi que le suivi des affaires, incluant notamment l’étude technique, le chiffrage, les commandes, le suivi de chantier, les réunions et la logistique.
+L’activité de l’entreprise est centrée sur la vente, l’installation, l’entretien et la réparation de systèmes frigorifiques destinés aux cuisines professionnelles, ainsi que sur les installations de climatisation. Applications Froid intervient à la fois sur le marché privé professionnel, notamment pour le froid commercial, les cuisines professionnelles et la climatisation, et sur le marché public à travers la réponse à des appels d’offres.
+Depuis la dernière reprise, l’entreprise a connu une évolution significative de son activité. En 2021, elle réalisait un chiffre d’affaires de 1,4 million d’euros avec une équipe de 6 personnes. Aujourd’hui, elle atteint un chiffre d’affaires de 2,2 millions d’euros avec un effectif composé de 9 salariés, 2 dirigeants et 1 alternant. Cette progression traduit une dynamique de développement réelle, dans un périmètre d’intervention localisé dans un rayon d’environ 70 kilomètres autour du siège social situé à Jacou, à proximité de Montpellier.
+Structure organisationnelle
+Les métiers et l’équipe
+L’organisation d’Applications Froid repose sur une équipe courte, polyvalente et très opérationnelle, dans laquelle les fonctions de pilotage, de production technique et de gestion sont étroitement liées.
+Le pôle affaires est composé de trois chargés d’affaires, dont un dirigeant, le responsable d’agence et un collaborateur dédié à temps plein. Ce pôle assure les visites clients, le recueil des besoins, l’analyse des contraintes techniques, le chiffrage, le suivi des commandes, les réunions de chantier, la réception et la coordination générale des dossiers.
+L’activité travaux s’appuie sur un technicien chantier, avec un rôle de chef de chantier identifié, ainsi que sur l’appui de l’alternant à hauteur de 50 % de son temps. Le service après-vente mobilise trois techniciens SAV et deux responsables SAV, avec également une contribution de l’alternant pour l’autre moitié de son activité. La maintenance préventive est assurée par une personne dédiée.
+La fonction administrative repose sur une seule collaboratrice, Victoria, qui prend en charge un périmètre large : administration courante, comptabilité, suivi des temps, variables de paie, notes de frais et gestion de différents flux internes. Cette organisation permet une forte centralisation, mais elle concentre également sur une seule personne une part importante des opérations de support.
+Les moyens et outils en place
+L’entreprise dispose d’un environnement de travail déjà structuré autour de plusieurs outils métier et de gestion.
+Le logiciel principal est CLOUDDI, utilisé en mode SaaS pour les devis, les achats, les bons d’intervention, le planning, la comptabilité, les CERFA, les dépôts Chorus et la traçabilité des déchets. En complément, l’entreprise utilise le pack Microsoft Office, principalement Excel, Word et Outlook, ainsi que EBP comptabilité, alimenté à partir d’imports issus de CLOUDDI.
+Le partage documentaire s’appuie sur un serveur NAS, qui centralise les documents techniques et administratifs. Les techniciens disposent d’un accès mobile à l’application métier sur téléphone portable, et les véhicules sont équipés de traceurs.
+Cet équipement constitue une base de travail solide. En revanche, de nombreux usages restent peu interconnectés et conduisent encore à des ressaisies, à des suivis manuels et à des traitements éclatés entre plusieurs supports.
+Description opérationnelle des processus
+Chiffrage et gestion des affaires
+Le processus de chiffrage repose encore largement sur une logique manuelle. Lors de ses rendez-vous chez le client, le chargé d’affaires relève sur papier les informations utiles, les besoins exprimés et les contraintes techniques. Il consulte ensuite les catalogues fournisseurs, au format papier ou en ligne, pour identifier les références adaptées. Une fois les codes articles retrouvés, il recherche les prix dans CLOUDDI afin d’établir le devis, puis l’envoie au client depuis le logiciel.
+La validation du devis n’intègre pas encore de signature électronique. Après retour signé du client, une nouvelle consultation est adressée manuellement par mail à un ou deux autres fournisseurs à partir des références déjà identifiées.
+Gestion du SAV et des urgences
+Les demandes de SAV arrivent par plusieurs canaux : boîte mail dédiée, numéro général de l’entreprise ou téléphone portable. Lorsqu’une demande est reçue par mail, l’opérateur rappelle le client pour réaliser un pré-diagnostic et organiser l’intervention. Il crée ensuite un bon dans le logiciel métier, transmis au technicien via l’application mobile.
+Dans les faits, le technicien doit également être prévenu manuellement, car le logiciel ne génère pas de notification automatique. Le système ne permet pas non plus d’envoyer au client un SMS pour l’informer d’un retard ou de l’heure d’arrivée du technicien.
+Lorsqu’un appel entrant est reçu, Victoria renseigne le client, l’objet de la demande, le niveau d’urgence et les coordonnées de l’appelant. L’opérateur reprend ensuite le dossier pour rappeler le client et planifier l’intervention. Ce fonctionnement présente une limite importante : lorsque l’opérateur n’est pas au bureau ou n’a pas l’application ouverte, il ne visualise pas toujours immédiatement l’urgence de la demande. Cela peut générer un rappel tardif et une dégradation de la satisfaction client. Une solution de notification interne de type messagerie collaborative apparaît nécessaire pour fiabiliser ce processus.
+Suivi du temps de travail et préparation de la paie
+Le suivi des temps des techniciens reste géré sur support papier. Le temps de travail est décompté à partir de la fin des trente premières minutes de trajet le matin et le soir. Chaque technicien renseigne sa fiche horaire, qui est ensuite contrôlée manuellement en fin de mois par Frédéric.
+Les informations sont ensuite transmises à Victoria, qui consolide les heures, les congés et les absences dans un tableau Excel. Ce document est adressé au cabinet comptable pour l’édition des bulletins de salaire. Au retour, un contrôle complémentaire est effectué par Yoan avant validation du paiement. Le processus est fiable dans son principe, mais il repose sur plusieurs ressaisies successives et sur des vérifications humaines à chaque étape.
+Contrats d’entretien
+La mise en place des contrats d’entretien suit un déroulé lui aussi très manuel. Le technicien réalise une visite sur site pour relever les équipements présents. Il renseigne ensuite un fichier Excel recensant les différents types de matériels et leur quantité. Ce fichier calcule automatiquement la durée d’entretien, le temps de déplacement et le coût annuel. Le document est ensuite exporté en PDF et transmis au client par mail.
+Comptabilité, règlements et relances
+Sur le plan comptable, Victoria saisit manuellement dans EBP l’ensemble des factures fournisseurs liées à l’activité, pour un volume estimé à un jour et demi de travail. Les paiements fournisseurs sont réalisés manuellement, facture par facture, à raison d’environ deux heures par semaine.
+Les règlements clients nécessitent également une intervention manuelle, le rapprochement bancaire n’étant pas automatisé. Chaque mois, Victoria effectue le rapprochement pour identifier les encaissements. Yoan réalise ensuite une extraction afin de repérer les factures en attente de règlement, puis transmet les éléments aux équipes pour traitement des relances par téléphone ou par mail.
+Gestion administrative courante
+Le traitement des mails est organisé manuellement dans Outlook, à l’aide de sous-dossiers par client, fournisseur, gestion ou social. Les notes de frais suivent un circuit également manuel : les justificatifs sont transmis à Victoria, saisis dans un tableau Excel par collaborateur, puis ressaisis dans EBP avant règlement.
+Réponse aux appels d’offres
+L’entreprise répond à environ quatre appels d’offres publics par an. Cette activité est actuellement traitée sans appui d’outils d’analyse ou d’assistance. L’étude du règlement de consultation et du CCTP, la rédaction du mémoire technique et le contrôle de cohérence sont réalisés intégralement de manière manuelle.
+Communication et pilotage
+La communication sur les réseaux sociaux n’est pas encore structurée. Une alternante doit rejoindre l’entreprise à la rentrée 2026 pour prendre en charge ce sujet. Un besoin est déjà identifié pour renforcer la visibilité de l’entreprise et sa marque employeur, avec un intérêt pour des mécanismes d’automatisation.
+En matière de pilotage, Yoan ne dispose pas aujourd’hui d’un tableau de bord lui permettant de suivre simplement les flux d’entrée et de sortie de l’activité. Le besoin porte sur un outil compatible avec l’existant, capable d’exploiter les données déjà produites par les logiciels en place via des extractions.
+Diagnostic des pratiques IA
+Processus Métier
+Constats clés
+L’entreprise dispose déjà d’un socle numérique utile à son activité, avec un logiciel métier structurant, des outils bureautiques et des usages mobiles sur le terrain. Cette base permet de gérer l’activité courante, mais elle ne suffit pas encore à fluidifier l’ensemble des opérations.
+Les processus les plus stratégiques restent fortement dépendants d’actions manuelles, de ressaisies et de validations successives. Le chiffrage, la consultation fournisseurs, la mise en place des contrats d’entretien, le traitement du SAV et la réponse aux appels d’offres fonctionnent de manière séquencée, avec des ruptures entre le recueil d’information, le traitement administratif et la transmission opérationnelle.
+Le SAV constitue un point de vigilance particulier. Le traitement des demandes repose sur plusieurs canaux d’entrée, sans circuit d’alerte suffisamment réactif ni visibilité immédiate sur le niveau d’urgence. Cette situation crée un risque direct sur la qualité de service perçue et sur la satisfaction client.
+Les méthodes actuelles permettent de traiter les dossiers, mais elles consomment un temps important sur des tâches de coordination, de recherche, de relance et de contrôle, au détriment d’activités à plus forte valeur ajoutée.
+Propositions d’amélioration
+Structurer en priorité les processus qui combinent volume, urgence et impact client, en commençant par le SAV, le chiffrage et les contrats d’entretien.
+Mettre en place des circuits plus continus entre les étapes de recueil, de traitement et de transmission, afin de réduire les ressaisies et les pertes d’information.
+Introduire des mécanismes simples de notification interne pour sécuriser le traitement des urgences et améliorer la réactivité opérationnelle.
+Préparer une méthode assistée pour les appels d’offres afin de gagner en rapidité, en homogénéité et en fiabilité dans l’analyse des pièces et la production des réponses.
+Compétences et ressources
+Constats clés
+L’entreprise s’appuie sur une équipe métier expérimentée, impliquée et capable de s’adapter aux contraintes du terrain. Cette proximité opérationnelle constitue un atout fort pour faire évoluer les pratiques.
+En revanche, plusieurs fonctions critiques reposent sur un nombre très restreint de personnes, en particulier sur l’administratif et certains flux de coordination. Cette concentration fragilise l’organisation, limite la capacité d’absorption en cas de montée en charge et augmente la dépendance à l’expérience individuelle.
+Les usages numériques existent, mais ils restent davantage portés par les habitudes de travail que par un cadre partagé de progression. La montée en compétence sur les usages avancés, sur l’automatisation ou sur l’IA n’apparaît pas encore structurée.
+La transformation future pourrait être freinée non par un refus de principe, mais par un manque de temps disponible, une surcharge des personnes-clés et l’absence de méthodes simples pour diffuser les nouvelles pratiques.
+Propositions d’amélioration
+Sécuriser les fonctions sensibles en réduisant la dépendance à quelques personnes sur les tâches récurrentes de gestion, de suivi et de contrôle.
+Organiser la montée en compétence autour de cas d’usage directement liés au quotidien de l’entreprise, avec des formats courts, concrets et orientés métier.
+Formaliser progressivement des modes opératoires simples sur les tâches critiques afin de faciliter la transmission, l’harmonisation des pratiques et l’intégration de nouveaux collaborateurs.
+Identifier un petit noyau de référents internes capables d’accompagner l’évolution des usages et de stabiliser les nouvelles routines.
+Données et sécurité
+Constats clés
+L’entreprise produit et stocke déjà une quantité significative d’informations utiles à son activité : devis, interventions, contrats, factures, temps de travail, relances, planning, données clients et documents techniques.
+La difficulté ne réside pas dans l’absence de données, mais dans leur dispersion entre plusieurs outils, fichiers, supports papier et circuits de messagerie. Cette fragmentation rend plus complexe la consolidation de l’information, alourdit les traitements et augmente le risque d’erreur ou d’écart entre les sources.
+Les données servent principalement à exécuter l’activité, mais elles sont encore peu exploitées pour piloter, anticiper ou arbitrer. L’absence de tableau de bord synthétique limite la visibilité de la direction sur les flux, les délais, les charges ou les points de tension.
+Sur le plan de la sécurité et de la gestion de l’information, l’entreprise dispose d’une base de fonctionnement sérieuse, mais les règles de gestion, de confidentialité et de sécurisation des usages gagneraient à être davantage formalisées.
+Propositions d’amélioration
+Mieux exploiter les données déjà disponibles dans les outils existants avant d’envisager de nouvelles solutions.
+Définir un socle limité d’indicateurs de pilotage réellement utiles à la direction, avec une logique de tableau de bord simple, lisible et alimenté régulièrement.
+Réduire les doubles saisies et fiabiliser les flux entre les principaux outils afin d’améliorer la qualité de l’information et de limiter les pertes de temps.
+Formaliser quelques règles internes sur la gestion documentaire, la confidentialité, les accès et les bonnes pratiques numériques, notamment dans la perspective de futurs usages d’automatisation ou d’IA.
+Organisation
+Constats clés
+L’organisation actuelle repose sur une forte implication des dirigeants, une bonne réactivité et une grande souplesse dans le traitement des situations quotidiennes. Ce fonctionnement constitue un avantage dans une structure de taille intermédiaire où la proximité décisionnelle est un facteur d’efficacité.
+Toutefois, cette souplesse s’accompagne d’une forte dépendance aux ajustements humains permanents. Une partie importante de la fluidité opérationnelle repose encore sur la vigilance des personnes, les contrôles manuels et les arbitrages au fil de l’eau.
+Cette organisation fonctionne, mais elle devient plus fragile à mesure que l’activité se développe. La croissance accroît mécaniquement le poids des tâches de coordination invisibles, des vérifications successives et des interfaces non structurées entre les fonctions.
+L’entreprise a ainsi atteint un palier où la qualité de l’engagement individuel ne suffira plus, à elle seule, à absorber durablement l’augmentation de la complexité.
+Propositions d’amélioration
+Faire évoluer l’organisation par simplification ciblée des circuits plutôt que par refonte globale.
+Clarifier les étapes critiques des principaux processus et rendre plus visibles les priorités, les urgences et les points de validation.
+Réduire les dépendances à des ajustements informels en installant des routines communes, des points de repère partagés et des règles de fonctionnement simples.
+Conduire les évolutions sur un mode progressif, avec expérimentation sur des périmètres limités avant déploiement plus large.
+Cadre réglementaire
+Constats clés
+L’entreprise évolue dans un environnement qui impose de la rigueur documentaire, de la traçabilité et une bonne maîtrise des obligations contractuelles et administratives. Elle dispose déjà de pratiques et d’outils qui couvrent une partie de ces exigences.
+En revanche, plusieurs opérations sensibles restent réalisées de manière manuelle, ce qui augmente les risques d’hétérogénéité, d’oubli, de décalage de traitement ou de difficulté de traçabilité.
+Le cadre de sécurisation des futurs usages numériques, notamment en matière de données clients, de confidentialité, d’automatisation et d’usages d’IA, apparaît encore insuffisamment structuré à ce stade.
+L’enjeu n’est pas seulement de respecter les obligations actuelles, mais aussi de s’assurer que les futures évolutions numériques seront mises en œuvre dans un cadre maîtrisé, proportionné et sécurisant.
+Propositions d’amélioration
+Renforcer la formalisation des pratiques sur les traitements sensibles, sans alourdir inutilement le fonctionnement de l’entreprise.
+Définir des règles simples de validation, de conservation et de circulation des données et documents à enjeu contractuel ou administratif.
+Intégrer une vérification systématique des impacts de confidentialité et de conformité avant tout nouveau déploiement d’outil, d’automatisation ou d’usage d’IA.
+Mettre en place une vigilance régulière sur les obligations qui concernent directement l’activité, afin de sécuriser les évolutions sans créer de surcharge administrative.
+Cas d’usage IA et accompagnement 
+préconisés
+1 Fluidifier le traitement du SAV et des urgences
+Description du cas d’usage
+Mettre en place un outil complémentaire de gestion des demandes SAV permettant de centraliser les sollicitations reçues par mail ou téléphone, de qualifier leur niveau d’urgence, de notifier les personnes concernées et d’informer le client aux étapes clés de la prise en charge.
+Contexte ou problème identifié
+Le traitement actuel du SAV repose sur plusieurs canaux d’entrée et sur des transmissions manuelles. Cette organisation limite la visibilité en temps réel sur les urgences, fragilise la coordination interne et ne permet pas d’assurer de manière structurée l’information du client sur la prise en charge et le délai d’intervention. En l’absence de connexion confirmée avec le logiciel métier existant, la solution la plus réaliste consiste à créer un outil complémentaire dédié à cette phase amont.
+Outils IA ou solutions d’automatisation
+La solution peut prendre la forme d’un applicatif web léger, relié à la messagerie et utilisable aussi pour les appels entrants, avec des automatisations via Make ou n8n. L’outil doit permettre la saisie des demandes, leur qualification, la notification du responsable SAV et du technicien, ainsi que l’envoi de messages au client. ChatGPT peut être utilisé pour reformuler la demande, produire une synthèse courte et préparer des messages types.
+Accompagnement préconisé
+L’accompagnement consiste à analyser le circuit actuel des demandes, définir un processus cible simple, concevoir l’outil avec les utilisateurs concernés, paramétrer les notifications et les messages clients, puis tester la solution sur un périmètre limité avant généralisation. Une formalisation des règles d’usage et une prise en main des équipes devront compléter le dispositif.
+Impact potentiel
+Ce cas d’usage améliore la réactivité, sécurise le traitement des urgences et réduit le risque d’oubli. Il renforce également la qualité de service perçue par le client grâce à une information plus régulière sur la prise en charge et le délai annoncé. Le point de vigilance principal concerne la simplicité d’usage et la bonne qualification des niveaux d’urgence.
+2 Assister le chiffrage et la consultation fournisseurs
+Description du cas d’usage
+Structurer le recueil d’informations terrain et préparer plus rapidement les devis et consultations fournisseurs, tout en conservant la validation finale par le chargé d’affaires.
+Contexte ou problème identifié
+Le chiffrage repose aujourd’hui sur des notes papier, des recherches manuelles dans les catalogues et plusieurs ressaisies successives. Ce fonctionnement est maîtrisé, mais il mobilise du temps sur des tâches de préparation et de recherche qui ralentissent la production des devis.
+Outils IA ou solutions d’automatisation
+Un formulaire numérique de relevé peut remplacer les notes papier. Make ou n8n peuvent structurer les informations collectées et préparer des éléments réutilisables. ChatGPT peut aider à produire une synthèse technique, un brouillon de descriptif ou un mail de consultation fournisseur.
+Accompagnement préconisé
+L’accompagnement consiste à :
+identifier les informations nécessaires au relevé ;
+créer une trame numérique simple ;
+concevoir un scénario d’assistance à la préparation du devis ;
+tester sur des dossiers réels ;
+sécuriser la validation métier finale.
+Impact potentiel
+L’entreprise peut gagner du temps, homogénéiser ses devis et mieux sécuriser les informations collectées. Le principal point de vigilance reste la validation technique des références et hypothèses de chiffrage.
+3 Moderniser la gestion des contrats d’entretien
+Description du cas d’usage
+Faire évoluer le processus de création des contrats d’entretien à partir du fichier Excel existant, afin de mieux structurer les relevés, fiabiliser les calculs et automatiser la génération des documents.
+Contexte ou problème identifié
+Le processus actuel repose sur une visite sur site, un relevé manuel des équipements et l’utilisation d’un fichier Excel pour calculer le temps d’entretien, le déplacement et le coût annuel. Cette méthode reste pertinente sur le plan métier, mais elle demeure isolée, peu fluide et dépendante de plusieurs manipulations manuelles jusqu’à l’envoi au client. Elle ne permet pas d’aller jusqu’à la contractualisation complète dans un circuit homogène et traçable.
+Outils IA ou solutions d’automatisation
+Un formulaire structuré, relié à Make ou n8n, peut automatiser l’enchaînement entre relevé, calcul, génération documentaire et classement. ChatGPT peut aider à reformuler les éléments techniques dans une présentation client plus claire.
+Accompagnement préconisé
+L’accompagnement consiste à :
+analyser le fichier actuel ;
+conserver la logique de calcul utile ;
+créer une trame standard de relevé ;
+automatiser la production du contrat ;
+valider l’ensemble sur plusieurs cas réels.
+Impact potentiel
+Ce cas d’usage améliore la fiabilité, réduit les manipulations répétitives et professionnalise la présentation des contrats d’entretien. Il doit toutefois rester strictement aligné avec les réalités techniques du terrain.
+4 Assister la réponse aux appels d’offres
+Description du cas d’usage
+Mettre en place une assistance à l’analyse des pièces de consultation et à la préparation des mémoires techniques pour gagner du temps et sécuriser les réponses.
+Contexte ou problème identifié
+L’analyse du règlement de consultation, du CCTP et la rédaction du mémoire technique sont aujourd’hui réalisées entièrement de manière manuelle. Ce mode de traitement est chronophage et expose à des oublis ou à des incohérences.
+Outils IA ou solutions d’automatisation
+ChatGPT peut aider à extraire les exigences principales, identifier les pièces attendues, proposer une trame de réponse et vérifier la cohérence du dossier. Make ou n8n peuvent soutenir le classement des documents et la création de check-lists.
+Accompagnement préconisé
+L’accompagnement consiste à :
+définir une méthode type de traitement d’un appel d’offres ;
+constituer une base documentaire réutilisable ;
+créer des modèles d’analyse et de rédaction ;
+encadrer la relecture et la validation finale.
+Impact potentiel
+L’entreprise peut améliorer la qualité formelle de ses réponses et réduire le temps consacré à la phase amont. Une validation humaine systématique restera indispensable sur tous les points techniques et contractuels.
+5 Alléger les tâches administratives et comptables
+Description du cas d’usage
+Automatiser certaines tâches répétitives liées à la comptabilité, aux relances, aux notes de frais et au traitement de mails afin de dégager du temps sur l’administratif.
+Contexte ou problème identifié
+La fonction administrative concentre aujourd’hui de nombreuses opérations manuelles : saisie d’informations, classement des mails, suivi des règlements, préparation des relances, gestion des notes de frais, consolidation de tableaux de suivi et préparation d’éléments transmis ensuite aux outils comptables ou au cabinet comptable. Cette organisation est chronophage, génère des ressaisies et crée une forte dépendance à une seule personne sur plusieurs flux sensibles.
+Outils IA ou solutions d’automatisation
+La solution peut s’appuyer sur un applicatif léger ou sur des automatisations reliées à Outlook, Excel, EBP et aux documents reçus, avec Make ou n8n pour organiser les flux.
+Les possibilités concrètes sont notamment les suivantes :
+classement automatique ou semi-automatique des mails entrants par nature : fournisseur, client, relance, social, note de frais, document à traiter ;
+extraction des pièces jointes et rangement dans le bon dossier ou le bon espace de travail ;
+création automatique d’une tâche de suivi à partir d’un mail ou d’un document reçu ;
+génération d’une liste des factures à contrôler ou à rapprocher ;
+préparation des relances clients à partir d’un état d’impayés ou d’un fichier exporté ;
+génération de mails de relance à partir de modèles personnalisables ;
+suivi visuel des relances par statut : à faire, envoyée, en attente de réponse, régularisée ;
+centralisation des justificatifs de notes de frais, avec rattachement au bon salarié et à la bonne période ;
+préparation d’un tableau récapitulatif des notes de frais avant ressaisie ou intégration comptable ;
+consolidation d’éléments variables pour la paie à partir de tableaux ou fichiers existants ;
+création de tableaux de suivi automatiques ou semi-automatiques pour les paiements, pièces manquantes, échéances ou actions à relancer ;
+aide à la rédaction de mails administratifs, de relances ou de réponses standard grâce à ChatGPT.
+L’objectif n’est pas de remplacer EBP ni le cabinet comptable, mais de mieux préparer, organiser et suivre les flux en amont.
+Accompagnement préconisé
+L’accompagnement consiste à :
+identifier les tâches les plus chronophages ;
+sélectionner quelques flux simples à automatiser ;
+définir les points de contrôle à maintenir ;
+tester progressivement les automatisations ;
+documenter les nouvelles pratiques.
+Impact potentiel
+Ce cas d’usage permet de réduire les ressaisies, d’améliorer la lisibilité des traitements en cours et de dégager du temps sur des tâches à plus forte valeur ajoutée. Le niveau de contrôle devra rester élevé sur les opérations financières et sociales.
+6 Mettre en place un tableau de bord de pilotage
+Description du cas d’usage
+Construire un tableau de bord simple à partir des données déjà disponibles, afin de donner à la direction une vision plus claire des flux, de l’activité et des points de vigilance.
+Contexte ou problème identifié
+Les informations existent dans les outils, mais elles restent dispersées et peu lisibles dans une logique de pilotage. L’absence de tableau de bord limite la capacité d’anticipation et d’arbitrage.
+Outils IA ou solutions d’automatisation
+Des extractions issues de CLOUDDI, EBP et d’Excel peuvent alimenter un tableau de bord sous Excel, Google Sheets, Looker Studio ou Power BI. Make ou n8n peuvent aider à organiser les flux de données. L’IA peut compléter le dispositif par une synthèse commentée des indicateurs.
+Accompagnement préconisé
+L’accompagnement consiste à :
+choisir les indicateurs réellement utiles ;
+identifier les sources de données disponibles ;
+concevoir un premier prototype ;
+tester sa lisibilité avec la direction ;
+ajuster la fréquence et le niveau de détail.
+Impact potentiel
+L’entreprise gagne en visibilité, en capacité d’anticipation et en qualité d’arbitrage. Le principal enjeu est de conserver un outil simple, centré sur quelques indicateurs réellement décisionnels.
+7 Structurer la communication et la marque employeur
+Description du cas d’usage
+Préparer la communication future de l’entreprise avec des outils d’assistance à la production de contenus et à leur organisation, afin de renforcer sa visibilité et son attractivité.
+Contexte ou problème identifié
+La communication n’est pas encore structurée, alors même qu’un besoin est identifié sur la visibilité de l’entreprise et la marque employeur. L’arrivée d’une alternante constitue une opportunité pour installer de bonnes pratiques dès le départ.
+Outils IA ou solutions d’automatisation
+ChatGPT peut aider à générer des idées de publications, reformuler les contenus et construire un calendrier éditorial. Make ou n8n peuvent organiser le circuit de validation et le classement des contenus.
+Accompagnement préconisé
+L’accompagnement consiste à :
+clarifier la ligne éditoriale ;
+définir les thèmes de communication prioritaires ;
+créer des trames simples de publication ;
+préparer un calendrier éditorial ;
+structurer un circuit de validation.
+Impact potentiel
+L’entreprise peut améliorer sa visibilité, renforcer son image et mieux valoriser ses équipes. Les contenus devront rester cohérents avec la réalité opérationnelle de l’entreprise.
+Synthèse et plan d’action
+Synthèse graphique
+Entreprise en croissance avec une équipe expérimentée et polyvalente.
+Direction très impliquée, avec une bonne maîtrise des opérations.
+Logiciel métier déjà en place et outils numériques existants.
+Bonne réactivité terrain, notamment sur le SAV et la maintenance.
+Besoins d’amélioration déjà bien identifiés en interne.
+Processus encore très manuels, avec de nombreuses ressaisies.
+Gestion des urgences SAV peu sécurisée en temps réel.
+Forte dépendance à quelques personnes sur les fonctions clés.
+Absence de tableau de bord de pilotage consolidé.
+Charge administrative élevée sur des tâches répétitives.
+Communication externe peu développée.
+Saturation de l’organisation avec la croissance de l’activité.
+Insatisfaction client en cas de retard sur les urgences SAV.
+Fragilité en cas d’absence sur les postes support clés.
+Risque d’erreurs lié à la dispersion des données et aux ressaisies.
+Perte d’efficacité si les tâches administratives continuent à croître.
+Difficulté à structurer la transformation sans méthode claire.
+Automatiser les tâches à faible valeur ajoutée.
+Améliorer la réactivité et la qualité de service sur le SAV.
+Structurer le chiffrage, les contrats d’entretien et les relances.
+Mieux exploiter les données existantes pour le pilotage.
+Professionnaliser les réponses aux appels d’offres.
+Développer la communication et la marque employeur.
+Forces
+Faiblesses
+Opportunités
+Menaces
+Interne
+Externe
+Entreprise en croissance avec une équipe expérimentée et polyvalente.
+Direction très impliquée, avec une bonne maîtrise des opérations.
+Logiciel métier déjà en place et outils numériques existants.
+Bonne réactivité terrain, notamment sur le SAV et la maintenance.
+Besoins d’amélioration déjà bien identifiés en interne.
+Processus encore très manuels, avec de nombreuses ressaisies.
+Gestion des urgences SAV peu sécurisée en temps réel.
+Forte dépendance à quelques personnes sur les fonctions clés.
+Absence de tableau de bord de pilotage consolidé.
+Charge administrative élevée sur des tâches répétitives.
+Communication externe peu développée.
+Saturation de l’organisation avec la croissance de l’activité.
+Insatisfaction client en cas de retard sur les urgences SAV.
+Fragilité en cas d’absence sur les postes support clés.
+Risque d’erreurs lié à la dispersion des données et aux ressaisies.
+Perte d’efficacité si les tâches administratives continuent à croître.
+Difficulté à structurer la transformation sans méthode claire.
+Automatiser les tâches à faible valeur ajoutée.
+Améliorer la réactivité et la qualité de service sur le SAV.
+Structurer le chiffrage, les contrats d’entretien et les relances.
+Mieux exploiter les données existantes pour le pilotage.
+Professionnaliser les réponses aux appels d’offres.
+Développer la communication et la marque employeur.
+Forces
+Faiblesses
+Opportunités
+Menaces
+Interne
+Externe
+Plan d’action détaillé 
+PLAN D'ACTION
+Projet Axes d’actions
+Priorité
+Action/étapes
+Description
+Calendrier prévisionnel
+Pilote/référent
+Livrables
+Ressources externes / internes
+Administratif
+Haute
+Automatiser les tâches administratives répétitives
+Prioriser les flux les plus chronophages : tri de mails, relances, notes de frais, suivis de paiements et tableaux de contrôle afin de réduire les ressaisies.
+Mois 3
+Victoria / Yoan AMARGER
+Cartographie des tâches, scénarios automatisés, procédures de contrôle, supports utilisateurs
+Externe : consultant Make ou n8n ; Interne : administratif, direction
+Communication
+Basse
+Structurer la communication et la marque employeur
+Préparer une ligne éditoriale, des modèles de contenus et un calendrier simple pour accompagner la future prise de poste de l’alternante communication.
+Mois 2
+Alternante communication / Yoan AMARGER
+Ligne éditoriale, calendrier de publication, trames de contenus, circuit de validation
+Externe : accompagnement communication IA ; Interne : alternante, direction
+Processus métier
+Haute
+Structurer le traitement des demandes SAV et des urgences
+Cartographier le circuit actuel, définir les niveaux d'urgence, mettre en place des alertes internes en temps réel et tester un flux de traitement plus réactif pour les demandes SAV.
+Mois 2
+Frédéric BERLEMOT / Responsable SAV
+Procédure SAV cible, règles de qualification, scénario d'alerte, fiche réflexe utilisateurs
+Externe : consultant automatisation ; Interne : SAV, administratif, direction
+Haute
+Mettre en place une assistance au chiffrage
+Créer une trame numérique de relevé terrain, structurer les informations utiles au devis et préparer des modèles de consultation fournisseurs pour réduire les ressaisies.
+Mois 3
+Yoan AMARGER / Chargés d’affaires
+Formulaire de relevé, trame de descriptif, modèle de consultation fournisseur, mode opératoire
+Externe : consultant IA / automatisation ; Interne : chargés d’affaires
+Moyenne
+Moderniser la gestion des contrats d’entretien
+Fiabiliser le relevé des équipements, conserver la logique de calcul existante et automatiser la génération des propositions de contrats d’entretien.
+Mois 2
+Yoan AMARGER / Technicien maintenance
+Trame de relevé standard, modèle de proposition, scénario de génération documentaire
+Externe : consultant automatisation ; Interne : maintenance, chargés d’affaires
+Moyenne
+Assister la réponse aux appels d’offres
+Créer une méthode d’analyse des RC et CCTP, structurer une base documentaire réutilisable et sécuriser la préparation des mémoires techniques.
+Mois 2
+Yoan AMARGER / Chargés d’affaires
+Méthode de traitement, base de contenus réutilisables, trames de réponse, check-list de contrôle
+Externe : consultant IA ; Interne : chargés d’affaires, direction
+Compétences &amp;
+Ressources
+Haute
+Sensibiliser et former les référents internes
+Former un noyau de référents sur les usages concrets de l’IA et de l’automatisation, à partir des cas d’usage retenus par l’entreprise.
+Mois 2
+Direction / Référents métiers
+Session de sensibilisation, ateliers de prise en main, fiches pratiques, plan de montée en compétence
+Externe : consultant Interne : direction, référents métier
+Sécurité &amp;
+Réglementaire
+Moyenne
+Formaliser les règles de gestion des données et des usages IA
+Définir un cadre simple sur la confidentialité, la validation humaine, les données clients et les points de vigilance avant déploiement d'automatisations ou d'usages d'IA.
+Mois 1
+Direction
+Charte d’usage, règles de validation, consignes de confidentialité, check-list de conformité
+Externe : conseil / accompagnement ; Interne : direction, administratif

@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Six audits flash IA, six secteurs, le même verdict · ALTOS</title>
+<meta name="description" content="Six audits flash IA conduits en 2025/26 dans des secteurs très différents — du salon de coiffure à la pharmacie. Les patterns récurrents, les angles morts, ce qui marche vraiment." />
+<meta name="keywords" content="audit flash IA, secteurs IA, IA PME, retours terrain IA, observatoire IA" />
+<meta name="author" content="Nicolas Darcos" />
+<link rel="canonical" href="https://altos.fr/journal/6-audits-6-secteurs-meme-verdict.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="ALTOS" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://altos.fr/journal/6-audits-6-secteurs-meme-verdict.html" />
+<meta property="og:title" content="Six audits flash IA, six secteurs, le même verdict · ALTOS" />
+<meta property="og:description" content="Six audits flash IA conduits en 2025/26 dans des secteurs très différents — du salon de coiffure à la pharmacie. Les patterns récurrents, les angles morts, ce qui marche vraiment." />
+<meta property="og:image" content="https://altos.fr/assets/og-default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="ALTOS — Ambassadeur IA pour PME" />
+<meta property="article:published_time" content="2026-05-12T00:00:00+02:00" />
+<meta property="article:author" content="Nicolas Darcos" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Six audits flash IA, six secteurs, le même verdict · ALTOS" />
+<meta name="twitter:description" content="Six audits flash IA conduits en 2025/26 dans des secteurs très différents — du salon de coiffure à la pharmacie. Les patterns récurrents, les angles morts, ce qui marche vraiment." />
+<meta name="twitter:image" content="https://altos.fr/assets/og-default.png" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-weight='900' fill='%23ffffff'%3EA%3C/text%3E%3Ccircle cx='48' cy='52' r='4' fill='%23ff5b14'/%3E%3C/svg%3E" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #fff; --ink: #0a0a0a; --ink-2: #2c2c2c; --ink-3: #767676;
+    --line: #e2e2e2; --paper: #f4f1ec; --accent: #ff5b14; --acid: #d9ff3c;
+    --display: "Fraunces", "Times New Roman", serif;
+    --sans: "Inter", system-ui, sans-serif;
+    --mono: "DM Mono", ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  body { overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--ink); color: var(--acid); }
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+  .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+  .num { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.1em; text-transform: uppercase; }
+
+  .nav { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--ink); }
+  .nav__inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 18px 32px; max-width: 1320px; margin: 0 auto; }
+  .logo { font-family: var(--display); font-weight: 900; font-size: 22px; letter-spacing: -0.04em; }
+  .logo i { font-style: italic; color: var(--accent); }
+  .nav__links { display: flex; gap: 32px; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .nav__links a:hover { color: var(--accent); }
+  .nav__cta { display: flex; justify-content: flex-end; align-items: center; gap: 14px; }
+  .nav__time { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.08em; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 26px; font-family: var(--sans);
+    font-weight: 500; font-size: 14px;
+    border: 1px solid var(--ink); background: var(--ink); color: var(--bg);
+    cursor: pointer; position: relative; overflow: hidden; transition: color .3s;
+  }
+  .btn::before { content: ""; position: absolute; inset: 0; background: var(--accent); transform: translateY(101%); transition: transform .4s cubic-bezier(.7,0,.3,1); z-index: -1; }
+  .btn:hover::before { transform: translateY(0); }
+  .btn .arrow { transition: transform .3s; }
+  .btn:hover .arrow { transform: translateX(4px); }
+
+  .article-header { border-bottom: 1px solid var(--ink); padding: 64px 0 56px; }
+  .article-meta {
+    display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    font-family: var(--mono); font-size: 11px; color: var(--ink-3);
+    text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 40px;
+  }
+  .article-meta .tag { background: var(--paper); padding: 4px 12px; color: var(--ink); }
+  h1.title {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(40px, 6.5vw, 92px); line-height: 0.95;
+    letter-spacing: -0.03em; max-width: 22ch;
+  }
+  h1.title i { font-style: italic; }
+  h1.title .accent { color: var(--accent); }
+  h1.title mark { background: var(--acid); padding: 0 6px; color: var(--ink); }
+  .article-lede {
+    margin-top: 32px; max-width: 64ch;
+    font-family: var(--display); font-weight: 300;
+    font-size: clamp(20px, 2vw, 26px); line-height: 1.4;
+    color: var(--ink-2); letter-spacing: -0.01em;
+  }
+  .author-row {
+    margin-top: 48px; padding-top: 24px;
+    border-top: 1px solid var(--line);
+    display: flex; gap: 16px; align-items: center;
+  }
+  .author-avatar {
+    width: 48px; height: 48px; border-radius: 50%;
+    background: var(--ink); color: var(--bg);
+    display: grid; place-items: center;
+    font-family: var(--display); font-style: italic; font-size: 20px;
+  }
+  .author-meta { font-size: 14px; line-height: 1.4; }
+  .author-meta b { font-weight: 500; }
+  .author-meta span { color: var(--ink-3); }
+
+  article.body { padding: 80px 0 100px; font-size: 18px; line-height: 1.65; color: var(--ink-2); }
+  article.body p { margin: 0 0 24px; max-width: 64ch; text-wrap: pretty; }
+  article.body p.lead { font-size: 22px; color: var(--ink); line-height: 1.5; }
+  article.body strong { color: var(--ink); font-weight: 500; }
+  article.body em { font-style: italic; color: var(--ink); }
+  article.body h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(32px, 4vw, 52px); line-height: 1.05;
+    letter-spacing: -0.02em; margin: 64px 0 24px;
+    color: var(--ink); max-width: 22ch;
+  }
+  article.body h2 i { font-style: italic; }
+  article.body h2 mark { background: var(--acid); padding: 0 8px; }
+  article.body ul {
+    margin: 16px 0 32px; padding-left: 0;
+    list-style: none; max-width: 64ch;
+  }
+  article.body ul li {
+    padding-left: 24px; position: relative; margin-bottom: 10px; line-height: 1.55;
+  }
+  article.body ul li::before { content: "→"; color: var(--accent); position: absolute; left: 0; font-family: var(--mono); }
+  article.body .pull {
+    margin: 56px 0; padding: 36px 0;
+    border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink);
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(28px, 3.2vw, 40px); line-height: 1.2;
+    color: var(--ink); letter-spacing: -0.015em; max-width: none;
+  }
+  article.body .pull i { font-style: italic; color: var(--accent); }
+
+  /* Sector card */
+  .sector {
+    margin: 48px 0;
+    border: 1px solid var(--ink);
+    display: grid; grid-template-columns: 1fr 280px; gap: 0;
+  }
+  .sector__main { padding: 32px; }
+  .sector__index {
+    font-family: var(--mono); font-size: 11px; color: var(--accent);
+    letter-spacing: 0.12em; text-transform: uppercase;
+  }
+  .sector h3 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(24px, 2.8vw, 32px); line-height: 1.1;
+    letter-spacing: -0.015em; margin: 10px 0 18px;
+    color: var(--ink);
+  }
+  .sector h3 i { font-style: italic; }
+  .sector p { margin: 0 0 14px; line-height: 1.55; color: var(--ink-2); max-width: none; font-size: 16px; }
+  .sector p:last-child { margin-bottom: 0; }
+  .sector__side {
+    background: var(--paper); border-left: 1px solid var(--ink);
+    padding: 28px; display: flex; flex-direction: column; gap: 18px;
+  }
+  .sector__side h4 {
+    font-family: var(--mono); font-size: 10px; color: var(--ink-3);
+    text-transform: uppercase; letter-spacing: 0.1em;
+    font-weight: 500; margin: 0 0 4px;
+  }
+  .sector__side .v {
+    font-family: var(--display); font-weight: 400;
+    font-size: 22px; color: var(--ink); line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  .sector__side .v i { font-style: italic; color: var(--accent); }
+  .sector__side .stack {
+    font-family: var(--mono); font-size: 11px; color: var(--ink-2);
+    line-height: 1.6;
+  }
+
+  .article-cta {
+    background: var(--ink); color: var(--bg); padding: 80px 0; text-align: center;
+  }
+  .article-cta h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(36px, 5vw, 64px); line-height: 1;
+    letter-spacing: -0.02em; max-width: 22ch;
+    margin: 0 auto 24px;
+  }
+  .article-cta h2 i { font-style: italic; color: var(--accent); }
+  .article-cta p { color: #b3b3b3; max-width: 56ch; margin: 0 auto 32px; line-height: 1.5; }
+  .article-cta .btn { background: var(--accent); border-color: var(--accent); }
+
+  footer { background: var(--bg); border-top: 1px solid var(--ink); padding: 48px 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px; }
+  footer .note { max-width: 64ch; font-size: 13px; color: var(--ink-2); line-height: 1.55; }
+  footer .right { font-family: var(--mono); font-size: 11px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.06em; text-align: right; }
+  footer .right a { color: var(--ink); text-transform: none; letter-spacing: 0; }
+  footer .right a:hover { color: var(--accent); }
+
+  @media (max-width: 700px) {
+    .nav__links { display: none; }
+    .sector { grid-template-columns: 1fr; }
+    .sector__side { border-left: none; border-top: 1px solid var(--ink); }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Six audits flash IA, six secteurs sans rapport, le même verdict",
+  "datePublished": "2026-05-12",
+  "dateModified": "2026-05-12",
+  "author": {"@type":"Person","name":"Nicolas Darcos","url":"https://altos.fr/#org"},
+  "publisher": {"@type":"Organization","name":"ALTOS","logo":{"@type":"ImageObject","url":"https://altos.fr/assets/og-default.png"}},
+  "image": "https://altos.fr/assets/og-default.png",
+  "mainEntityOfPage": "https://altos.fr/journal/6-audits-6-secteurs-meme-verdict.html",
+  "articleSection": "Retours de terrain",
+  "inLanguage": "fr-FR"
+}
+</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="../index.html" class="logo">ALTOS<i>.</i></a>
+    <div class="nav__links">
+      <a href="../index.html#services">Services</a>
+      <a href="../cas-usage.html">Réalisations</a>
+      <a href="../index.html#process">Méthode</a>
+      <a href="../index.html#blog">Journal</a>
+    </div>
+    <div class="nav__cta">
+      <span class="nav__time">FR · 2026</span>
+      <a href="../index.html#contact" class="btn">Prendre RDV
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="wrap-narrow">
+    <div class="article-meta">
+      <div style="display:flex;gap:14px;align-items:center">
+        <span class="tag">§ 02 — Retours de terrain</span>
+        <span>12 mai 2026</span>
+      </div>
+      <div>9 min de lecture</div>
+    </div>
+
+    <h1 class="title">
+      Six <span class="accent">secteurs</span>,<br/>
+      six audits flash IA.<br/>
+      Le même <mark>verdict</mark>.
+    </h1>
+
+    <p class="article-lede">
+      D'un studio de <i>signalétique</i> à une pharmacie d'officine, en passant par 32 salons de coiffure et un loueur saisonnier : ce que six audits flash conduits en 2025/26 nous ont vraiment appris.
+    </p>
+
+    <div class="author-row">
+      <div class="author-avatar">A</div>
+      <div class="author-meta">
+        <b>Altos Studio</b><br/>
+        <span>Studio digital pluridisciplinaire · 2026</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="body">
+  <div class="wrap-narrow">
+
+    <p class="lead">L'audit flash IA est un format d'une journée, restitution comprise. C'est aussi, pour nous, un <strong>poste d'observation</strong>. Six entreprises très différentes, six points d'entrée dans le quotidien d'une PME française : les patterns qui en ressortent sont plus instructifs que n'importe quelle étude de cabinet.</p>
+
+    <p>Cet article passe en revue les six audits que nous avons conduits sur le premier semestre 2026. Ils couvrent des secteurs sans aucun rapport — communication visuelle, services à la personne, salons de coiffure, matériel agricole, location vacances, pharmacie. À première vue, rien à voir. Et pourtant : <strong>les mêmes problèmes reviennent, dans le même ordre, avec les mêmes ordres de grandeur de gain</strong>.</p>
+
+    <div class="pull">
+      Six secteurs sans rapport.<br/>
+      Les <i>mêmes</i> points de friction.
+    </div>
+
+    <!-- SECTEUR 01 -->
+    <div class="sector">
+      <div class="sector__main">
+        <div class="sector__index">Secteur 01 — Communication visuelle</div>
+        <h3>Studio de <i>signalétique</i> BtoB · 11 pers., 1,5 M€</h3>
+        <p>Une entreprise montpelliéraine reprise il y a douze ans, passée de 400 K€ à 1,5 M€. <strong>400 clients actifs, 250 commandes par mois</strong>, une chaîne métier complète (commercial, BE, atelier, pose). L'ERP central (FRESH/Dolibarr) tourne bien, le flux de production est automatisé via SWITCH + CALLAS + PRIMECENTER. Le socle numérique existe.</p>
+        <p>Le diagnostic remonte sept opportunités : relances de devis automatisées à partir de l'ERP, campagnes emailing segmentées sur l'historique client, assistant emails pour les collaborateurs sollicités, assistant IA personnel pour le dirigeant en déplacement, transformation des réalisations en contenus marketing, tableaux de bord dynamiques connectés aux données, et rationalisation de l'agent IA marketing existant — utilisé à 10 % de son potentiel.</p>
+      </div>
+      <div class="sector__side">
+        <div><h4>Quick win identifié</h4><div class="v"><i>Relances</i> de devis auto.</div></div>
+        <div><h4>Stack envisagée</h4><div class="stack">FRESH (Dolibarr) · Make · ChatGPT · Brevo</div></div>
+      </div>
+    </div>
+
+    <!-- SECTEUR 02 -->
+    <div class="sector">
+      <div class="sector__main">
+        <div class="sector__index">Secteur 02 — Services à la personne</div>
+        <h3>Réseau d'aide à domicile <i>multi-sites</i></h3>
+        <p>Une structure qui gère plusieurs dizaines de bénéficiaires, avec des responsables de secteur, des intervenants terrain, des contrats CESU et un suivi RH dispersé entre Excel, agendas, mails et SMS. Le système d'information existe — il est juste fragmenté en quinze fichiers et trois canaux de communication.</p>
+        <p>Quatre cas d'usage prioritaires se dégagent : <strong>suivi automatisé des échéances contractuelles et des périodes d'essai</strong> (à très forte valeur juridique), centralisation des tâches et priorités par collaborateur, rapprochement automatique des heures, frais et déclarations CESU, et préqualification IA des candidatures pour limiter le temps RH passé en tri.</p>
+      </div>
+      <div class="sector__side">
+        <div><h4>Quick win identifié</h4><div class="v">Suivi <i>contractuel</i> auto.</div></div>
+        <div><h4>Stack envisagée</h4><div class="stack">Notion · Make · OpenAI · Google Workspace</div></div>
+      </div>
+    </div>
+
+    <!-- SECTEUR 03 -->
+    <div class="sector">
+      <div class="sector__main">
+        <div class="sector__index">Secteur 03 — Coiffure (réseau régional)</div>
+        <h3>Groupe de <i>32 salons</i>, 18 filiales</h3>
+        <p>Un réseau bâti sur onze ans, implanté en galerie marchande, 80 % à Toulouse, présence Bordeaux et Normandie. Les exports tournent — chaque salon produit ses fichiers Excel hebdomadaires. Mais ils tournent <em>séparément</em>. Le pilotage groupe se fait à la main, fichier par fichier, et l'animation salons s'appuie sur du WhatsApp et des appels.</p>
+        <p>Six cas d'usage identifiés : assistant marketing IA pour les contenus, visuels et avis Google sur les 32 fiches établissement, compte rendu automatique des réunions d'animation, assistant mail, centralisation des demandes salariés via formulaire, base RH consolidée, et <strong>tableau de bord financier consolidé</strong> à partir des exports hebdomadaires.</p>
+      </div>
+      <div class="sector__side">
+        <div><h4>Quick win identifié</h4><div class="v">Avis <i>Google</i> ×32 fiches.</div></div>
+        <div><h4>Stack envisagée</h4><div class="stack">Google Sheets · n8n · Claude · Meta Business</div></div>
+      </div>
+    </div>
+
+    <!-- SECTEUR 04 -->
+    <div class="sector">
+      <div class="sector__main">
+        <div class="sector__index">Secteur 04 — Matériel agricole</div>
+        <h3>Vente & réparation, <i>PME familiale</i></h3>
+        <p>Une entreprise multi-sites historiquement bien implantée, savoir-faire reconnu, gouvernance familiale. Le matériel et les techniciens tournent bien — c'est l'<strong>administratif support</strong> qui freine. Double saisie des heures techniciens, relances clients manuelles deux fois par an, absence de communication client structurée, gestion email non priorisée.</p>
+        <p>Sept cas d'usage proposés, dont trois prioritaires : <strong>automatisation des temps techniciens via formulaire connecté à l'ERP IRIUM</strong>, scénarios de relance client conditionnels (Brevo + Make), et veille marchés publics structurée pour le service commercial. Plus de l'outillage : tableau de bord financier, traitement intelligent des mails, espace collaboratif inter-sites.</p>
+      </div>
+      <div class="sector__side">
+        <div><h4>Quick win identifié</h4><div class="v"><i>Temps</i> techniciens auto.</div></div>
+        <div><h4>Stack envisagée</h4><div class="stack">IRIUM · Google Forms · Make · Looker Studio</div></div>
+      </div>
+    </div>
+
+    <!-- SECTEUR 05 -->
+    <div class="sector">
+      <div class="sector__main">
+        <div class="sector__index">Secteur 05 — Location vacances + syndic</div>
+        <h3>Agence immobilière <i>multi-métiers</i></h3>
+        <p>Une agence qui combine gestion locative saisonnière (avec le logiciel SPI), syndic de copropriété et location longue durée. Trois métiers, trois flux, des audiences différentes et beaucoup de communication client à très forte saisonnalité. Le sujet n'est pas <em>quoi automatiser</em> — c'est <em>par où commencer</em>.</p>
+        <p>Sept cas d'usage proposés. Les plus créateurs de valeur : <strong>automatisation complète des communications arrivées/départs</strong> côté location, gestion automatisée de la taxe de séjour et des cautions pour les réservations externes, traitement intelligent des appels entrants par IA vocale avec historisation, devis entreprises automatisés pour le syndic, comptes rendus de réunion à partir d'audio enregistrés sur smartphone, et base documentaire IA des PV / RC / décisions de copro pour répondre aux copropriétaires.</p>
+      </div>
+      <div class="sector__side">
+        <div><h4>Quick win identifié</h4><div class="v"><i>Arrivées</i> / départs auto.</div></div>
+        <div><h4>Stack envisagée</h4><div class="stack">SPI · n8n · Twilio · OpenAI · Supabase</div></div>
+      </div>
+    </div>
+
+    <!-- SECTEUR 06 -->
+    <div class="sector">
+      <div class="sector__main">
+        <div class="sector__index">Secteur 06 — Pharmacie d'officine</div>
+        <h3>Officine <i>indépendante</i>, équipe terrain</h3>
+        <p>Une officine bien établie, communicante (site web, Instagram, Facebook). Mais la communication se fait quasi exclusivement vers les patients — alors que <strong>les professionnels de santé du secteur</strong> (médecins, infirmiers libéraux, kinés, EHPAD) constituent une audience nombreuse et largement non sollicitée. La messagerie déborde, l'équipe est en forte rotation sur le flux comptoir.</p>
+        <p>Les usages identifiés s'orientent vers l'<strong>assistant intelligent de gestion des mails</strong> (patients, soignants, laboratoires), un canal de communication dédié praticiens, et une structuration du suivi qualité (incidents, actions correctives, mise à jour de procédures). Le tout en gardant à l'esprit que <em>la pharmacie est un secteur régulé</em>, et que toute IA doit s'inscrire dans un cadre RGPD strict.</p>
+      </div>
+      <div class="sector__side">
+        <div><h4>Quick win identifié</h4><div class="v">Tri <i>mails</i> par audience.</div></div>
+        <div><h4>Stack envisagée</h4><div class="stack">Outlook · ChatGPT Team · Make · Notion</div></div>
+      </div>
+    </div>
+
+    <h2>Ce qu'on a appris, en <i>résumé</i></h2>
+
+    <p>Six secteurs sans rapport, et pourtant trois constats reviennent partout :</p>
+
+    <ul>
+      <li><strong>Les outils existent déjà.</strong> Aucune des six entreprises ne manquait d'outils — ERP métier, CRM, suite bureautique, parfois même un agent IA déjà testé. Le problème n'est jamais d'<em>ajouter</em>, c'est de <em>connecter</em>.</li>
+      <li><strong>Le quick win est toujours un workflow administratif.</strong> Relances de devis, suivi des contrats, rapprochement des heures, tri des mails. Les vraies économies de temps se font sur l'invisible — pas sur la prouesse IA.</li>
+      <li><strong>L'audience oubliée vaut souvent plus que l'audience courtisée.</strong> Le pharmacien parle aux patients mais oublie les soignants. Le studio graphique relance ses 50 plus gros clients mais oublie ses 350 dormants. Le réseau de coiffure communique vers ses clients mais pilote ses 32 fiches Google à la main.</li>
+    </ul>
+
+    <p>Et un dernier constat, plus général : <strong>l'IA n'est jamais la solution.</strong> Elle est le levier. La solution, c'est la cartographie des flux. La journée de l'audit flash ne sert presque jamais à déployer une IA — elle sert à <em>voir l'entreprise comme un système</em>, ce que personne n'a le temps de faire en interne.</p>
+
+  </div>
+</article>
+
+<section class="article-cta">
+  <div class="wrap-narrow">
+    <h2>Et chez vous, <i>quel</i> serait le verdict ?</h2>
+    <p>Notre audit flash IA dure une journée (restitution comprise) et inclut un livrable activable, avec transfert d'autonomie complet à votre équipe.</p>
+    <a href="../index.html#contact" class="btn">Échanger 30 minutes
+      <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="note">
+      <b>Note d'anonymisation —</b> Les six audits cités ont été conduits par Altos en 2025/26. Raisons sociales, noms, numéros de dossier et localisations précises ont été retirés ou généralisés conformément au RGPD. Les chiffres et caractéristiques métier sont issus des rapports réels.
+    </div>
+    <div class="right">
+      <div>Altos · Journal · 2025/26</div>
+      <div style="margin-top:6px"><a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a></div>
+      <div style="margin-top:6px"><a href="../index.html">← Retour à l'accueil</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

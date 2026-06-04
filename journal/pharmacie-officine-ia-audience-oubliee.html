@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Pharmacie d'officine et IA : l'audience qu'on oublie · ALTOS</title>
+<meta name="description" content="Une officine de 11 personnes, 50 mails par jour, démarche qualité ISO 9001 et une audience oubliée : les praticiens de santé. Retour sur un audit flash IA conduit en 2026." />
+<meta name="keywords" content="IA pharmacie, officine automatisation, ISO 9001 pharmacie, IA santé, audit IA pharmacie" />
+<meta name="author" content="Nicolas Darcos" />
+<link rel="canonical" href="https://altos.fr/journal/pharmacie-officine-ia-audience-oubliee.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="ALTOS" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://altos.fr/journal/pharmacie-officine-ia-audience-oubliee.html" />
+<meta property="og:title" content="Pharmacie d'officine et IA : l'audience qu'on oublie · ALTOS" />
+<meta property="og:description" content="Une officine de 11 personnes, 50 mails par jour, démarche qualité ISO 9001 et une audience oubliée : les praticiens de santé. Retour sur un audit flash IA conduit en 2026." />
+<meta property="og:image" content="https://altos.fr/assets/og-default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="ALTOS — Ambassadeur IA pour PME" />
+<meta property="article:published_time" content="2026-05-10T00:00:00+02:00" />
+<meta property="article:author" content="Nicolas Darcos" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Pharmacie d'officine et IA : l'audience qu'on oublie · ALTOS" />
+<meta name="twitter:description" content="Une officine de 11 personnes, 50 mails par jour, démarche qualité ISO 9001 et une audience oubliée : les praticiens de santé. Retour sur un audit flash IA conduit en 2026." />
+<meta name="twitter:image" content="https://altos.fr/assets/og-default.png" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-weight='900' fill='%23ffffff'%3EA%3C/text%3E%3Ccircle cx='48' cy='52' r='4' fill='%23ff5b14'/%3E%3C/svg%3E" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #fff; --ink: #0a0a0a; --ink-2: #2c2c2c; --ink-3: #767676;
+    --line: #e2e2e2; --paper: #f4f1ec; --accent: #ff5b14; --acid: #d9ff3c;
+    --display: "Fraunces", "Times New Roman", serif;
+    --sans: "Inter", system-ui, sans-serif;
+    --mono: "DM Mono", ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  body { overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--ink); color: var(--acid); }
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+  .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+  .num { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.1em; text-transform: uppercase; }
+
+  .nav { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--ink); }
+  .nav__inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 18px 32px; max-width: 1320px; margin: 0 auto; }
+  .logo { font-family: var(--display); font-weight: 900; font-size: 22px; letter-spacing: -0.04em; }
+  .logo i { font-style: italic; color: var(--accent); }
+  .nav__links { display: flex; gap: 32px; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .nav__links a:hover { color: var(--accent); }
+  .nav__cta { display: flex; justify-content: flex-end; align-items: center; gap: 14px; }
+  .nav__time { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.08em; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 26px; font-family: var(--sans);
+    font-weight: 500; font-size: 14px;
+    border: 1px solid var(--ink); background: var(--ink); color: var(--bg);
+    cursor: pointer; position: relative; overflow: hidden; transition: color .3s;
+  }
+  .btn::before { content: ""; position: absolute; inset: 0; background: var(--accent); transform: translateY(101%); transition: transform .4s cubic-bezier(.7,0,.3,1); z-index: -1; }
+  .btn:hover::before { transform: translateY(0); }
+  .btn .arrow { transition: transform .3s; }
+  .btn:hover .arrow { transform: translateX(4px); }
+
+  .article-header { border-bottom: 1px solid var(--ink); padding: 64px 0 56px; }
+  .article-meta {
+    display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    font-family: var(--mono); font-size: 11px; color: var(--ink-3);
+    text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 40px;
+  }
+  .article-meta .tag { background: var(--paper); padding: 4px 12px; color: var(--ink); }
+  h1.title {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(40px, 6.5vw, 92px); line-height: 0.95;
+    letter-spacing: -0.03em; max-width: 22ch;
+  }
+  h1.title i { font-style: italic; }
+  h1.title .accent { color: var(--accent); }
+  h1.title mark { background: var(--acid); padding: 0 6px; color: var(--ink); }
+  .article-lede {
+    margin-top: 32px; max-width: 64ch;
+    font-family: var(--display); font-weight: 300;
+    font-size: clamp(20px, 2vw, 26px); line-height: 1.4;
+    color: var(--ink-2); letter-spacing: -0.01em;
+  }
+  .author-row {
+    margin-top: 48px; padding-top: 24px;
+    border-top: 1px solid var(--line);
+    display: flex; gap: 16px; align-items: center;
+  }
+  .author-avatar {
+    width: 48px; height: 48px; border-radius: 50%;
+    background: var(--ink); color: var(--bg);
+    display: grid; place-items: center;
+    font-family: var(--display); font-style: italic; font-size: 20px;
+  }
+  .author-meta { font-size: 14px; line-height: 1.4; }
+  .author-meta b { font-weight: 500; }
+  .author-meta span { color: var(--ink-3); }
+
+  article.body { padding: 80px 0 100px; font-size: 18px; line-height: 1.65; color: var(--ink-2); }
+  article.body p { margin: 0 0 24px; max-width: 64ch; text-wrap: pretty; }
+  article.body p.lead { font-size: 22px; color: var(--ink); line-height: 1.5; }
+  article.body strong { color: var(--ink); font-weight: 500; }
+  article.body em { font-style: italic; color: var(--ink); }
+  article.body h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(32px, 4vw, 52px); line-height: 1.05;
+    letter-spacing: -0.02em; margin: 64px 0 24px;
+    color: var(--ink); max-width: 22ch;
+  }
+  article.body h2 i { font-style: italic; }
+  article.body h2 mark { background: var(--acid); padding: 0 8px; }
+  article.body h3 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(24px, 2.8vw, 32px); line-height: 1.1;
+    letter-spacing: -0.015em; margin: 48px 0 16px;
+    color: var(--ink); max-width: 28ch;
+  }
+  article.body h3 i { font-style: italic; }
+  article.body ul {
+    margin: 16px 0 32px; padding-left: 0;
+    list-style: none; max-width: 64ch;
+  }
+  article.body ul li {
+    padding-left: 24px; position: relative; margin-bottom: 10px; line-height: 1.55;
+  }
+  article.body ul li::before { content: "→"; color: var(--accent); position: absolute; left: 0; font-family: var(--mono); }
+  article.body .pull {
+    margin: 56px 0; padding: 36px 0;
+    border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink);
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(28px, 3.2vw, 40px); line-height: 1.2;
+    color: var(--ink); letter-spacing: -0.015em; max-width: none;
+  }
+  article.body .pull i { font-style: italic; color: var(--accent); }
+
+  .factbox {
+    margin: 48px 0;
+    background: var(--paper);
+    border-left: 4px solid var(--accent);
+    padding: 28px 32px;
+  }
+  .factbox h4 {
+    font-family: var(--mono); font-size: 11px; color: var(--accent);
+    letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px;
+  }
+  .factbox dl { display: grid; grid-template-columns: 220px 1fr; gap: 12px 24px; }
+  .factbox dt { font-family: var(--mono); font-size: 12px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.06em; }
+  .factbox dd { font-size: 15px; color: var(--ink); line-height: 1.5; }
+  .factbox dd b { font-weight: 500; }
+
+  .article-cta {
+    background: var(--ink); color: var(--bg); padding: 80px 0; text-align: center;
+  }
+  .article-cta h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(36px, 5vw, 64px); line-height: 1;
+    letter-spacing: -0.02em; max-width: 22ch;
+    margin: 0 auto 24px;
+  }
+  .article-cta h2 i { font-style: italic; color: var(--accent); }
+  .article-cta p { color: #b3b3b3; max-width: 56ch; margin: 0 auto 32px; line-height: 1.5; }
+  .article-cta .btn { background: var(--accent); border-color: var(--accent); }
+
+  footer { background: var(--bg); border-top: 1px solid var(--ink); padding: 48px 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px; }
+  footer .note { max-width: 64ch; font-size: 13px; color: var(--ink-2); line-height: 1.55; }
+  footer .right { font-family: var(--mono); font-size: 11px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.06em; text-align: right; }
+  footer .right a { color: var(--ink); text-transform: none; letter-spacing: 0; }
+  footer .right a:hover { color: var(--accent); }
+
+  @media (max-width: 700px) {
+    .nav__links { display: none; }
+    .factbox dl { grid-template-columns: 1fr; gap: 4px 0; }
+    .factbox dt { padding-top: 12px; border-top: 1px solid var(--line); }
+    .factbox dl > *:first-child { border-top: none; padding-top: 0; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Pharmacie d'officine et IA : l'audience qu'on oublie",
+  "datePublished": "2026-05-10",
+  "dateModified": "2026-05-10",
+  "author": {"@type":"Person","name":"Nicolas Darcos","url":"https://altos.fr/#org"},
+  "publisher": {"@type":"Organization","name":"ALTOS","logo":{"@type":"ImageObject","url":"https://altos.fr/assets/og-default.png"}},
+  "image": "https://altos.fr/assets/og-default.png",
+  "mainEntityOfPage": "https://altos.fr/journal/pharmacie-officine-ia-audience-oubliee.html",
+  "articleSection": "Sectoriel",
+  "inLanguage": "fr-FR"
+}
+</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="../index.html" class="logo">ALTOS<i>.</i></a>
+    <div class="nav__links">
+      <a href="../index.html#services">Services</a>
+      <a href="../cas-usage.html">Réalisations</a>
+      <a href="../index.html#process">Méthode</a>
+      <a href="../index.html#blog">Journal</a>
+    </div>
+    <div class="nav__cta">
+      <span class="nav__time">FR · 2026</span>
+      <a href="../index.html#contact" class="btn">Prendre RDV
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="wrap-narrow">
+    <div class="article-meta">
+      <div style="display:flex;gap:14px;align-items:center">
+        <span class="tag">§ 03 — Sectoriel</span>
+        <span>10 mai 2026</span>
+      </div>
+      <div>11 min de lecture</div>
+    </div>
+
+    <h1 class="title">
+      Pharmacie<br/>
+      d'<i class="accent">officine</i> et IA :<br/>
+      l'audience qu'on <mark>oublie</mark>.
+    </h1>
+
+    <p class="article-lede">
+      <i>Une officine de onze personnes, certifiée ISO 9001, cinquante mails par jour, une équipe en roulement.</i> Et un angle mort : les praticiens de santé du secteur. Retour sur un audit flash conduit au printemps 2026.
+    </p>
+
+    <div class="author-row">
+      <div class="author-avatar">A</div>
+      <div class="author-meta">
+        <b>Altos Studio</b><br/>
+        <span>Studio digital pluridisciplinaire · 2026</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="body">
+  <div class="wrap-narrow">
+
+    <p class="lead">L'officine est l'un des rares commerces où la <strong>logique flux</strong> et la <strong>logique relation</strong> coexistent en permanence. Le comptoir absorbe 90 % de la pression mentale de l'équipe. Et c'est précisément pour ça qu'on y trouve les angles morts les plus intéressants — parce que personne, en interne, n'a le temps de les voir.</p>
+
+    <p>Cet article rend compte d'un audit flash IA conduit dans une officine indépendante du sud-ouest. Onze collaborateurs, une dirigeante qui a repris la pharmacie en 2017, une activité diversifiée (dispensation, vaccination, entretiens, livraison, parapharmacie, location de matériel médical) et une démarche qualité ISO 9001 déjà installée. Tous les indicateurs d'une <strong>structure qui fonctionne</strong>. Et pourtant, deux leviers d'IA évidents — qui, en cinq jours d'audit, sautaient aux yeux.</p>
+
+    <div class="factbox">
+      <h4>L'officine en bref (anonymisée)</h4>
+      <dl>
+        <dt>Forme</dt><dd>Officine indépendante, reprise en 2017</dd>
+        <dt>Équipe</dt><dd>11 personnes — 4 pharmaciens, 4 préparatrices, 3 apprenties</dd>
+        <dt>Logiciel métier</dt><dd>WINPHARMA (gestion ventes, ordonnances, stocks)</dd>
+        <dt>Communication</dt><dd>Site mesoigner + newsletters + Instagram + Facebook (prestataire)</dd>
+        <dt>Mails / jour</dt><dd><b>~50 mails</b> sur Gmail générique, traités en roulement quotidien</dd>
+        <dt>Qualité</dt><dd>Certification ISO 9001, démarche qualité formalisée</dd>
+        <dt>Promotions</dt><dd>Mensuelles, négociées avec les laboratoires, suivies sur fiches papier</dd>
+      </dl>
+    </div>
+
+    <h2>Le <i>premier</i> angle mort : la messagerie</h2>
+
+    <p>Cinquante mails par jour, sur une seule adresse Gmail générique, traités <em>en roulement</em> par l'équipe : chaque jour un membre différent est chargé du flux. C'est une organisation qui paraît robuste — pas de point unique de défaillance — mais qui produit en réalité un effet inverse. <strong>Personne n'a la mémoire des échanges en cours.</strong> Et personne n'a la responsabilité d'un fil.</p>
+
+    <p>Le rangement par sous-dossier "par personne" entretient l'illusion d'un classement. Mais il n'y a pas de catégorie thématique, pas de priorité, pas d'alerte sur les mails non traités. Conséquence directe : <strong>des messages oubliés</strong>, presque chaque semaine. Sur 50 mails par jour, 6 jours par semaine, cela représente <em>1 500 mails par mois</em> qui passent par une boîte commune sans logique de tri.</p>
+
+    <p>Ce que l'IA peut faire, ici, n'a rien de spectaculaire : <strong>trier, catégoriser, prioriser, suggérer un brouillon</strong>. Quatre catégories suffisent — <em>patients</em> (ordonnances, questions), <em>soignants</em> (commandes, infos pratiques), <em>laboratoires</em> (promos, litiges, contrats), <em>administratif</em> (RH, facturation, certification). Un scénario n8n connecté à Gmail étiquette automatiquement chaque mail entrant ; un assistant ChatGPT propose un brouillon de réponse pour les questions répétitives. Le pharmacien valide, ajuste, envoie. Le mail oublié n'existe plus, parce que les non-traités remontent en alerte.</p>
+
+    <div class="pull">
+      Le mail oublié n'existe pas par <i>négligence</i>.<br/>
+      Il existe par absence de <i>responsable</i>.
+    </div>
+
+    <p>Le piège classique dans ce genre de déploiement, en pharmacie comme ailleurs : <strong>vouloir automatiser l'envoi</strong>. Ne pas faire. Dans un secteur régulé qui manipule des informations patient, où une mauvaise réponse peut engager la responsabilité du titulaire, <em>tout</em> doit rester sous validation humaine. L'IA prépare. L'équipe décide.</p>
+
+    <h2>Le <i>deuxième</i> angle mort : les praticiens du secteur</h2>
+
+    <p>C'est probablement l'observation la plus intéressante de cet audit. L'officine communique. Beaucoup. Site marchand, newsletters, posts Instagram et Facebook produits chaque semaine par le prestataire spécialisé. Mais <strong>ces canaux ne parlent qu'aux patients</strong>. Or, autour d'une officine, il y a une autre audience, beaucoup plus dense que les patients à un instant T : <em>les professionnels de santé du secteur</em>.</p>
+
+    <p>Sur le bassin d'implantation de cette pharmacie, on dénombre des dizaines de médecins, plusieurs cabinets d'infirmiers libéraux, des kinésithérapeutes, des EHPAD, des services de soins à domicile, des laboratoires de biologie médicale. Cette audience est <strong>prescriptrice</strong> au sens strict — elle oriente directement les patients vers une officine ou une autre. Et personne ne la touche.</p>
+
+    <p>Les commandes des soignants arrivent au fil de l'eau, par mail ou par téléphone. Aucune historisation par professionnel, aucune standardisation, aucun suivi d'avancement de préparation. Un infirmier qui commande chaque semaine la même liste de pansements doit reformuler sa demande à chaque fois, et appeler pour savoir si c'est prêt. C'est <em>l'inverse</em> d'une expérience pro à pro.</p>
+
+    <p>Deux usages IA très simples adressent ce point :</p>
+
+    <ul>
+      <li><strong>Un canal dédié praticiens</strong> (WhatsApp Business, ou un mini-portail), avec historisation automatique par professionnel : qui a commandé quoi, quand, à quelle fréquence. L'IA peut suggérer des recommandes ("vous avez l'habitude de…") et préparer les bons de commande standards.</li>
+      <li><strong>Une communication ciblée</strong> sur des thématiques utiles aux soignants : nouvelles missions officinales (entretiens, vaccination, dépistages), disponibilités matériel médical à la location, ruptures de stock, conventions PDA. Pas de la newsletter patient maquillée — du contenu pratique destiné à des professionnels exigeants.</li>
+    </ul>
+
+    <p>L'effet attendu : faire d'une officine "une de plus" pour les soignants du secteur une officine <em>de référence</em> pour eux. C'est un repositionnement plus qu'un gain de temps.</p>
+
+    <h2>Et la <i>qualité</i>, dans tout ça ?</h2>
+
+    <p>Une particularité du secteur pharmaceutique mérite d'être posée explicitement : <strong>toute automatisation doit s'intégrer dans la démarche qualité existante</strong>. Une officine certifiée ISO 9001 maintient des procédures écrites, des indicateurs, un traitement des non-conformités, des actions correctives documentées. Une IA qui produit un brouillon de réponse sans laisser de trace de qui a validé quoi est, structurellement, <em>incompatible</em> avec ce cadre.</p>
+
+    <p>La bonne nouvelle : un scénario d'automatisation bien conçu <em>renforce</em> la qualité, il ne la dégrade pas. Chaque action automatisée laisse une trace dans un journal (qui a déclenché, à quelle heure, sur quel mail, avec quel brouillon, validé par qui). Les indicateurs qualité — délai de réponse, taux de mails non traités, fréquence des actions correctives — deviennent <strong>mécaniquement plus fiables</strong>, parce qu'ils sont calculés à partir de données structurées et non plus déclarés.</p>
+
+    <p>C'est l'un des paradoxes les plus utiles de l'IA en secteur réglementé : <em>les structures les plus matures sur la qualité sont aussi celles qui en tirent le plus de bénéfice</em>. Parce qu'elles disposent déjà de la cartographie de leurs processus. L'IA n'a plus qu'à se brancher.</p>
+
+    <h2>Ce qu'on a <i>recommandé</i></h2>
+
+    <p>Quatre cas d'usage hiérarchisés ont été remis à la direction, dans l'ordre de mise en route :</p>
+
+    <ul>
+      <li><strong>Assistant intelligent de gestion des mails</strong> — tri quatre catégories, brouillons IA, alertes sur les non-traités. Stack : Gmail + n8n + ChatGPT. Mise en route ~ 4 jours. Gain attendu : zéro mail oublié, ~30 min/jour récupérées sur la rédaction.</li>
+      <li><strong>Suivi automatisé des promotions et challenges laboratoires</strong> — extraction CSV depuis le logiciel métier, tableau de bord unique, calcul automatique des résultats, génération assistée des demandes de remise par labo. Gain attendu : 1 à 2 jours/mois pour la titulaire.</li>
+      <li><strong>Canal commandes soignants structuré</strong> — WhatsApp Business + historisation Notion ou Airtable + suggestions IA de recommande. Gain attendu : meilleure relation pro et baisse du temps comptoir consacré aux soignants.</li>
+      <li><strong>Communication ciblée praticiens</strong> — base praticiens du secteur, campagne mensuelle thématique, contenus produits avec assistant IA et validés par la titulaire. Gain attendu : effet de positionnement.</li>
+    </ul>
+
+    <p>Aucun de ces chantiers ne nécessite de remplacer WINPHARMA, le logiciel métier de l'officine. Tous se branchent en parallèle, à partir des données et des outils existants — Gmail, Canva, le logiciel métier, le site marchand. <strong>L'objectif n'est jamais de transformer l'officine en startup tech</strong>, il est de redonner du temps et de l'attention à ce qui compte : le comptoir, le conseil pharmaceutique, la relation avec les soignants du secteur.</p>
+
+    <h2>Ce que cette officine nous a <i>appris</i></h2>
+
+    <p>Trois enseignements transverses, valables au-delà du secteur pharmaceutique :</p>
+
+    <ul>
+      <li><strong>L'audience oubliée est toujours la plus rentable.</strong> Servir mieux ceux qu'on touche déjà coûte cher. Atteindre l'audience qu'on n'a jamais touchée — quand elle existe à dix mètres du comptoir — coûte presque rien et change la position concurrentielle.</li>
+      <li><strong>Le secteur régulé n'est pas un frein, c'est un filtre de qualité.</strong> Les structures certifiées qualité adoptent l'IA plus vite, mieux et avec moins de risques. Parce qu'elles ont déjà fait le travail de cartographie.</li>
+      <li><strong>L'organisation "tournante" est piégeuse.</strong> Faire traiter une boîte mail générique à tour de rôle paraît équitable et résilient. C'est en réalité la meilleure manière de faire passer des mails au travers. Mieux vaut une catégorisation automatique + une responsabilité claire par catégorie.</li>
+    </ul>
+
+    <p>Un audit flash, c'est une journée, restitution comprise. Pas pour déployer une IA, pour <em>voir l'officine comme un système</em> et nommer ce que tout le monde sent sans le dire. Le reste — automatisation, formation, autonomie — vient ensuite, dans un cadre de mission financé OPCO, en quelques semaines.</p>
+
+  </div>
+</article>
+
+<section class="article-cta">
+  <div class="wrap-narrow">
+    <h2>Officine, cabinet, structure de santé ?</h2>
+    <p>Notre audit flash IA s'adapte aux secteurs réglementés (qualité, traçabilité, RGPD strict). Une journée, restitution comprise, un livrable activable.</p>
+    <a href="../index.html#contact" class="btn">Échanger 30 minutes
+      <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="note">
+      <b>Note d'anonymisation —</b> Cet article s'appuie sur un audit flash IA réel conduit par Altos en 2026. Raison sociale, nom de la titulaire, localisation précise et numéro de dossier ont été retirés ou généralisés conformément au RGPD. Les chiffres (équipe, mails/jour, certifications, parc patients) sont issus du rapport réel.
+    </div>
+    <div class="right">
+      <div>Altos · Journal · 2025/26</div>
+      <div style="margin-top:6px"><a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a></div>
+      <div style="margin-top:6px"><a href="../index.html">← Retour à l'accueil</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

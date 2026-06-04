@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Politique de confidentialité (RGPD) — ALTOS</title>
+<meta name="description" content="Comment vos données sont collectées, traitées et protégées sur altos.fr. Conforme RGPD et loi Informatique et Libertés modifiée." />
+<meta name="author" content="Nicolas Darcos" />
+<link rel="canonical" href="https://altos.fr/confidentialite.html" />
+<meta name="robots" content="noindex, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ALTOS" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://altos.fr/confidentialite.html" />
+<meta property="og:title" content="Politique de confidentialité (RGPD) — ALTOS" />
+<meta property="og:description" content="Comment vos données sont collectées, traitées et protégées sur altos.fr. Conforme RGPD et loi Informatique et Libertés modifiée." />
+<meta property="og:image" content="https://altos.fr/assets/og-default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="ALTOS — Ambassadeur IA pour PME" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Politique de confidentialité (RGPD) — ALTOS" />
+<meta name="twitter:description" content="Comment vos données sont collectées, traitées et protégées sur altos.fr. Conforme RGPD et loi Informatique et Libertés modifiée." />
+<meta name="twitter:image" content="https://altos.fr/assets/og-default.png" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-weight='900' fill='%23ffffff'%3EA%3C/text%3E%3Ccircle cx='48' cy='52' r='4' fill='%23ff5b14'/%3E%3C/svg%3E" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #fff;
+    --ink: #0a0a0a;
+    --ink-2: #2c2c2c;
+    --ink-3: #767676;
+    --line: #e2e2e2;
+    --paper: #f4f1ec;
+    --accent: #ff5b14;
+    --acid: #d9ff3c;
+    --display: "Fraunces", "Times New Roman", serif;
+    --sans: "Inter", system-ui, sans-serif;
+    --mono: "DM Mono", ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  body { overflow-x: hidden; }
+  a { color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { color: var(--accent); }
+  ::selection { background: var(--ink); color: var(--acid); }
+
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+  .num { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.1em; text-transform: uppercase; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 26px; font-family: var(--sans);
+    font-weight: 500; font-size: 14px;
+    border: 1px solid var(--ink); background: var(--ink); color: var(--bg);
+    cursor: pointer; transition: background .2s, color .2s;
+    text-decoration: none;
+  }
+  .btn:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--ink); }
+  .nav__inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 18px 32px; max-width: 1320px; margin: 0 auto; }
+  .logo { font-family: var(--display); font-weight: 900; font-size: 22px; letter-spacing: -0.04em; text-decoration: none; }
+  .logo i { font-style: italic; color: var(--accent); }
+  .nav__links { display: flex; gap: 32px; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .nav__links a { transition: color .2s; text-decoration: none; }
+  .nav__links a:hover { color: var(--accent); }
+  .nav__cta { display: flex; justify-content: flex-end; align-items: center; gap: 14px; }
+  .nav__time { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.08em; }
+
+  /* HERO */
+  .hero {
+    padding: 80px 0 56px;
+    border-bottom: 1px solid var(--ink);
+    background: var(--paper);
+  }
+  .hero__top {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px;
+    margin-bottom: 40px;
+    font-family: var(--mono); font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3);
+  }
+  .hero__top div + div { text-align: center; }
+  .hero__top div:last-child { text-align: right; }
+  .hero h1 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(56px, 8vw, 120px); line-height: 0.92;
+    letter-spacing: -0.04em; max-width: 1180px;
+  }
+  .hero h1 i { font-style: italic; color: var(--accent); }
+  .hero__lede {
+    margin-top: 36px; max-width: 64ch;
+    font-size: 17px; line-height: 1.55; color: var(--ink-2);
+  }
+
+  /* CONTENT */
+  .doc {
+    padding: 80px 0 120px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .toc {
+    position: sticky; top: 100px;
+    border-left: 1px solid var(--ink);
+    padding-left: 24px;
+  }
+  .toc__label {
+    font-family: var(--mono); font-size: 11px;
+    color: var(--ink-3); letter-spacing: 0.1em;
+    text-transform: uppercase; margin-bottom: 18px;
+  }
+  .toc ol {
+    list-style: none; counter-reset: tocnum;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .toc li { counter-increment: tocnum; }
+  .toc a {
+    font-family: var(--mono); font-size: 12px;
+    text-decoration: none; color: var(--ink-2);
+    display: flex; gap: 12px; line-height: 1.4;
+    transition: color .2s;
+  }
+  .toc a::before {
+    content: counter(tocnum, decimal-leading-zero);
+    color: var(--ink-3);
+  }
+  .toc a:hover { color: var(--accent); }
+
+  article.doc__body { max-width: 72ch; }
+  article.doc__body section { padding: 0 0 56px; }
+  article.doc__body section + section {
+    padding-top: 56px;
+    border-top: 1px solid var(--line);
+  }
+  article.doc__body h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(32px, 4vw, 48px); line-height: 1; letter-spacing: -0.02em;
+    margin-bottom: 28px;
+  }
+  article.doc__body h2 i { font-style: italic; }
+  article.doc__body h2 .num-pref {
+    display: block;
+    font-family: var(--mono); font-size: 11px;
+    color: var(--accent); letter-spacing: 0.12em;
+    text-transform: uppercase; margin-bottom: 12px;
+    font-style: normal;
+  }
+  article.doc__body h3 {
+    font-family: var(--sans); font-weight: 600;
+    font-size: 16px; margin: 24px 0 10px;
+    color: var(--ink);
+  }
+  article.doc__body p {
+    font-size: 16px; line-height: 1.65; color: var(--ink-2);
+    margin-bottom: 14px;
+    text-wrap: pretty;
+  }
+  article.doc__body p strong { color: var(--ink); font-weight: 600; }
+  article.doc__body ul {
+    list-style: none; padding-left: 0; margin: 0 0 14px;
+  }
+  article.doc__body ul li {
+    font-size: 16px; line-height: 1.65; color: var(--ink-2);
+    padding-left: 20px; position: relative;
+    margin-bottom: 6px;
+  }
+  article.doc__body ul li::before {
+    content: "—";
+    position: absolute; left: 0; color: var(--accent);
+  }
+  article.doc__body .callout {
+    background: var(--paper);
+    border-left: 3px solid var(--accent);
+    padding: 22px 28px;
+    margin: 18px 0;
+  }
+  article.doc__body .callout p { margin-bottom: 8px; }
+  article.doc__body .callout p:last-child { margin-bottom: 0; }
+  article.doc__body table.data {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 14px;
+  }
+  article.doc__body table.data th,
+  article.doc__body table.data td {
+    text-align: left;
+    padding: 14px 16px;
+    border: 1px solid var(--ink);
+    vertical-align: top;
+    color: var(--ink-2);
+  }
+  article.doc__body table.data th {
+    background: var(--ink); color: var(--bg);
+    font-family: var(--mono); font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    font-weight: 500;
+  }
+  article.doc__body table.data td b { color: var(--ink); }
+
+  /* FOOTER */
+  footer.foot {
+    border-top: 1px solid var(--ink); background: var(--bg);
+    padding: 48px 0 24px;
+  }
+  footer.foot .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px; align-items: end; }
+  footer.foot .note { max-width: 56ch; font-size: 13px; color: var(--ink-3); line-height: 1.55; }
+  footer.foot .right { font-family: var(--mono); font-size: 11px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.06em; text-align: right; line-height: 1.8; }
+  footer.foot .right a { color: var(--ink); text-decoration: none; text-transform: none; letter-spacing: 0; }
+  footer.foot .right a:hover { color: var(--accent); }
+
+  @media (max-width: 900px) {
+    .doc { grid-template-columns: 1fr; gap: 48px; }
+    .toc { position: static; border-left: none; border-top: 1px solid var(--ink); padding: 24px 0 0; }
+    .nav__links { display: none; }
+    article.doc__body table.data, article.doc__body table.data tbody, article.doc__body table.data tr, article.doc__body table.data td, article.doc__body table.data th { display: block; width: 100%; }
+    article.doc__body table.data th { border-bottom: none; }
+    article.doc__body table.data td { border-top: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="logo">ALTOS<i>.</i></a>
+    <div class="nav__links">
+      <a href="index.html#services">Services</a>
+      <a href="cas-usage.html">Cas d'usage</a>
+      <a href="index.html#ambassadeur">Ambassadeur</a>
+      <a href="micro-audit.html">Micro-audit</a>
+      <a href="index.html#blog">Journal</a>
+    </div>
+    <div class="nav__cta">
+      <span class="nav__time">FR · 2026</span>
+      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Prendre RDV</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero__top">
+      <div>Document RGPD · v.05.2026</div>
+      <div>Règlement UE 2016/679</div>
+      <div>Loi I&L modifiée 1978</div>
+    </div>
+    <h1>Politique de <i>confidentialité</i>.</h1>
+    <p class="hero__lede">
+      Comment vos données personnelles sont collectées, utilisées, conservées et protégées sur <strong>altos.fr</strong>. Cette politique applique le <strong>Règlement Général sur la Protection des Données</strong> (RGPD) et la loi Informatique et Libertés modifiée.
+    </p>
+  </div>
+</section>
+
+<!-- DOC -->
+<div class="wrap">
+  <div class="doc">
+
+    <!-- TOC -->
+    <aside class="toc">
+      <div class="toc__label">§ Sommaire</div>
+      <ol>
+        <li><a href="#engagement">Notre engagement</a></li>
+        <li><a href="#responsable">Responsable de traitement</a></li>
+        <li><a href="#donnees">Données collectées</a></li>
+        <li><a href="#finalites">Finalités & bases légales</a></li>
+        <li><a href="#duree">Durées de conservation</a></li>
+        <li><a href="#destinataires">Destinataires & sous-traitants</a></li>
+        <li><a href="#cookies">Cookies & traceurs</a></li>
+        <li><a href="#droits">Vos droits</a></li>
+        <li><a href="#securite">Sécurité</a></li>
+        <li><a href="#transferts">Transferts hors UE</a></li>
+        <li><a href="#mineurs">Mineurs</a></li>
+        <li><a href="#contact">Contact & réclamation</a></li>
+      </ol>
+    </aside>
+
+    <article class="doc__body">
+
+      <section id="engagement">
+        <h2><span class="num-pref">§ 01</span>Notre engagement</h2>
+        <p><strong>ALTOS</strong> place la protection de vos données au cœur de son activité. En tant qu'<strong>Ambassadeur IA</strong> reconnu par l'État français, nous nous engageons à respecter strictement le RGPD et à appliquer les recommandations de la <strong>CNIL</strong> dans toutes nos opérations.</p>
+        <p>Nous appliquons trois principes simples :</p>
+        <ul>
+          <li><strong>Minimisation</strong> — nous ne collectons que les données strictement nécessaires.</li>
+          <li><strong>Transparence</strong> — vous savez à tout moment ce qui est collecté, pourquoi, et combien de temps c'est conservé.</li>
+          <li><strong>Maîtrise</strong> — vos données ne sont jamais vendues, ni cédées, ni utilisées pour entraîner des modèles d'IA.</li>
+        </ul>
+      </section>
+
+      <section id="responsable">
+        <h2><span class="num-pref">§ 02</span>Responsable de traitement</h2>
+        <p>Le responsable du traitement de vos données personnelles est :</p>
+        <div class="callout">
+          <p><strong>Nicolas DARCOS</strong> — Entrepreneur individuel</p>
+          <p>Enseigne : LE CERCLE DES ENTREPRENEURS — Marque : ALTOS</p>
+          <p>1 impasse des Écoles, 11320 Montferrand · France</p>
+          <p>SIRET : 352 258 479 00042</p>
+          <p>Contact RGPD : <a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a></p>
+        </div>
+        <p>Compte tenu de sa taille et de ses traitements, l'éditeur n'a pas l'obligation de désigner un <strong>Délégué à la Protection des Données</strong> (DPO). Les demandes RGPD sont traitées directement par le responsable de traitement, dans un délai maximal d'un mois.</p>
+      </section>
+
+      <section id="donnees">
+        <h2><span class="num-pref">§ 03</span>Données collectées</h2>
+        <p>Nous collectons uniquement les données que vous nous transmettez, et celles strictement nécessaires au fonctionnement technique du site.</p>
+        <h3>Données fournies volontairement</h3>
+        <ul>
+          <li><strong>Lors d'une prise de rendez-vous</strong> via Cal.com : nom, prénom, adresse email, créneau souhaité, notes facultatives.</li>
+          <li><strong>Lors d'une demande par courriel</strong> : adresse email et tout élément que vous choisissez de partager.</li>
+          <li><strong>Lors du remplissage du micro-audit</strong> : réponses au questionnaire, secteur d'activité, taille de l'entreprise. Aucun identifiant nominatif n'est collecté.</li>
+        </ul>
+        <h3>Données collectées automatiquement</h3>
+        <ul>
+          <li><strong>Adresse IP</strong>, type de navigateur, langue, pages consultées (logs serveur OVH, à des fins de sécurité).</li>
+          <li><strong>Cookies techniques</strong> nécessaires à l'affichage du site (voir § 07).</li>
+        </ul>
+        <p>Le site n'utilise <strong>aucun outil d'analyse d'audience</strong> (pas de Google Analytics, pas de Meta Pixel, pas de profilage publicitaire).</p>
+      </section>
+
+      <section id="finalites">
+        <h2><span class="num-pref">§ 04</span>Finalités et bases légales</h2>
+        <p>Chaque traitement de données repose sur une base juridique au sens de l'article 6 du RGPD :</p>
+        <table class="data">
+          <thead>
+            <tr>
+              <th>Traitement</th>
+              <th>Finalité</th>
+              <th>Base légale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Prise de rendez-vous</td>
+              <td>Organiser un diagnostic 30 minutes</td>
+              <td><b>Exécution de mesures précontractuelles</b> à votre demande (art. 6.1.b)</td>
+            </tr>
+            <tr>
+              <td>Échanges par courriel</td>
+              <td>Répondre à vos questions</td>
+              <td><b>Intérêt légitime</b> à entretenir une relation commerciale (art. 6.1.f)</td>
+            </tr>
+            <tr>
+              <td>Micro-audit</td>
+              <td>Vous fournir un bilan personnalisé</td>
+              <td><b>Consentement</b> donné en remplissant le questionnaire (art. 6.1.a)</td>
+            </tr>
+            <tr>
+              <td>Logs serveur (IP, requêtes)</td>
+              <td>Sécurité, lutte contre la fraude</td>
+              <td><b>Intérêt légitime</b> (art. 6.1.f) — obligation légale art. L.34-1 CPCE</td>
+            </tr>
+            <tr>
+              <td>Newsletter (le cas échéant)</td>
+              <td>Informer sur nos publications</td>
+              <td><b>Consentement</b> via opt-in explicite (art. 6.1.a)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="duree">
+        <h2><span class="num-pref">§ 05</span>Durées de conservation</h2>
+        <p>Vos données ne sont jamais conservées plus longtemps que nécessaire :</p>
+        <ul>
+          <li><strong>Coordonnées de prospects</strong> (rendez-vous, devis non transformés) : 3 ans à compter du dernier contact (recommandation CNIL).</li>
+          <li><strong>Données contractuelles clients</strong> : 10 ans après la fin de la relation, au titre des obligations comptables et fiscales.</li>
+          <li><strong>Échanges par courriel</strong> : 3 ans, puis archivage ou suppression.</li>
+          <li><strong>Logs serveur</strong> : 12 mois maximum (article L.34-1 du CPCE).</li>
+          <li><strong>Réponses au micro-audit</strong> : 6 mois, puis anonymisation pour statistiques agrégées.</li>
+        </ul>
+      </section>
+
+      <section id="destinataires">
+        <h2><span class="num-pref">§ 06</span>Destinataires et sous-traitants</h2>
+        <p>Vos données sont accessibles uniquement à <strong>Nicolas DARCOS</strong>, responsable de traitement. Elles ne sont <strong>ni vendues, ni louées, ni cédées</strong> à des tiers à des fins commerciales.</p>
+        <p>Pour le fonctionnement du site, nous nous appuyons sur les sous-traitants suivants, tous engagés contractuellement au respect du RGPD :</p>
+        <table class="data">
+          <thead>
+            <tr>
+              <th>Sous-traitant</th>
+              <th>Rôle</th>
+              <th>Localisation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>OVH SAS</b></td>
+              <td>Hébergement du site et stockage</td>
+              <td>France (Roubaix)</td>
+            </tr>
+            <tr>
+              <td><b>Cal.com Inc.</b></td>
+              <td>Gestion des rendez-vous en ligne</td>
+              <td>États-Unis — clauses contractuelles types UE/US</td>
+            </tr>
+            <tr>
+              <td><b>Google LLC</b> (Fonts)</td>
+              <td>Distribution des polices typographiques</td>
+              <td>Multi-régions — CCT UE</td>
+            </tr>
+            <tr>
+              <td><b>Anthropic</b> (Claude.ai)</td>
+              <td>Assistant IA utilisé pour la production éditoriale</td>
+              <td>États-Unis / Europe — pas d'accès aux données utilisateurs</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Sur requête légale (réquisition judiciaire, autorité administrative), nous pouvons être amenés à transmettre certaines données aux autorités compétentes.</p>
+      </section>
+
+      <section id="cookies">
+        <h2><span class="num-pref">§ 07</span>Cookies et traceurs</h2>
+        <p>Le site n'utilise que des cookies <strong>strictement nécessaires</strong> à son fonctionnement, qui ne requièrent pas de consentement préalable au sens de la <a href="https://www.cnil.fr/fr/cookies-et-traceurs-que-dit-la-loi" target="_blank" rel="noopener">délibération CNIL n° 2020-091</a>.</p>
+        <table class="data">
+          <thead>
+            <tr>
+              <th>Cookie / traceur</th>
+              <th>Finalité</th>
+              <th>Durée</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Session technique</b></td>
+              <td>Maintien de la session de navigation</td>
+              <td>Session</td>
+            </tr>
+            <tr>
+              <td><b>Cal.com (iframe)</b></td>
+              <td>Chargement de la fenêtre de réservation</td>
+              <td>Au clic sur « Diagnostic 30 min »</td>
+            </tr>
+            <tr>
+              <td><b>Google Fonts</b></td>
+              <td>Affichage des polices Fraunces / Inter / DM Mono</td>
+              <td>Cache navigateur</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Aucun cookie publicitaire, aucun cookie d'analyse d'audience, aucun pixel de traçage tiers. Vous pouvez à tout moment configurer votre navigateur pour bloquer tout cookie — le site reste accessible.</p>
+      </section>
+
+      <section id="droits">
+        <h2><span class="num-pref">§ 08</span>Vos droits</h2>
+        <p>Conformément aux articles 15 à 22 du RGPD, vous disposez à tout moment des droits suivants :</p>
+        <ul>
+          <li><strong>Droit d'accès</strong> — obtenir la confirmation que des données vous concernant sont traitées et en obtenir copie.</li>
+          <li><strong>Droit de rectification</strong> — faire corriger des données inexactes ou incomplètes.</li>
+          <li><strong>Droit à l'effacement</strong> (« droit à l'oubli ») — demander la suppression de vos données.</li>
+          <li><strong>Droit à la limitation</strong> — bloquer temporairement l'utilisation de vos données.</li>
+          <li><strong>Droit d'opposition</strong> — vous opposer au traitement, notamment à la prospection commerciale.</li>
+          <li><strong>Droit à la portabilité</strong> — récupérer vos données dans un format structuré et lisible par machine.</li>
+          <li><strong>Droit de définir des directives post-mortem</strong> sur le sort de vos données.</li>
+          <li><strong>Droit de retirer votre consentement</strong> à tout moment, sans préjudice de la licéité du traitement effectué avant le retrait.</li>
+        </ul>
+        <p>Pour exercer ces droits, écrivez-nous à <a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a> en précisant votre demande. Une réponse vous sera apportée dans un délai maximal d'<strong>un mois</strong>, conformément à l'article 12.3 du RGPD. Pour vérifier votre identité, un justificatif pourra vous être demandé.</p>
+      </section>
+
+      <section id="securite">
+        <h2><span class="num-pref">§ 09</span>Sécurité des données</h2>
+        <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données :</p>
+        <ul>
+          <li>Hébergement sur infrastructure <strong>OVH</strong>, certifiée ISO 27001 et hébergeur de données de santé (HDS).</li>
+          <li>Connexion sécurisée <strong>HTTPS / TLS 1.3</strong> sur l'ensemble du site.</li>
+          <li>Mots de passe administrateurs gérés via gestionnaire dédié, authentification à deux facteurs.</li>
+          <li>Sauvegardes chiffrées et automatisées, conservation limitée.</li>
+          <li>Accès aux données restreint à la seule personne autorisée (responsable de traitement).</li>
+        </ul>
+        <p>En cas de <strong>violation de données</strong> susceptible d'engendrer un risque pour vos droits et libertés, nous nous engageons à en informer la CNIL dans les <strong>72 heures</strong> et, si nécessaire, à vous en informer directement.</p>
+      </section>
+
+      <section id="transferts">
+        <h2><span class="num-pref">§ 10</span>Transferts hors Union européenne</h2>
+        <p>Certains de nos sous-traitants (Cal.com, Google Fonts) sont établis hors de l'Union européenne, notamment aux États-Unis. Ces transferts sont encadrés par :</p>
+        <ul>
+          <li>L'adhésion de ces sociétés au cadre <strong>Data Privacy Framework</strong> (EU-US DPF) approuvé par la Commission européenne en juillet 2023.</li>
+          <li>La signature de <strong>clauses contractuelles types</strong> (CCT) approuvées par la Commission européenne le 4 juin 2021.</li>
+          <li>Des garanties techniques additionnelles (chiffrement, pseudonymisation lorsque possible).</li>
+        </ul>
+        <p>Aucun transfert n'est effectué vers un pays ne disposant pas d'un niveau de protection adéquat au sens du RGPD.</p>
+      </section>
+
+      <section id="mineurs">
+        <h2><span class="num-pref">§ 11</span>Mineurs</h2>
+        <p>Le site et les services proposés s'adressent à un public professionnel adulte. Aucun service n'est conçu pour des personnes de moins de 15 ans. Nous ne collectons pas sciemment de données concernant des mineurs. Si vous avez connaissance d'une telle collecte, merci de nous le signaler immédiatement à <a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a>.</p>
+      </section>
+
+      <section id="contact">
+        <h2><span class="num-pref">§ 12</span>Contact et réclamation</h2>
+        <p>Pour toute question relative à la protection de vos données, ou pour exercer vos droits :</p>
+        <div class="callout">
+          <p><strong>Par courriel :</strong> <a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a></p>
+          <p><strong>Par voie postale :</strong> Nicolas DARCOS — ALTOS, 1 impasse des Écoles, 11320 Montferrand</p>
+        </div>
+        <p>Si, malgré nos efforts, vous estimez que vos droits ne sont pas respectés, vous disposez du droit d'introduire une réclamation auprès de la <strong>Commission Nationale de l'Informatique et des Libertés</strong> (CNIL) :</p>
+        <ul>
+          <li>En ligne : <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">www.cnil.fr/fr/plaintes</a></li>
+          <li>Par courrier : CNIL, 3 place de Fontenoy — TSA 80715, 75334 Paris Cedex 07</li>
+        </ul>
+        <p style="margin-top:32px;font-size:13px;color:var(--ink-3)">Politique mise à jour le 19 mai 2026. En cas de modification substantielle, vous serez informé(e) par voie d'affichage sur cette page au moins 30 jours avant prise d'effet.</p>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="note">
+      <strong style="color:var(--ink)">ALTOS</strong> — Politique de confidentialité conforme au RGPD et à la loi Informatique et Libertés modifiée. Édition de mai 2026.
+    </div>
+    <div class="right">
+      <div>Altos · 2025/26</div>
+      <div><a href="index.html">← Retour à l'accueil</a></div>
+      <div><a href="mentions-legales.html">Mentions légales</a></div>
+      <div><a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- Cal.com embed (popup mode) -->
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "diag30", {origin:"https://cal.com"});
+Cal.ns.diag30("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
+
+</body>
+</html>

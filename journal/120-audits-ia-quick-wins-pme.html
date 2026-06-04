@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>120 audits IA plus tard — les 5 quick wins qu'on retrouve dans 80 % des PME · ALTOS</title>
+<meta name="description" content="Synthèse de 120 audits IA en PME française : les 5 chantiers d'automatisation qui reviennent presque systématiquement, leurs gains typiques et leurs pièges. Méthode + retours terrain." />
+<meta name="keywords" content="audit IA PME, quick wins automatisation, IA TPE France, retour terrain IA, méthode audit IA" />
+<meta name="author" content="Nicolas Darcos" />
+<link rel="canonical" href="https://altos.fr/journal/120-audits-ia-quick-wins-pme.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="ALTOS" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://altos.fr/journal/120-audits-ia-quick-wins-pme.html" />
+<meta property="og:title" content="120 audits IA plus tard — les 5 quick wins qu'on retrouve dans 80 % des PME · ALTOS" />
+<meta property="og:description" content="Synthèse de 120 audits IA en PME française : les 5 chantiers d'automatisation qui reviennent presque systématiquement, leurs gains typiques et leurs pièges. Méthode + retours terrain." />
+<meta property="og:image" content="https://altos.fr/assets/og-default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="ALTOS — Ambassadeur IA pour PME" />
+<meta property="article:published_time" content="2026-05-14T00:00:00+02:00" />
+<meta property="article:author" content="Nicolas Darcos" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="120 audits IA plus tard — les 5 quick wins qu'on retrouve dans 80 % des PME · ALTOS" />
+<meta name="twitter:description" content="Synthèse de 120 audits IA en PME française : les 5 chantiers d'automatisation qui reviennent presque systématiquement, leurs gains typiques et leurs pièges. Méthode + retours terrain." />
+<meta name="twitter:image" content="https://altos.fr/assets/og-default.png" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-weight='900' fill='%23ffffff'%3EA%3C/text%3E%3Ccircle cx='48' cy='52' r='4' fill='%23ff5b14'/%3E%3C/svg%3E" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #fff;
+    --ink: #0a0a0a;
+    --ink-2: #2c2c2c;
+    --ink-3: #767676;
+    --line: #e2e2e2;
+    --paper: #f4f1ec;
+    --accent: #ff5b14;
+    --acid: #d9ff3c;
+    --display: "Fraunces", "Times New Roman", serif;
+    --sans: "Inter", system-ui, sans-serif;
+    --mono: "DM Mono", ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  body { overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--ink); color: var(--acid); }
+
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+  .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+  .num { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.1em; text-transform: uppercase; }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--ink); }
+  .nav__inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 18px 32px; max-width: 1320px; margin: 0 auto; }
+  .logo { font-family: var(--display); font-weight: 900; font-size: 22px; letter-spacing: -0.04em; }
+  .logo i { font-style: italic; color: var(--accent); }
+  .nav__links { display: flex; gap: 32px; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .nav__links a:hover { color: var(--accent); }
+  .nav__cta { display: flex; justify-content: flex-end; align-items: center; gap: 14px; }
+  .nav__time { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.08em; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 26px; font-family: var(--sans);
+    font-weight: 500; font-size: 14px;
+    border: 1px solid var(--ink); background: var(--ink); color: var(--bg);
+    cursor: pointer; position: relative; overflow: hidden; transition: color .3s;
+  }
+  .btn::before { content: ""; position: absolute; inset: 0; background: var(--accent); transform: translateY(101%); transition: transform .4s cubic-bezier(.7,0,.3,1); z-index: -1; }
+  .btn:hover::before { transform: translateY(0); }
+  .btn--ghost { background: transparent; color: var(--ink); }
+  .btn--ghost::before { background: var(--ink); }
+  .btn--ghost:hover { color: var(--bg); }
+  .btn .arrow { transition: transform .3s; }
+  .btn:hover .arrow { transform: translateX(4px); }
+
+  /* HEADER */
+  .article-header {
+    border-bottom: 1px solid var(--ink);
+    padding: 64px 0 56px;
+  }
+  .article-meta {
+    display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    font-family: var(--mono); font-size: 11px; color: var(--ink-3);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin-bottom: 40px;
+  }
+  .article-meta .tag {
+    background: var(--paper); padding: 4px 12px; color: var(--ink);
+  }
+  h1.title {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(40px, 6.5vw, 92px); line-height: 0.95;
+    letter-spacing: -0.03em;
+    max-width: 22ch;
+  }
+  h1.title i { font-style: italic; }
+  h1.title .accent { color: var(--accent); }
+  h1.title mark { background: var(--acid); padding: 0 6px; color: var(--ink); }
+
+  .article-lede {
+    margin-top: 32px; max-width: 64ch;
+    font-family: var(--display); font-weight: 300;
+    font-size: clamp(20px, 2vw, 26px); line-height: 1.4;
+    color: var(--ink-2); letter-spacing: -0.01em;
+  }
+
+  .author-row {
+    margin-top: 48px; padding-top: 24px;
+    border-top: 1px solid var(--line);
+    display: flex; gap: 16px; align-items: center;
+  }
+  .author-avatar {
+    width: 48px; height: 48px; border-radius: 50%;
+    background: var(--ink); color: var(--bg);
+    display: grid; place-items: center;
+    font-family: var(--display); font-style: italic; font-size: 20px;
+  }
+  .author-meta { font-size: 14px; line-height: 1.4; }
+  .author-meta b { font-weight: 500; }
+  .author-meta span { color: var(--ink-3); }
+
+  /* BODY */
+  article.body {
+    padding: 80px 0 100px;
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--ink-2);
+  }
+  article.body p {
+    margin: 0 0 24px;
+    max-width: 64ch;
+    text-wrap: pretty;
+  }
+  article.body p.lead {
+    font-size: 22px; color: var(--ink); line-height: 1.5;
+  }
+  article.body strong { color: var(--ink); font-weight: 500; }
+  article.body em { font-style: italic; color: var(--ink); }
+  article.body a { color: var(--accent); border-bottom: 1px solid var(--accent); }
+
+  article.body h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(32px, 4vw, 52px); line-height: 1.05;
+    letter-spacing: -0.02em; margin: 64px 0 24px;
+    color: var(--ink); max-width: 22ch;
+  }
+  article.body h2 i { font-style: italic; }
+  article.body h2 mark { background: var(--acid); padding: 0 8px; }
+  article.body h2 .accent { color: var(--accent); }
+
+  article.body h3 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(24px, 2.8vw, 32px); line-height: 1.1;
+    letter-spacing: -0.015em; margin: 48px 0 16px;
+    color: var(--ink); max-width: 28ch;
+  }
+  article.body h3 i { font-style: italic; }
+  article.body h3 .num { display: block; font-size: 11px; color: var(--accent); margin-bottom: 6px; font-family: var(--mono); }
+
+  article.body ul {
+    margin: 16px 0 32px; padding-left: 0;
+    list-style: none; max-width: 64ch;
+  }
+  article.body ul li {
+    padding-left: 24px; position: relative; margin-bottom: 10px;
+    line-height: 1.55;
+  }
+  article.body ul li::before {
+    content: "→"; color: var(--accent);
+    position: absolute; left: 0;
+    font-family: var(--mono);
+  }
+
+  article.body .pull {
+    margin: 56px 0; padding: 36px 0;
+    border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink);
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(28px, 3.2vw, 40px); line-height: 1.2;
+    color: var(--ink); letter-spacing: -0.015em;
+    max-width: none;
+  }
+  article.body .pull i { font-style: italic; color: var(--accent); }
+
+  /* Quick-win blocks */
+  .qw {
+    margin: 48px 0;
+    border: 1px solid var(--ink);
+    background: var(--bg);
+  }
+  .qw__head {
+    padding: 24px 32px 18px;
+    border-bottom: 1px solid var(--ink);
+    background: var(--paper);
+  }
+  .qw__index {
+    font-family: var(--mono); font-size: 11px; color: var(--accent);
+    letter-spacing: 0.12em; text-transform: uppercase;
+  }
+  .qw__head h3 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(26px, 3vw, 36px); line-height: 1.1;
+    letter-spacing: -0.02em; margin: 10px 0 0;
+    color: var(--ink); max-width: none;
+  }
+  .qw__head h3 i { font-style: italic; }
+  .qw__body { padding: 32px; }
+  .qw__body p { margin-bottom: 16px; }
+  .qw__body p:last-child { margin-bottom: 0; }
+  .qw__meta {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 0; border-top: 1px solid var(--ink);
+  }
+  .qw__meta > div {
+    padding: 20px 24px; border-right: 1px solid var(--ink);
+  }
+  .qw__meta > div:last-child { border-right: none; }
+  .qw__meta .l {
+    font-family: var(--mono); font-size: 10px;
+    color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+  .qw__meta .v {
+    font-family: var(--display); font-weight: 400;
+    font-size: 22px; line-height: 1.1; color: var(--ink);
+  }
+  .qw__meta .v i { font-style: italic; color: var(--accent); }
+
+  /* CTA at end */
+  .article-cta {
+    background: var(--ink); color: var(--bg);
+    padding: 80px 0;
+    text-align: center;
+  }
+  .article-cta h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(36px, 5vw, 64px); line-height: 1;
+    letter-spacing: -0.02em; max-width: 22ch;
+    margin: 0 auto 24px;
+  }
+  .article-cta h2 i { font-style: italic; color: var(--accent); }
+  .article-cta p { color: #b3b3b3; max-width: 56ch; margin: 0 auto 32px; line-height: 1.5; }
+  .article-cta .btn { border-color: var(--bg); background: var(--accent); border-color: var(--accent); }
+
+  /* FOOTER */
+  footer { background: var(--bg); border-top: 1px solid var(--ink); padding: 48px 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px; }
+  footer .note { max-width: 64ch; font-size: 13px; color: var(--ink-2); line-height: 1.55; }
+  footer .right { font-family: var(--mono); font-size: 11px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.06em; text-align: right; }
+  footer .right a { color: var(--ink); text-transform: none; letter-spacing: 0; }
+  footer .right a:hover { color: var(--accent); }
+
+  @media (max-width: 700px) {
+    .nav__links { display: none; }
+    .qw__meta { grid-template-columns: 1fr; }
+    .qw__meta > div { border-right: none; border-bottom: 1px solid var(--ink); }
+    .qw__meta > div:last-child { border-bottom: none; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "120 audits IA plus tard : les 5 quick wins qu'on retrouve dans 80 % des PME",
+  "datePublished": "2026-05-14",
+  "dateModified": "2026-05-14",
+  "author": {"@type":"Person","name":"Nicolas Darcos","url":"https://altos.fr/#org"},
+  "publisher": {"@type":"Organization","name":"ALTOS","logo":{"@type":"ImageObject","url":"https://altos.fr/assets/og-default.png"}},
+  "image": "https://altos.fr/assets/og-default.png",
+  "mainEntityOfPage": "https://altos.fr/journal/120-audits-ia-quick-wins-pme.html",
+  "articleSection": "Méthode",
+  "inLanguage": "fr-FR"
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="../index.html" class="logo">ALTOS<i>.</i></a>
+    <div class="nav__links">
+      <a href="../index.html#services">Services</a>
+      <a href="../cas-usage.html">Réalisations</a>
+      <a href="../index.html#process">Méthode</a>
+      <a href="../index.html#blog">Journal</a>
+    </div>
+    <div class="nav__cta">
+      <span class="nav__time">FR · 2026</span>
+      <a href="../index.html#contact" class="btn">Prendre RDV
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="article-header">
+  <div class="wrap-narrow">
+    <div class="article-meta">
+      <div style="display:flex;gap:14px;align-items:center">
+        <span class="tag">§ 01 — Méthode</span>
+        <span>14 mai 2026</span>
+      </div>
+      <div>12 min de lecture</div>
+    </div>
+
+    <h1 class="title">
+      120 <span class="accent">audits</span> IA plus tard :<br/>
+      ce qu'on retrouve<br/>
+      dans <mark>80 %</mark> des PME.
+    </h1>
+
+    <p class="article-lede">
+      <i>Synthèse</i> de cent vingt diagnostics conduits sur deux ans, dix secteurs et trois tailles d'entreprise. Cinq chantiers reviennent presque systématiquement. Voici lesquels — et pourquoi ils sont (presque) toujours rentables.
+    </p>
+
+    <div class="author-row">
+      <div class="author-avatar">A</div>
+      <div class="author-meta">
+        <b>Altos Studio</b><br/>
+        <span>Studio digital pluridisciplinaire · Paris / Toulouse</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- BODY -->
+<article class="body">
+  <div class="wrap-narrow">
+
+    <p class="lead">Quand on fait son cent-vingtième diagnostic d'entreprise, quelque chose change. Les détails restent uniques — culture, secteur, dirigeant — mais les <strong>points de friction</strong> deviennent familiers. On les voit avant même que la conversation ne commence vraiment.</p>
+
+    <p>Ce qui suit n'est pas un classement académique. C'est l'inventaire — honnête — de ce que nous observons en début de mission, et qu'un cycle d'accompagnement de cinq jours permet de transformer en système qui tourne. Cinq chantiers que <strong>nous rencontrons dans quatre missions sur cinq</strong>. À tour de rôle, ils sont la priorité du dirigeant, ou la priorité que <em>nous</em> lui recommandons. Voici lesquels, dans quel contexte, et avec quel ordre de grandeur de gain.</p>
+
+    <div class="pull">
+      Les détails restent uniques.<br/>
+      Les <i>points de friction</i>, eux, sont familiers.
+    </div>
+
+    <!-- QW 01 -->
+    <div class="qw">
+      <div class="qw__head">
+        <div class="qw__index">Quick win — 01 / 05</div>
+        <h3>Les comptes rendus de réunion <i>automatisés</i></h3>
+      </div>
+      <div class="qw__body">
+        <p>C'est probablement le quick win le plus universel. Toutes les structures de plus de dix personnes ont des réunions hebdomadaires — projet, copil, point équipe, atelier client. Et dans <strong>quatre cas sur cinq</strong>, le compte rendu est encore rédigé à la main par un participant, le soir même ou le lendemain matin, en relisant ses notes.</p>
+        <p>L'écart est saisissant : <strong>une heure de travail par compte rendu</strong> devient quinze minutes de relecture. Sur une foncière régionale que nous avons accompagnée, trois collaborateurs produisent quatre à cinq comptes rendus par mois — soit <strong>121 heures économisées par an</strong> pour la seule production documentaire de réunion. Sur l'usage IA général dans la même PME (douze collaborateurs), nous avons mesuré <strong>1 692 heures par an</strong> de gain effectif, valorisées 45 300 €.</p>
+        <p>Le piège classique : croire que la transcription brute suffit. Elle ne suffit jamais. Le vrai livrable, c'est un compte rendu <em>structuré</em> — décisions, actions, points de vigilance — produit à partir d'un template construit avec l'équipe. Nous utilisons Noota pour la transcription (Google Meet, présentiel via smartphone, téléphone), puis Gemini ou Claude pour la structuration via Gems / projets personnalisés.</p>
+      </div>
+      <div class="qw__meta">
+        <div><div class="l">Gain typique</div><div class="v"><i>1 h</i> → 15 min</div></div>
+        <div><div class="l">Stack que nous installons</div><div class="v">Noota · Gemini</div></div>
+        <div><div class="l">Mise en route</div><div class="v">~ 2 jours</div></div>
+      </div>
+    </div>
+
+    <!-- QW 02 -->
+    <div class="qw">
+      <div class="qw__head">
+        <div class="qw__index">Quick win — 02 / 05</div>
+        <h3>Les <i>bilans</i> et reportings réglementaires</h3>
+      </div>
+      <div class="qw__body">
+        <p>Tout secteur réglementé — services à la personne, transport sanitaire, professions libérales — produit des bilans annuels, des rapports d'événements indésirables, des comptes-rendus d'activité. Ces documents <strong>obéissent à une structure normée</strong>, ce qui les rend idéaux à automatiser. Et pourtant, dans la quasi-totalité des cas que nous voyons, ils sont rédigés à la main, en compilant Excel et notes terrain.</p>
+        <p>Chez un réseau de services à la personne accompagné en 2025, la production d'un bilan complet (collecte + saisie + rédaction de deux bilans) passait par <strong>cinq heures</strong> de travail effectif. Après automatisation — formulaire numérique, agrégation n8n, génération ChatGPT, validation humaine — il en reste <strong>quinze minutes</strong>. Sur deux cents clients par an, cela représente près de mille heures économisées et un ROI de <strong>1 186 %</strong> sur douze mois.</p>
+        <p>Le piège : croire que c'est un problème de <em>rédaction</em>. C'est avant tout un problème de <strong>collecte structurée</strong>. Si les données arrivent en formulaires propres, l'IA fait le reste. Si elles arrivent en mails, Word, Excel et papier, il faut d'abord industrialiser l'entrée.</p>
+      </div>
+      <div class="qw__meta">
+        <div><div class="l">Gain typique</div><div class="v"><i>5 h</i> → 15 min</div></div>
+        <div><div class="l">Stack que nous installons</div><div class="v">OpenForm · n8n · ChatGPT</div></div>
+        <div><div class="l">Mise en route</div><div class="v">~ 4 jours</div></div>
+      </div>
+    </div>
+
+    <!-- QW 03 -->
+    <div class="qw">
+      <div class="qw__head">
+        <div class="qw__index">Quick win — 03 / 05</div>
+        <h3>La veille et le <i>sourcing</i> automatisés</h3>
+      </div>
+      <div class="qw__body">
+        <p>Cabinet de chasse de têtes, chasse immobilière, courtage en énergie, conseil B2B : toutes ces activités vivent d'une <strong>veille permanente</strong> sur des plateformes publiques (LinkedIn Jobs, portails immobiliers, BODACC, Pappers). Dans presque tous les cas que nous rencontrons, cette veille est <em>humaine</em>, répétitive, et limitée par la disponibilité de l'agent ou du dirigeant.</p>
+        <p>Nous avons mesuré, sur un cabinet de chasse de cadres dirigeants, qu'un agent IA bien calibré (Apify → n8n → ChatGPT → Airtable) supprime <strong>70 % du temps de sourcing</strong>. Sur une agence de chasse immobilière internationale, le pipeline tourne <em>la nuit</em> et libère <strong>364 heures par an et par agent</strong> sur les recherches, plus 52 heures sur la génération de dossiers.</p>
+        <p>Le piège : confondre <em>scraping</em> et <em>qualification</em>. Récupérer les annonces ne sert à rien si on ne les filtre pas sémantiquement. C'est l'étape <strong>scoring</strong> par LLM — et la validation humaine sur les scores intermédiaires — qui produit la valeur réelle.</p>
+      </div>
+      <div class="qw__meta">
+        <div><div class="l">Gain typique</div><div class="v"><i>−60 à −70 %</i></div></div>
+        <div><div class="l">Stack que nous installons</div><div class="v">Apify · n8n · LLM · Airtable</div></div>
+        <div><div class="l">Mise en route</div><div class="v">~ 5 jours</div></div>
+      </div>
+    </div>
+
+    <!-- QW 04 -->
+    <div class="qw">
+      <div class="qw__head">
+        <div class="qw__index">Quick win — 04 / 05</div>
+        <h3>Le <i>rapprochement</i> bancaire et la saisie comptable</h3>
+      </div>
+      <div class="qw__body">
+        <p>Beaucoup moins glamour que le sourcing IA, beaucoup plus rentable. Toute PME de plus de vingt salariés a un <strong>back-office administratif</strong> qui consomme du temps : factures fournisseurs ressaisies à la main, rapprochement bancaire mensuel, export vers le cabinet comptable, suivi des virements de salaires. La plupart des structures que nous voyons fonctionnent encore avec Excel + papier + double saisie.</p>
+        <p>Sur une PME multi-activités de 48 salariés (transport sanitaire et funéraire), nous avons construit deux applications internes (compta + RH/paie) connectées par n8n. Le rapprochement bancaire automatisé fait gagner <strong>8 à 12 heures par mois</strong>, le taux de rapprochement automatique atteint <strong>~75 %</strong>, et la double saisie disparaît. ROI mesuré sur 12 mois : <strong>~700 %</strong>.</p>
+        <p>Le piège : vouloir tout automatiser d'un coup. La règle qui marche : <em>centraliser les données d'abord</em>, automatiser ensuite. Et ne jamais retirer la validation humaine sur les écritures comptables sensibles.</p>
+      </div>
+      <div class="qw__meta">
+        <div><div class="l">Gain typique</div><div class="v"><i>8 à 12 h</i> / mois</div></div>
+        <div><div class="l">Stack que nous installons</div><div class="v">Lovable · Supabase · n8n</div></div>
+        <div><div class="l">Mise en route</div><div class="v">~ 5 jours + itérations</div></div>
+      </div>
+    </div>
+
+    <!-- QW 05 -->
+    <div class="qw">
+      <div class="qw__head">
+        <div class="qw__index">Quick win — 05 / 05</div>
+        <h3>La production de <i>contenu</i> social et éditorial</h3>
+      </div>
+      <div class="qw__body">
+        <p>C'est le quick win le plus visible — donc celui qu'on nous demande le plus. Une organisation professionnelle, une fédération, une PME locale veut être présente sur Facebook, Instagram, LinkedIn, mais la production de contenu est <em>la</em> tâche que personne ne veut faire. Soit elle est externalisée à prix fort, soit elle est sacrifiée.</p>
+        <p>Avec une interface Lovable connectée à Claude/GPT (texte) et DALL·E/Flux (images), nous faisons passer la production d'une publication de <strong>30 minutes à 3 minutes</strong>. Sur une organisation professionnelle du bâtiment, cela représente <strong>108 heures par an</strong> récupérées sur la communication seule, et un amorti en cinq mois.</p>
+        <p>Le piège : croire que l'IA va définir la ligne éditoriale. Elle ne le fera jamais. Le vrai livrable, c'est <strong>une bibliothèque de prompts éprouvés</strong> + un référent interne formé + un cadre de validation humaine. Sans ça, le contenu généré devient générique en trois mois et fait reculer la marque.</p>
+      </div>
+      <div class="qw__meta">
+        <div><div class="l">Gain typique</div><div class="v"><i>30 → 3 min</i></div></div>
+        <div><div class="l">Stack que nous installons</div><div class="v">Lovable · Claude · DALL·E</div></div>
+        <div><div class="l">Mise en route</div><div class="v">~ 4 jours</div></div>
+      </div>
+    </div>
+
+    <h2>Ce qu'on a aussi <i>appris</i>, en creux</h2>
+
+    <p>Les cinq chantiers ci-dessus sont les plus fréquents — pas forcément les plus stratégiques. Quelques observations transverses, accumulées au fil des audits :</p>
+
+    <ul>
+      <li><strong>La donnée bat l'outil.</strong> Sur 120 audits, le facteur limitant n'a jamais été le LLM, l'outil d'automatisation ou le no-code choisi. C'est <em>toujours</em> la qualité et la structuration des données en entrée. Une mission de cinq jours réussie consacre souvent deux jours à nettoyer et structurer ce qui existe.</li>
+      <li><strong>Le transfert d'autonomie n'est pas négociable.</strong> Quand une PME redevient dépendante d'un prestataire pour modifier un prompt ou un workflow, la solution meurt à six mois. Les missions qui durent sont celles où un référent interne pilote l'outil seul à partir de la troisième semaine.</li>
+      <li><strong>L'agent autonome est presque toujours une mauvaise idée.</strong> Dans une PME, ce qui marche, ce sont les <em>assistants</em> validés humainement, pas les agents qui décident seuls. Toute publication sociale, tout compte rendu, tout devis devrait passer par un humain avant diffusion. Le coût de l'erreur dépasse toujours le gain de temps.</li>
+      <li><strong>Le RGPD n'est pas un frein, c'est un filtre.</strong> Sur les 120 audits, les structures les plus mûres sur le RGPD sont aussi celles qui adoptent l'IA le plus vite. Parce que la cartographie des données est déjà faite.</li>
+      <li><strong>Cinq jours suffisent — à condition de ne pas vouloir tout faire.</strong> Notre format d'audit flash repose sur une discipline simple : un ou deux quick wins par mission, déployés en production, documentés, transférés. Pas trois, pas cinq. Les missions qui veulent tout couvrir ne finissent rien.</li>
+    </ul>
+
+    <h2>Et après ?</h2>
+
+    <p>Si vous reconnaissez votre PME dans deux ou trois de ces quick wins, vous êtes dans le cas général. C'est rassurant et c'est une opportunité : <strong>ce sont des sujets dont nous connaissons l'ordre de grandeur de gain à 20 % près</strong>, parce que nous les avons vus chez vos pairs. Notre audit express en huit minutes vous donne un pré-rapport personnalisé avec les chantiers identifiés et leur estimation chiffrée. C'est le meilleur point de départ pour décider, sereinement, par où commencer.</p>
+
+  </div>
+</article>
+
+<!-- CTA -->
+<section class="article-cta">
+  <div class="wrap-narrow">
+    <h2>Curieux de savoir <i>par où</i> commencer chez vous ?</h2>
+    <p>Notre audit express, 8 minutes, vous renvoie un pré-rapport personnalisé avec vos 3 quick wins prioritaires et leur estimation ROI sur 12 mois.</p>
+    <a href="../index.html#audit" class="btn">Démarrer l'audit express
+      <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="note">
+      <b>À propos —</b> Altos est un studio digital pluridisciplinaire qui accompagne les PME, TPE et organisations professionnelles dans le déploiement d'agents IA et d'automatisations no-code. Les chiffres et cas cités sont issus de bilans réels anonymisés (RGPD).
+    </div>
+    <div class="right">
+      <div>Altos · Journal · 2025/26</div>
+      <div style="margin-top:6px"><a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a></div>
+      <div style="margin-top:6px"><a href="../index.html">← Retour à l'accueil</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

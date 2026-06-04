@@ -1,0 +1,709 @@
+-396931-570553004036173-761534002207373-76153500
+
+-8001029654500
+
+Bilan / Capitalisation accompagnement IA
+
+NOM DE L’ENTREPRISE : SUD’ARRANGE
+
+NUMERO DE DOSSIER : 25-456758
+
+NOM DU CONSEILLER OPCO : Louise ONILLON
+
+Durée de l’accompagnement en jours : 5
+
+												Sommaire
+
+												
+
+												
+
+ TOC \o "1-3" \h \z \u 
+
+I.	Contexte de l’entreprise	                                                                          PAGEREF _Toc212139323 \h 3
+
+		II.	Objectifs	 PAGEREF _Toc212139325 \h 3
+
+		III.	Actions réalisées	 PAGEREF _Toc212139327 \h 3
+
+		IV.	Bénéfices	 PAGEREF _Toc212139331 \h 4
+
+		V.	Difficultés	 PAGEREF _Toc212139334 \h 4
+
+		VI.	Cas d’usage	 PAGEREF _Toc212139337 \h 5
+
+		VII.	Leçons apprises	 PAGEREF _Toc212139341 \h 5
+
+		VIII.	Perspectives	 PAGEREF _Toc212139344 \h 6
+
+		IX.	Témoignages	 PAGEREF _Toc212139347 \h 6
+
+		X.	Indicateurs quantitatifs et satisfaction	 PAGEREF _Toc212139350 \h 7
+
+	Contexte de l’entreprise
+
+Secteur, taille, enjeux de l’entreprise
+
+Sud Arrange est une agence spécialisée dans la chasse immobilière à destination d’une clientèle étrangère, principalement belge et néerlandaise. L’entreprise intervient sur plusieurs départements du grand Sud-Ouest et traite un volume important d’annonces immobilières issues de plateformes nationales, de réseaux d’agences et d’acteurs indépendants.
+
+L’organisation reposait jusqu’à présent sur un fonctionnement fortement manuel nécessitant des recherches répétitives et chronophages réalisées par les collaborateurs. L’enjeu principal de l’accompagnement était de transformer cette méthodologie artisanale en un système automatisé capable de surveiller en continu les annonces immobilières, d’analyser automatiquement les biens détectés et de produire des dossiers clients exploitables rapidement.
+
+L’objectif stratégique était également d’améliorer la réactivité commerciale, la capacité de traitement simultané des recherches clients et la qualité globale des livrables remis aux acquéreurs.
+
+	Objectifs
+
+												
+
+Attendus de l’accompagnement IA
+
+Déployer une solution de 
+
+scrapping
+
+ automatisée capable de surveiller plusieurs plateformes immobilières simultanément.
+
+ Automatiser la collecte, le tri et l’analyse des annonces immobilières selon des critères définis.
+
+Réduire le temps consacré aux recherches manuelles de biens.
+
+Optimiser la qualité et la rapidité de génération des dossiers clients.
+
+Structurer une architecture technique évolutive et maintenable.
+
+Maîtriser les coûts liés à l’utilisation des API d’intelligence artificielle.
+
+Développer les compétences internes sur les outils IA et no-code afin d’assurer une autonomie progressive de l’équipe.
+
+	Actions réalisées
+
+Etapes
+
+Analyse détaillée des processus métiers existants et des flux de recherche immobilière.
+
+Identification des plateformes immobilières prioritaires et des contraintes techniques de récupération des données.
+
+Conception d’une architecture automatisée de veille immobilière multicanale.
+
+Développement et paramétrage de la solution 
+
+DetectImmo.
+
+Mise en place des scénarios de 
+
+scrapping
+
+ automatisés via 
+
+Apify.
+
+Intégration des modèles GPT pour l’analyse intelligente des annonces.
+
+Création du système de génération automatique des dossiers PDF clients.
+
+Tests de fonctionnement sur plusieurs départements (Aude, Lot, Lot-et-Garonne et Tarn-et-Garonne).
+
+Optimisation des performances, de la stabilité technique et des coûts API.
+
+Formation et transfert de compétences auprès du dirigeant et des collaborateurs.
+
+Outils déployés (versions, 
+
+paramétres
+
+ clés)
+
+DetectImmo
+
+ :
+
+Solution de veille immobilière automatisée développée pour centraliser l’ensemble des traitements métier. Elle pilote les workflows complets de récupération, traitement et diffusion des annonces immobilières.
+
+Fonctionnalités déployées :
+
+Lancement automatique des recherches immobilières.
+
+Gestion simultanée de plusieurs recherches clients.
+
+Centralisation des annonces détectées.
+
+Filtrage automatique des biens selon les critères définis.
+
+Gestion des logs avec indicateurs visuels pour identifier rapidement les erreurs techniques.
+
+Possibilité de lancer les traitements la nuit afin de disposer des résultats dès le matin.
+
+Scénario automatisé mis en place :
+
+Scrapping
+
+ des annonces → Analyse IA → Filtrage selon critères → Stockage des résultats → Sélection utilisateur → Génération automatique du dossier PDF.
+
+Apify
+
+ :
+
+Solution utilisée pour le 
+
+crawling
+
+ et le 
+
+scrapping
+
+ des plateformes immobilières.
+
+Fonctionnalités mises en œuvre :
+
+Exploration automatisée des sites immobiliers.
+
+Collecte profonde des annonces agences et plateformes.
+
+Standardisation des URLs pour améliorer la stabilité des flux.
+
+Gestion de gros volumes de données immobilières.
+
+OpenAI / GPT :
+
+Utilisé pour l’analyse sémantique et l’exploitation intelligente des annonces collectées.
+
+Fonctionnalités mises en place :
+
+Extraction automatique des informations clés (surface, DPE, caractéristiques, mots-clés).
+
+Analyse des descriptions textuelles.
+
+Préqualification automatique des biens selon les critères clients.
+
+Optimisation du choix des modèles IA afin de maîtriser les coûts API.
+
+Générateur PDF automatisé :
+
+Développement d’un système de génération documentaire permettant de produire automatiquement les dossiers clients.
+
+Fonctionnalités :
+
+Création automatique des fiches commerciales.
+
+Mise en forme standardisée des dossiers.
+
+Intégration automatique des informations issues du 
+
+scrapping
+
+.
+
+Amélioration de la lisibilité des supports clients (taille de police et zones de texte optimisées).
+
+Formation
+
+L’accompagnement a intégré plusieurs temps de formation opérationnelle et de co-construction permettant aux équipes de comprendre le fonctionnement des outils déployés et de monter progressivement en compétence.
+
+Les thèmes abordés ont porté sur :
+
+Le fonctionnement des workflows 
+
+automatisés
+
+La logique du 
+
+scrapping
+
+ immobilier.
+
+L’utilisation des modèles GPT dans un cadre métier.
+
+La supervision des logs et la gestion des erreurs techniques.
+
+L’optimisation des coûts API.
+
+La validation humaine des résultats produits par l’IA.
+
+Les bonnes pratiques de maintenance et d’évolution des scénarios automatisés.
+
+	Bénéfices
+
+	
+
+Indicateur chiffrés
+
+La recherche manuelle représentait auparavant environ une journée complète de travail par semaine et par agent.
+
+Grâce à l’automatisation, le gain estimé est de 7 heures par semaine et par agent, soit environ 364 heures par an.
+
+La génération des dossiers clients, auparavant réalisée manuellement, représente désormais un gain supplémentaire estimé à 52 heures par an et par agent.
+
+Les recherches peuvent être lancées automatiquement la nuit et sur plusieurs dossiers simultanément.
+
+Le coût de collecte des données a été optimisé à environ 0,50 $ par agence grâce au paramétrage d’
+
+Apify
+
+.
+
+Plusieurs biens pertinents ont été détectés dès les premières phases de test, dont un ayant donné lieu à une offre d’achat.
+
+Impacts métiers
+
+Réduction très importante des tâches répétitives de recherche immobilière.
+
+Amélioration significative de la réactivité commerciale vis-à-vis des clients.
+Capacité à traiter davantage de recherches simultanément sans augmenter la charge humaine.
+
+Uniformisation et amélioration qualitative des dossiers remis aux acquéreurs.
+
+Libération de temps permettant aux collaborateurs de se concentrer davantage sur la relation client et l’analyse des biens.
+
+Structuration progressive d’une méthodologie de veille immobilière industrialisée.
+
+	
+
+	Difficultés
+
+	
+
+Obstacles rencontrés
+
+Saturation ponctuelle des serveurs et conflits de trafic lors de certaines phases de 
+
+scrapping
+
+.
+
+Arrêts imprévus de certains workflows automatisés.
+
+Variabilité importante des coûts OpenAI selon les modèles utilisés.
+
+Bugs de remontée de certaines annonces immobilières dans l’interface utilisateur.
+
+Evolution
+
+ régulière des structures des sites immobiliers nécessitant des ajustements techniques.
+
+Solutions apportés
+
+Mise en place d’un système de logs avec indicateurs visuels pour détecter rapidement les anomalies.
+
+Standardisation des URLs et des flux de collecte afin d’améliorer la stabilité des scénarios.
+
+Optimisation des fréquences de 
+
+scrapping
+
+ et des workflows automatisés
+
+Paramétrage de plafonds budgétaires API afin de sécuriser les coûts d’exploitation.
+
+Corrections progressives des flux défaillants et amélioration continue de la maintenance technique.
+
+	
+
+	Cas d’usage
+
+	
+
+ Exemples concrets
+
+DetectImmo
+
+ :
+Mise en place d’une solution de veille immobilière automatisée capable de surveiller simultanément plusieurs plateformes et agences immobilières sur différents départements.
+
+Analyse IA des annonces :
+Utilisation des modèles GPT pour analyser automatiquement les descriptions de biens, extraire les informations pertinentes et filtrer les annonces selon les critères clients.
+
+Génération automatique des dossiers clients :
+Transformation automatique des annonces sélectionnées en dossiers PDF standardisés prêts à être envoyés aux acquéreurs.
+
+Usages transférables
+
+Veille automatisée multi-sources dans le secteur immobilier.
+
+Automatisation documentaire et génération de rapports commerciaux.
+
+Analyse IA de données textuelles non structurées.
+
+Mise en place de systèmes de surveillance automatisée dans d’autres secteurs nécessitant une veille permanente.
+
+	
+
+Conditions de transférabilité
+
+Disposer d’une structuration minimale des données métiers.
+
+Identifier des sources techniquement exploitables pour le 
+
+scrapping
+
+.
+
+Prévoir une supervision humaine des résultats générés.
+
+Assurer une maintenance régulière des workflows.
+
+Mettre en place un suivi budgétaire précis des consommations API.
+
+	
+
+	Leçons apprises
+
+	
+
+Bonnes pratiques
+
+Mettre en place des phases de tests progressives avant industrialisation.
+
+Standardiser les structures de données avant automatisation.
+
+Superviser quotidiennement les logs techniques.
+
+Prévoir une validation humaine sur les données critiques.
+
+Déployer les workflows par étapes afin de sécuriser les performances et les coûts.
+
+Points de vigilance
+
+Les réponses générées par les modèles IA ne sont pas parfaitement reproductibles.
+
+Les structures des sites immobiliers évoluent régulièrement et nécessitent une maintenance corrective.
+
+Les coûts API doivent être suivis en permanence pour éviter les dérives budgétaires.
+
+Une supervision humaine reste indispensable sur les données critiques et les décisions commerciales.
+
+	
+
+	Perspectives
+
+	
+
+Suites envisagés
+
+Passage en maintenance évolutive et corrective de la solution 
+
+DetectImmo
+
+.
+
+Extension progressive de la couverture géographique.
+
+Amélioration continue des algorithmes de filtrage des biens.
+
+Développement de nouvelles automatisations autour du suivi client et du pilotage commercial.
+
+Renforcement des outils d’analyse et de 
+
+reporting
+
+.
+
+Nouveaux besoins (accompagnement, formation)
+
+Formation avancée au pilotage des workflows automatisés.
+
+Sensibilisation complémentaire à la cybersécurité et à la gestion des données.
+
+Accompagnement à la structuration d’un CRM métier connecté aux automatisations.
+
+Développement de nouvelles compétences internes en maintenance et supervision IA.
+
+	Témoignages
+
+	
+
+	
+
+Dirigeant / Collaborateurs
+
+Le dirigeant et les collaborateurs ont souligné l’impact immédiat des automatisations mises en place sur leur quotidien opérationnel, notamment concernant la réduction du temps consacré aux recherches immobilières et à la production documentaire.
+
+Citations, retour d’expériences
+
+« Cela nous fait gagner beaucoup de temps, et permet à mon équipe de faire autre chose pendant que l’outil cherche des biens. On a libéré du temps humain. »
+
+Les équipes ont également mis en avant une meilleure capacité à gérer plusieurs dossiers simultanément et une amélioration de la qualité des livrables transmis aux clients.
+
+✅ Consentement RGPD :
+
+Les témoignages présentés ont été fournis avec le consentement explicite des personnes concernées, conformément au RGPD.
+
+	Indicateurs quantitatifs et satisfaction
+
+	
+
+Note
+
+Signification
+
+1
+
+Très insatisfaisant / Très faible
+
+2
+
+Insatisfaisant / Faible
+
+3
+
+Moyen / Acceptable
+
+4
+
+Satisfaisant / Bon
+
+5
+
+Très satisfaisant / Excellent
+
+	
+
+Évolution des compétences 
+
+- Connaissance des outils d’automatisation (n8n, 
+
+Make
+
+) : 
+
+Avant l’accompagnement				Après l’accompagnement
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+- Capacité à concevoir un processus automatisé simple : 
+
+Avant l’accompagnement				Après l’accompagnement
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+- Maîtrise des interactions IA (
+
+ChatGPT
+
+) :
+
+Avant l’accompagnement				Après l’accompagnement
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+Estimation du ROI
+
+Coût de l’accompagnement : 1900 €
+
+Gains annuels estimés :
+
+364 heures économisées par an et par agent sur les recherches immobilières.
+
+52 heures économisées par an et par agent sur la génération documentaire.
+
+ROI sur 12 mois : 
+
+Compte tenu du niveau d’automatisation obtenu sur les tâches répétitives à 
+
+faible valeur ajoutée, le retour sur investissement peut être considéré comme 
+
+rapide, avec un impact direct sur la productivité, la capacité de traitement 
+
+des dossiers et la qualité de service.
+
+Indicateur de satisfaction
+
+Clarté :	
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+Utilité
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+Facilité
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+Motivation à poursuivre
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX

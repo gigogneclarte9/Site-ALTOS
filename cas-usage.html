@@ -1,0 +1,1533 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Vingt cas d'usage IA en TPE/PME — missions et audits 2025/26 · ALTOS</title>
+<meta name="description" content="Vingt cas d'usage IA documentés en 2025/26 : dix missions livrées (ROI, gains de temps, stacks n8n, Apify, Lovable, Supabase) et dix audits flash 2026 avec feuilles de route projetées. Filtrage par secteur — services, distribution, conseil, immobilier. Anonymisé RGPD." />
+<meta name="keywords" content="cas d'usage IA, audit IA PME, automatisation PME France, ROI IA, n8n exemples, agents IA cas concrets, audit flash IA, automatisation sur-mesure" />
+<meta name="author" content="Nicolas Darcos" />
+<link rel="canonical" href="https://altos.fr/cas-usage.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ALTOS" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://altos.fr/cas-usage.html" />
+<meta property="og:title" content="Vingt cas d'usage IA en TPE/PME — missions et audits 2025/26 · ALTOS" />
+<meta property="og:description" content="Vingt cas d'usage IA documentés en 2025/26 : missions livrées et audits flash, filtrables par secteur. Coiffure, froid commercial, patrimoine, événementiel, services à la personne, immobilier…" />
+<meta property="og:image" content="https://altos.fr/assets/og-default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="ALTOS — Ambassadeur IA pour PME" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Vingt cas d'usage IA en TPE/PME — missions et audits 2025/26 · ALTOS" />
+<meta name="twitter:description" content="Vingt cas d'usage IA documentés : missions livrées + audits flash, filtrables par secteur. Anonymisé RGPD." />
+<meta name="twitter:image" content="https://altos.fr/assets/og-default.png" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-weight='900' fill='%23ffffff'%3EA%3C/text%3E%3Ccircle cx='48' cy='52' r='4' fill='%23ff5b14'/%3E%3C/svg%3E" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #fff;
+    --ink: #0a0a0a;
+    --ink-2: #2c2c2c;
+    --ink-3: #767676;
+    --line: #e2e2e2;
+    --paper: #f4f1ec;
+    --accent: #4a3aff;
+    --acid: #d9ff3c;
+    --display: "Fraunces", "Times New Roman", serif;
+    --sans: "Inter", system-ui, sans-serif;
+    --mono: "DM Mono", ui-monospace, monospace;
+    --anim: 1;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  body { overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--ink); color: var(--acid); }
+
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+  .num { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.1em; text-transform: uppercase; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 26px; font-family: var(--sans);
+    font-weight: 500; font-size: 14px;
+    border: 1px solid var(--ink); background: var(--ink); color: var(--bg);
+    cursor: pointer; position: relative; overflow: hidden; transition: color .3s;
+  }
+  .btn::before { content: ""; position: absolute; inset: 0; background: var(--accent); transform: translateY(101%); transition: transform .4s cubic-bezier(.7,0,.3,1); z-index: -1; }
+  .btn:hover::before { transform: translateY(0); }
+  .btn--ghost { background: transparent; color: var(--ink); }
+  .btn--ghost::before { background: var(--ink); }
+  .btn--ghost:hover { color: var(--bg); }
+  .btn .arrow { transition: transform .3s; }
+  .btn:hover .arrow { transform: translateX(4px); }
+
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity .9s ease, transform .9s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--ink); }
+  .nav__inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 18px 32px; max-width: 1320px; margin: 0 auto; }
+  .logo { font-family: var(--display); font-weight: 900; font-size: 22px; letter-spacing: -0.04em; }
+  .logo i { font-style: italic; color: var(--accent); }
+  .nav__links { display: flex; gap: 32px; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .nav__links a { transition: color .2s; }
+  .nav__links a:hover { color: var(--accent); }
+  .nav__cta { display: flex; justify-content: flex-end; align-items: center; gap: 14px; }
+  .nav__time { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.08em; }
+
+  /* HERO */
+  .hero { border-bottom: 1px solid var(--ink); padding: 64px 0 0; }
+  .hero__top {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px;
+    margin-bottom: 32px; padding: 0 32px;
+    max-width: 1320px; margin-left: auto; margin-right: auto;
+    font-family: var(--mono); font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3);
+  }
+  .hero__top div + div { text-align: center; }
+  .hero__top div:last-child { text-align: right; }
+  .hero__title {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(54px, 9vw, 140px); line-height: 0.92;
+    letter-spacing: -0.04em; text-align: center;
+    padding: 0 32px; margin-bottom: 56px;
+    max-width: 1180px; margin-left: auto; margin-right: auto;
+  }
+  .hero__title i { font-style: italic; }
+  .hero__title .accent { color: var(--accent); }
+  .hero__lede {
+    max-width: 760px; margin: 0 auto 56px; padding: 0 32px;
+    font-size: 19px; line-height: 1.5; color: var(--ink-2); text-align: center;
+  }
+  .hero__lede strong { color: var(--ink); font-weight: 500; }
+
+  .hero-meta {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--ink);
+    max-width: 1320px; margin: 0 auto;
+  }
+  .hero-meta div {
+    padding: 32px; border-right: 1px solid var(--ink);
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .hero-meta div:last-child { border-right: none; }
+  .hero-meta .k {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(40px, 5vw, 64px); line-height: 0.95;
+    letter-spacing: -0.02em;
+  }
+  .hero-meta .k i { font-style: italic; color: var(--accent); }
+  .hero-meta .l { font-family: var(--mono); font-size: 11px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.1em; }
+
+  /* SECTION HEAD */
+  .sec-head {
+    padding: 80px 0 40px; border-bottom: 1px solid var(--ink);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end;
+  }
+  .sec-head h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(48px, 7vw, 88px); line-height: 0.92;
+    letter-spacing: -0.03em; margin-top: 16px;
+  }
+  .sec-head h2 i { font-style: italic; }
+  .sec-head h2 mark { background: var(--acid); padding: 0 8px; color: var(--ink); }
+  .sec-head__count { font-family: var(--mono); font-size: 12px; color: var(--ink-3); letter-spacing: 0.08em; text-align: right; }
+
+  /* CASES */
+  .cases-wrap { padding: 0 0 80px; }
+  .case {
+    display: grid; grid-template-columns: 200px 1fr 280px;
+    gap: 48px; padding: 64px 0;
+    border-bottom: 1px solid var(--ink); align-items: start;
+  }
+  .case__idx {
+    font-family: var(--display); font-style: italic;
+    font-weight: 400; font-size: 28px; color: var(--accent);
+    line-height: 1;
+  }
+  .case__idx .num-big {
+    display: block; font-family: var(--display);
+    font-style: normal; font-weight: 400;
+    font-size: clamp(80px, 8vw, 120px); line-height: 0.9;
+    color: var(--ink); letter-spacing: -0.04em; margin-bottom: 8px;
+  }
+  .case__tag {
+    display: inline-block; margin-top: 18px;
+    font-family: var(--mono); font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--ink-3);
+  }
+  .case h3 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(28px, 3vw, 42px); line-height: 1.05;
+    letter-spacing: -0.02em; margin: 14px 0 18px; max-width: 24ch;
+  }
+  .case h3 i { font-style: italic; }
+  .case h3 mark { background: var(--acid); padding: 0 6px; }
+  .case__summary { color: var(--ink-2); font-size: 16px; line-height: 1.6; max-width: 56ch; }
+  .case__pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .pill {
+    font-family: var(--mono); font-size: 11px;
+    padding: 5px 12px; border: 1px solid var(--ink); white-space: nowrap;
+    color: var(--ink-2); letter-spacing: 0.04em;
+  }
+  .pill.solid { background: var(--ink); color: var(--bg); }
+
+  .case__stats { display: flex; flex-direction: column; gap: 14px; }
+  .stat {
+    padding: 20px 22px; border: 1px solid var(--ink);
+    transition: background .2s;
+  }
+  .stat:first-child { background: var(--paper); }
+  .stat .v {
+    font-family: var(--display); font-weight: 400;
+    font-size: 38px; line-height: 1; letter-spacing: -0.02em;
+  }
+  .stat .v i { font-style: italic; color: var(--accent); }
+  .stat .v small { font-size: 16px; color: var(--ink-3); font-style: italic; margin-left: 4px; }
+  .stat .lbl { font-family: var(--mono); font-size: 11px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 8px; }
+
+  details.expand { margin-top: 28px; grid-column: 2 / 4; }
+  details.expand summary {
+    list-style: none; cursor: pointer; display: inline-flex;
+    align-items: center; gap: 10px;
+    font-family: var(--mono); font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--accent); padding: 8px 0;
+    border-bottom: 1px solid var(--accent); transition: gap .18s ease;
+  }
+  details.expand summary::-webkit-details-marker { display: none; }
+  details.expand summary::after { content: "→"; transition: transform .25s ease; }
+  details.expand[open] summary::after { transform: rotate(90deg); }
+  details.expand summary:hover { gap: 14px; }
+  details.expand .body {
+    padding-top: 36px; display: grid;
+    grid-template-columns: 1fr 1fr; gap: 48px;
+  }
+  details.expand .body h4 {
+    font-family: var(--mono); font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--ink-3); margin: 0 0 14px; font-weight: 500;
+  }
+  details.expand .body p { margin: 0 0 12px; color: var(--ink-2); font-size: 15px; line-height: 1.6; }
+  details.expand .body ul { margin: 0; padding-left: 18px; color: var(--ink-2); font-size: 15px; line-height: 1.65; }
+  details.expand .body ul li { margin-bottom: 6px; }
+  details.expand .body ul li b { color: var(--ink); font-weight: 500; }
+  details.expand .body .full { grid-column: 1 / -1; }
+  details.expand blockquote {
+    margin-top: 8px; padding: 24px 28px;
+    background: var(--paper); border-left: 3px solid var(--accent);
+    font-family: var(--display); font-style: italic;
+    font-size: 22px; line-height: 1.4; color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  details.expand blockquote::before { content: "“"; color: var(--accent); margin-right: 4px; }
+  details.expand blockquote::after { content: "”"; color: var(--accent); margin-left: 4px; }
+
+  /* CTA */
+  .cta {
+    padding: 120px 0; background: var(--ink); color: var(--bg);
+    text-align: center;
+  }
+  .cta h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(54px, 8vw, 120px); line-height: 0.92;
+    letter-spacing: -0.03em; max-width: 1000px; margin: 0 auto;
+  }
+  .cta h2 i { font-style: italic; color: var(--accent); }
+  .cta h2 .acid { color: var(--acid); font-style: italic; }
+  .cta__sub { font-size: 17px; max-width: 540px; margin: 28px auto; line-height: 1.5; color: #b3b3b3; }
+  .cta__btns { display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 32px; }
+  .cta .btn--ghost { color: var(--bg); border-color: var(--bg); }
+  .cta .btn--ghost::before { background: var(--accent); }
+  .cta .btn { border-color: var(--bg); }
+
+  /* BIG CTA buttons (Diag + Micro-audit) */
+  .btn--big {
+    padding: 26px 40px;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    border-width: 2px;
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.18);
+    transition: transform .2s ease, box-shadow .2s ease, color .3s;
+  }
+  .btn--big:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 rgba(0,0,0,0.25); }
+  .btn--big .arrow { width: 18px; height: 18px; }
+  .btn--diag {
+    background: var(--accent); border-color: var(--accent); color: #fff;
+  }
+  .btn--diag::before { background: var(--ink); }
+  .btn--diag:hover { color: var(--acid); }
+  .btn--audit {
+    background: var(--acid); border-color: var(--acid); color: var(--ink);
+  }
+  .btn--audit::before { background: var(--accent); }
+  .btn--audit:hover { color: var(--bg); }
+  .cta .btn--diag, .cta .btn--audit { border-color: transparent; }
+
+  /* FOOTER */
+  footer { background: var(--bg); border-top: 1px solid var(--ink); padding: 48px 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px; }
+  footer .note { max-width: 64ch; font-size: 13px; color: var(--ink-2); line-height: 1.55; }
+  footer .note b { color: var(--ink); font-weight: 500; }
+  footer .right { font-family: var(--mono); font-size: 11px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.06em; text-align: right; }
+  footer .right a { color: var(--ink); text-transform: none; letter-spacing: 0; }
+  footer .right a:hover { color: var(--accent); }
+
+  /* FILTER BAR */
+  .filter-bar {
+    position: sticky; top: 64px; z-index: 40;
+    background: var(--bg); border-bottom: 1px solid var(--ink);
+    padding: 18px 0;
+  }
+  .filter-bar__inner {
+    display: flex; align-items: center; gap: 20px;
+    flex-wrap: wrap;
+  }
+  .filter-bar__label {
+    font-family: var(--mono); font-size: 11px;
+    color: var(--ink-3); letter-spacing: 0.08em; text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .filter-bar__label i { font-style: italic; color: var(--ink); }
+  .filter-bar__btns { display: flex; gap: 6px; flex-wrap: wrap; }
+  .filter-btn {
+    font-family: var(--mono); font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    padding: 8px 14px; border: 1px solid var(--ink);
+    background: var(--bg); color: var(--ink);
+    cursor: pointer; transition: background .15s ease, color .15s ease;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .filter-btn em { font-style: normal; color: var(--ink-3); font-size: 10px; }
+  .filter-btn:hover { background: var(--paper); }
+  .filter-btn.is-active { background: var(--ink); color: var(--bg); }
+  .filter-btn.is-active em { color: var(--acid); }
+  .filter-bar__type {
+    margin-left: auto; display: flex; gap: 0;
+    border: 1px solid var(--ink);
+  }
+  .type-btn {
+    font-family: var(--mono); font-size: 10px;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    padding: 8px 12px; border: none; background: var(--bg); color: var(--ink-2);
+    cursor: pointer; transition: background .15s ease, color .15s ease;
+    border-right: 1px solid var(--line);
+  }
+  .type-btn:last-child { border-right: none; }
+  .type-btn:hover { background: var(--paper); }
+  .type-btn.is-active { background: var(--accent); color: var(--bg); }
+
+  /* MINI CASE CARD (audits flash 2026) */
+  .audits-section {
+    padding: 56px 0 24px; border-bottom: 1px solid var(--line);
+  }
+  .audits-section__head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 36px; gap: 24px; flex-wrap: wrap;
+  }
+  .audits-section__head h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(32px, 4.5vw, 56px); line-height: 1; letter-spacing: -0.02em;
+  }
+  .audits-section__head h2 i { font-style: italic; color: var(--accent); }
+  .audits-section__head p {
+    max-width: 44ch; color: var(--ink-2); font-size: 14px; line-height: 1.5;
+  }
+  .audits-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 0;
+    border-top: 1px solid var(--ink); border-left: 1px solid var(--ink);
+  }
+  .case-mini {
+    display: flex; flex-direction: column; gap: 14px;
+    padding: 32px 30px;
+    border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink);
+    background: var(--bg); transition: background .2s ease;
+    color: inherit; min-height: 280px; position: relative;
+  }
+  .case-mini:hover { background: var(--paper); }
+  .case-mini:hover .case-mini__cta { gap: 12px; color: var(--accent); }
+  .case-mini__top {
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--mono); font-size: 11px;
+    color: var(--ink-3); letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .case-mini__num {
+    font-family: var(--display); font-style: italic;
+    font-size: 22px; color: var(--accent); letter-spacing: 0; text-transform: none;
+  }
+  .case-mini__tag {
+    background: var(--acid); color: var(--ink);
+    padding: 4px 10px; letter-spacing: 0.08em; font-size: 10px;
+  }
+  .case-mini__title {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(22px, 2.4vw, 30px); line-height: 1.1;
+    letter-spacing: -0.02em; margin: 6px 0 0; color: var(--ink);
+    text-wrap: pretty;
+  }
+  .case-mini__title i { font-style: italic; }
+  .case-mini__title mark { background: var(--acid); padding: 0 4px; }
+  .case-mini__sub {
+    font-size: 14px; color: var(--ink-2); line-height: 1.5;
+    max-width: 50ch;
+  }
+  .case-mini__bottom {
+    margin-top: auto;
+    display: flex; justify-content: space-between; align-items: end;
+    gap: 16px;
+    padding-top: 16px; border-top: 1px solid var(--line);
+  }
+  .case-mini__metric {
+    font-family: var(--display); font-size: 26px; line-height: 1;
+    letter-spacing: -0.02em; color: var(--ink);
+  }
+  .case-mini__metric i { font-style: italic; color: var(--accent); }
+  .case-mini__metric small { display: block; font-family: var(--mono); font-size: 10px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 6px; font-style: normal; }
+  .case-mini__cta {
+    font-family: var(--mono); font-size: 11px;
+    color: var(--ink); letter-spacing: 0.08em; text-transform: uppercase;
+    display: inline-flex; gap: 8px; align-items: center;
+    transition: gap .18s ease, color .18s ease; white-space: nowrap;
+  }
+  .case-mini__cta::after { content: "→"; transition: transform .2s ease; }
+  .case-mini:hover .case-mini__cta::after { transform: translateX(4px); }
+
+  /* Hide states (filter) */
+  .case.is-hidden, .case-mini.is-hidden { display: none !important; }
+  .audits-section.is-hidden, .legacy-cases-section.is-hidden { display: none !important; }
+
+  /* Section header for legacy 10 cases */
+  .legacy-header {
+    padding: 56px 0 16px; border-bottom: 1px solid var(--line);
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 24px; flex-wrap: wrap;
+  }
+  .legacy-header h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(32px, 4.5vw, 56px); line-height: 1; letter-spacing: -0.02em;
+  }
+  .legacy-header h2 i { font-style: italic; }
+  .legacy-header p {
+    max-width: 44ch; color: var(--ink-2); font-size: 14px; line-height: 1.5;
+  }
+
+@media (max-width: 900px) {
+    .hero-meta, .sec-head, details.expand .body { grid-template-columns: 1fr !important; }
+    .hero-meta div { border-right: none; border-bottom: 1px solid var(--ink); }
+    .hero-meta div:last-child { border-bottom: none; }
+    .case { grid-template-columns: 1fr; gap: 28px; padding: 48px 0; }
+    details.expand { grid-column: 1 / -1; }
+    .case__stats { flex-direction: row; flex-wrap: wrap; }
+    .stat { flex: 1 1 180px; }
+    .nav__links { display: none; }
+    .audits-grid { grid-template-columns: 1fr; }
+    .filter-bar { position: static; }
+    .filter-bar__inner { gap: 12px; }
+    .filter-bar__type { margin-left: 0; width: 100%; }
+    .type-btn { flex: 1; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Vingt cas d'usage IA — ALTOS",
+  "description": "Vingt études de cas IA en TPE/PME documentées en 2025/26 — dix missions livrées + dix audits flash.",
+  "url": "https://altos.fr/cas-usage.html",
+  "isPartOf": {"@type":"WebSite","name":"ALTOS","url":"https://altos.fr"},
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Accueil","item":"https://altos.fr/"},
+      {"@type":"ListItem","position":2,"name":"Cas d'usage","item":"https://altos.fr/cas-usage.html"}
+    ]
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": 20,
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Services à la personne · bilans annuels automatisés"},
+      {"@type":"ListItem","position":2,"name":"Organisation pro. bâtiment · studio social no-code"},
+      {"@type":"ListItem","position":3,"name":"Foncière régionale · CR + analyse PLU IA"},
+      {"@type":"ListItem","position":4,"name":"Cabinet de chasse · qualification de piges 24h/24"},
+      {"@type":"ListItem","position":5,"name":"Courtage énergie · RAG interne + bot Telegram"},
+      {"@type":"ListItem","position":6,"name":"Transport sanitaire · refonte numérique 48 salariés"},
+      {"@type":"ListItem","position":7,"name":"Chasse immobilière · veille nocturne automatisée"},
+      {"@type":"ListItem","position":8,"name":"TPE génie climatique · app métier sur-mesure"},
+      {"@type":"ListItem","position":9,"name":"ESS santé travail · parsing CSV ×30"},
+      {"@type":"ListItem","position":10,"name":"Audioprothèse multi-centres · Slack + publications IA"},
+      {"@type":"ListItem","position":11,"name":"Groupe de salons coiffure multisite · siège piloté par 12 outils","url":"https://altos.fr/cas-usage/groupe-coiffure-multisite.html"},
+      {"@type":"ListItem","position":12,"name":"Distribution froid commercial Sud-Ouest · SAV automatisé","url":"https://altos.fr/cas-usage/distribution-froid-commercial.html"},
+      {"@type":"ListItem","position":13,"name":"Cabinet de gestion de patrimoine · CR audio + commissions contrôlées","url":"https://altos.fr/cas-usage/cabinet-gestion-patrimoine.html"},
+      {"@type":"ListItem","position":14,"name":"Agence événementielle B2B · qualification + FRA + base prestataires","url":"https://altos.fr/cas-usage/agence-evenementielle-b2b.html"},
+      {"@type":"ListItem","position":15,"name":"Services à la personne · anomalies qualité assistées IA","url":"https://altos.fr/cas-usage/services-personne-anomalies.html"},
+      {"@type":"ListItem","position":16,"name":"Chocolatier-confiseur multicanal · commandes BtoB capturées","url":"https://altos.fr/cas-usage/chocolatier-multicanal.html"},
+      {"@type":"ListItem","position":17,"name":"Quincaillerie rurale multimétiers · OR digital + saisie vocale","url":"https://altos.fr/cas-usage/quincaillerie-rurale-multimetiers.html"},
+      {"@type":"ListItem","position":18,"name":"PME froid commercial / climatisation · SAV multi-canaux + AO","url":"https://altos.fr/cas-usage/pme-froid-commercial-climatisation.html"},
+      {"@type":"ListItem","position":19,"name":"Agence immobilière 3 pôles · location, syndic, recherche PV/règlements IA","url":"https://altos.fr/cas-usage/immobilier-3-poles.html"},
+      {"@type":"ListItem","position":20,"name":"Installation frigorifique Tarn · OCR compta + contrats entretien J+365","url":"https://altos.fr/cas-usage/installation-frigorifique-tarn.html"}
+    ]
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="logo">ALTOS<i>.</i></a>
+    <div class="nav__links">
+      <a href="index.html#services">Services</a>
+      <a href="#cas">Index</a>
+      <a href="index.html#process">Méthode</a>
+      <a href="index.html#blog">Journal</a>
+    </div>
+    <div class="nav__cta">
+      <span class="nav__time">FR · 2026</span>
+      <a href="#contact" class="btn">Prendre RDV
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero__top">
+    <div>Issue n°02 — Cas d'usage</div>
+    <div>2025 / 2026</div>
+    <div>Vingt missions</div>
+  </div>
+
+  <h1 class="hero__title reveal">
+    Vingt projets <i>IA</i>,<br/>
+    dix <i class="accent">métiers</i>,<br/>
+    des résultats <i>mesurés</i>.
+  </h1>
+
+  <p class="hero__lede reveal">
+    <strong>Altos</strong> accompagne PME, TPE et organisations professionnelles dans le déploiement d'agents IA et d'automatisations no-code. Vingt cas documentés en 2025/26 : <strong>dix missions livrées</strong> (résultats mesurés) et <strong>dix audits flash 2026</strong> (feuilles de route projetées). Anonymisés, conformes RGPD. <a href="#cas" style="text-decoration:underline;text-underline-offset:3px">Filtrer par secteur ↓</a>
+  </p>
+
+  <div class="hero-meta">
+    <div>
+      <div class="k"><i>5 j</i></div>
+      <div class="l">Format type d'une mission</div>
+    </div>
+    <div>
+      <div class="k"><i>20</i></div>
+      <div class="l">Cas documentés</div>
+    </div>
+    <div>
+      <div class="k"><i>12</i></div>
+      <div class="l">Secteurs couverts</div>
+    </div>
+    <div>
+      <div class="k">30 min</div>
+      <div class="l">Diagnostic offert</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION HEAD -->
+<div class="wrap">
+  <div class="sec-head" id="cas">
+    <div>
+      <span class="num reveal">§ Index</span>
+      <h2 class="reveal">Vingt <i>études</i> de cas.</h2>
+    </div>
+    <div class="sec-head__count reveal">20 · 2025/26</div>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar" id="filters">
+  <div class="wrap filter-bar__inner">
+    <span class="filter-bar__label">Filtrer par <i>secteur</i></span>
+    <div class="filter-bar__btns" role="tablist">
+      <button type="button" class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">Tous <em>20</em></button>
+      <button type="button" class="filter-btn" data-filter="services" role="tab">Services <em>6</em></button>
+      <button type="button" class="filter-btn" data-filter="distribution" role="tab">Distribution <em>3</em></button>
+      <button type="button" class="filter-btn" data-filter="conseil" role="tab">Conseil &amp; technique <em>8</em></button>
+      <button type="button" class="filter-btn" data-filter="immobilier" role="tab">Immobilier <em>3</em></button>
+    </div>
+    <div class="filter-bar__type">
+      <button type="button" class="type-btn is-active" data-type="all">Tous</button>
+      <button type="button" class="type-btn" data-type="mission">Missions livrées</button>
+      <button type="button" class="type-btn" data-type="audit">Audits flash 2026</button>
+    </div>
+  </div>
+</div>
+
+<!-- CASES -->
+<section class="cases-wrap">
+  <div class="wrap">
+
+    <!-- ─── AUDITS FLASH 2026 ─── -->
+    <section class="audits-section" data-section="audit">
+      <div class="audits-section__head">
+        <h2>Audits <i>flash</i> 2026 <span style="color:var(--ink-3);font-size:0.55em;font-style:italic;">— dix feuilles de route projetées</span></h2>
+        <p>Audits flash IA conduits en cinq jours sur le terrain. Gains <strong>projetés</strong> à partir des volumes observés et de bilans comparables. Chaque carte ouvre une fiche détaillée.</p>
+      </div>
+      <div class="audits-grid">
+
+        <a class="case-mini reveal" data-sector="services" data-type="audit" href="cas-usage/groupe-coiffure-multisite.html">
+          <div class="case-mini__top">
+            <span class="case-mini__num">11</span>
+            <span class="case-mini__tag">Audit · 2026</span>
+          </div>
+          <h3 class="case-mini__title">Un réseau de <i>32 salons</i> piloté depuis <mark>douze outils</mark>.</h3>
+          <p class="case-mini__sub">Groupe de coiffure indépendant, ~99 collaborateurs, siège de 9 personnes — Sud-Ouest.</p>
+          <div class="case-mini__bottom">
+            <span class="case-mini__metric"><i>~108 h/an</i><small>récupérées · marketing</small></span>
+            <span class="case-mini__cta">Lire</span>
+          </div>
+        </a>
+
+        <a class="case-mini reveal" data-sector="distribution" data-type="audit" href="cas-usage/distribution-froid-commercial.html">
+          <div class="case-mini__top">
+            <span class="case-mini__num">12</span>
+            <span class="case-mini__tag">Audit · 2025</span>
+          </div>
+          <h3 class="case-mini__title">Quand un <i>SAV</i> fait déborder <mark>tout le reste</mark>.</h3>
+          <p class="case-mini__sub">Distribution B2B cuisines pro &amp; froid commercial, 40 col., 2 sites — Sud-Ouest.</p>
+          <div class="case-mini__bottom">
+            <span class="case-mini__metric"><i>60–80 %</i><small>temps gagné · SAV</small></span>
+            <span class="case-mini__cta">Lire</span>
+          </div>
+        </a>
+
+        <a class="case-mini reveal" data-sector="conseil" data-type="audit" href="cas-usage/cabinet-gestion-patrimoine.html">
+          <div class="case-mini__top">
+            <span class="case-mini__num">13</span>
+            <span class="case-mini__tag">Audit · 2025</span>
+          </div>
+          <h3 class="case-mini__title">Deux heures à <i>retaper</i> ce qu'on vient de dire.</h3>
+          <p class="case-mini__sub">Cabinet de gestion de patrimoine, 2 dirigeants, 17 ans d'expérience — clientèle FR &amp; international.</p>
+          <div class="case-mini__bottom">
+            <span class="case-mini__metric"><i>2 h → 30 min</i><small>CR patrimoniaux</small></span>
+            <span class="case-mini__cta">Lire</span>
+          </div>
+        </a>
+
+        <a class="case-mini reveal" data-sector="conseil" data-type="audit" href="cas-usage/agence-evenementielle-b2b.html">
+          <div class="case-mini__top">
+            <span class="case-mini__num">14</span>
+            <span class="case-mini__tag">Audit · 2026</span>
+          </div>
+          <h3 class="case-mini__title">L'agence créative qui fait le travail <i>deux fois</i> entre <mark>Notion</mark> et Excel.</h3>
+          <p class="case-mini__sub">Agence événementielle B2B, 23 col., 4 entités, certifiée ISO 20121 — Occitanie + FR.</p>
+          <div class="case-mini__bottom">
+            <span class="case-mini__metric"><i>~70 %</i><small>temps gagné · CR</small></span>
+            <span class="case-mini__cta">Lire</span>
+          </div>
+        </a>
+
+        <a class="case-mini reveal" data-sector="services" data-type="audit" href="cas-usage/services-personne-anomalies.html">
+          <div class="case-mini__top">
+            <span class="case-mini__num">15</span>
+            <span class="case-mini__tag">Audit · 2026</span>
+          </div>
+          <h3 class="case-mini__title">Chaque <i>anomalie qualité</i> repose sur <mark>trois personnes</mark>.</h3>
+          <p class="case-mini__sub">Services à la personne, 53 sal., autorisation Conseil départemental — public fragile.</p>
+          <div class="case-mini__bottom">
+            <span class="case-mini__metric"><i>~50 %</i><small>analyse anomalies</small></span>
+            <span class="case-mini__cta">Lire</span>
+          </div>
+        </a>
+
+        <a class="case-mini reveal" data-sector="distribution" data-type="audit" href="cas-usage/chocolatier-multicanal.html">
+          <div class="case-mini__top">
+            <span class="case-mini__num">16</span>
+            <span class="case-mini__tag">Audit · 2026</span>
+          </div>
+          <h3 class="case-mini__title">75 ans, <i>30 000 clients fidèles</i>, et <mark>une newsletter par an</mark>.</h3>
+          <p class="case-mini__sub">Chocolatier-confiseur multicanal, 40 à 70 col. en saison, migration Sage V12 — national.</p>
+          <div class="case-mini__bottom">
+            <span class="case-mini__metric"><i>5 min → 1 min</i><small>commande BtoB</small></span>
+            <span class="case-mini__cta">Lire</span>
+          </div>
+        </a>
+
+        <a class="case-mini reveal" data-sector="distribution" data-type="audit" href="cas-usage/quincaillerie-rurale-multimetiers.html">
+          <div class="case-mini__top">
+            <span class="case-mini__num">17</span>
+            <span class="case-mini__tag">Audit · 2026</span>
+          </div>
+          <h3 class="case-mini__title">Une quincaillerie qui fait tourner <i>huit métiers</i> sur du <mark>papier</mark>.</h3>
+          <p class="case-mini__sub">Quincaillerie rurale multimétiers, 14 col., transmission familiale — Aveyron.</p>
+          <div class="case-mini__bottom">
+            <span class="case-mini__metric"><i>0 papier</i><small>ordre de réparation digital</small></span>
+            <span class="case-mini__cta">Lire</span>
+          </div>
+        </a>
+
+        <a class="case-mini reveal" data-sector="conseil" data-type="audit" href="cas-usage/pme-froid-commercial-climatisation.html">
+          <div class="case-mini__top">
+            <span class="case-mini__num">18</span>
+            <span class="case-mini__tag">Audit · 2026</span>
+          </div>
+          <h3 class="case-mini__title">Un <i>SAV</i> sur trois canaux, <mark>zéro tableau</mark>.</h3>
+          <p class="case-mini__sub">PME froid commercial &amp; climatisation, 12 col., +57 % de CA en 5 ans — Hérault.</p>
+          <div class="case-mini__bottom">
+            <span class="case-mini__metric"><i>SAV temps réel</i><small>notifications + SMS client</small></span>
+            <span class="case-mini__cta">Lire</span>
+          </div>
+        </a>
+
+        <a class="case-mini reveal" data-sector="immobilier" data-type="audit" href="cas-usage/immobilier-3-poles.html">
+          <div class="case-mini__top">
+            <span class="case-mini__num">19</span>
+            <span class="case-mini__tag">Audit · 2025</span>
+          </div>
+          <h3 class="case-mini__title">L'agent immobilier qui répond <i>50 fois</i> pour un bien <mark>déjà loué</mark>.</h3>
+          <p class="case-mini__sub">Agence immobilière familiale, 35 col., 4 métiers, 3 agences — Montpellier.</p>
+          <div class="case-mini__bottom">
+            <span class="case-mini__metric"><i>&lt; 1 h</i><small>réponse demande loc.</small></span>
+            <span class="case-mini__cta">Lire</span>
+          </div>
+        </a>
+
+        <a class="case-mini reveal" data-sector="conseil" data-type="audit" href="cas-usage/installation-frigorifique-tarn.html">
+          <div class="case-mini__top">
+            <span class="case-mini__num">20</span>
+            <span class="case-mini__tag">Audit · 2025</span>
+          </div>
+          <h3 class="case-mini__title">Un <i>Google Form</i> en <mark>changement de couleur</mark> en guise de CRM.</h3>
+          <p class="case-mini__sub">Installation froid, clim et chauffage, 16 sal., rachat familial — Tarn.</p>
+          <div class="case-mini__bottom">
+            <span class="case-mini__metric"><i>+ rev. récurrents</i><small>contrats entretien J+365</small></span>
+            <span class="case-mini__cta">Lire</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ─── MISSIONS LIVRÉES 2025/26 ─── -->
+    <section class="legacy-cases-section" data-section="mission">
+    <div class="legacy-header">
+      <h2>Missions <i>livrées</i> 2025/26 <span style="color:var(--ink-3);font-size:0.55em;font-style:italic;">— dix bilans avec résultats mesurés</span></h2>
+      <p>Missions complètes conduites par Altos en 2025/26 — déploiement, formation, transfert d'autonomie. ROI et gains de temps issus des bilans réels avec les clients.</p>
+    </div>
+
+    <!-- CASE 01 -->
+    <article class="case reveal" data-sector="services" data-type="mission">
+      <div class="case__idx">
+        <span class="num-big">01</span>cas
+      </div>
+      <div>
+        <span class="case__tag">Services à la personne · maintien à domicile</span>
+        <h3>Bilans annuels et événements indésirables <i>générés automatiquement</i>.</h3>
+        <p class="case__summary">
+          Un réseau de services à la personne croulait sous les rapports à remplir chaque année et voulait être plus visible sur Google. Une chaîne n8n + ChatGPT + OpenForm + WordPress lit les formulaires, rédige les rapports tout seuls et publie aussi des articles sur leur site.
+        </p>
+        <div class="case__pills">
+          <span class="pill solid">n8n</span>
+          <span class="pill">ChatGPT</span>
+          <span class="pill">OpenForm</span>
+          <span class="pill">WordPress</span>
+          <span class="pill">SEO FR</span>
+        </div>
+      </div>
+      <div class="case__stats">
+        <div class="stat">
+          <div class="v"><i>5 h</i><small>→ 15 min</small></div>
+          <div class="lbl">Par bilan complet</div>
+        </div>
+        <div class="stat">
+          <div class="v"><i>1 186 %</i></div>
+          <div class="lbl">ROI max / 200 clients</div>
+        </div>
+      </div>
+      <details class="expand">
+        <summary>Voir le détail de la mission</summary>
+        <div class="body">
+          <div>
+            <h4>Objectifs</h4>
+            <ul>
+              <li>Automatiser bilans annuels et bilans d'événements indésirables.</li>
+              <li>Produire des articles SEO sourcés sur le marché français.</li>
+              <li>Fiabiliser la segmentation et l'exploitation des données.</li>
+              <li>Rendre le référent technique interne autonome.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Actions réalisées</h4>
+            <ul>
+              <li>Sources SEO recentrées sur le marché français et européen.</li>
+              <li>Refonte du workflow EI pour analyser l'année complète.</li>
+              <li>Optimisation de la consommation de tokens.</li>
+              <li>Publication WordPress en brouillon via n8n pour validation humaine.</li>
+              <li>Lecture directe des CSV sans conversion préalable.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>ROI sur 12 mois</h4>
+            <ul>
+              <li><b>50 clients</b> · 265 h économisées · ROI <b>249 %</b></li>
+              <li><b>100 clients</b> · 503 h · ROI <b>561 %</b></li>
+              <li><b>150 clients</b> · 740 h · ROI <b>874 %</b></li>
+              <li><b>200 clients</b> · 978 h · ROI <b>1 186 %</b></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Cas d'usage transférables</h4>
+            <p>Numérisation de formulaires papier, génération de bilans annuels, rédaction d'articles SEO sourcés. Adapté à toute structure aux volumes de reporting élevés.</p>
+          </div>
+          <div class="full">
+            <blockquote>Les équipes soulignent la rapidité de production des bilans et la facilité d'utilisation des nouveaux outils.</blockquote>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- CASE 02 -->
+    <article class="case reveal" data-sector="conseil" data-type="mission">
+      <div class="case__idx">
+        <span class="num-big">02</span>cas
+      </div>
+      <div>
+        <span class="case__tag">Organisation professionnelle · artisans du bâtiment</span>
+        <h3>Un studio social <i>no-code</i> pour produire et planifier les contenus Meta.</h3>
+        <p class="case__summary">
+          Une organisation du bâtiment voulait être plus active sur les réseaux sociaux sans embaucher quelqu'un. Une mini-appli Lovable rédige les textes, crée les images et programme les publications Facebook et Instagram — utilisable sans rien connaître à la technique.
+        </p>
+        <div class="case__pills">
+          <span class="pill solid">Lovable</span>
+          <span class="pill">Claude / GPT-4</span>
+          <span class="pill">DALL·E · Flux</span>
+          <span class="pill">n8n</span>
+          <span class="pill">Meta Graph API</span>
+        </div>
+      </div>
+      <div class="case__stats">
+        <div class="stat">
+          <div class="v"><i>30→3 min</i></div>
+          <div class="lbl">Par publication</div>
+        </div>
+        <div class="stat">
+          <div class="v"><i>+42 %</i></div>
+          <div class="lbl">ROI 12 mois · amorti en 5 mois</div>
+        </div>
+      </div>
+      <details class="expand">
+        <summary>Voir le détail de la mission</summary>
+        <div class="body">
+          <div>
+            <h4>Objectifs</h4>
+            <ul>
+              <li>Outil simple pour produire textes et visuels Facebook / Instagram.</li>
+              <li>Réduire le temps de préparation des publications.</li>
+              <li>Tenir la charte et le ton éditorial dans la durée.</li>
+              <li>Autonomie des équipes via prompts modèles et validation humaine.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Actions réalisées</h4>
+            <ul>
+              <li>Tableau de bord central sous Lovable.</li>
+              <li>Génération texte adaptée au réseau + hashtags sectoriels + ton paramétrable.</li>
+              <li>Visuels IA déclinables en 1:1, 4:5 et 9:16.</li>
+              <li>Publication immédiate ou programmée via Meta Graph API.</li>
+              <li>Bibliothèque de prompts et formation à la prise en main.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Avant / après</h4>
+            <ul>
+              <li>Rédaction texte : <b>10 min → 1 min</b></li>
+              <li>Création visuel : <b>15 min → 1 min</b></li>
+              <li>Mise en forme / publication : <b>5 min → 1 min</b></li>
+              <li>20 publications/mois × 27 min = <b>108 h/an</b> récupérées</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Cas d'usage transférables</h4>
+            <p>Newsletters institutionnelles, LinkedIn, valorisation d'événements ou d'adhérents, bibliothèques de contenus thématiques (réglementation, sécurité, portraits métier).</p>
+          </div>
+          <div class="full">
+            <blockquote>L'accompagnement nous a permis de franchir une étape importante. Nous disposons d'un outil sur mesure, adapté à nos besoins. Aujourd'hui, nous sommes plus efficaces, plus réguliers, et surtout plus confiants dans notre capacité à utiliser ces nouveaux outils.</blockquote>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- CASE 03 -->
+    <article class="case reveal" data-sector="immobilier" data-type="mission">
+      <div class="case__idx">
+        <span class="num-big">03</span>cas
+      </div>
+      <div>
+        <span class="case__tag">Aménagement foncier · promotion immobilière</span>
+        <h3>Comptes rendus, courriers, analyse de <i>PLU</i> — la pile IA d'une foncière.</h3>
+        <p class="case__summary">
+          Le travail avec mairies, notaires et partenaires produit énormément de documents. Noota transforme les réunions en comptes rendus, et Gemini rédige les courriers, lit les documents d'urbanisme et crée des assistants IA sur mesure pour chaque besoin.
+        </p>
+        <div class="case__pills">
+          <span class="pill solid">Noota</span>
+          <span class="pill">Gemini · Gems</span>
+          <span class="pill">Google Meet</span>
+          <span class="pill">Banana</span>
+          <span class="pill">Méthode ACTIF</span>
+        </div>
+      </div>
+      <div class="case__stats">
+        <div class="stat">
+          <div class="v"><i>1h→15 min</i></div>
+          <div class="lbl">Par compte rendu</div>
+        </div>
+        <div class="stat">
+          <div class="v"><i>2 284 %</i></div>
+          <div class="lbl">ROI 12 mois</div>
+        </div>
+      </div>
+      <details class="expand">
+        <summary>Voir le détail de la mission</summary>
+        <div class="body">
+          <div>
+            <h4>Objectifs</h4>
+            <ul>
+              <li>Améliorer la prise de notes et la retranscription des réunions.</li>
+              <li>Structurer la production de comptes rendus (décisions, actions).</li>
+              <li>Identifier des usages concrets de l'IA pour les métiers.</li>
+              <li>Former les équipes aux principes du prompting.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Scénarios déployés</h4>
+            <ul>
+              <li>Visio Google Meet → transcription + CR structuré.</li>
+              <li>Réunion présentielle via smartphone → transcription + résumé IA.</li>
+              <li>Appels téléphoniques → synthèse + archivage.</li>
+              <li>Courriers professionnels, reformulation, correction.</li>
+              <li>Synthèse de PLU et création de Gems personnalisés.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Bénéfices chiffrés</h4>
+            <ul>
+              <li>4 à 5 CR/mois × 3 collaborateurs : <b>121 h/an</b> économisées.</li>
+              <li>Usage IA quotidien : <b>1 692 h/an</b> sur 12 collaborateurs.</li>
+              <li>Gains totaux valorisés sur l'année : <b>ROI 2 284 %</b>.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Cas d'usage transférables</h4>
+            <p>Automatisation des comptes rendus, assistance à la rédaction de documents pro, génération de contenus marketing, analyse / synthèse de documents techniques.</p>
+          </div>
+          <div class="full">
+            <blockquote>Meilleure compréhension de la manière de rédiger un bon prompt. Utilisation plus ciblée des outils d'IA selon le besoin. L'IA permet de gagner du temps sur la rédaction de documents et la préparation des réunions.</blockquote>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- CASE 04 -->
+    <article class="case reveal" data-sector="conseil" data-type="mission">
+      <div class="case__idx">
+        <span class="num-big">04</span>cas
+      </div>
+      <div>
+        <span class="case__tag">Recrutement de cadres dirigeants · chasse de têtes</span>
+        <h3>Un agent IA qui qualifie les piges <i>24h/24</i> et ne remonte que les opportunités <mark>CODIR/COMEX</mark>.</h3>
+        <p class="case__summary">
+          Le cabinet voulait arrêter de scruter LinkedIn à la main et passer plus de temps avec ses clients. Une chaîne Apify → n8n → ChatGPT → Airtable va chercher les annonces toute seule, fait le tri, donne une note à chacune et ne remonte que les meilleures.
+        </p>
+        <div class="case__pills">
+          <span class="pill solid">Apify · LinkedIn Jobs</span>
+          <span class="pill">n8n</span>
+          <span class="pill">OpenAI API</span>
+          <span class="pill">Airtable</span>
+          <span class="pill">RGPD</span>
+        </div>
+      </div>
+      <div class="case__stats">
+        <div class="stat">
+          <div class="v"><i>−70 %</i></div>
+          <div class="lbl">Temps de sourcing</div>
+        </div>
+        <div class="stat">
+          <div class="v"><i>+695 %</i></div>
+          <div class="lbl">ROI · amorti en 6,5 sem.</div>
+        </div>
+      </div>
+      <details class="expand">
+        <summary>Voir le détail de la mission</summary>
+        <div class="body">
+          <div>
+            <h4>Objectifs</h4>
+            <ul>
+              <li>Supprimer la veille manuelle sur les plateformes d'emploi.</li>
+              <li>Filtrer uniquement les postes à responsabilité (CODIR, COMEX).</li>
+              <li>Centraliser les opportunités dans Airtable.</li>
+              <li>Éliminer cabinets concurrents, juniors et intérim.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Architecture</h4>
+            <ul>
+              <li><b>Apify</b> : scraping LinkedIn Jobs sur mots-clés stratégiques.</li>
+              <li><b>n8n</b> : orchestrateur scraping → IA → base.</li>
+              <li><b>OpenAI API</b> : scoring 0-100 et nettoyage.</li>
+              <li><b>Airtable</b> : base centrale « PIGES » avec vues et listes d'exclusion.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Bénéfices chiffrés</h4>
+            <ul>
+              <li>Veille étendue à <b>24h/24</b> sans intervention humaine.</li>
+              <li>Rejet automatique des hors-scope ≈ <b>100 %</b>.</li>
+              <li>10 h/semaine × −70 % × 36 sem. = <b>252 h/an</b> récupérées.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Cas d'usage transférables</h4>
+            <p>Veille commerciale B2B nécessitant un filtrage sémantique complexe : base centrale type CRM/Airtable, critères de ciblage clairs, accès aux APIs n8n / OpenAI / Apify.</p>
+          </div>
+          <div class="full">
+            <blockquote>Ce système agit comme un analyste marché, un assistant commercial et un contrôleur qualité disponible en permanence. L'IA nous permet désormais de renforcer notre positionnement premium en ne traitant que les opportunités les plus stratégiques.</blockquote>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- CASE 05 -->
+    <article class="case reveal" data-sector="conseil" data-type="mission">
+      <div class="case__idx">
+        <span class="num-big">05</span>cas
+      </div>
+      <div>
+        <span class="case__tag">Courtage en énergie · prospection B2B</span>
+        <h3>Un <i>RAG</i> interne et un agent <i>Telegram</i> qui scorent les prospects via Pappers et le BODACC.</h3>
+        <p class="case__summary">
+          Un courtier en énergie voulait gagner du temps pour vérifier ses prospects. Deux outils n8n : un assistant qui répond aux questions sur les documents internes, et un robot Telegram qui va chercher les infos financières des sociétés (santé, dirigeants, alertes du jour).
+        </p>
+        <div class="case__pills">
+          <span class="pill solid">n8n self-hosted</span>
+          <span class="pill">Claude Sonnet</span>
+          <span class="pill">Supabase · pgvector</span>
+          <span class="pill">LangChain</span>
+          <span class="pill">Pappers · BODACC</span>
+          <span class="pill">Telegram Bot</span>
+        </div>
+      </div>
+      <div class="case__stats">
+        <div class="stat">
+          <div class="v"><i>−60 %</i></div>
+          <div class="lbl">Temps d'analyse prospect</div>
+        </div>
+        <div class="stat">
+          <div class="v"><i>405 %</i></div>
+          <div class="lbl">ROI 12 mois</div>
+        </div>
+      </div>
+      <details class="expand">
+        <summary>Voir le détail de la mission</summary>
+        <div class="body">
+          <div>
+            <h4>Objectifs</h4>
+            <ul>
+              <li>Automatiser les processus métiers chronophages.</li>
+              <li>Améliorer la qualification et le ciblage commercial.</li>
+              <li>Renforcer la capacité d'analyse et de veille.</li>
+              <li>Acculturer l'entreprise au no-code et à l'orchestration.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Scénario 1 · Assistant RAG interne</h4>
+            <ul>
+              <li>Ingestion automatique depuis Google Drive.</li>
+              <li>Vectorisation OpenAI Embeddings → Supabase (pgvector).</li>
+              <li>Interrogation conversationnelle via LangChain + Claude Sonnet.</li>
+              <li>Mémoire multi-tours · extension prévue vers noCRM.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Scénario 2 · Veille via Telegram</h4>
+            <ul>
+              <li>Recherche par nom, SIREN ou SIRET.</li>
+              <li>Fiches : dirigeants, finances, procédures.</li>
+              <li>Scoring financier automatisé + veille quotidienne CRON.</li>
+              <li>Alertes Telegram + historisation Google Sheets.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Cas d'usage transférables</h4>
+            <p>Analyse rapide avant prospection, détection automatique des risques clients, consultation assistée des bases internes. Adapté au courtage, à la vente B2B, aux services financiers et au conseil.</p>
+          </div>
+          <div class="full">
+            <blockquote>Les outils déployés nous permettent aujourd'hui d'aller plus vite dans l'analyse des prospects et d'améliorer la fiabilité de nos décisions commerciales. Les équipes perçoivent les automatisations comme un levier d'efficacité et non comme une contrainte.</blockquote>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- CASE 06 -->
+    <article class="case reveal" data-sector="services" data-type="mission">
+      <div class="case__idx">
+        <span class="num-big">06</span>cas
+      </div>
+      <div>
+        <span class="case__tag">Transport sanitaire · taxi · funéraire</span>
+        <h3>Refonte numérique d'une PME multi-activités de <i>48 salariés</i>.</h3>
+        <p class="case__summary">
+          Une PME qui fait à la fois ambulance, taxi et funéraire grandissait vite à coups de rachats, mais sa compta et sa paie tenaient encore sur Excel et du papier. On a fabriqué deux applis internes (compta + paie), reliées par n8n, avec un assistant IA qui répond aux questions du dirigeant.
+        </p>
+        <div class="case__pills">
+          <span class="pill solid">Lovable · React 18</span>
+          <span class="pill">Supabase</span>
+          <span class="pill">n8n</span>
+          <span class="pill">OpenRouter</span>
+          <span class="pill">Claude · GPT · Gemini</span>
+        </div>
+      </div>
+      <div class="case__stats">
+        <div class="stat">
+          <div class="v"><i>8–12 h</i><small>/ mois</small></div>
+          <div class="lbl">Économisées sur le rapprochement bancaire</div>
+        </div>
+        <div class="stat">
+          <div class="v"><i>~700 %</i></div>
+          <div class="lbl">ROI 12 mois</div>
+        </div>
+      </div>
+      <details class="expand">
+        <summary>Voir le détail de la mission</summary>
+        <div class="body">
+          <div>
+            <h4>Objectifs</h4>
+            <ul>
+              <li>Remplacer les processus manuels (Excel, papier) par des outils centralisés.</li>
+              <li>Automatiser les tâches administratives et comptables répétitives.</li>
+              <li>Fiabiliser paie, facturation, trésorerie.</li>
+              <li>Améliorer la gestion des plannings et des ressources humaines.</li>
+              <li>Disposer d'une vision temps réel de l'activité financière.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Applications déployées</h4>
+            <ul>
+              <li><b>App comptable interne</b> — centralisation factures fournisseurs, rapprochement bancaire, OCR, assistant IA financier.</li>
+              <li><b>App RH & paie interne</b> — plannings, calcul auto des heures (jour/nuit/dimanche/astreintes), EVP, export cabinet comptable.</li>
+              <li><b>Orchestration n8n</b> — sync RH ↔ Compta, rapprochement bancaire fin de mois, rapports mensuels au dirigeant.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Bénéfices chiffrés</h4>
+            <ul>
+              <li>Rapprochement bancaire : <b>8 à 12 h / mois</b> récupérées.</li>
+              <li>Taux de rapprochement automatique : <b>~75 %</b>.</li>
+              <li>Suppression de la double saisie administrative.</li>
+              <li>Fiabilisation des données de paie + visibilité financière temps réel.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Cas d'usage transférables</h4>
+            <p>PME multi-sites avec gestion RH et compta internalisée, activités à forte charge de plannings et de ressources, structures issues d'une croissance externe nécessitant une refonte de process.</p>
+          </div>
+          <div class="full">
+            <blockquote>Cet accompagnement nous a permis de créer des outils sur mesure, de gagner du temps sur les tâches administratives et de mieux piloter notre activité. Les solutions proposées étaient parfaitement adaptées à notre fonctionnement.</blockquote>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- CASE 07 -->
+    <article class="case reveal" data-sector="immobilier" data-type="mission">
+      <div class="case__idx">
+        <span class="num-big">07</span>cas
+      </div>
+      <div>
+        <span class="case__tag">Chasse immobilière · clientèle internationale</span>
+        <h3>Une <i>veille immobilière</i> qui tourne toute la nuit, dossiers prêts au matin.</h3>
+        <p class="case__summary">
+          Une agence de chasse immobilière pour clientèle internationale passait une journée par semaine et par agent à chercher des annonces à la main. On a fabriqué un outil qui scanne plein de sites la nuit, lit les annonces avec une IA, garde celles qui collent au client et fabrique le dossier en PDF.
+        </p>
+        <div class="case__pills">
+          <span class="pill solid">Apify</span>
+          <span class="pill">OpenAI · GPT</span>
+          <span class="pill">PDF auto</span>
+          <span class="pill">Logs supervisés</span>
+        </div>
+      </div>
+      <div class="case__stats">
+        <div class="stat">
+          <div class="v"><i>364 h</i><small>/ an / agent</small></div>
+          <div class="lbl">Économisées sur la recherche</div>
+        </div>
+        <div class="stat">
+          <div class="v"><i>0,50 $</i></div>
+          <div class="lbl">Coût optimisé par agence scannée</div>
+        </div>
+      </div>
+      <details class="expand">
+        <summary>Voir le détail de la mission</summary>
+        <div class="body">
+          <div>
+            <h4>Pipeline déployé</h4>
+            <ul>
+              <li><b>Scraping Apify</b> sur les plateformes nationales et réseaux d'agences.</li>
+              <li><b>Analyse GPT</b> pour extraire surface, DPE, caractéristiques, mots-clés.</li>
+              <li><b>Filtrage automatique</b> selon les critères de chaque client.</li>
+              <li><b>Génération PDF</b> standardisée des dossiers commerciaux.</li>
+              <li><b>Logs supervisés</b> avec indicateurs visuels pour détecter les anomalies.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Optimisations clés</h4>
+            <ul>
+              <li>Traitements lancés la nuit → résultats prêts au matin.</li>
+              <li>Standardisation des URLs pour stabiliser les flux.</li>
+              <li>Plafonds budgétaires API pour sécuriser les coûts.</li>
+              <li>Choix des modèles IA selon la tâche (économie significative).</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Bénéfices chiffrés</h4>
+            <ul>
+              <li><b>7 h/semaine/agent</b> économisées sur la recherche, soit <b>364 h/an/agent</b>.</li>
+              <li><b>52 h/an/agent</b> économisées sur la génération de dossiers.</li>
+              <li>Coût de collecte optimisé à <b>~0,50 $ par agence</b>.</li>
+              <li>Plusieurs biens pertinents détectés dès les premières phases, dont un ayant donné lieu à une offre d'achat.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Cas d'usage transférables</h4>
+            <p>Veille automatisée multi-sources (immobilier, marchés publics, opportunités B2B), automatisation documentaire et génération de rapports commerciaux, analyse IA de données textuelles non structurées.</p>
+          </div>
+          <div class="full">
+            <blockquote>Cela nous fait gagner beaucoup de temps, et permet à mon équipe de faire autre chose pendant que l'outil cherche des biens. On a libéré du temps humain.</blockquote>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- CASE 08 -->
+    <article class="case reveal" data-sector="conseil" data-type="mission">
+      <div class="case__idx">
+        <span class="num-big">08</span>cas
+      </div>
+      <div>
+        <span class="case__tag">Génie climatique · maintenance technique · TPE</span>
+        <h3>Une app métier <i>sur-mesure</i> pour digitaliser le terrain et la <mark>paperasse réglementaire</mark>.</h3>
+        <p class="case__summary">
+          Une TPE de 7 salariés en chauffage et climatisation noyée sous le papier entre les techniciens sur le terrain et le secrétariat. On a fabriqué une appli qui regroupe interventions, photos, signatures, documents officiels et emails — pilotée par n8n avec un mini-chatbot IA pour interroger les données.
+        </p>
+        <div class="case__pills">
+          <span class="pill solid">Lovable Cloud · React/TS</span>
+          <span class="pill">Supabase · 13 tables</span>
+          <span class="pill">Edge Functions</span>
+          <span class="pill">n8n auto-hébergé</span>
+          <span class="pill">Telegram bot</span>
+          <span class="pill">CERFA · PDF auto</span>
+        </div>
+      </div>
+      <div class="case__stats">
+        <div class="stat">
+          <div class="v"><i>−30 à 40 %</i></div>
+          <div class="lbl">Temps administratif lié aux interventions</div>
+        </div>
+        <div class="stat">
+          <div class="v"><i>279 %</i></div>
+          <div class="lbl">ROI 12 mois · 7 200 €/an gagnés</div>
+        </div>
+      </div>
+      <details class="expand">
+        <summary>Voir le détail de la mission</summary>
+        <div class="body">
+          <div>
+            <h4>Objectifs</h4>
+            <ul>
+              <li>Digitaliser le suivi des interventions terrain.</li>
+              <li>Sécuriser et automatiser la production documentaire (CERFA, PV, fiches).</li>
+              <li>Supprimer les doubles saisies terrain ↔ secrétariat.</li>
+              <li>Centraliser le traitement des emails entrants.</li>
+              <li>Acculturer l'équipe à l'IA et à l'automatisation, à un niveau adapté à une TPE.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Architecture déployée</h4>
+            <ul>
+              <li><b>Application métier</b> Lovable Cloud (React + TypeScript).</li>
+              <li><b>Supabase / PostgreSQL</b> structuré en 13 tables métier.</li>
+              <li><b>4 espaces de stockage</b> sécurisés (PDF, photos, médias, pièces jointes).</li>
+              <li><b>Edge Functions</b> : analyse d'emails IA, chatbot interne, iCal, contenus sociaux.</li>
+              <li><b>n8n auto-hébergé</b> pour les traitements serveurs et connexions externes.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Bénéfices opérationnels</h4>
+            <ul>
+              <li><b>5 familles</b> de documents générés auto (bon d'intervention, CERFA TVA, CERFA fluide frigorigène, PV, fiche entretien).</li>
+              <li>Traçabilité complète des signatures avec horodatage.</li>
+              <li>Saisie vocale + photos depuis le terrain, archivage normalisé par client/année.</li>
+              <li>Réception des emails en base, préparation IA des réponses, canal Telegram bidirectionnel.</li>
+              <li>Chatbot interne pour interroger les données métier en langage naturel.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Cas d'usage transférables</h4>
+            <p>TPE/PME de services techniques, maintenance, SAV, plomberie, électricité, froid/clim — toute activité combinant interventions terrain, documents réglementaires, coordination d'équipe et relation client, sans budget SI lourd.</p>
+          </div>
+          <div class="full">
+            <blockquote>L'accompagnement nous a permis de passer d'idées parfois floues sur la digitalisation à un outil concret, pensé pour notre façon de travailler. Les informations reviennent mieux du terrain, les documents sont mieux structurés.</blockquote>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- CASE 09 -->
+    <article class="case reveal" data-sector="services" data-type="mission">
+      <div class="case__idx">
+        <span class="num-big">09</span>cas
+      </div>
+      <div>
+        <span class="case__tag">Économie sociale et solidaire · santé au travail</span>
+        <h3>Le traitement d'un fichier client passe de <i>2,5 jours à 2 heures</i>, <mark>×30 sur le client principal</mark>.</h3>
+        <p class="case__summary">
+          Une structure de l'économie sociale qui gère les visites médicales pour de grands clients recevait chaque jour des fichiers Excel tous différents, à reformater à la main. Un système n8n lit les mails entrants, transforme les fichiers et les envoie automatiquement dans le logiciel métier — avec un tableau de bord pour piloter l'activité.
+        </p>
+        <div class="case__pills">
+          <span class="pill solid">n8n</span>
+          <span class="pill">IMAP · SharePoint</span>
+          <span class="pill">Fichiers multi-formats</span>
+          <span class="pill">Tableau de bord BI</span>
+          <span class="pill">Logiciel métier</span>
+        </div>
+      </div>
+      <div class="case__stats">
+        <div class="stat">
+          <div class="v"><i>2,5 j</i><small>→ 2 h</small></div>
+          <div class="lbl">Parsing du plus gros client (×30)</div>
+        </div>
+        <div class="stat">
+          <div class="v"><i>×4 à ×6</i></div>
+          <div class="lbl">ROI 12 mois · amorti en &lt; 3 mois</div>
+        </div>
+      </div>
+      <details class="expand">
+        <summary>Voir le détail de la mission</summary>
+        <div class="body">
+          <div>
+            <h4>Objectifs</h4>
+            <ul>
+              <li>Remplacer le traitement à la main des fichiers clients par un système fiable et répétable.</li>
+              <li>Rendre les fichiers compatibles avec le logiciel métier sans intervention humaine.</li>
+              <li>Construire un tableau de bord pour piloter l'activité d'un coup d'œil.</li>
+              <li>Sécuriser les données et limiter les erreurs de manipulation.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Architecture en 3 scénarios</h4>
+            <ul>
+              <li><b>Écoute des mails</b> : détection automatique des fichiers entrants.</li>
+              <li><b>Lecture &amp; mise au format</b> : transformation des colonnes, règles différentes selon le client.</li>
+              <li><b>Dépôt &amp; mise à disposition</b> : envoi sur SharePoint / OneDrive, import dans le logiciel métier.</li>
+              <li><b>Tableau de bord BI</b> : suivi des indicateurs, filtres par société et par entité.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Bénéfices chiffrés</h4>
+            <ul>
+              <li>Client principal : <b>2,5 jours → 2 h</b> par traitement (≈ ×30).</li>
+              <li>13 autres clients : <b>1 jour → 1 h</b> par traitement.</li>
+              <li>Un pilotage par la donnée créé là où il n'existait pas.</li>
+              <li>Nouvelle fonctionnalité à vendre aux clients (vue par client).</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Cas d'usage transférables</h4>
+            <p>Tout flux administratif reposant sur des fichiers structurés : RH, conformité, reporting, gestion documentaire. Adapté aux structures qui reçoivent régulièrement des données clients à reformater avant import dans un logiciel métier.</p>
+          </div>
+          <div class="full">
+            <blockquote>Grâce à vous non seulement on va tous gagner du temps en interne — gestionnaires, chef de projet — mais on va aussi pouvoir vendre de nouvelles fonctionnalités au client : la vue KPI par client.</blockquote>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- CASE 10 -->
+    <article class="case reveal" data-sector="services" data-type="mission">
+      <div class="case__idx">
+        <span class="num-big">10</span>cas
+      </div>
+      <div>
+        <span class="case__tag">Audioprothèse · réseau multi-centres</span>
+        <h3>Trois centres coordonnés sur <i>Slack</i>, publications réseaux sociaux préparées <mark>six mois à l'avance</mark>.</h3>
+        <p class="case__summary">
+          Un réseau de trois centres d'audioprothèse se coordonnait par WhatsApp, SMS et mails — bref, l'info se perdait. On a mis en place Slack avec des canaux par centre et par thème, et un workflow n8n + ChatGPT pour préparer, valider et programmer les publications Facebook et Instagram à six mois.
+        </p>
+        <div class="case__pills">
+          <span class="pill solid">Slack</span>
+          <span class="pill">n8n</span>
+          <span class="pill">ChatGPT · OpenAI</span>
+          <span class="pill">Facebook · Instagram</span>
+          <span class="pill">Validation humaine</span>
+        </div>
+      </div>
+      <div class="case__stats">
+        <div class="stat">
+          <div class="v"><i>−90 %</i><small>par post</small></div>
+          <div class="lbl">20 min → 2 min de production</div>
+        </div>
+        <div class="stat">
+          <div class="v"><i>990 h</i><small>/ an</small></div>
+          <div class="lbl">Gain organisationnel · équipe de 6</div>
+        </div>
+      </div>
+      <details class="expand">
+        <summary>Voir le détail de la mission</summary>
+        <div class="body">
+          <div>
+            <h4>Objectifs</h4>
+            <ul>
+              <li>Centraliser la communication interne multi-sites sur un outil pro unique.</li>
+              <li>Structurer les échanges par thématiques entre les trois centres.</li>
+              <li>Professionnaliser la communication digitale externe.</li>
+              <li>Automatiser la programmation Facebook / Instagram sans risquer le bannissement des comptes.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Workflows déployés</h4>
+            <ul>
+              <li><b>Slack</b> : espace de travail dédié, canaux par centre et par sujet, règles de nommage, statuts, notifications.</li>
+              <li><b>Préparation IA</b> : canal Slack dédié pour recueillir les idées, génération assistée par ChatGPT.</li>
+              <li><b>Validation &amp; programmation</b> : revue humaine systématique, puis programmation longue (jusqu'à 6 mois) sur Facebook / Instagram.</li>
+              <li><b>Page pro Facebook</b> créée pour permettre l'automatisation (les profils personnels la bloquent).</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Bénéfices chiffrés</h4>
+            <ul>
+              <li>Production d'un post : <b>20 min → 2 min</b> (−90 %, 18 min gagnées).</li>
+              <li>Slack : <b>0,5 h / jour / personne</b> récupérée sur la coordination.</li>
+              <li>Équipe de 6 × 330 jours : <b>990 h/an</b> de gain organisationnel.</li>
+              <li>Baisse de charge mentale : visibilité 6 mois sur le pipeline de publications.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Cas d'usage transférables</h4>
+            <p>TPE / PME multi-sites devant fluidifier leur communication interne et professionnaliser leur présence sur les réseaux sociaux sans alourdir la charge des équipes. Particulièrement adapté aux réseaux de centres de santé, points de vente ou agences.</p>
+          </div>
+          <div class="full">
+            <blockquote>Moi je préfère valider tous les six mois, que tout soit prêt dans le tableau.</blockquote>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    </section><!-- /.legacy-cases-section -->
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <span class="num reveal" style="color: var(--accent)">§ Premier pas</span>
+    <h2 class="reveal" style="margin-top: 20px;">
+      Discutons<br/><span class="acid">trente</span> <i>minutes</i>.
+    </h2>
+    <p class="cta__sub reveal">Diagnostic sans engagement. On regarde votre activité, on identifie 1 à 3 chantiers à fort impact, et vous repartez avec une feuille de route — qu'on travaille ensemble ou non.</p>
+    <div class="cta__btns reveal">
+      <a class="btn btn--big btn--diag" href="https://cal.com/nicolas-darcos-uldxct/30min" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>
+        Diagnostic 30 minutes
+        <svg class="arrow" width="18" height="18" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+      <a class="btn btn--big btn--audit" href="micro-audit.html">
+        Micro-audit 3 minutes
+        <svg class="arrow" width="18" height="18" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="mailto:bonjour@altos.fr">Nous écrire</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="note">
+      <b>Note d'anonymisation —</b> Les vingt cas présentés ont été documentés par Altos en 2025/26. Dix missions ont été livrées (déploiement et bilans réels) ; dix audits flash IA ont été conduits en cinq jours sur le terrain, avec feuilles de route et gains <b>projetés</b>. Raisons sociales, noms, numéros de dossier et localisations précises ont été retirés ou généralisés (RGPD). Les volumes (équipes, périmètres, outils) et les méthodologies sont conformes aux rapports réels.
+    </div>
+    <div class="right">
+      <div>Altos · 2025/26</div>
+      <div style="margin-top:6px"><a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a></div>
+      <div style="margin-top:6px"><a href="index.html">← Retour à l'accueil</a></div>
+      <div style="margin-top:6px"><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in'), i * 40);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // ─── FILTERS ───────────────────────────────────────────
+  (function setupFilters () {
+    const state = { sector: 'all', type: 'all' };
+    const sectorBtns = document.querySelectorAll('.filter-btn');
+    const typeBtns = document.querySelectorAll('.type-btn');
+    const allCards = document.querySelectorAll('.case[data-sector], .case-mini[data-sector]');
+    const auditSection = document.querySelector('.audits-section');
+    const legacySection = document.querySelector('.legacy-cases-section');
+
+    function applyFilters () {
+      let auditVisible = 0, missionVisible = 0;
+      allCards.forEach(card => {
+        const matchSector = state.sector === 'all' || card.dataset.sector === state.sector;
+        const matchType = state.type === 'all' || card.dataset.type === state.type;
+        const show = matchSector && matchType;
+        card.classList.toggle('is-hidden', !show);
+        if (show) {
+          if (card.dataset.type === 'audit') auditVisible++;
+          else if (card.dataset.type === 'mission') missionVisible++;
+        }
+      });
+      // Hide whole section when empty
+      if (auditSection) auditSection.classList.toggle('is-hidden', auditVisible === 0);
+      if (legacySection) legacySection.classList.toggle('is-hidden', missionVisible === 0);
+    }
+
+    sectorBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        sectorBtns.forEach(b => { b.classList.remove('is-active'); b.setAttribute('aria-selected', 'false'); });
+        btn.classList.add('is-active'); btn.setAttribute('aria-selected', 'true');
+        state.sector = btn.dataset.filter;
+        applyFilters();
+      });
+    });
+    typeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        typeBtns.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        state.type = btn.dataset.type;
+        applyFilters();
+      });
+    });
+  })();
+</script>
+<!-- Cal.com embed (popup mode) -->
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "diag30", {origin:"https://cal.com"});
+Cal.ns.diag30("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
+</body>
+</html>

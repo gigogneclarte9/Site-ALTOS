@@ -1,0 +1,827 @@
+3746978-76314600906541-66802000-397620-76464000
+
+-8022230077800
+
+Synthèse Audit Flash IA 
+
+NOM DE L’ENTREPRISE : OVIA SERVCES
+
+NUMERO DE DOSSIER : 26-130901
+
+NOM DU CONSEILLER OPCO : Charlène PETIT
+
+Durée de l’accompagnement en jours :
+
+Dates d’intervention
+
+Signatures
+
+Dates de RDV
+
+Entreprise
+
+Le Cercle des Entrepreneurs
+
+Réunion de cadrage : 
+
+25 mars 2026
+
+Diagnostic des pratiques : 
+
+09 avril 2026
+
+Préconisations / Plan d’action :
+
+05 mai 2026
+
+												Sommaire
+
+		 TOC \o "1-3" \h \z \u I.	Résumé	 PAGEREF _Toc185617509 \h 3
+
+		II.	Contexte de l’entreprise	 PAGEREF _Toc185617510 \h 4
+
+		i.	Historique et activité	 PAGEREF _Toc185617511 \h 4
+
+		ii.	Structure organisationnelle	 PAGEREF _Toc185617512 \h 5
+
+		III.	Diagnostic des pratiques IA	 PAGEREF _Toc185617513 \h 9
+
+		iii.	Processus Métier	 PAGEREF _Toc185617514 \h 9
+
+		
+
+		iv.	Compétences et ressources	 PAGEREF _Toc185617521 \h 9
+
+		v.	Données et sécurité	 PAGEREF _Toc185617522 \h 10
+
+		vi.	Organisation	 PAGEREF _Toc185617523 \h Erreur ! Signet non défini.
+
+		vii.	Cadre réglementaire	 PAGEREF _Toc185617524 \h 11
+
+		IV.	Cas d’usage IA et accompagnement préconisés	 PAGEREF _Toc185617525 \h 13
+
+		V.	Synthèse et plan d’action	 PAGEREF _Toc185617526 \h 25
+
+	Synthèse graphique	 PAGEREF _Toc185617527 \h 25
+
+		VI.	SWOT	 PAGEREF _Toc185617528 \h Erreur ! Signet non défini.
+
+		VII.	Plan d’action détaillé	 PAGEREF _Toc185617529 \h 27
+
+	Résumé
+
+L’audit mené auprès d’OVIA SERVICES montre une entreprise déjà structurée autour d’outils numériques utiles, avec une base de données centralisée, des dossiers clients organisés et une première automatisation documentaire en place. Ce socle constitue un point d’appui favorable. En revanche, l’organisation reste encore très dépendante de traitements manuels, de ressaisies et d’une forte vigilance humaine sur des tâches sensibles comme les échéances contractuelles, le suivi des heures, les déclarations sociales, le recrutement et la traçabilité des échanges.
+
+L’enjeu principal est donc de fiabiliser les processus existants, de mieux centraliser l’information et de sécuriser les opérations à risque, plutôt que de multiplier de nouveaux outils. Dans cette logique, plusieurs cas d’usage prioritaires ont été identifiés :
+
+Automatiser le suivi des échéances contractuelles et des périodes d’essai
+
+Centraliser le pilotage des tâches et des priorités par collaborateur
+
+Fiabiliser la collecte et le rapprochement des heures, frais et absences
+
+Utiliser l’IA pour assister le tri des candidatures
+
+Préparer plus efficacement le renouvellement d’agrément 2027
+
+Améliorer la traçabilité des échanges sensibles issus de WhatsApp
+
+L’accompagnement de l’entreprise serait réalisé par notre consultant. Il comprend un temps de sensibilisation aux enjeux de l’IA, la validation des priorités du client, la conception de solutions adaptées, des ateliers de 
+
+co-création
+
+ avec les salariés référents, puis un accompagnement opérationnel à la mise en œuvre des scénarios d’automatisation via 
+
+Make
+
+ ou n8n.
+
+Dans l’ensemble, OVIA SERVICES présente un potentiel concret de gains en fiabilité, en temps administratif et en qualité de pilotage, à condition d’engager une démarche progressive, pragmatique et centrée sur ses besoins métier.
+
+	Contexte de l’entreprise
+
+	Historique et activité
+
+OVIA SERVICES est une SASU créée en 2022 par Jérôme PELISSIER. L’entreprise exerce une activité de service mandataire à destination de personnes en situation de handicap. À ce titre, elle intervient dans un cadre réglementé, avec un agrément préfectoral renouvelable tous les cinq ans, qui conditionne l’exercice de son activité et impose un haut niveau de rigueur dans le suivi administratif, social et organisationnel.
+
+L’entreprise accompagne ses clients dans la gestion d’un ensemble de démarches essentielles liées à l’emploi d’assistants de vie. Son périmètre d’intervention couvre notamment la préparation et le suivi des contrats de travail, les déclarations sociales (URSSAF, médecine du travail), la gestion des documents de fin de contrat, le suivi des qualifications et des compétences des intervenants, ainsi que l’accompagnement des parcours qualifiants.
+
+Au-delà de cette dimension administrative, OVIA SERVICES se positionne sur une mission plus large d’accompagnement global à la vie sociale des personnes dépendantes. Son rôle ne se limite donc pas à une fonction de gestionnaire : l’entreprise assure également une fonction de conseil, d’information et de sécurisation des parcours, au service des bénéficiaires et de leur environnement.
+
+Le siège social est implanté à Toulouse. L’activité se déploie principalement sur le département de la Haute-Garonne (31) ainsi que sur les départements limitrophes, ce qui implique une organisation capable de traiter un volume important d’informations individuelles, de documents contractuels et d’échanges opérationnels.
+
+	Structure organisationnelle
+
+Les Métiers :
+
+Responsable de secteur : 1
+
+Assistant responsable de secteur : 2
+
+Dirigeant : 1
+
+Adjointe direction : 1
+
+OVIA SERVICES fonctionne avec une équipe réduite de 5 personnes. Cette organisation traduit un modèle de fonctionnement resserré, dans lequel les missions administratives, sociales, contractuelles, de coordination et de suivi quotidien sont fortement imbriquées. La structure repose donc sur une forte polyvalence des collaborateurs et sur une circulation fluide de l’information entre les différents niveaux de responsabilité.
+
+L’activité s’appuie sur un environnement numérique principalement constitué de la suite Google (
+
+Tasks
+
+, Docs, Sheets, Gmail, 
+
+Meet
+
+, Slides, 
+
+Keep
+
+, Agenda), ainsi que sur Trello, Excel, WhatsApp, 
+
+Universign
+
+ et 
+
+Autocrat
+
+. Ces outils permettent de couvrir une grande partie des besoins quotidiens de l’entreprise, mais leur usage s’est construit de manière progressive, en réponse aux besoins opérationnels, ce qui génère aujourd’hui une organisation fonctionnelle mais fragmentée.
+
+La société utilise une base centralisée Google Sheets pour conserver les données relatives aux clients et aux intervenants. Cette base alimente l’outil 
+
+Autocrat
+
+, qui permet de produire automatiquement un nombre important de documents : contrats CDI, CDD, CDD à terme imprécis, avenants de période d’essai, renouvellements de CDD, documents de fin de contrat, contrat de mandat, devis et courriers associés. Chaque client dispose également d’un dossier dédié dans Google Drive, dans lequel sont archivés les éléments le concernant ainsi que ceux relatifs à ses intervenants. Cette organisation montre qu’un premier niveau de structuration documentaire est déjà en place.
+
+Cependant, derrière cette base commune, plusieurs processus restent très dépendants de traitements manuels, de contrôles humains et de la vigilance quotidienne des équipes.
+
+Organisation des processus et points de douleur
+
+La gestion des contrats de travail constitue un premier point sensible. Malgré l’existence d’outils de fusion documentaire, certains actes restent suivis manuellement, notamment la gestion des périodes d’essai. Le service doit transmettre dans les délais légaux les courriers de fin de période d’essai en s’appuyant sur un fichier Excel recensant les informations contractuelles. Ce fonctionnement crée un risque d’oubli, de retard et, par conséquent, de contentieux, sur un sujet pourtant juridiquement sensible.
+
+La gestion des dates, des échéances et des rappels est également un enjeu central pour l’entreprise. Un fichier Google Sheets regroupe les tâches à réaliser par thématique : planning, déclarations, PCH, facturation, avenants, rapprochements bancaires, suivi des réunions d’équipe. En revanche, l’organisation actuelle ne permet pas d’obtenir une vue consolidée par collaborateur pour savoir clairement qui doit faire quoi, dans quel délai, et avec quel niveau de priorité. Chacun reconstitue sa propre liste de tâches dans Google 
+
+Tasks
+
+, sans réel pilotage consolidé ni supervision opérationnelle centralisée. Ce mode de fonctionnement limite la visibilité managériale, complique l’arbitrage des priorités et augmente le risque d’oublis sur les actions à échéance légale ou contractuelle.
+
+La gestion des plannings, des heures et des frais représente une autre zone de complexité. La société utilise, selon les cas, des plannings sur Google Sheets ou sur Excel, dans lesquels figurent le prévisionnel d’heures et les jours d’intervention. Les intervenants les renseignent depuis leur téléphone portable pour déclarer leurs heures, leurs frais kilométriques et leurs absences. Pour les clients suivis sur Excel, l’émargement passe en complément par Trello, où chaque intervenant doit saisir ses heures réalisées, ses heures supplémentaires et ses frais. Cette coexistence de plusieurs supports de saisie crée une organisation hétérogène, avec un risque de dispersion de l’information, de double saisie et de difficulté de contrôle.
+
+Cette difficulté se prolonge dans la phase de comptabilisation finale des heures. Avant l’établissement des déclarations du client sur le site URSSAF CESU et la préparation des fiches de paie, l’équipe doit rapprocher manuellement les données issues du planning prévisionnel avec les éléments saisis par les intervenants. Une fois ce contrôle effectué, les informations doivent encore être ressaisies une à une sur le site URSSAF CESU. Ce processus est chronophage, peu fluide, et fortement exposé au risque d’erreur matérielle, alors même qu’il porte sur des données sociales sensibles.
+
+La communication interne et opérationnelle repose en partie sur plusieurs comptes WhatsApp dédiés : par équipe client, par client, et pour l’administratif. Si cette organisation favorise la réactivité, elle ne garantit pas une traçabilité structurée des informations échangées, notamment lorsqu’il s’agit d’éléments relevant du devoir de vigilance, du suivi de situations sensibles ou de consignes à conserver dans le temps. L’information utile peut donc rester dispersée dans des conversations non centralisées, difficilement exploitables dans une logique de contrôle, d’historisation ou de transmission.
+
+Le processus de recrutement, réalisé pour le compte des employeurs accompagnés, 
+
+repose lui
+
+ aussi sur un traitement très manuel. L’équipe doit trier les CV reçus, analyser les compétences, les soft 
+
+skills
+
+, les diplômes ou l’expérience, la disponibilité, le lieu de vie, le moyen de locomotion, ainsi que le type de prestation recherché. Ces éléments sont ensuite reportés dans un tableau Google Sheets. Le recrutement suit une procédure en trois étapes, jusqu’à la validation finale par l’employeur. Ce mode de traitement permet un examen approfondi des candidatures, mais il mobilise fortement l’équipe sur des tâches de lecture, de comparaison et de saisie, avec peu d’assistance à la priorisation ou à la qualification des profils.
+
+Enfin, la société doit anticiper le renouvellement de son agrément en 2027. À ce jour, ce travail de préparation reste entièrement manuel. Il suppose d’effectuer une analyse comparative entre le cahier des charges applicable, ses évolutions depuis le dernier agrément et les procédures internes actuellement en place. Ce chantier représente un enjeu organisationnel important, car il nécessite à la fois une veille réglementaire, une mise en cohérence documentaire et une évolution des pratiques internes, sans outil spécifique d’aide à l’analyse ou au suivi des écarts.
+
+Lecture d’ensemble de l’organisation
+
+La structure organisationnelle d’OVIA SERVICES repose donc sur une base solide de proximité, de réactivité et de connaissance fine des situations accompagnées. Elle dispose déjà d’outils numériques utiles et d’une première logique de centralisation documentaire. En revanche, son fonctionnement quotidien reste marqué par plusieurs points de friction :
+
+une forte dépendance aux traitements manuels ;
+
+une multiplication des supports de travail ;
+
+une dispersion partielle de l’information ;
+
+une faible consolidation du pilotage individuel et collectif des tâches ;
+
+des risques d’oubli sur les échéances sensibles ;
+
+une charge administrative importante sur des opérations répétitives ;
+
+une traçabilité insuffisamment structurée sur certains échanges opérationnels.
+
+Ces éléments n’empêchent pas l’activité de fonctionner, mais ils révèlent une organisation qui atteint déjà certaines limites en matière de sécurisation, de fluidité et de capacité de pilotage. Ils constituent, à ce titre, des points d’attention majeurs pour l’analyse du diagnostic et pour l’identification de leviers d’amélioration par l’IA et l’automatisation.
+
+	Diagnostic des pratiques IA
+
+												
+
+	Processus Métier
+
+Constat clé
+
+OVIA SERVICES dispose déjà d’un premier socle numérique utile, avec une base de données centralisée sous Google Sheets, un système de fusion documentaire via 
+
+Autocrat
+
+, un classement par dossier dans Drive et plusieurs supports de suivi opérationnel. Toutefois, les processus clés demeurent encore largement manuels, en particulier pour la gestion des échéances contractuelles, le suivi des périodes d’essai, le rapprochement des heures réalisées, la préparation des déclarations CESU, le suivi des tâches et le traitement des candidatures. Cette organisation permet de faire fonctionner l’activité, mais elle génère des ressaisies, des ruptures de flux, une charge administrative importante et un risque accru d’erreur ou d’oubli sur des opérations répétitives à fort enjeu.
+
+Proposition d’amélioration
+
+L’enjeu principal consiste à structurer les processus métier autour de workflows plus homogènes, plus fluides et davantage automatisés. Il conviendrait de prioriser les traitements à forte fréquence et à fort risque, afin de réduire les doubles saisies, fiabiliser les échéances sensibles, automatiser certaines productions documentaires et introduire des usages ciblés de l’IA sur les tâches de tri, de contrôle, de comparaison et d’assistance à la rédaction.
+
+	Compétences et ressources
+
+Constat clé
+
+L’équipe maîtrise déjà un ensemble d’outils numériques du quotidien et montre une capacité d’adaptation opérationnelle réelle. La structure bénéficie également d’une proximité fonctionnelle entre les membres de l’équipe, qui facilite les échanges et les ajustements rapides. En revanche, la petite taille de l’organisation, la forte polyvalence des postes et la dépendance à la vigilance individuelle exposent l’entreprise à une surcharge cognitive importante. À ce stade, l’usage de l’IA n’est ni structuré ni encadré, et il n’existe pas encore de cadre clair sur les pratiques autorisées, les modalités de contrôle ou les compétences à développer en priorité.
+
+Proposition d’amélioration
+
+Il serait pertinent d’engager une montée en compétence courte, concrète et directement reliée aux situations de travail, afin de sécuriser l’appropriation progressive de l’IA et des automatisations. Cette démarche pourrait s’appuyer sur des référents internes, des cas d’usage simples à fort impact et un cadre de bonnes pratiques permettant de clarifier les usages utiles, les limites à respecter et les points de contrôle humain indispensables.
+
+	Données et sécurité
+
+Constat clé
+
+L’entreprise dispose déjà d’une base centralisée et d’une logique de classement documentaire qui constituent un point d’appui important. Néanmoins, les données sont aujourd’hui réparties entre plusieurs outils et plusieurs modes de saisie : Google Sheets, Excel, Trello, Drive et WhatsApp. Cette dispersion affaiblit la qualité globale de la donnée, la maîtrise des versions, la traçabilité des échanges et la sécurisation des informations sensibles. L’usage de WhatsApp, en particulier, apporte de la réactivité, mais ne permet pas une conservation structurée des éléments importants liés au suivi administratif, au devoir de vigilance ou à la preuve en cas de besoin.
+
+Proposition d’amélioration
+
+La priorité consiste à clarifier les sources de référence par type de donnée, harmoniser les règles de saisie, mieux encadrer les usages des outils de communication et renforcer la gouvernance documentaire. Une organisation plus rigoureuse des accès, des circuits de validation, des règles d’archivage et de la remontée des informations sensibles permettrait de mieux sécuriser l’activité et de préparer des automatisations fiables.
+
+	Organisation
+
+Constat clé
+
+Sur le plan organisationnel, OVIA SERVICES a déjà mis en place plusieurs repères utiles : répartition des rôles, fichiers de suivi par thématique, outils collaboratifs et bases de travail partagées. Toutefois, l’organisation actuelle reste encore très dépendante de la vigilance individuelle et d’une coordination diffuse entre outils. Le suivi des tâches n’est pas consolidé par personne, les responsables ne disposent pas d’une vision pleinement centralisée de la charge et des priorités, et la coexistence de plusieurs supports pour les plannings, les heures, les frais et les émargements complexifie le pilotage au quotidien.
+
+Proposition d’amélioration
+
+L’amélioration attendue consiste à passer d’une logique de fonctionnement reposant principalement sur l’effort individuel à une logique de pilotage partagé et visible. La mise en place d’une vue consolidée par collaborateur, par échéance et par type d’action, ainsi qu’une standardisation des circuits de collecte et de validation, permettraient de fluidifier l’organisation, de mieux répartir la charge et de limiter les oublis sur les tâches critiques.
+
+	Cadre réglementaire
+
+Constat clé
+
+L’entreprise exerce dans un environnement fortement contraint, avec un agrément préfectoral à renouveler, des obligations nombreuses en matière de contrats, de déclarations sociales, de suivi des intervenants et de devoir de vigilance. Or, plusieurs traitements réglementaires sensibles reposent encore sur des suivis manuels, notamment pour les périodes d’essai et la préparation future du renouvellement d’agrément en 2027. Cette situation crée une fragilité, car la conformité dépend encore largement de la rigueur individuelle, sans dispositif pleinement structuré de veille, de comparaison réglementaire, de suivi des écarts ou de traçabilité renforcée.
+
+Proposition d’amélioration
+
+Il conviendrait de renforcer la structuration du pilotage réglementaire en mettant en place un système de suivi des échéances, de comparaison des exigences, de documentation des pratiques et de preuve de conformité. Une telle approche permettrait à la fois de sécuriser les obligations courantes, d’anticiper la préparation du prochain agrément et de réduire le risque juridique lié aux oublis, aux retards ou aux écarts de procédure.
+
+	Cas d’usage IA et accompagnement 
+
+	préconisés
+
+1 Automatisation du suivi des échéances contractuelles et des périodes d’essai
+
+Description du cas d’usage
+
+Ce cas d’usage consiste à mettre en place un dispositif automatisé de surveillance des échéances contractuelles, avec génération d’alertes, production assistée des documents nécessaires et organisation d’un circuit de validation avant envoi. L’objectif prioritaire est de sécuriser la gestion des périodes d’essai, des avenants, des renouvellements et des fins de contrat.
+
+Contexte ou problème identifié
+
+Aujourd’hui, l’entreprise suit manuellement les périodes d’essai et les échéances contractuelles à partir de fichiers Excel ou Sheets. Malgré l’existence d’un outil de fusion documentaire, l’équipe doit rester en vigilance constante pour repérer les dates sensibles, déclencher les actions nécessaires et transmettre les documents dans les délais légaux. Ce mode de fonctionnement est chronophage et expose l’entreprise à un risque d’oubli ou de retard, avec des conséquences juridiques potentielles.
+
+Outils IA et automatisation mobilisables
+
+Google Sheets comme base de suivi de référence
+
+Make
+
+ ou n8n pour automatiser les rappels, contrôles de dates et déclenchements
+
+Autocrat
+
+ pour la génération automatique de certains documents
+
+Google Gmail pour les notifications internes
+
+Google 
+
+Calendar
+
+ / 
+
+Tasks
+
+ pour la création automatique de rappels
+
+ChatGPT
+
+ Team / Enterprise ou un assistant IA sécurisé équivalent pour aider à vérifier la cohérence des courriers ou proposer une reformulation conforme du contenu avant validation humaine
+
+Accompagnement préconisé
+
+L’accompagnement consisterait d’abord à cartographier précisément les types d’échéances à surveiller : périodes d’essai, contrats à terme, renouvellements, fins de contrat, relances administratives obligatoires. Un travail de fiabilisation de la base de données serait ensuite nécessaire pour s’assurer que les champs utiles sont bien renseignés, homogènes et exploitables automatiquement.
+
+Dans un second temps, il conviendrait de paramétrer un scénario d’automatisation capable de détecter les échéances à venir selon différents seuils d’alerte, par exemple à J-15, J-7 et J-2. Ce scénario pourrait alimenter une vue centralisée des actions à traiter, envoyer des notifications ciblées aux personnes concernées, puis déclencher la préproduction du document adapté.
+
+L’accompagnement devra également intégrer la définition d’un circuit de validation humaine, afin que l’automatisation ne remplace pas la décision juridique ou managériale, mais vienne la sécuriser. Enfin, un travail de formation de l’équipe serait nécessaire pour apprendre à exploiter le tableau de suivi, traiter les alertes et contrôler les documents générés.
+
+Impact potentiel
+
+L’impact attendu est élevé sur la sécurisation juridique, la réduction du risque d’oubli, la diminution du temps de contrôle manuel et la fiabilisation de la gestion contractuelle. Pour les métiers, cela permettrait de soulager la direction, l’adjointe de direction et les responsables de secteur sur des tâches de surveillance administrative à faible valeur ajoutée. En matière de compétences, l’équipe devrait monter en maîtrise sur le contrôle des workflows, la lecture des alertes et la validation finale des documents. Le principal risque réside dans une donnée mal renseignée ou dans un paramétrage incomplet des échéances, ce qui impose une phase initiale de fiabilisation particulièrement rigoureuse.
+
+2 Centralisation et automatisation du suivi des tâches, échéances et priorités par collaborateur
+
+Description du cas d’usage
+
+Ce cas d’usage vise à créer un tableau de pilotage opérationnel centralisé, permettant à chaque collaborateur de visualiser clairement les tâches à traiter, les échéances, les priorités et l’état d’avancement des dossiers, tout en donnant aux responsables une vue consolidée de l’activité.
+
+Contexte ou problème identifié
+
+L’entreprise dispose déjà d’un fichier partagé recensant les tâches par thématique, mais cette organisation ne permet pas une lecture simple par personne. Chaque collaborateur reconstitue ensuite sa propre liste dans Google 
+
+Tasks
+
+, sans supervision consolidée. Cette situation réduit la visibilité managériale, complique la répartition de charge et augmente le risque d’oubli sur des tâches sensibles, notamment lorsqu’elles comportent un délai légal ou contractuel.
+
+Outils IA et automatisation mobilisables
+
+Google Sheets ou 
+
+Airtable
+
+ si l’entreprise souhaite à terme une structure plus visuelle
+
+Make
+
+ ou n8n pour affecter automatiquement les tâches, envoyer des rappels et mettre à jour les statuts
+
+Google 
+
+Tasks
+
+ / Google 
+
+Calendar
+
+Trello, si l’entreprise souhaite conserver un mode de visualisation en colonnes
+
+ChatGPT
+
+ pour assister à la reformulation des tâches, à la priorisation ou à la préparation de comptes rendus d’avancement à partir des données disponibles
+
+Accompagnement préconisé
+
+Le travail d’accompagnement commencerait par une revue des tâches actuellement suivies : planning, déclarations, PCH, facturation, avenants, rapprochements bancaires, réunions d’équipe. Il conviendrait ensuite de définir une nomenclature commune avec des statuts simples, des niveaux de priorité, des dates d’échéance et des responsables clairement identifiés.
+
+L’étape suivante consisterait à construire une base unique permettant d’alimenter automatiquement plusieurs vues : vue par collaborateur, vue par client, vue par type d’action, vue par urgence. Des automatisations simples pourraient ensuite être créées pour générer des rappels, signaler les retards, remonter les priorités du jour et produire un état d’avancement hebdomadaire.
+
+L’accompagnement devrait inclure une phase d’appropriation collective afin de faire évoluer les habitudes de travail. L’objectif ne serait pas seulement de déployer un outil, mais de faire adopter une nouvelle discipline de pilotage, plus lisible et plus collective.
+
+Impact potentiel
+
+Le bénéfice principal serait une amélioration nette de la visibilité opérationnelle, de la coordination interne et de la capacité de supervision. Ce cas d’usage permettrait de mieux répartir la charge, de diminuer la dépendance à la mémoire individuelle et de mieux anticiper les retards. Pour les métiers, il soutiendrait directement le travail du dirigeant, de l’adjointe de direction et des responsables de secteur. Sur le plan des compétences, l’équipe devrait apprendre à travailler avec une logique de statuts, de priorités et de mise à jour régulière. Le risque principal serait un manque d’adhésion si l’outil est perçu comme une contrainte supplémentaire ; il conviendra donc de privilégier un dispositif simple, utile et proche des usages réels.
+
+3 Automatisation du rapprochement des heures, des frais et de la préparation des déclarations CESU
+
+Description du cas d’usage
+
+Ce cas d’usage a pour objectif de fluidifier la chaîne allant du planning prévisionnel à la collecte des heures réelles, puis au rapprochement, à la préparation des éléments de paie et à la préparation des déclarations CESU. Il s’agit ici de réduire les ressaisies et de mieux fiabiliser les données sociales.
+
+Contexte ou problème identifié
+
+Les plannings sont aujourd’hui gérés sur Google Sheets ou Excel selon les clients. Les intervenants saisissent leurs heures, leurs absences et leurs frais depuis leur téléphone. Pour certains clients, les émargements passent aussi par Trello. L’équipe doit ensuite rapprocher manuellement les données issues du prévisionnel avec celles saisies par les intervenants, avant de ressaisir les éléments un à un sur le site URSSAF CESU. Ce processus est long, hétérogène et exposé aux erreurs.
+
+Outils IA et automatisation mobilisables
+
+Google Sheets comme source centralisée
+
+Make
+
+ ou n8n pour consolider les données issues de plusieurs supports
+
+Google Forms ou un formulaire mobile simple pour uniformiser la saisie des heures et frais
+
+Trello si certains usages doivent être conservés temporairement
+
+ChatGPT
+
+ pour assister à la détection d’anomalies simples ou à la génération d’un résumé des écarts à contrôler
+
+éventuellement Looker Studio pour disposer d’une vue de contrôle sur les heures, écarts et éléments à régulariser
+
+Accompagnement préconisé
+
+L’accompagnement devrait d’abord viser une standardisation des règles de collecte : quelles données doivent être saisies, à quel moment, dans quel format, et avec quelle source de référence. L’étape suivante consisterait à réduire les doubles canaux de saisie afin de tendre vers un mode de collecte plus homogène, plus simple à exploiter.
+
+Un workflow pourrait ensuite être conçu pour agréger automatiquement les données, comparer le prévisionnel au réalisé, signaler les écarts, produire une synthèse par client et préparer les éléments nécessaires au traitement administratif. L’automatisation ne remplacera pas totalement le contrôle humain, mais elle pourrait faire gagner un temps important sur les étapes de compilation, de comparaison et de pré-vérification.
+
+Une phase de tests serait indispensable pour vérifier la robustesse des règles de calcul, le traitement des absences, des heures supplémentaires et des frais kilométriques. L’accompagnement devra également porter sur la formalisation des points de contrôle à maintenir avant validation finale.
+
+Impact potentiel
+
+Ce cas d’usage aurait un effet direct sur la réduction du temps administratif, la fiabilité des données sociales, la limitation des erreurs de ressaisie et la meilleure traçabilité des heures et frais déclarés. Il améliorerait aussi la fluidité entre les équipes terrain et l’administration. Les métiers les plus concernés sont les responsables de secteur, les assistants et la direction sur les tâches de contrôle et de consolidation. Les compétences à développer porteraient sur la qualité de saisie, l’usage des formulaires ou interfaces de remontée, et le contrôle des écarts. Le principal point de vigilance concerne la qualité initiale des données et la nécessité d’un paramétrage très précis pour éviter de fiabiliser un processus encore hétérogène.
+
+4 Assistance IA au tri de candidatures et à la préqualification des profils
+
+Description du cas d’usage
+
+Ce cas d’usage consiste à utiliser l’IA comme outil d’assistance au recrutement, afin d’accélérer le tri des CV, de structurer la lecture des candidatures et de faciliter la préqualification des profils selon les critères réellement utiles au métier.
+
+Contexte ou problème identifié
+
+Dans le cadre des recrutements réalisés pour le compte des employeurs, l’équipe doit analyser manuellement les CV, apprécier les compétences, les soft 
+
+skills
+
+, les diplômes ou l’expérience, la disponibilité, la localisation, le moyen de locomotion et le type de mission recherché. Ces informations sont ensuite reprises dans un tableau Google Sheets avant une procédure en trois étapes. Ce travail mobilise fortement l’équipe et repose sur une lecture humaine répétitive.
+
+Outils IA et automatisation mobilisables
+
+Google Drive pour centraliser les CV reçus
+
+Google Sheets pour la grille de lecture
+
+Make
+
+ ou n8n pour automatiser l’arrivée des candidatures dans le tableau de suivi
+
+ChatGPT
+
+ ou un assistant IA sécurisé pour extraire les informations utiles d’un CV, proposer une synthèse structurée et préremplir une grille d’analyse
+
+éventuellement un formulaire standardisé pour recueillir certaines informations directement auprès des candidats
+
+Accompagnement préconisé
+
+L’accompagnement devrait commencer par la formalisation des critères réels de sélection : diplômes, expérience, mobilité, disponibilité, type de prestations, compétences comportementales attendues, points d’alerte éventuels. Une fois cette grille stabilisée, il deviendrait possible de concevoir un flux dans lequel chaque CV reçu est centralisé, analysé automatiquement sur la base de critères prédéfinis et restitué sous forme de synthèse 
+
+relisible
+
+ par l’équipe.
+
+L’enjeu ne serait pas de laisser l’IA décider, mais de l’utiliser pour faire gagner du temps sur la lecture initiale, la structuration des informations et la préparation du travail humain. L’accompagnement devrait intégrer une méthodologie claire de vérification, notamment sur les diplômes, l’expérience réelle, la mobilité et les éléments sensibles qui ne doivent jamais être validés sans contrôle humain.
+
+Il serait également utile d’accompagner l’équipe sur la manière d’utiliser l’IA sans perdre la dimension humaine indispensable à ce type d’activité, en particulier lorsque les critères relationnels et comportementaux ont une importance forte.
+
+Impact potentiel
+
+Ce cas d’usage permettrait de réduire le temps passé sur le tri initial des candidatures, d’améliorer l’homogénéité de lecture des profils et de mieux documenter les étapes de présélection. Il soutiendrait directement les équipes en charge du recrutement sans supprimer leur rôle d’analyse. Les compétences à renforcer porteraient sur le pilotage des prompts, la vérification des résultats et l’usage de grilles d’analyse plus structurées. Le risque principal réside dans une confiance excessive accordée à l’IA sur des éléments qui doivent rester vérifiés humainement, notamment les compétences réelles, la compatibilité avec le poste et les critères plus relationnels.
+
+5 Assistance IA à la préparation du renouvellement d’agrément et à la veille documentaire
+
+Description du cas d’usage
+
+Ce cas d’usage consiste à mobiliser l’IA pour aider l’entreprise à préparer son renouvellement d’agrément prévu en 2027, en facilitant la comparaison entre le cahier des charges applicable, les évolutions réglementaires et les procédures internes existantes.
+
+Contexte ou problème identifié
+
+À ce jour, ce travail est envisagé de manière manuelle. Il suppose de comparer les exigences réglementaires avec les pratiques internes et d’identifier les évolutions à intégrer dans le futur dossier. Ce chantier est potentiellement lourd pour une petite structure, car il demande du temps de lecture, de synthèse, de classement documentaire et de suivi d’écarts.
+
+Outils IA et automatisation mobilisables
+
+Google Drive pour centraliser les documents de référence
+
+Google Docs / Sheets pour structurer les tableaux d’écarts
+
+ChatGPT
+
+ ou un assistant IA sécurisé pour comparer des documents, extraire les exigences, proposer une matrice de conformité et aider à la reformulation de procédures
+
+Make
+
+ ou n8n pour organiser la collecte documentaire, les rappels et le suivi des actions correctives
+
+Accompagnement préconisé
+
+L’accompagnement pourrait débuter par l’inventaire des documents existants : procédures internes, trames, justificatifs, éléments d’agrément antérieurs, pratiques réelles. Il conviendrait ensuite de construire un tableau de lecture comparatif entre les exigences du cahier des charges et l’existant interne.
+
+L’IA pourrait être utilisée pour extraire les obligations, repérer les écarts, reformuler certaines procédures et aider à préparer une base documentaire plus lisible. L’accompagnement devrait cependant maintenir un contrôle humain fort sur toute interprétation réglementaire, car l’outil ne saurait se substituer à une lecture juridique ou métier lorsqu’il s’agit de valider la conformité réelle.
+
+Une démarche de mise à jour progressive pourrait être engagée bien avant l’échéance 2027, afin d’éviter un traitement dans l’urgence. Ce travail aurait aussi l’intérêt d’améliorer l’organisation interne au-delà du seul enjeu d’agrément.
+
+Impact potentiel
+
+Ce cas d’usage contribuerait à mieux anticiper le renouvellement d’agrément, à réduire la charge de comparaison documentaire et à renforcer la capacité de preuve de l’entreprise. Il aurait également un effet positif sur la formalisation des procédures internes et la professionnalisation globale du pilotage réglementaire. Les compétences à développer porteraient sur la lecture critique des résultats produits par l’IA, la structuration documentaire et la mise à jour des procédures. Le principal risque serait d’accorder à l’IA une valeur d’interprétation juridique qu’elle ne doit pas avoir ; son rôle doit rester celui d’un assistant à l’analyse, non d’un valideur de conformité.
+
+6 Structuration d’une traçabilité des échanges sensibles et du devoir de vigilance
+
+Description du cas d’usage
+
+Ce cas d’usage vise à mieux capter et structurer les informations importantes aujourd’hui échangées dans WhatsApp, afin d’en conserver une trace utile pour le suivi des situations, le devoir de vigilance et la continuité administrative.
+
+Contexte ou problème identifié
+
+L’entreprise utilise plusieurs comptes WhatsApp par équipe client, par client et pour l’administratif. Ce mode de communication apporte de la rapidité, mais il ne garantit pas une traçabilité suffisante des éléments sensibles ou engageants. Certaines informations importantes peuvent rester dans les échanges, sans intégration systématique dans le dossier client ou l’outil de référence.
+
+Outils IA et automatisation mobilisables
+
+WhatsApp conservé comme canal de communication opérationnel
+
+Google Forms, Google Docs ou un tableau de suivi partagé pour remonter les éléments structurants
+
+Make
+
+ ou n8n pour faciliter la création d’alertes ou de fiches de synthèse
+
+ChatGPT
+
+ pour aider à produire un résumé structuré d’un échange ou reformuler une note interne à partir d’éléments transmis
+
+Accompagnement préconisé
+
+L’accompagnement devrait ici être centré sur la méthode plutôt que sur la technologie seule. Il conviendrait d’abord de définir ce qui doit obligatoirement sortir de WhatsApp pour être versé dans un dossier ou dans une base de suivi : incident, consigne sensible, fait 
+
+lié
+
+ au devoir de vigilance, alerte administrative, élément impactant le contrat ou la mission.
+
+Ensuite, un processus simple pourrait être mis en place pour transformer rapidement une information issue d’un échange en note de suivi structurée. L’IA pourrait venir assister la reformulation ou la synthèse, mais la validation du contenu devrait rester humaine. Cette démarche serait particulièrement utile pour homogénéiser les pratiques et sécuriser la conservation des informations essentielles.
+
+Impact potentiel
+
+L’impact serait important sur la traçabilité, la qualité du suivi, la continuité d’information et la sécurisation des dossiers sensibles. Ce cas d’usage contribuerait également à réduire la dépendance aux mémoires individuelles ou aux historiques de messagerie. Les compétences à renforcer relèveraient surtout de la discipline de traçabilité et de l’usage rigoureux des outils de remontée. Le point de vigilance principal sera de ne pas alourdir excessivement les pratiques quotidiennes ; le processus devra donc rester simple, rapide et utile.
+
+	Synthèse et plan d’action
+
+	
+
+Synthèse graphique
+
+		
+
+-719321543994
+
+	
+
+OVIA SERVICES dispose déjà d’outils numériques bien installés dans les pratiques quotidiennes.
+
+Une base de données centralisée et des dossiers clients structurés sont déjà en place.
+
+L’équipe, de taille réduite, favorise la réactivité et la circulation rapide de l’information.
+
+Une première automatisation documentaire existe déjà avec Autocrat, ce qui constitue un point d’appui concret.
+
+Les processus restent encore très manuels sur plusieurs tâches critiques : contrats, échéances, heures, frais, déclarations et recrutement.
+
+Le suivi des tâches et des priorités manque de lisibilité par collaborateur et de supervision consolidée.
+
+Les données sont réparties entre plusieurs outils, ce qui complexifie le pilotage et fragilise la fiabilité des traitements.
+
+Les échanges via WhatsApp ne garantissent pas une traçabilité suffisante des informations sensibles.
+
+L’usage de l’IA n’est pas encore structuré ni encadré dans l’organisation.
+
+Le maintien de traitements manuels sur des obligations sensibles augmente le risque de retard, d’erreur ou de contentieux.
+
+Une hausse d’activité pourrait accentuer la surcharge administrative et les limites de l’organisation actuelle.
+
+Une donnée insuffisamment homogène ou fiable pourrait freiner les projets d’automatisation.
+
+Un usage mal encadré de l’IA pourrait créer des risques en matière de confidentialité et de qualité des résultats.
+
+Une préparation tardive du renouvellement d’agrément fragiliserait la conformité future de l’entreprise.
+
+L’automatisation peut rapidement sécuriser les échéances contractuelles et réduire le risque d’oubli.
+
+Un pilotage plus centralisé des tâches permettrait d’améliorer l’organisation et la répartition de charge.
+
+La fiabilisation du traitement des heures, des frais et des déclarations peut générer un gain de temps important.
+
+L’IA peut aider utilement au tri des candidatures, à la synthèse documentaire et à la comparaison de documents réglementaires.
+
+La préparation du renouvellement d’agrément 2027 peut être anticipée et mieux structurée grâce à des outils adaptés.
+
+Forces
+
+Faiblesses
+
+Opportunités
+
+Menaces
+
+Interne
+
+Externe00
+
+	
+
+OVIA SERVICES dispose déjà d’outils numériques bien installés dans les pratiques quotidiennes.
+
+Une base de données centralisée et des dossiers clients structurés sont déjà en place.
+
+L’équipe, de taille réduite, favorise la réactivité et la circulation rapide de l’information.
+
+Une première automatisation documentaire existe déjà avec 
+
+Autocrat
+
+, ce qui constitue un point d’appui concret.
+
+Les processus restent encore très manuels sur plusieurs tâches critiques : contrats, échéances, heures, frais, déclarations et recrutement.
+
+Le suivi des tâches et des priorités manque de lisibilité par collaborateur et de supervision consolidée.
+
+Les données sont réparties entre plusieurs outils, ce qui complexifie le pilotage et fragilise la fiabilité des traitements.
+
+Les échanges via WhatsApp ne garantissent pas une traçabilité suffisante des informations sensibles.
+
+L’usage de l’IA n’est pas encore structuré ni encadré dans l’organisation.
+
+Le maintien de traitements manuels sur des obligations sensibles augmente le risque de retard, d’erreur ou de contentieux.
+
+Une hausse d’activité pourrait accentuer la surcharge administrative et les limites de l’organisation actuelle.
+
+Une donnée insuffisamment homogène ou fiable pourrait freiner les projets d’automatisation.
+
+Un usage mal encadré de l’IA pourrait créer des risques en matière de confidentialité et de qualité des résultats.
+
+Une préparation tardive du renouvellement d’agrément fragiliserait la conformité future de l’entreprise.
+
+L’automatisation peut rapidement sécuriser les échéances contractuelles et réduire le risque d’oubli.
+
+Un pilotage plus centralisé des tâches permettrait d’améliorer l’organisation et la répartition de charge.
+
+La fiabilisation du traitement des heures, des frais et des déclarations peut générer un gain de temps important.
+
+L’IA peut aider utilement au tri des candidatures, à la synthèse documentaire et à la comparaison de documents réglementaires.
+
+La préparation du renouvellement d’agrément 2027 peut être anticipée et mieux structurée grâce à des outils adaptés.
+
+Forces
+
+Faiblesses
+
+Opportunités
+
+Menaces
+
+Interne
+
+ExterneSWOT
+
+	1404246-14573000Plan d’action détaillé 
+
+	
+
+PLAN D'ACTION
+
+Projet Axes d’actions
+
+Priorité
+
+Action/étapes
+
+Description
+
+Calendrier prévisionnel
+
+Pilote/référent
+
+Livrables
+
+Ressources externes / internes
+
+Administratif
+
+Haute
+
+Automatiser le suivi des périodes d’essai et échéances contractuelles
+
+Créer un suivi centralisé des dates sensibles (périodes d’essai, renouvellements, fins de contrat), avec alertes automatiques, contrôle des échéances et pré-génération des courriers avant validation humaine.
+
+Mois 2
+
+Adjointe de direction + Dirigeant
+
+Base des échéances fiabilisée ; workflow d’alertes ; modèles de courriers ; procédure de validation
+
+Externe : consultant IA/automatisation ; Interne : direction, administratif
+
+Haute
+
+Sécuriser la production documentaire RH et contractuelle
+
+Revoir les champs de données utilisés dans Google Sheets et 
+
+Autocrat
+
+ pour fiabiliser la génération automatique des contrats, avenants et documents de fin de contrat.
+
+Mois 2
+
+Adjointe de direction
+
+Base de données harmonisée ; trames documentaires revues ; check-list de contrôle
+
+Externe : consultant ; Interne : administratif
+
+Haute
+
+Mettre en place un pilotage centralisé des tâches par collaborateur
+
+Concevoir une base unique de suivi des tâches avec vue par personne, échéance, client et thématique, afin de réduire les oublis et améliorer la supervision managériale.
+
+Mois 2
+
+Responsable de secteur + Dirigeant
+
+Tableau de bord partagé ; nomenclature des tâches ; statuts ; règles de priorisation
+
+Externe : consultant ; Interne : équipe encadrement
+
+Sécurité / Réglementaire
+
+Haute
+
+Structurer la traçabilité des échanges sensibles
+
+Définir quelles informations issues de WhatsApp doivent être formalisées et reversées dans un outil de référence afin de mieux couvrir le devoir de vigilance et le suivi des situations sensibles.
+
+Mois 2
+
+Dirigeant + Adjointe de direction
+
+Règles d’usage WhatsApp ; fiche de remontée d’information ; procédure d’archivage
+
+Externe : consultant ; Interne : équipe administrative et encadrement
+
+Haute
+
+Préparer le renouvellement d’agrément 2027
+
+Construire une matrice de conformité entre les exigences du cahier des charges, les pratiques actuelles et les évolutions à mettre en œuvre, avec suivi des écarts et des justificatifs.
+
+Mois 6
+
+Dirigeant
+
+Matrice de conformité ; plan de mise à jour ; dossier de preuves ; calendrier de préparation
+
+Externe : consultant ; Interne : direction + administratif
+
+Processus métier
+
+Haute
+
+Fiabiliser la collecte des heures, frais et absences
+
+Standardiser les modes de saisie terrain pour réduire les doubles entrées entre Sheets, Excel et Trello, puis consolider automatiquement les données dans une source de référence.
+
+Mois 3
+
+Responsable de secteur
+
+Format unique de collecte ; source de référence ; règles de contrôle des données
+
+Externe : consultant automatisation ; Interne : responsables de secteur + intervenants référents
+
+Haute
+
+Automatiser le rapprochement des heures et la préparation administrative CESU
+
+Mettre en place un scénario de consolidation automatique entre prévisionnel et réalisé, signaler les écarts, produire une synthèse de contrôle et préparer les éléments utiles au traitement CESU.
+
+Mois 4
+
+Adjointe de direction + Responsable de secteur
+
+Workflow de rapprochement ; tableau des écarts ; synthèse de contrôle ; procédure de validation
+
+Externe : consultant ; Interne : administratif + exploitation
+
+Moyenne
+
+Assister le tri de candidatures par IA
+
+Créer une grille de préqualification et un processus d’extraction des informations clés des CV pour accélérer le premier niveau d’analyse tout en conservant une validation humaine.
+
+Mois 2
+
+Responsable de secteur
+
+Grille de critères ; modèle de synthèse candidat ; procédure de contrôle humain
+
+Externe : consultant IA ; Interne : équipe recrutement
+
+Organisationnel 
+
+Haute
+
+Sensibiliser l’équipe aux usages de l’IA et de l’automatisation
+
+Organiser un premier rendez-vous de sensibilisation aux enjeux de l’IA, aux cas d’usage retenus, aux limites de l’outil et aux règles de contrôle humain avant lancement des scénarios.
+
+Mois 1
+
+Dirigeant
+
+Atelier de sensibilisation ; priorisation des cas d’usage ; feuille de route validée
+
+Externe : consultant IA ; Interne : ensemble de l’équipe
+
+Moyenne
+
+Déployer des ateliers de 
+
+co-création
+
+ et de transfert de compétences
+
+Conduire des ateliers avec les salariés référents pour tester, ajuster et documenter les scénarios 
+
+Make
+
+ ou n8n, afin de favoriser l’appropriation durable des nouveaux usages.
+
+Mois 4
+
+Référents internes désignés
+
+Ateliers réalisés ; scénarios documentés ; référents formés
+
+Externe : consultant ; Interne : référents métier

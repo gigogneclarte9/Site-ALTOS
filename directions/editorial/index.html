@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>ALTOS — Studio éditorial</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #fff;
+    --ink: #0a0a0a;
+    --ink-2: #2c2c2c;
+    --ink-3: #767676;
+    --line: #e2e2e2;
+    --paper: #f4f1ec;
+    --accent: #ff5b14;          /* zinger orange */
+    --acid: #d9ff3c;            /* highlighter */
+    --display: "Fraunces", "Times New Roman", serif;
+    --sans: "Inter", system-ui, sans-serif;
+    --mono: "DM Mono", ui-monospace, monospace;
+    --anim: 1;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  body { overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--ink); color: var(--acid); }
+
+  /* ─── Reusable ─────────────────────────────── */
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+  .num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-3);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 26px;
+    border-radius: 0;
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid var(--ink);
+    background: var(--ink);
+    color: var(--bg);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color .3s;
+  }
+  .btn::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: var(--accent);
+    transform: translateY(101%);
+    transition: transform calc(.4s * var(--anim)) cubic-bezier(.7,0,.3,1);
+    z-index: -1;
+  }
+  .btn:hover::before { transform: translateY(0); }
+  .btn--ghost { background: transparent; color: var(--ink); }
+  .btn--ghost::before { background: var(--ink); }
+  .btn--ghost:hover { color: var(--bg); }
+  .btn .arrow { transition: transform .3s; }
+  .btn:hover .arrow { transform: translateX(calc(4px * var(--anim))); }
+
+  .reveal { opacity: 0; transform: translateY(calc(30px * var(--anim))); transition: opacity .9s ease, transform .9s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .reveal-line { display: inline-block; overflow: hidden; }
+  .reveal-line span { display: inline-block; transform: translateY(110%); transition: transform 1s cubic-bezier(.16,1,.3,1); }
+  .reveal-line.in span { transform: translateY(0); }
+
+  /* ─── NAV ─────────────────────────────────── */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--bg);
+    border-bottom: 1px solid var(--ink);
+  }
+  .nav__inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 18px 32px;
+    max-width: 1320px; margin: 0 auto;
+  }
+  .logo {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: -0.04em;
+  }
+  .logo i { font-style: italic; color: var(--accent); }
+  .nav__links {
+    display: flex;
+    gap: 32px;
+    font-family: var(--mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .nav__links a { transition: color .2s; }
+  .nav__links a:hover { color: var(--accent); }
+  .nav__cta { display: flex; justify-content: flex-end; align-items: center; gap: 14px; }
+  .nav__time { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.08em; }
+
+  /* ─── HERO ─────────────────────────────────── */
+  .hero {
+    border-bottom: 1px solid var(--ink);
+    padding: 48px 0 0;
+    position: relative;
+  }
+  .hero__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+    padding: 0 32px;
+    max-width: 1320px; margin-left: auto; margin-right: auto;
+    font-family: var(--mono); font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--ink-3);
+  }
+  .hero__top div + div { text-align: center; }
+  .hero__top div:last-child { text-align: right; }
+
+  .hero__title {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(72px, 14vw, 220px);
+    line-height: 0.86;
+    letter-spacing: -0.05em;
+    text-align: center;
+    padding: 0 32px;
+    margin-bottom: 32px;
+  }
+  .hero__title i { font-style: italic; }
+  .hero__title .row { display: block; }
+  .hero__title .accent { color: var(--accent); }
+  .hero__title .strike {
+    position: relative; display: inline-block;
+  }
+  .hero__title .strike::after {
+    content: ""; position: absolute;
+    left: -2%; right: -2%; top: 48%; height: 8px;
+    background: var(--accent);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 1.4s cubic-bezier(.7,0,.3,1) .8s;
+  }
+  .hero__title.in .strike::after { transform: scaleX(1); }
+
+  .hero__sub {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 48px;
+    border-top: 1px solid var(--ink);
+    padding: 32px;
+    max-width: 1320px; margin: 0 auto;
+    align-items: start;
+  }
+  .hero__sub p {
+    font-size: 17px;
+    line-height: 1.45;
+    max-width: 420px;
+  }
+  .hero__sub p strong { font-weight: 600; }
+  .hero__cta { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero__meta { font-family: var(--mono); font-size: 12px; color: var(--ink-3); text-align: right; line-height: 1.6; }
+
+  /* Big strip */
+  .strip {
+    background: var(--ink);
+    color: var(--bg);
+    padding: 24px 0;
+    overflow: hidden;
+    border-bottom: 1px solid var(--ink);
+  }
+  .strip__track {
+    display: flex; gap: 60px;
+    white-space: nowrap;
+    font-family: var(--display);
+    font-size: 80px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1;
+    animation: scroll-x calc(40s / var(--anim, 1)) linear infinite;
+  }
+  .strip__track span { display: inline-flex; align-items: center; gap: 60px; }
+  .strip__track span::after { content: "✻"; color: var(--accent); font-style: normal; }
+  @keyframes scroll-x {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ─── WHY ───────────────────────────────── */
+  .why {
+    padding: 100px 0;
+    border-bottom: 1px solid var(--ink);
+  }
+  .why__head {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    margin-bottom: 80px;
+    align-items: end;
+  }
+  .why h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    margin-top: 16px;
+  }
+  .why h2 i { font-style: italic; }
+  .why h2 mark {
+    background: var(--acid);
+    padding: 0 8px;
+    color: var(--ink);
+  }
+  .why__lead {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 480px;
+    color: var(--ink-2);
+  }
+
+  .why__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+  }
+  .why__cell {
+    border-top: 1px solid var(--ink);
+    padding: 24px 0;
+    display: flex; flex-direction: column;
+    transition: padding-top .35s;
+  }
+  .why__cell:hover { padding-top: 14px; }
+  .why__cell:nth-child(1) { grid-column: span 5; }
+  .why__cell:nth-child(2) { grid-column: span 4; }
+  .why__cell:nth-child(3) { grid-column: span 3; }
+  .why__cell:nth-child(4) { grid-column: span 4; }
+  .why__cell:nth-child(5) { grid-column: span 4; }
+  .why__cell:nth-child(6) { grid-column: span 4; }
+  .why__cell h3 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 16px 0 12px;
+  }
+  .why__cell h3 i { font-style: italic; }
+  .why__cell p { color: var(--ink-2); font-size: 15px; line-height: 1.5; }
+
+  /* ─── SERVICES ─────────────────────────── */
+  .services { padding: 100px 0; border-bottom: 1px solid var(--ink); }
+  .services__head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 64px;
+  }
+  .services h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    margin-top: 16px;
+  }
+  .services h2 i { font-style: italic; }
+  .service-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 1.4fr auto;
+    gap: 32px;
+    align-items: center;
+    padding: 32px 0;
+    border-top: 1px solid var(--ink);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: padding .35s;
+  }
+  .service-row::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: var(--accent);
+    transform: translateY(101%);
+    transition: transform .45s cubic-bezier(.7,0,.3,1);
+    z-index: 0;
+  }
+  .service-row:hover::before { transform: translateY(0); }
+  .service-row > * { position: relative; z-index: 1; }
+  .service-row:hover { padding-left: calc(32px * var(--anim)); padding-right: calc(32px * var(--anim)); color: var(--bg); }
+  .service-row:hover .service-row__num { color: var(--bg); }
+  .service-row__num { font-family: var(--mono); font-size: 12px; color: var(--ink-3); transition: color .3s; }
+  .service-row__title {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .service-row__title i { font-style: italic; }
+  .service-row__desc { font-size: 15px; line-height: 1.5; max-width: 520px; }
+  .service-row__plus {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    border: 1px solid currentColor;
+    display: grid; place-items: center;
+    transition: transform .4s, background .3s, color .3s;
+  }
+  .service-row:hover .service-row__plus { transform: rotate(calc(45deg * var(--anim))); background: var(--bg); color: var(--accent); }
+
+  /* ─── PROCESS ───────────────────────────── */
+  .process {
+    padding: 100px 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--ink);
+  }
+  .process h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(48px, 7vw, 104px);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    margin: 16px 0 64px;
+  }
+  .process h2 i { font-style: italic; }
+  .process h2 mark { background: var(--acid); padding: 0 12px; }
+
+  .process__steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    counter-reset: step;
+  }
+  .pstep {
+    border-top: 2px solid var(--ink);
+    padding-top: 20px;
+    counter-increment: step;
+    position: relative;
+  }
+  .pstep::before {
+    content: counter(step, decimal-leading-zero);
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 0.8;
+    display: block;
+    margin-bottom: 24px;
+    transition: color .3s;
+  }
+  .pstep:hover::before { color: var(--accent); }
+  .pstep h3 { font-family: var(--display); font-weight: 400; font-size: 26px; letter-spacing: -0.01em; margin-bottom: 8px; }
+  .pstep h3 i { font-style: italic; }
+  .pstep p { color: var(--ink-2); font-size: 14px; line-height: 1.55; }
+
+  /* ─── CASES ─────────────────────────────── */
+  .cases { padding: 100px 0; border-bottom: 1px solid var(--ink); }
+  .cases h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    margin: 16px 0 64px;
+  }
+  .cases h2 i { font-style: italic; }
+  .cases__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--ink);
+    border-left: 1px solid var(--ink);
+  }
+  .case-tile {
+    grid-column: span 3;
+    border-right: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: 36px;
+    min-height: 380px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition: background .35s;
+    cursor: pointer;
+  }
+  .case-tile:hover { background: var(--paper); }
+  .case-tile:nth-child(3) { grid-column: span 2; }
+  .case-tile:nth-child(4) { grid-column: span 4; background: var(--ink); color: var(--bg); }
+  .case-tile:nth-child(4):hover { background: var(--accent); }
+  .case-tile__cat { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.08em; text-transform: uppercase; }
+  .case-tile:nth-child(4) .case-tile__cat { color: var(--acid); }
+  .case-tile h3 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(28px, 3.2vw, 44px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-top: 12px;
+    max-width: 480px;
+  }
+  .case-tile h3 i { font-style: italic; }
+  .case-tile__bottom {
+    display: flex; justify-content: space-between; align-items: end;
+    margin-top: 32px;
+  }
+  .case-tile__metric {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .case-tile:nth-child(4) .case-tile__metric { color: var(--accent); }
+  .case-tile:nth-child(4):hover .case-tile__metric { color: var(--bg); }
+  .case-tile__client { font-size: 13px; max-width: 200px; line-height: 1.4; text-align: right; }
+
+  /* ─── TESTIMONIALS ──────────────────────── */
+  .testi { padding: 100px 0; border-bottom: 1px solid var(--ink); }
+  .testi__head {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 60px; margin-bottom: 64px; align-items: end;
+  }
+  .testi h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    margin-top: 16px;
+  }
+  .testi h2 i { font-style: italic; }
+  .testi__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border: 1px solid var(--ink); }
+  .testi__cell {
+    padding: 48px;
+    border-right: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    transition: background .25s;
+  }
+  .testi__cell:nth-child(2n) { border-right: none; }
+  .testi__cell:nth-last-child(-n+2) { border-bottom: none; }
+  .testi__cell:hover { background: var(--paper); }
+  .testi__cell blockquote {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 28px;
+    max-width: 480px;
+  }
+  .testi__cell blockquote i { font-style: italic; }
+  .testi__who {
+    display: flex; align-items: center; gap: 14px;
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+  }
+  .testi__avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--bg);
+    display: grid; place-items: center;
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 14px;
+  }
+  .testi__name { font-size: 14px; font-weight: 500; }
+  .testi__role { font-size: 12px; color: var(--ink-3); }
+
+  /* ─── BLOG ──────────────────────────────── */
+  .blog { padding: 100px 0; border-bottom: 1px solid var(--ink); background: var(--paper); }
+  .blog__head { display: flex; justify-content: space-between; align-items: end; margin-bottom: 56px; }
+  .blog h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    margin-top: 16px;
+  }
+  .blog h2 i { font-style: italic; }
+  .blog__grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; }
+  .post {
+    cursor: pointer;
+    display: flex; flex-direction: column;
+    transition: transform .35s;
+  }
+  .post:hover { transform: translateY(calc(-4px * var(--anim))); }
+  .post__cover {
+    aspect-ratio: 4/3;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 1px solid var(--ink);
+    position: relative;
+    display: grid; place-items: center;
+  }
+  .post:nth-child(1) .post__cover { aspect-ratio: 16/10; }
+  .post__cover-1 { background: var(--accent); color: var(--ink); }
+  .post__cover-2 { background: var(--ink); color: var(--acid); }
+  .post__cover-3 { background: var(--acid); color: var(--ink); }
+  .post__cover svg {
+    width: 50%; height: auto;
+    transition: transform 1s cubic-bezier(.16,1,.3,1);
+  }
+  .post:hover .post__cover svg { transform: scale(calc(1 + .08 * var(--anim))) rotate(calc(8deg * var(--anim))); }
+  .post__cat { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+  .post h3 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 8px 0 12px;
+  }
+  .post h3 i { font-style: italic; }
+  .post:nth-child(1) h3 { font-size: 36px; }
+  .post__meta { font-family: var(--mono); font-size: 11px; color: var(--ink-3); margin-top: auto; padding-top: 12px; }
+
+  /* ─── CTA ───────────────────────────────── */
+  .cta {
+    padding: 120px 0;
+    background: var(--ink);
+    color: var(--bg);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(80px, 12vw, 200px);
+    line-height: 0.88;
+    letter-spacing: -0.04em;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .cta h2 i { font-style: italic; color: var(--accent); }
+  .cta h2 .acid { color: var(--acid); font-style: italic; }
+  .cta__sub { font-size: 17px; max-width: 540px; margin: 32px auto; line-height: 1.5; color: #b3b3b3; }
+  .cta__btns { display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .cta .btn--ghost { color: var(--bg); border-color: var(--bg); }
+  .cta .btn--ghost::before { background: var(--accent); }
+  .cta .btn { border-color: var(--bg); }
+  .cta__details {
+    display: flex; gap: 32px; justify-content: center;
+    margin-top: 64px; padding-top: 32px;
+    border-top: 1px solid #2c2c2c;
+    max-width: 700px; margin-left: auto; margin-right: auto;
+    font-family: var(--mono); font-size: 12px;
+    color: #b3b3b3; letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .cta__details a:hover { color: var(--accent); }
+
+  /* ─── FOOTER ────────────────────────────── */
+  .foot {
+    background: var(--bg);
+    color: var(--ink);
+    padding: 48px 0 32px;
+    border-top: 1px solid var(--ink);
+  }
+  .foot__top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--line);
+  }
+  .foot__top h4 { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px; }
+  .foot__top ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .foot__top a { font-size: 14px; transition: color .2s; }
+  .foot__top a:hover { color: var(--accent); }
+  .foot__brand p { color: var(--ink-2); font-size: 14px; line-height: 1.5; max-width: 360px; margin-top: 16px; }
+  .foot__bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 24px; font-family: var(--mono); font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3);
+  }
+
+  /* ─── BIG WORDMARK ──────────────────────── */
+  .wordmark {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(180px, 28vw, 480px);
+    line-height: 0.78;
+    letter-spacing: -0.06em;
+    text-align: center;
+    user-select: none;
+    padding: 32px 16px;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--bg);
+    background: var(--ink);
+  }
+  .wordmark i { font-style: italic; color: var(--accent); -webkit-text-stroke: 1px var(--accent); }
+
+  @media (max-width: 900px) {
+    .hero__sub, .why__head, .services__head, .testi__head, .blog__grid, .cases__grid, .testi__grid, .why__grid, .process__steps { grid-template-columns: 1fr !important; gap: 28px; }
+    .why__cell { grid-column: span 1 !important; }
+    .case-tile { grid-column: span 6 !important; }
+    .testi__cell { border-right: none !important; }
+    .nav__links { display: none; }
+    .service-row { grid-template-columns: 60px 1fr auto; }
+    .service-row__desc { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="#" class="logo">ALTOS<i>.</i></a>
+    <div class="nav__links">
+      <a href="#services">Services</a>
+      <a href="#cases">Index</a>
+      <a href="#process">Méthode</a>
+      <a href="#blog">Journal</a>
+    </div>
+    <div class="nav__cta">
+      <span class="nav__time" id="t">FR · 2026</span>
+      <a href="#contact" class="btn">Prendre RDV
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero__top">
+    <div>Issue n°01 — Groupement</div>
+    <div>Toute la France</div>
+    <div>Groupement</div>
+  </div>
+
+  <h1 class="hero__title reveal">
+    <span class="row reveal-line"><span>Studio de</span></span>
+    <span class="row reveal-line"><span><i>numérique</i> qui</span></span>
+    <span class="row reveal-line"><span>s'occupe <span class="strike">enfin</span> de</span></span>
+    <span class="row reveal-line"><span><i class="accent">votre</i> activité.</span></span>
+  </h1>
+
+  <div class="hero__sub">
+    <p><strong>Un groupement d'experts métiers</strong> — automatisation, vibe coding, sites internet, SEO. Quatre savoir-faire au service des TPE et commerces qui veulent du résultat, pas du jargon.</p>
+    <div class="hero__cta">
+      <a class="btn" href="https://cal.com/altos/diagnostic-30min">
+        Diagnostic 30 minutes
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="#services">Voir les services</a>
+    </div>
+    <div class="hero__meta">
+      Groupement<br/>d'ambassadeurs IA<br/>· · ·<br/>4 spécialités<br/>1 conversation
+    </div>
+  </div>
+</section>
+
+<!-- BIG WORDMARK -->
+<div class="wordmark">A<i>l</i>tos<i>.</i></div>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip__track">
+    <span><i>automatisation</i></span>
+    <span><i>vibe coding</i></span>
+    <span><i>sites internet</i></span>
+    <span><i>SEO local</i></span>
+    <span><i>agents IA</i></span>
+    <span><i>automatisation</i></span>
+    <span><i>vibe coding</i></span>
+    <span><i>sites internet</i></span>
+    <span><i>SEO local</i></span>
+    <span><i>agents IA</i></span>
+  </div>
+</div>
+
+<!-- WHY -->
+<section class="why">
+  <div class="wrap">
+    <div class="why__head">
+      <div>
+        <span class="num reveal">§ 01 — Pourquoi</span>
+        <h2 class="reveal">Un <i>groupement</i> d'experts,<br/>au service de votre <mark>activité</mark>.</h2>
+      </div>
+      <p class="why__lead reveal">Six raisons concrètes — pas du marketing — pour lesquelles les dirigeants de TPE nous choisissent et reviennent.</p>
+    </div>
+    <div class="why__grid">
+      <div class="why__cell reveal">
+        <span class="num">01</span>
+        <h3><i>Experts</i> métiers,<br/>pas généralistes.</h3>
+        <p>Chaque mission est confiée à la personne dont c'est le métier — un développeur dev, un référenceur référence. Pas de pseudo-couteau-suisse.</p>
+      </div>
+      <div class="why__cell reveal">
+        <span class="num">02</span>
+        <h3>Ambassadeurs <i>IA</i>.</h3>
+        <p>On utilise l'IA quand elle vous fait gagner. Pas pour le gadget, pas pour le buzz.</p>
+      </div>
+      <div class="why__cell reveal">
+        <span class="num">03</span>
+        <h3>Toute la <i>France</i>.</h3>
+        <p>Visio, déplacement, atelier sur place.</p>
+      </div>
+      <div class="why__cell reveal">
+        <span class="num">04</span>
+        <h3>Devis <i>transparents</i>.</h3>
+        <p>Forfait clair, livraisons hebdo. Vous savez ce que vous payez et ce qu'on livre, semaine après semaine.</p>
+      </div>
+      <div class="why__cell reveal">
+        <span class="num">05</span>
+        <h3><i>Rapide</i>, sérieux.</h3>
+        <p>Premier livrable en 7-14 jours. On préfère itérer vite que pondre des PowerPoint.</p>
+      </div>
+      <div class="why__cell reveal">
+        <span class="num">06</span>
+        <h3>Sans <i>jargon</i>.</h3>
+        <p>On parle votre langue. Démos vidéo, comptes-rendus simples, doc utilisable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="services__head">
+      <div>
+        <span class="num reveal">§ 02 — Services</span>
+        <h2 class="reveal">Quatre <i>spécialités</i>,<br/>une seule conversation.</h2>
+      </div>
+      <p class="why__lead reveal">Vous parlez à un seul interlocuteur. En coulisses, l'expert qu'il faut prend la main au bon moment.</p>
+    </div>
+
+    <div class="service-row reveal">
+      <div class="service-row__num">01</div>
+      <div class="service-row__title">Auto<i>matisation</i></div>
+      <div class="service-row__desc">Vos tâches répétitives s'exécutent toutes seules — devis, relances, planning, stock. n8n, Make, agents IA sur-mesure.</div>
+      <div class="service-row__plus">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12"/></svg>
+      </div>
+    </div>
+    <div class="service-row reveal">
+      <div class="service-row__num">02</div>
+      <div class="service-row__title">Vibe <i>coding</i></div>
+      <div class="service-row__desc">Apps métier sur-mesure livrées en jours, pas en mois. Outils internes, dashboards, mini-saas pour votre activité.</div>
+      <div class="service-row__plus">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12"/></svg>
+      </div>
+    </div>
+    <div class="service-row reveal">
+      <div class="service-row__num">03</div>
+      <div class="service-row__title">Sites <i>internet</i></div>
+      <div class="service-row__desc">Vitrines, e-commerces, prises de rendez-vous. Rapides, beaux, faciles à mettre à jour vous-même.</div>
+      <div class="service-row__plus">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12"/></svg>
+      </div>
+    </div>
+    <div class="service-row reveal">
+      <div class="service-row__num">04</div>
+      <div class="service-row__title">SEO <i>local</i></div>
+      <div class="service-row__desc">Apparaissez quand vos clients vous cherchent. Google My Business, contenu, technique.</div>
+      <div class="service-row__plus">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="wrap">
+    <span class="num reveal">§ 03 — Méthode</span>
+    <h2 class="reveal">On commence par <mark>écouter</mark>,<br/>on finit par <i>livrer</i>.</h2>
+    <div class="process__steps">
+      <div class="pstep reveal">
+        <h3><i>Diagnostic</i></h3>
+        <p>30 minutes en visio. On comprend votre activité, on identifie les gisements de temps et de revenus.</p>
+      </div>
+      <div class="pstep reveal">
+        <h3><i>Cadrage</i></h3>
+        <p>Devis chiffré, planning semaine par semaine. Vous savez précisément ce qui va se passer.</p>
+      </div>
+      <div class="pstep reveal">
+        <h3><i>Construction</i></h3>
+        <p>L'expert métier prend la main. Démo chaque vendredi, vous validez au fil de l'eau.</p>
+      </div>
+      <div class="pstep reveal">
+        <h3><i>Mise en route</i></h3>
+        <p>Formation, documentation, support 30 jours. Et on reste joignables, vraiment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="cases" id="cases">
+  <div class="wrap">
+    <span class="num reveal">§ 04 — Réalisations</span>
+    <h2 class="reveal">Du <i>concret</i>,<br/>pas du storytelling.</h2>
+    <div class="cases__grid">
+      <div class="case-tile reveal">
+        <span class="case-tile__cat">01 — Boulangerie</span>
+        <h3>Une appli de précommande qui a remplacé <i>30&nbsp;appels</i> par jour.</h3>
+        <div class="case-tile__bottom">
+          <span class="case-tile__metric"><i>−4h</i></span>
+          <span class="case-tile__client">de téléphone par jour, pour une équipe de 4</span>
+        </div>
+      </div>
+      <div class="case-tile reveal">
+        <span class="case-tile__cat">02 — Cabinet comptable</span>
+        <h3>Devis automatisés en 90 secondes.</h3>
+        <div class="case-tile__bottom">
+          <span class="case-tile__metric"><i>×3</i></span>
+          <span class="case-tile__client">volume traité, même équipe</span>
+        </div>
+      </div>
+      <div class="case-tile reveal">
+        <span class="case-tile__cat">03 — Paysagiste</span>
+        <h3>Du 8e au <i>1er</i> sur Google.</h3>
+        <div class="case-tile__bottom">
+          <span class="case-tile__metric"><i>+180%</i></span>
+          <span class="case-tile__client">demandes entrantes</span>
+        </div>
+      </div>
+      <div class="case-tile reveal">
+        <span class="case-tile__cat">04 — Atelier mécanique</span>
+        <h3>Site + agent IA qui prend les <i>RDV</i> la nuit.</h3>
+        <div class="case-tile__bottom">
+          <span class="case-tile__metric"><i>62%</i></span>
+          <span class="case-tile__client">de RDV pris hors horaires d'ouverture</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi">
+  <div class="wrap">
+    <div class="testi__head">
+      <div>
+        <span class="num reveal">§ 05 — Voix de la rue</span>
+        <h2 class="reveal">Des dirigeants<br/>qui ne <i>reviendraient</i><br/>pas en arrière.</h2>
+      </div>
+    </div>
+    <div class="testi__grid">
+      <div class="testi__cell reveal">
+        <blockquote>"On a récupéré quasi <i>une journée par semaine</i>. Et ils m'expliquent ce qu'ils font, je peux ajuster."</blockquote>
+        <div class="testi__who">
+          <div class="testi__avatar">M</div>
+          <div>
+            <div class="testi__name">Marie C.</div>
+            <div class="testi__role">Atelier de couture · Lyon</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi__cell reveal">
+        <blockquote>"J'avais peur que l'IA, ce soit pour les <i>grosses boîtes</i>. Le truc tourne tout seul depuis 6 mois."</blockquote>
+        <div class="testi__who">
+          <div class="testi__avatar">J</div>
+          <div>
+            <div class="testi__name">Jean-Pierre L.</div>
+            <div class="testi__role">Plombier · Vienne (38)</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi__cell reveal">
+        <blockquote>"Devis en 48h, site en 3 semaines. <i>Pas de blabla</i>, pas de surfacturation."</blockquote>
+        <div class="testi__who">
+          <div class="testi__avatar">S</div>
+          <div>
+            <div class="testi__name">Sophie D.</div>
+            <div class="testi__role">Fleuriste · Montpellier</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi__cell reveal">
+        <blockquote>"Un seul interlocuteur, et derrière, ils font appel au bon spécialiste. <i>Limpide</i>."</blockquote>
+        <div class="testi__who">
+          <div class="testi__avatar">A</div>
+          <div>
+            <div class="testi__name">Anne B.</div>
+            <div class="testi__role">Restauratrice · Bordeaux</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog" id="blog">
+  <div class="wrap">
+    <div class="blog__head">
+      <div>
+        <span class="num reveal">§ 06 — Journal</span>
+        <h2 class="reveal">Ce qu'on apprend,<br/>on l'<i>écrit</i>.</h2>
+      </div>
+      <a href="#" class="btn btn--ghost">Tous les articles</a>
+    </div>
+    <div class="blog__grid">
+      <article class="post reveal">
+        <div class="post__cover post__cover-1">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><circle cx="50" cy="50" r="30"/><path d="M30 50h40M50 30v40"/></svg>
+        </div>
+        <div class="post__cat">Automatisation</div>
+        <h3>5 tâches qu'une <i>TPE</i> peut automatiser dès demain (sans coder).</h3>
+        <div class="post__meta">8 min · 14 avr. 2026</div>
+      </article>
+      <article class="post reveal">
+        <div class="post__cover post__cover-2">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><path d="M30 30l-15 20 15 20M70 30l15 20-15 20M55 25L45 75"/></svg>
+        </div>
+        <div class="post__cat">Vibe coding</div>
+        <h3>Pourquoi votre prochain <i>outil</i> sera une appli sur-mesure.</h3>
+        <div class="post__meta">6 min · 2 avr.</div>
+      </article>
+      <article class="post reveal">
+        <div class="post__cover post__cover-3">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><circle cx="40" cy="40" r="20"/><path d="M55 55l20 20"/></svg>
+        </div>
+        <div class="post__cat">SEO</div>
+        <h3>La fiche <i>Google</i> qui ramène vraiment des clients.</h3>
+        <div class="post__meta">12 min · 21 mars</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <span class="num reveal" style="color: var(--accent)">§ 07 — Premier pas</span>
+    <h2 class="reveal" style="margin-top: 20px;">
+      <span class="row">Discutons</span>
+      <span class="row"><span class="acid">trente</span> <i>minutes</i>.</span>
+    </h2>
+    <p class="cta__sub reveal">Diagnostic gratuit, sans engagement. On regarde votre activité, on identifie 1 à 3 chantiers à fort impact, et vous repartez avec une feuille de route — qu'on travaille ensemble ou non.</p>
+    <div class="cta__btns reveal">
+      <a class="btn" href="https://cal.com/altos/diagnostic-30min" style="background: var(--accent); border-color: var(--accent);">
+        Réserver un créneau
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="mailto:bonjour@altos.fr">Nous écrire</a>
+    </div>
+    <div class="cta__details">
+      <span>FR · Toute la France</span>
+      <a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div class="foot__brand">
+        <a href="#" class="logo">ALTOS<i>.</i></a>
+        <p>Groupement d'experts métiers et ambassadeurs IA, au service des TPE et PME françaises.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Automatisation</a></li>
+          <li><a href="#">Vibe coding</a></li>
+          <li><a href="#">Sites internet</a></li>
+          <li><a href="#">SEO local</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="#">Méthode</a></li>
+          <li><a href="#">Réalisations</a></li>
+          <li><a href="#">Journal</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Suivre</h4>
+        <ul>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span>© 2026 ALTOS — Groupement</span>
+      <span>Mentions · Confidentialité</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in'), i * 50);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal, .reveal-line').forEach(el => io.observe(el));
+
+  // Listen to anim level updates from parent canvas
+  window.addEventListener('message', (e) => {
+    if (e.data && e.data.type === 'set-anim') {
+      document.documentElement.style.setProperty('--anim', e.data.value);
+    }
+  });
+</script>
+</body>
+</html>

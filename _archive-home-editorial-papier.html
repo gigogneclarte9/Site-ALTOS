@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Altos — Agence digitale pluridisciplinaire</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ffffff;
+    --paper-2:#f5f1ea;
+    --rule:#1a17141a;
+    --ink:#1a1714;
+    --ink-2:#4a4540;
+    --muted:#807a72;
+    --accent:#b34a1f;
+    --accent-soft:#b34a1f1a;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Geist","Helvetica Neue",system-ui,sans-serif;
+    font-weight:400; line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  .mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.78rem;letter-spacing:.02em}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+
+  /* header */
+  header.top{
+    position:sticky;top:0;z-index:10;
+    background:color-mix(in srgb,var(--paper) 98%,transparent);
+    backdrop-filter:saturate(1.2) blur(8px);
+    border-bottom:1px solid var(--rule);
+  }
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
+  .brand .logo{
+    width:28px;height:28px;border-radius:50%;
+    background:radial-gradient(circle at 30% 30%,#fff 0%,var(--accent) 60%,#5b2410 100%);
+    box-shadow:inset 0 0 0 1px #00000022;
+  }
+  .brand b{font-weight:500;letter-spacing:.04em;text-transform:uppercase;font-size:.85rem}
+  header.top nav{display:flex;gap:24px;align-items:center}
+  header.top nav a{color:var(--ink-2);text-decoration:none;font-size:.85rem;transition:color .15s;white-space:nowrap}
+  header.top nav a:hover{color:var(--accent)}
+  header.top nav .cta{
+    padding:7px 14px;border:1px solid var(--ink);border-radius:999px;
+    color:var(--ink);font-size:.8rem;
+  }
+  header.top nav .cta:hover{background:var(--ink);color:var(--paper)}
+
+  /* shared */
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    color:var(--muted);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;
+  }
+  .eyebrow::before{content:"";width:24px;height:1px;background:var(--muted)}
+  h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;
+     font-size:clamp(2.6rem,6vw,5.4rem);line-height:1.02;
+     letter-spacing:-.01em;margin:18px 0 28px;text-wrap:balance}
+  h1 em{font-style:italic;color:var(--accent)}
+  h2{font-family:"Instrument Serif",serif;font-weight:400;
+     font-size:clamp(1.9rem,3.6vw,2.8rem);margin:0;letter-spacing:-.01em;
+     text-wrap:balance}
+  h3{font-family:"Instrument Serif",serif;font-weight:400;
+     font-size:1.6rem;line-height:1.15;margin:0 0 10px;letter-spacing:-.01em;
+     text-wrap:balance}
+  .lede{max-width:62ch;font-size:1.12rem;color:var(--ink-2);line-height:1.55;text-wrap:pretty;margin:0}
+  .pill{font-family:"JetBrains Mono",monospace;font-size:.7rem;
+        padding:4px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--ink-2);
+        white-space:nowrap}
+  .pill.solid{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:10px;
+       padding:12px 22px;border-radius:999px;text-decoration:none;font-size:.9rem;
+       transition:gap .18s ease, background .15s, color .15s}
+  .btn-primary{background:var(--ink);color:var(--paper)}
+  .btn-primary:hover{gap:14px;background:var(--accent)}
+  .btn-ghost{border:1px solid var(--ink);color:var(--ink)}
+  .btn-ghost:hover{gap:14px;background:var(--ink);color:var(--paper)}
+  .link-arrow{display:inline-flex;align-items:center;gap:10px;
+              font-family:"JetBrains Mono",monospace;font-size:.72rem;text-transform:uppercase;
+              letter-spacing:.12em;color:var(--accent);text-decoration:none;
+              padding:6px 0;border-bottom:1px solid var(--accent);transition:gap .18s}
+  .link-arrow::after{content:"→"}
+  .link-arrow:hover{gap:14px}
+
+  section{border-bottom:1px solid var(--rule)}
+  .section-head{
+    display:flex;align-items:baseline;justify-content:space-between;gap:32px;
+    padding-bottom:20px;border-bottom:1px solid var(--rule);flex-wrap:wrap;
+  }
+  .section-head h2{flex:1 1 60%;min-width:0;max-width:24ch}
+  .section-head .count{color:var(--muted);font-size:.85rem;white-space:nowrap;flex-shrink:0}
+
+  /* HERO */
+  .hero{padding:120px 0 80px}
+  .hero .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+  .hero-meta{
+    margin-top:64px;display:grid;grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--rule);
+  }
+  .hero-meta div{padding:24px 24px 0 0;border-right:1px solid var(--rule)}
+  .hero-meta div:last-child{border-right:none}
+  .hero-meta .k{font-family:"Instrument Serif",serif;font-size:2.6rem;line-height:1}
+  .hero-meta .k small{font-size:1rem;color:var(--accent);font-style:italic;margin-left:2px}
+  .hero-meta .l{color:var(--muted);font-size:.78rem;margin-top:8px;text-transform:uppercase;letter-spacing:.1em}
+
+  /* POSITIONNEMENT */
+  .positionnement{padding:96px 0}
+  .positionnement .grid{
+    display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start;margin-top:48px;
+  }
+  .positionnement .grid p{margin:0 0 18px;color:var(--ink-2);font-size:1.05rem;line-height:1.65;text-wrap:pretty}
+  .positionnement .grid p:last-child{margin-bottom:0}
+  .positionnement .grid p b{color:var(--ink);font-weight:500}
+
+  /* EXPERTISE — 120 audits */
+  .expertise{padding:96px 0;background:var(--paper-2)}
+  .expertise .row{
+    display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:end;margin-top:48px;
+  }
+  .expertise .big{
+    font-family:"Instrument Serif",serif;
+    font-size:clamp(6rem,16vw,12rem);line-height:.9;letter-spacing:-.04em;
+    color:var(--ink);
+  }
+  .expertise .big em{font-style:italic;color:var(--accent);font-size:.6em;vertical-align:.15em}
+  .expertise .big-label{margin-top:14px;color:var(--muted);
+    font-family:"JetBrains Mono",monospace;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+  .expertise .desc p{margin:0 0 18px;color:var(--ink-2);font-size:1.05rem;line-height:1.6;text-wrap:pretty}
+  .expertise .sectors{
+    margin-top:48px;padding-top:32px;border-top:1px solid var(--rule);
+    display:grid;grid-template-columns:repeat(4,1fr);gap:32px 24px;
+  }
+  .expertise .sector .n{font-family:"Instrument Serif",serif;font-size:1.6rem;color:var(--ink);line-height:1}
+  .expertise .sector .l{color:var(--muted);font-size:.78rem;margin-top:8px;text-transform:uppercase;letter-spacing:.08em}
+
+  /* MÉTHODE */
+  .methode{padding:96px 0}
+  .methode .steps{
+    margin-top:48px;display:grid;grid-template-columns:repeat(5,1fr);gap:0;
+    border-top:1px solid var(--rule);
+  }
+  .methode .step{padding:32px 24px 32px 0;border-right:1px solid var(--rule)}
+  .methode .step:last-child{border-right:none}
+  .methode .step .num{
+    font-family:"Instrument Serif",serif;font-style:italic;color:var(--accent);
+    font-size:1.2rem;margin-bottom:14px;display:block;
+  }
+  .methode .step h4{
+    font-family:"Instrument Serif",serif;font-weight:400;font-size:1.3rem;
+    margin:0 0 10px;letter-spacing:-.01em;
+  }
+  .methode .step p{color:var(--ink-2);font-size:.92rem;line-height:1.55;margin:0;text-wrap:pretty}
+
+  /* CAS D'USAGE */
+  .cases{padding:96px 0;background:var(--paper-2)}
+  .case-list{margin-top:0}
+  .case{
+    display:grid;grid-template-columns:160px 1fr 200px;
+    gap:48px;padding:48px 0;border-bottom:1px solid var(--rule);align-items:start;
+  }
+  .case:last-of-type{border-bottom:none}
+  .case .idx{
+    font-family:"Instrument Serif",serif;font-style:italic;
+    font-size:2rem;color:var(--accent);line-height:1;
+  }
+  .case .idx .num{display:block;font-size:3.6rem;font-style:normal;color:var(--ink);letter-spacing:-.02em}
+  .case .tag{
+    display:inline-block;margin-top:18px;font-family:"JetBrains Mono",monospace;
+    font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);
+  }
+  .case h3{margin-bottom:12px}
+  .case .summary{color:var(--ink-2);font-size:1rem;line-height:1.6;margin:0;max-width:54ch;text-wrap:pretty}
+  .case .pill-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+  .stats{display:flex;flex-direction:column;gap:12px}
+  .stat{padding:14px 16px;background:var(--paper);border:1px solid var(--rule);border-radius:4px}
+  .stat .v{font-family:"Instrument Serif",serif;font-size:1.9rem;line-height:1;letter-spacing:-.01em}
+  .stat .v small{font-size:.95rem;color:var(--accent);font-style:italic;margin-left:2px}
+  .stat .lbl{color:var(--muted);font-size:.72rem;margin-top:6px;text-transform:uppercase;letter-spacing:.08em}
+  .cases-cta{display:flex;justify-content:center;margin-top:48px}
+
+  /* AUDIT EXPRESS — placeholder */
+  .audit{padding:96px 0}
+  .audit .grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:48px}
+  .audit .desc p{margin:0 0 18px;color:var(--ink-2);font-size:1.05rem;line-height:1.6;text-wrap:pretty}
+  .audit .desc ul{margin:24px 0 0;padding:0;list-style:none}
+  .audit .desc ul li{
+    padding:14px 0;border-bottom:1px solid var(--rule);
+    display:flex;gap:14px;align-items:baseline;color:var(--ink-2);font-size:.95rem;
+  }
+  .audit .desc ul li::before{
+    content:"→";color:var(--accent);font-family:"JetBrains Mono",monospace;
+  }
+  .audit .preview{
+    background:var(--paper-2);border:1px solid var(--rule);padding:32px;border-radius:6px;
+    min-height:340px;display:flex;flex-direction:column;justify-content:space-between;
+  }
+  .audit .preview .top{}
+  .audit .preview .pq{font-family:"Instrument Serif",serif;font-size:1.4rem;margin:12px 0 6px;line-height:1.2}
+  .audit .preview .ph{color:var(--muted);font-size:.85rem;margin:0 0 18px}
+  .audit .preview .opts{display:flex;flex-direction:column;gap:8px}
+  .audit .preview .opts span{
+    padding:10px 14px;background:var(--paper);border:1px solid var(--rule);border-radius:4px;
+    font-size:.9rem;color:var(--ink-2);
+  }
+  .audit .preview .bar{
+    height:3px;background:var(--rule);position:relative;border-radius:99px;overflow:hidden;
+  }
+  .audit .preview .bar::after{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:30%;background:var(--accent);
+  }
+  .audit .preview .meta{display:flex;justify-content:space-between;margin-top:14px;
+    font-family:"JetBrains Mono",monospace;font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+
+  /* BLOG */
+  .blog{padding:96px 0;background:var(--paper-2)}
+  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px}
+  .post{
+    background:var(--paper);border:1px solid var(--rule);padding:28px 28px 32px;
+    display:flex;flex-direction:column;text-decoration:none;color:inherit;
+    transition:transform .2s ease, border-color .15s;
+  }
+  .post:hover{transform:translateY(-2px);border-color:var(--ink-2)}
+  .post .cat{font-family:"JetBrains Mono",monospace;font-size:.7rem;
+    color:var(--accent);text-transform:uppercase;letter-spacing:.12em}
+  .post h4{font-family:"Instrument Serif",serif;font-weight:400;font-size:1.4rem;
+    line-height:1.2;margin:14px 0 12px;letter-spacing:-.01em;text-wrap:balance}
+  .post p{color:var(--ink-2);font-size:.92rem;line-height:1.55;margin:0 0 22px;flex:1}
+  .post .foot{display:flex;justify-content:space-between;color:var(--muted);font-size:.78rem;
+    padding-top:18px;border-top:1px solid var(--rule)}
+
+  /* CONTACT */
+  .contact{padding:120px 0 140px}
+  .contact .grid{display:grid;grid-template-columns:1.3fr 1fr;gap:64px;align-items:start;margin-top:48px}
+  .contact h2{font-size:clamp(2.4rem,5vw,4rem);letter-spacing:-.02em;line-height:1}
+  .contact .channels{display:flex;flex-direction:column;gap:24px}
+  .contact .ch{padding:20px 0;border-bottom:1px solid var(--rule)}
+  .contact .ch:last-child{border-bottom:none}
+  .contact .ch .l{color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;font-family:"JetBrains Mono",monospace}
+  .contact .ch .v{font-family:"Instrument Serif",serif;font-size:1.5rem;margin-top:8px;letter-spacing:-.01em}
+  .contact .ch .v a{text-decoration:none}
+  .contact .ch .v a:hover{color:var(--accent)}
+
+  /* FOOTER */
+  footer.site-foot{padding:48px 0 64px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule)}
+  footer.site-foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px}
+  footer.site-foot .note{max-width:62ch;line-height:1.55}
+  footer.site-foot .note b{color:var(--ink-2);font-weight:500}
+
+  /* RESPONSIVE */
+  @media (max-width: 900px){
+    .wrap{padding:0 24px}
+    .hero-meta{grid-template-columns:repeat(2,1fr)}
+    .hero-meta div{padding:18px 16px 0 0}
+    .positionnement .grid,.expertise .row,.audit .grid,.contact .grid{grid-template-columns:1fr;gap:32px}
+    .expertise .sectors{grid-template-columns:repeat(2,1fr)}
+    .methode .steps{grid-template-columns:1fr;gap:0}
+    .methode .step{border-right:none;border-bottom:1px solid var(--rule);padding:24px 0}
+    .methode .step:last-child{border-bottom:none}
+    .case{grid-template-columns:1fr;gap:24px;padding:36px 0}
+    .blog-grid{grid-template-columns:1fr}
+    header.top nav a:not(.cta){display:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="logo"></span><b>Altos</b></a>
+    <nav>
+      <a href="#positionnement">Approche</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#methode">Méthode</a>
+      <a href="#cas">Cas d'usage</a>
+      <a href="#audit">Audit express</a>
+      <a href="#blog">Blog</a>
+      <a class="cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ── HERO ─────────────────────────────────────── -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Altos · agence digitale pluridisciplinaire</span>
+      <h1>L'IA <em>au service</em> des PME, sans promesses creuses.</h1>
+      <p class="lede">
+        Conseil, automatisation, IA générative et accompagnement opérationnel. Nous concevons des solutions sur mesure, mesurées par des ROI réels, et nous transférons l'autonomie à vos équipes en 5 jours d'intervention.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#audit">Lancer mon audit express →</a>
+        <a class="btn btn-ghost" href="#cas">Voir nos cas d'usage →</a>
+      </div>
+
+      <div class="hero-meta">
+        <div><div class="k">120</div><div class="l">Audits réalisés</div></div>
+        <div><div class="k">+782 <small>%</small></div><div class="l">ROI moyen sur 12 mois</div></div>
+        <div><div class="k">5 j</div><div class="l">Format type d'une mission</div></div>
+        <div><div class="k">1 900 <small>€</small></div><div class="l">Reste à charge moyen</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── POSITIONNEMENT ───────────────────────────── -->
+  <section class="positionnement" id="positionnement">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Une agence pluridisciplinaire, focalisée PME.</h2>
+        <span class="count mono">01 / Positionnement</span>
+      </div>
+      <div class="grid">
+        <p class="lede">Là où d'autres vendent de la tech, nous vendons du temps gagné, des décisions plus fiables et des équipes plus autonomes.</p>
+        <div>
+          <p><b>Nous travaillons avec les PME et les organisations professionnelles</b> qui veulent passer de l'expérimentation IA aux usages installés, sans dépendre éternellement d'un prestataire.</p>
+          <p>Notre conviction : <b>la valeur ne vient pas de l'outil</b>, mais du processus métier qu'il automatise et de la capacité de l'équipe à le faire évoluer seule. Chaque mission Altos se termine par un transfert d'autonomie documenté — prompts, workflows, bibliothèques, formation.</p>
+          <p>Nous combinons quatre métiers sous un même toit : <b>conseil en automatisation</b>, <b>développement no-code et IA générative</b>, <b>SEO et contenus</b>, <b>data et veille</b>. Cette pluridisciplinarité est ce qui permet à une mission de 5 jours de livrer un système fonctionnel — et pas un slideware.</p>
+          <div style="margin-top:32px"><a class="link-arrow" href="#methode">Voir la méthode Altos</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERTISE ────────────────────────────────── -->
+  <section class="expertise" id="expertise">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>120 audits, 5 secteurs, une exigence : la preuve par les chiffres.</h2>
+        <span class="count mono">02 / Expertise</span>
+      </div>
+      <div class="row">
+        <div>
+          <div class="big">120<em>+</em></div>
+          <div class="big-label">Audits IA réalisés depuis 2023</div>
+        </div>
+        <div class="desc">
+          <p>Chaque audit Altos est conduit par un consultant senior, avec la rigueur d'un cabinet de conseil et la précision technique d'un studio no-code. Nos rapports sont chiffrés, sourcés, et orientés vers la décision — pas vers la consommation de slides.</p>
+          <p>Les missions présentées sur ce site sont issues de cette pratique. Elles ont toutes en commun une stack documentée, un ROI calculé, et un transfert d'autonomie effectif.</p>
+        </div>
+      </div>
+      <div class="sectors">
+        <div class="sector"><div class="n">Services à la personne</div><div class="l">Maintien à domicile · réseaux régionaux</div></div>
+        <div class="sector"><div class="n">Immobilier · foncier</div><div class="l">Aménagement · promotion</div></div>
+        <div class="sector"><div class="n">Recrutement</div><div class="l">Chasse de têtes · cadres dirigeants</div></div>
+        <div class="sector"><div class="n">Courtage B2B</div><div class="l">Énergie · services aux pros</div></div>
+        <div class="sector"><div class="n">Organisations pro.</div><div class="l">Bâtiment · artisanat</div></div>
+        <div class="sector"><div class="n">Conseil</div><div class="l">Cabinets indépendants</div></div>
+        <div class="sector"><div class="n">Marketing & com.</div><div class="l">Studios · indépendants</div></div>
+        <div class="sector"><div class="n">+ autres secteurs</div><div class="l">PME 5 à 200 collaborateurs</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MÉTHODE ──────────────────────────────────── -->
+  <section class="methode" id="methode">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Cinq jours, cinq étapes, un système qui tourne tout seul.</h2>
+        <span class="count mono">03 / Méthode</span>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="num">01</span>
+          <h4>Cadrage</h4>
+          <p>Diagnostic des processus, identification des gisements de productivité, priorisation des cas d'usage par ROI.</p>
+        </div>
+        <div class="step">
+          <span class="num">02</span>
+          <h4>Conception</h4>
+          <p>Architecture de la solution, choix de la stack, définition des prompts et des points de validation humaine.</p>
+        </div>
+        <div class="step">
+          <span class="num">03</span>
+          <h4>Déploiement</h4>
+          <p>Paramétrage des outils (n8n, Airtable, Lovable, RAG…), connexions API, tests sur cas réels.</p>
+        </div>
+        <div class="step">
+          <span class="num">04</span>
+          <h4>Formation</h4>
+          <p>Transfert de compétences au référent interne — prompts, supervision des workflows, maintenance courante.</p>
+        </div>
+        <div class="step">
+          <span class="num">05</span>
+          <h4>Mesure</h4>
+          <p>Bilan ROI documenté, recommandations d'évolution, plan d'extension à d'autres processus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CAS D'USAGE ──────────────────────────────── -->
+  <section class="cases" id="cas">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Cinq missions récentes, cinq métiers, des résultats mesurés.</h2>
+        <span class="count mono">04 / Cas d'usage · 2025–26</span>
+      </div>
+
+      <div class="case-list">
+
+        <article class="case">
+          <div class="idx"><span class="num">01</span>cas</div>
+          <div>
+            <span class="tag">Services à la personne · maintien à domicile</span>
+            <h3>Bilans annuels et bilans d'événements indésirables générés automatiquement</h3>
+            <p class="summary">Chaîne n8n + ChatGPT + OpenForm + WordPress qui transforme les données de formulaires en bilans structurés et alimente le blog en articles sourcés français.</p>
+            <div class="pill-row">
+              <span class="pill solid">n8n</span><span class="pill">ChatGPT</span>
+              <span class="pill">OpenForm</span><span class="pill">WordPress</span>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="v">5 h <small>→ 15 min</small></div><div class="lbl">Par bilan complet</div></div>
+            <div class="stat"><div class="v">1 186 <small>%</small></div><div class="lbl">ROI max / 200 clients</div></div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="idx"><span class="num">02</span>cas</div>
+          <div>
+            <span class="tag">Organisation professionnelle · artisans du bâtiment</span>
+            <h3>Un studio social no-code pour produire et planifier les contenus Facebook / Instagram</h3>
+            <p class="summary">Interface Lovable centralisant la génération de légendes, hashtags, visuels IA et la programmation Meta — utilisable par des collaborateurs non techniciens.</p>
+            <div class="pill-row">
+              <span class="pill solid">Lovable</span><span class="pill">Claude / GPT-4</span>
+              <span class="pill">DALL·E · Flux</span><span class="pill">Meta Graph API</span>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="v">30 min <small>→ 3 min</small></div><div class="lbl">Par publication</div></div>
+            <div class="stat"><div class="v">+42 <small>%</small></div><div class="lbl">ROI · amorti en 5 mois</div></div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="idx"><span class="num">03</span>cas</div>
+          <div>
+            <span class="tag">Aménagement foncier · promotion immobilière</span>
+            <h3>Comptes rendus de réunion, courriers, analyse de PLU : la pile IA d'une foncière régionale</h3>
+            <p class="summary">Noota pour les comptes rendus, Gemini pour la rédaction et l'analyse de PLU, création de Gems métiers — avec montée en compétence des équipes sur le prompting.</p>
+            <div class="pill-row">
+              <span class="pill solid">Noota</span><span class="pill">Gemini · Gems</span>
+              <span class="pill">Google Meet</span><span class="pill">Méthode ACTIF</span>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="v">1 h <small>→ 15 min</small></div><div class="lbl">Par compte rendu</div></div>
+            <div class="stat"><div class="v">2 284 <small>%</small></div><div class="lbl">ROI · 45 300 €/an</div></div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="idx"><span class="num">04</span>cas</div>
+          <div>
+            <span class="tag">Recrutement de cadres dirigeants · chasse de têtes</span>
+            <h3>Un agent IA qui qualifie les piges 24h/24 et ne remonte que les opportunités CODIR/COMEX</h3>
+            <p class="summary">Chaîne Apify → n8n → ChatGPT → Airtable qui scrape, nettoie, score et injecte les piges dans une base centrale, avec validation humaine sur les scores intermédiaires.</p>
+            <div class="pill-row">
+              <span class="pill solid">Apify</span><span class="pill">n8n</span>
+              <span class="pill">OpenAI API</span><span class="pill">Airtable</span>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="v">−70 <small>%</small></div><div class="lbl">Temps de sourcing</div></div>
+            <div class="stat"><div class="v">+695 <small>%</small></div><div class="lbl">ROI · amorti en 6,5 sem.</div></div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="idx"><span class="num">05</span>cas</div>
+          <div>
+            <span class="tag">Courtage en énergie · prospection B2B</span>
+            <h3>Un RAG interne et un agent Telegram qui scorent les prospects via Pappers et le BODACC</h3>
+            <p class="summary">Deux scénarios n8n : assistant conversationnel RAG (Supabase + Claude Sonnet) sur les documents internes, et agent Telegram interrogeant Pappers / BODACC avec scoring financier.</p>
+            <div class="pill-row">
+              <span class="pill solid">n8n self-hosted</span><span class="pill">Claude Sonnet</span>
+              <span class="pill">Supabase</span><span class="pill">Pappers · BODACC</span>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="v">−60 <small>%</small></div><div class="lbl">Temps d'analyse prospect</div></div>
+            <div class="stat"><div class="v">405 <small>%</small></div><div class="lbl">ROI · 9 600 €/an</div></div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="cases-cta">
+        <a class="btn btn-ghost" href="cas-usage.html">Lire les cas d'usage en détail →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── AUDIT EXPRESS ────────────────────────────── -->
+  <section class="audit" id="audit">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Audit express IA — 8 minutes, un rapport personnalisé.</h2>
+        <span class="count mono">05 / Audit express</span>
+      </div>
+      <div class="grid">
+        <div class="desc">
+          <p>Répondez à dix questions sur votre activité, votre stack actuelle et la tâche qui vous coûte le plus de temps. Notre chatbot consultant identifie vos opportunités d'automatisation et chiffre le ROI potentiel.</p>
+          <p>Vous recevez sous 24 h un rapport personnalisé : diagnostic, gains estimés, stack recommandée, roadmap 30 / 60 / 90 jours.</p>
+          <ul>
+            <li>Diagnostic synthétique de votre situation</li>
+            <li>Estimation chiffrée du ROI annuel</li>
+            <li>Trois recommandations prioritaires</li>
+            <li>Stack technique adaptée à vos contraintes</li>
+            <li>Créneau de 30 min offert avec un consultant</li>
+          </ul>
+          <div style="margin-top:32px"><a class="btn btn-primary" href="audit.html">Démarrer l'audit express →</a></div>
+        </div>
+        <div class="preview">
+          <div class="top">
+            <div class="bar"></div>
+            <div class="meta"><span>Étape 3 / 10</span><span>Audit Altos</span></div>
+            <div class="pq">Quelle est la tâche qui vous coûte le plus de temps aujourd'hui ?</div>
+            <div class="ph">Prospection, reporting, comptes rendus, devis…</div>
+            <div class="opts">
+              <span>Prospection commerciale</span>
+              <span>Reporting et bilans</span>
+              <span>Comptes rendus de réunion</span>
+              <span>Production de contenus</span>
+            </div>
+          </div>
+          <div style="text-align:right;margin-top:18px">
+            <span class="link-arrow" style="cursor:default">Continuer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BLOG ─────────────────────────────────────── -->
+  <section class="blog" id="blog">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Le journal Altos — retours d'expérience et méthodologie.</h2>
+        <span class="count mono">06 / Blog</span>
+      </div>
+      <div class="blog-grid">
+        <a class="post" href="#">
+          <span class="cat">Méthodologie</span>
+          <h4>Comment chiffrer le ROI d'une mission IA avant même de la lancer</h4>
+          <p>La méthode Altos pour évaluer la rentabilité potentielle d'un projet d'automatisation en moins d'une heure, sur la base de trois leviers mesurables.</p>
+          <div class="foot"><span>12 min de lecture</span><span>Mars 2026</span></div>
+        </a>
+        <a class="post" href="#">
+          <span class="cat">Retour d'expérience</span>
+          <h4>RAG, agents, workflows : trois architectures pour PME et quand les choisir</h4>
+          <p>Synthèse des choix techniques pris sur nos missions 2025/26. Quand un simple workflow n8n suffit, quand passer à un RAG, quand déployer un agent autonome.</p>
+          <div class="foot"><span>9 min de lecture</span><span>Février 2026</span></div>
+        </a>
+        <a class="post" href="#">
+          <span class="cat">Stack & outils</span>
+          <h4>n8n self-hosted : pourquoi nous le recommandons à nos PME en 2026</h4>
+          <p>Coûts, contrôle des données, RGPD, performances. Notre comparatif détaillé entre n8n cloud, n8n self-hosted, Make et Zapier, sur des workflows réels.</p>
+          <div class="foot"><span>11 min de lecture</span><span>Janvier 2026</span></div>
+        </a>
+      </div>
+      <div class="cases-cta" style="margin-top:48px">
+        <a class="btn btn-ghost" href="blog.html">Lire tous les articles →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ──────────────────────────────────── -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <span class="eyebrow">Démarrer un échange</span>
+      <h2 style="margin-top:18px">Un processus à automatiser ? Parlons-en.</h2>
+      <div class="grid">
+        <p class="lede">Premier échange de 30 minutes, sans engagement. Nous diagnostiquons votre besoin, nous estimons le ROI et nous vous disons honnêtement si une mission Altos est adaptée — ou pas.</p>
+        <div class="channels">
+          <div class="ch">
+            <div class="l">Email</div>
+            <div class="v"><a href="mailto:contact@altos.fr">contact@altos.fr</a></div>
+          </div>
+          <div class="ch">
+            <div class="l">Calendly</div>
+            <div class="v"><a href="#">Réserver un créneau de 30 min →</a></div>
+          </div>
+          <div class="ch">
+            <div class="l">Téléphone</div>
+            <div class="v">+33 (0)5 — à compléter</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="note">
+      <b>Altos —</b> Agence digitale pluridisciplinaire. Conseil, automatisation, IA générative et accompagnement opérationnel pour PME. Les chiffres présentés sur ce site sont issus de bilans réels anonymisés conformément au RGPD.
+    </div>
+    <div>
+      <div class="mono" style="color:var(--ink-2)">altos · 2025 / 2026</div>
+      <div style="margin-top:6px">contact@altos.fr</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

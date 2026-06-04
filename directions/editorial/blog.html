@@ -1,0 +1,978 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Journal · ALTOS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #fff;
+    --ink: #0a0a0a;
+    --ink-2: #2c2c2c;
+    --ink-3: #767676;
+    --line: #e2e2e2;
+    --paper: #f4f1ec;
+    --accent: #ff5b14;
+    --acid: #d9ff3c;
+    --display: "Fraunces", "Times New Roman", serif;
+    --sans: "Inter", system-ui, sans-serif;
+    --mono: "DM Mono", ui-monospace, monospace;
+    --anim: 1;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--ink); color: var(--acid); }
+
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+  .num { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.1em; text-transform: uppercase; }
+
+  /* ─── NAV ─── */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--bg);
+    border-bottom: 1px solid var(--ink);
+  }
+  .nav__inner {
+    display: grid; grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 18px 32px;
+    max-width: 1320px; margin: 0 auto;
+  }
+  .logo { font-family: var(--display); font-weight: 900; font-size: 22px; letter-spacing: -0.04em; }
+  .logo i { font-style: italic; color: var(--accent); }
+  .nav__links { display: flex; gap: 32px; justify-content: center; font-size: 14px; font-weight: 500; }
+  .nav__links a { color: var(--ink-2); transition: color .2s; }
+  .nav__links a:hover, .nav__links a.active { color: var(--ink); }
+  .nav__links a.active::after { content: ""; display: block; height: 2px; background: var(--accent); margin-top: 4px; }
+  .nav__cta { justify-self: end; display: flex; gap: 12px; align-items: center; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 22px;
+    font-size: 14px; font-weight: 500;
+    border: 1px solid var(--ink);
+    background: var(--ink); color: var(--bg);
+    transition: background .25s, color .25s;
+  }
+  .btn:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+
+  /* ─── HEADER ─── */
+  .head {
+    border-bottom: 1px solid var(--ink);
+    padding: 72px 0 56px;
+  }
+  .head__top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 32px;
+  }
+  .head__top .num span { color: var(--ink); font-weight: 600; }
+  .head h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(72px, 12vw, 180px);
+    line-height: 0.88;
+    letter-spacing: -0.04em;
+  }
+  .head h1 i { font-style: italic; }
+  .head h1 .acid { background: var(--acid); padding: 0 0.15em; }
+  .head__sub {
+    margin-top: 32px;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 60px; align-items: end;
+  }
+  .head__sub p {
+    font-size: 19px; line-height: 1.5;
+    color: var(--ink-2);
+    max-width: 540px;
+    text-wrap: pretty;
+  }
+  .head__stats {
+    display: flex; gap: 48px; justify-content: flex-end;
+    font-family: var(--mono); font-size: 12px;
+    color: var(--ink-3);
+  }
+  .head__stats strong { display: block; font-family: var(--display); font-weight: 400; font-size: 36px; color: var(--ink); margin-bottom: 4px; }
+
+  /* ─── FILTERS ─── */
+  .filt {
+    border-bottom: 1px solid var(--ink);
+    padding: 20px 0;
+    position: sticky; top: 60px; z-index: 40;
+    background: var(--bg);
+  }
+  .filt__inner {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 24px; flex-wrap: wrap;
+  }
+  .filt__chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip {
+    font-family: var(--sans); font-size: 13px; font-weight: 500;
+    padding: 8px 16px;
+    border: 1px solid var(--line);
+    background: var(--bg);
+    color: var(--ink-2);
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .chip:hover { border-color: var(--ink); }
+  .chip.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .filt__search {
+    display: flex; align-items: center; gap: 8px;
+    border-bottom: 1px solid var(--ink);
+    padding: 6px 0;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink-3);
+  }
+  .filt__search input {
+    border: 0; outline: 0; background: transparent;
+    font-family: inherit; font-size: inherit; color: var(--ink);
+    width: 180px;
+  }
+
+  /* ─── FEATURED ─── */
+  .feat {
+    border-bottom: 1px solid var(--ink);
+    padding: 64px 0;
+  }
+  .feat__inner {
+    display: grid; grid-template-columns: 1.3fr 1fr;
+    gap: 60px; align-items: center;
+  }
+  .feat__viz {
+    aspect-ratio: 4/3;
+    background: var(--ink);
+    position: relative;
+    overflow: hidden;
+  }
+  .feat__viz svg { width: 100%; height: 100%; display: block; }
+  .feat__viz .label {
+    position: absolute; top: 20px; left: 20px;
+    font-family: var(--mono); font-size: 11px;
+    color: var(--bg);
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .feat__viz .label::before {
+    content: "●"; color: var(--accent); margin-right: 6px;
+  }
+  .feat__body .num { margin-bottom: 16px; display: inline-block; }
+  .feat__body h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(40px, 4.5vw, 64px);
+    line-height: 1; letter-spacing: -0.03em;
+    margin-bottom: 24px;
+  }
+  .feat__body h2 i { font-style: italic; }
+  .feat__body p {
+    font-size: 17px; line-height: 1.6;
+    color: var(--ink-2);
+    margin-bottom: 24px;
+    text-wrap: pretty;
+  }
+  .feat__meta {
+    display: flex; gap: 24px; align-items: center;
+    font-family: var(--mono); font-size: 12px;
+    color: var(--ink-3);
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    margin-top: 32px;
+  }
+  .feat__meta .author { display: flex; align-items: center; gap: 8px; color: var(--ink); }
+  .avatar {
+    width: 28px; height: 28px;
+    background: var(--paper); border: 1px solid var(--ink);
+    display: grid; place-items: center;
+    font-family: var(--display); font-weight: 600; font-size: 13px;
+  }
+  .feat__cta {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 4px;
+    transition: gap .25s, color .25s, border-color .25s;
+  }
+  .feat__cta:hover { gap: 18px; color: var(--accent); border-color: var(--accent); }
+
+  /* ─── GRID ─── */
+  .list { padding: 64px 0 80px; border-bottom: 1px solid var(--ink); }
+  .list__head {
+    display: flex; justify-content: space-between; align-items: end;
+    margin-bottom: 40px;
+  }
+  .list__head h3 {
+    font-family: var(--display); font-weight: 400;
+    font-size: 48px; letter-spacing: -0.025em; line-height: 1;
+  }
+  .list__head h3 i { font-style: italic; }
+  .list__head .num { color: var(--ink-2); }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--ink);
+    border-left: 1px solid var(--ink);
+  }
+  .card {
+    border-right: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    background: var(--bg);
+    padding: 28px;
+    cursor: pointer;
+    transition: background .3s;
+    display: flex; flex-direction: column;
+    min-height: 440px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card:hover { background: var(--paper); }
+  .card__viz {
+    aspect-ratio: 16/10;
+    margin: -28px -28px 24px;
+    background: var(--paper);
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--ink);
+  }
+  .card__viz.v-ink { background: var(--ink); }
+  .card__viz.v-accent { background: var(--accent); }
+  .card__viz.v-acid { background: var(--acid); }
+  .card__viz svg { width: 100%; height: 100%; transition: transform .6s ease; }
+  .card:hover .card__viz svg { transform: scale(calc(1 + .04 * var(--anim))); }
+  .card__viz .lbl {
+    position: absolute; top: 14px; left: 14px;
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .card__viz.v-ink .lbl { color: var(--bg); }
+  .card__viz.v-accent .lbl, .card__viz.v-acid .lbl { color: var(--ink); }
+  .card__top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-family: var(--mono); font-size: 11px;
+    color: var(--ink-3);
+    margin-bottom: 12px;
+  }
+  .card__cat { color: var(--accent); font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; }
+  .card h4 {
+    font-family: var(--display); font-weight: 400;
+    font-size: 24px; line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin-bottom: 12px;
+    text-wrap: pretty;
+  }
+  .card h4 i { font-style: italic; }
+  .card p {
+    font-size: 14px; line-height: 1.55;
+    color: var(--ink-2);
+    margin-bottom: 20px;
+    text-wrap: pretty;
+  }
+  .card__foot {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--mono); font-size: 11px;
+    color: var(--ink-3);
+  }
+  .card__foot .author { display: flex; align-items: center; gap: 8px; color: var(--ink-2); }
+
+  /* Use case banner — wide cells */
+  .card--wide {
+    grid-column: span 2;
+    flex-direction: row;
+    min-height: 360px;
+  }
+  .card--wide .card__viz {
+    margin: -28px 32px -28px -28px;
+    width: 45%;
+    aspect-ratio: auto;
+    flex-shrink: 0;
+    border-bottom: 0;
+    border-right: 1px solid var(--ink);
+  }
+  .card--wide .card__body { flex: 1; display: flex; flex-direction: column; padding-top: 8px; }
+  .card--wide h4 { font-size: 32px; }
+  .card--wide p { font-size: 15px; }
+  .card--wide .badge {
+    display: inline-block;
+    font-family: var(--mono); font-size: 11px;
+    background: var(--acid); color: var(--ink);
+    padding: 4px 10px;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin-bottom: 14px;
+    align-self: flex-start;
+  }
+
+  /* ─── EXPERIENCES / NOTEBOOK ─── */
+  .notes {
+    padding: 80px 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--ink);
+  }
+  .notes__head {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 60px; align-items: end;
+    margin-bottom: 56px;
+  }
+  .notes__head h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(48px, 6vw, 88px);
+    line-height: 0.95; letter-spacing: -0.03em;
+  }
+  .notes__head h2 i { font-style: italic; }
+  .notes__head p { font-size: 17px; line-height: 1.55; color: var(--ink-2); max-width: 480px; }
+  .notes__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .note {
+    background: var(--bg);
+    border: 1px solid var(--ink);
+    padding: 28px;
+    cursor: pointer;
+    transition: transform .35s, box-shadow .35s;
+    display: flex; flex-direction: column; gap: 16px;
+    min-height: 320px;
+  }
+  .note:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--ink); }
+  .note__date {
+    font-family: var(--mono); font-size: 11px;
+    color: var(--ink-3);
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .note__author { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+  .note__author .role { color: var(--ink-3); }
+  .note h5 {
+    font-family: var(--display); font-weight: 400;
+    font-size: 22px; line-height: 1.2;
+    letter-spacing: -0.01em;
+    text-wrap: pretty;
+  }
+  .note h5 i { font-style: italic; }
+  .note p { font-size: 14px; line-height: 1.55; color: var(--ink-2); text-wrap: pretty; }
+  .note__tag {
+    margin-top: auto;
+    font-family: var(--mono); font-size: 11px; color: var(--accent);
+    text-transform: uppercase; letter-spacing: 0.06em;
+  }
+
+  /* ─── NEWSLETTER ─── */
+  .news {
+    padding: 100px 0;
+    background: var(--ink);
+    color: var(--bg);
+    border-bottom: 1px solid var(--ink);
+  }
+  .news__inner {
+    display: grid; grid-template-columns: 1.2fr 1fr;
+    gap: 80px; align-items: center;
+  }
+  .news h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(48px, 6vw, 88px);
+    line-height: 0.95; letter-spacing: -0.03em;
+  }
+  .news h2 i { font-style: italic; color: var(--accent); }
+  .news h2 .acid { background: var(--acid); color: var(--ink); padding: 0 0.15em; }
+  .news p { font-size: 16px; line-height: 1.6; color: #c9c9c9; max-width: 460px; margin-top: 16px; }
+  .news__form {
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .news__form label {
+    font-family: var(--mono); font-size: 11px; color: #c9c9c9;
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .news__row {
+    display: flex; gap: 0;
+    border-bottom: 1px solid var(--bg);
+    padding: 8px 0;
+  }
+  .news__row input {
+    flex: 1; background: transparent; border: 0; outline: 0;
+    color: var(--bg); font-family: var(--display); font-size: 20px;
+    padding: 8px 0;
+  }
+  .news__row input::placeholder { color: #767676; }
+  .news__row button {
+    background: var(--accent); color: var(--bg);
+    border: 0; padding: 0 28px;
+    font-family: var(--sans); font-weight: 500; font-size: 14px;
+    cursor: pointer;
+    transition: background .25s;
+  }
+  .news__row button:hover { background: var(--acid); color: var(--ink); }
+  .news__hint { font-size: 12px; color: #767676; font-family: var(--mono); }
+
+  /* ─── FOOTER ─── */
+  .foot {
+    background: var(--ink); color: var(--bg);
+    padding: 48px 0 24px;
+  }
+  .foot__inner {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #2c2c2c;
+  }
+  .foot__brand .logo { color: var(--bg); }
+  .foot__brand p { color: #c9c9c9; font-size: 14px; line-height: 1.55; max-width: 320px; margin-top: 16px; }
+  .foot h6 { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #c9c9c9; margin-bottom: 14px; }
+  .foot ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .foot ul a { font-size: 14px; color: var(--bg); transition: color .2s; }
+  .foot ul a:hover { color: var(--accent); }
+  .foot__bot {
+    padding-top: 20px;
+    font-family: var(--mono); font-size: 11px; color: #767676;
+    display: flex; justify-content: space-between;
+  }
+
+  .reveal { opacity: 0; transform: translateY(calc(20px * var(--anim))); transition: opacity .8s, transform .8s; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 960px) {
+    .head__sub, .feat__inner, .grid, .notes__grid, .news__inner, .foot__inner, .notes__head { grid-template-columns: 1fr; gap: 32px; }
+    .card--wide { grid-column: span 1; flex-direction: column; }
+    .card--wide .card__viz { margin: -28px -28px 20px; width: auto; border-right: 0; border-bottom: 1px solid var(--ink); aspect-ratio: 16/10; }
+    .head__stats { justify-content: flex-start; }
+    .nav__links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="logo">ALTOS<i>.</i></a>
+    <div class="nav__links">
+      <a href="index.html">Groupement</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#cases">Cas</a>
+      <a href="blog.html" class="active">Journal</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="nav__cta">
+      <a href="https://cal.com/altos/diagnostic-30min" class="btn">
+        Diagnostic 30 min
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HEAD -->
+<header class="head">
+  <div class="wrap">
+    <div class="head__top">
+      <span class="num">№ 01 · <span>Journal d'un groupement</span></span>
+      <span class="num">14 articles · 7 cas d'usage</span>
+    </div>
+    <h1 class="reveal">
+      Ce qu'on <i>apprend</i><br/>
+      sur le <span class="acid">terrain</span>,<br/>
+      on l'<i>écrit</i>.
+    </h1>
+    <div class="head__sub">
+      <p class="reveal">Chronique terrain d'un groupement : ce qu'on installe chez nos clients, ce qu'on apprend, ce qu'on rate, et ce qu'on referait demain. Pas de jargon, pas de listicles génériques — du concret, raconté par les artisans eux-mêmes.</p>
+      <div class="head__stats reveal">
+        <div><strong>14</strong>articles</div>
+        <div><strong>7</strong>cas d'usage</div>
+        <div><strong>4×/mois</strong>publication</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- FILTERS -->
+<section class="filt">
+  <div class="wrap filt__inner">
+    <div class="filt__chips">
+      <button class="chip active">Tout</button>
+      <button class="chip">Automatisation</button>
+      <button class="chip">Vibe coding</button>
+      <button class="chip">Sites web</button>
+      <button class="chip">SEO local</button>
+      <button class="chip">Coulisses</button>
+      <button class="chip">Cas d'usage</button>
+    </div>
+    <label class="filt__search">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="4"/><path d="M9 9l4 4"/></svg>
+      <input placeholder="Chercher…" />
+    </label>
+  </div>
+</section>
+
+<!-- FEATURED -->
+<section class="feat">
+  <div class="wrap feat__inner">
+    <div class="feat__viz reveal">
+      <span class="label">À la une · Cas d'usage</span>
+      <svg viewBox="0 0 400 300" fill="none" preserveAspectRatio="xMidYMid slice">
+        <rect width="400" height="300" fill="#0a0a0a"/>
+        <g transform="translate(50,60)">
+          <rect x="0" y="0" width="300" height="180" fill="#1a1a1a" stroke="#ff5b14" stroke-width="1.5"/>
+          <rect x="20" y="20" width="80" height="10" fill="#ff5b14"/>
+          <rect x="20" y="40" width="200" height="6" fill="#3a3a3a"/>
+          <rect x="20" y="55" width="160" height="6" fill="#3a3a3a"/>
+          <rect x="20" y="80" width="120" height="40" fill="#d9ff3c"/>
+          <text x="30" y="105" font-family="DM Mono" font-size="13" fill="#0a0a0a" font-weight="500">+24% MARGE</text>
+          <rect x="160" y="80" width="120" height="40" fill="none" stroke="#fff" stroke-width="1.5"/>
+          <text x="170" y="105" font-family="DM Mono" font-size="13" fill="#fff">−4h / JOUR</text>
+          <path d="M20 150 L60 130 L100 140 L140 110 L180 120 L220 80 L260 90 L280 70" stroke="#ff5b14" stroke-width="2" fill="none"/>
+          <circle cx="280" cy="70" r="4" fill="#ff5b14"/>
+        </g>
+      </svg>
+    </div>
+    <div class="feat__body reveal">
+      <span class="num">№ 01 · Cas d'usage · 10 min de lecture</span>
+      <h2>Boulangerie Toulouse : <i>10 jours</i> pour récupérer 4 heures par jour.</h2>
+      <p>Une boulangerie 4 personnes recevait 30 appels par jour pour des précommandes. On a installé une mini-app, branché la caisse, programmé des SMS de relance. Voilà comment, et ce qu'on a appris en route.</p>
+      <a href="article.html" class="feat__cta">
+        Lire l'enquête
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+      <div class="feat__meta">
+        <div class="author">
+          <div class="avatar">L</div>
+          <span>Léa Marchand — Automaticienne</span>
+        </div>
+        <span>14 avril 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GRID -->
+<section class="list">
+  <div class="wrap">
+    <div class="list__head">
+      <h3>Tous les <i>billets</i></h3>
+      <span class="num">14 articles · classés par date</span>
+    </div>
+    <div class="grid">
+
+      <!-- CARD 1 -->
+      <article class="card reveal">
+        <div class="card__viz v-accent">
+          <span class="lbl">Cas d'usage · Mécanique</span>
+          <svg viewBox="0 0 400 250" fill="none" preserveAspectRatio="xMidYMid slice">
+            <circle cx="120" cy="125" r="80" stroke="#0a0a0a" stroke-width="1.5" fill="none"/>
+            <circle cx="120" cy="125" r="40" stroke="#0a0a0a" stroke-width="1.5" fill="none"/>
+            <path d="M120 45 L120 205 M40 125 L200 125 M70 75 L170 175 M170 75 L70 175" stroke="#0a0a0a" stroke-width="1.5"/>
+            <text x="260" y="130" font-family="Fraunces" font-size="42" font-style="italic" fill="#0a0a0a">62%</text>
+            <text x="260" y="150" font-family="DM Mono" font-size="10" fill="#0a0a0a">RDV NUIT</text>
+          </svg>
+        </div>
+        <div class="card__top">
+          <span class="card__cat">Cas d'usage</span>
+          <span>02 avr.</span>
+        </div>
+        <h4>L'agent IA qui prend les RDV pendant qu'<i>on dort</i>.</h4>
+        <p>Un atelier mécanique perdait ses prospects du soir. On a branché un bot qui qualifie, propose et confirme. 62% des RDV pris hors horaires.</p>
+        <div class="card__foot">
+          <div class="author">
+            <div class="avatar" style="width:22px;height:22px;font-size:11px;">T</div>
+            <span>Théo Martin</span>
+          </div>
+          <span>7 min</span>
+        </div>
+      </article>
+
+      <!-- CARD 2 -->
+      <article class="card reveal">
+        <div class="card__viz">
+          <span class="lbl">Méthode · Automatisation</span>
+          <svg viewBox="0 0 400 250" fill="none" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#f4f1ec"/>
+            <g transform="translate(40,40)" stroke="#0a0a0a" stroke-width="1.5">
+              <rect x="0" y="0" width="80" height="50" fill="#fff"/>
+              <rect x="0" y="80" width="80" height="50" fill="#fff"/>
+              <rect x="0" y="160" width="80" height="50" fill="#fff"/>
+              <rect x="240" y="80" width="80" height="50" fill="#ff5b14"/>
+              <path d="M80 25 L240 105 M80 105 L240 105 M80 185 L240 105" stroke="#0a0a0a"/>
+              <circle cx="80" cy="25" r="3" fill="#0a0a0a"/>
+              <circle cx="80" cy="105" r="3" fill="#0a0a0a"/>
+              <circle cx="80" cy="185" r="3" fill="#0a0a0a"/>
+              <path d="M240 105 L320 105" stroke="#ff5b14" stroke-width="2"/>
+              <path d="M315 100 L320 105 L315 110" stroke="#ff5b14" stroke-width="2" fill="none"/>
+            </g>
+          </svg>
+        </div>
+        <div class="card__top">
+          <span class="card__cat">Automatisation</span>
+          <span>28 mars</span>
+        </div>
+        <h4>5 tâches qu'une TPE peut <i>automatiser dès demain</i>, sans coder.</h4>
+        <p>Devis, relances, planning, stock, facturation. Cinq cas concrets avec les outils, les coûts, et le temps gagné mesuré.</p>
+        <div class="card__foot">
+          <div class="author">
+            <div class="avatar" style="width:22px;height:22px;font-size:11px;">L</div>
+            <span>Léa Marchand</span>
+          </div>
+          <span>8 min</span>
+        </div>
+      </article>
+
+      <!-- CARD 3 -->
+      <article class="card reveal">
+        <div class="card__viz v-ink">
+          <span class="lbl">Coulisses</span>
+          <svg viewBox="0 0 400 250" fill="none" preserveAspectRatio="xMidYMid slice">
+            <text x="40" y="80" font-family="Fraunces" font-size="60" font-style="italic" fill="#fff">on</text>
+            <text x="40" y="150" font-family="Fraunces" font-size="60" font-style="italic" fill="#d9ff3c">s'est</text>
+            <text x="40" y="220" font-family="Fraunces" font-size="60" font-style="italic" fill="#fff">trompés.</text>
+            <line x1="40" y1="50" x2="360" y2="50" stroke="#ff5b14" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="card__top">
+          <span class="card__cat">Coulisses</span>
+          <span>21 mars</span>
+        </div>
+        <h4>Le projet qu'on a <i>refusé</i> au dernier moment.</h4>
+        <p>Un client voulait automatiser un process humain qui marchait très bien. On a dit non. Pourquoi, et ce qu'on a appris à savoir refuser.</p>
+        <div class="card__foot">
+          <div class="author">
+            <div class="avatar" style="width:22px;height:22px;font-size:11px;">A</div>
+            <span>Alex Rivière</span>
+          </div>
+          <span>6 min</span>
+        </div>
+      </article>
+
+      <!-- WIDE BANNER: USE CASE COLLECTION -->
+      <article class="card card--wide reveal">
+        <div class="card__viz v-acid">
+          <span class="lbl">Recueil · 12 cas d'usage</span>
+          <svg viewBox="0 0 400 300" fill="none" preserveAspectRatio="xMidYMid slice">
+            <text x="40" y="80" font-family="Fraunces" font-size="80" font-weight="400" fill="#0a0a0a">12</text>
+            <text x="40" y="120" font-family="Fraunces" font-size="32" font-style="italic" fill="#0a0a0a">terrains</text>
+            <text x="40" y="160" font-family="DM Mono" font-size="14" fill="#0a0a0a" letter-spacing="2">RÉSULTATS CHIFFRÉS</text>
+            <g stroke="#0a0a0a" stroke-width="1.5" transform="translate(180,200)">
+              <rect x="0" y="-40" width="30" height="40"/>
+              <rect x="40" y="-60" width="30" height="60"/>
+              <rect x="80" y="-30" width="30" height="30"/>
+              <rect x="120" y="-80" width="30" height="80" fill="#ff5b14"/>
+              <rect x="160" y="-50" width="30" height="50"/>
+            </g>
+          </svg>
+        </div>
+        <div class="card__body">
+          <span class="badge">Recueil · à télécharger</span>
+          <div class="card__top">
+            <span class="card__cat">Cas d'usage</span>
+            <span>Mis à jour 02 mai 2026</span>
+          </div>
+          <h4>Le carnet <i>terrain</i> : 12 missions, 12 résultats chiffrés, racontés sans filtre.</h4>
+          <p>Boulangerie, paysagiste, cabinet comptable, fleuriste, garage, restaurant, atelier de couture… Chaque cas raconte le problème, la solution, le coût, le délai, le résultat mesuré — et ce qu'on referait différemment.</p>
+          <div class="card__foot">
+            <div class="author">
+              <div class="avatar" style="width:22px;height:22px;font-size:11px;">★</div>
+              <span>Le groupement</span>
+            </div>
+            <span>PDF · 38 pages · gratuit</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 5 -->
+      <article class="card reveal">
+        <div class="card__viz">
+          <span class="lbl">SEO local</span>
+          <svg viewBox="0 0 400 250" fill="none" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#f4f1ec"/>
+            <g transform="translate(40,40)">
+              <text x="0" y="40" font-family="Fraunces" font-size="80" font-weight="400" fill="#0a0a0a">8</text>
+              <text x="70" y="40" font-family="DM Mono" font-size="20" fill="#767676">→</text>
+              <text x="110" y="40" font-family="Fraunces" font-size="80" font-weight="400" fill="#ff5b14">1</text>
+              <text x="0" y="80" font-family="DM Mono" font-size="13" fill="#0a0a0a" letter-spacing="2">RANK GOOGLE · 3 MOIS</text>
+              <path d="M0 130 Q60 120 120 110 T240 80 T320 60" stroke="#0a0a0a" stroke-width="2" fill="none"/>
+              <circle cx="320" cy="60" r="5" fill="#ff5b14"/>
+            </g>
+          </svg>
+        </div>
+        <div class="card__top">
+          <span class="card__cat">SEO local</span>
+          <span>15 mars</span>
+        </div>
+        <h4>Du <i>8ᵉ</i> au <i>1ᵉʳ</i> sur Google : ce qu'on a fait pour ce paysagiste breton.</h4>
+        <p>Refonte légère du site, fiche Google My Business, 12 articles ciblés. Pas de magie, juste de la méthode et des résultats.</p>
+        <div class="card__foot">
+          <div class="author">
+            <div class="avatar" style="width:22px;height:22px;font-size:11px;">M</div>
+            <span>Marc Petitjean</span>
+          </div>
+          <span>12 min</span>
+        </div>
+      </article>
+
+      <!-- CARD 6 -->
+      <article class="card reveal">
+        <div class="card__viz v-accent">
+          <span class="lbl">Vibe coding · Méthode</span>
+          <svg viewBox="0 0 400 250" fill="none" preserveAspectRatio="xMidYMid slice">
+            <g transform="translate(30,40)" font-family="DM Mono" font-size="13" fill="#0a0a0a">
+              <text x="0" y="0">function ship() {</text>
+              <text x="20" y="22">const idea = brief()</text>
+              <text x="20" y="44">const v1 = build(idea)</text>
+              <text x="20" y="66">return demo(v1)</text>
+              <text x="0" y="88">}</text>
+              <text x="0" y="130" font-style="italic" font-family="Fraunces" font-size="32">10 jours.</text>
+              <text x="0" y="165" font-family="DM Mono" font-size="13">Pas 10 mois.</text>
+            </g>
+          </svg>
+        </div>
+        <div class="card__top">
+          <span class="card__cat">Vibe coding</span>
+          <span>08 mars</span>
+        </div>
+        <h4>Pourquoi votre prochain outil interne sera une <i>appli sur-mesure</i>.</h4>
+        <p>Excel ne suit plus. Notion craque aux entournures. Voici quand passer au sur-mesure — et comment éviter de payer 50 000 € pour ça.</p>
+        <div class="card__foot">
+          <div class="author">
+            <div class="avatar" style="width:22px;height:22px;font-size:11px;">N</div>
+            <span>Nadia Bensaïd</span>
+          </div>
+          <span>6 min</span>
+        </div>
+      </article>
+
+      <!-- CARD 7 -->
+      <article class="card reveal">
+        <div class="card__viz">
+          <span class="lbl">Cas d'usage · Compta</span>
+          <svg viewBox="0 0 400 250" fill="none" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#f4f1ec"/>
+            <text x="40" y="100" font-family="Fraunces" font-size="80" font-weight="400" fill="#0a0a0a">×3</text>
+            <text x="40" y="135" font-family="DM Mono" font-size="13" fill="#0a0a0a" letter-spacing="2">VOLUME TRAITÉ</text>
+            <g transform="translate(40,160)" stroke="#0a0a0a" stroke-width="1.5">
+              <rect x="0" y="0" width="60" height="30"/>
+              <text x="10" y="20" font-family="DM Mono" font-size="11" fill="#0a0a0a">CRM</text>
+              <path d="M60 15 L140 15" stroke="#ff5b14" stroke-width="2"/>
+              <path d="M135 10 L140 15 L135 20" stroke="#ff5b14" stroke-width="2" fill="none"/>
+              <rect x="140" y="0" width="60" height="30" fill="#ff5b14"/>
+              <text x="148" y="20" font-family="DM Mono" font-size="11" fill="#fff">n8n</text>
+              <path d="M200 15 L280 15" stroke="#0a0a0a" stroke-width="1.5"/>
+              <rect x="280" y="0" width="60" height="30"/>
+              <text x="290" y="20" font-family="DM Mono" font-size="11" fill="#0a0a0a">PDF</text>
+            </g>
+          </svg>
+        </div>
+        <div class="card__top">
+          <span class="card__cat">Cas d'usage</span>
+          <span>28 fév.</span>
+        </div>
+        <h4>Le cabinet comptable qui sort un devis en <i>90 secondes</i>.</h4>
+        <p>Workflow n8n branché au CRM. Plus de copier-coller, plus d'oublis. Volume traité ×3 en deux mois.</p>
+        <div class="card__foot">
+          <div class="author">
+            <div class="avatar" style="width:22px;height:22px;font-size:11px;">L</div>
+            <span>Léa Marchand</span>
+          </div>
+          <span>5 min</span>
+        </div>
+      </article>
+
+      <!-- CARD 8 -->
+      <article class="card reveal">
+        <div class="card__viz v-ink">
+          <span class="lbl">Coulisses</span>
+          <svg viewBox="0 0 400 250" fill="none" preserveAspectRatio="xMidYMid slice">
+            <g font-family="Fraunces" font-style="italic" fill="#fff">
+              <text x="40" y="80" font-size="38">«&nbsp;C'est quoi</text>
+              <text x="40" y="125" font-size="38" fill="#d9ff3c">un groupement</text>
+              <text x="40" y="170" font-size="38">au juste ?&nbsp;»</text>
+            </g>
+            <text x="40" y="215" font-family="DM Mono" font-size="12" fill="#767676">— UN CLIENT, EN VISIO</text>
+          </svg>
+        </div>
+        <div class="card__top">
+          <span class="card__cat">Coulisses</span>
+          <span>14 fév.</span>
+        </div>
+        <h4>Le <i>groupement</i>, en pratique : ce que ça change pour vous.</h4>
+        <p>Une gouvernance partagée, des artisans engagés sur la durée. On vous explique concrètement comment ça change la façon dont on travaille — et la valeur que ça vous apporte.</p>
+        <div class="card__foot">
+          <div class="author">
+            <div class="avatar" style="width:22px;height:22px;font-size:11px;">★</div>
+            <span>Le groupement</span>
+          </div>
+          <span>4 min</span>
+        </div>
+      </article>
+
+      <!-- CARD 9 -->
+      <article class="card reveal">
+        <div class="card__viz">
+          <span class="lbl">Sites web · Méthode</span>
+          <svg viewBox="0 0 400 250" fill="none" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#f4f1ec"/>
+            <g transform="translate(40,30)" stroke="#0a0a0a">
+              <rect x="0" y="0" width="320" height="180" fill="#fff" stroke-width="1.5"/>
+              <rect x="0" y="0" width="320" height="20" fill="#0a0a0a"/>
+              <rect x="20" y="40" width="120" height="14" fill="#ff5b14"/>
+              <rect x="20" y="64" width="200" height="8" fill="#e2e2e2"/>
+              <rect x="20" y="80" width="180" height="8" fill="#e2e2e2"/>
+              <rect x="20" y="110" width="80" height="30" fill="#d9ff3c"/>
+              <rect x="220" y="40" width="80" height="100" fill="#f4f1ec" stroke-width="1.5"/>
+            </g>
+          </svg>
+        </div>
+        <div class="card__top">
+          <span class="card__cat">Sites web</span>
+          <span>02 fév.</span>
+        </div>
+        <h4>3 semaines pour un site de fleuriste qui <i>convertit</i>.</h4>
+        <p>Brief, design, dev, contenus, SEO, formation. Trois semaines, prix fixe, démo chaque vendredi. La méthode qu'on applique aussi chez vous.</p>
+        <div class="card__foot">
+          <div class="author">
+            <div class="avatar" style="width:22px;height:22px;font-size:11px;">N</div>
+            <span>Nadia Bensaïd</span>
+          </div>
+          <span>9 min</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCES NOTEBOOK -->
+<section class="notes">
+  <div class="wrap">
+    <div class="notes__head">
+      <div>
+        <span class="num reveal">Carnet du groupement</span>
+        <h2 class="reveal" style="margin-top:16px">Petites notes,<br/>vrais <i>terrains</i>.</h2>
+      </div>
+      <p class="reveal">Brèves de mission. Ce qu'on observe chez les TPE, ce qu'on bricole, ce qui marche, ce qui ne marche pas. Format court, ton direct.</p>
+    </div>
+
+    <div class="notes__grid">
+      <article class="note reveal">
+        <span class="note__date">07 mai 2026</span>
+        <div class="note__author">
+          <div class="avatar">L</div>
+          <div><strong>Léa M.</strong> · <span class="role">Automatisation</span></div>
+        </div>
+        <h5>Le client ne veut <i>pas</i> qu'on automatise tout — et il a raison.</h5>
+        <p>Pendant un cadrage chez un cabinet d'avocats, on a identifié 8 tâches automatisables. La cliente en a coché 3. On a installé 3. Le reste, elle veut continuer à le faire à la main. Pourquoi c'est la bonne décision.</p>
+        <span class="note__tag">Terrain · Coulisses</span>
+      </article>
+
+      <article class="note reveal">
+        <span class="note__date">02 mai 2026</span>
+        <div class="note__author">
+          <div class="avatar">T</div>
+          <div><strong>Théo M.</strong> · <span class="role">Vibe coding</span></div>
+        </div>
+        <h5>Trois questions à poser avant d'écrire <i>la première ligne</i> de code.</h5>
+        <p>1) Qui ouvre cet outil le lundi matin ? 2) Que fait-il actuellement sans l'outil ? 3) Si on supprime l'outil dans 1 an, qu'est-ce qui casse ? La réponse à 3 décide tout le reste.</p>
+        <span class="note__tag">Méthode</span>
+      </article>
+
+      <article class="note reveal">
+        <span class="note__date">28 avril 2026</span>
+        <div class="note__author">
+          <div class="avatar">M</div>
+          <div><strong>Marc P.</strong> · <span class="role">SEO local</span></div>
+        </div>
+        <h5>Une fiche Google bien remplie vaut <i>3 articles</i> de blog.</h5>
+        <p>On a fait le calcul sur 14 clients : ratio temps investi / appels entrants généré, la fiche Google My Business gagne à plate couture. Voici ce qu'on coche systématiquement.</p>
+        <span class="note__tag">SEO local · Méthode</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="news">
+  <div class="wrap news__inner">
+    <div>
+      <h2 class="reveal">
+        Un email par mois,<br/>
+        <i>zéro</i> <span class="acid">spam</span>.
+      </h2>
+      <p class="reveal">Le meilleur du journal, plus un cas d'usage exclusif qu'on ne publie pas ici. Pour dirigeants pressés qui veulent voir ce qui marche ailleurs.</p>
+    </div>
+    <form class="news__form reveal" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('.news__hint').textContent='Merci ! On vous écrit le 1er du mois.';">
+      <label>Votre email professionnel</label>
+      <div class="news__row">
+        <input type="email" placeholder="prenom@boulangerie.fr" required />
+        <button type="submit">S'inscrire</button>
+      </div>
+      <span class="news__hint">Désabonnement en 1 clic. Aucun partage tiers.</span>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__inner">
+      <div class="foot__brand">
+        <a href="index.html" class="logo">ALTOS<i>.</i></a>
+        <p>Groupement d'experts métiers et ambassadeurs IA, au service des TPE et PME françaises.</p>
+      </div>
+      <div>
+        <h6>Groupement</h6>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#cases">Cas clients</a></li>
+          <li><a href="blog.html">Journal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Services</h6>
+        <ul>
+          <li><a href="#">Automatisation</a></li>
+          <li><a href="#">Vibe coding</a></li>
+          <li><a href="#">Sites internet</a></li>
+          <li><a href="#">SEO local</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Contact</h6>
+        <ul>
+          <li><a href="https://cal.com/altos/diagnostic-30min">Diagnostic 30 min</a></li>
+          <li><a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__bot">
+      <span>© 2026 ALTOS — Groupement · Toute la France</span>
+      <span>Mentions · Confidentialité</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in'), Math.min(i * 40, 240));
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Filter chips (visual only)
+  document.querySelectorAll('.chip').forEach(c => {
+    c.addEventListener('click', () => {
+      document.querySelectorAll('.chip').forEach(x => x.classList.remove('active'));
+      c.classList.add('active');
+    });
+  });
+
+  // Animation intensity from parent
+  window.addEventListener('message', (e) => {
+    if (e.data && e.data.type === 'set-anim') {
+      document.documentElement.style.setProperty('--anim', e.data.value);
+    }
+  });
+</script>
+</body>
+</html>

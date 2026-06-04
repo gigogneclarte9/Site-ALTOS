@@ -1,0 +1,955 @@
+3746978-76314600906541-66802000-397620-76464000
+
+-8022230077800
+
+Synthèse Audit Flash IA 
+
+NOM DE L’ENTREPRISE : VISUAL FACTORY
+
+NUMERO DE DOSSIER : 
+
+NOM DU CONSEILLER OPCO : Lydia PUECH
+
+Durée de l’accompagnement en jours :
+
+Dates d’intervention
+
+Signatures
+
+Dates de RDV
+
+Entreprise
+
+Le Cercle des Entrepreneurs
+
+Réunion de cadrage : 
+
+25 mars 2026
+
+Diagnostic des pratiques : 
+
+06 mai 2026
+
+Préconisations / Plan d’action :
+
+11 mai 2026
+
+												Sommaire
+
+		 TOC \o "1-3" \h \z \u I.	Résumé	 PAGEREF _Toc185617509 \h 3
+
+		II.	Contexte de l’entreprise	 PAGEREF _Toc185617510 \h 4
+
+		i.	Historique et activité	 PAGEREF _Toc185617511 \h 4
+
+		ii.	Structure organisationnelle	 PAGEREF _Toc185617512 \h 4
+
+		III.	Diagnostic des pratiques IA	 PAGEREF _Toc185617513 \h 7
+
+		iii.	Processus Métier	 PAGEREF _Toc185617514 \h 7
+
+		
+
+		iv.	Compétences et ressources	 PAGEREF _Toc185617521 \h 10
+
+		v.	Données et sécurité	 PAGEREF _Toc185617522 \h 11
+
+		vi.	Organisation	 PAGEREF _Toc185617523 \h 12
+
+		vii.	Cadre réglementaire	 PAGEREF _Toc185617524 \h 12
+
+		IV.	Cas d’usage IA et accompagnement préconisés	 PAGEREF _Toc185617525 \h 14
+
+		V.	Synthèse et plan d’action	 PAGEREF _Toc185617526 \h 18
+
+	Synthèse graphique	 PAGEREF _Toc185617527 \h 18
+
+		VI.	SWOT	 PAGEREF _Toc185617528 \h 19
+
+		VII.	Plan d’action détaillé	 PAGEREF _Toc185617529 \h 20
+
+	Résumé
+
+VISUEL FACTORY dispose déjà d’un socle numérique structuré autour de FRESH, qui centralise les devis, commandes, factures, étapes de production et plannings. L’entreprise utilise également des outils spécialisés comme SWITCH, CALLAS PDF Toolbox et PRIMECENTER, ce qui montre une première maturité dans l’automatisation des flux de production.
+
+L’audit met en évidence un potentiel important d’optimisation par l’IA, notamment sur l’exploitation des données commerciales, le suivi des devis, le traitement des emails, la production de contenus marketing et le pilotage de l’activité. L’usage de LIMOVA a permis une première approche de l’IA, mais l’outil ne répond aujourd’hui que partiellement aux besoins, principalement via le chatbot du site internet.
+
+Les principaux cas d’usage proposés sont :
+
+Automatiser les relances commerciales à partir des devis et données FRESH.
+
+Créer des campagnes emailing personnalisées selon les profils et historiques clients.
+
+Assister le traitement des emails pour résumer, prioriser et rédiger les réponses.
+
+Mettre en place un assistant IA pour le dirigeant afin de faciliter agenda, tâches et emails.
+
+Valoriser les réalisations en contenus marketing : posts, articles, newsletters ou vidéos courtes.
+
+Créer des tableaux de bord dynamiques connectés aux données FRESH.
+
+Optimiser ou remplacer progressivement LIMOVA, tout en conservant la fonction chatbot utile.
+
+L’accompagnement devra rester pragmatique : sensibilisation aux usages IA, choix des priorités, ateliers de co-construction, puis mise en œuvre de scénarios Make ou n8n avec les référents internes. L’objectif est de produire des gains rapides, sécurisés et directement utiles à l’activité commerciale, administrative et organisationnelle de VISUEL FACTORY.
+
+	Contexte de l’entreprise
+
+	Historique et activité
+
+VISUEL FACTORY est une entreprise créée en 1998 et reprise en 2013 par deux associés co-gérants, Pascal BELOT et Guillaume LADET. Au moment du rachat, l’entreprise réalisait environ 400 K€ de chiffre d’affaires avec une équipe de 3 salariés. Elle a depuis connu une progression significative, pour atteindre aujourd’hui environ 1,5 M€ de chiffre d’affaires et un effectif de 11,5 personnes, dirigeant inclus.
+
+L’entreprise est implantée à Montpellier et intervient principalement sur le territoire de l’ancien Languedoc, qui représente environ 80 % de son activité. Son modèle économique repose sur une clientèle exclusivement BtoB, composée d’un portefeuille annuel d’environ 400 clients, avec un volume opérationnel important d’environ 250 commandes à gérer chaque mois. Une partie complémentaire de l’activité, représentant environ 17 % du chiffre d’affaires, est réalisée en sous-traitance pour un site internet.
+
+L’activité de VISUEL FACTORY s’inscrit dans le secteur de la communication visuelle, avec une chaîne de valeur complète intégrant la relation commerciale, le chiffrage, la préparation graphique, la mise en production, la fabrication en atelier et la pose chez les clients. Cette organisation implique une forte coordination entre les fonctions commerciales, le bureau d’étude, la production, les poseurs et l’administration
+
+	Structure organisationnelle
+
+L’organisation de VISUEL FACTORY repose sur une équipe resserrée, structurée autour des principales étapes du processus métier : commercialisation, étude technique, production, pose et gestion administrative.
+
+La fonction commerciale est assurée par une personne dédiée, avec l’appui direct de Pascal BELOT, dirigeant de l’entreprise. Cette organisation traduit une implication forte de la direction dans la relation client, le développement commercial et le suivi des opportunités.
+
+Le bureau d’étude regroupe les compétences nécessaires au chiffrage, à la préparation des dossiers et à la mise en production. Il est composé de deux chiffreurs, chargés d’analyser les demandes clients, d’établir les devis et de préparer les éléments nécessaires au lancement des commandes. Une graphiste intervient également sur la préparation graphique des fichiers et leur adaptation aux exigences de production.
+
+L’atelier de production compte quatre personnes. Il constitue le cœur opérationnel de l’entreprise, en charge de la fabrication des supports de communication visuelle selon les contraintes techniques, les délais et les standards de qualité attendus.
+
+La pose est assurée par deux collaborateurs spécialisés, chargés de l’installation des productions chez les clients. Cette fonction représente un maillon essentiel de la qualité de service, car elle matérialise la prestation finale et conditionne directement la satisfaction client.
+
+Enfin, l’entreprise dispose d’une assistante administrative à mi-temps, sur une base de 20 heures hebdomadaires. Elle intervient sur les tâches administratives et contribue également à l’animation des réseaux sociaux.
+
+Environnement numérique et outils utilisés
+
+VISUEL FACTORY dispose d’un environnement numérique déjà structuré autour d’outils métiers, bureautiques, graphiques et de production.
+
+L’entreprise utilise FRESH, un outil métier construit sur une base Dolibarr, qui centralise la gestion des devis, des commandes et des factures. Il permet également de suivre les différentes étapes de mise en production, avec une planification associée à chaque phase du processus jusqu’à la pose chez le client.
+
+Les équipes s’appuient également sur le Pack Office Microsoft, notamment Outlook, Word, Excel et Teams, pour les usages bureautiques, la messagerie et la collaboration. La suite Adobe est utilisée pour les travaux graphiques. Le stockage et la gestion documentaire reposent sur Dropbox, un serveur interne Microsoft, un système de sauvegarde et un NAS.
+
+Pour les opérations techniques liées à la production, l’entreprise utilise plusieurs outils spécialisés. CALLAS PDF Toolbox intervient dans le traitement des fichiers PDF. SWITCH permet d’automatiser une partie du flux de production en récupérant des éléments issus du CRM, en déclenchant des traitements numériques via CALLAS, puis en transmettant les fichiers vers la production avec des envois automatiques de mails. PRIMECENTER est utilisé pour l’amalgame des fichiers et l’organisation de la production par type de support.
+
+Sur le volet communication et intelligence artificielle, l’entreprise a souscrit un abonnement à LIMOVA, qui propose différents agents IA spécialisés : RH, finances, marketing, comptabilité et assistant personnel. Dans la pratique, l’usage de cette solution s’est réduit au fil du temps. L’outil est aujourd’hui principalement utilisé pour faire fonctionner le chatbot connecté au site internet. L’agent IA marketing, initialement testé, n’est plus utilisé car il ne répond pas suffisamment aux attentes de l’entreprise, notamment pour la création de vidéos, la rédaction d’articles ou de publications très personnalisées, ainsi que pour la connexion à des ressources internes telles que les photos issues de WhatsApp ou les projets réalisés dans FRESH.
+
+L’entreprise identifie plusieurs besoins d’amélioration autour de ses usages numériques et IA. Sur la partie commerciale, elle souhaiterait automatiser les relances personnalisées de devis et envoyer des campagnes d’emailing ciblées à partir des données présentes dans FRESH. Le dirigeant, régulièrement en déplacement, exprime également le besoin d’un assistant IA personnel capable de l’aider à gérer son agenda, créer ou supprimer des rendez-vous, organiser des tâches et préparer certains emails. Certains collaborateurs traitent par ailleurs un volume important de mails sans assistance spécifique pour la rédaction ou la compréhension du contexte, ce qui ouvre des perspectives de gain de temps. Enfin, même si l’entreprise dispose déjà de tableaux de bord d’analyse, ceux-ci ne sont pas encore dynamiques ni directement connectés aux données FRESH.
+
+	Diagnostic des pratiques IA
+
+												
+
+	Processus Métier
+
+Constat clé
+VISUEL FACTORY dispose déjà d’un socle numérique solide, avec un ERP/CRM métier central dans l’organisation, des outils spécialisés de production graphique et prépresse, ainsi que des premières automatisations techniques via SWITCH, CALLAS et PRIMECENTER. L’entreprise a donc déjà intégré une logique de flux numérique dans son fonctionnement quotidien. En revanche, certains processus restent insuffisamment automatisés ou connectés, notamment les relances commerciales, l’exploitation des données clients, la production de contenus marketing personnalisés et la création de tableaux de bord dynamiques. Les processus sont utilisés au quotidien, mais leur formalisation et leur pilotage par la donnée restent encore perfectibles.
+
+Proposition d’amélioration
+Structurer une feuille de route IA et automatisation centrée sur les flux déjà existants dans FRESH : relances de devis, campagnes clients ciblées, génération de contenus à partir des projets réalisés, exploitation des données commerciales et création de tableaux de bord dynamiques. L’objectif n’est pas de remplacer les outils en place, mais de les compléter par des briques IA et no-code connectées aux données existantes.
+
+	Compétences et ressources
+
+Constat clé
+L’entreprise dispose d’une équipe opérationnelle habituée aux outils numériques métiers, notamment dans le bureau d’étude, la production et la gestion commerciale. Toutefois, les usages IA restent encore limités, principalement concentrés autour du chatbot LIMOVA. Les collaborateurs ne semblent pas encore disposer d’un cadre commun de formation, de bonnes pratiques ou de méthodes partagées pour utiliser l’IA dans leurs tâches quotidiennes, notamment pour le traitement des emails, la rédaction, l’analyse des demandes clients ou la production de contenus.
+
+Proposition d’amélioration
+Mettre en place une acculturation courte et très opérationnelle à l’IA, adaptée aux métiers de l’entreprise : direction, commercial, bureau d’étude, administration et communication. Cette formation doit permettre d’identifier les bons usages, de sécuriser les pratiques, de créer des modèles de prompts métier et de désigner quelques référents internes capables de porter les premiers cas d’usage.
+
+	Données et sécurité
+
+Constat clé
+VISUEL FACTORY dispose d’une base de données métier importante à travers FRESH : clients, devis, commandes, factures, étapes de production, planning et historique d’activité. L’entreprise dispose également d’une organisation documentaire avec Dropbox, serveur interne, NAS et sauvegardes. Cette situation constitue un point d’appui important pour développer des usages IA. En revanche, les données ne semblent pas encore pleinement exploitées pour automatiser les relances, segmenter les campagnes, analyser la performance commerciale ou suivre les indicateurs de production en temps réel. Les règles de gouvernance des données, de confidentialité et d’accès aux informations sensibles méritent également d’être formalisées avant de connecter des outils IA externes.
+
+Proposition d’amélioration
+Cartographier les données réellement utiles dans FRESH et les autres espaces de stockage, puis définir les règles d’accès, d’usage et de sécurisation avant toute automatisation. Cette étape doit permettre de créer des flux fiables entre FRESH, les outils de communication, les tableaux de bord et les solutions IA, tout en limitant les risques liés à la confidentialité des données clients et des informations commerciales.
+
+	Organisation
+
+Constat clé
+L’organisation de VISUEL FACTORY est structurée autour d’une chaîne métier complète, mais avec une équipe resserrée et des fonctions parfois polyvalentes. Cette configuration permet une bonne agilité, mais elle rend également l’entreprise dépendante de certains collaborateurs clés, notamment sur la relation client, le chiffrage, la préparation de production et la coordination des flux. Les besoins exprimés par la direction montrent une attente forte autour de l’IA comme outil de gain de temps, notamment pour le dirigeant en déplacement, les collaborateurs exposés à un grand volume d’emails et les actions commerciales récurrentes.
+
+Proposition d’amélioration
+Prioriser des cas d’usage simples, visibles et rapidement appropriables : assistant dirigeant, assistant email, relance automatisée des devis et tableaux de bord connectés. La conduite du changement doit s’appuyer sur des ateliers courts avec les utilisateurs concernés, afin d’éviter une approche trop théorique et de produire des solutions directement alignées avec les usages réels de l’entreprise.
+
+	Cadre réglementaire
+
+Constat clé
+L’entreprise manipule des données clients, des données commerciales, des projets graphiques, des fichiers de production et des informations internes qui peuvent être sensibles. L’usage actuel de LIMOVA et les futurs usages IA impliquent donc de clarifier les règles de confidentialité, les conditions d’utilisation des outils, les données pouvant être transmises à une IA et celles qui doivent rester dans l’environnement interne. Les pratiques réglementaires et contractuelles liées à l’utilisation d’outils IA méritent d’être renforcées avant de généraliser les usages.
+
+Proposition d’amélioration
+Élaborer une charte simple d’usage de l’IA pour les collaborateurs, précisant les données autorisées, les données interdites, les règles de validation humaine et les points de vigilance liés aux contenus produits par IA. Cette charte pourra être complétée par une vérification des contrats avec les prestataires IA et par une attention particulière portée au RGPD, à la confidentialité des fichiers clients et aux droits liés aux contenus graphiques.
+
+	Synthèse du diagnostic
+
+VISUEL FACTORY présente une situation favorable à l’intégration progressive de l’IA. L’entreprise dispose déjà d’outils métiers structurants, d’automatisations techniques existantes et d’un volume significatif de données clients et de commandes. La priorité n’est donc pas de transformer totalement le système d’information, mais de connecter intelligemment les outils existants pour réduire les tâches répétitives, améliorer le suivi commercial, mieux exploiter les données et sécuriser les usages IA.
+
+Les axes prioritaires identifiés sont les suivants :
+
+automatiser les relances commerciales personnalisées à partir des devis et données FRESH ;
+
+améliorer le traitement des emails entrants et sortants par des assistants IA encadrés ;
+
+remplacer ou compléter LIMOVA par des outils plus adaptés à la production de contenus marketing personnalisés ;
+
+créer des tableaux de bord dynamiques connectés aux données métier ;
+
+structurer un assistant IA pour le dirigeant ;
+
+formaliser les règles d’usage, de sécurité et de confidentialité autour de l’IA.
+
+	Cas d’usage IA et accompagnement 
+
+	préconisés
+
+Cas d’usage 1 — Automatisation des relances commerciales personnalisées à partir de FRESH
+
+Contexte ou problème identifié
+
+VISUEL FACTORY gère un volume important d’activité, avec environ 400 clients actifs sur l’année et près de 250 commandes par mois. Dans ce contexte, le suivi commercial des devis représente un enjeu important, à la fois pour maintenir la relation client, éviter les oublis de relance et améliorer le taux de transformation.
+
+L’entreprise souhaite pouvoir exploiter les données présentes dans FRESH pour automatiser les relances de devis de manière personnalisée. Le besoin est de gagner en régularité commerciale sans alourdir la charge de travail du dirigeant et de l’équipe commerciale.
+
+Description du cas d’usage
+
+Le cas d’usage consiste à mettre en place un système capable d’identifier automatiquement les devis en attente dans FRESH, puis de générer une relance adaptée selon plusieurs critères : nom du client, nature de la demande, montant du devis, délai écoulé depuis l’envoi, historique de commande ou niveau de priorité commerciale.
+
+Dans un premier temps, l’IA pourrait préparer les emails de relance pour validation par le commercial ou le dirigeant. Dans un second temps, certaines relances simples pourraient être envoyées automatiquement selon des règles définies par l’entreprise.
+
+Outils IA ou solutions d’automatisation envisageables
+
+FRESH / Dolibarr comme source des données commerciales : devis, statuts, clients, montants, dates.
+
+Make ou n8n pour déclencher les relances selon les règles définies.
+
+ChatGPT ou assistant IA connecté pour rédiger les emails personnalisés.
+
+Outlook / Microsoft 365 pour la préparation ou l’envoi des messages.
+
+Une étape de validation humaine avant envoi, au moins pendant la phase de test.
+
+Accompagnement préconisé
+
+L’accompagnement consisterait à partir du processus commercial existant pour construire un scénario simple, maîtrisé et progressivement automatisable.
+
+Les étapes proposées seraient les suivantes :
+
+analyser les statuts de devis dans FRESH ;
+
+identifier les champs exploitables pour personnaliser les relances ;
+
+définir les règles de déclenchement : délai, montant, type de client, priorité ;
+
+rédiger plusieurs modèles de relance selon les situations ;
+
+créer un premier scénario Make ou n8n ;
+
+tester les relances sur un échantillon de devis ;
+
+mettre en place un suivi des relances et du taux de retour ;
+
+ajuster les messages et les délais après retour d’expérience.
+
+Impact potentiel
+
+Ce cas d’usage peut avoir un impact direct sur la performance commerciale. Il permet de réduire les oublis, d’améliorer la régularité du suivi client et de libérer du temps pour les actions à plus forte valeur ajoutée.
+
+Il peut également renforcer la qualité de la relation client grâce à des relances plus contextualisées, moins génériques et plus professionnelles.
+
+Compétences à développer
+
+Utilisation des données commerciales issues de FRESH.
+
+Définition de règles simples d’automatisation.
+
+Rédaction de prompts commerciaux.
+
+Suivi des indicateurs de transformation.
+
+Points de vigilance
+
+La réussite du scénario dépendra de la qualité des données présentes dans FRESH. Les statuts de devis devront être fiables et régulièrement mis à jour. Il conviendra également de conserver une validation humaine pour les devis importants, les clients sensibles ou les situations commerciales spécifiques.
+
+Cas d’usage 2 — Campagnes emailing personnalisées à partir des données clients
+
+Contexte ou problème identifié
+
+VISUEL FACTORY dispose d’un portefeuille BtoB conséquent et d’un historique de commandes exploitable dans FRESH. Pourtant, ces données ne semblent pas encore pleinement mobilisées pour organiser des campagnes de communication ciblées.
+
+L’entreprise souhaite pouvoir envoyer des campagnes emailing personnalisées à partir des données FRESH, afin de mieux valoriser ses offres, réactiver certains clients, proposer des prestations complémentaires ou communiquer sur des réalisations adaptées aux besoins de chaque segment de clientèle.
+
+Description du cas d’usage
+
+Le cas d’usage consiste à créer un dispositif permettant de segmenter la base clients et de générer des campagnes emailing adaptées à chaque cible. Par exemple : relance de clients inactifs, communication auprès de clients récurrents, offres spécifiques selon les prestations déjà commandées, campagnes saisonnières ou mise en avant de réalisations similaires.
+
+L’IA pourrait aider à rédiger les objets d’emails, les messages, les variantes de contenus et les appels à l’action. L’automatisation permettrait ensuite de synchroniser les segments clients et de déclencher certaines campagnes.
+
+Outils IA ou solutions d’automatisation envisageables
+
+FRESH / Dolibarr pour extraire les données clients et historiques de commandes.
+
+Brevo, Mailchimp ou Sarbacane pour l’envoi des campagnes.
+
+Make ou n8n pour synchroniser les données et automatiser certains flux.
+
+ChatGPT pour produire les contenus personnalisés.
+
+Canva ou Adobe Express pour les visuels simples de campagne.
+
+Accompagnement préconisé
+
+L’accompagnement pourrait s’appuyer sur une première campagne pilote, afin de démontrer rapidement l’intérêt du dispositif.
+
+Les étapes proposées seraient les suivantes :
+
+identifier les données clients disponibles dans FRESH ;
+
+définir quelques segments simples et utiles commercialement ;
+
+nettoyer ou compléter les données nécessaires à l’envoi ;
+
+choisir l’outil d’emailing le plus adapté ;
+
+créer les modèles de messages par cible ;
+
+paramétrer une première campagne test ;
+
+analyser les résultats : taux d’ouverture, clics, réponses, devis générés ;
+
+ajuster les segments et les messages pour les campagnes suivantes.
+
+Impact potentiel
+
+Ce cas d’usage peut améliorer la fidélisation client, favoriser la réactivation de clients dormants et générer du chiffre d’affaires additionnel à partir du portefeuille existant.
+
+Il permet également de réduire le temps nécessaire à la préparation des campagnes et de rendre la communication commerciale plus régulière, plus ciblée et plus mesurable.
+
+Compétences à développer
+
+Segmentation d’une base clients.
+
+Création de campagnes emailing.
+
+Rédaction assistée par IA.
+
+Analyse des résultats commerciaux.
+
+Points de vigilance
+
+Il faudra veiller à la qualité des adresses emails, au respect des règles de désinscription et à la cohérence des messages envoyés. Les campagnes devront rester utiles et ciblées pour éviter une communication trop fréquente ou perçue comme trop générique.
+
+Cas d’usage 3 — Assistant IA pour le traitement des emails entrants et sortants
+
+Contexte ou problème identifié
+
+Certains collaborateurs de VISUEL FACTORY traitent un volume important d’emails au quotidien, sans assistance spécifique pour comprendre rapidement le contexte, prioriser les demandes ou rédiger des réponses. Ces échanges peuvent concerner des demandes clients, des devis, des éléments techniques, des validations de fichiers, des délais, des relances ou des informations de production.
+
+Cette situation peut générer une charge de travail importante, des risques d’oubli et une perte de temps sur des tâches répétitives de lecture, reformulation et réponse.
+
+Description du cas d’usage
+
+Le cas d’usage consiste à mettre en place un assistant IA permettant d’aider les collaborateurs dans le traitement de leurs emails. L’assistant pourrait résumer un échange, identifier les actions à réaliser, proposer une réponse adaptée, reformuler un message ou aider à classer les demandes par priorité.
+
+L’objectif n’est pas d’envoyer automatiquement des réponses sans contrôle, mais d’apporter une aide à la rédaction, à la compréhension et à la priorisation, tout en conservant la validation humaine avant envoi.
+
+Outils IA ou solutions d’automatisation envisageables
+
+ChatGPT Team pour créer des assistants internes sécurisés.
+
+Make ou n8n pour automatiser certains classements ou notifications.
+
+Outlook / Teams pour intégrer l’usage dans les habitudes existantes.
+
+Des modèles de réponses par situation : demande de devis, validation BAT, relance, transmission de fichiers, précision technique.
+
+Accompagnement préconisé
+
+L’accompagnement devra être pragmatique et centré sur les usages les plus fréquents.
+
+Les étapes proposées seraient les suivantes :
+
+identifier les principaux types d’emails traités ;
+
+repérer les situations répétitives ou chronophages ;
+
+créer une bibliothèque de réponses types ;
+
+construire des prompts adaptés aux métiers de l’entreprise ;
+
+former les collaborateurs à l’usage de l’IA pour résumer, reformuler et répondre ;
+
+tester l’assistant sur quelques utilisateurs volontaires ;
+
+définir les règles de validation avant envoi ;
+
+mesurer les gains de temps obtenus.
+
+Impact potentiel
+
+Ce cas d’usage peut améliorer la productivité quotidienne, réduire la charge mentale liée au traitement des emails et homogénéiser la qualité des réponses adressées aux clients ou partenaires.
+
+Il peut concerner plusieurs fonctions : commercial, administration, bureau d’étude, direction et coordination de production.
+
+Compétences à développer
+
+Utilisation de l’IA dans Outlook ou un assistant sécurisé.
+
+Rédaction professionnelle assistée par IA.
+
+Synthèse d’échanges clients.
+
+Priorisation des demandes.
+
+Points de vigilance
+
+Les collaborateurs devront vérifier systématiquement les réponses générées, en particulier lorsqu’elles portent sur des prix, délais, engagements commerciaux ou contraintes techniques. Des règles simples devront également préciser les informations pouvant être utilisées avec un outil IA.
+
+Cas d’usage 4 — Assistant personnel IA pour le dirigeant
+
+Contexte ou problème identifié
+
+Le dirigeant est régulièrement en déplacement et doit gérer de nombreuses sollicitations : rendez-vous, emails, tâches internes, suivi commercial, arbitrages et coordination avec les équipes. Cette charge opérationnelle peut limiter le temps disponible pour le développement commercial, la prise de recul stratégique ou la relation client à forte valeur ajoutée.
+
+L’entreprise exprime ainsi le besoin d’un assistant personnel IA capable d’aider à organiser le quotidien du dirigeant, notamment pour prendre ou supprimer des rendez-vous, gérer des tâches et préparer certains emails.
+
+Description du cas d’usage
+
+Le cas d’usage consiste à créer un assistant IA personnel connecté aux outils du dirigeant, notamment sa messagerie, son agenda et éventuellement son gestionnaire de tâches. Cet assistant pourrait préparer des réponses, synthétiser les informations importantes, proposer des priorités, créer des rappels, organiser des tâches ou faciliter la gestion de l’agenda.
+
+Dans une première phase, l’assistant pourrait fonctionner en mode aide à la décision et préparation d’actions, sans effectuer automatiquement les opérations sensibles. Dans une phase plus avancée, certaines actions simples pourraient être automatisées avec validation.
+
+Outils IA ou solutions d’automatisation envisageables
+
+Microsoft Copilot ou autre pour Outlook, Teams, Word, Excel et l’agenda.
+
+ChatGPT pour les synthèses, réponses, notes et préparation de rendez-vous.
+
+Make ou n8n pour connecter emails, calendrier, tâches et notifications.
+
+Microsoft To Do, Planner ou Teams pour centraliser les actions.
+
+Usage mobile possible pour faciliter l’utilisation en déplacement.
+
+Accompagnement préconisé
+
+L’accompagnement doit partir des habitudes réelles du dirigeant afin d’éviter la mise en place d’un outil trop généraliste.
+
+Les étapes proposées seraient les suivantes :
+
+identifier les tâches récurrentes et les irritants quotidiens ;
+
+définir les actions pouvant être assistées par IA ;
+
+paramétrer les connexions avec Outlook, calendrier et tâches ;
+
+créer des modèles de prompts pour les réponses, synthèses et priorités ;
+
+tester l’assistant sur quelques semaines ;
+
+ajuster les règles d’usage selon les retours ;
+
+formaliser les limites de délégation à l’outil.
+
+Impact potentiel
+
+Ce cas d’usage peut permettre au dirigeant de gagner du temps, de mieux prioriser ses actions et de limiter les oublis. Il peut aussi améliorer sa réactivité en déplacement et fluidifier la coordination interne.
+
+L’impact est surtout individuel mais peut avoir des effets sur l’ensemble de l’organisation, car le dirigeant intervient directement dans la relation commerciale et le pilotage opérationnel.
+
+Compétences à développer
+
+Usage avancé d’un assistant IA.
+
+Organisation des priorités.
+
+Automatisation simple des tâches et rappels.
+
+Validation des actions sensibles.
+
+Points de vigilance
+
+L’assistant ne doit pas prendre d’engagement à la place du dirigeant sans validation. Les annulations de rendez-vous, réponses commerciales importantes ou décisions impliquant un client devront rester sous contrôle humain.
+
+Cas d’usage 5 — Production de contenus marketing personnalisés à partir des réalisations
+
+Contexte ou problème identifié
+
+VISUEL FACTORY a souscrit un abonnement à LIMOVA, qui propose notamment un agent IA marketing. Cet usage ne donne pas pleinement satisfaction, car l’outil montre ses limites sur la production de vidéos, d’articles ou de publications réellement personnalisées. Il ne semble pas non plus connecté facilement aux ressources internes de l’entreprise, comme les photos issues de WhatsApp ou les projets réalisés dans FRESH.
+
+Or l’entreprise dispose d’une matière importante pour sa communication : réalisations clients, photos de pose, projets graphiques, savoir-faire atelier, diversité des supports produits et références BtoB. Ces éléments peuvent être mieux exploités pour produire des contenus réguliers et différenciants.
+
+Description du cas d’usage
+
+Le cas d’usage consiste à mettre en place un processus permettant de transformer les réalisations de l’entreprise en contenus marketing : publications LinkedIn, Facebook ou Instagram, articles courts, cas clients, newsletters, supports commerciaux ou vidéos courtes.
+
+À partir d’une fiche projet simple, l’IA pourrait générer plusieurs formats de contenus adaptés au canal de diffusion. L’objectif est de créer une communication plus authentique, plus personnalisée et directement fondée sur les réalisations concrètes de VISUEL FACTORY.
+
+Outils IA ou solutions d’automatisation envisageables
+
+ChatGPT pour rédiger les posts, articles, cas clients et newsletters.
+
+Canva, Adobe Express ou Adobe Creative Cloud pour les visuels.
+
+CapCut, Canva vidéo ou outils IA vidéo pour transformer des photos en courtes vidéos.
+
+Make ou n8n pour organiser les flux entre photos, fiches projets et contenus.
+
+Notion ou Airtable pour créer une base éditoriale simple.
+
+Brevo pour réutiliser certains contenus dans des newsletters clients.
+
+Accompagnement préconisé
+
+L’accompagnement viserait à créer un flux simple : une réalisation terminée devient une opportunité de contenu.
+
+Les étapes proposées seraient les suivantes :
+
+définir les formats de contenus prioritaires ;
+
+créer une fiche projet simple : client, besoin, solution, support, photos, bénéfice ;
+
+organiser la collecte des photos et informations projet ;
+
+créer des prompts adaptés au ton de VISUEL FACTORY ;
+
+produire des modèles de publications réutilisables ;
+
+établir un calendrier éditorial simple ;
+
+former l’assistante administrative ou un référent interne ;
+
+tester la production de contenus sur plusieurs réalisations récentes.
+
+Impact potentiel
+
+Ce cas d’usage peut améliorer la visibilité de l’entreprise, renforcer son image de spécialiste et valoriser le travail réalisé par les équipes. Il peut également soutenir l’action commerciale en mettant en avant des exemples concrets auprès de clients ou prospects.
+
+Il répond directement à la limite de l’outil LIMOVA en construisant un système plus proche des ressources internes et du terrain.
+
+Compétences à développer
+
+Collecte structurée d’informations projet.
+
+Création de contenus assistée par IA.
+
+Organisation d’un calendrier éditorial.
+
+Utilisation d’outils visuels et vidéo simples.
+
+Points de vigilance
+
+Il faudra veiller aux droits d’utilisation des photos, à l’accord des clients lorsque nécessaire et à la confidentialité de certaines réalisations. Les contenus générés devront être relus pour garantir la cohérence du ton, la qualité du message et l’image professionnelle de l’entreprise.
+
+Cas d’usage 6 — Tableaux de bord dynamiques connectés aux données FRESH
+
+Contexte ou problème identifié
+
+VISUEL FACTORY dispose déjà de tableaux de bord d’analyse, mais ceux-ci ne sont pas dynamiques et ne sont pas directement connectés aux données FRESH. L’entreprise dispose pourtant d’informations précieuses dans son outil métier : devis, commandes, factures, étapes de production, planning, clients et historique commercial.
+
+Avec un volume d’activité important, la mise en place d’indicateurs dynamiques peut améliorer le pilotage commercial, le suivi de production et l’anticipation de la charge.
+
+Description du cas d’usage
+
+Le cas d’usage consiste à créer des tableaux de bord connectés aux données FRESH pour suivre les principaux indicateurs de l’entreprise : nombre de devis, taux de transformation, chiffre d’affaires, commandes en cours, délais, charge de production, activité par client, prestations les plus fréquentes ou suivi des étapes jusqu’à la pose.
+
+Une brique IA pourrait ensuite être ajoutée pour produire des synthèses automatiques : points d’attention, tendances, anomalies, clients à relancer, périodes de surcharge ou indicateurs à surveiller.
+
+Outils IA ou solutions d’automatisation envisageables
+
+FRESH / Dolibarr comme source principale de données.
+
+Power BI pour rester dans l’environnement Microsoft.
+
+Looker Studio ou Metabase pour des tableaux de bord visuels.
+
+Make ou n8n pour extraire, synchroniser ou consolider les données.
+
+ChatGPT pour générer des commentaires de pilotage ou synthèses mensuelles.
+
+Accompagnement préconisé
+
+L’accompagnement devra privilégier un premier tableau de bord utile, limité et opérationnel.
+
+Les étapes proposées seraient les suivantes :
+
+définir les indicateurs prioritaires avec la direction ;
+
+identifier les données disponibles dans FRESH ;
+
+valider les modalités d’extraction ou de connexion ;
+
+créer une première version du tableau de bord ;
+
+tester les vues commerciales, production et facturation ;
+
+former les utilisateurs à la lecture des indicateurs ;
+
+ajouter progressivement une synthèse IA de pilotage ;
+
+fiabiliser les données saisies dans FRESH.
+
+Impact potentiel
+
+Ce cas d’usage peut améliorer la qualité du pilotage de l’entreprise, faciliter la prise de décision et rendre plus visibles les priorités commerciales ou opérationnelles.
+
+Il peut également aider à détecter les devis non relancés, les clients récurrents, les périodes de surcharge ou les prestations les plus contributives au chiffre d’affaires.
+
+Compétences à développer
+
+Lecture d’indicateurs.
+
+Suivi de la performance commerciale.
+
+Fiabilisation de la donnée.
+
+Analyse assistée par IA.
+
+Points de vigilance
+
+La qualité des tableaux de bord dépendra directement de la qualité des données saisies dans FRESH. Il faudra donc homogénéiser les statuts, catégories, dates et informations clients pour produire des indicateurs fiables.
+
+Cas d’usage 7 — Optimisation ou remplacement progressif de LIMOVA
+
+Contexte ou problème identifié
+
+L’entreprise utilise actuellement LIMOVA, qui propose plusieurs agents IA spécialisés. Toutefois, son usage s’est fortement réduit. L’outil est principalement conservé pour le chatbot connecté au site internet, qui reste utile. Les autres agents, notamment l’agent marketing, ne répondent plus suffisamment aux attentes de l’entreprise.
+
+L’enjeu est donc de ne pas supprimer brutalement un outil qui assure encore une fonction utile, tout en évaluant si une architecture plus souple, mieux adaptée aux besoins métiers, pourrait être plus pertinente.
+
+Description du cas d’usage
+
+Le cas d’usage consiste à analyser les usages réels de LIMOVA, à mesurer sa valeur actuelle et à définir une solution cible plus adaptée. Cette solution pourrait combiner un chatbot indépendant pour le site internet, des assistants IA internes pour les emails, la communication et le dirigeant, ainsi que des automatisations connectées à FRESH.
+
+L’objectif est d’éviter la dépendance à une solution unique peu utilisée, tout en conservant les fonctionnalités réellement utiles.
+
+Outils IA ou solutions d’automatisation envisageables
+
+Chatbot alternatif : Crisp, Tidio, Botpress, Chatbase ou solution équivalente.
+
+ChatGPT Team pour les assistants internes.
+
+Microsoft Copilot si l’intégration Microsoft devient prioritaire.
+
+Make ou n8n pour relier les outils et automatiser les flux.
+
+Une base documentaire interne pour alimenter le chatbot ou les assistants.
+
+Accompagnement préconisé
+
+L’accompagnement doit sécuriser la décision avant toute résiliation ou changement d’outil.
+
+Les étapes proposées seraient les suivantes :
+
+recenser les usages actifs de LIMOVA ;
+
+mesurer le coût réel et la valeur apportée ;
+
+identifier les fonctions à conserver, notamment le chatbot ;
+
+comparer un scénario de maintien et un scénario alternatif ;
+
+tester un chatbot indépendant si nécessaire ;
+
+construire une architecture IA cible simple ;
+
+organiser la transition sans rupture de service sur le site internet ;
+
+former les utilisateurs aux nouveaux outils retenus.
+
+Impact potentiel
+
+Ce cas d’usage peut permettre de rationaliser les coûts, d’améliorer la qualité des usages IA et de disposer d’outils mieux adaptés aux besoins réels de VISUEL FACTORY.
+
+Il permet également d’éviter de conserver un abonnement principalement utilisé pour une seule fonction, tout en sécurisant la continuité du chatbot.
+
+Compétences à développer
+
+Évaluation d’un outil IA.
+
+Comparaison de solutions.
+
+Gestion d’une transition numérique.
+
+Pilotage du rapport coût / usage.
+
+Points de vigilance
+
+Il faudra éviter toute interruption du chatbot si celui-ci apporte une valeur réelle au site internet. La transition devra être progressive, testée et documentée avant tout arrêt de LIMOVA.
+
+	Synthèse et plan d’action
+
+Synthèse des cas d’usage prioritaires
+
+Les cas d’usage les plus adaptés à VISUEL FACTORY sont ceux qui s’appuient directement sur les outils et données déjà présents dans l’entreprise, en particulier FRESH, Outlook, Microsoft 365 et les outils de production.
+
+Les priorités recommandées sont les suivantes :
+
+Automatisation des relances commerciales à partir de FRESH, pour agir directement sur le taux de transformation des devis.
+
+Assistant IA pour le traitement des emails, pour réduire une charge quotidienne importante.
+
+Assistant personnel IA pour le dirigeant, pour améliorer l’organisation et la réactivité en déplacement.
+
+Campagnes emailing personnalisées, pour mieux exploiter le portefeuille clients existant.
+
+Production de contenus marketing à partir des réalisations, pour valoriser les projets et améliorer la visibilité.
+
+Tableaux de bord dynamiques connectés à FRESH, pour renforcer le pilotage commercial et opérationnel.
+
+Optimisation ou remplacement progressif de LIMOVA, pour conserver les usages utiles tout en construisant un environnement IA plus adapté.
+
+L’accompagnement devra rester progressif, concret et centré sur les usages à impact rapide. La logique recommandée est de capitaliser sur l’existant plutôt que de multiplier les outils, en construisant des automatisations simples, validées par les utilisateurs et sécurisées dans leur usage.
+
+	
+
+	
+
+	
+
+Synthèse graphique
+
+		
+
+		
+
+		
+
+		
+
+-721995548005
+
+Socle numérique solide : FRESH centralise les devis, commandes, factures, étapes de production et planning jusqu’à la pose.
+
+Automatisations déjà présentes : SWITCH, CALLAS PDF Toolbox et PRIMECENTER montrent une culture opérationnelle déjà orientée automatisation.
+
+Données clients exploitables : l’entreprise dispose d’un portefeuille annuel d’environ 400 clients et gère près de 250 commandes par mois.
+
+Direction sensibilisée à l’IA : LIMOVA déjà testé et identifie clairement ses besoins prioritaires.
+
+Chaîne métier complète maîtrisée : de la demande client à la pose, l’entreprise contrôle l’ensemble du processus opérationnel.
+
+Usages IA encore limités : LIMOVA est aujourd’hui principalement utilisé pour le chatbot, les autres agents n’apportant pas la valeur attendue.
+
+Relances commerciales peu automatisées : les devis et campagnes clients ne sont pas encore exploités de manière systématique à partir de FRESH.
+
+Tableaux de bord non dynamiques : les données FRESH ne sont pas encore connectées à des indicateurs actualisés en temps réel.
+
+Charge email importante : plusieurs collaborateurs traitent de nombreux messages sans assistance IA.
+
+Cadre d’usage IA à formaliser : les règles internes, modèles de prompts et principes de sécurité restent à structurer.
+
+Complexité excessive si de nouveaux outils IA sont ajoutés sans architecture claire.
+
+Qualité variable des données pouvant limiter la fiabilité des automatisations et tableaux de bord.
+
+Contenus IA trop génériques si les réalisations terrain ne sont pas suffisamment intégrées.
+
+Risques de confidentialité liés aux données clients, devis, fichiers graphiques et informations commerciales.
+
+Appropriation inégale par les équipes sans formation ni accompagnement opérationnel.
+
+Dépendance à des solutions propriétaires si les outils retenus restent peu ouverts ou mal connectés.
+
+Améliorer la transformation commerciale grâce aux relances automatisées et personnalisées des devis.
+
+Gagner du temps au quotidien avec des assistants IA pour les emails, l’agenda, les tâches et les réponses clients.
+
+Renforcer la communication en transformant les réalisations de l’entreprise en contenus marketing réguliers et personnalisés.
+
+Mieux piloter l’activité avec des tableaux de bord connectés à FRESH.
+
+Rationaliser les outils IA en conservant le chatbot utile tout en remplaçant les fonctions peu performantes de LIMOVA.
+
+Avancer progressivement par prototypes simples, sans refonte complète du système d’information.
+
+Forces
+
+Faiblesses
+
+Opportunités
+
+Menaces
+
+Interne
+
+Externe00
+
+Socle numérique solide : FRESH centralise les devis, commandes, factures, étapes de production et planning jusqu’à la pose.
+
+Automatisations déjà présentes : SWITCH, CALLAS PDF Toolbox et PRIMECENTER montrent une culture opérationnelle déjà orientée automatisation.
+
+Données clients exploitables : l’entreprise dispose d’un portefeuille annuel d’environ 400 clients et gère près de 250 commandes par mois.
+
+Direction sensibilisée à l’IA : LIMOVA déjà testé et identifie clairement ses besoins prioritaires.
+
+Chaîne métier complète maîtrisée : de la demande client à la pose, l’entreprise contrôle l’ensemble du processus opérationnel.
+
+Usages IA encore limités : LIMOVA est aujourd’hui principalement utilisé pour le chatbot, les autres agents n’apportant pas la valeur attendue.
+
+Relances commerciales peu automatisées : les devis et campagnes clients ne sont pas encore exploités de manière systématique à partir de FRESH.
+
+Tableaux de bord non dynamiques : les données FRESH ne sont pas encore connectées à des indicateurs actualisés en temps réel.
+
+Charge email importante : plusieurs collaborateurs traitent de nombreux messages sans assistance IA.
+
+Cadre d’usage IA à formaliser : les règles internes, modèles de prompts et principes de sécurité restent à structurer.
+
+Complexité excessive si de nouveaux outils IA sont ajoutés sans architecture claire.
+
+Qualité variable des données pouvant limiter la fiabilité des automatisations et tableaux de bord.
+
+Contenus IA trop génériques si les réalisations terrain ne sont pas suffisamment intégrées.
+
+Risques de confidentialité liés aux données clients, devis, fichiers graphiques et informations commerciales.
+
+Appropriation inégale par les équipes sans formation ni accompagnement opérationnel.
+
+Dépendance à des solutions propriétaires si les outils retenus restent peu ouverts ou mal connectés.
+
+Améliorer la transformation commerciale grâce aux relances automatisées et personnalisées des devis.
+
+Gagner du temps au quotidien avec des assistants IA pour les emails, l’agenda, les tâches et les réponses clients.
+
+Renforcer la communication en transformant les réalisations de l’entreprise en contenus marketing réguliers et personnalisés.
+
+Mieux piloter l’activité avec des tableaux de bord connectés à FRESH.
+
+Rationaliser les outils IA en conservant le chatbot utile tout en remplaçant les fonctions peu performantes de LIMOVA.
+
+Avancer progressivement par prototypes simples, sans refonte complète du système d’information.
+
+Forces
+
+Faiblesses
+
+Opportunités
+
+Menaces
+
+Interne
+
+ExterneSWOT
+
+	1404246-14573000Plan d’action détaillé 
+
+	
+
+PLAN D'ACTION
+
+Projet Axes d’actions
+
+Priorité
+
+Action/étapes
+
+Description
+
+Calendrier prévisionnel
+
+Pilote/référent
+
+Livrables
+
+Ressources externes / internes
+
+Administratif
+
+Haute
+
+Déployer un assistant IA pour le traitement des emails entrants et sortants
+
+Identifier les emails récurrents, créer des modèles de réponses, former les collaborateurs à la synthèse et à la rédaction assistée par IA, intégrer l'assistant dans les usages Outlook avec validation systématique avant envoi.
+
+1 mois
+
+Assistante administrative / Bureau d'étude
+
+Bibliothèque de réponses types, prompts métiers, guide d'usage email, protocole de validation humaine
+
+Externe : consultant IA ; Interne : utilisateurs Outlook, direction, bureau d'étude
+
+Communication
+
+Haute
+
+Créer des campagnes emailing personnalisées à partir des données FRESH
+
+Segmenter la base clients, définir des campagnes par cible, connecter les données utiles à un outil d'emailing, générer les messages avec IA et analyser les résultats des premières campagnes pilotes.
+
+1 à 2 mois
+
+Commercial / Assistante administrative
+
+Segments clients, modèles de campagnes, première campagne test, indicateurs d'ouverture, clics et retours commerciaux
+
+Externe : consultant IA / emailing ; Interne : commercial, assistante, données FRESH
+
+Moyenne
+
+Transformer les réalisations de l'entreprise en contenus marketing réguliers
+
+Créer une fiche projet simple, organiser la collecte des photos et informations de réalisation, produire des posts, articles courts, newsletters ou vidéos simples avec IA, puis planifier les publications.
+
+1 à 2 mois
+
+Assistante administrative / Direction
+
+Fiche projet, bibliothèque de prompts, modèles de posts, calendrier éditorial, premiers contenus publiables
+
+Externe : consultant IA / communication ; Interne : assistante, graphiste, photos projets, données FRESH
+
+Processus métier
+
+Haute
+
+Automatiser les relances commerciales de devis à partir de FRESH
+
+Identifier les devis en attente dans FRESH, définir les règles de relance par délai, montant et typologie client, générer des emails personnalisés avec IA, prévoir une validation humaine avant envoi puis suivre les taux de réponse et de transformation.
+
+1 à 2 mois
+
+Dirigeant / Commercial
+
+Scénario Make ou n8n de relance, modèles d'emails, règles de déclenchement, tableau de suivi des relances
+
+Externe : consultant IA / automatisation ; Interne : dirigeant, commercial, accès FRESH et Outlook
+
+Moyenne
+
+Créer des tableaux de bord dynamiques connectés à FRESH
+
+Définir les indicateurs clés, identifier les données disponibles, organiser l'extraction ou la connexion, construire une première version de tableau de bord et ajouter une synthèse IA périodique si les données sont fiables.
+
+2 à 3 mois
+
+Direction / Bureau d'étude
+
+Liste des indicateurs, tableau de bord commercial et production, règles de mise à jour, synthèse périodique de pilotage
+
+Externe : consultant data / automatisation ; Interne : direction, accès FRESH, responsables de flux
+
+Organisationnel / sécurité
+
+Moyenne
+
+Évaluer LIMOVA et construire une architecture IA cible plus adaptée
+
+Recenser les usages réels de LIMOVA, sécuriser le maintien du chatbot, comparer les alternatives, tester une solution indépendante si nécessaire et organiser une transition progressive sans rupture de service.
+
+1 à 2 mois
+
+Direction
+
+Audit d'usage LIMOVA, scénario de maintien ou remplacement, test chatbot alternatif, architecture IA cible
+
+Externe : consultant IA / intégration ; Interne : direction, accès site internet, prestataire web si nécessaire
+
+Compétences
+
+Haute
+
+Former les référents internes aux usages IA et automatisation
+
+Organiser un atelier de sensibilisation IA, former les utilisateurs clés aux prompts métiers, aux règles de validation et aux scénarios Make ou n8n, puis désigner des référents par usage prioritaire.
+
+1 mois
+
+Direction
+
+Support de sensibilisation, guide de prompts, référents identifiés, bonnes pratiques d'usage IA
+
+Externe : consultant formateur IA ; Interne : direction, commercial, bureau d'étude, assistante

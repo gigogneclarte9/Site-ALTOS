@@ -1,0 +1,325 @@
+Synthèse Audit Flash IA 
+NOM DE L’ENTREPRISE : A2MICILE
+NUMERO DE DOSSIER : 26-117573
+NOM DU CONSEILLER OPCO : Audrey BENSOUNA
+Durée de l’accompagnement en jours :
+Dates d’intervention
+Signatures
+Dates de RDV
+Entreprise
+Le Cercle des Entrepreneurs
+Réunion de cadrage : 
+26 mars 2026
+Diagnostic des pratiques : 
+16 avril 2026
+Préconisations / Plan d’action :
+22 avril 2026
+Sommaire
+I.Résumé3
+II.Contexte de l’entreprise4
+i.Historique et activité4
+ii.Structure organisationnelle4
+III.Diagnostic des pratiques IA7
+iii.Processus Métier7
+iv.Compétences et ressources7
+v.Données et sécurité8
+vi.OrganisationErreur ! Signet non défini.
+vii.Cadre réglementaire9
+IV.Cas d’usage IA et accompagnement préconisés11
+V.Synthèse et plan d’action19
+Synthèse graphique19
+VI.SWOTErreur ! Signet non défini.
+VII.Plan d’action détaillé21
+Résumé
+L’audit met en évidence une entreprise structurée, déjà équipée de plusieurs outils métiers, mais dont le fonctionnement reste encore fortement marqué par des traitements manuels, des ressaisies et une forte mobilisation des chefs de secteur et de la référente qualité. Les besoins exprimés sont concrets et portent sur des tâches récurrentes pour lesquelles l’IA peut constituer un levier d’appui utile.
+Les cas d’usage proposés sont les suivants :
+assistance au traitement des anomalies qualité, pour aider à analyser les signalements, préparer les réponses et structurer les plans d’action ;
+assistance au tri des candidatures et à la préparation des entretiens, pour fluidifier le recrutement et homogénéiser l’analyse des profils ;
+mise en place d’un espace partagé de gestion des congés, afin de rendre le processus plus lisible et plus simple à arbitrer ;
+analyse assistée des enquêtes qualité et satisfaction, pour alléger le travail de synthèse et améliorer la qualité des restitutions.
+Les priorités de mise en œuvre les plus pertinentes à court terme concernent le traitement des anomalies qualité et l’assistance au recrutement. Les deux autres cas d’usage présentent également un intérêt réel, notamment sur le plan organisationnel et qualitatif.
+La réussite de cette démarche suppose de vérifier les possibilités de connexion ou d’export des outils existants, d’encadrer les usages de l’IA sur les données sensibles, de maintenir une validation humaine sur les sujets sensibles et d’accompagner les référents internes dans la montée en compétence.
+À la suite du rapport, un accompagnement de l’entreprise peut être réalisé par notre consultant. Il vise à mettre en place des automatisations, selon les choix du client. Cet accompagnement comprend une phase de sensibilisation, la confirmation des priorités, la conception des solutions, des ateliers de co-construction et un appui opérationnel à la mise en œuvre des cas d’usage retenus.
+Contexte de l’entreprise
+Historique et activité
+A2MICILE est une entreprise de services à la personne implantée à Carcassonne. La structure actuelle résulte du rachat, en 2011, de l’entreprise OXILIA Services, initialement créée en 2008. Depuis cette reprise, l’activité s’est développée autour de l’accompagnement à domicile de publics fragiles ou vulnérables, dans un cadre réglementé relevant de l’autorisation du Conseil départemental.
+L’entreprise intervient sur un périmètre géographique de proximité, aux alentours de Carcassonne, dans un rayon d’environ dix kilomètres. Son activité couvre principalement des prestations essentielles du quotidien, parmi lesquelles l’entretien du logement, l’aide au lever et au coucher, l’aide à la toilette, l’accompagnement dans les déplacements et la préparation des repas. Ces interventions s’inscrivent dans une logique de continuité de service auprès d’un public nécessitant un accompagnement régulier et sécurisé.
+A2MICILE emploie actuellement environ cinquante salariés. Son positionnement repose sur une organisation de terrain permettant d’assurer des interventions humaines de proximité, avec un encadrement chargé du suivi des prestations, de la qualité de service et du respect des exigences opérationnelles et réglementaires propres au secteur.
+Structure organisationnelle
+L’organisation d’A2MICILE repose sur une structure articulée entre des professionnels intervenant directement au domicile des bénéficiaires et des fonctions d’encadrement chargées de coordonner l’activité, de traiter les situations rencontrées sur le terrain et de piloter la qualité du service rendu.
+L’effectif est composé de :
+35 assistantes de vie
+14 aides ménagères
+3 chefs de secteur
+1 référente qualité
+Les assistantes de vie et les aides ménagères constituent le cœur opérationnel de l’entreprise. Elles réalisent les prestations auprès des bénéficiaires selon les besoins identifiés : entretien du logement, aide à la personne, accompagnement dans les actes du quotidien et soutien à domicile. Leur activité s’exerce principalement sur le terrain, au plus près des usagers.
+Les chefs de secteur assurent un rôle central dans le fonctionnement de l’agence. Ils coordonnent l’activité des intervenantes, suivent les situations signalées, analysent les événements déclarés et mettent en œuvre les réponses adaptées. Lorsqu’une anomalie ou une situation particulière est constatée chez un bénéficiaire, l’intervenante la saisit dans le logiciel ELABORHA. Le chef de secteur reçoit alors le signalement par mail et dispose d’un espace de communication regroupant les flux provenant de ses intervenantes. À partir de ces éléments, il doit analyser la situation, qualifier le problème rencontré, répondre dans l’espace de commentaire partagé et définir un plan d’action visant à supprimer le risque ou, à défaut, à en réduire les effets. Ce fonctionnement montre que l’analyse des situations terrain et la gestion corrective reposent aujourd’hui largement sur l’expertise humaine des responsables de secteur.
+La référente qualité occupe une fonction transverse essentielle. Elle est en charge des contrôles qualité, du tutorat, de l’intégration des nouveaux salariés et de l’évaluation des bonnes pratiques professionnelles. Elle intervient également dans le pilotage de la démarche qualité de l’agence. Une fois par an, elle conduit une enquête qualité à partir de questionnaires personnalisés réalisés dans ELABORHA et diffusés auprès des clients. Elle recueille ensuite les réponses, procède à une analyse manuelle des résultats, rédige un rapport en tenant compte des niveaux de qualité attendus et formule des propositions d’amélioration continue. Elle réalise également des enquêtes de satisfaction selon une logique comparable, avec restitution des conclusions à la direction.
+L’environnement numérique de l’entreprise est structuré autour de plusieurs outils :
+environnement Windows
+EASY LIFE pour le logiciel métier
+ELABORHA pour la gestion RH et qualité
+BUZZEE pour le CRM et la gestion des mails
+Asaprod, outil du Conseil départemental, pour le relevé d’activité des intervenants, la télégestion, la facturation, les échanges et les statistiques
+Pack Office Microsoft : Word, Excel, PowerPoint
+ChatGPT, utilisé à ce jour de manière limitée, avec une licence payante et trois accès gratuits
+REMO Platform, SIRH de gestion des candidatures et du recrutement, connecté à plusieurs plateformes telles que France Travail, HelloWork et Indeed
+Le processus de recrutement est déjà partiellement numérisé grâce à REMO Platform, qui centralise les candidatures. Toutefois, le tri des profils et l’évaluation de leur adéquation au poste restent réalisés manuellement. L’analyse des CV, l’identification des points de vigilance et la préparation des entretiens reposent donc encore sur un traitement humain sans assistance automatisée. Le logiciel permet néanmoins l’export de chaque CV vers un dossier informatique, ce qui ouvre des perspectives de traitement complémentaire.
+La gestion des congés demeure quant à elle organisée selon un mode encore très administratif. Les salariés formulent leurs demandes sur fiche papier entre le 1er et le 28 février. Ces informations sont ensuite reprises dans un fichier Excel dédié. L’entreprise procède ensuite aux arbitrages et communique sa décision à compter du 1er avril, ou au plus tard le 1er mai. Ce fonctionnement ne permet pas aujourd’hui de visualisation partagée des demandes ni de gestion collaborative des ajustements entre salariés.
+Dans son ensemble, l’organisation d’A2MICILE apparaît structurée, dotée d’outils métiers spécialisés et portée par des fonctions d’encadrement clairement identifiées. Néanmoins, son fonctionnement quotidien reste fortement marqué par des traitements manuels, des analyses réalisées au cas par cas, des échanges répartis entre plusieurs supports et une forte sollicitation des chefs de secteur et de la référente qualité pour absorber les tâches de coordination, d’analyse, de rédaction et de décision. Cette configuration met en évidence une organisation déjà outillée, mais encore dépendante d’interventions humaines nombreuses pour assurer la fluidité, la traçabilité et la réactivité de ses processus internes.
+Diagnostic des pratiques IA
+Processus Métier
+Constat clé
+A2MICILE dispose de logiciels métiers structurants et a déjà identifié plusieurs tâches pouvant être automatisées. Toutefois, les processus clés restent largement manuels dans leur traitement opérationnel. Le suivi des anomalies qualité repose sur la saisie par les intervenantes puis sur l’analyse et la réponse des chefs de secteur. Le recrutement est numérisé dans sa collecte, mais le tri et l’analyse des candidatures sont réalisés manuellement. La gestion des congés fonctionne encore sur papier et Excel. Enfin, l’exploitation des enquêtes qualité et satisfaction demande un travail manuel important de lecture, de synthèse et de rédaction. Cette situation montre une maturité modérée sur les processus métiers, traduisant une entreprise outillée mais encore peu automatisée et peu pilotée par la donnée.
+Proposition d’amélioration
+Prioriser une démarche d’automatisation ciblée sur les tâches à forte charge administrative ou d’analyse répétitive, en commençant par les processus les plus structurants : traitement des anomalies, présélection des candidatures, gestion des congés et analyse des enquêtes qualité. L’objectif doit être de réduire le temps passé sur les tâches de tri, de lecture et de rédaction, tout en conservant la validation humaine sur les décisions sensibles.
+Compétences et ressources
+Constat clé
+L’entreprise a commencé à expérimenter l’IA, notamment à travers l’usage de ChatGPT, mais cet usage reste limité, peu diffusé et non structuré. Il n’existe pas à ce stade de cadre partagé d’utilisation, de montée en compétence collective ou de méthode commune pour intégrer l’IA dans les pratiques professionnelles. Le niveau de maturité observé sur les compétences et les ressources reste donc modeste, ce qui confirme que l’enjeu principal ne réside pas uniquement dans les outils, mais aussi dans leur appropriation par les équipes d’encadrement et les fonctions support.
+Proposition d’amélioration
+Mettre en place une acculturation progressive et ciblée des équipes concernées, en priorité les chefs de secteur, la référente qualité et la direction. Cette montée en compétence doit être centrée sur des usages métier concrets, avec des règles simples d’utilisation, des exemples adaptés à l’activité et des temps d’appropriation permettant de transformer l’IA en outil d’assistance opérationnelle et non en expérimentation isolée.
+Données et sécurité
+Constat clé
+L’entreprise utilise plusieurs outils spécialisés, mais les données demeurent réparties entre différents environnements sans logique apparente d’exploitation transverse. Les informations existent dans les logiciels, mais elles sont encore peu valorisées pour faciliter l’aide à la décision, le suivi qualité ou l’optimisation des processus. Par ailleurs, l’activité traite des données sensibles liées à des publics fragiles, ce qui impose une vigilance renforcée sur les conditions d’usage de l’IA, les accès aux informations et les flux entre logiciels.
+Proposition d’amélioration
+Sécuriser toute future démarche IA autour d’un principe clair : exploiter uniquement les données utiles, dans un cadre maîtrisé, avec vérification des droits d’accès, des possibilités d’export et des connexions techniques disponibles entre outils. Avant toute automatisation, il conviendra de cartographier les données réellement mobilisables, de vérifier les capacités d’intégration des logiciels utilisés et de définir des règles simples de confidentialité et de validation humaine.
+Organisation
+Constat clé
+L’organisation repose sur des fonctions pivot très sollicitées, en particulier les chefs de secteur et la référente qualité. Ce sont eux qui absorbent une part importante des tâches d’analyse, de coordination, de rédaction et de suivi. Cette concentration de charge crée une dépendance forte à certaines fonctions clés et limite la fluidité des processus. La structure apparaît globalement en place, mais encore peu optimisée dans ses modes de circulation de l’information et dans ses mécanismes d’aide à la décision.
+Proposition d’amélioration
+Faire évoluer l’organisation vers un fonctionnement plus fluide en mettant en place des outils d’appui à la décision et des espaces de travail partagés sur les processus les plus chronophages. L’enjeu n’est pas de remplacer l’encadrement, mais de lui redonner du temps utile en l’assistant dans l’analyse, la priorisation et la formalisation des réponses.
+Cadre réglementaire
+Constat clé
+L’activité d’A2MICILE s’inscrit dans un cadre réglementé et sensible, à la fois par son autorisation relevant du Conseil départemental et par la nature des publics accompagnés. Les exigences de qualité, de traçabilité, de formalisation des pratiques et de sécurisation des traitements doivent donc rester centrales dans toute évolution. Les obligations du secteur semblent connues et intégrées dans le fonctionnement global. En revanche, l’introduction de solutions d’IA ou d’automatisation suppose de bien encadrer les usages afin d’éviter tout risque de mauvaise interprétation, de réponse inadaptée ou d’utilisation non maîtrisée des données.
+Proposition d’amélioration
+Encadrer les futurs usages IA par une doctrine simple : assistance oui, décision automatisée non sur les sujets sensibles. Toute proposition produite par un outil d’IA devra être relue, validée et assumée par un professionnel habilité. Cette logique est particulièrement importante pour les réponses liées à la qualité, à la gestion des événements terrain, aux ressources humaines et aux interactions avec les bénéficiaires ou les salariés.
+Cas d’usage IA et accompagnement 
+préconisés
+Cas d’usage 1 : Assistance IA au traitement des anomalies et à la proposition de plans d’action qualité
+Description
+Mettre en place une assistance IA capable d’analyser les anomalies ou événements signalés par les intervenantes, de proposer une première qualification de la situation, de suggérer un plan d’action adapté et de préparer une réponse structurée à destination de l’intervenante ou du chef de secteur.
+Contexte ou problème identifié
+Aujourd’hui, lorsqu’une anomalie est constatée au domicile d’un bénéficiaire, l’intervenante la saisit dans ELABORHA. Le chef de secteur reçoit ensuite le signalement par mail, consulte les informations, analyse la situation, rédige une réponse dans l’espace commentaire et construit un plan d’action pour supprimer ou réduire le risque identifié. Ce processus repose presque entièrement sur une analyse humaine individuelle. Il est donc consommateur de temps, variable selon les personnes, et peu homogène dans la formulation des réponses ou dans la qualification des situations. Dans une activité soumise à de fortes exigences de qualité et de sécurité, ce point constitue un levier prioritaire.
+Outils IA ou solutions d’automatisation mobilisables
+Make ou n8n pour orchestrer les flux
+ChatGPT Teams / Enterprise ou un modèle IA sécurisé pour l’analyse de texte et la génération assistée
+connexion possible avec ELABORHA si une API ou une capacité d’export existe
+à défaut, mise en place d’un flux via BUZZEE ou via les mails reçus par les chefs de secteur
+création d’un formulaire ou d’une interface intermédiaire si la connexion directe au logiciel n’est pas possible
+Accompagnement préconisé
+L’accompagnement commencerait par une vérification technique des possibilités de connexion avec ELABORHA. Si le logiciel permet une intégration par API, le scénario pourra être construit à partir des anomalies saisies directement dans l’outil. Si ce n’est pas le cas, il conviendra de s’orienter vers un dispositif de capture à partir des mails de signalement ou d’un espace intermédiaire de centralisation.
+Un travail de qualification des anomalies devra ensuite être réalisé avec les chefs de secteur et la référente qualité afin de structurer une bibliothèque de situations types : anomalie légère, situation à surveiller, risque immédiat, besoin de contact famille, besoin de rappel de bonnes pratiques, etc. Sur cette base, le consultant pourra construire un assistant IA capable de :
+lire le signalement
+identifier le type de situation
+proposer un niveau de priorité
+suggérer un plan d’action
+générer un brouillon de réponse ou de commentaire
+AvantSignalement intervenante → lecture chef de secteur → analyse manuelle → réponse manuelle → plan d’action manuel
+AprèsSignalement intervenante → analyse IA → proposition de réponse et plan d’action → validation chef de secteur → diffusion
+Des tests seront nécessaires sur des cas réels anonymisés afin de vérifier la pertinence des propositions et éviter les réponses inadaptées. Enfin, une phase de formation permettra aux chefs de secteur d’apprendre à relire, ajuster et valider les propositions de l’outil avant diffusion.
+Impact potentiel
+Réduction du temps d’analyse et de rédaction, amélioration de l’homogénéité des réponses et renforcement de la réactivité dans le traitement des anomalies.
+Point de vigilance
+Les propositions générées ne devront jamais être diffusées sans relecture ni validation humaine, en particulier sur les situations sensibles concernant les bénéficiaires.
+Cas d’usage 2 : Assistance IA au tri des candidatures et à la préparation des entretiens de recrutement
+Description
+Déployer une assistance IA permettant d’analyser les CV exportés depuis REMO Platform, de repérer les éléments clés de chaque candidature, d’évaluer leur adéquation avec le poste recherché et de préparer une trame d’entretien avec les questions prioritaires à poser au candidat.
+Contexte ou problème identifié
+Le recrutement est déjà numérisé dans sa collecte grâce à REMO Platform, mais le tri et l’évaluation des candidatures restent réalisés manuellement. Il n’existe pas d’outil d’aide à la présélection ni à la préparation des entretiens. Cela oblige les équipes à lire chaque CV individuellement, à relever elles-mêmes les incohérences ou les points à approfondir et à construire leurs questions sans cadre homogène. Dans un secteur où les besoins de recrutement peuvent être récurrents, cette étape mobilise du temps et peut rendre le processus moins fluide.
+Outils IA ou solutions d’automatisation mobilisables
+export des CV depuis REMO Platform
+Make ou n8n pour automatiser l’envoi des documents vers un modèle IA
+ChatGPT ou autre assistant conversationnel pour l’analyse des CV
+génération automatique d’une fiche candidat synthétique dans Word, PDF ou Excel
+possibilité de créer une grille standardisée d’évaluation des candidatures
+Accompagnement préconisé
+La première étape consistera à définir avec l’entreprise les critères réellement attendus sur les postes concernés : expérience dans l’aide à domicile, stabilité du parcours, disponibilité, mobilité, qualités relationnelles, cohérence du projet professionnel, etc. À partir de ces critères, un modèle d’analyse standard pourra être conçu.
+Le consultant pourra ensuite mettre en place un scénario simple dans lequel les CV exportés depuis REMO Platform sont traités automatiquement pour produire :
+un résumé du profil
+les points forts du parcours
+les points de vigilance
+les questions à poser en entretien
+une première appréciation de l’adéquation au poste
+AvantCV reçus → lecture manuelle → analyse manuelle → questions préparées manuellement → entretien
+AprèsCV reçus → analyse IA → synthèse candidat + questions proposées → validation recruteur → entretien
+L’accompagnement devra inclure un travail sur la qualité des prompts, sur la structuration des critères de lecture et sur la forme attendue de la restitution. Une phase d’essai sur plusieurs candidatures réelles permettra d’ajuster le niveau d’analyse et la pertinence des questions proposées. La direction ou les personnes en charge du recrutement seront ensuite formées à l’usage de cette assistance comme outil d’aide à la préparation, et non comme système de décision automatique.
+Impact potentiel
+Gain de temps sur la présélection, meilleure préparation des entretiens et harmonisation de l’analyse des candidatures.
+Point de vigilance
+L’outil doit rester un appui à l’analyse. La décision de recrutement ne peut pas être déléguée à l’IA.
+Cas d’usage 3 : Espace partagé de gestion des congés avec aide à l’arbitrage
+Description
+Créer un espace partagé permettant aux salariés de visualiser les demandes de congés, de proposer des ajustements entre eux et d’apporter à la direction une aide à l’analyse des arbitrages possibles selon les contraintes de service.
+Contexte ou problème identifié
+La gestion actuelle des congés repose sur des fiches papier puis sur un fichier Excel. Les demandes sont déposées sur une période définie, puis l’entreprise arbitre et communique sa décision plusieurs semaines plus tard. Ce fonctionnement reste peu fluide, peu transparent pour les salariés et chronophage pour l’encadrement. Il n’existe pas d’espace partagé offrant une vision d’ensemble des demandes ni de canal structuré pour organiser les modifications ou échanges entre salariés. Me TANASESCU exprime le besoin d’un système plus collaboratif, avec une aide à la décision.
+Outils IA ou solutions d’automatisation mobilisables
+espace partagé sous Microsoft 365, SharePoint, Lists, ou application simple type formulaire collaboratif
+Excel Online ou base partagée pour centraliser les demandes
+Make ou n8n pour automatiser notifications, mises à jour et relances
+assistant IA connecté aux données de demandes pour analyser les conflits potentiels et proposer des arbitrages selon des règles définies
+Accompagnement préconisé
+L’accompagnement devra d’abord consister à formaliser les règles de gestion existantes : périodes prioritaires, ancienneté, contraintes de continuité de service, quotas d’absence par période, situations particulières. Sans ce cadrage, l’outil ne pourra pas produire de propositions utiles.
+Une fois ces règles clarifiées, il sera possible de concevoir un espace partagé permettant :
+le dépôt numérique des demandes
+la visibilité des demandes déjà formulées
+la demande de modification ou d’échange
+l’alerte automatique en cas de conflit ou de dépassement
+une aide à l’arbitrage pour la direction
+AvantDemande papier → saisie Excel → arbitrage manuel → réponse aux salariés
+AprèsDemande dans espace partagé → visibilité des demandes → alerte conflit / aide à l’arbitrage → validation direction → notification
+L’IA pourrait intervenir à un second niveau, en proposant des scénarios de répartition ou en attirant l’attention sur les incompatibilités les plus importantes. L’accompagnement comprendra la construction de l’outil, les tests avec les responsables concernés, puis l’information des salariés sur les nouvelles modalités de fonctionnement.
+Impact potentiel
+Processus plus fluide, meilleure visibilité pour les salariés et appui à la décision pour la direction.
+Point de vigilance
+L’adhésion des équipes dépendra de règles de gestion claires, partagées et perçues comme équitables.
+Cas d’usage 4 : Analyse assistée des enquêtes qualité et satisfaction avec génération de rapports
+Description
+Mettre en place une assistance IA capable d’analyser les réponses issues des enquêtes qualité et satisfaction, d’en dégager les principaux enseignements, de structurer un rapport et de proposer des pistes d’amélioration continue.
+Contexte ou problème identifié
+La référente qualité réalise chaque année des enquêtes qualité et satisfaction à partir de questionnaires personnalisés conçus dans ELABORHA. Une fois les réponses collectées, elle doit effectuer manuellement l’analyse des résultats, rédiger un rapport, formuler des propositions d’amélioration et saisir certaines informations dans le logiciel. Ce travail est répétitif, demande du temps et suppose une forte capacité de synthèse. Dans la mesure où les données peuvent être exportées, il existe une possibilité concrète de mettre en place une assistance IA pour faciliter l’analyse des réponses, structurer les constats et préparer les rapports attendus.
+Outils IA ou solutions d’automatisation mobilisables
+export des réponses depuis ELABORHA
+Excel, Word ou base intermédiaire pour structurer les données
+Make ou n8n pour automatiser les imports et la génération des livrables
+ChatGPT ou solution équivalente pour l’analyse qualitative et la rédaction assistée
+modèle de rapport standardisé avec synthèse, signaux faibles, priorités d’action et recommandations
+Accompagnement préconisé
+L’accompagnement consistera d’abord à standardiser le format des exports et à définir la structure de rapport attendue par la direction : synthèse générale, points de satisfaction, points d’insatisfaction, écarts récurrents, actions correctives proposées, priorités d’amélioration continue.
+Le consultant pourra ensuite construire un scénario permettant de transformer automatiquement les réponses en éléments exploitables : regroupement des verbatims, synthèse thématique, classement des irritants, propositions d’axes de progrès, rédaction d’un brouillon de rapport. Une attention particulière devra être portée à la qualité des questionnaires et à la cohérence des données exportées. L’outil ne devra pas se contenter de résumer, mais aussi aider la référente qualité à formaliser des propositions pertinentes au regard des exigences de l’agence.
+AvantQuestionnaires → réponses → lecture manuelle → synthèse manuelle → rapport manuel
+AprèsQuestionnaires → réponses exportées → analyse IA → brouillon de synthèse et rapport → validation référente qualité
+Une phase de co-construction avec la référente qualité permettra d’ajuster les catégories d’analyse, le style de restitution et les éléments devant impérativement être relus avant diffusion. L’accompagnement intégrera enfin une formation pratique à l’utilisation de l’outil et à la relecture critique des rapports générés.
+Impact potentiel
+Allègement du travail d’analyse et de rédaction, restitution plus homogène et meilleure exploitation des retours clients.
+Point de vigilance
+Les synthèses produites devront toujours être relues pour éviter toute simplification excessive ou interprétation inexacte.
+Synthèse et plan d’action
+Synthèse graphique
+Entreprise déjà structurée autour de processus identifiés et de fonctions d’encadrement clairement définies.
+Présence de plusieurs logiciels métiers spécialisés déjà en place dans l’environnement de travail.
+Besoins d’optimisation bien repérés par la direction sur des tâches concrètes et récurrentes.
+Existence de données opérationnelles déjà collectées dans les outils utilisés au quotidien.
+Sensibilité déjà présente aux enjeux de qualité, de traçabilité et d’amélioration continue.
+Première ouverture aux usages de l’IA avec un début d’expérimentation via ChatGPT.
+Fonctionnement encore très dépendant de traitements manuels, de ressaisies et d’analyses individuelles.
+Charge importante concentrée sur les chefs de secteur et la référente qualité.
+Faible structuration des usages IA et absence de cadre partagé d’utilisation.
+Circulation de l’information dispersée entre plusieurs outils sans exploitation transversale fluide.
+Gestion de certains processus encore peu digitalisée, notamment les congés et certaines étapes du recrutement.
+Faible automatisation des tâches de synthèse, de rédaction et d’aide à la décision.
+Risque de solutions inadaptées si les logiciels existants ne permettent pas une connexion simple ou sécurisée.
+Risque d’erreurs d’interprétation si les productions de l’IA ne sont pas relues par un professionnel.
+Sensibilité forte des données traitées en raison de l’activité auprès de publics fragiles ou vulnérables.
+Risque de rejet par les équipes si les évolutions sont perçues comme complexes ou trop descendantes.
+Dépendance possible à certains outils externes si la gouvernance des usages n’est pas clarifiée.
+Difficulté à obtenir des gains durables sans accompagnement au changement ni montée en compétence des référents internes.
+Mettre en place des automatisations ciblées à fort impact sur les processus les plus chronophages.
+Renforcer la réactivité et l’homogénéité dans le traitement des anomalies qualité.
+Améliorer la qualité des recrutements grâce à une meilleure préparation des entretiens.
+Structurer un pilotage plus fluide des congés et des échanges internes.
+Valoriser davantage les données issues des enquêtes qualité et satisfaction.
+Développer progressivement une culture IA pragmatique, centrée sur des usages métiers concrets.
+Réduire la charge administrative pour redonner du temps aux fonctions d’encadrement.
+Forces
+Faiblesses
+Opportunités
+Menaces
+Interne
+Externe
+Entreprise déjà structurée autour de processus identifiés et de fonctions d’encadrement clairement définies.
+Présence de plusieurs logiciels métiers spécialisés déjà en place dans l’environnement de travail.
+Besoins d’optimisation bien repérés par la direction sur des tâches concrètes et récurrentes.
+Existence de données opérationnelles déjà collectées dans les outils utilisés au quotidien.
+Sensibilité déjà présente aux enjeux de qualité, de traçabilité et d’amélioration continue.
+Première ouverture aux usages de l’IA avec un début d’expérimentation via ChatGPT.
+Fonctionnement encore très dépendant de traitements manuels, de ressaisies et d’analyses individuelles.
+Charge importante concentrée sur les chefs de secteur et la référente qualité.
+Faible structuration des usages IA et absence de cadre partagé d’utilisation.
+Circulation de l’information dispersée entre plusieurs outils sans exploitation transversale fluide.
+Gestion de certains processus encore peu digitalisée, notamment les congés et certaines étapes du recrutement.
+Faible automatisation des tâches de synthèse, de rédaction et d’aide à la décision.
+Risque de solutions inadaptées si les logiciels existants ne permettent pas une connexion simple ou sécurisée.
+Risque d’erreurs d’interprétation si les productions de l’IA ne sont pas relues par un professionnel.
+Sensibilité forte des données traitées en raison de l’activité auprès de publics fragiles ou vulnérables.
+Risque de rejet par les équipes si les évolutions sont perçues comme complexes ou trop descendantes.
+Dépendance possible à certains outils externes si la gouvernance des usages n’est pas clarifiée.
+Difficulté à obtenir des gains durables sans accompagnement au changement ni montée en compétence des référents internes.
+Mettre en place des automatisations ciblées à fort impact sur les processus les plus chronophages.
+Renforcer la réactivité et l’homogénéité dans le traitement des anomalies qualité.
+Améliorer la qualité des recrutements grâce à une meilleure préparation des entretiens.
+Structurer un pilotage plus fluide des congés et des échanges internes.
+Valoriser davantage les données issues des enquêtes qualité et satisfaction.
+Développer progressivement une culture IA pragmatique, centrée sur des usages métiers concrets.
+Réduire la charge administrative pour redonner du temps aux fonctions d’encadrement.
+Forces
+Faiblesses
+Opportunités
+Menaces
+Interne
+Externe
+Plan d’action détaillé 
+PLAN D'ACTION
+Projet Axes d’actions
+Priorité
+Action/étapes
+Description
+Calendrier prévisionnel
+Pilote/référent
+Livrables
+Ressources externes / internes
+Compétences
+Moyenne
+Accompagner le changement
+Présenter le nouvel espace aux salariés et aux encadrants, expliquer les règles et sécuriser l'appropriation du nouveau fonctionnement.
+Mois 1
+Direction
+Note d'information interne et guide d'utilisation
+Direction / Consultant externe
+Moyenne
+Former la référente qualité
+Former à la relecture critique, à l'ajustement des synthèses et à l'intégration des éléments utiles dans ELABORHA.
+Mois 1
+Référente qualité / Consultant
+Guide d'usage et support de formation
+Consultant externe / Référente qualité
+Haute
+Former les utilisateurs référents
+Former les chefs de secteur à la lecture critique, à la validation et à l'amélioration des propositions générées par l'outil.
+Mois 1
+Direction / Consultant
+Support de formation et guide utilisateur
+Consultant externe / Chefs de secteur
+Processus métier
+Haute
+Traitement des anomalies qualité
+Vérifier la faisabilité technique avec ELABORHA ou BUZZEE ; cartographier les anomalies types ; définir les règles de qualification ; concevoir le scénario IA ; tester sur cas réels ; ajuster ; déployer avec validation humaine.
+Mettre en place une assistance IA capable d’analyser les anomalies signalées, proposer un niveau de priorité, suggérer un plan d’action et préparer un brouillon de réponse pour les chefs de secteur, tout en conservant une validation humaine systématique avant diffusion.
+Mois 2 à 3
+Direction / Chefs de secteur / Référente qualité
+Note de faisabilité, base de cas types, scénario IA paramétré, procédure d’utilisation, guide de validation
+Externes + Internes
+Moyenne
+Tri des candidatures et préparation des entretiens
+Définir les critères d’analyse ; organiser l’export des CV depuis REMO Platform ; paramétrer l’assistance IA ; produire une trame d’analyse et de questions ; tester sur plusieurs candidatures ; ajuster ; intégrer dans le processus de recrutement.
+Déployer une assistance IA permettant de synthétiser les candidatures, identifier les points forts et points de vigilance, puis préparer les questions d’entretien afin d’améliorer la présélection et l’homogénéité de l’analyse des profils.
+Mois 2
+Direction
+Grille d’évaluation, modèle d’analyse IA, fiche candidat type, procédure d’usage recrutement
+Externes + Internes
+Moyenne
+Analyse des enquêtes qualité et satisfaction 
+Standardiser les exports ELABORHA ; définir la structure du rapport attendu ; paramétrer l’assistance IA ; automatiser l’analyse des réponses ; tester les restitutions ; ajuster ; intégrer dans le fonctionnement qualité.
+Mettre en place une assistance IA pour analyser les réponses aux enquêtes qualité et satisfaction, structurer les constats, faire ressortir les tendances et préparer des rapports plus homogènes avec propositions d’amélioration continue.
+Mois 2
+Référente qualité / Direction
+Modèle d’export, trame de rapport, outil d’analyse assistée, modèle de restitution final
+Externes + Internes
+Organisationnel
+Moyenne
+Gestion partagée des congés avec aide à l’arbitrage
+Formaliser les règles de gestion ; concevoir l’espace partagé ; organiser la visibilité des demandes ; paramétrer les alertes et notifications ; intégrer une aide à l’arbitrage ; tester ; déployer auprès des salariés.
+Mettre en place un espace partagé de gestion des congés permettant le dépôt numérique des demandes, une meilleure visibilité pour les salariés et un appui à la décision pour la direction en cas de conflit ou de surcharge sur certaines périodes.
+Mois 2 à 3
+Direction
+Règles de gestion formalisées, espace partagé opérationnel, système d’alerte, guide utilisateur
+Externes + Internes

@@ -1,0 +1,596 @@
+Synthèse Audit Flash IA 
+NOM DE L’ENTREPRISE : GRATACAP
+NUMERO DE DOSSIER : 26-144366
+NOM DU CONSEILLER OPCO : Aurélie ROUSSEL
+Durée de l’accompagnement en jours :
+Dates d’intervention
+Signatures
+Dates de RDV
+Entreprise
+Le Cercle des Entrepreneurs
+Réunion de cadrage : 
+24 mars 2026
+Diagnostic des pratiques : 
+13 avril 2026
+Préconisations / Plan d’action :
+27 avril 2026
+Sommaire
+I.Résumé3
+II.Contexte de l’entreprise4
+i.Historique et activité4
+ii.Structure organisationnelle4
+III.Diagnostic des pratiques IA7
+iii.Processus Métier7
+iv.Compétences et ressources10
+v.Données et sécurité11
+vi.Organisation12
+vii.Cadre réglementaire12
+IV.Cas d’usage IA et accompagnement préconisés14
+V.Synthèse et plan d’action18
+Synthèse graphique18
+VI.SWOT19
+VII.Plan d’action détaillé20
+Résumé
+L’audit met en évidence une entreprise familiale créée en 1978, fortement ancrée dans son territoire et spécialisée dans la vente, le conseil, la réparation et le dépannage de matériels variés : quincaillerie, électroménager, agricole, irrigation, serres, motoculture, métallerie et serrurerie.
+L’entreprise dispose déjà d’outils numériques utiles, notamment Wavesoft, Skello, Excel, Outlook, Word et Canva. Toutefois, plusieurs processus clés restent encore très manuels : suivi des réparations, commandes fournisseurs, réception des pièces, traitement des mails et pilotage de l’activité. Cette organisation fonctionne, mais elle génère des pertes de temps, des risques d’oubli et une difficulté à retrouver rapidement l’information.
+Les principaux cas d’usage IA proposés sont les suivants :
+Ordre de réparation digital : centraliser les interventions, temps passés, pièces utilisées, photos et statuts, avec possibilité de saisie vocale par les techniciens.
+Suivi digital des commandes fournisseurs : tracer les demandes de pièces, éviter les oublis et rattacher chaque commande au bon client, service ou dossier.
+Assistant IA de recherche fournisseurs : aider à rechercher plus rapidement des références, prix et délais à partir d’une référence OEM, avec validation humaine obligatoire.
+Triage intelligent des mails entrants : classer les mails reçus sur l’adresse générique, proposer un résumé, identifier le service concerné et créer une action à suivre.
+Tableau de bord de pilotage : suivre les indicateurs clés : chiffre d’affaires, réparations en cours, commandes en attente, délais, dossiers à facturer et charge par service.
+Communication marque employeur : utiliser l’IA et Canva pour valoriser l’entreprise, ses métiers, son histoire familiale, ses apprentis et ses atouts pour attirer des candidats.
+L’accompagnement recommandé doit rester progressif et opérationnel. Il pourrait démarrer par une sensibilisation des dirigeants et référents internes, puis par la création d’un premier prototype centré sur les ordres de réparation digitaux et le suivi des commandes fournisseurs. L’objectif est de réduire les tâches répétitives, améliorer la traçabilité, mieux informer les clients, faciliter la facturation et renforcer le pilotage, sans complexifier le quotidien des équipes.
+Contexte de l’entreprise
+Historique et activité
+L’entreprise est une structure familiale créée en 1978 par les parents de Rémi et Guillaume. Elle est aujourd’hui dirigée par Rémi, Guillaume et Sonia, épouse de Guillaume, qui ont repris la direction de l’entreprise en 2023.
+Implantée à Saint-Santin, dans le nord de l’Aveyron, l’entreprise rayonne principalement sur un secteur d’environ 30 kilomètres autour de son siège social. Elle occupe une place de proximité importante sur son territoire, avec une clientèle composée à la fois de particuliers, de professionnels et de collectivités locales, notamment des mairies.
+Son activité repose sur une offre diversifiée autour de la vente, du conseil et du service après-vente. L’entreprise commercialise notamment :
+des produits de quincaillerie ;
+de l’électroménager ;
+du matériel agricole ;
+des équipements d’irrigation ;
+du matériel pour serres ;
+du matériel de motoculture ;
+des équipements liés à l’élevage, au tubulaire et aux installations techniques.
+L’un des éléments structurants de son positionnement est la capacité à assurer la réparation et le dépannage des matériels vendus. Cette activité de service constitue un facteur de différenciation fort, en particulier dans un environnement rural où la proximité, la réactivité et la connaissance client sont essentielles.
+L’entreprise fonctionne donc sur un modèle combinant vente en magasin, conseil technique, réparation, dépannage et suivi client, avec une forte dépendance à la circulation de l’information entre les différents métiers internes : magasin, atelier, administratif, réparation agricole, motoculture, électroménager, irrigation et serrurerie/métallerie.
+Structure organisationnelle
+L’entreprise s’appuie sur une organisation polyvalente, structurée autour de plusieurs pôles métiers complémentaires. Cette répartition permet de couvrir à la fois les activités de vente, de conseil, de réparation, de dépannage, de gestion administrative et de suivi client.
+Les effectifs sont répartis de la manière suivante :
+Réparation agricole : 2 personnes, dont un apprenti ;
+Motoculture : 3 personnes, dont un apprenti ;
+Électroménager : 1 personne ;
+Tubulaire, élevage et irrigation : 1 personne ;
+Homme toutes mains : 1 personne ;
+Métallerie / serrurerie : 1 personne ;
+Vente / magasin : 2 personnes ;
+Administratif : 3 personnes, dont une apprentie, en charge notamment de la comptabilité, de la facturation et du suivi SAV.
+L’organisation repose sur une articulation entre des équipes techniques spécialisées, un service magasin en lien direct avec les clients et les fournisseurs, et une fonction administrative chargée de centraliser une partie des informations relatives à la facturation, au suivi client, aux commandes et au service après-vente.
+Les activités de réparation et de dépannage sont organisées par métier, notamment autour de l’agricole, de la motoculture et de l’électroménager. Chaque pôle intervient sur son domaine de compétence, depuis la prise en compte de la demande jusqu’à la réalisation de l’intervention, en lien avec le magasin et l’administratif lorsque des pièces, des devis, des commandes ou des éléments de facturation sont nécessaires.
+Le magasin joue un rôle central dans le fonctionnement quotidien de l’entreprise. Il assure l’accueil, la vente, le conseil client, la gestion des articles et le lien avec les différents services techniques. Il constitue également un point de passage important pour les informations relatives aux pièces, aux commandes fournisseurs et aux demandes clients.
+La fonction administrative intervient sur les missions de comptabilité, de facturation, de traitement du SAV et de suivi des échanges entrants. Elle contribue à la coordination entre les clients, les techniciens, les fournisseurs et la direction. Elle prend également en charge une partie du traitement des mails, des documents et des informations nécessaires à la bonne continuité des dossiers.
+L’entreprise utilise plusieurs outils numériques dans son fonctionnement courant. Le logiciel Wavesoft, fourni par ILLAM Informatique à Rodez, est mobilisé pour la facturation, la comptabilité, les bons de livraison, les devis, les commandes, les étiquettes et la gestion des articles. Les équipes utilisent également Skello pour les plannings, ainsi qu’Excel, Canva, Outlook et Word pour les besoins administratifs, organisationnels et de communication.
+Pour les activités de réparation et de dépannage, les équipes s’appuient aujourd’hui sur différents supports de suivi internes, notamment des agendas papier, des fiches autocopiantes ou des fiches papier selon les métiers concernés. Ces supports permettent de suivre l’avancement des interventions selon une logique opérationnelle organisée autour des statuts : à faire, en cours et terminé.
+Les commandes fournisseurs liées aux demandes clients sont traitées à partir d’informations transmises entre les personnes concernées, notamment entre l’administratif, la direction, le magasin et les services techniques. Les éléments nécessaires à la commande peuvent comprendre des références produits, des informations client, des documents techniques ou des justificatifs tels que des cartes grises selon la nature du matériel concerné.
+La messagerie de l’entreprise est organisée autour d’une adresse générique de contact, consultée par deux personnes. Les messages reçus sont ensuite orientés vers les interlocuteurs concernés selon leur nature : direction, magasin, service technique ou administratif. Cette organisation permet de traiter les demandes entrantes, les échanges fournisseurs, les demandes clients et les informations relatives aux commandes ou aux dossiers en cours.
+Les dirigeants assurent également le pilotage global de l’activité, avec un besoin de visibilité sur les indicateurs liés aux différents métiers de l’entreprise : production, chiffre d’affaires, commandes, réparations, délais, charge de travail et suivi des dossiers. Cette dimension de pilotage s’inscrit dans une organisation où les activités sont multiples et nécessitent une coordination régulière entre les services.
+Enfin, l’entreprise souhaite également renforcer sa communication externe, notamment autour de sa marque employeur. L’objectif est de mieux valoriser son identité, ses métiers, sa politique salariale et ses éléments différenciants, afin de soutenir son attractivité et de faciliter le recrutement sur des métiers techniques parfois difficiles à pourvoir.
+Diagnostic des pratiques IA
+Processus Métier
+Constat clé
+Les processus métiers sont aujourd’hui partiellement numérisés. Le logiciel Wavesoft structure les fonctions de gestion commerciale, de facturation, de devis, de bons de livraison, de commandes et de gestion des articles. En revanche, les processus liés aux réparations, aux dépannages, aux commandes de pièces, à la recherche fournisseur et au suivi des interventions restent largement manuels.
+Les équipes utilisent encore des agendas papier, des fiches autocopiantes, des fiches papier et un planning visuel pour organiser les interventions. Les commandes fournisseurs peuvent être transmises physiquement d’une personne à l’autre, avec impression de documents et dépôt sur un bureau. Les recherches de prix et de délais auprès des fournisseurs sont réalisées manuellement sur les sites internet, notamment à partir de références OEM.
+Cette organisation permet de fonctionner, mais elle génère des risques de perte d’information, de retard, de double saisie, de difficulté de suivi et de temps administratif important. Elle complique également la capacité à renseigner rapidement les clients, en particulier lorsque ceux-ci appellent pour connaître l’état d’avancement d’une réparation, d’une commande ou d’une pièce.
+Proposition d’amélioration
+Mettre en place une digitalisation progressive des processus métiers prioritaires, en commençant par les réparations et dépannages. L’objectif serait de créer un espace partagé permettant de centraliser les ordres de réparation, les informations clients, les pièces utilisées, les temps passés, les photos et les statuts d’avancement.
+Cette évolution pourrait s’appuyer sur un outil simple accessible en ligne, complété par de la transcription vocale pour faciliter la saisie par les techniciens. Le but est de conserver une logique terrain, tout en supprimant progressivement les supports papier et en améliorant la traçabilité des informations nécessaires au suivi client et à la facturation.
+Compétences et ressources
+Constat clé
+L’entreprise dispose de compétences métiers solides, avec des collaborateurs spécialisés par activité : agricole, motoculture, électroménager, irrigation, magasin, administratif, métallerie et serrurerie. La valeur ajoutée repose fortement sur l’expertise technique des équipes, leur connaissance des produits, des clients et des fournisseurs.
+En revanche, les pratiques numériques et les usages de l’IA ne semblent pas encore structurés. Les outils utilisés sont principalement des outils bureautiques ou de gestion courante. Il n’existe pas encore de cadre formalisé pour intégrer l’IA ou l’automatisation dans les pratiques quotidiennes. Le diagnostic fait ressortir un niveau limité sur l’axe compétences et ressources, ce qui traduit un besoin d’acculturation, de montée en compétence et d’accompagnement opérationnel.
+L’enjeu est particulièrement important car les solutions envisagées devront être acceptées par des profils techniques, habitués à travailler rapidement sur le terrain et parfois éloignés des outils numériques complexes.
+Proposition d’amélioration
+Prévoir un accompagnement très opérationnel des équipes, centré sur les usages concrets : renseigner un ordre de réparation par la voix, prendre une photo de pièce, retrouver une commande, suivre un statut, consulter une information client ou fournisseur.
+La montée en compétence doit être progressive et orientée métier. Il conviendra d’identifier quelques référents internes, notamment côté administratif, magasin et ateliers, afin de tester les outils, valider les usages et accompagner les autres collaborateurs dans l’appropriation des nouvelles pratiques.
+Données et sécurité
+Constat clé
+L’entreprise dispose de données utiles dans Wavesoft, Outlook, Excel et les documents internes. Ces données concernent les clients, les articles, les devis, les commandes, les factures, les fournisseurs, les plannings, les interventions et les échanges commerciaux. Toutefois, une partie significative des informations opérationnelles reste dispersée entre les supports papier, les mails, les échanges oraux, les documents imprimés et les outils non connectés.
+Cette dispersion limite la capacité à retrouver rapidement une information fiable. Elle peut également créer des difficultés pour historiser les demandes, suivre les commandes, rattacher une pièce à un client ou identifier le service concerné lors de la réception d’un mail ou d’un colis fournisseur.
+Sur le plan sécurité, l’usage d’une adresse mail générique consultée par plusieurs personnes impose également une vigilance particulière sur la gestion des accès, la confidentialité des données clients et la traçabilité des actions réalisées.
+Proposition d’amélioration
+Structurer progressivement un référentiel partagé pour les informations opérationnelles essentielles : client, matériel, intervention, commande, pièce, fournisseur, statut et historique des échanges. Cette base doit rester simple, accessible et adaptée aux usages internes.
+Il sera également nécessaire de formaliser quelques règles de sécurité de base : gestion des accès, rôles des utilisateurs, sauvegarde des données, confidentialité des informations clients, bonnes pratiques sur les outils d’IA et encadrement de l’usage des données transmises à des solutions externes.
+Organisation
+Constat clé
+L’organisation repose sur une coordination quotidienne entre la direction, l’administratif, les techniciens, le magasin et les fournisseurs. Cette coordination fonctionne aujourd’hui grâce à la proximité des personnes, à l’expérience des équipes et à des habitudes de travail installées.
+Cependant, plusieurs flux d’information restent dépendants de transmissions manuelles ou informelles : fiches papier, documents posés sur un bureau, mails transférés manuellement, appels téléphoniques clients, recherches dans les échanges fournisseurs, vérification de l’état d’avancement auprès des personnes concernées.
+Ce fonctionnement rend l’organisation vulnérable aux oublis, aux retards, aux absences et aux interruptions fréquentes. Il mobilise aussi fortement Sonia et les personnes en charge de l’administratif, qui doivent souvent rechercher, trier, transmettre ou reconstituer l’information pour les clients, les techniciens ou les fournisseurs.
+Proposition d’amélioration
+Mettre en place des circuits d’information plus lisibles, avec des statuts partagés et des notifications simples. L’objectif n’est pas de complexifier l’organisation, mais de permettre à chaque service de savoir rapidement ce qui est à faire, en cours, terminé, en attente de pièce, en attente fournisseur ou prêt à facturer.
+Une première amélioration pourrait porter sur la création d’un outil partagé de suivi des interventions et commandes, avec une logique de tableau opérationnel par service. Cette approche permettrait de réduire les appels internes, les recherches d’information et les risques d’oubli.
+Cadre réglementaire
+Constat clé
+Le diagnostic fait apparaître un niveau de maturité limité sur le cadre réglementaire. À ce stade, les usages de l’IA ne semblent pas formalisés par des règles internes précises. L’entreprise n’a pas encore défini de cadre d’usage sur les données pouvant être saisies dans un outil IA, les informations à ne pas transmettre, les responsabilités des utilisateurs ou les règles de validation humaine.
+Compte tenu de l’activité, les données traitées peuvent concerner des clients particuliers, des professionnels, des collectivités, des matériels, des cartes grises, des informations de facturation, des échanges fournisseurs et des données administratives. Ces éléments nécessitent un minimum de vigilance, notamment au regard de la confidentialité et de la protection des données.
+Proposition d’amélioration
+Établir une charte simple d’usage de l’IA et des outils numériques, adaptée à une PME artisanale. Cette charte pourrait rappeler les règles essentielles : ne pas transmettre de données sensibles ou confidentielles dans un outil non validé, vérifier les résultats produits par l’IA, conserver une validation humaine, sécuriser les accès et respecter les règles de confidentialité.
+Cette formalisation doit rester pragmatique et courte, afin d’être comprise et appliquée par les équipes. Elle pourra être complétée par une sensibilisation des collaborateurs aux risques de base : données clients, pièces administratives, mots de passe, mails frauduleux, outils IA grand public et validation des contenus générés.
+Cas d’usage IA et accompagnement 
+préconisés
+Cas d’usage 1 — Digitalisation des ordres de réparation et de dépannage
+Description du cas d’usage
+Ce cas d’usage consiste à remplacer progressivement les agendas papier, fiches autocopiantes et fiches papier par un ordre de réparation digital partagé, accessible par les équipes concernées : techniciens, magasin, administratif et direction.
+L’objectif est de permettre aux techniciens de renseigner facilement les informations liées à une réparation ou à un dépannage :
+identité du client ;
+matériel concerné ;
+nature de la panne ou de la demande ;
+diagnostic réalisé ;
+temps passé ;
+pièces utilisées ;
+photos des pièces ou du matériel ;
+statut du dossier : à faire, en cours, en attente de pièce, terminé, prêt à facturer.
+La saisie pourrait être facilitée par une transcription vocale, afin que les techniciens puissent dicter leurs informations plutôt que les saisir manuellement. Cette approche est particulièrement adaptée à des métiers terrain où les collaborateurs doivent aller vite, garder les mains libres et éviter les tâches administratives trop lourdes.
+Contexte ou problème identifié
+Le processus actuel repose sur des supports papier et un planning visuel. Cette organisation est connue des équipes, mais elle rend le suivi difficile lorsque plusieurs personnes doivent accéder à la même information.
+Les principaux irritants identifiés sont les suivants :
+difficulté à savoir rapidement où en est une intervention ;
+temps perdu pour renseigner les clients par téléphone ;
+risque d’informations incomplètes au moment de la facturation ;
+ressaisie ou reconstitution manuelle des temps et des pièces utilisées ;
+absence d’historique centralisé par client ou par matériel ;
+dépendance à la présence des personnes qui détiennent l’information.
+Outils IA ou solutions d’automatisation envisageables
+Une solution simple pourrait être construite avec :
+un outil de base de données partagée de type Airtable, Notion, Smartsuite ou équivalent ;
+une interface terrain simplifiée accessible depuis smartphone ou tablette ;
+un module de transcription vocale pour transformer les commentaires du technicien en texte structuré ;
+un formulaire de création d’ordre de réparation ;
+un système de statuts et de notifications ;
+une connexion éventuelle avec Make ou n8n pour automatiser les transmissions d’information ;
+une connexion future avec Wavesoft, si les possibilités techniques le permettent, notamment par export, import ou API.
+L’IA pourrait intervenir pour reformuler automatiquement les notes vocales du technicien en informations exploitables : résumé de l’intervention, diagnostic, pièces utilisées, observations client et éléments utiles à la facturation.
+Accompagnement préconisé
+L’accompagnement devra partir des pratiques existantes afin d’éviter une rupture trop forte avec l’organisation actuelle.
+Les étapes recommandées sont les suivantes :
+Cartographier le processus actuel de réparation et dépannageIdentifier précisément les étapes depuis la demande client jusqu’à la facturation : prise de demande, diagnostic, intervention, commande éventuelle de pièces, clôture, facturation.
+Définir un modèle d’ordre de réparation digitalCréer une fiche simple avec les champs indispensables, sans complexifier le travail des équipes. L’objectif est de remplacer progressivement les fiches papier par un support numérique lisible et partagé.
+Créer un prototype opérationnelMettre en place un premier outil sur un périmètre limité, par exemple sur la motoculture ou la réparation agricole, afin de tester l’usage avec quelques collaborateurs référents.
+Intégrer la saisie vocale et les photosPrévoir un usage très terrain : le technicien doit pouvoir dicter son compte rendu, ajouter une photo et changer un statut en quelques secondes.
+Former les utilisateurs référentsAccompagner les techniciens, le magasin et l’administratif dans l’usage quotidien de l’outil, avec des exemples concrets issus de leurs dossiers.
+Ajuster les règles de fonctionnementDéfinir qui crée l’ordre de réparation, qui le complète, qui le valide, qui le clôture et qui déclenche la facturation.
+Préparer la généralisationUne fois le prototype validé, étendre progressivement le fonctionnement aux autres activités de réparation ou de dépannage.
+Impact potentiel
+Ce cas d’usage aurait un impact direct sur le fonctionnement quotidien de l’entreprise. Il permettrait de réduire le temps passé à rechercher l’information, d’améliorer la qualité du suivi client et de fiabiliser les éléments transmis à la facturation.
+Pour les techniciens, l’enjeu est de limiter les tâches administratives tout en sécurisant la transmission de leurs informations. Pour l’administratif, il s’agit de disposer d’éléments plus complets, plus lisibles et plus rapidement exploitables. Pour les clients, l’amélioration se traduit par une meilleure capacité de l’entreprise à répondre aux demandes de suivi.
+Compétences requises
+Les compétences nécessaires restent accessibles :
+savoir utiliser un smartphone ou une tablette ;
+renseigner un formulaire simple ;
+dicter une note vocale exploitable ;
+prendre une photo utile ;
+comprendre la logique des statuts ;
+respecter les règles de validation avant facturation.
+Risques et points de vigilance
+Le principal risque est de créer un outil trop complexe, qui ne serait pas adopté par les équipes terrain. Il faudra donc privilégier une interface très simple, avec peu de champs obligatoires et une logique proche des habitudes actuelles.
+Une vigilance particulière devra également être portée sur la qualité de la saisie vocale, la gestion des données client, la fiabilité des statuts et l’articulation future avec Wavesoft.
+Processus avant / après
+AvantDemande client → note papier ou agenda → intervention → informations dispersées → appels clients répétés → reconstitution des temps et pièces → facturation
+AprèsDemande client → ordre de réparation digital → saisie vocale + photos → statut partagé → information client plus rapide → données prêtes pour facturation
+Cas d’usage 2 — Suivi digital des commandes fournisseurs liées aux clients
+Description du cas d’usage
+Ce cas d’usage vise à digitaliser le suivi des commandes fournisseurs passées pour le compte des clients, notamment lorsqu’une pièce ou un matériel spécifique doit être commandé à partir d’une référence, d’une carte grise, d’un document client ou d’une demande technicien.
+L’objectif est de créer un espace partagé permettant de suivre chaque commande depuis la demande initiale jusqu’à la réception de la pièce, puis son affectation au bon client, au bon service et au bon dossier.
+La solution doit permettre de savoir à tout moment :
+qui a demandé la commande ;
+pour quel client ;
+pour quel matériel ;
+quelle pièce est concernée ;
+chez quel fournisseur la commande a été passée ;
+à quelle date ;
+avec quel délai annoncé ;
+si la pièce est reçue ;
+à quel service elle doit être transmise.
+Contexte ou problème identifié
+Aujourd’hui, certaines commandes sont transmises manuellement. Sonia peut préparer des éléments pour Rémi, les imprimer et les déposer sur son bureau. Ce fonctionnement reste simple, mais il dépend fortement des transmissions physiques et de la disponibilité des personnes.
+Les risques identifiés sont les suivants :
+oubli ou retard de traitement ;
+perte d’un document imprimé ;
+difficulté à savoir si la commande a été passée ;
+absence de vision globale sur les commandes en attente ;
+difficulté à rattacher une pièce reçue au bon client ou au bon service ;
+temps perdu pour rechercher l’origine d’une commande.
+Outils IA ou solutions d’automatisation envisageables
+Une solution de suivi des commandes pourrait être intégrée au même outil que les ordres de réparation, afin d’éviter de multiplier les supports.
+Elle pourrait comprendre :
+un formulaire de demande de commande ;
+une base partagée des commandes en cours ;
+des statuts : à commander, commandé, en attente fournisseur, reçu, transmis au service, clôturé ;
+un dépôt de documents : carte grise, photo de pièce, référence fournisseur, devis ;
+des notifications automatiques à la personne concernée ;
+un lien avec l’ordre de réparation ou le client ;
+une automatisation via Make ou n8n pour notifier Rémi, le magasinier ou l’administratif.
+L’IA pourrait aider à extraire automatiquement certaines informations depuis un document ou une photo : référence, modèle, immatriculation, désignation ou informations utiles à la commande.
+Accompagnement préconisé
+L’accompagnement pourrait être structuré autour des étapes suivantes :
+Identifier les typologies de commandesDistinguer les commandes liées à l’agricole, à la motoculture, à l’électroménager, à l’irrigation ou au magasin.
+Définir un circuit de validation simpleClarifier qui crée la demande, qui valide la commande, qui la passe, qui réceptionne la pièce et qui clôture le dossier.
+Créer une fiche commande digitaleConstruire un modèle simple, avec les champs réellement nécessaires : client, service, matériel, référence, fournisseur, statut, délai, pièce jointe.
+Mettre en place les notificationsPrévoir des alertes automatiques vers la personne concernée lorsqu’une commande est à traiter, en retard, reçue ou à affecter.
+Tester sur un périmètre limitéDémarrer avec un service pilote, par exemple la motoculture ou l’agricole, avant de généraliser.
+Former les personnes clésAccompagner Sonia, Rémi, le magasinier et les techniciens concernés pour sécuriser la prise en main.
+Impact potentiel
+Ce cas d’usage permettrait de mieux maîtriser les commandes clients, de réduire les oublis et de faciliter le travail du magasinier lors de la réception des pièces. Il améliorerait également la capacité de l’entreprise à informer les clients sur les délais et l’état d’avancement.
+Pour l’organisation, l’impact principal serait la réduction des ruptures d’information entre l’administratif, la direction, le magasin et les services techniques.
+Compétences requises
+Les compétences nécessaires sont simples :
+créer une demande dans un formulaire ;
+joindre une photo ou un document ;
+mettre à jour un statut ;
+consulter une liste de commandes ;
+rechercher une commande par client, service ou fournisseur.
+Risques et points de vigilance
+Le principal point de vigilance concerne la discipline de saisie. Si les commandes continuent à être transmises en parallèle par papier, oralement ou par mail sans centralisation, l’outil perdra rapidement son intérêt.
+Il faudra donc définir une règle claire : toute commande client spécifique doit être créée dans l’espace partagé.
+Processus avant / après
+Avant
+Demande client ou technicien → impression de documents → dépôt sur bureau → commande manuelle → réception pièce → recherche du client ou service concerné
+Après
+Demande client ou technicien → fiche commande digitale → notification au responsable → suivi du statut → réception identifiée → affectation au bon client/service
+Cas d’usage 3 — Assistant IA de recherche de prix, références et délais fournisseurs
+Description du cas d’usage
+Ce cas d’usage consiste à créer un assistant permettant d’aider les équipes agricoles et motoculture dans la recherche de pièces, de prix et de délais auprès des fournisseurs.
+À partir d’une référence OEM, d’une photo, d’une désignation ou d’une information matériel, l’assistant pourrait aider à rechercher plus rapidement les informations disponibles, à comparer les réponses fournisseurs et à préparer une synthèse exploitable pour le client ou pour la commande.
+Il ne s’agit pas de remplacer l’expertise des équipes, mais de réduire le temps passé sur des recherches répétitives et manuelles.
+Contexte ou problème identifié
+Aujourd’hui, les équipes doivent consulter manuellement les sites internet fournisseurs pour identifier les prix, les délais et parfois les références correspondantes. Ce processus peut être long, surtout lorsque les références sont incomplètes ou que plusieurs fournisseurs doivent être consultés.
+Les conséquences sont les suivantes :
+temps important consacré aux recherches ;
+difficulté à comparer rapidement plusieurs fournisseurs ;
+dépendance à la connaissance individuelle des personnes ;
+ralentissement du devis ou de la commande ;
+délai de réponse plus long pour le client.
+Outils IA ou solutions d’automatisation envisageables
+Plusieurs niveaux de solution peuvent être envisagés.
+Dans une première version simple, l’entreprise pourrait utiliser un assistant IA encadré, basé sur ChatGPT, Mistral, Perplexity ou un outil équivalent, avec des consignes précises pour structurer les recherches et produire une synthèse.
+Dans une version plus avancée, un agent pourrait être connecté à une base de fournisseurs, des catalogues ou des sites accessibles, afin d’aider à rechercher :
+référence équivalente ;
+fournisseur disponible ;
+prix ;
+délai ;
+conditions ;
+lien vers la fiche produit ;
+niveau de fiabilité de l’information.
+L’automatisation pourrait être reliée à l’espace de suivi des commandes afin d’ajouter les résultats de recherche directement dans la fiche commande.
+Accompagnement préconisé
+L’accompagnement devra sécuriser le périmètre pour éviter des résultats approximatifs.
+Les étapes recommandées sont les suivantes :
+Lister les fournisseurs prioritairesIdentifier les fournisseurs les plus utilisés en agricole, motoculture et pièces techniques.
+Définir les types de recherches récurrentesRéférences OEM, pièces détachées, délais, prix, équivalences, compatibilité matériel.
+Créer des modèles de prompts sécurisésFormaliser des demandes types permettant d’obtenir une réponse structurée et vérifiable.
+Tester l’assistant sur des cas réelsComparer le temps de recherche manuel avec le temps de recherche assisté par IA.
+Définir les règles de validation humaineLes résultats de l’IA devront toujours être contrôlés par une personne compétente avant commande ou communication au client.
+Documenter les bonnes pratiquesCréer une fiche interne simple : quoi demander à l’IA, quoi vérifier, quoi ne jamais transmettre.
+Impact potentiel
+L’impact attendu porte principalement sur le gain de temps dans les recherches fournisseurs et l’amélioration de la réactivité client. Les équipes pourraient obtenir plus rapidement une première synthèse, tout en conservant la validation technique et commerciale.
+Ce cas d’usage peut également contribuer à capitaliser les recherches récurrentes, notamment si les références et résultats sont enregistrés dans une base commune.
+Compétences requises
+Les utilisateurs devront apprendre à :
+formuler correctement une recherche ;
+contrôler les résultats proposés ;
+comparer plusieurs sources ;
+identifier les limites de l’IA ;
+valider les prix, délais et références avant utilisation.
+Risques et points de vigilance
+Le risque principal est la fiabilité des informations. Une IA peut proposer des résultats incomplets ou inexacts, notamment sur des références techniques. L’outil doit donc être utilisé comme une aide à la recherche, jamais comme une source de vérité unique.
+La validation par les équipes métiers doit rester obligatoire avant toute commande.
+Processus avant / après
+Avant
+Référence ou demande client → recherche manuelle sur plusieurs sites fournisseurs → comparaison manuelle → appel ou mail fournisseur → réponse client ou commande
+Après
+Référence ou demande client → recherche assistée par IA → synthèse prix/délais/fournisseurs → validation humaine → réponse client ou création commande
+Cas d’usage 4 — Triage intelligent des mails entrants et suivi des actions
+Description du cas d’usage
+Ce cas d’usage vise à mieux organiser le traitement des mails reçus sur l’adresse générique de contact. L’objectif est de permettre un tri automatique ou semi-automatique des messages entrants, avec identification du service concerné, du niveau d’urgence et de l’action à réaliser.
+L’outil pourrait analyser les mails entrants et proposer :
+une catégorie : client, fournisseur, SAV, commande, facture, devis, information générale ;
+un service destinataire : direction, magasin, agricole, motoculture, électroménager, administratif ;
+une action à réaliser ;
+une priorité ;
+un rattachement éventuel à un client, une commande ou un ordre de réparation ;
+une notification à la personne concernée.
+Contexte ou problème identifié
+L’adresse mail générique est consultée par deux personnes, qui doivent trier manuellement les messages puis les transférer à la bonne personne. Les mails fournisseurs ou clients peuvent concerner plusieurs dossiers différents. Sonia doit parfois rechercher à quel service, client ou dossier se rattache un message.
+Cette situation peut générer :
+perte de temps dans le tri ;
+risque d’oubli ;
+difficulté à suivre les actions issues des mails ;
+manque de visibilité sur les demandes en attente ;
+dépendance forte à la personne qui connaît le dossier ;
+interruptions fréquentes dans le travail administratif.
+Outils IA ou solutions d’automatisation envisageables
+Une automatisation pourrait être créée à partir de Outlook, avec un scénario Make ou n8n. Le scénario pourrait analyser les mails entrants, identifier leur nature, puis créer une tâche ou une notification dans l’outil partagé.
+Des outils comme ChatGPT, Mistral ou un module IA intégré à l’automatisation pourraient être utilisés pour classer le contenu du mail et proposer un résumé.
+La solution pourrait fonctionner en semi-automatique au départ : l’IA propose le classement, mais une personne valide avant transmission. Cette approche est préférable pour sécuriser l’usage et éviter les erreurs d’affectation.
+Accompagnement préconisé
+L’accompagnement pourrait se dérouler en plusieurs étapes :
+Analyser les typologies de mails reçusIdentifier les catégories les plus fréquentes : clients, fournisseurs, commandes, devis, factures, SAV, relances.
+Définir une règle de classement interneCréer une grille simple pour orienter les mails vers les bons services.
+Créer un scénario de tri assistéMettre en place une automatisation qui lit le mail, propose une catégorie et prépare une action.
+Créer des notifications cibléesEnvoyer une alerte au service ou à la personne concernée, avec résumé du mail et action attendue.
+Prévoir une phase de validation humaineDans un premier temps, conserver une validation par l’administratif avant automatisation complète.
+Mesurer les gainsComparer le nombre de mails traités, le temps de tri et le nombre de demandes en attente avant/après.
+Impact potentiel
+Ce cas d’usage peut fortement réduire le temps administratif consacré au tri et à la recherche d’information. Il améliore également la traçabilité des demandes et permet d’éviter qu’un mail reste sans traitement.
+Pour Sonia et l’équipe administrative, l’impact serait particulièrement important : moins d’interruptions, moins de recherche manuelle et une meilleure visibilité sur les actions à suivre.
+Compétences requises
+Les compétences nécessaires concernent principalement :
+savoir valider ou corriger une proposition de classement ;
+utiliser une liste de tâches ou un espace partagé ;
+comprendre les règles internes de traitement ;
+vérifier les informations avant transmission.
+Risques et points de vigilance
+Le principal risque est l’erreur de classement d’un mail. C’est pourquoi une phase de fonctionnement semi-automatique est recommandée au démarrage.
+Il faudra également veiller à la confidentialité des mails, notamment lorsqu’ils contiennent des données personnelles, des pièces administratives, des factures ou des informations clients.
+Processus avant / après
+Avant
+Mail reçu sur contact → lecture manuelle → recherche du dossier concerné → transfert manuel → relance ou action non toujours tracée
+Après
+Mail reçu → analyse IA → catégorie + résumé + service concerné → validation administrative → notification ou tâche créée → suivi de l’action
+Cas d’usage 5 — Tableau de bord de pilotage de l’activité
+Description du cas d’usage
+Ce cas d’usage consiste à créer un tableau de bord permettant aux dirigeants de suivre plus facilement l’activité de l’entreprise à partir des données disponibles dans Wavesoft, Excel, les ordres de réparation digitaux et les commandes suivies.
+L’objectif est de disposer d’une vision consolidée des indicateurs clés :
+chiffre d’affaires par activité ;
+volume de réparations ;
+nombre d’interventions en cours ;
+commandes fournisseurs en attente ;
+délais moyens de traitement ;
+réparations terminées non facturées ;
+activité par service ;
+évolution des ventes ;
+indicateurs liés au magasin ;
+suivi des demandes clients.
+Contexte ou problème identifié
+Les dirigeants ne disposent pas aujourd’hui d’un tableau de bord global leur permettant de suivre l’ensemble des indicateurs de production métier. Les informations existent partiellement dans les outils, mais elles ne sont pas consolidées dans une vue simple et directement exploitable.
+Cette situation limite la capacité à analyser rapidement :
+les charges par service ;
+les retards éventuels ;
+les volumes de réparation ;
+les tendances commerciales ;
+les délais ;
+les priorités opérationnelles ;
+les points de blocage.
+Outils IA ou solutions d’automatisation envisageables
+Une solution BI simple pourrait être envisagée à partir de :
+Looker Studio ;
+Power BI ;
+Excel avancé ;
+un tableau de bord intégré à Airtable, Notion ou Smartsuite ;
+des exports issus de Wavesoft ;
+des données issues des ordres de réparation et du suivi des commandes.
+L’IA pourrait intervenir pour produire des synthèses périodiques : résumé hebdomadaire de l’activité, alertes sur les retards, identification des dossiers bloqués, comparaison des volumes par activité.
+Accompagnement préconisé
+L’accompagnement devra rester très pragmatique pour éviter de produire un tableau de bord trop complexe.
+Les étapes recommandées sont les suivantes :
+Identifier les indicateurs réellement utiles aux dirigeantsNe retenir que les indicateurs permettant de prendre une décision ou de suivre l’activité.
+Vérifier les sources de données disponiblesIdentifier ce qui peut être extrait de Wavesoft, Excel, Skello, Outlook ou du futur outil de suivi des réparations.
+Créer une première maquette de tableau de bordProposer une vue simple avec quelques indicateurs prioritaires.
+Automatiser l’alimentation des données lorsque c’est possibleUtiliser des exports, imports ou connexions selon les possibilités techniques.
+Former les dirigeants à la lecture des indicateursExpliquer comment utiliser le tableau de bord pour piloter les priorités, les retards et les décisions.
+Prévoir une synthèse périodique assistée par IAGénérer un résumé hebdomadaire ou mensuel des principaux points d’attention.
+Impact potentiel
+Ce cas d’usage permettrait aux dirigeants de mieux piloter l’activité, d’anticiper les tensions, d’identifier les retards et de disposer d’une vision plus objective de la charge de travail.
+Il faciliterait également les arbitrages : priorités de réparation, organisation des équipes, suivi des commandes, actions commerciales ou besoins de recrutement.
+Compétences requises
+Les compétences nécessaires concernent principalement :
+lire un tableau de bord simple ;
+interpréter des indicateurs ;
+contrôler la qualité des données ;
+suivre des alertes ;
+utiliser les données pour décider.
+Risques et points de vigilance
+Le principal risque est de construire un tableau de bord alimenté par des données incomplètes ou non fiabilisées. La priorité devra donc être donnée à la qualité de la donnée et à la simplicité des indicateurs.
+Il faudra également éviter de multiplier les indicateurs inutiles. Un tableau de bord efficace doit rester lisible et orienté décision.
+Processus avant / après
+Avant
+Données dispersées → consultation manuelle des outils → vision partielle de l’activité → décisions fondées sur l’expérience et les urgences
+Après
+Données consolidées → tableau de bord simple → alertes et indicateurs clés → pilotage plus régulier → décisions mieux objectivées
+Cas d’usage 6 — Communication marque employeur et attractivité des métiers
+Description du cas d’usage
+Ce cas d’usage vise à aider l’entreprise à mieux valoriser son identité, ses métiers, son histoire familiale, sa politique salariale, son ancrage local et ses éléments différenciants afin de renforcer son attractivité auprès de futurs candidats.
+L’IA peut aider à produire plus facilement des contenus pour les réseaux sociaux, le site internet, les annonces de recrutement ou les supports de communication.
+Les contenus pourraient porter sur :
+l’histoire de l’entreprise ;
+les métiers techniques ;
+l’apprentissage ;
+les valeurs familiales ;
+la proximité client ;
+la politique salariale ;
+les conditions de travail ;
+les projets réalisés ;
+la vie d’équipe ;
+les offres d’emploi.
+Contexte ou problème identifié
+L’entreprise souffre d’un déficit d’image pour attirer des candidatures. Comme beaucoup de PME artisanales et techniques, elle dispose pourtant d’atouts réels : ancienneté, transmission familiale, diversité des métiers, ancrage territorial, savoir-faire technique, apprentissage et proximité avec les clients.
+Ces éléments ne sont pas suffisamment visibles à l’extérieur. La communication employeur doit permettre de montrer une entreprise moderne, humaine, formatrice et attractive.
+Outils IA ou solutions d’automatisation envisageables
+L’entreprise utilise déjà Canva, ce qui constitue un bon point d’appui. L’IA peut compléter cet usage avec :
+ChatGPT ou Mistral pour rédiger des publications ;
+Canva pour créer les visuels ;
+un calendrier éditorial simple ;
+une automatisation de programmation des publications si nécessaire ;
+des modèles d’annonces de recrutement ;
+des scripts courts pour vidéos métiers ;
+une banque de contenus réutilisables.
+Une automatisation légère pourrait permettre de transformer une idée ou une photo interne en publication prête à diffuser.
+Accompagnement préconisé
+L’accompagnement pourrait comprendre :
+Identifier les messages employeur à valoriserHistoire familiale, métiers, formation des apprentis, politique salariale, stabilité, proximité, conditions de travail.
+Créer une ligne éditoriale simpleDéfinir les thèmes récurrents et le ton à adopter.
+Produire des modèles de publicationsPréparer des formats réutilisables : portrait collaborateur, métier de la semaine, coulisses atelier, offre d’emploi, réalisation client.
+Former une personne référenteLui apprendre à utiliser l’IA pour produire des textes simples et Canva pour créer les visuels.
+Créer un planning de publication réalistePar exemple deux publications par mois, afin de rester régulier sans surcharger l’organisation.
+Mesurer les retombéesSuivre les candidatures, les prises de contact, les vues, les interactions et la perception locale.
+Impact potentiel
+Ce cas d’usage peut contribuer à renforcer l’image de l’entreprise sur son territoire, à améliorer la visibilité de ses métiers et à soutenir les recrutements.
+L’impact est moins immédiat que sur les processus internes, mais il est stratégique dans un contexte où les compétences techniques sont difficiles à attirer.
+Compétences requises
+Les compétences nécessaires sont limitées :
+savoir formuler une idée de publication ;
+utiliser un modèle de prompt ;
+relire et valider un texte généré par IA ;
+adapter un visuel Canva ;
+publier sur les réseaux sociaux.
+Risques et points de vigilance
+Il faudra éviter une communication trop artificielle ou trop générique. La force de l’entreprise réside dans son authenticité, son histoire et ses métiers. L’IA doit aider à structurer et gagner du temps, sans remplacer la parole réelle de l’entreprise.
+Les contenus devront être relus avant publication, notamment lorsqu’ils évoquent des collaborateurs, des clients, des conditions salariales ou des éléments internes.
+Processus avant / après
+Avant
+Besoin de recruter → communication limitée → métiers peu visibles → faible attractivité → candidatures difficiles à obtenir
+Après
+Messages employeur définis → contenus IA + Canva → publications régulières → meilleure visibilité locale → attractivité renforcée
+Synthèse et plan d’action
+Synthèse graphique
+Entreprise familiale créée en 1978, fortement implantée sur son territoire.
+Activités diversifiées : quincaillerie, électroménager, agricole, irrigation, serres, motoculture, métallerie, serrurerie et réparation.
+Relation client de proximité avec des particuliers, professionnels et collectivités.
+Forte expertise technique des équipes métiers.
+Logiciel Wavesoft déjà utilisé pour la gestion commerciale, la facturation, les commandes et les articles.
+Usage courant d’outils numériques : Skello, Excel, Outlook, Word, Canva.
+Direction consciente des irritants internes et ouverte à l’amélioration des processus.
+Forte dépendance aux supports papier pour les réparations, dépannages et suivis d’intervention.
+Informations dispersées entre papier, mails, échanges oraux, documents imprimés et outils numériques.
+Absence d’outil partagé pour suivre les ordres de réparation, les statuts, les pièces et les temps passés.
+Risques d’oubli ou de retard dans les commandes fournisseurs.
+Traitement manuel des mails entrants et des demandes clients.
+Difficulté à rattacher rapidement les pièces reçues au bon client ou au bon service.
+Absence de tableau de bord consolidé pour piloter l’activité.
+Maturité IA encore faible et usages non formalisés.
+Résistance au changement si les outils sont trop complexes pour les équipes terrain.
+Risque de double fonctionnement papier / numérique si les règles ne sont pas clairement posées.
+Données incomplètes ou mal saisies pouvant limiter la fiabilité des suivis.
+Risque d’erreur dans les recherches IA sur les références techniques, prix ou délais.
+Confidentialité à sécuriser pour les données clients, fournisseurs et administratives.
+Intégration à Wavesoft à vérifier avant toute automatisation avancée.
+Risque de surcharge si trop de chantiers numériques sont lancés en même temps.
+Forces
+Faiblesses
+Opportunités
+Menaces
+Interne
+Externe
+Digitaliser les ordres de réparation avec saisie vocale, photos, statuts et historique client.
+Mettre en place un suivi digital des commandes fournisseurs.
+Automatiser partiellement le tri des mails entrants et la création de tâches.
+Utiliser l’IA pour assister les recherches de références, prix et délais fournisseurs.
+Créer un tableau de bord simple pour suivre l’activité, les réparations, les commandes et les délais.
+Renforcer la communication marque employeur avec l’IA et Canva.
+Améliorer la satisfaction client grâce à une meilleure traçabilité et des réponses plus rapides.
+Entreprise familiale créée en 1978, fortement implantée sur son territoire.
+Activités diversifiées : quincaillerie, électroménager, agricole, irrigation, serres, motoculture, métallerie, serrurerie et réparation.
+Relation client de proximité avec des particuliers, professionnels et collectivités.
+Forte expertise technique des équipes métiers.
+Logiciel Wavesoft déjà utilisé pour la gestion commerciale, la facturation, les commandes et les articles.
+Usage courant d’outils numériques : Skello, Excel, Outlook, Word, Canva.
+Direction consciente des irritants internes et ouverte à l’amélioration des processus.
+Forte dépendance aux supports papier pour les réparations, dépannages et suivis d’intervention.
+Informations dispersées entre papier, mails, échanges oraux, documents imprimés et outils numériques.
+Absence d’outil partagé pour suivre les ordres de réparation, les statuts, les pièces et les temps passés.
+Risques d’oubli ou de retard dans les commandes fournisseurs.
+Traitement manuel des mails entrants et des demandes clients.
+Difficulté à rattacher rapidement les pièces reçues au bon client ou au bon service.
+Absence de tableau de bord consolidé pour piloter l’activité.
+Maturité IA encore faible et usages non formalisés.
+Résistance au changement si les outils sont trop complexes pour les équipes terrain.
+Risque de double fonctionnement papier / numérique si les règles ne sont pas clairement posées.
+Données incomplètes ou mal saisies pouvant limiter la fiabilité des suivis.
+Risque d’erreur dans les recherches IA sur les références techniques, prix ou délais.
+Confidentialité à sécuriser pour les données clients, fournisseurs et administratives.
+Intégration à Wavesoft à vérifier avant toute automatisation avancée.
+Risque de surcharge si trop de chantiers numériques sont lancés en même temps.
+Forces
+Faiblesses
+Opportunités
+Menaces
+Interne
+Externe
+Digitaliser les ordres de réparation avec saisie vocale, photos, statuts et historique client.
+Mettre en place un suivi digital des commandes fournisseurs.
+Automatiser partiellement le tri des mails entrants et la création de tâches.
+Utiliser l’IA pour assister les recherches de références, prix et délais fournisseurs.
+Créer un tableau de bord simple pour suivre l’activité, les réparations, les commandes et les délais.
+Renforcer la communication marque employeur avec l’IA et Canva.
+Améliorer la satisfaction client grâce à une meilleure traçabilité et des réponses plus rapides.
+Plan d’action détaillé 
+PLAN D'ACTION
+Projet Axes d’actions
+Priorité
+Action/étapes
+Description
+Calendrier prévisionnel
+Pilote/référent
+Livrables
+Ressources externes / internes
+Administratif
+Haute
+Automatiser partiellement le tri des mails entrants
+Mettre en place un scénario de tri assisté des mails reçus sur l’adresse générique. L’objectif est d’identifier la nature du message, le service concerné, le niveau de priorité et l’action à réaliser, puis de créer une notification ou une tâche à valider par l’administratif.
+1 mois
+Sonia + administratif
+Grille de classement des mails ; scénario de tri assisté ; modèle de résumé automatique ; notifications par service ; procédure de validation humaine
+Interne : personnes en charge de la boîte contact. Externe : consultant IA/no-code pour scénario Outlook + Make/n8n + IA
+Communication
+Moyenne
+Développer la communication marque employeur avec l’IA
+Valoriser l’histoire familiale, les métiers techniques, l’apprentissage, la politique salariale, les conditions de travail et les éléments différenciants de l’entreprise. Utiliser l’IA pour produire des textes et Canva pour créer des visuels adaptés aux réseaux sociaux et aux annonces de recrutement.
+1 à 2 mois
+Direction + personne référente communication
+Messages employeur clés ; calendrier éditorial simple ; modèles de publications ; modèles d’annonces ; bibliothèque de visuels Canva
+Interne : direction, collaborateurs volontaires. Externe : consultant IA/communication pour ligne éditoriale, prompts et modèles Canva
+Processus métier
+Haute
+Digitaliser les ordres de réparation et de dépannage
+Créer un ordre de réparation digital partagé pour remplacer progressivement les fiches papier, agendas et supports autocopiants. Intégrer les informations client, matériel, diagnostic, temps passé, pièces utilisées, photos et statut d’avancement. Prévoir une saisie simplifiée par smartphone/tablette et transcription vocale pour les techniciens.
+1 à 2 mois
+Direction + référent atelier + administratif
+Modèle d’ordre de réparation digital ; formulaire de saisie ; tableau de suivi des statuts ; procédure interne simple ; phase test sur un service pilote
+Interne : techniciens, administratif, magasin. Externe : consultant IA/no-code pour paramétrage, automatisation et formation
+Haute
+Mettre en place un suivi digital des commandes fournisseurs clients
+Créer un espace partagé permettant de suivre les commandes fournisseurs depuis la demande initiale jusqu’à la réception et l’affectation de la pièce au bon client, service ou ordre de réparation. Structurer les statuts : à commander, commandé, en attente fournisseur, reçu, affecté, clôturé.
+1 à 2 mois
+Sonia + Rémi + magasinier
+Fiche commande digitale ; circuit de validation ; tableau de suivi des commandes ; notifications internes ; règles de réception et d’affectation des pièces
+Interne : administratif, direction, magasin, techniciens. Externe : consultant pour conception de l’outil partagé et automatisations Make ou n8n
+Moyenne
+Créer un assistant IA de recherche fournisseurs
+Déployer un assistant encadré pour aider les équipes à rechercher des références, prix, délais et équivalences fournisseurs à partir d’une référence OEM, d’une désignation, d’une photo ou d’une information matériel. L’IA doit produire une synthèse à valider par un collaborateur compétent avant toute commande.
+2 mois
+Rémi + responsables agricole/motoculture
+Liste des fournisseurs prioritaires ; modèles de prompts ; fiche de bonnes pratiques ; tests sur cas réels ; procédure de validation humaine
+Interne : techniciens et responsables métiers. Externe : consultant pour cadrage des prompts, tests et sécurisation des usages
+Organisationnel / sécurité
+Haute
+Structurer les statuts partagés et les règles de circulation de l’information
+Définir une organisation commune autour des statuts des dossiers : à faire, en cours, en attente de pièce, en attente fournisseur, terminé, prêt à facturer. Clarifier les responsabilités de création, mise à jour, validation et clôture des dossiers.
+1 mois
+Direction + administratif + responsables métiers
+Cartographie simple des flux ; règles de gestion des statuts ; matrice des responsabilités ; procédure de passage papier vers digital
+Interne : direction, techniciens, magasin, administratif. Externe : consultant pour animation d’atelier et formalisation
+Moyenne
+Créer un tableau de bord de pilotage de l’activité
+Construire un tableau de bord simple pour suivre les indicateurs clés : chiffre d’affaires par activité, réparations en cours, commandes en attente, délais, dossiers terminés non facturés, charge par service et tendances commerciales. Alimenter le tableau à partir des données disponibles dans Wavesoft, Excel et les futurs outils partagés.
+2 à 3 mois
+Direction
+Liste des indicateurs prioritaires ; maquette de tableau de bord ; modalités d’alimentation ; synthèse périodique d’activité ; guide de lecture
+Interne : direction, administratif. Externe : consultant BI/no-code pour extraction, structuration et visualisation
+Compétences
+Haute
+Former les référents internes aux usages IA et no-code
+Former un petit groupe de référents à l’utilisation des outils retenus : ordre de réparation digital, suivi des commandes, tri des mails, assistant IA et règles de validation. La formation doit être pratique, basée sur les cas réels de l’entreprise et adaptée aux profils terrain.
+1 mois puis accompagnement continu
+Direction + référents atelier/magasin/administratif
+Support de sensibilisation IA ; fiches pratiques par outil ; modèles de prompts ; procédures internes ; atelier de prise en main
+Interne : référents utilisateurs. Externe : consultant formateur IA/no-code

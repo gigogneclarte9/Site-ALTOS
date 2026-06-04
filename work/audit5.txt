@@ -1,0 +1,1113 @@
+3746978-76314600906541-66802000-397620-76464000
+
+-8022230077800
+
+Synthèse Audit Flash IA 
+
+NOM DE L’ENTREPRISE : BELLES VACANCES IMMOBILIER
+
+NUMERO DE DOSSIER : 
+
+NOM DU CONSEILLER OPCO : Joris DESCOURT
+
+Durée de l’accompagnement en jours :
+
+Dates d’intervention
+
+Signatures
+
+Dates de RDV
+
+Entreprise
+
+Le Cercle des Entrepreneurs
+
+Réunion de cadrage : 
+
+19 novembre 2025
+
+Diagnostic des pratiques : 
+
+27 novembre 2025
+
+Préconisations / Plan d’action :
+
+08 décembre 2025
+
+												Sommaire
+
+		 TOC \o "1-3" \h \z \u I.	Résumé	 PAGEREF _Toc185617509 \h 3
+
+		II.	Contexte de l’entreprise	 PAGEREF _Toc185617510 \h 4
+
+		i.	Historique et activité	 PAGEREF _Toc185617511 \h 4
+
+		ii.	Structure organisationnelle	 PAGEREF _Toc185617512 \h 4
+
+		III.	Diagnostic des pratiques IA	 PAGEREF _Toc185617513 \h 7
+
+		iii.	Processus Métier	 PAGEREF _Toc185617514 \h 7
+
+		
+
+		iv.	Compétences et ressources	 PAGEREF _Toc185617521 \h 10
+
+		v.	Données et sécurité	 PAGEREF _Toc185617522 \h 11
+
+		vi.	Organisation	 PAGEREF _Toc185617523 \h 12
+
+		vii.	Cadre réglementaire	 PAGEREF _Toc185617524 \h 12
+
+		IV.	Cas d’usage IA et accompagnement préconisés	 PAGEREF _Toc185617525 \h 14
+
+		V.	Synthèse et plan d’action	 PAGEREF _Toc185617526 \h 18
+
+	Synthèse graphique	 PAGEREF _Toc185617527 \h 18
+
+		VI.	SWOT	 PAGEREF _Toc185617528 \h 19
+
+		VII.	Plan d’action détaillé	 PAGEREF _Toc185617529 \h 20
+
+	Résumé
+
+L’audit met en évidence une agence solide et organisée autour de trois métiers clés — location, syndic et transaction — mais fortement limitée par des processus encore très manuels et une charge administrative importante. Les équipes expriment un besoin réel de simplification, ce qui crée un contexte favorable à l’intégration de l’IA et des automatisations.
+
+Les principaux gisements de valeur portent sur l’automatisation des communications, la réduction des tâches répétitives, la centralisation des informations et la capacité à analyser la donnée immobilière et comptable. Les cas d’usage identifiés permettent d’améliorer immédiatement la performance interne, l’expérience client et la qualité de vie au travail.
+
+Cas d’usage retenus
+
+Automatisation Arrivées / Départs : envoi automatique des informations clés aux voyageurs.
+
+Taxe de séjour & caution automatisées : formulaire voyageurs, calcul automatique, lien de paiement.
+
+Gestion intelligente des appels entrants : orientation IA, historique des demandes.
+
+Automatisation des devis syndic : envoi, relances et comparatif IA structurés.
+
+Comptes rendu automatiques à partir d’enregistrement audio : L’IA génère un compte rendu structuré incluant un relevé de décision.
+
+Moteur IA documentaire : recherche immédiate dans PV, RC et documents de copropriété.
+
+Analyse comptable IA multi-annuelle : génération automatique d’indicateurs, comparatifs 3 à 5 ans, détection d’anomalies et production d’un rapport synthétique pour valoriser le travail du syndic et éclairer les décisions des conseils syndicaux.
+
+Conclusion
+
+L’intégration progressive de ces solutions permettra à l’agence de réduire significativement la charge administrative, d’améliorer la qualité du service rendu aux clients, de fiabiliser les processus et de renforcer le pilotage global de l’activité.
+
+	Contexte de l’entreprise
+
+	Historique et activité
+
+L’agence Belles Vacances Immobilier est implantée à Saint-Lary depuis près de 40 ans. Elle a été fondée par Monsieur André BEGUÉ, figure locale du territoire et acteur historique du développement immobilier dans la vallée.
+
+L’entreprise a progressivement structuré ses activités autour de trois pôles complémentaires :
+
+La transaction immobilière, assurant la vente et l’accompagnement des projets immobiliers ;
+
+Le syndic de copropriété, pilotant la gestion administrative, financière et technique des résidences ;
+
+La location saisonnière, fortement représentée en zone touristique et reposant sur un portefeuille diversifié d’appartements et chalets.
+
+Le siège social, situé à Saint-Lary, regroupe l’ensemble des services opérationnels et administratifs, ce qui favorise la cohérence de gestion, la circulation d’information et la centralisation des outils métier.
+
+	Structure organisationnelle
+
+L’agence est organisée en cinq services :
+
+Service Location saisonnière — 4 personnes
+
+Ce service gère l’intégralité du cycle de location, de la création des annonces à la préparation des arrivées et départs.
+
+Les collaboratrices utilisent principalement le logiciel SPI, dans lequel :
+
+elles créent ou dupliquent les annonces,
+
+paramètrent les disponibilités,
+
+synchronisent les calendriers avec les plateformes extérieures (Booking, Airbnb, Office du tourisme, Poplidays, Leboncoin…).
+
+La rédaction des descriptifs est parfois réalisée avec ChatGPT (version gratuite), mais toute la mise en ligne et la mise à jour restent manuelles.
+
+La gestion des demandes de renseignements (taille literie, nombre de chambres, localisation…) se fait par webmail Wanadoo, sans outil de tri, d’automatisation, ni de catégorisation.
+
+Les appels entrants, très nombreux, incluent souvent des questions destinées à d’autres services, ce qui surcharge l’accueil et oblige à réorienter manuellement les appelants.
+
+Les équipes gèrent également :
+
+la préparation des enveloppes d’arrivée (clés, plans, consignes),
+
+les fiches d’incident,
+
+la collecte manuelle de la taxe de séjour et des cautions pour les voyageurs ne venant pas via SPI (Booking & autres plateformes).
+
+Ce volume administratif important représente un enjeu majeur de charge de travail, surtout en haute saison.
+
+Service Transaction 
+
+Le service est composé :
+
+de deux conseillers terrain chargés des estimations, visites et relations propriétaires/acquéreurs,
+
+d’une assistante commerciale (Carole), qui joue un rôle central dans l’organisation administrative.
+
+Le logiciel métier utilisé est LESTY, mais une grande partie des tâches reste réalisée sur support papier ou Word, notamment :
+
+le tableau mensuel des mandats,
+
+le tableau des ventes,
+
+les échanges d’informations entre Carole, les conseillers et les notaires.
+
+La gestion d’une estimation suit un processus intégralement manuel :
+
+réception de la demande (visite agence, mail ou téléphone),
+
+création d’une fiche papier,
+
+transmission au conseiller,
+
+retour du conseiller à Carole après visite et estimation,
+
+demande de pièces envoyée manuellement au propriétaire,
+
+création du mandat papier,
+
+constitution progressive du dossier dans un classeur physique.
+
+La visibilité en temps réel pour les conseillers est limitée, ce qui crée des temps d’attente et une forte dépendance 
+
+Service Syndic de copropriété — 4 personnes
+
+Les gestionnaires et assistantes syndic utilisent également SPI, mais les processus actuels sont très fragmentés et reposent majoritairement sur des traitements manuels.
+
+Ils assurent notamment :
+
+la demande et le suivi des devis travaux auprès des entreprises,
+
+les relances,
+
+la constitution de tableaux comparatifs transmis aux conseils syndicaux,
+
+le suivi du recouvrement avec le Commissaire de justice, sans outil dédié.
+
+Le travail sur la comptabilité de copropriété ne permet pas aujourd’hui d’avoir une vision multi-annuelle automatisée : les analyses comparatives, indicateurs et synthèses sont faites à la main.
+
+Les équipes doivent également :
+
+gérer les élections des conseils syndicaux en fonction des échéances de mandat,
+
+répondre aux copropriétaires en recherchant manuellement dans les procès-verbaux, règlements de copropriété, et documents annexes,
+
+retranscrire les comptes-rendus de réunions (chantier, conseil syndical) et en extraire les décisions et actions, ce qui est chronophage.
+
+Ce service possède un potentiel élevé d’optimisation car la majorité des tâches repose sur des données structurées mais non exploitées par des outils numériques avancés.
+
+Direction — 1 personne
+
+Le dirigeant supervise l’ensemble des services.
+
+Il centralise une partie des analyses et décisions opérationnelles, mais ne dispose pas aujourd’hui d’indicateurs consolidés permettant un pilotage agile (location, transaction, syndic).
+
+La direction s’appuie principalement sur les tableaux produits manuellement par les équipes.
+
+Marketing / Communication — 1 personne
+
+Le site internet est géré via Bexter, avec une marge de manœuvre limitée sur les automatisations.
+
+La communication repose principalement sur :
+
+les annonces,
+
+les mises à jour sur les plateformes,
+
+les photos et contenus préparés en interne,
+
+des actions ponctuelles sur les réseaux sociaux.
+
+La fonction marketing joue un rôle transversal mais manque d’outils pour industrialiser la production et la diffusion de contenu.
+
+Outils numériques utilisés
+
+SPI : logiciel métier commun (location + syndic)
+
+LESTY : logiciel métier dédié à la transaction
+
+Bexter : gestion du site internet
+
+Webmail Wanadoo : traitement manuel des flux emails
+
+ChatGPT (gratuit) : rédaction occasionnelle de descriptifs.
+
+	Diagnostic des pratiques IA
+
+												
+
+	Processus Métier
+
+Constats clés
+
+Forte dépendance aux traitements manuels : emails, demandes clients, relances, tableaux, dossiers papier.
+
+Aucune automatisation dans les trois services (location, syndic, transaction).
+
+Les outils métiers (SPI, LESTY) sont utilisés, mais pas d’intégration entre services.
+
+Les annonces, pré-check-in, textes, relances, comparatifs devis, suivi mandats et dossiers vendeurs sont ressaisis plusieurs fois.
+
+Absence d’analyse automatisée des données (charges copropriété, performance commerciale).
+
+Les équipes perdent beaucoup de temps sur les mêmes opérations répétitives.
+
+Propositions d’amélioration
+
+Mettre en place des workflows automatisés pour les tâches récurrentes (emails, arrivées/départs, relances devis syndic, recouvrement, suivi mandats).
+
+Centraliser les demandes entrantes via une boîte unifiée + catégorisation automatique.
+
+Automatiser la création et mise à jour des annonces multi-diffusées.
+
+Créer une base commune (Notion/Airtable) pour suivi devis, recouvrement, tableaux de bord, dossiers vendeurs.
+
+Déployer un système d’analyse IA pour charges copro, tendances location et performance transaction.
+
+	Compétences et ressources
+
+Constats clés
+
+Niveau de maturité numérique faible 
+
+Aucune formation IA métier.
+
+Pas de référent digital interne.
+
+Charge de travail alourdie par l’absence d’automatisation.
+
+Propositions d’amélioration
+
+Mettre en place un plan de formation IA appliquée à l’immobilier.
+
+Désigner un référent numérique formé aux outils et aux automatisations.
+
+Produire des procédures simples pour chaque automatisation (usage, limites, bonnes pratiques).
+
+	Données et sécurité
+
+Constats clés
+
+Sécurité et sauvegardes satisfaisantes.
+
+Données fragmentées : SPI, LESTY, mails Wanadoo, papier.
+
+Pas d’outil d’analyse ni de consolidation.
+
+Recherche documentaire très chronophage (PV, RC, historiques des copropriétés).
+
+Aucune automatisation des indicateurs ou comparatifs.
+
+Propositions d’amélioration
+
+Créer une base centralisée (Notion ou Airtable) connectée aux flux.
+
+Automatiser les analyses comptables et tableaux comparatifs.
+
+Déployer une IA de recherche interne (PV, règlements, décisions).
+
+Mettre en place des tableaux de bord automatiques : location, ventes, copropriétés.
+
+	Organisation
+
+Constats clés
+
+Rôles clairs, mais aucune stratégie technologique.
+
+Outils adoptés de manière ponctuelle, non coordonnée.
+
+Manque de pilotage transverse entre services.
+
+Pas de mesure de performance ni d’impact des outils (note 1).
+
+Propositions d’amélioration
+
+Créer une feuille de route IA & numérique sur 24 mois.
+
+Mettre en place un système de remontée des besoins des équipes.
+
+Structurer la coopération interservices via des outils partagés.
+
+Intégrer l’IA dans les décisions d’organisation (analyse des flux, priorisation des automatismes).
+
+	Cadre réglementaire
+
+Constats clés
+
+Conformité RGPD correcte.
+
+Manque de procédures pour intégrer la conformité lors du déploiement de nouveaux outils (note 1).
+
+Suivi réglementaire très manuel, notamment en syndic.
+
+Propositions d’amélioration
+
+Automatiser la traçabilité des actions syndic (demandes, devis, relances, décisions).
+
+Mettre en place une veille réglementaire automatisée (copropriété, location, fiscalité).
+
+Intégrer des checklists IA pour mandats, PV, convocations et obligations légales.
+
+	Cas d’usage IA et accompagnement 
+
+	préconisés
+
+CAS D’USAGE 1 — Automatisation complète des communications Arrivées / Départs (Location)
+
+1. Contexte et problématique identifiée
+
+Le service location consacre chaque semaine plusieurs heures à transmettre manuellement les informations essentielles relatives à l’arrivée (adresse, codes, horaires) et au départ (procédure ménage, restitution clés, contrôles).
+
+La saisonnalité forte entraîne des pics de charge importants, générant :
+
+stress,
+
+risques d’oublis,
+
+manque d’homogénéité dans les messages,
+
+expérience client variable.
+
+SPI ne propose pas ces automatisations, ce qui oblige à traiter ces messages depuis le webmail Wanadoo.
+
+2. Solution IA & automatisation préconisée
+
+Création d’un workflow automatisé à partir des données SPI (via export ou détection des mails de confirmation).
+
+Génération automatique d’un email personnalisé via IA (ChatGPT ou DataTouch).
+
+Connexion à un outil d’envoi (Brevo/SMSAPI).
+
+Planification :
+
+J-7 : informations pratiques
+
+J-2 : rappel + instructions clés
+
+J+1 départ : check-out
+
+3. Accompagnement consultant
+
+Analyse du flux SPI (export / API / rapports).
+
+Construction des modèles d’emails professionnalisés.
+
+Développement du scénario Make :
+
+Déclenchement → import réservation
+
+Enrichissement IA → texte contextualisé
+
+Envoi automatique → mail ou SMS
+
+Mise en place d’un tableau de suivi pour tracer les envois.
+
+Formation des équipes à la modification des contenus.
+
+4. Impacts attendus
+
+Réduction de 70 % du temps consacré aux communications.
+
+Diminution des erreurs ou oublis (standardisation).
+
+Amélioration de la qualité d’accueil.
+
+Expérience client plus professionnelle et homogène.
+
+5. Points de vigilance
+
+Vérifier la fiabilité des exports SPI.
+
+Tester les exceptions (annulations, modifications).
+
+CAS D’USAGE 2 — Automatisation Taxe de séjour & Caution pour les voyageurs externes à SPI
+
+1. Contexte & problématique
+
+Les réservations issues de Booking, Airbnb, Poplidays, Leboncoin ne permettent pas la récupération des informations nécessaires au calcul de la taxe de séjour et à l’encaissement de la caution.
+
+Le traitement manuel entraîne :
+
+retards,
+
+erreurs de calcul,
+
+taux de recouvrement irrégulier,
+
+perte de temps en haute saison.
+
+2. Solution IA & automatisation
+
+Création d’un formulaire voyageurs (Tally/Typeform) connecté à Make.
+
+Extraction automatique des données (lecture IA du mail Booking si absence d’API).
+
+Calcul automatisé taxe de séjour + génération lien de paiement (Stripe).
+
+Notification automatique au service location + tableau de suivi centralisé.
+
+3. Accompagnement
+
+Construction du formulaire adapté aux obligations légales.
+
+Paramétrage des règles de calcul (variables mairie, saison, âge).
+
+Développement scénario Make : collecte → calcul → paiement → enregistrement.
+
+Synchronisation d’un tableau transmis au dirigeant.
+
+Tests et formation des équipes.
+
+4. Impacts
+
+Sécurisation du recouvrement.
+
+Gain de temps très important (> 1 minute par dossier × centaines de dossiers).
+
+Elimination des erreurs humaines.
+
+Traçabilité complète des paiements.
+
+5. Vigilance
+
+Validité juridique des montants (mise à jour réglementaire annuelle).
+
+Synchronisation avec les flux SPI si les réservations s’importent ensuite.
+
+CAS D’USAGE 3 — Traitement intelligent des appels entrants (IA vocale + historisation)
+
+1. Contexte & problématique
+
+L’accueil location reçoit de nombreux appels utilisant l’agence comme point d’entrée pour tous les services (Syndic, Transaction).
+
+Conséquences :
+
+saturation téléphonique,
+
+mauvaise orientation,
+
+perte de messages,
+
+pas de traçabilité.
+
+2. Solution IA
+
+Mise en place d’un SVA intelligent (Aircall / Ringover avec IA).
+
+Détection automatique du motif d’appel (ex : “syndic”, “location”, “travaux”, “sinistre”).
+
+Création automatique d’un ticket avec message transcrit.
+
+Redirection instantanée vers le bon service.
+
+3. Accompagnement
+
+Analyse du volume et typologie des appels.
+
+Construction des scénarios IA (mots clés, routage).
+
+Mise en place de la base des tickets.
+
+Tableau de pilotage : volume, motifs, temps de réponse.
+
+Formation accueil & gestionnaires.
+
+4. Impacts
+
+Réduction des appels mal aiguillés (−40 à −60 %).
+
+Réduction du stress pour l’accueil.
+
+Traçabilité et meilleure organisation interservices.
+
+Amélioration de la satisfaction client.
+
+5. Vigilance
+
+Accompagnement au changement → importance du test pilote.
+
+CAS D’USAGE 4 — Automatisation gestion devis entreprises & tableaux comparatifs (Syndic)
+
+1. Contexte
+
+Les gestionnaires doivent envoyer des demandes de devis, suivre les relances, récupérer les réponses, compiler les informations et produire un comparatif pour le conseil syndical.
+
+Aujourd’hui : 100 % manuel, aucune historisation.
+
+2. Solution IA & no-code
+
+Mise en place d’une base travaux : entreprises, devis reçus, relances, dates.
+
+Envoi automatique des demandes + relances programmées.
+
+Dépôt automatique des devis reçus dans la bonne fiche.
+
+Génération d’un comparatif IA (prix, délais, garanties, exclusions).
+
+Export PDF pour présentation au conseil syndical.
+
+3. Accompagnement
+
+Cartographie du processus actuel.
+
+Construction de la base Notion/Airtable.
+
+Création scénarios d’envoi + relance.
+
+Génération rapport automatique (Word/PDF).
+
+Formation gestionnaires.
+
+4. Impacts
+
+Gain de temps majeur (−40 à −60 %).
+
+Standardisation et sécurisation du processus.
+
+Transparence renforcée avec le conseil syndical.
+
+Historisation complète.
+
+5. Vigilance
+
+Qualité des données de base.
+
+Besoin de classer correctement les types d’interventions.
+
+CAS D’USAGE 5 — Génération automatique de comptes rendus à partir d’un enregistrement audio (Service Location ou Syndic)
+
+1. Contexte et problématique identifiée
+
+Dans les services Location et Syndic, les équipes réalisent de nombreux échanges verbaux :
+
+appels téléphoniques avec locataires, propriétaires ou prestataires,
+
+entretiens physiques,
+
+réunions de chantier,
+
+réunions avec les conseils syndicaux,
+
+échanges avec artisans ou entreprises.
+
+Actuellement, les comptes rendus doivent être rédigés manuellement à partir de notes rapides ou de mémoire, ce qui entraîne :
+
+un temps de rédaction très important,
+
+des informations parfois incomplètes,
+
+un risque d’oubli de décisions,
+
+une homogénéité faible entre gestionnaires,
+
+l’absence d’un système d’historisation centralisé et exploitable,
+
+des difficultés à produire des traces écrites fiables pour les copropriétaires et clients.
+
+Ce processus est particulièrement chronophage en période de forte activité.
+
+2. Solution IA & No-code préconisée
+
+La solution consiste à mettre en place un workflow d’automatisation audio → texte → compte rendu.
+
+Fonctionnement proposé
+
+Le gestionnaire enregistre son entretien via :
+
+smartphone,
+
+ordinateur,
+
+ou envoie un fichier audio existant (MP3, WAV…).
+
+Le fichier est automatiquement transmis à un scénario Make.
+
+L’audio est transcrit grâce à un modèle IA spécialisé (ex. Whisper, DataTouch ou OpenAI Speech-to-Text).
+
+L’IA génère automatiquement :
+
+un compte rendu structuré,
+
+un relevé des décisions,
+
+les actions et deadlines,
+
+les responsables identifiés (prestataire, copropriétaire, conseil, locataire…).
+
+Le document final est :
+
+historisé dans une base Notion ou Airtable,
+
+classé par copropriété, lot, dossier ou interlocuteur,
+
+disponible en PDF ou email prêt à envoyer.
+
+Ce workflow s’intègre parfaitement avec les pratiques actuelles sans changer les outils métiers SPI / LESTY.
+
+3. Accompagnement consultant (étapes détaillées)
+
+Analyse des types d’entretiens (téléphone, réunions, visites, litiges, demandes techniques).
+
+Choix de la méthode de capture audio (PC, smartphone, dictaphone simple).
+
+Mise en place du scénario Make :
+
+récupération audio,
+
+conversion,
+
+transcription IA,
+
+structuration du texte.
+
+Création d’un modèle de compte rendu homogène :
+
+contexte de l’entretien,
+
+sujets abordés,
+
+décisions prises,
+
+actions, responsables, échéances,
+
+suivi à prévoir par le gestionnaire.
+
+Mise en place de la base d’historisation (Notion/Airtable) :
+
+filtrage par copropriété, lot, date, interlocuteur, statut.
+
+Génération d’un PDF automatique ou d’un email prêt à l’envoi.
+
+Formation des équipes Location & Syndic :
+
+utilisation du système,
+
+bonnes pratiques de captation,
+
+ajustements selon les retours opérationnels.
+
+4. Impacts attendus
+
+Réduction du temps de rédaction de plus de 60 %.
+
+Comptes rendus plus précis, homogènes et structurés.
+
+Transparence accrue pour les copropriétaires, propriétaires et partenaires.
+
+Amélioration de la traçabilité et de la conformité (notamment en syndic).
+
+Diminution du risque d’oublier une décision ou une action.
+
+Pérennisation de l’information même en cas d’absence d’un collaborateur.
+
+Création d’une base documentaire interne utile pour la formation des nouveaux arrivants.
+
+5. Points de vigilance
+
+Qualité du son : s’assurer que les enregistrements ne contiennent pas trop de bruit.
+
+Prévenir les interlocuteurs si nécessaire (transparence et RGPD).
+
+Prévoir une gouvernance simple pour l’historisation (nommage, classement).
+
+Mettre en place une vérification rapide du contenu avant envoi.
+
+CAS D’USAGE 6 — Base documentaire IA (PV, RC, décisions) pour réponses copropriétaires
+
+1. Contexte
+
+Les gestionnaires passent beaucoup de temps à rechercher :
+
+clauses,
+
+décisions anciennes,
+
+règles d’usage,
+
+obligations spécifiques.
+
+2. Solution IA
+
+Création d’un moteur de recherche IA interne (type RAG).
+
+Indexation des PV, règlements, annexes, DTA, diagnostics.
+
+IA répond avec citation des passages sources pour fiabilité.
+
+Possibilité de générer la réponse email prête à envoyer.
+
+3. Accompagnement
+
+Collecte et structuration documentaire.
+
+Indexation par IA.
+
+Mise en place interface interne (chat privé).
+
+Formation gestionnaires.
+
+4. Impacts
+
+Réponses ×10 plus rapides.
+
+Réduction des erreurs d’interprétation.
+
+Sécurisation juridique.
+
+5. Vigilance
+
+Mise à jour continue des documents.
+
+CAS D’USAGE 7 — Analyse IA multi-annuelle de la comptabilité des copropriétés
+
+Contexte
+
+Les gestionnaires syndic réalisent actuellement des analyses comptables manuelles, ponctuelles et souvent limitées à l’exercice en cours. Les copropriétaires et conseils syndicaux demandent pourtant une vision pluriannuelle permettant :
+
+d’identifier les hausses anormales de charges,
+
+de suivre l’évolution des postes de dépenses,
+
+d’améliorer la transparence et la pédagogie lors des assemblées,
+
+d’anticiper les travaux et renégociations contractuelles.
+
+Solution IA recommandée
+
+Extraction annuelle des données financières de SPI (export comptable).
+
+Agrégation automatique dans une base dédiée.
+
+Génération par IA :
+
+d’indicateurs clés (charges par lot, variation annuelle, ratio copropriétés),
+
+de comparatifs multi-annuels (3 à 5 ans),
+
+d’alertes sur variations atypiques,
+
+d’un rapport synthétique prêt à présenter en AG.
+
+Impacts
+
+Forte valorisation du travail du syndic.
+
+Vision claire et pédagogique pour les copropriétaires.
+
+Décisions mieux argumentées pour les conseils syndicaux.
+
+Gain de temps considérable avant les assemblées.
+
+Amélioration de la transparence et de la confiance.
+
+Points de vigilance
+
+Standardiser les exports SPI.
+
+Définir les seuils d’alerte et les indicateurs pertinents pour chaque copropriété.
+
+	Synthèse et plan d’action
+
+	
+
+Synthèse graphique
+
+		
+
+-718726539706
+
+Agence historique solidement implantée avec une réputation locale forte
+
+Organisation structurée en trois pôles (Location, Syndic, Transaction) permettant une bonne lisibilité des processus
+
+Outils métiers existants (SPI, LESTY) fiables et bien maîtrisés par les équipes
+
+Forte capacité d’adaptation opérationnelle malgré la charge administrative importante
+
+Motivation réelle des équipes pour alléger les tâches répétitives et gagner en efficacité
+
+Base documentaire et historique riche (PV, RC, mandats, annonces) permettant une exploitation IA à forte valeur ajoutée
+
+Très faible intégration de l’IA dans les processus actuels (confirmé par la grille : notes 1 sur automatisation, analyse de données, formation IA)
+
+Dépendance excessive aux traitements manuels, ressaisies multiples et absence d’automatisation transversale
+
+Pas de tableau de bord consolidé ni d’analyse automatisée (charges copro, performance transaction, taux de remplissage)
+
+Faible culture digitale stratégique : pas de feuille de route, pas de pilotage de l’innovation
+
+Risques d’erreurs et de surcharge liés aux pics saisonniers et à la multiplication des tâches répétitives
+
+Volume de données non structuré pouvant rendre difficile la mise en place d’automatisations sans réorganisation préalable
+
+Risque de surcharge si les outils actuels (SPI/LESTY) ne permettent pas une extraction suffisante via API ou exports
+
+Résistance potentielle au changement, notamment sur l’abandon des processus papier et la transformation des habitudes
+
+Risque réglementaire si la gestion des données (notamment en syndic) n’est pas harmonisée et correctement sécurisée
+
+Concurrence locale pouvant prendre un avantage rapide si elle adopte des outils IA plus tôt
+
+Dépendance à des outils tiers (plateformes de réservation, SPI, Bexter), avec risque d’incompatibilités techniques
+
+Automatisation immédiate possible sur > 10 processus à fort rendement (arrivées/départs, taxe de séjour, devis syndic, pipeline transaction)
+
+Mise en place d’une base centralisée (Notion/Airtable) inter-services pour structurer et fiabiliser l’information
+
+Création d’un moteur IA documentaire pour sécuriser les réponses en syndic et réduire drastiquement les temps de recherche
+
+Amélioration significative de l’expérience client (messages automatiques, suivi proactif, informations fiables et standardisées)
+
+Réduction de la charge administrative pour les équipes, permettant un repositionnement sur la relation client et la qualité de service
+
+Valorisation de l’image de l’agence (communication innovante, transformation digitale)
+
+Forces
+
+Faiblesses
+
+Opportunités
+
+Menaces
+
+Interne
+
+Externe00
+
+Agence historique solidement implantée avec une réputation locale forte
+
+Organisation structurée en trois pôles (Location, Syndic, Transaction) permettant une bonne lisibilité des processus
+
+Outils métiers existants (SPI, LESTY) fiables et bien maîtrisés par les équipes
+
+Forte capacité d’adaptation opérationnelle malgré la charge administrative importante
+
+Motivation réelle des équipes pour alléger les tâches répétitives et gagner en efficacité
+
+Base documentaire et historique riche (PV, RC, mandats, annonces) permettant une exploitation IA à forte valeur ajoutée
+
+Très faible intégration de l’IA dans les processus actuels (confirmé par la grille : notes 1 sur automatisation, analyse de données, formation IA)
+
+Dépendance excessive aux traitements manuels, ressaisies multiples et absence d’automatisation transversale
+
+Pas de tableau de bord consolidé ni d’analyse automatisée (charges copro, performance transaction, taux de remplissage)
+
+Faible culture digitale stratégique : pas de feuille de route, pas de pilotage de l’innovation
+
+Risques d’erreurs et de surcharge liés aux pics saisonniers et à la multiplication des tâches répétitives
+
+Volume de données non structuré pouvant rendre difficile la mise en place d’automatisations sans réorganisation préalable
+
+Risque de surcharge si les outils actuels (SPI/LESTY) ne permettent pas une extraction suffisante via API ou exports
+
+Résistance potentielle au changement, notamment sur l’abandon des processus papier et la transformation des habitudes
+
+Risque réglementaire si la gestion des données (notamment en syndic) n’est pas harmonisée et correctement sécurisée
+
+Concurrence locale pouvant prendre un avantage rapide si elle adopte des outils IA plus tôt
+
+Dépendance à des outils tiers (plateformes de réservation, SPI, Bexter), avec risque d’incompatibilités techniques
+
+Automatisation immédiate possible sur > 10 processus à fort rendement (arrivées/départs, taxe de séjour, devis syndic, pipeline transaction)
+
+Mise en place d’une base centralisée (Notion/Airtable) inter-services pour structurer et fiabiliser l’information
+
+Création d’un moteur IA documentaire pour sécuriser les réponses en syndic et réduire drastiquement les temps de recherche
+
+Amélioration significative de l’expérience client (messages automatiques, suivi proactif, informations fiables et standardisées)
+
+Réduction de la charge administrative pour les équipes, permettant un repositionnement sur la relation client et la qualité de service
+
+Valorisation de l’image de l’agence (communication innovante, transformation digitale)
+
+Forces
+
+Faiblesses
+
+Opportunités
+
+Menaces
+
+Interne
+
+ExterneSWOT
+
+	1404246-14573000Plan d’action détaillé 
+
+	
+
+PLAN D'ACTION
+
+Projet Axes d’actions
+
+Priorité
+
+Action/étapes
+
+Description
+
+Calendrier prévisionnel
+
+Pilote/référent
+
+Livrables
+
+Ressources externes / internes
+
+Processus métier  Location
+
+Haute
+
+Automatisation des mails d’arrivée et départ
+
+Création workflow automatique pour informer les clients via SPI/export + IA + Brevo/SMSAPI
+
+Mois 1
+
+Responsable Location
+
+Scénario Make + modèles mails
+
+SPI / Make / IA / Consultant
+
+Haute
+
+Automatisation Taxe de séjour & Caution
+
+Formulaire voyageurs + calcul automatique + lien paiement + tableau suivi
+
+Mois 2
+
+Responsable Location
+
+Formulaire + tableau Notion + automatisation paiement
+
+Make / Stripe / Consultant
+
+Processus métier
+
+ Syndic
+
+Haute
+
+Workflow devis entreprises
+
+Base Travaux + envoi auto devis + relances + comparatif IA
+
+Mois 2
+
+Gestionnaire Syndic
+
+Base Notion + automatisation devis + rapport IA
+
+Notion / Make / IA / Consultant
+
+Haute
+
+Compte rendu audio automatisé
+
+Transcription IA d’un enregistrement audio + génération compte rendu structuré + relevé décisions + archivage + PDF prêt à envoyer
+
+Mois 2
+
+Gestionnaire Syndic
+
+Base historique + modèles CR IA + scénario complet
+
+IA / Make / Notion / Consultant
+
+Moyenne
+
+Moteur IA documentaire
+
+Indexation PV/RC + moteur RAG interne
+
+Mois 3
+
+Gestionnaire Syndic
+
+Outil IA interne + procédure
+
+IA Documentaire / Consultant
+
+Haute
+
+Analyse comptable IA multi-annuelle
+
+Extraction des données comptables, génération d’indicateurs, comparatifs 3-5 ans, détection anomalies, rapport AG
+
+Mois 3
+
+Gestionnaire Syndic
+
+Rapport IA multi-annuel + tableaux comparatifs
+
+IA / Notion / Consultant
+
+Processus métier Transaction
+
+Haute
+
+Digitalisation pipeline Transaction
+
+Workflow estimation→mandat→vente + automatisations + checklist
+
+Mois 3
+
+Assistante Commerciale
+
+Pipeline digital + automatisations + tableau mandats
+
+Notion / Make / Consultant
+
+Moyenne
+
+Automatisation échanges notaires
+
+Mails IA + vérification pièces + notifications
+
+Mois 1
+
+Assistante Commerciale
+
+Modèles mails IA + notifications
+
+Make / IA / Consultant
+
+Compétences
+
+Moyenne
+
+Formation IA métiers immobilier
+
+Formation + cas d’usage + utilisation automatisations
+
+Mois 2
+
+Direction
+
+Supports + procédures + montée compétence
+
+Consultant IA / Direction
+
+Organisationnel 
+
+Haute
+
+Système intelligent gestion appels
+
+Routing IA + base tickets + indicateurs
+
+Mois 2
+
+Direction + Accueil
+
+Tableau bord appels + règles IA
+
+Aircall/Ringover / Consultant

@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>ALTOS — Atelier moderne</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f4efe6;
+    --bg-2: #ebe3d3;
+    --ink: #1a1612;
+    --ink-2: #4a4239;
+    --ink-3: #8a7f6f;
+    --line: #d8cdb8;
+    --paper: #fbf8f1;
+    --accent: #d2451e;          /* terracotta */
+    --accent-2: #e07a3b;
+    --leaf: #5d6a3d;
+    --serif: "Instrument Serif", "Times New Roman", serif;
+    --sans: "Geist", system-ui, sans-serif;
+    --mono: "Geist Mono", ui-monospace, monospace;
+    --r: 14px;
+    --anim: 1;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  body { overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--accent); color: var(--paper); }
+
+  /* ── Reusable ─────────────────────────────────── */
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 24px; height: 1px;
+    background: var(--ink-3);
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid transparent;
+    transition: transform calc(.2s * var(--anim)), background .25s, color .25s, border-color .25s;
+    cursor: pointer;
+  }
+  .btn:hover { transform: translateY(calc(-2px * var(--anim))); }
+  .btn--primary { background: var(--ink); color: var(--paper); }
+  .btn--primary:hover { background: var(--accent); }
+  .btn--ghost { border-color: var(--line); color: var(--ink); }
+  .btn--ghost:hover { border-color: var(--ink); }
+  .btn .arrow {
+    width: 16px; height: 16px;
+    transition: transform .25s;
+  }
+  .btn:hover .arrow { transform: translateX(calc(3px * var(--anim))); }
+
+  /* Reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(calc(20px * var(--anim))); transition: opacity .8s ease, transform .8s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* ── Nav ──────────────────────────────────────── */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s, background .3s;
+  }
+  .nav.scrolled { border-bottom-color: var(--line); }
+  .nav__inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 32px;
+    max-width: 1240px; margin: 0 auto;
+  }
+  .logo {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--serif);
+    font-size: 24px;
+    font-style: italic;
+    letter-spacing: -0.01em;
+  }
+  .logo__mark {
+    width: 28px; height: 28px;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 8px;
+    display: grid; place-items: center;
+    font-family: var(--sans);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+  }
+  .nav__links { display: flex; gap: 28px; font-size: 14px; }
+  .nav__links a { color: var(--ink-2); transition: color .2s; position: relative; }
+  .nav__links a:hover { color: var(--ink); }
+  .nav__links a::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -4px;
+    height: 1px; background: var(--accent);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform .3s;
+  }
+  .nav__links a:hover::after { transform: scaleX(1); }
+
+  /* ── Hero ─────────────────────────────────────── */
+  .hero { padding: 80px 0 100px; position: relative; }
+  .hero__grid {
+    display: grid; grid-template-columns: 1.4fr 1fr; gap: 60px;
+    align-items: end;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(56px, 8vw, 112px);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin-top: 28px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .hero__sub {
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    max-width: 380px;
+    margin-top: 24px;
+  }
+  .hero__cta { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+  .hero__meta {
+    display: flex; flex-direction: column; gap: 24px;
+    padding-bottom: 12px;
+  }
+  .hero__stat {
+    display: flex; align-items: baseline; gap: 12px;
+    border-top: 1px solid var(--line);
+    padding-top: 14px;
+  }
+  .hero__stat strong {
+    font-family: var(--serif);
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 1;
+  }
+  .hero__stat span { color: var(--ink-2); font-size: 14px; line-height: 1.4; }
+
+  /* Marquee strip */
+  .marquee {
+    margin-top: 48px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    overflow: hidden;
+    background: var(--paper);
+  }
+  .marquee__track {
+    display: flex; gap: 60px;
+    padding: 18px 0;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink-2);
+    white-space: nowrap;
+    animation: scroll-x calc(40s / var(--anim, 1)) linear infinite;
+    animation-play-state: running;
+  }
+  .marquee__track span { display: inline-flex; align-items: center; gap: 60px; }
+  .marquee__track span::after {
+    content: "✦";
+    color: var(--accent);
+  }
+  @keyframes scroll-x {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ── Pourquoi ─────────────────────────────────── */
+  .why { padding: 120px 0; background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .why__head { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 64px; align-items: end; }
+  .why h2 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1; letter-spacing: -0.02em;
+    margin-top: 16px;
+  }
+  .why h2 em { font-style: italic; color: var(--accent); }
+  .why__lead { color: var(--ink-2); font-size: 17px; line-height: 1.55; max-width: 440px; }
+  .why__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+  .why__cell {
+    background: var(--paper);
+    padding: 36px 32px 40px;
+    transition: background .3s;
+    position: relative;
+    min-height: 280px;
+  }
+  .why__cell:hover { background: var(--bg-2); }
+  .why__num {
+    font-family: var(--mono); font-size: 12px; color: var(--accent);
+    letter-spacing: 0.08em;
+  }
+  .why__cell h3 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: 28px; line-height: 1.1; margin: 16px 0 12px;
+    letter-spacing: -0.01em;
+  }
+  .why__cell p { color: var(--ink-2); font-size: 15px; line-height: 1.55; }
+  .why__cell svg { position: absolute; top: 32px; right: 28px; opacity: .5; transition: opacity .3s, transform .4s; }
+  .why__cell:hover svg { opacity: 1; transform: rotate(calc(15deg * var(--anim))); }
+
+  /* ── Services ─────────────────────────────────── */
+  .services { padding: 120px 0; }
+  .services__head { display: flex; justify-content: space-between; align-items: end; margin-bottom: 56px; gap: 40px; }
+  .services h2 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1; letter-spacing: -0.02em;
+    margin-top: 16px; max-width: 720px;
+  }
+  .services h2 em { font-style: italic; color: var(--accent); }
+  .services__list { border-top: 1px solid var(--ink); }
+  .service {
+    border-bottom: 1px solid var(--line);
+    padding: 32px 0;
+    display: grid; grid-template-columns: 80px 1fr 1.4fr 60px;
+    gap: 24px; align-items: center;
+    cursor: pointer;
+    transition: padding .35s ease;
+    position: relative;
+  }
+  .service:hover { padding-left: calc(20px * var(--anim)); padding-right: calc(20px * var(--anim)); }
+  .service::before {
+    content: ""; position: absolute; left: 0; right: 0; top: 0; bottom: 0;
+    background: var(--accent); opacity: 0;
+    transition: opacity .35s;
+    z-index: -1;
+  }
+  .service__num { font-family: var(--mono); font-size: 13px; color: var(--ink-3); letter-spacing: .04em; }
+  .service__title {
+    font-family: var(--serif); font-size: 36px; font-weight: 400;
+    letter-spacing: -0.01em; line-height: 1;
+    transition: color .3s;
+  }
+  .service:hover .service__title { color: var(--accent); }
+  .service__desc { color: var(--ink-2); font-size: 15px; line-height: 1.5; }
+  .service__arrow { justify-self: end; transition: transform .35s; }
+  .service:hover .service__arrow { transform: translateX(calc(8px * var(--anim))) rotate(calc(-45deg * var(--anim))); color: var(--accent); }
+
+  /* ── Process ──────────────────────────────────── */
+  .process { padding: 120px 0; background: var(--ink); color: var(--paper); position: relative; overflow: hidden; }
+  .process .eyebrow { color: #b9ad96; }
+  .process .eyebrow::before { background: #b9ad96; }
+  .process h2 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1; letter-spacing: -0.02em;
+    margin: 16px 0 56px;
+    max-width: 800px;
+  }
+  .process h2 em { color: var(--accent-2); font-style: italic; }
+  .process__steps {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    counter-reset: step;
+  }
+  .step {
+    border-top: 1px solid #3a3127;
+    padding-top: 24px;
+    counter-increment: step;
+  }
+  .step__num {
+    font-family: var(--serif); font-size: 80px; line-height: 1;
+    color: var(--accent-2);
+    margin-bottom: 16px;
+  }
+  .step h3 { font-family: var(--serif); font-size: 24px; font-weight: 400; margin-bottom: 10px; }
+  .step p { color: #b9ad96; font-size: 14px; line-height: 1.55; }
+
+  /* ── Cas clients ──────────────────────────────── */
+  .cases { padding: 120px 0; }
+  .cases__head { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 56px; align-items: end; }
+  .cases h2 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1; letter-spacing: -0.02em;
+    margin-top: 16px;
+  }
+  .cases h2 em { font-style: italic; color: var(--accent); }
+  .cases__grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; }
+  .case {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    padding: 32px;
+    min-height: 380px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    transition: transform .4s, box-shadow .4s, border-color .4s;
+    position: relative;
+    overflow: hidden;
+  }
+  .case:hover { transform: translateY(calc(-4px * var(--anim))); border-color: var(--ink); box-shadow: 0 20px 40px -20px rgba(26,22,18,.2); }
+  .case--feat { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .case--feat .case__tag { color: var(--accent-2); }
+  .case--feat .case__sub { color: #b9ad96; }
+  .case__tag { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 0.08em; }
+  .case h3 { font-family: var(--serif); font-size: 32px; font-weight: 400; line-height: 1.05; letter-spacing: -0.01em; margin-top: 8px; max-width: 480px; }
+  .case__sub { color: var(--ink-2); font-size: 14px; margin-top: 12px; line-height: 1.5; }
+  .case__metric {
+    display: flex; align-items: baseline; gap: 10px;
+    margin-top: 32px;
+  }
+  .case__metric strong { font-family: var(--serif); font-size: 56px; line-height: 1; font-weight: 400; }
+  .case__metric span { font-size: 13px; color: var(--ink-2); }
+  .case--feat .case__metric span { color: #b9ad96; }
+  .case--feat .case__metric strong { color: var(--accent-2); }
+  .case__viz {
+    position: absolute;
+    right: -20px; bottom: -20px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, var(--accent), var(--accent-2));
+    opacity: .15;
+    transition: transform .5s;
+  }
+  .case:hover .case__viz { transform: scale(calc(1 + .1 * var(--anim))); }
+
+  /* ── Testimonials ─────────────────────────────── */
+  .testi { padding: 120px 0; background: var(--bg-2); }
+  .testi h2 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1; letter-spacing: -0.02em;
+    margin: 16px 0 56px; max-width: 800px;
+  }
+  .testi h2 em { font-style: italic; color: var(--accent); }
+  .testi__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .quote {
+    background: var(--paper);
+    border-radius: var(--r);
+    padding: 40px;
+    border: 1px solid var(--line);
+    transition: transform .3s;
+  }
+  .quote:hover { transform: translateY(calc(-3px * var(--anim))); }
+  .quote__mark {
+    font-family: var(--serif); font-size: 80px; line-height: 0.5;
+    color: var(--accent); height: 30px;
+  }
+  .quote p {
+    font-family: var(--serif); font-size: 24px; line-height: 1.3;
+    font-weight: 400; margin: 16px 0 28px;
+    letter-spacing: -0.005em;
+  }
+  .quote__who { display: flex; align-items: center; gap: 14px; }
+  .quote__avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    display: grid; place-items: center;
+    color: var(--paper); font-weight: 600; font-size: 14px;
+  }
+  .quote__name { font-size: 14px; font-weight: 500; }
+  .quote__role { font-size: 13px; color: var(--ink-3); }
+
+  /* ── Blog ─────────────────────────────────────── */
+  .blog { padding: 120px 0; }
+  .blog__head { display: flex; justify-content: space-between; align-items: end; margin-bottom: 48px; }
+  .blog h2 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1; letter-spacing: -0.02em;
+    margin-top: 16px;
+  }
+  .blog h2 em { font-style: italic; color: var(--accent); }
+  .blog__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .post {
+    border-top: 1px solid var(--ink);
+    padding-top: 20px;
+    cursor: pointer;
+    transition: padding .3s;
+  }
+  .post:hover { padding-top: 12px; }
+  .post__cover {
+    aspect-ratio: 4/3;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    position: relative;
+    display: grid; place-items: center;
+    transition: transform .5s ease;
+  }
+  .post:hover .post__cover { transform: scale(calc(1 + .02 * var(--anim))); }
+  .post__cover-1 { background: linear-gradient(135deg, #f4ebd6, #e8c89e); }
+  .post__cover-2 { background: linear-gradient(135deg, var(--ink), #3a2d1e); color: var(--accent-2); }
+  .post__cover-3 { background: linear-gradient(135deg, #e07a3b, #d2451e); color: var(--paper); }
+  .post__cover svg { width: 60%; height: auto; opacity: .9; }
+  .post__cat { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 0.04em; text-transform: uppercase; }
+  .post h3 { font-family: var(--serif); font-size: 22px; font-weight: 400; line-height: 1.2; margin: 8px 0 12px; letter-spacing: -0.005em; }
+  .post__meta { font-size: 13px; color: var(--ink-3); display: flex; gap: 14px; }
+
+  /* ── CTA / Contact ────────────────────────────── */
+  .cta { padding: 140px 0 120px; text-align: center; background: var(--paper); border-top: 1px solid var(--line); }
+  .cta h2 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(56px, 8vw, 120px);
+    line-height: 0.95; letter-spacing: -0.02em;
+    max-width: 1000px; margin: 24px auto;
+  }
+  .cta h2 em { font-style: italic; color: var(--accent); }
+  .cta__sub { color: var(--ink-2); font-size: 18px; max-width: 520px; margin: 0 auto 36px; line-height: 1.5; }
+  .cta__btns { display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .cta__details {
+    display: flex; gap: 32px; justify-content: center;
+    margin-top: 56px; padding-top: 32px;
+    border-top: 1px solid var(--line);
+    max-width: 600px; margin-left: auto; margin-right: auto;
+    font-size: 14px; color: var(--ink-2);
+  }
+  .cta__details a:hover { color: var(--accent); }
+
+  /* ── Footer ───────────────────────────────────── */
+  .foot {
+    background: var(--ink); color: var(--paper);
+    padding: 60px 0 32px;
+  }
+  .foot__top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; border-bottom: 1px solid #3a3127; }
+  .foot__top h4 { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #b9ad96; margin-bottom: 16px; }
+  .foot__top ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .foot__top a { color: var(--paper); font-size: 14px; transition: color .2s; }
+  .foot__top a:hover { color: var(--accent-2); }
+  .foot__brand { max-width: 320px; }
+  .foot__brand p { color: #b9ad96; font-size: 14px; line-height: 1.55; margin-top: 16px; }
+  .foot__bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; font-size: 13px; color: #b9ad96; }
+
+  /* Big ALTOS at bottom */
+  .word {
+    font-family: var(--serif);
+    font-size: clamp(120px, 22vw, 320px);
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    text-align: center;
+    color: var(--paper);
+    padding: 60px 32px 0;
+    user-select: none;
+  }
+  .word em { font-style: italic; color: var(--accent-2); }
+  .word__line {
+    display: block; overflow: hidden;
+  }
+  .word__inner {
+    display: inline-block;
+    transition: transform .8s cubic-bezier(.16,1,.3,1);
+  }
+  .word.in .word__inner { transform: translateY(0); }
+  .word .word__inner { transform: translateY(100%); }
+
+  /* Decorative grain */
+  .grain {
+    position: fixed; inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    z-index: 100;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .hero__grid, .why__head, .why__grid, .cases__grid, .testi__grid, .blog__grid, .cases__head { grid-template-columns: 1fr; gap: 28px; }
+    .process__steps { grid-template-columns: 1fr 1fr; }
+    .service { grid-template-columns: 60px 1fr 40px; }
+    .service__desc { display: none; }
+    .foot__top { grid-template-columns: 1fr 1fr; }
+    .nav__links { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#" class="logo">
+      <span class="logo__mark">A</span>
+      <span>altos<span style="color:var(--accent)">.</span></span>
+    </a>
+    <div class="nav__links">
+      <a href="#services">Services</a>
+      <a href="#cases">Réalisations</a>
+      <a href="#process">Méthode</a>
+      <a href="#blog">Journal</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="btn btn--primary">
+      Prendre RDV
+      <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div>
+        <span class="eyebrow reveal">Groupement — Ambassadeurs IA</span>
+        <h1 class="reveal">Le numérique, <em>fait main</em><br/>pour les TPE qui<br/>n'ont pas de temps<br/>à perdre.</h1>
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary" href="#contact">
+            Diagnostic gratuit, 30&nbsp;min
+            <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#services">Voir nos services</a>
+        </div>
+      </div>
+      <div class="hero__meta reveal">
+        <p class="hero__sub">Un groupement d'experts métiers qui automatisent, codent et référencent — pour rendre votre commerce, atelier ou cabinet plus simple à gérer.</p>
+        <div class="hero__stat">
+          <strong>4</strong>
+          <span>spécialités, un seul<br/>interlocuteur</span>
+        </div>
+        <div class="hero__stat">
+          <strong>FR</strong>
+          <span>groupement actif<br/>partout en France</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Marquee -->
+  <div class="marquee" style="margin-top: 80px;">
+    <div class="marquee__track">
+      <span>Automatisation n8n</span>
+      <span>Vibe coding</span>
+      <span>Sites internet</span>
+      <span>Référencement local</span>
+      <span>Agents IA sur-mesure</span>
+      <span>Audit gratuit</span>
+      <span>Automatisation n8n</span>
+      <span>Vibe coding</span>
+      <span>Sites internet</span>
+      <span>Référencement local</span>
+      <span>Agents IA sur-mesure</span>
+      <span>Audit gratuit</span>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI -->
+<section class="why">
+  <div class="wrap">
+    <div class="why__head">
+      <div>
+        <span class="eyebrow reveal">Pourquoi ALTOS</span>
+        <h2 class="reveal">Un groupement <em>d'experts</em>,<br/>au service de votre activité.</h2>
+      </div>
+      <p class="why__lead reveal">Vous parlez à des artisans du numérique — pas à un commercial. Chaque expert vient avec son métier, ses outils, et une vraie connaissance des TPE.</p>
+    </div>
+    <div class="why__grid reveal">
+      <div class="why__cell">
+        <div class="why__num">01</div>
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="5"/><circle cx="22" cy="22" r="5"/><path d="M14 14l4 4"/></svg>
+        <h3>Experts métiers réunis</h3>
+        <p>Un développeur, un automaticien, un référenceur, un designer. Chacun maître de son art — pas un généraliste qui bricole tout.</p>
+      </div>
+      <div class="why__cell">
+        <div class="why__num">02</div>
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 4v8M16 20v8M4 16h8M20 16h8"/><circle cx="16" cy="16" r="3"/></svg>
+        <h3>Ambassadeurs IA</h3>
+        <p>On n'utilise pas l'IA pour faire joli. On l'intègre quand elle vous fait économiser du temps, des erreurs ou de l'argent.</p>
+      </div>
+      <div class="why__cell">
+        <div class="why__num">03</div>
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20l8-8 4 4 12-12"/><path d="M22 4h6v6"/></svg>
+        <h3>Toute la France</h3>
+        <p>Visio, déplacement, atelier sur place. Notre groupement est distribué — pas de bureaux, plus d'écoute.</p>
+      </div>
+      <div class="why__cell">
+        <div class="why__num">04</div>
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6h20v20H6z"/><path d="M6 12h20M12 6v20"/></svg>
+        <h3>Devis transparent</h3>
+        <p>Forfait clair, pas de surprise. Vous savez ce que vous payez, vous voyez ce qu'on livre, semaine après semaine.</p>
+      </div>
+      <div class="why__cell">
+        <div class="why__num">05</div>
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 6v10l6 4"/><circle cx="16" cy="16" r="12"/></svg>
+        <h3>Livraison rapide</h3>
+        <p>Premier jet en 7 à 14 jours. On itère vite, on évite les usines à gaz, on livre ce qui sert.</p>
+      </div>
+      <div class="why__cell">
+        <div class="why__num">06</div>
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 4l4 8 8 1-6 6 2 9-8-4-8 4 2-9-6-6 8-1z"/></svg>
+        <h3>Sans jargon</h3>
+        <p>On parle votre langue, pas la nôtre. Comptes-rendus simples, démos vidéos, outils que vous comprenez.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="services__head">
+      <div>
+        <span class="eyebrow reveal">Nos services</span>
+        <h2 class="reveal">Quatre savoir-faire,<br/>une seule <em>conversation</em>.</h2>
+      </div>
+    </div>
+    <div class="services__list">
+      <div class="service reveal">
+        <div class="service__num">01</div>
+        <div class="service__title">Automatisation</div>
+        <div class="service__desc">Vos tâches répétitives — devis, relances, planning, stock — exécutées sans vous, 24/7. n8n, agents IA sur-mesure.</div>
+        <svg class="service__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </div>
+      <div class="service reveal">
+        <div class="service__num">02</div>
+        <div class="service__title">Vibe coding</div>
+        <div class="service__desc">Applications métier sur-mesure, livrées en jours pas en mois. Outils internes, dashboards, mini-saas pour votre activité.</div>
+        <svg class="service__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </div>
+      <div class="service reveal">
+        <div class="service__num">03</div>
+        <div class="service__title">Sites internet</div>
+        <div class="service__desc">Vitrines, e-commerces, prises de rendez-vous. Rapides, beaux, faciles à mettre à jour vous-même.</div>
+        <svg class="service__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </div>
+      <div class="service reveal">
+        <div class="service__num">04</div>
+        <div class="service__title">SEO local</div>
+        <div class="service__desc">Apparaissez quand vos clients vous cherchent. Google My Business, contenu, technique — la trinité du référencement.</div>
+        <svg class="service__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="wrap">
+    <span class="eyebrow reveal">Méthode</span>
+    <h2 class="reveal">On commence par<br/>écouter, on finit<br/>par <em>livrer</em>.</h2>
+    <div class="process__steps">
+      <div class="step reveal">
+        <div class="step__num">01</div>
+        <h3>Diagnostic</h3>
+        <p>30 minutes en visio. On comprend votre activité, on identifie les gisements de temps et de revenus.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step__num">02</div>
+        <h3>Cadrage</h3>
+        <p>Devis chiffré, planning semaine par semaine. Vous savez précisément ce qui va se passer.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step__num">03</div>
+        <h3>Construction</h3>
+        <p>L'expert métier prend la main. Démo chaque vendredi, vous validez au fil de l'eau.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step__num">04</div>
+        <h3>Mise en route</h3>
+        <p>Formation, documentation, support 30 jours. Et on reste joignables après — pour de vrai.</p>
+      </div>
+    </div>
+  </div>
+  <div class="word" id="bigword">
+    <span class="word__line"><span class="word__inner">altos<em>.</em></span></span>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="cases" id="cases">
+  <div class="wrap">
+    <div class="cases__head">
+      <div>
+        <span class="eyebrow reveal">Réalisations</span>
+        <h2 class="reveal">Du concret,<br/>pas du <em>storytelling</em>.</h2>
+      </div>
+      <p class="why__lead reveal">Quelques projets récents. Le détail, on vous le raconte de vive voix — chaque histoire est différente.</p>
+    </div>
+    <div class="cases__grid">
+      <div class="case case--feat reveal">
+        <div>
+          <div class="case__tag">Boulangerie · Toulouse</div>
+          <h3>Une appli de précommande qui a remplacé 30 appels par jour.</h3>
+          <p class="case__sub">Mini-app de commande client, intégrée à la caisse, avec relances SMS automatiques.</p>
+        </div>
+        <div class="case__metric">
+          <strong>−4h</strong><span>de téléphone<br/>par jour</span>
+        </div>
+        <div class="case__viz"></div>
+      </div>
+      <div class="case reveal">
+        <div>
+          <div class="case__tag">Cabinet comptable</div>
+          <h3>Devis automatisés en 90 secondes.</h3>
+          <p class="case__sub">Workflow n8n branché à leur CRM. Plus de copier-coller, plus d'oublis.</p>
+        </div>
+        <div class="case__metric">
+          <strong>×3</strong><span>volume<br/>traité</span>
+        </div>
+        <div class="case__viz"></div>
+      </div>
+      <div class="case reveal">
+        <div>
+          <div class="case__tag">Paysagiste · Bretagne</div>
+          <h3>SEO local : du 8e au 1er résultat sur Google.</h3>
+          <p class="case__sub">Refonte du site, fiche établissement, 12 articles ciblés sur la zone d'intervention.</p>
+        </div>
+        <div class="case__metric">
+          <strong>+180%</strong><span>demandes<br/>entrantes</span>
+        </div>
+        <div class="case__viz"></div>
+      </div>
+      <div class="case reveal">
+        <div>
+          <div class="case__tag">Atelier mécanique</div>
+          <h3>Site + agent IA pour la prise de RDV.</h3>
+          <p class="case__sub">Le bot répond aux clients la nuit, qualifie, propose un créneau.</p>
+        </div>
+        <div class="case__metric">
+          <strong>62%</strong><span>de RDV<br/>hors horaires</span>
+        </div>
+        <div class="case__viz"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi">
+  <div class="wrap">
+    <span class="eyebrow reveal">Ils en parlent</span>
+    <h2 class="reveal">Des dirigeants<br/>qui ne reviendraient<br/>pas <em>en arrière</em>.</h2>
+    <div class="testi__grid">
+      <div class="quote reveal">
+        <div class="quote__mark">"</div>
+        <p>On a récupéré quasi une journée par semaine. Et le plus surprenant : ils m'expliquent ce qu'ils font, je comprends, je peux ajuster.</p>
+        <div class="quote__who">
+          <div class="quote__avatar">MC</div>
+          <div>
+            <div class="quote__name">Marie C.</div>
+            <div class="quote__role">Gérante, atelier de couture · Lyon</div>
+          </div>
+        </div>
+      </div>
+      <div class="quote reveal">
+        <div class="quote__mark">"</div>
+        <p>J'avais peur que l'IA, ce soit pour les grosses boîtes. ALTOS a installé un truc simple, et ça marche tout seul depuis 6 mois.</p>
+        <div class="quote__who">
+          <div class="quote__avatar">JP</div>
+          <div>
+            <div class="quote__name">Jean-Pierre L.</div>
+            <div class="quote__role">Plombier · Vienne (38)</div>
+          </div>
+        </div>
+      </div>
+      <div class="quote reveal">
+        <div class="quote__mark">"</div>
+        <p>Le devis est arrivé en 48h, le site en 3 semaines. Pas de blabla, pas de surfacturation. Ils livrent ce qu'ils annoncent.</p>
+        <div class="quote__who">
+          <div class="quote__avatar">SD</div>
+          <div>
+            <div class="quote__name">Sophie D.</div>
+            <div class="quote__role">Fleuriste · Montpellier</div>
+          </div>
+        </div>
+      </div>
+      <div class="quote reveal">
+        <div class="quote__mark">"</div>
+        <p>Ce que j'aime c'est qu'on a un seul interlocuteur et derrière, ils font appel au bon spécialiste. C'est limpide.</p>
+        <div class="quote__who">
+          <div class="quote__avatar">AB</div>
+          <div>
+            <div class="quote__name">Anne B.</div>
+            <div class="quote__role">Restauratrice · Bordeaux</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog" id="blog">
+  <div class="wrap">
+    <div class="blog__head">
+      <div>
+        <span class="eyebrow reveal">Journal</span>
+        <h2 class="reveal">Ce qu'on apprend,<br/>on l'<em>écrit</em>.</h2>
+      </div>
+      <a class="btn btn--ghost" href="#">Tous les articles</a>
+    </div>
+    <div class="blog__grid">
+      <article class="post reveal">
+        <div class="post__cover post__cover-1">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="50" cy="50" r="30"/><path d="M30 50h40M50 30v40"/></svg>
+        </div>
+        <div class="post__cat">Automatisation</div>
+        <h3>5 tâches qu'une TPE peut automatiser dès demain (et sans coder).</h3>
+        <div class="post__meta"><span>8 min</span><span>14 avr.</span></div>
+      </article>
+      <article class="post reveal">
+        <div class="post__cover post__cover-2">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M30 30l-15 20 15 20M70 30l15 20-15 20M55 25L45 75"/></svg>
+        </div>
+        <div class="post__cat">Vibe coding</div>
+        <h3>Pourquoi votre prochain outil interne sera une appli sur-mesure (à 3 000 €).</h3>
+        <div class="post__meta"><span>6 min</span><span>2 avr.</span></div>
+      </article>
+      <article class="post reveal">
+        <div class="post__cover post__cover-3">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="40" cy="40" r="20"/><path d="M55 55l20 20"/></svg>
+        </div>
+        <div class="post__cat">SEO Local</div>
+        <h3>Le guide pas-à-pas de la fiche Google qui ramène vraiment des clients.</h3>
+        <div class="post__meta"><span>12 min</span><span>21 mars</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <span class="eyebrow reveal">Premier pas</span>
+    <h2 class="reveal">Discutons<br/><em>30 minutes</em>.</h2>
+    <p class="cta__sub reveal">Diagnostic gratuit, sans engagement. On regarde votre activité, on identifie 1 à 3 chantiers à fort impact, et vous repartez avec une feuille de route — qu'on travaille ensemble ou non.</p>
+    <div class="cta__btns reveal">
+      <a class="btn btn--primary" href="#">
+        Réserver un créneau
+        <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="mailto:bonjour@altos.fr">Nous écrire</a>
+    </div>
+    <div class="cta__details">
+      <span>📍 Toute la France</span>
+      <a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div class="foot__brand">
+        <a href="#" class="logo" style="color:var(--paper)">
+          <span class="logo__mark" style="background:var(--paper);color:var(--ink)">A</span>
+          <span>altos<span style="color:var(--accent-2)">.</span></span>
+        </a>
+        <p>Groupement d'experts métiers et d'ambassadeurs IA, au service des TPE et PME françaises depuis 2023.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Automatisation</a></li>
+          <li><a href="#">Vibe coding</a></li>
+          <li><a href="#">Sites internet</a></li>
+          <li><a href="#">SEO local</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Maison</h4>
+        <ul>
+          <li><a href="#">Méthode</a></li>
+          <li><a href="#">Réalisations</a></li>
+          <li><a href="#">Journal</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Suivre</h4>
+        <ul>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span>© 2026 ALTOS — Groupement</span>
+      <span>Mentions · Confidentialité</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in'), i * 60);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Nav scroll state
+  const nav = document.getElementById('nav');
+  document.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Big word animation when in view
+  const bw = document.getElementById('bigword');
+  if (bw) {
+    const bo = new IntersectionObserver(([e]) => {
+      if (e.isIntersecting) bw.classList.add('in');
+    }, { threshold: 0.3 });
+    bo.observe(bw);
+  }
+
+  // Listen for animation intensity changes from parent
+  window.addEventListener('message', (e) => {
+    if (e.data && e.data.type === 'set-anim') {
+      document.documentElement.style.setProperty('--anim', e.data.value);
+    }
+  });
+</script>
+</body>
+</html>

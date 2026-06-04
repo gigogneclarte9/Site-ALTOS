@@ -1,0 +1,651 @@
+-396931-570553004036173-761534002207373-76153500
+
+-8001029654500
+
+Bilan / Capitalisation accompagnement IA
+
+NOM DE L’ENTREPRISE : SAPAH SERVICES
+
+NUMERO DE DOSSIER : 25-464239
+
+NOM DU CONSEILLER OPCO : Delphine PETRUS
+
+Durée de l’accompagnement en jours : 5
+
+												Sommaire
+
+												
+
+												
+
+ TOC \o "1-3" \h \z \u 
+
+I.	Contexte de l’entreprise	                                                                          PAGEREF _Toc212139323 \h 3
+
+		II.	Objectifs	 PAGEREF _Toc212139325 \h 3
+
+		III.	Actions réalisées	 PAGEREF _Toc212139327 \h 3
+
+		IV.	Bénéfices	 PAGEREF _Toc212139331 \h 4
+
+		V.	Difficultés	 PAGEREF _Toc212139334 \h 4
+
+		VI.	Cas d’usage	 PAGEREF _Toc212139337 \h 5
+
+		VII.	Leçons apprises	 PAGEREF _Toc212139341 \h 5
+
+		VIII.	Perspectives	 PAGEREF _Toc212139344 \h 6
+
+		IX.	Témoignages	 PAGEREF _Toc212139347 \h 6
+
+		X.	Indicateurs quantitatifs et satisfaction	 PAGEREF _Toc212139350 \h 7
+
+	Contexte de l’entreprise
+
+Secteur, taille, enjeux de l’entreprise
+
+Le réseau AQUARELLE (site de Balma), représenté par M. Dominique 
+
+Buchereau
+
+, exerce dans le secteur des services à la personne, avec une activité orientée vers le maintien à domicile des seniors. L’entreprise est engagée dans un projet d’optimisation numérique visant à automatiser certains processus internes, notamment la production de bilans annuels et l’analyse d’événements indésirables (EI).
+
+L’enjeu principal portait sur l’amélioration de l’efficacité opérationnelle par la réduction des tâches manuelles chronophages, la fiabilisation des analyses produites et le renforcement de la visibilité web via la production de contenus SEO adaptés au marché français.
+
+	Objectifs
+
+												
+
+Attendus de l’accompagnement IA
+
+L’accompagnement visait à automatiser la génération des bilans annuels et des bilans EI (Événement indésirables) afin de réduire le temps de traitement manuel et d’améliorer la pertinence des analyses.
+
+Il avait également pour objectif d’optimiser la production de contenus SEO pour renforcer la visibilité en ligne, de corriger les incohérences dans la segmentation et l’exploitation des données, et de rendre l’entreprise autonome techniquement, notamment via la montée en compétence du référent interne (William) sur les formulaires et le 
+
+prompting
+
+ IA.
+
+Éléments détaillés :
+
+• Automatisation des rapports : Automatiser la génération des bilans annuels et des bilans d'Événements Indésirables (EI) pour réduire le temps de traitement manuel.
+
+• Optimisation SEO : Générer des articles de blog pertinents pour le
+
+référencement national français.
+
+• Fiabilisation des données : Corriger les erreurs de segmentation des données et améliorer la précision des analyses produites par l'IA.
+
+• Autonomie technique : Permettre au référent technique client (William) de gérer les formulaires et les prompts de l'IA.
+
+	Actions réalisées
+
+Etapes
+
+Un travail de cadrage a été réalisé en début de mission afin d’identifier les besoins prioritaires.
+
+Les workflows existants ont ensuite été analysés puis optimisés, notamment pour la production automatisée des bilans EI (Événement indésirables) et annuels.
+
+Des ajustements techniques ont été menés sur les outils d’automatisation, les flux de données et la structure des traitements IA.
+
+Enfin, des phases de test et de validation ont été réalisées avec le client pour sécuriser les résultats produits.
+
+Éléments détaillés :
+
+• Correction technique SEO : Modification de la liste des sources de l'IA pour privilégier des sources françaises et européennes au lieu de sources
+
+américaines.
+
+• Refonte du workflow des bilans EI (Événement indésirables
+
+):
+
+ Correction du bug de découpage par tranches pour permettre l'analyse de l'année complète (et non plus seulement novembre-décembre).
+
+• Optimisation des ressources : Travail sur le workflow pour réduire la consommation de 
+
+tokens
+
+.
+
+• Ajustement de l'interface : Passage du mode sombre au mode clair pour les signatures sur les formulaires afin de garantir leur visibilité.
+
+• Paramétrage WordPress : Configuration de la publication d'articles en mode "brouillon" (draft) via N8N pour validation manuelle avant mise en ligne.
+
+• Traitement de données : Mise en place d'une lecture directe des fichiers CSV sans conversion préalable en Google Sheets pour simplifier le processus.
+
+Outils déployés (versions, 
+
+paramétres
+
+ clés)
+
+La solution s’appuie principalement sur la plateforme N8N pour l’automatisation des workflows.
+
+Le moteur 
+
+ChatGPT
+
+ (
+
+OpenAI
+
+) a été intégré pour la génération de contenus et l’analyse de données.
+
+Les formulaires ont été gérés via 
+
+OpenForm
+
+, tandis que la publication SEO s’appuie sur WordPress, configuré en mode brouillon pour validation humaine avant diffusion.
+
+Formation
+
+Une montée en compétence progressive a été engagée avec le référent interne sur la gestion des workflows, l’optimisation des prompts et la supervision des processus automatisés. Une session spécifique de formation au 
+
+prompting
+
+ et au SEO est prévue dans la continuité de la mission.
+
+	Bénéfices
+
+	
+
+Indicateur chiffrés
+
+L’automatisation a permis une réduction significative du temps consacré à la production des bilans et des contenus SEO. Avant intervention, le traitement d’un formulaire complexe nécessitait environ deux heures pour la récupération des données, une heure pour leur saisie et deux heures pour la production du bilan. L’automatisation permet aujourd’hui une réduction notable de ces délais.
+
+La consommation de 
+
+tokens
+
+ IA a également été optimisée grâce aux ajustements techniques réalisés.
+
+Qualité améliorée : Sources SEO plus pertinentes pour le marché français et meilleure traçabilité du raisonnement de l'IA dans les bilans
+
+Impacts métiers
+
+Les équipes disposent désormais d’outils plus fiables et rapides pour produire leurs analyses. Le travail administratif est allégé et la qualité des livrables s’est améliorée, notamment grâce à une meilleure traçabilité du raisonnement de l’IA. L’entreprise gagne en autonomie et en capacité de pilotage.
+
+	
+
+	Difficultés
+
+	
+
+Obstacles rencontrés
+
+Des difficultés techniques ont été rencontrées concernant la réception 
+
+d’emails
+
+ liés à des contraintes du fournisseur mail et à certaines mises à jour système.
+
+Des problèmes d’accès administrateur sur WordPress ont également limité l’automatisation complète des publications.
+
+Enfin, certaines incohérences dans les données EI ont nécessité des ajustements complémentaires.
+
+Solutions apportés
+
+Les envois ont été redirigés vers une adresse Gmail personnelle pour sécuriser les échanges.
+
+Les accès techniques ont été revus et la publication SEO maintenue en mode brouillon pour validation manuelle.
+
+Des éléments de preuve ont été ajoutés aux workflows afin de renforcer la cohérence et la traçabilité des analyses IA.
+
+	
+
+	
+
+	Cas d’usage
+
+	
+
+ Exemples concrets
+
+Numérisation des formulaires : Transformation des formulaires papier en formulaire numériques.
+
+Génération automatisée de bilans annuels : Transformation de données brutes issues de formulaires en rapports structurés via N8N.
+
+Rédaction d'articles SEO : Création automatique de contenus basés sur des sources françaises pour alimenter le blog de l'entreprise.
+
+Usages transférables
+
+Ces usages sont transférables à d’autres structures de services à la personne confrontées à des volumes importants de données et à des obligations de 
+
+reporting
+
+.
+
+Conditions de transférabilité
+
+La réussite repose sur la structuration préalable des données, la formation des équipes et la mise en place d’une supervision humaine des résultats produits par l’IA.
+
+	
+
+	Leçons apprises
+
+	
+
+Bonnes pratiques
+
+La relecture humaine reste indispensable pour valider les contenus sensibles et garantir la qualité des productions automatisées.
+
+Une maintenance régulière est nécessaire pour assurer la pérennité des automatisations.
+
+Points de vigilance
+
+Une attention particulière doit être portée aux mises à jour des outils et extensions pouvant impacter les workflows automatisés.
+
+	
+
+	Perspectives
+
+	
+
+Suites envisagés
+
+Des discussions sont en cours concernant les modalités d’hébergement et de maintenance (voir prestataire).
+
+Nouveaux besoins (accompagnement, formation)
+
+Une formation complémentaire peut être envisagée sur le 
+
+prompting
+
+ avancé et l’optimisation SEO.
+
+	Témoignages
+
+	
+
+	
+
+Dirigeant / Collaborateurs
+
+Retour globalement positif sur les gains de temps et la simplification des processus. 
+
+Citations, retour d’expériences
+
+Les équipes soulignent la rapidité de production des bilans et la facilité d’utilisation des nouveaux outils. A manqué une étape d’audit technique pour faciliter la mise en œuvre.
+
+✅ Consentement RGPD :
+
+Les témoignages présentés ont été fournis avec le consentement explicite des personnes concernées, conformément au RGPD.
+
+	Indicateurs quantitatifs et satisfaction
+
+	
+
+Note
+
+Signification
+
+1
+
+Très insatisfaisant / Très faible
+
+2
+
+Insatisfaisant / Faible
+
+3
+
+Moyen / Acceptable
+
+4
+
+Satisfaisant / Bon
+
+5
+
+Très satisfaisant / Excellent
+
+	
+
+Évolution des compétences 
+
+- Connaissance des outils d’automatisation (n8n, 
+
+Make
+
+) : 
+
+Avant l’accompagnement				Après l’accompagnement
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+- Capacité à concevoir un processus automatisé simple : 
+
+Avant l’accompagnement				Après l’accompagnement
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+- Maîtrise des interactions IA (
+
+ChatGPT
+
+) :
+
+Avant l’accompagnement				Après l’accompagnement
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+Estimation du ROI
+
+L’estimation du retour sur investissement repose principalement sur les gains de temps générés par l’automatisation des bilans annuels et des événements indésirables (EI), ainsi que sur l’optimisation de la production de contenus SEO.
+
+Avant l’accompagnement, la production d’un bilan nécessitait en moyenne environ cinq heures de travail (collecte des données, saisie et rédaction des 2 bilans). L’automatisation mise en place permet aujourd’hui de ramener ce temps à environ une 15 mn, correspondant essentiellement à la phase de contrôle et de validation. 
+
+À cela s’ajoutent les gains liés à la production de contenus SEO, désormais partiellement automatisée, ainsi que la réduction des tâches administratives indirectes (retraitements, corrections, supervision). 
+
+La production moyenne est de 2 à 3 articles par mois. En retenant une hypothèse médiane de 2,5 articles/mois :
+
+avant : 1 h/article, soit 30 h/an
+
+après : 15 min/article, soit 7,5 h/an
+
+Le gain annuel est donc de 22,5 h.
+
+Tableau évolutif des gains
+
+Nombre de clients/an
+
+Gain bilans clients (h)
+
+Gain bilans annuels (h)
+
+Gain SEO (h)
+
+Gain total (h/an)
+
+Gains financiers à 25 €/h
+
+50
+
+237,5
+
+5,25
+
+22,5
+
+265,25
+
+6 631,25 €
+
+100
+
+475
+
+5,25
+
+22,5
+
+502,75
+
+12 568,75 €
+
+150
+
+712,5
+
+5,25
+
+22,5
+
+740,25
+
+18 506,25 €
+
+200
+
+950
+
+5,25
+
+22,5
+
+977,75
+
+24 443,75 €
+
+ROI sur 12 mois
+
+Coût de l’accompagnement : 1 900 €
+
+Formule utilisée :
+
+ROI = (gains annuels estimés - coût de l’accompagnement) / coût de l’accompagnement
+
+Nombre de clients/an
+
+Gains annuels estimés
+
+ROI sur 12 mois
+
+50
+
+6 631,25 €
+
+249 %
+
+100
+
+12 568,75 €
+
+561 %
+
+150
+
+18 506,25 €
+
+874 %
+
+200
+
+24 443,75 €
+
+1 186 %
+
+Indicateur de satisfaction
+
+Clarté :	
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+Utilité
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+Facilité
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+Motivation à poursuivre
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX

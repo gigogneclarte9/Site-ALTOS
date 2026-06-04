@@ -1,0 +1,394 @@
+Synthèse Audit Flash IA 
+NOM DE L’ENTREPRISE : AGENCEMENTS CHAPPERT FRIGORIFIQUE
+NUMERO DE DOSSIER : 25-80022
+NOM DU CONSEILLER OPCO : Mickaël CESCATO
+Durée de l’accompagnement en jours :
+Dates d’intervention
+Signatures
+Dates de RDV
+Entreprise
+Le Cercle des Entrepreneurs
+Réunion de cadrage : 
+11 mars 2025
+Diagnostic des pratiques : 
+1er avril 2025
+Préconisations / Plan d’action :
+5 mai 2025
+Sommaire
+I.Résumé3
+II.Contexte de l’entreprise4
+i.Historique et activité4
+ii.Structure organisationnelle4
+III.Diagnostic des pratiques IA8
+iii.Processus Métier8
+iv.Compétences et ressources8
+v.Données et sécurité9
+vi.OrganisationErreur ! Signet non défini.
+vii.Cadre réglementaire10
+IV.Cas d’usage IA et accompagnement préconisés12
+V.Synthèse et plan d’action20
+Synthèse graphique20
+VI.SWOTErreur ! Signet non défini.
+VII.Plan d’action détaillé22
+Résumé
+L’entreprise fonctionne avec une organisation efficace sur le terrain, mais de nombreux processus restent manuels : gestion des appels entrants, planification, saisie comptable, suivi des stocks et relance client. Les outils numériques utilisés sont pertinents mais fragmentés, sans automatisation ni synchronisation. Les compétences numériques varient fortement selon les collaborateurs, et aucune montée en compétence structurée n’a été engagée. Le site internet est devenu obsolète et déconnecté des autres outils de communication. Enfin, la base client est riche mais largement sous-exploitée, et aucun pilotage par la donnée n’est actuellement en place.
+Les leviers d’amélioration proposés s’appuient sur des outils simples, éprouvés et adaptés à la réalité de l’entreprise :
+Automatiser la gestion des appels entrants pour notifier instantanément les collaborateurs concernés et mettre à jour le suivi sans action manuelle.
+Digitaliser la comptabilité via un outil de reconnaissance automatique des factures et de rapprochement bancaire connecté à SAGE.
+Mettre en place une relance automatique des clients pour proposer un contrat d’entretien à date fixe après chaque installation.
+Utiliser l’IA générative (ChatGPT ou équivalent) pour assister la rédaction des mémoires techniques et structurer un suivi des appels d’offres.
+Instaurer une gestion des stocks simplifiée par QR code et application mobile pour fiabiliser les approvisionnements.
+Refonte du site internet avec intégration des outils marketing (Brevo, Analytics, formulaires) pour renforcer la présence en ligne.
+Segmenter la base client et lancer des campagnes marketing automatisées ciblées pour générer des ventes additionnelles.
+Former les collaborateurs clés aux outils no-code et à l’usage raisonné de l’IA afin de les rendre autonomes sur les futurs déploiements.
+Contexte de l’entreprise
+Historique et activité
+L’entreprise Agencement Chappert Frigorifique, basée à Albi, est spécialisée dans l’installation, la maintenance et le dépannage de systèmes frigorifiques, climatisation et chauffage, aussi bien pour les professionnels que pour les particuliers. Elle opère dans tout le département du Tarn.
+Fondée il y a 35 ans, l’entreprise a été reprise il y a 4 ans par M. Christophe Proupa, gendre du fondateur, après 14 années d’implication progressive dans l’entreprise où il a occupé successivement les postes de chargé d’affaires puis de directeur adjoint. Ce rachat a permis d’assurer la continuité de la vision entrepreneuriale tout en consolidant une organisation opérationnelle maîtrisée.
+Structure organisationnelle
+Agencement Chappert Frigorifique emploie actuellement 16 salariés, structurés en trois pôles principaux, avec une gestion encore fortement manuelle des opérations quotidiennes.
+Équipe technique
+8 techniciens de pose, dont 4 chefs d’équipe qui encadrent les interventions.
+2 techniciens de dépannage, mobilisés pour les interventions correctives chez les clients.
+1 technicien dédié à l’entretien préventif.
+Équipe commerciale et direction
+2 chargés d’affaires :
+L’un dédié aux clients particuliers,
+L’autre aux clients professionnels, en charge également de la rédaction des mémoires techniques pour les appels d’offres (travail manuel à partir d’une base documentaire construite par expérience).
+M. Christophe Proupa, en plus de sa fonction de dirigeant, conserve une casquette opérationnelle :
+Il dispose de son propre portefeuille clients et intervient en direct sur certains projets,
+Il accompagne le chargé d’affaires sur le chiffrage des appels d’offres,
+Il est également responsable des aspects financiers, RH, sociaux et communication,
+Il participe aux visites de chantier et aux rendez-vous clients.
+Administratif et logistique
+1 assistante polyvalente en charge :
+De la gestion administrative et commerciale (devis, facturation clients, planification SAV),
+De la saisie comptable manuelle des factures fournisseurs sur SAGE,
+Du pointage manuel des encaissements clients à partir du relevé bancaire,
+De la préparation d’un échéancier fournisseurs transmis à M. Proupa pour les virements via l’interface bancaire.
+1 coordinateur de chantier, responsable :
+De la gestion des stocks et des approvisionnements (enregistrés de manière manuelle, sans système de décompte automatique),
+De la logistique, du suivi des commandes, et de l’entretien du matériel et des véhicules (également gérés manuellement).
+Outils numériques et pratiques collaboratives
+Google Agenda est utilisé pour planifier les rendez-vous, partagé avec l’ensemble de l’équipe.
+Réunion de planification hebdomadaire le mercredi à 14h pour organiser les chantiers de la semaine suivante.
+Le planning de pose est tenu sur Google Sheets, avec les noms des chantiers, la charge horaire, la date de livraison prévue du matériel, et les disponibilités par technicien.
+Service9000 est utilisé pour la gestion des interventions SAV. Le technicien rédige un rapport d’intervention sur mobile, transmis à l’assistante via l’application.
+Les demandes téléphoniques sont saisies dans un Google Form, qui alimente un carnet d’appels partagé : chaque salarié consulte manuellement les lignes et modifie leur couleur pour indiquer que l’action a été réalisée.
+Il n’existe pas d’automatisation du traitement ou de la diffusion de ces demandes (pas de notifications par mail ou SMS aux techniciens).
+Communication et marketing
+La communication digitale est confiée à un prestataire externe, qui gère les publications sur Facebook et Instagram (deux par semaine) et a réalisé une visite virtuelle.
+Le site internet n’est plus mis à jour depuis plusieurs mois suite au départ de l’ancienne assistante ; il n’est pas relié aux réseaux sociaux.
+Il n’y a pas de suivi d’audience ni de blog ou stratégie de contenu.
+Une première newsletter a été envoyée via Brevo ; l’entreprise dispose d’un fichier client important qu’elle souhaite exploiter davantage via ce type d’action marketing.
+Enjeux commerciaux et opportunités d’optimisation
+Aucune procédure de relance ou entretien programmé n’est prévue un an après l’installation. Pourtant, un export des chantiers passés depuis le logiciel métier pourrait permettre d’alimenter un pipeline commercial et de déclencher automatiquement des offres de contrat d’entretien.
+Les devis sont produits avec OBAT, outil disposant d’une bibliothèque enrichie manuellement, y compris pour les prix d’achat fournisseurs, mis à jour sans synchronisation automatique.
+Aucune analyse statistique n’est effectuée sur les devis acceptés/refusés.
+L’entreprise envisage la mise en place d’un système de gestion de stock simplifié, à partir de QR codes ou codes-barres, avec application mobile.
+Diagnostic des pratiques IA
+Processus Métier
+Constats :
+L’entreprise utilise des outils numériques standards (Google Sheets, Agenda, Service9000, OBAT, SAGE), mais la plupart des processus restent manuels, non automatisés ni interconnectés.
+La gestion du planning, des interventions et des appels clients repose sur des tableurs partagés et des procédures visuelles (couleur, mise à jour manuelle).
+Il n’existe aucune centralisation ni workflow automatisé pour l’attribution des tâches ou la gestion des stocks.
+Les devis sont faits dans OBAT mais sans mise à jour automatisée des prix fournisseurs.
+Les données d’activité (statistiques devis, délais, satisfaction client) ne sont pas exploitées.
+Le site web n’est pas à jour, les réseaux sociaux ne sont pas reliés, aucun outil d’analyse de trafic n’est utilisé.
+Propositions d’amélioration :
+Mettre en place des automatisations simples (via Make) pour :
+Notifier les techniciens lors d’un nouvel appel,
+Générer des relances de contrat d’entretien à partir de la base clients.
+Installer une application mobile connectée à une base de données ou tableur intelligent pour la gestion du stock par QR code.
+Intégrer un outil d’analyse des données commerciales (ex : Google Looker Studio) pour suivre les taux de réussite des devis.
+Mettre à jour le site web et connecter les réseaux sociaux pour centraliser la communication digitale.
+Compétences et ressources
+Constats :
+Certains collaborateurs utilisent déjà l’IA de manière individuelle (génération de contenu pour les mails), mais aucune politique de formation ou montée en compétence structurée n’est en place.
+Pas de budget formation spécifique sur les outils numériques ou l’IA.
+Les managers ne sont pas formés à l’accompagnement au changement technologique.
+Il n’y a pas d’évaluation des besoins en compétences numériques à moyen terme.
+Propositions d’amélioration :
+Mettre en place une sensibilisation à l’IA et aux outils no-code pour tous les collaborateurs concernés.
+Prévoir un plan de formation sur l’utilisation d’outils comme Make, Brevo, Google Sheets avancé, etc.
+Impliquer les équipes dans le choix des outils et créer un référent numérique interne.
+Données et sécurité
+Constats :
+Les données sont partiellement sécurisées (accès restreint, sauvegardes), mais la gestion reste peu structurée.
+Pas de système intégré de gestion des données.
+Aucune analyse de données à visée stratégique n’est réalisée à ce jour.
+Les pratiques en matière de RGPD sont limitées et peu documentées.
+Propositions d’amélioration :
+Formaliser une politique de gestion des données (accès, archivage, usage).
+Structurer l’utilisation des données collectées (interventions, clients, devis) pour les transformer en tableaux de bord décisionnels.
+Intégrer des indicateurs de performance clés (KPI) issus des données terrain (délais SAV, taux de satisfaction, etc.).
+Organisation &amp; pilotage
+Constats :
+La direction est très investie mais centralise fortement les décisions.
+L’organisation montre une grande flexibilité opérationnelle, mais souffre de l’absence de structuration dans l’usage du numérique.
+Aucun tableau de bord synthétique n’existe pour piloter les performances ou les projets.
+Les retours des salariés sur les outils numériques sont peu formalisés.
+Propositions d’amélioration :
+Déléguer davantage de responsabilité numérique à certains collaborateurs (référents outils).
+Créer un tableau de bord de gestion d’entreprise partagé (Google Sheets ou outil de dataviz simple).
+Formaliser un processus d’amélioration continue impliquant les retours terrain
+Cadre réglementaire
+Constats :
+Faible niveau de conformité aux normes RGPD, absence de procédures documentées pour la protection des données ou la gestion des changements réglementaires.
+Les salariés sont peu formés aux implications réglementaires.
+Propositions d’amélioration :
+Rédiger une politique de confidentialité et des clauses de conformité à intégrer dans les contrats.
+Former les collaborateurs aux risques liés aux données (fuites, consentement, archivage).
+Cas d’usage IA et accompagnement 
+préconisés
+Cas d’usage 1 – Automatiser le traitement des appels entrants et l’attribution des tâches
+Description :
+L’enregistrement actuel des appels dans un Google Form nécessite une consultation manuelle du tableau de suivi, avec un changement de couleur par les collaborateurs pour indiquer la prise en charge. Ce fonctionnement est source d’oubli, de retards et de perte de temps.
+Outils préconisés :
+Plateforme Make pour automatiser le flux.
+Notifications par email, SMS (Twilio) ou intégration dans un outil de suivi.
+Mise à jour automatique d’un tableau Google Sheets ou Airtable.
+Accompagnement :
+Définition des règles d’aiguillage (qui reçoit quoi).
+Paramétrage du scénario d’automatisation.
+Tests sur différents cas de figure.
+Formation des utilisateurs à la réception et au traitement des notifications.
+Impact :
+Meilleure réactivité et fiabilité dans le traitement des demandes.
+Gain de temps pour les collaborateurs.
+Amélioration de la traçabilité.
+Risques :
+Erreur de configuration dans les scénarios.
+Dépendance à la plateforme d’automatisation.
+Cas d’usage 2 – Digitaliser les processus comptables et automatiser le rapprochement bancaire
+Description :
+Les factures fournisseurs sont saisies manuellement dans SAGE, les relevés bancaires sont pointés ligne par ligne et un échéancier Excel est géré à part. Ces tâches sont chronophages et sources d’erreurs.
+Outils préconisés :
+Outils d’OCR comptable : Libeo, Regate, Dext (à valider selon compatibilité SAGE).
+Automatisation du rapprochement bancaire et gestion des paiements.
+Connexion API ou automatisation via Make si nécessaire.
+Accompagnement :
+Cartographie des processus actuels.
+Choix d’un outil adapté aux flux réels.
+Paramétrage des connexions SAGE et bancaire.
+Formation à la validation des écritures et au contrôle.
+Impact :
+Réduction des erreurs de saisie.
+Visibilité en temps réel sur les échéances et la trésorerie.
+Libération de temps pour des tâches à plus forte valeur ajoutée.
+Risques :
+Coût de mise en place.
+Courbe d’apprentissage pour l’outil.
+Fiabilité des extractions OCR (vérification indispensable).
+Cas d’usage 3 – Relancer automatiquement les clients pour proposer des contrats d’entretien
+Description :
+Actuellement, aucun suivi n’est effectué après l’installation pour proposer des prestations d’entretien. Cela constitue un manque à gagner important.
+Outils préconisés :
+Export des données OBAT ou Service9000.
+Plateforme Brevo pour l’automatisation de campagnes.
+Make pour relier base client et déclencheur.
+IA pour générer des contenus personnalisés.
+Accompagnement :
+Définition du scénario (déclenchement à 1 an).
+Structuration et nettoyage des données clients.
+Rédaction et validation des emails.
+Formation au suivi des retours et au traitement des leads entrants.
+Impact :
+Génération de revenus récurrents via les contrats.
+Fidélisation des clients existants.
+Automatisation d’un levier commercial simple.
+Risques :
+Données clients incomplètes ou mal structurées.
+Nécessité de maintenir la base à jour pour garantir la pertinence des envois.
+Cas d’usage 4 – Utiliser l’IA pour la rédaction des appels d’offres et le suivi des performances
+Description :
+La rédaction des mémoires techniques est manuelle et longue. Aucun suivi analytique des AO n’est fait, ce qui limite le retour d’expérience et l’optimisation.
+Outils préconisés :
+ChatGPT Pro, Mistral ou équivalent sécurisé pour la rédaction.
+Structuration d’un fichier de suivi (Excel ou Notion).
+Analyse via Tableaux croisés dynamiques ou Looker Studio.
+Accompagnement :
+Structuration de la base documentaire interne.
+Formation au prompt, à la vérification des contenus générés.
+Création du tableau de suivi et formation à son usage.
+Mise en place de revues périodiques de performance.
+Impact :
+Gain de temps sur la production des mémoires techniques.
+Amélioration qualitative des réponses.
+Meilleure compréhension des facteurs de succès/échec.
+Risques :
+Contenu standardisé si l’IA n’est pas bien pilotée.
+Risques de confidentialité (à encadrer).
+Mauvaise interprétation des données AO.
+Cas d’usage 5 – Mettre en place une gestion de stock simplifiée et mobile
+Description :
+La gestion des stocks est opérée manuellement, sans suivi structuré des mouvements. Cela pèse sur le coordinateur et accroît le risque de rupture ou de surstock.
+Outils préconisés :
+Outils de gestion de stock mobile : Timly, Zoho Inventory, Stocknet, etc.
+Utilisation de QR codes ou codes-barres pour les entrées/sorties.
+Application mobile de scan et mise à jour automatique.
+Accompagnement :
+Définition des familles d’articles à suivre.
+Choix et paramétrage de l’outil.
+Génération des étiquettes et formation au scan.
+Intégration au processus logistique.
+Impact :
+Suivi fiable des stocks en temps réel.
+Moins de temps passé à vérifier les disponibilités.
+Prévision plus précise des besoins.
+Risques :
+Discipline d’utilisation nécessaire (scan systématique).
+Coût initial (abonnement, étiquettes, temps de paramétrage).
+Cas d’usage 6 – Refonte du site internet et suivi de la performance digitale
+Description :
+Le site internet est obsolète, non relié aux réseaux sociaux ni aux campagnes Brevo, et il n’existe aucun suivi de l’audience.
+Outils préconisés :
+CMS moderne (WordPress).
+Connexion à Google Analytics (GA4).
+Synchronisation avec Brevo pour les formulaires de contact et les campagnes.
+ChatGPT pour aider à la rédaction de contenus et articles.
+Accompagnement :
+Refonte technique et graphique du site.
+Configuration des intégrations et du suivi.
+Formation à l’administration du site et à l’analyse de trafic.
+Coordination avec le prestataire réseaux sociaux.
+Impact :
+Amélioration de l’image professionnelle.
+Augmentation de la génération de contacts qualifiés.
+Meilleur pilotage des actions marketing.
+Risques :
+Nécessité d’actualiser régulièrement le contenu.
+Charge de gestion à affecter en interne.
+Cas d’usage 7 – Exploiter la base de données clients pour des campagnes ciblées
+Description :
+L’entreprise dispose d’une base client importante, peu exploitée à ce jour en dehors d’une newsletter générique. Des campagnes ciblées et automatisées permettraient de générer des ventes additionnelles.
+Outils préconisés :
+Brevo pour la segmentation et l’automatisation.
+Analyse des données clients via Google Sheets ou exports.
+IA générative pour adapter les messages aux profils clients.
+Accompagnement :
+Segmentation de la base selon critères définis (type client, zone, équipement).
+Mise en place de scénarios marketing (ex. entretien préventif, offres saisonnières).
+Formation à l’analyse des résultats (taux d’ouverture, clics, conversions).
+Impact :
+Valorisation du portefeuille client.
+Augmentation des ventes complémentaires.
+Meilleur taux de retour sur les campagnes marketing.
+Risques :
+Risque de sollicitation excessive si les envois ne sont pas bien ciblés.
+Obligation de respecter le RGPD (consentement, désinscription, sécurisation des données).
+Synthèse et plan d’action
+Synthèse graphique
+Dirigeant engagé, polyvalent et sensibilisé aux enjeux du numérique
+Équipe technique organisée avec une répartition claire des rôles
+Outils numériques déjà partiellement en place (Google Sheets, OBAT, Service9000, Brevo)
+Base client importante, exploitable pour du marketing relationnel
+Capacité d’adaptation de l’entreprise à des changements progressifs
+Processus fortement manuels (planning, comptabilité, gestion des appels)
+Absence d’analyse de données et d’indicateurs de performance
+Pas d’intégration entre les outils utilisés, ni de workflow structuré
+Manque de formation des collaborateurs aux outils digitaux et à l’IA
+Site web obsolète, non connecté aux outils de communication et sans mesure d’audience
+Risque d’erreurs si les scénarios d’automatisation ne sont pas bien configurés
+Résistance au changement ou difficulté d’appropriation des nouveaux outils
+Dépendance à des solutions techniques externes en cas de faible montée en compétence interne
+Respect du RGPD et gestion sécurisée des données à garantir lors des campagnes marketing
+Automatiser les tâches répétitives pour gagner en efficacité
+Déployer des campagnes de relance et de fidélisation automatisées
+Améliorer la qualité des réponses aux appels d’offres avec l’IA générative
+Digitaliser les processus comptables et de gestion des stocks
+Moderniser l’image de marque à travers un site web connecté et performant
+Forces
+Faiblesses
+Opportunités
+Menaces
+Interne
+Externe
+Dirigeant engagé, polyvalent et sensibilisé aux enjeux du numérique
+Équipe technique organisée avec une répartition claire des rôles
+Outils numériques déjà partiellement en place (Google Sheets, OBAT, Service9000, Brevo)
+Base client importante, exploitable pour du marketing relationnel
+Capacité d’adaptation de l’entreprise à des changements progressifs
+Processus fortement manuels (planning, comptabilité, gestion des appels)
+Absence d’analyse de données et d’indicateurs de performance
+Pas d’intégration entre les outils utilisés, ni de workflow structuré
+Manque de formation des collaborateurs aux outils digitaux et à l’IA
+Site web obsolète, non connecté aux outils de communication et sans mesure d’audience
+Risque d’erreurs si les scénarios d’automatisation ne sont pas bien configurés
+Résistance au changement ou difficulté d’appropriation des nouveaux outils
+Dépendance à des solutions techniques externes en cas de faible montée en compétence interne
+Respect du RGPD et gestion sécurisée des données à garantir lors des campagnes marketing
+Automatiser les tâches répétitives pour gagner en efficacité
+Déployer des campagnes de relance et de fidélisation automatisées
+Améliorer la qualité des réponses aux appels d’offres avec l’IA générative
+Digitaliser les processus comptables et de gestion des stocks
+Moderniser l’image de marque à travers un site web connecté et performant
+Forces
+Faiblesses
+Opportunités
+Menaces
+Interne
+Externe
+Plan d’action détaillé 
+PLAN D'ACTION
+Projet Axes d’actions
+Priorité
+Action/étapes
+Description
+Calendrier prévisionnel
+Pilote/référent
+Livrables
+Ressources externes / internes
+Administratif
+Moyenne
+Mise en place d’un outil OCR + rapprochement bancaire automatique
+Choix d’un outil compatible SAGE, paramétrage et formation à la validation comptable
+2 mois
+Secrétaire
+Outil actif, délais de traitement réduits
+Prestataire OCR / cabinet comptable
+Haute
+Automatisation relance contrats d’entretien
+Export données chantiers, intégration Brevo, envoi automatique à J+365
+1 mois
+Chargé d'affaires Particuliers
+Scénario opérationnel, 1ère campagne déclenchée
+Consultant Brevo / interne
+Communication / Marketing
+Haute
+Segmentation base client et campagnes ciblées
+Création de segments dans Brevo, rédaction IA assistée, scénarios saisonniers
+2 mois
+Secrétaire
+2 campagnes ciblées envoyées, taux de retour mesuré
+Consultant marketing / interne
+Moyenne
+Refonte du site internet + connecteurs analytiques
+Modernisation du site, intégration formulaire Brevo, installation Google Analytics
+3 mois
+Dirigeant / prestataire web
+Site mis à jour, trafic suivi mensuellement
+Prestataire web / consultant SEO
+Processus métier
+Haute
+Automatisation du suivi des appels entrants
+Création d’un scénario Make : notification ciblée + mise à jour automatique du suivi
+1 mois
+Secrétaire / Dirigeant
+Notification automatisée, feuille de suivi dynamique
+Consultant Make / interne
+Organisationnel / sécurité
+Moyenne
+Suivi des appels d’offres et aide IA à la rédaction
+Mise en place d’un fichier de suivi + formation ChatGPT pour la rédaction assistée
+1 mois
+Chargé d'affaires Pro
+Mémoire généré avec IA, tableau de suivi AO rempli régulièrement
+Consultant IA / interne
+Moyenne
+Gestion de stock par QR code
+Choix outil mobile, paramétrage, génération étiquettes, formation au scan
+2 mois
+Coordinateur
+Application mobile fonctionnelle, mouvements de stock tracés
+Fournisseur outil / coordinateur

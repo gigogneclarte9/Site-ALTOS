@@ -1,0 +1,631 @@
+-396931-570553004036173-761534002207373-76153500
+
+-8001029654500
+
+Bilan / Capitalisation accompagnement IA
+
+NOM DE L’ENTREPRISE : LAURENSEN 
+
+Executive
+
+NUMERO DE DOSSIER : 25-259475
+
+NOM DU CONSEILLER OPCO : Lydia PUECH
+
+Durée de l’accompagnement en jours : 5
+
+Dates d’intervention
+
+Signatures
+
+Date
+
+Entreprise
+
+Le Cercle des Entrepreneurs
+
+Bilan / restitution :
+
+												Sommaire
+
+												
+
+												
+
+ TOC \o "1-3" \h \z \u 
+
+I.	Contexte de l’entreprise	                                                                          PAGEREF _Toc212139323 \h 3
+
+		II.	Objectifs	 PAGEREF _Toc212139325 \h 3
+
+		III.	Actions réalisées	 PAGEREF _Toc212139327 \h 3
+
+		IV.	Bénéfices	 PAGEREF _Toc212139331 \h 4
+
+		V.	Difficultés	 PAGEREF _Toc212139334 \h 4
+
+		VI.	Cas d’usage	 PAGEREF _Toc212139337 \h 5
+
+		VII.	Leçons apprises	 PAGEREF _Toc212139341 \h 5
+
+		VIII.	Perspectives	 PAGEREF _Toc212139344 \h 6
+
+		IX.	Témoignages	 PAGEREF _Toc212139347 \h 6
+
+		X.	Indicateurs quantitatifs et satisfaction	 PAGEREF _Toc212139350 \h 7
+
+	Contexte de l’entreprise
+
+Secteur, taille, enjeux de l’entreprise
+
+Le cabinet LAURENSEN EXECUTIVE, basé à Montpellier, est spécialisé dans le recrutement de cadres et cadres dirigeants depuis 8 ans. Pilotée par sa fondatrice Mme PEZET, l'entreprise intervient au niveau national avec une forte dimension RSE. Jusqu'à présent, le cabinet fonctionnait avec une structure agile mais très centralisée, où la dirigeante gérait manuellement une grande partie de la prospection et de la veille stratégique.
+
+Enjeux
+
+Secteur : Recrutement de haut niveau (Chasse de têtes).
+
+Taille : Petite structure (TPE) assistée de prestataires externes.
+
+Problématique : Une surcharge opérationnelle liée à des tâches manuelles chronophages (
+
+sourcing
+
+, saisie de données, relances) limitant le temps alloué à la relation client et au conseil à haute valeur ajoutée.
+
+	Objectifs
+
+												
+
+Attendus de l’accompagnement IA
+
+L'objectif central de l'accompagnement était d'industrialiser la détection et la qualification d’opportunités de recrutement.
+
+Automatisation du 
+
+sourcing
+
+ : Supprimer la veille manuelle sur les plateformes d'emploi.
+
+Qualification intelligente : Utiliser l'IA pour filtrer uniquement les postes à responsabilité (CODIR, COMEX).
+
+Efficacité commerciale : Centraliser les données de prospection dans un outil structuré (
+
+Airtable
+
+) pour une exploitation immédiate.
+
+Suppression du "bruit" : Éliminer automatiquement les offres non pertinentes (profils juniors, concurrents, intérim).
+
+	Actions réalisées
+
+Etapes
+
+Étapes du déploiement
+
+Audit Flash : Diagnostic des processus et identification des gisements de productivité.
+
+Configuration Technique : Paramétrage des outils de 
+
+scraping
+
+ (
+
+Apify
+
+/LinkedIn) et de la base de données 
+
+Airtable
+
+.
+
+Développement de l'Agent IA : Création et test des prompts de qualification sur l'API 
+
+ChatGPT
+
+.
+
+Formation : Transfert de compétences à Mme PEZET pour le pilotage du système.
+
+Outils déployés (versions, 
+
+paramétres
+
+ clés)
+
+Apify
+
+ (LinkedIn Jobs) : Pour le 
+
+scraping
+
+ automatisé des offres selon des mots-clés stratégiques (CEO, CFO, CTO, etc.).
+
+Airtable
+
+ : Base de données centrale (Base PIGES) structurant l'ensemble des opportunités collectées.
+
+N8n : Orchestrateur liant le 
+
+scraping
+
+, l'analyse IA et l'injection dans la base.
+
+OpenAI
+
+ API (
+
+ChatGPT
+
+) : Cerveau du système assurant le 
+
+scoring
+
+ et le nettoyage des données.
+
+Formation
+
+L'accompagnement a inclus un volet de transfert de compétences structuré pour assurer l'autonomie de la dirigeante :
+
+Acculturation technique : Compréhension du fonctionnement des API et de l'orchestrateur N8n.
+
+Maîtrise du Prompt Engineering : Formation à la modification des instructions de l'agent IA pour adapter les critères de qualification si le positionnement du cabinet évolue.
+
+Gestion de la base 
+
+Airtable
+
+ : Apprentissage de la manipulation des vues, du filtrage des scores et de la maintenance des listes de sociétés "exclues" ou "prioritaires".
+
+	Bénéfices
+
+	
+
+			Indicateur chiffrés	
+
+Recentrage stratégique : Le cabinet ne traite désormais que des piges ultra-qualifiées, renforçant son positionnement premium.
+
+Fiabilité des données : Suppression de l'erreur humaine lors de la saisie et normalisation des informations (URL, intitulé, localisation).
+
+Impacts métiers
+
+Gain de temps : Estimation de 70% de temps gagné sur la phase de 
+
+sourcing
+
+ et de tri initial.
+
+Productivité : Capacité de veille étendue à 24h/24 sans intervention humaine.
+
+Qualité : Taux de rejet automatique des offres hors-scope (juniors/intérim) proche de 100%.
+
+	
+
+	Difficultés
+
+	
+
+			Obstacles rencontrés	
+
+Complexité du 
+
+scraping
+
+ : Les limites techniques de LinkedIn imposent l'usage d'outils conformes et robustes (
+
+Apify
+
+) pour éviter les blocages de compte.
+
+Précision du filtrage : Nécessité d'ajuster finement les référentiels d'exclusion (cabinets concurrents, entreprises cibles) pour éviter les faux positifs.
+
+Solutions apportés
+
+Mise en place d'une logique de filtrage par étapes : d'abord le nettoyage par mots-clés, puis l'analyse sémantique fine par l'agent IA.
+
+Intégration d'un système de validation humaine pour les scores intermédiaires (40-69) afin de sécuriser la décision.
+
+	
+
+	Cas d’usage
+
+	
+
+ Exemples concrets
+
+Cas d'usage n°1 : 
+
+Sourcing
+
+ et Qualification par Agent IA (Cœur de mission)
+
+Le système interroge chaque semaine LinkedIn sur la zone Paris/Grandes zones pour des postes de "Directeur". L'IA analyse le descriptif, vérifie que ce n'est pas une offre d'un cabinet concurrent, attribue un score de 0 à 100 selon la séniorité, et injecte le tout dans 
+
+Airtable
+
+.
+
+Cas d'usage n°2 : Pilotage de l'activité commerciale
+
+Mise en place d'un formulaire simplifié relié à 
+
+Airtable
+
+ pour comptabiliser les appels et mails sortants, générant un tableau de bord de performance en temps réel.
+
+Usages transférables
+
+Ce workflow est directement applicable à toute activité de veille commerciale B2B nécessitant un filtrage sémantique complexe.
+
+Conditions de transférabilité
+
+Pour que ce cas d'usage soit réplicable, l'entreprise doit remplir les conditions suivantes :
+
+Structuration des données : Disposer d'une base de données centrale (type CRM ou 
+
+Airtable
+
+) pour accueillir les flux.
+
+Clarté des référentiels : Avoir des critères de ciblage (mots-clés, zones, types d'entreprises) parfaitement définis en amont.
+
+Abonnements aux outils tiers : Prévoir les budgets de fonctionnement pour les plateformes d'automatisation (N8n, 
+
+OpenAI
+
+, 
+
+Apify
+
+) qui varient selon le volume de données traité.
+
+	
+
+	Leçons apprises
+
+	
+
+Bonnes pratiques
+
+Approche Frugale : Privilégier des automatisations ciblées sur le cœur de métier plutôt que de chercher à tout automatiser simultanément.
+
+Augmentation du spectre de recherche : ajouter de nouvelles entreprises régulièrement participe à l’augmentation du nombre de résultats exploitables
+
+Points de vigilance
+
+Maintenance : Les sites sources (LinkedIn) modifiant régulièrement leur structure, une surveillance ponctuelle du scénario de 
+
+scraping
+
+ est requise.
+
+RGPD : Veiller à ne stocker que des données professionnelles publiques et à respecter les droits d'accès des candidats.
+
+	
+
+	Perspectives
+
+	
+
+Suites envisagés
+
+Enrichissement LinkedIn : Automatiser la recherche du décideur (via Kasper ou Apollo) une fois la pige qualifiée.
+
+Automatisation Communication : Déployer le scénario de création de newsletter automatique et de programmation de 
+
+posts
+
+ LinkedIn identifié lors de l'audit
+
+Nouveaux besoins (accompagnement, formation)
+
+Formation approfondie sur l'utilisation avancée de l'IA générative pour la rédaction des comptes rendus d'entretien.
+
+	Témoignages
+
+	
+
+Dirigeant / Collaborateurs
+
+Mme PEZET, Dirigeante souligne que ce système agit comme un "analyste marché + assistant commercial + contrôleur qualité" disponible en permanence.
+
+Citations, retour d’expériences
+
+L'IA permet désormais de renforcer le positionnement premium du cabinet en ne traitant que les opportunités de missions les plus stratégiques.
+
+✅ Consentement RGPD :
+
+Les témoignages présentés ont été fournis avec le consentement explicite des personnes concernées, conformément au RGPD.
+
+	Indicateurs quantitatifs et satisfaction
+
+	
+
+Note
+
+Signification
+
+1
+
+Très insatisfaisant / Très faible
+
+2
+
+Insatisfaisant / Faible
+
+3
+
+Moyen / Acceptable
+
+4
+
+Satisfaisant / Bon
+
+5
+
+Très satisfaisant / Excellent
+
+	
+
+Évolution des compétences 
+
+- Connaissance des outils d’automatisation (n8n, 
+
+Make
+
+) : 
+
+Avant l’accompagnement				Après l’accompagnement
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+- Capacité à concevoir un processus automatisé simple : 
+
+Avant l’accompagnement				Après l’accompagnement
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+- Maîtrise des interactions IA (
+
+ChatGPT
+
+) :
+
+Avant l’accompagnement				Après l’accompagnement
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+Estimation du ROI
+
+Coût de l’accompagnement : (Reste à charge) : 1 900 € HT
+
+	Gains annuels estimés :15 120 €	 
+
+	Détail du calcul : L'automatisation permet un gain de temps de 70% sur le 
+
+sourcing
+
+ et la qualification. Sur une base de 10h de veille manuelle par semaine pour la dirigeante (valorisée à 60 €/h), l'économie représente 7h par semaine. Sur une année de 36 semaines de prospection active, cela représente une productivité récupérée de 252 heures.
+
+ROI sur 12 mois : +695%
+
+Conclusion : L'investissement est intégralement rentabilisé en moins de 2 mois (environ 6,5 semaines) d'exploitation du système automatisé
+
+Synthèse du système mis en place
+
+L'écosystème déployé permet désormais une chaîne automatisée complète : 
+
+Scraping
+
+ → Centralisation → Qualification → Nettoyage. Ce dispositif agit comme un analyste marché et un contrôleur qualité opérationnel 24h/24, garantissant à 
+
+Laurensen
+
+ 
+
+Executive
+
+ un avantage technologique majeur et un pipeline d'opportunités ultra-qualifié.
+
+Indicateur de satisfaction
+
+Clarté :	
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+Utilité
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+Facilité
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+Motivation à poursuivre
+
+1
+
+2
+
+3
+
+4
+
+5
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX 
+
+ FORMCHECKBOX

@@ -1,0 +1,1592 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>ALTOS — Ambassadeur IA · Automatisation no-code pour PME France</title>
+<meta name="description" content="Studio numérique français : automatisation no-code, agents IA, vibe coding, sites internet, SEO local. Membre du réseau Ambassadeurs IA reconnu par l'État. Diagnostic 30 minutes offert." />
+<meta name="keywords" content="ambassadeur IA, automatisation PME, agents IA France, vibe coding, n8n, France Num, IA TPE, DGE Osez l'IA" />
+<meta name="author" content="Nicolas Darcos" />
+<link rel="canonical" href="https://altos.fr/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ALTOS" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://altos.fr/" />
+<meta property="og:title" content="ALTOS — Ambassadeur IA · Automatisation no-code pour PME France" />
+<meta property="og:description" content="Studio numérique français : automatisation no-code, agents IA, vibe coding, sites internet, SEO local. Membre du réseau Ambassadeurs IA reconnu par l'État. Diagnostic 30 minutes offert." />
+<meta property="og:image" content="https://altos.fr/assets/og-default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="ALTOS — Ambassadeur IA pour PME" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ALTOS — Ambassadeur IA · Automatisation no-code pour PME France" />
+<meta name="twitter:description" content="Studio numérique français : automatisation no-code, agents IA, vibe coding, sites internet, SEO local. Membre du réseau Ambassadeurs IA reconnu par l'État. Diagnostic 30 minutes offert." />
+<meta name="twitter:image" content="https://altos.fr/assets/og-default.png" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-weight='900' fill='%23ffffff'%3EA%3C/text%3E%3Ccircle cx='48' cy='52' r='4' fill='%23ff5b14'/%3E%3C/svg%3E" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #fff;
+    --ink: #0a0a0a;
+    --ink-2: #2c2c2c;
+    --ink-3: #767676;
+    --line: #e2e2e2;
+    --paper: #f4f1ec;
+    --accent: #ff5b14;          /* zinger orange */
+    --acid: #d9ff3c;            /* highlighter */
+    --display: "Fraunces", "Times New Roman", serif;
+    --sans: "Inter", system-ui, sans-serif;
+    --mono: "DM Mono", ui-monospace, monospace;
+    --anim: 1;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  body { overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--ink); color: var(--acid); }
+
+  /* ─── Reusable ─────────────────────────────── */
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+  .num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-3);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 26px;
+    border-radius: 0;
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid var(--ink);
+    background: var(--ink);
+    color: var(--bg);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color .3s;
+  }
+  .btn::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: var(--accent);
+    transform: translateY(101%);
+    transition: transform calc(.4s * var(--anim)) cubic-bezier(.7,0,.3,1);
+    z-index: -1;
+  }
+  .btn:hover::before { transform: translateY(0); }
+  .btn--ghost { background: transparent; color: var(--ink); }
+  .btn--ghost::before { background: var(--ink); }
+  .btn--ghost:hover { color: var(--bg); }
+  .btn .arrow { transition: transform .3s; }
+
+  /* BIG CTAs (Diag + Micro-audit) */
+  .btn--big {
+    padding: 24px 36px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    border-width: 2px;
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.16);
+    transition: transform .2s ease, box-shadow .2s ease, color .3s;
+  }
+  .btn--big:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 rgba(0,0,0,0.24); }
+  .btn--big .arrow { width: 18px; height: 18px; }
+  .btn--diag {
+    background: var(--accent); border-color: var(--accent); color: #fff;
+  }
+  .btn--diag::before { background: var(--ink); }
+  .btn--diag:hover { color: var(--acid); }
+  .btn--audit {
+    background: var(--acid); border-color: var(--acid); color: var(--ink);
+  }
+  .btn--audit::before { background: var(--accent); }
+  .btn--audit:hover { color: var(--bg); }
+  .btn:hover .arrow { transform: translateX(calc(4px * var(--anim))); }
+
+  .reveal { opacity: 0; transform: translateY(calc(30px * var(--anim))); transition: opacity .9s ease, transform .9s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .reveal-line { display: inline-block; overflow: hidden; }
+  .reveal-line span { display: inline-block; transform: translateY(110%); transition: transform 1s cubic-bezier(.16,1,.3,1); }
+  .reveal-line.in span { transform: translateY(0); }
+
+  /* ─── NAV ─────────────────────────────────── */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--bg);
+    border-bottom: 1px solid var(--ink);
+  }
+  .nav__inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 18px 32px;
+    max-width: 1320px; margin: 0 auto;
+  }
+  .logo {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: -0.04em;
+  }
+  .logo i { font-style: italic; color: var(--accent); }
+  .nav__links {
+    display: flex;
+    gap: 32px;
+    font-family: var(--mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .nav__links a { transition: color .2s; }
+  .nav__links a:hover { color: var(--accent); }
+  .nav__cta { display: flex; justify-content: flex-end; align-items: center; gap: 14px; }
+  .nav__time { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.08em; }
+
+  /* ─── HERO ─────────────────────────────────── */
+  .hero {
+    border-bottom: 1px solid var(--ink);
+    padding: 48px 0 0;
+    position: relative;
+  }
+  .hero__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+    padding: 0 32px;
+    max-width: 1320px; margin-left: auto; margin-right: auto;
+    font-family: var(--mono); font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--ink-3);
+  }
+  .hero__top div + div { text-align: center; }
+  .hero__top div:last-child { text-align: right; }
+
+  .hero__title {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(72px, 14vw, 220px);
+    line-height: 0.86;
+    letter-spacing: -0.05em;
+    text-align: center;
+    padding: 0 32px;
+    margin-bottom: 32px;
+  }
+  .hero__title i { font-style: italic; }
+  .hero__title .row { display: block; }
+  .hero__title .accent { color: var(--accent); }
+  .hero__title .strike {
+    position: relative; display: inline-block;
+  }
+  .hero__title .strike::after {
+    content: ""; position: absolute;
+    left: -2%; right: -2%; top: 48%; height: 8px;
+    background: var(--accent);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 1.4s cubic-bezier(.7,0,.3,1) .8s;
+  }
+  .hero__title.in .strike::after { transform: scaleX(1); }
+
+  .hero__sub {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 48px;
+    border-top: 1px solid var(--ink);
+    padding: 32px;
+    max-width: 1320px; margin: 0 auto;
+    align-items: start;
+  }
+  .hero__sub p {
+    font-size: 17px;
+    line-height: 1.45;
+    max-width: 420px;
+  }
+  .hero__sub p strong { font-weight: 600; }
+  .hero__cta { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero__meta { font-family: var(--mono); font-size: 12px; color: var(--ink-3); text-align: right; line-height: 1.6; }
+
+  /* Big strip */
+  .strip {
+    background: var(--ink);
+    color: var(--bg);
+    padding: 24px 0;
+    overflow: hidden;
+    border-bottom: 1px solid var(--ink);
+  }
+  .strip__track {
+    display: flex; gap: 60px;
+    white-space: nowrap;
+    font-family: var(--display);
+    font-size: 80px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1;
+    animation: scroll-x calc(40s / var(--anim, 1)) linear infinite;
+  }
+  .strip__track span { display: inline-flex; align-items: center; gap: 60px; }
+  .strip__track span::after { content: "✻"; color: var(--accent); font-style: normal; }
+  @keyframes scroll-x {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ─── WHY ───────────────────────────────── */
+  .why {
+    padding: 100px 0;
+    border-bottom: 1px solid var(--ink);
+  }
+  .why__head {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    margin-bottom: 80px;
+    align-items: end;
+  }
+  .why h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    margin-top: 16px;
+  }
+  .why h2 i { font-style: italic; }
+  .why h2 mark {
+    background: var(--acid);
+    padding: 0 8px;
+    color: var(--ink);
+  }
+  .why__lead {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 480px;
+    color: var(--ink-2);
+  }
+
+  .why__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+  }
+  .why__cell {
+    border-top: 1px solid var(--ink);
+    padding: 24px 0;
+    display: flex; flex-direction: column;
+    transition: padding-top .35s;
+  }
+  .why__cell:hover { padding-top: 14px; }
+  .why__cell:nth-child(1) { grid-column: span 5; }
+  .why__cell:nth-child(2) { grid-column: span 4; }
+  .why__cell:nth-child(3) { grid-column: span 3; }
+  .why__cell:nth-child(4) { grid-column: span 4; }
+  .why__cell:nth-child(5) { grid-column: span 4; }
+  .why__cell:nth-child(6) { grid-column: span 4; }
+  .why__cell h3 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 16px 0 12px;
+  }
+  .why__cell h3 i { font-style: italic; }
+  .why__cell p { color: var(--ink-2); font-size: 15px; line-height: 1.5; }
+
+  /* ─── SERVICES ─────────────────────────── */
+  .services { padding: 100px 0; border-bottom: 1px solid var(--ink); }
+  .services__head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 64px;
+  }
+  .services h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    margin-top: 16px;
+  }
+  .services h2 i { font-style: italic; }
+  .service-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 1.4fr auto;
+    gap: 32px;
+    align-items: center;
+    padding: 32px 0;
+    border-top: 1px solid var(--ink);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: padding .35s;
+  }
+  .service-row::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: var(--accent);
+    transform: translateY(101%);
+    transition: transform .45s cubic-bezier(.7,0,.3,1);
+    z-index: 0;
+  }
+  .service-row:hover::before { transform: translateY(0); }
+  .service-row > * { position: relative; z-index: 1; }
+  .service-row:hover { padding-left: calc(32px * var(--anim)); padding-right: calc(32px * var(--anim)); color: var(--bg); }
+  .service-row:hover .service-row__num { color: var(--bg); }
+  .service-row__num { font-family: var(--mono); font-size: 12px; color: var(--ink-3); transition: color .3s; }
+  .service-row__title {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .service-row__title i { font-style: italic; }
+  .service-row__desc { font-size: 15px; line-height: 1.5; max-width: 520px; }
+  .service-row__plus {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    border: 1px solid currentColor;
+    display: grid; place-items: center;
+    transition: transform .4s, background .3s, color .3s;
+  }
+  .service-row:hover .service-row__plus { transform: rotate(calc(45deg * var(--anim))); background: var(--bg); color: var(--accent); }
+
+  /* ─── PROCESS ───────────────────────────── */
+  .process {
+    padding: 100px 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--ink);
+  }
+  .process h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(48px, 7vw, 104px);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    margin: 16px 0 64px;
+  }
+  .process h2 i { font-style: italic; }
+  .process h2 mark { background: var(--acid); padding: 0 12px; }
+
+  .process__steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    counter-reset: step;
+  }
+  .pstep {
+    border-top: 2px solid var(--ink);
+    padding-top: 20px;
+    counter-increment: step;
+    position: relative;
+  }
+  .pstep::before {
+    content: counter(step, decimal-leading-zero);
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 0.8;
+    display: block;
+    margin-bottom: 24px;
+    transition: color .3s;
+  }
+  .pstep:hover::before { color: var(--accent); }
+  .pstep h3 { font-family: var(--display); font-weight: 400; font-size: 26px; letter-spacing: -0.01em; margin-bottom: 8px; }
+  .pstep h3 i { font-style: italic; }
+  .pstep p { color: var(--ink-2); font-size: 14px; line-height: 1.55; }
+
+  /* ─── CASES ─────────────────────────────── */
+  .cases { padding: 100px 0; border-bottom: 1px solid var(--ink); }
+  .cases h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    margin: 16px 0 64px;
+  }
+  .cases h2 i { font-style: italic; }
+  .cases__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--ink);
+    border-left: 1px solid var(--ink);
+  }
+  .case-tile {
+    grid-column: span 3;
+    border-right: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: 36px;
+    min-height: 380px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition: background .35s;
+    cursor: pointer;
+  }
+  .case-tile:hover { background: var(--paper); }
+  .case-tile:nth-child(3) { grid-column: span 2; }
+  .case-tile:nth-child(4) { grid-column: span 4; background: var(--ink); color: var(--bg); }
+  .case-tile:nth-child(4):hover { background: var(--accent); }
+  .case-tile:nth-child(5), .case-tile:nth-child(6), .case-tile:nth-child(7) { grid-column: span 3; }
+  .case-tile__cat { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.08em; text-transform: uppercase; }
+  .case-tile:nth-child(4) .case-tile__cat { color: var(--acid); }
+  .case-tile h3 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(28px, 3.2vw, 44px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-top: 12px;
+    max-width: 480px;
+  }
+  .case-tile h3 i { font-style: italic; }
+  .case-tile__bottom {
+    display: flex; justify-content: space-between; align-items: end;
+    margin-top: 32px;
+  }
+  .case-tile__metric {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .case-tile:nth-child(4) .case-tile__metric { color: var(--accent); }
+  .case-tile:nth-child(4):hover .case-tile__metric { color: var(--bg); }
+  .case-tile__client { font-size: 13px; max-width: 200px; line-height: 1.4; text-align: right; }
+
+  /* ─── TESTIMONIALS ──────────────────────── */
+  .testi { padding: 100px 0; border-bottom: 1px solid var(--ink); }
+  .testi__head {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 60px; margin-bottom: 64px; align-items: end;
+  }
+  .testi h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    margin-top: 16px;
+  }
+  .testi h2 i { font-style: italic; }
+  .testi__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border: 1px solid var(--ink); }
+  .testi__cell {
+    padding: 48px;
+    border-right: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    transition: background .25s;
+  }
+  .testi__cell:nth-child(2n) { border-right: none; }
+  .testi__cell:nth-last-child(-n+2) { border-bottom: none; }
+  .testi__cell:hover { background: var(--paper); }
+  .testi__cell blockquote {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 28px;
+    max-width: 480px;
+  }
+  .testi__cell blockquote i { font-style: italic; }
+  .testi__who {
+    display: flex; align-items: center; gap: 14px;
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+  }
+  .testi__avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--bg);
+    display: grid; place-items: center;
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 14px;
+  }
+  .testi__name { font-size: 14px; font-weight: 500; }
+  .testi__role { font-size: 12px; color: var(--ink-3); }
+
+  /* ─── BLOG ──────────────────────────────── */
+  .blog { padding: 100px 0; border-bottom: 1px solid var(--ink); background: var(--paper); }
+  .blog__head { display: flex; justify-content: space-between; align-items: end; margin-bottom: 56px; }
+  .blog h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    margin-top: 16px;
+  }
+  .blog h2 i { font-style: italic; }
+  .blog__grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; }
+  .post {
+    cursor: pointer;
+    display: flex; flex-direction: column;
+    transition: transform .35s;
+  }
+  .post:hover { transform: translateY(calc(-4px * var(--anim))); }
+  .post__cover {
+    aspect-ratio: 4/3;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 1px solid var(--ink);
+    position: relative;
+    display: grid; place-items: center;
+  }
+  .post:nth-child(1) .post__cover { aspect-ratio: 16/10; }
+  .post__cover-1 { background: var(--accent); color: var(--ink); }
+  .post__cover-2 { background: var(--ink); color: var(--acid); }
+  .post__cover-3 { background: var(--acid); color: var(--ink); }
+  .post__cover svg {
+    width: 50%; height: auto;
+    transition: transform 1s cubic-bezier(.16,1,.3,1);
+  }
+  .post:hover .post__cover svg { transform: scale(calc(1 + .08 * var(--anim))) rotate(calc(8deg * var(--anim))); }
+  .post__cat { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+  .post h3 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 8px 0 12px;
+  }
+  .post h3 i { font-style: italic; }
+  .post:nth-child(1) h3 { font-size: 36px; }
+  .post__meta { font-family: var(--mono); font-size: 11px; color: var(--ink-3); margin-top: auto; padding-top: 12px; }
+
+  /* ─── CTA ───────────────────────────────── */
+  .cta {
+    padding: 120px 0;
+    background: var(--ink);
+    color: var(--bg);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(80px, 12vw, 200px);
+    line-height: 0.88;
+    letter-spacing: -0.04em;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .cta h2 i { font-style: italic; color: var(--accent); }
+  .cta h2 .acid { color: var(--acid); font-style: italic; }
+  .cta__sub { font-size: 17px; max-width: 540px; margin: 32px auto; line-height: 1.5; color: #b3b3b3; }
+  .cta__btns { display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .cta .btn--ghost { color: var(--bg); border-color: var(--bg); }
+  .cta .btn--ghost::before { background: var(--accent); }
+  .cta .btn { border-color: var(--bg); }
+  .cta .btn--diag, .cta .btn--audit { border-color: transparent; }
+  .cta__details {
+    display: flex; gap: 32px; justify-content: center;
+    margin-top: 64px; padding-top: 32px;
+    border-top: 1px solid #2c2c2c;
+    max-width: 700px; margin-left: auto; margin-right: auto;
+    font-family: var(--mono); font-size: 12px;
+    color: #b3b3b3; letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .cta__details a:hover { color: var(--accent); }
+
+  /* ─── FOOTER ────────────────────────────── */
+  .foot {
+    background: var(--bg);
+    color: var(--ink);
+    padding: 48px 0 32px;
+    border-top: 1px solid var(--ink);
+  }
+  .foot__top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--line);
+  }
+  .foot__top h4 { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px; }
+  .foot__top ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .foot__top a { font-size: 14px; transition: color .2s; }
+  .foot__top a:hover { color: var(--accent); }
+  .foot__brand p { color: var(--ink-2); font-size: 14px; line-height: 1.5; max-width: 360px; margin-top: 16px; }
+  .foot__bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 24px; font-family: var(--mono); font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3);
+  }
+
+  /* ─── BIG WORDMARK ──────────────────────── */
+  .wordmark {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(180px, 28vw, 480px);
+    line-height: 0.78;
+    letter-spacing: -0.06em;
+    text-align: center;
+    user-select: none;
+    padding: 32px 16px;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--bg);
+    background: var(--ink);
+  }
+  .wordmark i { font-style: italic; color: var(--accent); -webkit-text-stroke: 1px var(--accent); }
+
+  /* ─── AMBASSADEUR IA (trust block) ────── */
+  .amba {
+    padding: 100px 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+  .amba__head {
+    display: grid; grid-template-columns: 1.1fr 1fr;
+    gap: 64px; align-items: end;
+    padding-bottom: 56px;
+    border-bottom: 1px solid var(--ink);
+    margin-bottom: 56px;
+  }
+  .amba__head h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(44px, 5.8vw, 80px); line-height: 0.95;
+    letter-spacing: -0.03em; margin-top: 16px;
+  }
+  .amba__head h2 i { font-style: italic; }
+  .amba__head h2 mark { background: var(--acid); padding: 0 8px; color: var(--ink); }
+  .amba__seal {
+    display: flex; flex-direction: column; gap: 14px;
+    padding: 28px 32px;
+    background: var(--ink); color: var(--bg);
+    border: 1px solid var(--ink);
+    position: relative;
+  }
+  .amba__seal::before {
+    content: "";
+    position: absolute; top: 18px; right: 22px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--acid);
+    box-shadow: 0 0 0 4px rgba(217,255,60,0.18);
+  }
+  .amba__seal__label {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--acid); opacity: 0.9;
+  }
+  .amba__seal__title {
+    font-family: var(--display); font-style: italic;
+    font-size: 26px; line-height: 1.15; letter-spacing: -0.01em;
+  }
+  .amba__seal__title b { font-style: normal; font-weight: 600; }
+  .amba__seal__meta {
+    font-family: var(--mono); font-size: 11px;
+    color: #b3b3b3; line-height: 1.5;
+    padding-top: 14px; border-top: 1px solid #333;
+  }
+  .amba__lede {
+    font-size: 18px; line-height: 1.55; color: var(--ink-2);
+    max-width: 62ch;
+  }
+  .amba__lede strong { color: var(--ink); font-weight: 500; }
+  .amba__missions {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--ink);
+    border-left: 1px solid var(--ink);
+    margin-bottom: 56px;
+  }
+  .amba__m {
+    padding: 32px 28px;
+    border-right: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    background: var(--bg);
+    display: flex; flex-direction: column; gap: 12px;
+    min-height: 220px;
+  }
+  .amba__m__num {
+    font-family: var(--mono); font-size: 11px;
+    color: var(--accent); letter-spacing: 0.12em;
+  }
+  .amba__m h4 {
+    font-family: var(--display); font-weight: 400;
+    font-size: 22px; line-height: 1.15; letter-spacing: -0.01em;
+  }
+  .amba__m h4 i { font-style: italic; }
+  .amba__m p { font-size: 14px; line-height: 1.55; color: var(--ink-2); }
+  .amba__foot {
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 32px; align-items: center;
+  }
+  .amba__links {
+    display: flex; gap: 28px; flex-wrap: wrap;
+    font-family: var(--mono); font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+  .amba__links a {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding-bottom: 4px; border-bottom: 1px solid var(--ink);
+    transition: color .2s, border-color .2s, gap .2s;
+  }
+  .amba__links a:hover {
+    color: var(--accent); border-color: var(--accent); gap: 12px;
+  }
+  .amba__links a svg { transition: transform .2s; }
+  .amba__disclaimer {
+    font-size: 12px; color: var(--ink-3); line-height: 1.5;
+    max-width: 38ch; text-align: right;
+  }
+
+  /* ─── ABOUT / NICOLAS ─────────────────── */
+  .about {
+    padding: 100px 0;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+    overflow: hidden;
+  }
+  .about__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .about__portrait {
+    position: relative;
+    border: 1px solid var(--ink);
+    background: var(--paper);
+    aspect-ratio: 4/5;
+    overflow: hidden;
+  }
+  .about__portrait img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+    transition: transform 1.2s cubic-bezier(.16,1,.3,1);
+    filter: grayscale(0.15) contrast(1.02);
+  }
+  .about__portrait:hover img { transform: scale(calc(1 + .03 * var(--anim))); }
+  .about__portrait::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.4) 100%);
+    pointer-events: none;
+  }
+  .about__caption {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: 22px 24px;
+    color: var(--bg);
+    display: flex; justify-content: space-between; align-items: end;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    z-index: 2;
+  }
+  .about__caption b { font-family: var(--display); font-style: italic; font-weight: 400; font-size: 18px; letter-spacing: -0.01em; text-transform: none; }
+  .about__signature {
+    position: absolute; top: 20px; left: 20px;
+    background: var(--accent); color: var(--ink);
+    font-family: var(--mono); font-size: 10px;
+    padding: 8px 12px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    z-index: 2;
+  }
+  .about__body { padding-top: 8px; }
+  .about__body h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(48px, 6vw, 88px);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin: 16px 0 32px;
+  }
+  .about__body h2 i { font-style: italic; }
+  .about__body h2 mark { background: var(--acid); padding: 0 8px; color: var(--ink); }
+  .about__lede {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 28px;
+    max-width: 56ch;
+  }
+  .about__lede i { font-style: italic; }
+  .about__lede strong { font-weight: 600; background: var(--acid); padding: 0 4px; }
+  .about__body p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink-2);
+    margin-bottom: 18px;
+    max-width: 58ch;
+  }
+  .about__body p strong { color: var(--ink); font-weight: 600; }
+  .about__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--ink);
+    border-left: 1px solid var(--ink);
+    margin: 40px 0 32px;
+  }
+  .about__stat {
+    padding: 22px 20px;
+    border-right: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .about__stat__num {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .about__stat__num .accent { color: var(--accent); }
+  .about__stat__label {
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--ink-3);
+    line-height: 1.4;
+  }
+  .about__sign {
+    display: flex; align-items: center; gap: 16px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+  .about__sign__name {
+    font-family: var(--display); font-style: italic;
+    font-size: 22px; letter-spacing: -0.01em;
+  }
+  .about__sign__role {
+    font-family: var(--mono); font-size: 11px;
+    color: var(--ink-3); letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 900px) {
+    .hero__sub, .why__head, .services__head, .testi__head, .blog__grid, .cases__grid, .testi__grid, .why__grid, .process__steps { grid-template-columns: 1fr !important; gap: 28px; }
+    .why__cell { grid-column: span 1 !important; }
+    .case-tile { grid-column: span 6 !important; }
+    .testi__cell { border-right: none !important; }
+    .nav__links { display: none; }
+    .service-row { grid-template-columns: 60px 1fr auto; }
+    .service-row__desc { display: none; }
+    .amba__head, .amba__foot { grid-template-columns: 1fr !important; gap: 32px; }
+    .amba__missions { grid-template-columns: 1fr 1fr; }
+    .amba__disclaimer { text-align: left; max-width: none; }
+    .about__grid { grid-template-columns: 1fr !important; gap: 48px; }
+    .about__stats { grid-template-columns: 1fr 1fr !important; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://altos.fr/#org",
+      "name": "ALTOS",
+      "alternateName": "Le Cercle des Entrepreneurs",
+      "legalName": "Nicolas DARCOS — Entrepreneur individuel",
+      "url": "https://altos.fr",
+      "logo": "https://altos.fr/assets/og-default.png",
+      "image": "https://altos.fr/assets/og-default.png",
+      "description": "Studio numérique français spécialisé en automatisation no-code, agents IA, vibe coding, sites internet et SEO local pour TPE et PME.",
+      "founder": { "@type": "Person", "name": "Nicolas Darcos" },
+      "foundingDate": "2003-02-24",
+      "email": "bonjour@altos.fr",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1 impasse des Écoles",
+        "postalCode": "11320",
+        "addressLocality": "Montferrand",
+        "addressCountry": "FR"
+      },
+      "areaServed": { "@type": "Country", "name": "France" },
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Réseau des Ambassadeurs IA · DGE — Plan « Osez l'IA »",
+        "url": "https://www.entreprises.gouv.fr/osezlia"
+      },
+      "knowsAbout": ["Intelligence artificielle","Automatisation no-code","n8n","Agents IA","Vibe coding","SEO local","RGPD"],
+      "identifier": [
+        {"@type":"PropertyValue","propertyID":"SIREN","value":"352258479"},
+        {"@type":"PropertyValue","propertyID":"SIRET","value":"35225847900042"},
+        {"@type":"PropertyValue","propertyID":"NAF/APE","value":"70.22Z"}
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://altos.fr/#website",
+      "url": "https://altos.fr",
+      "name": "ALTOS",
+      "publisher": { "@id": "https://altos.fr/#org" },
+      "inLanguage": "fr-FR"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://altos.fr/#service",
+      "name": "ALTOS — Conseil et déploiement IA pour PME",
+      "provider": { "@id": "https://altos.fr/#org" },
+      "areaServed": "France",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Quatre spécialités",
+        "itemListElement": [
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Automatisation no-code","description":"Workflows n8n, agents IA sur-mesure"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Vibe coding","description":"Apps métier sur-mesure livrées en jours"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Sites internet","description":"Vitrines, e-commerce, prise de rendez-vous"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"SEO local","description":"Google My Business, contenu, technique"}}
+        ]
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="#" class="logo">ALTOS<i>.</i></a>
+    <div class="nav__links">
+      <a href="#services">Services</a>
+      <a href="#cases">Index</a>
+      <a href="#process">Méthode</a>
+      <a href="#ambassadeur">Ambassadeur</a>
+      <a href="#about">À propos</a>
+      <a href="micro-audit.html">Micro-audit</a>
+      <a href="#blog">Journal</a>
+    </div>
+    <div class="nav__cta">
+      <span class="nav__time" id="t">FR · 2026</span>
+      <a href="#contact" class="btn">Prendre RDV
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero__top">
+    <div>Issue n°01 — Groupement</div>
+    <div>Toute la France</div>
+    <div>Groupement</div>
+  </div>
+
+  <h1 class="hero__title reveal">
+    <span class="row reveal-line"><span>Studio <i>numérique</i></span></span>
+    <span class="row reveal-line"><span>qui s'occupe</span></span>
+    <span class="row reveal-line"><span><span class="strike">enfin</span> de</span></span>
+    <span class="row reveal-line"><span><i class="accent">votre</i> activité.</span></span>
+  </h1>
+
+  <div class="hero__sub">
+    <p><strong>Un groupement d'experts métiers</strong> — automatisation, vibe coding, sites internet, SEO. Quatre savoir-faire au service des TPE et commerces qui veulent du résultat, pas du jargon.</p>
+    <div class="hero__cta">
+      <a class="btn btn--big btn--diag" href="https://cal.com/nicolas-darcos-uldxct/30min" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>
+        Diagnostic 30 minutes
+        <svg class="arrow" width="18" height="18" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+      <a class="btn btn--big btn--audit" href="micro-audit.html">
+        Micro-audit 3 minutes
+        <svg class="arrow" width="18" height="18" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+    <div class="hero__meta">
+      Groupement<br/>d'ambassadeurs IA<br/>· · ·<br/>4 spécialités<br/>1 conversation
+    </div>
+  </div>
+</section>
+
+<!-- BIG WORDMARK -->
+<div class="wordmark">A<i>l</i>tos<i>.</i></div>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip__track">
+    <span><i>automatisation</i></span>
+    <span><i>vibe coding</i></span>
+    <span><i>sites internet</i></span>
+    <span><i>SEO local</i></span>
+    <span><i>agents IA</i></span>
+    <span><i>automatisation</i></span>
+    <span><i>vibe coding</i></span>
+    <span><i>sites internet</i></span>
+    <span><i>SEO local</i></span>
+    <span><i>agents IA</i></span>
+  </div>
+</div>
+
+<!-- WHY -->
+<section class="why">
+  <div class="wrap">
+    <div class="why__head">
+      <div>
+        <span class="num reveal">§ 01 — Pourquoi</span>
+        <h2 class="reveal">Un <i>groupement</i> d'experts,<br/>au service de votre <mark>activité</mark>.</h2>
+      </div>
+      <p class="why__lead reveal">Six raisons concrètes — pas du marketing — pour lesquelles les dirigeants de TPE nous choisissent et reviennent.</p>
+    </div>
+    <div class="why__grid">
+      <div class="why__cell reveal">
+        <span class="num">01</span>
+        <h3><i>Experts</i> métiers,<br/>pas généralistes.</h3>
+        <p>Chaque mission est confiée à la personne dont c'est le métier — un développeur dev, un référenceur référence. Pas de pseudo-couteau-suisse.</p>
+      </div>
+      <div class="why__cell reveal">
+        <span class="num">02</span>
+        <h3>Ambassadeurs <i>IA</i>.</h3>
+        <p>On utilise l'IA quand elle vous fait gagner. Pas pour le gadget, pas pour le buzz.</p>
+      </div>
+      <div class="why__cell reveal">
+        <span class="num">03</span>
+        <h3>Toute la <i>France</i>.</h3>
+        <p>Visio, déplacement, atelier sur place.</p>
+      </div>
+      <div class="why__cell reveal">
+        <span class="num">04</span>
+        <h3>Périmètre <i>cadré</i>.</h3>
+        <p>Périmètre clair, livraisons hebdo. Vous savez ce qui va être livré, semaine après semaine.</p>
+      </div>
+      <div class="why__cell reveal">
+        <span class="num">05</span>
+        <h3><i>Rapide</i>, sérieux.</h3>
+        <p>Premier livrable en 7-14 jours. On préfère itérer vite que pondre des PowerPoint.</p>
+      </div>
+      <div class="why__cell reveal">
+        <span class="num">06</span>
+        <h3>Sans <i>jargon</i>.</h3>
+        <p>On parle votre langue. Démos vidéo, comptes-rendus simples, doc utilisable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AMBASSADEUR IA -->
+<section class="amba" id="ambassadeur">
+  <div class="wrap">
+    <div class="amba__head">
+      <div>
+        <span class="num reveal">§ 02 — Reconnu par l'État</span>
+        <h2 class="reveal">Membre du réseau<br/>des <mark>Ambassadeurs IA</mark>.</h2>
+        <p class="amba__lede reveal" style="margin-top:28px">
+          Altos est membre du <strong>réseau national des Ambassadeurs IA</strong>, créé en septembre 2025 par la <strong>Direction Générale des Entreprises</strong> (DGE) dans le cadre du plan d'État <i>« Osez l'IA »</i>. Ce programme bénévole engage des professionnels reconnus à sensibiliser, orienter et accompagner les TPE/PME dans l'adoption de l'intelligence artificielle — en lien avec France Num et les DREETS.
+        </p>
+      </div>
+      <aside class="amba__seal reveal">
+        <span class="amba__seal__label">Programme officiel · DGE</span>
+        <div class="amba__seal__title">Ambassadeur <b>IA</b><br/>de la République française</div>
+        <div class="amba__seal__meta">
+          Engagement signé · sept. 2025<br/>
+          Renouvellement tacite 12 mois<br/>
+          Charte v.09.2025
+        </div>
+      </aside>
+    </div>
+
+    <div class="amba__missions">
+      <div class="amba__m reveal">
+        <span class="amba__m__num">Mission 01</span>
+        <h4>Sensibiliser<br/><i>les entreprises</i>.</h4>
+        <p>Diffuser des cas d'usage concrets et réussis d'adoption de l'IA, en valorisant les solutions françaises et européennes adaptées au secteur.</p>
+      </div>
+      <div class="amba__m reveal">
+        <span class="amba__m__num">Mission 02</span>
+        <h4>Informer sur <i>l'écosystème</i>.</h4>
+        <p>Relayer salons, formations, appels à projets et événements IA pertinents pour le tissu économique local ou sectoriel.</p>
+      </div>
+      <div class="amba__m reveal">
+        <span class="amba__m__num">Mission 03</span>
+        <h4>Orienter<br/><i>sans engagement</i>.</h4>
+        <p>Répondre aux sollicitations des dirigeants de manière bienveillante et, si besoin, rediriger vers un acteur plus pertinent du réseau.</p>
+      </div>
+      <div class="amba__m reveal">
+        <span class="amba__m__num">Mission 04</span>
+        <h4>Remonter <i>le terrain</i>.</h4>
+        <p>Partager avec la DGE les difficultés rencontrées par les PME et leurs recommandations, pour faire évoluer la politique publique.</p>
+      </div>
+    </div>
+
+    <div class="amba__foot">
+      <div class="amba__links reveal">
+        <a href="https://www.entreprises.gouv.fr/osezlia" target="_blank" rel="noopener">
+          Annuaire officiel · entreprises.gouv.fr
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11L11 3M5 3h6v6"/></svg>
+        </a>
+        <a href="assets/charte-ambassadeurs-ia.pdf" target="_blank" rel="noopener">
+          Charte signée (PDF)
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 2v8M3 7l4 4 4-4M2 12h10"/></svg>
+        </a>
+        <a href="https://www.francenum.gouv.fr" target="_blank" rel="noopener">
+          Activateur France Num
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11L11 3M5 3h6v6"/></svg>
+        </a>
+      </div>
+      <p class="amba__disclaimer reveal">
+        Le programme est bénévole. Il ne donne pas droit à un financement, mais garantit un engagement public à respecter la <strong style="color:var(--ink);font-weight:500">charte d'État</strong> : conformité RGPD/RIA, désintéressement, redirection vers le bon interlocuteur.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / NICOLAS DARCOS -->
+<section class="about" id="about">
+  <div class="wrap">
+    <span class="num reveal">§ 02b — À propos</span>
+    <div class="about__grid" style="margin-top:24px">
+      <div class="about__portrait reveal">
+        <span class="about__signature">Fondateur · 2003</span>
+        <img src="assets/nicolas-darcos.jpg" alt="Nicolas Darcos, fondateur d'ALTOS, dans son bureau" loading="lazy" />
+        <div class="about__caption">
+          <span><b>Nicolas Darcos</b></span>
+          <span>Montferrand · Aude</span>
+        </div>
+      </div>
+
+      <div class="about__body">
+        <h2 class="reveal">Vingt-trois ans à <i>écouter</i><br/>des dirigeants de <mark>TPE/PME</mark>.</h2>
+
+        <p class="about__lede reveal">Avant l'IA, il y a eu <strong>vingt-trois ans de terrain</strong> — en conseil stratégie et ressources humaines, aux côtés de dirigeants de TPE et PME qui n'avaient ni le temps, ni l'envie d'écouter du <i>jargon</i>.</p>
+
+        <p class="reveal">J'ai accompagné des transmissions, des recrutements de cadres dirigeants, des restructurations, des plans de développement. À chaque fois, le même constat : les dirigeants ne demandent pas une méthode ; ils demandent <strong>du temps</strong>, <strong>de la clarté</strong> et <strong>un interlocuteur qui comprend leur métier</strong>.</p>
+
+        <p class="reveal">ALTOS est né de ce constat. L'intelligence artificielle et l'automatisation ne sont qu'un nouvel outil — puissant, mais un outil. Ce qui compte, c'est l'écoute, le cadrage et la promesse tenue. C'est ce que je mets dans chaque mission, et c'est ce que mes pairs du groupement apportent dans leur spécialité.</p>
+
+        <div class="about__stats reveal">
+          <div class="about__stat">
+            <span class="about__stat__num"><span class="accent">23</span> ans</span>
+            <span class="about__stat__label">de conseil<br/>aux dirigeants</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat__num">TPE<br/><i>PME</i></span>
+            <span class="about__stat__label">stratégie<br/>& ressources humaines</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat__num">120<span class="accent">+</span></span>
+            <span class="about__stat__label">dirigeants<br/>accompagnés</span>
+          </div>
+        </div>
+
+        <div class="about__sign">
+          <div>
+            <div class="about__sign__name">Nicolas Darcos</div>
+            <div class="about__sign__role">Fondateur · Ambassadeur IA · Consultant</div>
+          </div>
+          <div style="margin-left:auto">
+            <a class="btn btn--ghost" href="https://cal.com/nicolas-darcos-uldxct/30min" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Échanger 30 min
+              <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="services__head">
+      <div>
+        <span class="num reveal">§ 03 — Services</span>
+        <h2 class="reveal">Quatre <i>spécialités</i>,<br/>une seule conversation.</h2>
+      </div>
+      <p class="why__lead reveal">Vous parlez à un seul interlocuteur. En coulisses, l'expert qu'il faut prend la main au bon moment.</p>
+    </div>
+
+    <div class="service-row reveal">
+      <div class="service-row__num">01</div>
+      <div class="service-row__title">Auto<i>matisation</i></div>
+      <div class="service-row__desc">Vos tâches répétitives s'exécutent toutes seules — relances, planning, stock, reporting. n8n, agents IA sur-mesure.</div>
+      <div class="service-row__plus">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12"/></svg>
+      </div>
+    </div>
+    <div class="service-row reveal">
+      <div class="service-row__num">02</div>
+      <div class="service-row__title">Vibe <i>coding</i></div>
+      <div class="service-row__desc">Apps métier sur-mesure livrées en jours, pas en mois. Outils internes, dashboards, mini-saas pour votre activité.</div>
+      <div class="service-row__plus">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12"/></svg>
+      </div>
+    </div>
+    <div class="service-row reveal">
+      <div class="service-row__num">03</div>
+      <div class="service-row__title">Sites <i>internet</i></div>
+      <div class="service-row__desc">Vitrines, e-commerces, prises de rendez-vous. Rapides, beaux, faciles à mettre à jour vous-même.</div>
+      <div class="service-row__plus">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12"/></svg>
+      </div>
+    </div>
+    <div class="service-row reveal">
+      <div class="service-row__num">04</div>
+      <div class="service-row__title">SEO <i>local</i></div>
+      <div class="service-row__desc">Apparaissez quand vos clients vous cherchent. Google My Business, contenu, technique.</div>
+      <div class="service-row__plus">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="wrap">
+    <span class="num reveal">§ 04 — Méthode</span>
+    <h2 class="reveal">On commence par <mark>écouter</mark>,<br/>on finit par <i>livrer</i>.</h2>
+    <div class="process__steps">
+      <div class="pstep reveal">
+        <h3><i>Diagnostic</i></h3>
+        <p>30 minutes en visio. On comprend votre activité, on identifie les gisements de temps et de revenus.</p>
+      </div>
+      <div class="pstep reveal">
+        <h3><i>Cadrage</i></h3>
+        <p>Périmètre cadré, planning semaine par semaine. Vous savez précisément ce qui va se passer.</p>
+      </div>
+      <div class="pstep reveal">
+        <h3><i>Construction</i></h3>
+        <p>L'expert métier prend la main. Démo chaque vendredi, vous validez au fil de l'eau.</p>
+      </div>
+      <div class="pstep reveal">
+        <h3><i>Mise en route</i></h3>
+        <p>Formation, documentation, support 30 jours. Et on reste joignables, vraiment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="cases" id="cases">
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:8px">
+      <div>
+        <span class="num reveal">§ 05 — Réalisations</span>
+        <h2 class="reveal" style="margin-top:8px">Dix missions,<br/><i>dix</i> métiers, du concret.</h2>
+      </div>
+      <a href="cas-usage.html" class="reveal" style="display:inline-flex;align-items:center;gap:14px;padding:14px 20px;background:var(--acid);color:var(--ink);font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;border:1px solid var(--ink);transition:transform .2s ease, box-shadow .2s ease;box-shadow:4px 4px 0 var(--ink)" onmouseover="this.style.transform='translate(-2px,-2px)';this.style.boxShadow='6px 6px 0 var(--ink)'" onmouseout="this.style.transform='';this.style.boxShadow='4px 4px 0 var(--ink)'">
+        <span style="font-family:var(--display);font-style:italic;font-size:20px;color:var(--accent);letter-spacing:0;text-transform:none;line-height:1">+10</span>
+        <span>nouveaux audits<br/>flash 2026 <strong>→</strong></span>
+      </a>
+    </div>
+    <div class="cases__grid">
+
+      <div class="case-tile reveal">
+        <span class="case-tile__cat">01 — Services à la personne</span>
+        <h3>Bilans annuels et événements indésirables <i>générés automatiquement</i>.</h3>
+        <div class="case-tile__bottom">
+          <span class="case-tile__metric"><i>5h→15min</i></span>
+          <span class="case-tile__client">par bilan complet, n8n + ChatGPT + WordPress</span>
+        </div>
+      </div>
+
+      <div class="case-tile reveal">
+        <span class="case-tile__cat">02 — Organisation pro. bâtiment</span>
+        <h3>Studio social <i>no-code</i> pour Facebook & Instagram.</h3>
+        <div class="case-tile__bottom">
+          <span class="case-tile__metric"><i>30→3 min</i></span>
+          <span class="case-tile__client">par publication, interface Lovable + IA visuelle</span>
+        </div>
+      </div>
+
+      <div class="case-tile reveal">
+        <span class="case-tile__cat">03 — Foncière régionale</span>
+        <h3>CR, courriers, analyse <i>PLU</i> — la pile IA d'une foncière.</h3>
+        <div class="case-tile__bottom">
+          <span class="case-tile__metric"><i>1h→15min</i></span>
+          <span class="case-tile__client">par compte-rendu, Noota + Gemini Gems</span>
+        </div>
+      </div>
+
+      <div class="case-tile reveal">
+        <span class="case-tile__cat">04 — Cabinet de chasse</span>
+        <h3>Un agent qui qualifie les piges <i>24h/24</i>, CODIR/COMEX uniquement.</h3>
+        <div class="case-tile__bottom">
+          <span class="case-tile__metric"><i>−70%</i></span>
+          <span class="case-tile__client">temps de sourcing, Apify + n8n + Airtable</span>
+        </div>
+      </div>
+
+      <div class="case-tile reveal">
+        <span class="case-tile__cat">05 — Transport sanitaire & funéraire</span>
+        <h3>Refonte numérique d'une PME <i>multi-activités</i> de 48 salariés.</h3>
+        <div class="case-tile__bottom">
+          <span class="case-tile__metric"><i>~700%</i></span>
+          <span class="case-tile__client">ROI 12 mois, Lovable + Supabase + n8n</span>
+        </div>
+      </div>
+
+      <div class="case-tile reveal">
+        <span class="case-tile__cat">06 — Chasse immobilière internationale</span>
+        <h3>Une veille immobilière qui tourne toute la <i>nuit</i>, sur 4 départements.</h3>
+        <div class="case-tile__bottom">
+          <span class="case-tile__metric"><i>364 h/an</i></span>
+          <span class="case-tile__client">économisées par agent, Apify + GPT + PDF auto</span>
+        </div>
+      </div>
+
+      <div class="case-tile reveal" style="grid-column:span 2">
+        <span class="case-tile__cat">08 — TPE génie climatique</span>
+        <h3>App métier <i>sur-mesure</i> pour digitaliser interventions et paperasse.</h3>
+        <div class="case-tile__bottom">
+          <span class="case-tile__metric"><i>−30–40%</i></span>
+          <span class="case-tile__client">temps admin, Lovable + Supabase + n8n</span>
+        </div>
+      </div>
+
+      <div class="case-tile reveal" style="grid-column:span 2">
+        <span class="case-tile__cat">09 — Économie sociale & santé travail</span>
+        <h3>Fichiers clients traités en 2 h <i>au lieu de 2,5 jours</i>.</h3>
+        <div class="case-tile__bottom">
+          <span class="case-tile__metric"><i>×30</i></span>
+          <span class="case-tile__client">sur le client principal, n8n + BI</span>
+        </div>
+      </div>
+
+      <div class="case-tile reveal" style="grid-column:span 2">
+        <span class="case-tile__cat">10 — Audioprothèse multi-centres</span>
+        <h3>Trois centres coordonnés sur <i>Slack</i>, publications préparées 6 mois à l'avance.</h3>
+        <div class="case-tile__bottom">
+          <span class="case-tile__metric"><i>990 h/an</i></span>
+          <span class="case-tile__client">gain organisationnel, Slack + ChatGPT</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:0;padding:36px;border:1px solid var(--ink);border-top:none;background:var(--ink);color:var(--bg);flex-wrap:wrap;gap:24px">
+      <div style="max-width:480px">
+        <span class="case-tile__cat" style="color:var(--acid)">07 — Courtage en énergie B2B</span>
+        <h3 style="font-family:var(--display);font-weight:400;font-size:clamp(28px,3.2vw,44px);line-height:1;letter-spacing:-.02em;margin-top:12px">RAG interne + bot <i style="font-style:italic">Telegram</i> qui score les prospects via Pappers et le BODACC.</h3>
+      </div>
+      <div style="display:flex;gap:32px;align-items:end">
+        <div>
+          <div style="font-family:var(--display);font-style:italic;font-size:56px;line-height:1;color:var(--accent)">−60%</div>
+          <div class="num" style="margin-top:6px;color:var(--acid)">temps d'analyse prospect</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:48px;padding-top:24px;border-top:1px solid var(--ink);flex-wrap:wrap;gap:24px">
+      <p style="font-size:13px;color:var(--ink-3);max-width:640px;line-height:1.5">Vingt cas documentés en 2025/26 — dix <strong style="color:var(--ink);font-weight:500">missions livrées</strong> (avec bilans réels) et dix <strong style="color:var(--ink);font-weight:500">audits flash 2026</strong> (avec feuilles de route et gains projetés). Anonymisation RGPD.</p>
+      <a class="btn btn--ghost" href="cas-usage.html">Lire les 20 cas · filtrer par secteur
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi">
+  <div class="wrap">
+    <div class="testi__head">
+      <div>
+        <span class="num reveal">§ 06 — Voix de la rue</span>
+        <h2 class="reveal">Des dirigeants<br/>qui ne <i>reviendraient</i><br/>pas en arrière.</h2>
+      </div>
+      <p class="why__lead reveal" style="max-width:38ch">Témoignages issus des bilans de mission réels (2025/26). Noms et localisations anonymisés — consentement RGPD recueilli, sources sur demande.</p>
+    </div>
+    <div class="testi__grid">
+      <div class="testi__cell reveal">
+        <blockquote>"Cela nous fait gagner beaucoup de temps. L'équipe fait <i>autre chose</i> pendant que l'outil cherche les biens. On a libéré du temps humain."</blockquote>
+        <div class="testi__who">
+          <div class="testi__avatar">D</div>
+          <div>
+            <div class="testi__name">Dirigeant</div>
+            <div class="testi__role">Chasse immobilière · clientèle internationale</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi__cell reveal">
+        <blockquote>"On va tous gagner du temps en interne — et on va aussi pouvoir <i>vendre une nouvelle fonctionnalité</i> à nos clients. Tout le monde y gagne."</blockquote>
+        <div class="testi__who">
+          <div class="testi__avatar">C</div>
+          <div>
+            <div class="testi__name">Cheffe de projet</div>
+            <div class="testi__role">Économie sociale & solidaire · santé au travail</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi__cell reveal">
+        <blockquote>"Le principal changement, c'est la <i>fluidité</i>. Les informations reviennent mieux du terrain, les documents sont mieux structurés. On dépend moins du papier."</blockquote>
+        <div class="testi__who">
+          <div class="testi__avatar">A</div>
+          <div>
+            <div class="testi__name">Collaboratrice administrative</div>
+            <div class="testi__role">TPE génie climatique · 7 salariés</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi__cell reveal">
+        <blockquote>"Des outils sur mesure, du temps gagné sur l'administratif, un meilleur pilotage. <i>Parfaitement adaptés</i> à notre fonctionnement."</blockquote>
+        <div class="testi__who">
+          <div class="testi__avatar">D</div>
+          <div>
+            <div class="testi__name">Dirigeant</div>
+            <div class="testi__role">Transport sanitaire & funéraire · 48 salariés</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog" id="blog">
+  <div class="wrap">
+    <div class="blog__head">
+      <div>
+        <span class="num reveal">§ 07 — Journal</span>
+        <h2 class="reveal">Ce qu'on apprend,<br/>on l'<i>écrit</i>.</h2>
+      </div>
+      <a href="#" class="btn btn--ghost">Tous les articles</a>
+    </div>
+    <div class="blog__grid">
+      <article class="post reveal" style="cursor:pointer" onclick="window.location.href='journal/120-audits-ia-quick-wins-pme.html'">
+        <div class="post__cover post__cover-1">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><circle cx="50" cy="50" r="30"/><path d="M30 50h40M50 30v40"/></svg>
+        </div>
+        <div class="post__cat">Méthode</div>
+        <h3>120 audits IA plus tard : les 5 <i>quick wins</i> qu'on retrouve dans 80 % des PME.</h3>
+        <div class="post__meta">12 min · 14 mai 2026</div>
+      </article>
+      <article class="post reveal" style="cursor:pointer" onclick="window.location.href='journal/6-audits-6-secteurs-meme-verdict.html'">
+        <div class="post__cover post__cover-2">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><path d="M30 30l-15 20 15 20M70 30l15 20-15 20M55 25L45 75"/></svg>
+        </div>
+        <div class="post__cat">Retours de terrain</div>
+        <h3>Six audits flash IA, six secteurs sans rapport, le <i>même</i> verdict.</h3>
+        <div class="post__meta">9 min · 12 mai 2026</div>
+      </article>
+      <article class="post reveal" style="cursor:pointer" onclick="window.location.href='journal/pharmacie-officine-ia-audience-oubliee.html'">
+        <div class="post__cover post__cover-3">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><circle cx="40" cy="40" r="20"/><path d="M55 55l20 20"/></svg>
+        </div>
+        <div class="post__cat">Sectoriel</div>
+        <h3>Pharmacie d'officine et IA : l'<i>audience</i> qu'on oublie.</h3>
+        <div class="post__meta">11 min · 10 mai 2026</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <span class="num reveal" style="color: var(--accent)">§ 08 — Premier pas</span>
+    <h2 class="reveal" style="margin-top: 20px;">
+      <span class="row">Discutons</span>
+      <span class="row"><span class="acid">trente</span> <i>minutes</i>.</span>
+    </h2>
+    <p class="cta__sub reveal">Diagnostic gratuit, sans engagement. On regarde votre activité, on identifie 1 à 3 chantiers à fort impact, et vous repartez avec une feuille de route — qu'on travaille ensemble ou non.</p>
+    <div class="cta__btns reveal">
+      <a class="btn btn--big btn--diag" href="https://cal.com/nicolas-darcos-uldxct/30min" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>
+        Réserver un créneau
+        <svg class="arrow" width="18" height="18" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+      <a class="btn btn--big btn--audit" href="micro-audit.html">
+        Micro-audit 3 minutes
+        <svg class="arrow" width="18" height="18" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="mailto:bonjour@altos.fr">Nous écrire</a>
+    </div>
+    <div class="cta__details">
+      <span>FR · Toute la France</span>
+      <a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a>
+      <a href="https://www.linkedin.com/in/nicolas-darcos-40283035/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div class="foot__brand">
+        <a href="#" class="logo">ALTOS<i>.</i></a>
+        <p>Groupement d'experts métiers et ambassadeurs IA, au service des TPE et PME françaises.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Automatisation</a></li>
+          <li><a href="#">Vibe coding</a></li>
+          <li><a href="#">Sites internet</a></li>
+          <li><a href="#">SEO local</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#process">Méthode</a></li>
+          <li><a href="#cases">Réalisations</a></li>
+          <li><a href="#ambassadeur">Ambassadeur IA</a></li>
+          <li><a href="#blog">Journal</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Officiel</h4>
+        <ul>
+          <li><a href="https://www.entreprises.gouv.fr/osezlia" target="_blank" rel="noopener">Annuaire « Osez l'IA »</a></li>
+          <li><a href="assets/charte-ambassadeurs-ia.pdf" target="_blank" rel="noopener">Charte Ambassadeur</a></li>
+          <li><a href="https://www.francenum.gouv.fr" target="_blank" rel="noopener">France Num</a></li>
+          <li><a href="https://www.linkedin.com/in/nicolas-darcos-40283035/" target="_blank" rel="noopener">LinkedIn — Nicolas Darcos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span>© 2026 ALTOS — Groupement</span>
+      <span><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in'), i * 50);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal, .reveal-line').forEach(el => io.observe(el));
+
+  // Listen to anim level updates from parent canvas
+  window.addEventListener('message', (e) => {
+    if (e.data && e.data.type === 'set-anim') {
+      document.documentElement.style.setProperty('--anim', e.data.value);
+    }
+  });
+</script>
+<!-- Cal.com embed (popup mode) -->
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "diag30", {origin:"https://cal.com"});
+Cal.ns.diag30("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
+</body>
+</html>

@@ -1,0 +1,456 @@
+Synthèse Audit Flash IA 
+NOM DE L’ENTREPRISE : GRANIE IMMOBILIER
+NUMERO DE DOSSIER : 25-308114
+NOM DU CONSEILLER OPCO : Lydia PUECH
+Durée de l’accompagnement en jours :
+Dates d’intervention
+Signatures
+Dates de RDV
+Entreprise
+Le Cercle des Entrepreneurs
+Réunion de cadrage : 
+25 juillet 2025
+Diagnostic des pratiques : 
+12 septembre 2025
+Préconisations / Plan d’action :
+26 septembre 2025
+Sommaire
+I.Résumé3
+II.Contexte de l’entreprise4
+i.Historique et activité4
+ii.Structure organisationnelle4
+III.Diagnostic des pratiques IA7
+iii.Processus Métier7
+iv.Compétences et ressources10
+v.Données et sécurité11
+vi.Organisation12
+vii.Cadre réglementaire12
+IV.Cas d’usage IA et accompagnement préconisés14
+V.Synthèse et plan d’action18
+Synthèse graphique18
+VI.SWOT19
+VII.Plan d’action détaillé20
+Résumé
+L’entreprise GRANIÉ, acteur immobilier structuré autour de trois agences à Montpellier, dispose d’un socle numérique (Centurynet, Immopen, Outlook) mais repose encore sur des traitements majoritairement manuels. Le dirigeant a engagé une démarche proactive d’intégration de l’IA.
+L’audit a permis d’identifier 5 cas d’usage concrets et prioritaires :
+Traitement automatisé des demandes de location
+→ Réponses automatiques personnalisées selon la disponibilité du bien.
+Recherche IA dans les documents syndic (PV, règlements)
+→ Accès instantané aux informations clés via une interface IA.
+Suivi et relances automatisées des prestataires
+→ Détection d’absence de réponse et relance email automatisée.
+Automatisation de la newsletter client
+→ Génération et envoi mensuel des actualités par segment (transaction, syndic…).
+Production d’articles de blog via IA
+→ Génération régulière de contenus SEO pour améliorer la visibilité.
+Ces usages permettent des gains de temps, une meilleure réactivité et une montée en compétence des équipes sur les outils numériques.
+Contexte de l’entreprise
+Historique et activité
+L’entreprise GRANIÉ est une société familiale fondée en 1980 par Monsieur Granié père, qui a dirigé l’entreprise aux côtés de son épouse pendant 45 ans. Aujourd’hui, la société est toujours marquée par cette culture familiale, avec la sœur du fondateur occupant encore le poste de responsable du service gestion et comptabilité, bien qu’en retraite progressive.
+L’activité de l’entreprise est structurée autour de trois agences implantées à Montpellier :
+Le siège social, qui centralise les activités de location, gestion locative, direction générale et syndic de copropriété ;
+Une agence distincte, située à proximité du siège, dédiée exclusivement à la transaction immobilière ;
+Une troisième agence transactionnelle implantée dans le quartier de Malbosc.
+L’entreprise opère ainsi sur l’ensemble des métiers de l’immobilier : la vente, la location, la gestion locative et le syndic de copropriété.
+Structure organisationnelle
+L’équipe est composée de 35 collaborateurs, dont 2 agents commerciaux. La répartition des effectifs est la suivante :
+Service Transaction
+7 conseillers transaction
+1 alternant transaction
+1 alternante accueil
+1 responsable administrative transaction
+Service Location
+4 conseillers location
+1 assistante location
+1 manager location
+Service Gestion locative
+5 gestionnaires location
+1 responsable gestion et comptabilité gestion
+2 alternants
+Service Syndic de copropriété
+4 gestionnaires de copropriété
+2 comptables copropriété
+Accueil
+1 personne à l’accueil physique du siège
+1 personne à l’accueil physique de l’agence de Malbosc
+Outils numériques et fonctionnement
+Logiciels métiers :
+Centurynet pour les services transaction et location
+Immopen pour les services gestion et syndic
+Bureautique :
+Outlook pour les mails
+Word et Excel
+Autres outils :
+ChatGPT version payante, utilisé par M. Granié et l’agence transaction pour :
+la modification de photos de biens à la vente
+une aide à la rédaction
+Serveur Windows utilisé pour le partage de fichiers et la sauvegarde automatique
+Organisation de la gestion des mails
+M. Granié gère manuellement environ 30 mails par jour, sans système de catégorisation.
+Quelques règles de redirection ou de classement sont en place, mais limitées.
+Chaque site dispose de sa propre adresse mail, et chaque collaborateur a également une adresse individuelle.
+Les demandes commerciales issues du site internet arrivent toutes sur l’adresse générique de l’accueil.
+Les demandes de location sont adressées à la manager du service location, qui les répartit manuellement en fonction du planning du personnel présent.
+Organisation des services
+Le service gestion et syndic missionne des entreprises pour des réparations ou devis, via une demande issue du logiciel métier, transmise par Outlook.
+Il existe un outil de suivi des demandes, mais aucun système de relance automatique n’est mis en place en cas d’absence de réponse de l’entreprise sollicitée.
+Un suivi structuré avec relance automatique est souhaité.
+Suivi de la charge de travail
+M. Granié souhaite pouvoir comptabiliser le nombre d’e-mails reçus et envoyés chaque jour pour chaque adresse de l’entreprise, afin de mieux évaluer la charge de travail de chaque collaborateur.
+Recherche d’informations par les gestionnaires
+Les gestionnaires de copropriété effectuent manuellement des recherches dans les procès-verbaux des assemblées générales ainsi que dans les règlements de copropriété.
+Un outil d’intelligence artificielle, connecté à ces ressources, permettrait de répondre plus rapidement et de gagner du temps.
+Blog et communication
+L’entreprise dispose d’un blog, mais M. Granié ne dispose plus du temps nécessaire pour l’alimenter.
+Il souhaiterait une aide de l’IA pour trouver des sujets et rédiger des articles optimisés SEO.
+Traitement des demandes de location
+Le service location reçoit des demandes liées à des biens vus en ligne sur le site internet, SeLoger ou Bien’Ici.
+Les réponses sont envoyées manuellement par les conseillers, même lorsque le bien n’est plus disponible.
+Une automatisation permettrait de connecter le flux des demandes à la base de données location et de proposer automatiquement d’autres biens disponibles.
+Ressources partagées internes
+Il n’existe pas d’espace partagé permettant de mettre à disposition des ressources pour le personnel.
+M. Granié souhaite mettre en place un outil de type Padlet, qu’il pourrait alimenter via une veille structurée.
+Newsletter
+L’entreprise transmet une newsletter manuellement, dans l’objectif de croiser les informations des trois activités (transaction, gestion locative, syndic).
+Une automatisation de la création et de l’envoi de cette newsletter est souhaitée.
+Diagnostic des pratiques IA
+Processus Métier
+✅ Points forts :
+Utilisation de logiciels métiers spécialisés : Centurynet (transaction, location) et Immopen (gestion locative, syndic)
+Usage ponctuel de ChatGPT version payante (modification photos, rédaction)
+Suivi manuel des demandes de travaux via logiciel métier
+Blog existant, infrastructure en place pour la communication digitale
+Newsletter envoyée à l’ensemble des segments (transaction, gestion, syndic)
+❌ Points de douleur :
+Traitement manuel des demandes de location entrantes, sans lien avec les disponibilités des biens
+Gestion manuelle des relances prestataires (pas de suivi automatique si pas de retour)
+Réponse client peu réactive si le bien n’est plus disponible
+Absence de centralisation documentaire accessible à tous (extranet, intranet, base de ressources)
+Blog non alimenté, faute de temps
+Newsletter conçue et envoyée manuellement
+🔧 Propositions d’amélioration :
+Automatiser les réponses aux demandes de location avec des propositions dynamiques de biens disponibles
+Intégrer un système de relance automatisée pour les prestataires (via Outlook connecté à Make ou Zapier)
+Mettre en place une base de ressources partagée (ex. : Notion, Padlet)
+Générer et publier des contenus blog via IA + calendrier éditorial automatisé
+Mettre en place une automatisation de newsletters personnalisées selon segment client
+Compétences et ressources
+✅ Points forts :
+Présence d’un responsable de gestion expérimenté
+Alternants intégrés dans plusieurs services (accueil, gestion, transaction)
+Une première acculturation à l’IA via ChatGPT, portée par le dirigeant
+❌ Points de douleur :
+Absence de formations régulières sur les outils numériques
+Manque de compétences internes pour déployer des automatisations simples (type Make)
+Pas de budget ni de plan de formation spécifique à la transformation numérique ou à l’IA
+Charge de travail difficile à objectiver et piloter faute d’indicateurs internes
+Pas de pilotage analytique des flux mails ou de la productivité
+🔧 Propositions d’amélioration :
+Former les équipes clés aux outils no-code / IA utiles à leur poste (Make, Notion, ChatGPT, etc.)
+Créer un indicateur de charge de travail basé sur l’analyse des flux de mails (Dashboards)
+Doter l’entreprise d’un référent IA / automatisation, même à temps partiel
+Initier une démarche de cartographie des tâches à automatiser service par service
+Données et sécurité
+✅ Points forts :
+Sauvegardes automatiques via le serveur Windows
+Systèmes de messagerie, fichiers et outils globalement sécurisés
+Respect des bases minimales de protection des données clients
+❌ Points de douleur :
+Aucun tableau de bord ou outil de suivi des flux d’emails ou de performance
+Pas d’analyse des données d’usage, ni de croisement des données clients pour améliorer l’expérience
+Pas d’outil d’analyse documentaire pour les gestionnaires (PV, règlements de copropriété)
+Données non valorisées à des fins décisionnelles
+🔧 Propositions d’amélioration :
+Mettre en place un système de statistiques de messagerie (nombre d’envois, réponses, temps de traitement)
+Intégrer un moteur de recherche IA (local ou cloud) pour interroger les PV et règlements
+Déployer un dashboard de pilotage d’activité à partir des données de gestion et communication
+Organisation
+✅ Points forts :
+Organisation claire par pôles (location, transaction, syndic, gestion)
+Engagement direct du dirigeant dans l’évolution digitale
+Bonne répartition des rôles métiers entre les agences
+❌ Points de douleur :
+Dépendance forte à certaines personnes clés (ex. : manager location, dirigeant)
+Gestion manuelle du tri des mails, sans règles partagées ni automatisation
+Aucune capitalisation collective sur les documents utiles (veille, procédures, ressources partagées)
+Pas de structuration du partage de veille ou d’actualités
+🔧 Propositions d’amélioration :
+Mettre en place des workflows internes automatisés pour réception, dispatch et suivi des demandes
+Créer un espace collaboratif partagé (type Notion, Padlet) mis à jour régulièrement
+Standardiser certains process internes en s’appuyant sur des modèles documentés et des outils simples
+Cadre réglementaire
+✅ Points forts :
+Conformité de base aux obligations RGPD et sécurité des données
+Sensibilisation globale aux enjeux de confidentialité
+❌ Points de douleur :
+Pas de procédures claires pour accompagner l’intégration de nouvelles technologies
+Peu de connaissances internes sur les impacts réglementaires de l’IA ou de l’automatisation
+Aucun appui externe identifié pour suivre les évolutions réglementaires
+Absence de clauses spécifiques sur la conformité dans les contrats fournisseurs
+🔧 Propositions d’amélioration :
+Mettre en place un guide interne simplifié sur les obligations RGPD &amp; IA
+Intégrer des clauses de conformité dans les futurs contrats ou appels d’offres
+Prévoir une veille réglementaire simplifiée, intégrée à l’espace collaboratif
+Cas d’usage IA et accompagnement 
+préconisés
+✅ Cas d’usage 1 : Automatiser le traitement des demandes de location
+🎯 Objectif :
+Envoyer automatiquement une réponse personnalisée au candidat locataire selon la disponibilité du bien, et proposer des alternatives si nécessaire.
+🤝 Accompagnement proposé
+Audit du formulaire de contact/location existant
+Création d’une base dynamique des biens disponibles à la location
+Connexion à Make pour automatiser les réponses en fonction des critères
+Ajout d’une règle de relance automatique en cas de non-réponse sous 48h
+🔄 Processus détaillé :
+Le formulaire de contact (site internet ou plateforme type SeLoger/Bien’ici) génère une demande de location.
+La demande est transmise à Make via un webhook ou une adresse mail de réception dédiée.
+Make extrait les données clés : nom, bien concerné, message, email, etc.
+Il interroge une base de données Notion ou Airtable contenant la liste des biens à louer et leur disponibilité.
+Si le bien est disponible, Make génère une réponse personnalisée confirmant sa disponibilité.
+Si le bien est indisponible, Make interroge la base pour trouver des biens similaires (par budget, surface, localisation).
+Make envoie une réponse automatique par email, rédigée avec l’aide de ChatGPT, intégrant :
+Un message professionnel
+Le lien du bien demandé (si dispo)
+Des propositions alternatives (si non dispo)
+Toutes les demandes sont loggées automatiquement dans une base Notion pour suivi.
+🧰 Outils :
+Make (logique + connexion mail + base)
+Notion ou Airtable (base des biens à louer)
+ChatGPT (génération de texte)
+Webhook ou email trigger
+💥 Impacts attendus
+Gain de temps sur les tâches répétitives
+Meilleure réactivité perçue par le client
+Soulagement de la manager location
+Montée en compétences sur les outils no-code
+⚠️ Points de vigilance
+Mise à jour rigoureuse de la base de biens
+Test approfondi des scénarios pour éviter les erreurs d’envoi
+Accord des plateformes partenaires pour extraction ou lien via webhook
+✅ Cas d’usage 2 : Recherche automatisée dans les PV et règlements de copropriété
+🎯 Objectif :
+Permettre aux gestionnaires de trouver rapidement une clause ou une décision dans les documents sans lecture manuelle.
+🤝 Accompagnement proposé
+Centralisation de tous les documents sur un drive partagé
+Indexation sémantique des documents par outil IA
+Création d’un assistant de recherche (ex : “Quelles décisions concernent les compteurs individuels en 2023 ?”)
+🔄 Processus détaillé :
+Tous les PV d’AG et règlements sont centralisés dans Google Drive ou Dropbox.
+Un index est créé via un outil IA de type Docugami ou moteur sémantique intégré.
+Le gestionnaire interroge une interface (ex : formulaire Notion ou chat IA local) avec une question en langage naturel :
+« Le compteur individuel est-il prévu dans l’immeuble X ? »
+L’outil IA scanne l’ensemble des documents, identifie les passages pertinents, et répond par citation + document source.
+Le gestionnaire peut copier/coller la réponse ou ajouter un commentaire.
+🧰 Outils :
+Drive ou Dropbox (stockage documents)
+ChatGPT via API ou moteur IA local (analyse sémantique)
+Notion (interface de saisie, base de documents)
+Make (pour automatiser la création de l’index à chaque nouveau fichier)
+💥 Impacts attendus
+Réduction drastique du temps de recherche
+Amélioration de la réactivité aux demandes clients
+Valorisation du rôle des gestionnaires
+⚠️ Points de vigilance
+Sensibilité des documents : nécessité d’hébergement sécurisé
+Nécessité d’une phase de formation à l’outil de recherche
+Accès restreint selon les profils utilisateurs
+✅ Cas d’usage 3 : Suivi automatisé des demandes aux prestataires
+🎯 Objectif :
+Relancer automatiquement les prestataires si aucune réponse n’a été donnée dans un délai défini.
+🤝 Accompagnement proposé
+Identification des types de demandes à automatiser
+Définition des délais de relance (48h, 72h…)
+Création d’un tableau de bord partagé avec statut (en attente / relancé / répondu)
+🔄 Processus détaillé :
+Depuis Immopen, un gestionnaire envoie une demande par email à un prestataire via Outlook.
+Une copie ou tag spécifique (ex. : mot-clé “DEMANDE_DEVIS”) déclenche un scénario Make.
+Make enregistre la demande dans Notion avec :
+Nom du prestataire
+Objet
+Date d’envoi
+Make surveille la boîte Outlook (réponses entrantes).
+Si aucune réponse reçue sous X jours, Make envoie une relance automatique :
+« Bonjour, sans réponse de votre part, nous nous permettons de vous relancer au sujet de… »
+Toutes les demandes sont listées dans un tableau de suivi dynamique par statut : en attente / relancé / répondu.
+🧰 Outils :
+Outlook (départ et réception des mails)
+Make (logique + relances)
+Notion (tableau de suivi)
+ChatGPT (texte des relances)
+💥 Impacts attendus
+Meilleur suivi des prestataires
+Moins d’oublis, meilleur service rendu
+Réduction de la charge mentale des gestionnaires
+⚠️ Points de vigilance
+Veiller à ne pas surcharger les prestataires avec des relances excessives
+Bien filtrer les cas qui méritent ou non une relance
+✅ Cas d’usage 4 : Automatisation de la newsletter mensuelle
+🎯 Objectif :
+Générer automatiquement une newsletter personnalisée par segment (transaction, gestion, syndic) à partir d’un contenu structuré.
+🤝 Accompagnement proposé
+Création de 3 segments (transaction, gestion, syndic) dans Brevo
+Mise en place d’un formulaire interne de dépôt d’actualités mensuelles
+Génération automatique de newsletter à partir des contenus + planning de diffusion
+🔄 Processus détaillé :
+Chaque collaborateur dépose une actualité dans Notion (ex : nouveau bien, conseil juridique, actualité syndic…).
+Un tableau contient les segments clients (emails par service concerné).
+Chaque mois, Make :
+Récupère le contenu rédigé
+Assemble un brouillon d’email personnalisé via ChatGPT (selon le segment)
+Génère une newsletter avec Brevo (visuel, blocs dynamiques)
+Le dirigeant ou l’équipe valide le contenu final
+Brevo envoie automatiquement la newsletter à chaque segment
+🧰 Outils :
+Notion (base contenu + segments)
+Make (récupération contenu + déclenchement)
+ChatGPT (génération texte optimisé)
+Brevo (emailing, analytics)
+💥 Impacts attendus
+Gain de temps pour les responsables
+Régularité de publication
+Amélioration de la communication client
+⚠️ Points de vigilance
+Nécessité d’alimenter régulièrement la base de contenu
+Surveillance des taux d’ouverture pour ajuster la stratégie
+✅ Cas d’usage 5 : Génération automatique d’articles SEO pour le blog
+🎯 Objectif :
+Produire chaque mois des articles SEO optimisés sans y consacrer du temps rédactionnel interne.
+🤝 Accompagnement proposé
+Définition d’un calendrier éditorial avec les sujets clés de l’année
+Création de prompts types par thématique
+Formation à la validation et publication rapide d’un article généré
+🔄 Processus détaillé :
+Une liste de sujets est pré-enregistrée dans Notion (ex : “Les charges récupérables”, “Acheter à Montpellier en 2025”…).
+Chaque semaine, Make déclenche :
+Un appel à ChatGPT pour générer un article (~600 mots)
+Une vérification SEO via NeuronWriter ou YourText.Guru
+L’article est stocké dans Notion avec :
+Titre
+Mots-clés
+Version SEO
+CTA et visuel (ajout automatique via Unsplash API si souhaité)
+Après validation, l’article est publié sur le blog (WordPress ou autre) via Make.
+🧰 Outils :
+Notion (calendrier éditorial)
+Make (automatisation des étapes)
+ChatGPT (rédaction)
+NeuronWriter / YourText.Guru (optimisation SEO)
+Unsplash (visuel libre)
+CMS blog ou publication manuelle
+💥 Impacts attendus
+Gain de visibilité naturelle (SEO)
+Positionnement de l’entreprise comme expert immobilier local
+Contenu réutilisable dans les newsletters
+⚠️ Points de vigilance
+Nécessité de validation humaine avant publication
+Cohérence du ton avec l’image de marque de l’entreprise
+Synthèse et plan d’action
+Synthèse graphique
+Culture d’entreprise familiale solide et structure organisationnelle bien établie.
+Présence de logiciels métiers adaptés : Centurynet, Immopen.
+Volonté affirmée du dirigeant d’explorer et de déployer des outils d’IA.
+Utilisation déjà amorcée de ChatGPT dans le service transaction.
+Répartition claire des pôles métier (location, gestion, syndic, transaction).
+Bon niveau de sécurisation des données et infrastructure (serveur avec sauvegarde automatique).
+Faible automatisation des tâches administratives à ce jour.
+Charge de travail non mesurée objectivement (pas de suivi des flux mails ou d’indicateurs).
+Newsletter, blog, relances et tri des demandes entièrement manuels.
+Absence d’espace documentaire partagé structuré entre collaborateurs.
+Manque de formation interne sur les outils IA et no-code.
+Dépendance à certaines personnes clés pour la gestion des flux (ex : manager location).
+Pas de stratégie de transformation numérique formalisée.
+Risque de surcharge ou rejet par les équipes si les outils sont mal introduits (freins au changement).
+Faible capitalisation des connaissances en interne (pas de documentation partagée ni de référent digital).
+Manque de temps disponible pour le dirigeant pour porter seul les projets IA.
+Risques RGPD en cas de mauvaise configuration des outils d’automatisation connectés à des données sensibles.
+Difficulté à maintenir des outils IA si non pris en main collectivement (soutenabilité dans le temps).
+Mise en œuvre rapide de scénarios d’automatisation simples (Make, Notion, Outlook, ChatGPT).
+Valorisation des documents métiers par indexation IA (PV d’AG, règlements de copropriété).
+Gain de temps important sur la relation client (location, transaction) grâce aux réponses automatisées.
+Possibilité d’améliorer le SEO et la notoriété via génération automatique de contenus.
+Amélioration du pilotage interne par la mise en place d’indicateurs d’activité (suivi des mails, relances, etc.).
+Accès possible à des financements (OPCO, subventions) pour la formation et l’équipement.
+Forces
+Faiblesses
+Opportunités
+Menaces
+Interne
+Externe
+Culture d’entreprise familiale solide et structure organisationnelle bien établie.
+Présence de logiciels métiers adaptés : Centurynet, Immopen.
+Volonté affirmée du dirigeant d’explorer et de déployer des outils d’IA.
+Utilisation déjà amorcée de ChatGPT dans le service transaction.
+Répartition claire des pôles métier (location, gestion, syndic, transaction).
+Bon niveau de sécurisation des données et infrastructure (serveur avec sauvegarde automatique).
+Faible automatisation des tâches administratives à ce jour.
+Charge de travail non mesurée objectivement (pas de suivi des flux mails ou d’indicateurs).
+Newsletter, blog, relances et tri des demandes entièrement manuels.
+Absence d’espace documentaire partagé structuré entre collaborateurs.
+Manque de formation interne sur les outils IA et no-code.
+Dépendance à certaines personnes clés pour la gestion des flux (ex : manager location).
+Pas de stratégie de transformation numérique formalisée.
+Risque de surcharge ou rejet par les équipes si les outils sont mal introduits (freins au changement).
+Faible capitalisation des connaissances en interne (pas de documentation partagée ni de référent digital).
+Manque de temps disponible pour le dirigeant pour porter seul les projets IA.
+Risques RGPD en cas de mauvaise configuration des outils d’automatisation connectés à des données sensibles.
+Difficulté à maintenir des outils IA si non pris en main collectivement (soutenabilité dans le temps).
+Mise en œuvre rapide de scénarios d’automatisation simples (Make, Notion, Outlook, ChatGPT).
+Valorisation des documents métiers par indexation IA (PV d’AG, règlements de copropriété).
+Gain de temps important sur la relation client (location, transaction) grâce aux réponses automatisées.
+Possibilité d’améliorer le SEO et la notoriété via génération automatique de contenus.
+Amélioration du pilotage interne par la mise en place d’indicateurs d’activité (suivi des mails, relances, etc.).
+Accès possible à des financements (OPCO, subventions) pour la formation et l’équipement.
+Forces
+Faiblesses
+Opportunités
+Menaces
+Interne
+Externe
+Plan d’action détaillé 
+PLAN D'ACTION
+Projet Axes d’actions
+Priorité
+Action/étapes
+Description
+Calendrier prévisionnel
+Pilote/référent
+Livrables
+Ressources externes / internes
+Communication
+Moyenne
+Automatiser la newsletter mensuelle
+Structurer les contenus dans Notion, générer les emails avec ChatGPT et envoyer via Brevo.
+Mois 1
+M. Granié
+Campagne mensuelle automatisée
+Consultant IA / contributeurs internes
+Moyenne
+Relancer le blog via génération automatique de contenus SEO
+Planifier les sujets, générer les articles avec ChatGPT, les optimiser avec NeuronWriter et les publier.
+Mois 1
+M. Granié
+4 articles SEO publiés
+Consultant IA / rédacteur interne
+Processus métier
+Haute
+Automatiser le traitement des demandes de location
+Mettre en place un scénario Make connecté au site et aux plateformes pour répondre automatiquement selon la disponibilité des biens.
+Mois 2
+Manager location + M. Granié
+Scénario opérationnel + base des biens à jour + mails modèles
+Consultant IA / équipe location
+Haute
+Mettre en place un moteur de recherche IA pour les documents syndic
+Indexer les PV et règlements pour permettre une recherche rapide via interface ChatGPT ou moteur local.
+Mois 3
+Responsable syndic
+Moteur de recherche fonctionnel avec accès sécurisé
+Consultant IA / gestionnaires de copropriété
+Organisationnel / sécurité
+Moyenne
+Suivre automatiquement les demandes aux prestataires
+Créer une base Notion de suivi + scénario de relance automatique avec Make et Outlook.
+Mois 2
+Responsable gestion
+Tableau de suivi + mails automatisés
+Consultant IA / équipe gestion
