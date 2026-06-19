@@ -12,7 +12,8 @@
     "db:migrate:prod": "node dist/db/migrate.js",
     "db:cleanup-test-data": "tsx src/db/cleanup-test-data.ts",
     "admin:create": "tsx src/admin/create-user.ts",
-    "test:smoke": "tsx src/test/smoke.ts"
+    "test:smoke": "tsx src/test/smoke.ts",
+    "test:scoring": "tsx src/test/micro-audit-scoring.ts"
   },
   "dependencies": {
     "@fastify/cors": "^11.0.0",

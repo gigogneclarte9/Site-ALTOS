@@ -1,4 +1,4 @@
-/* ─────────────────────────────────────────────
+﻿/* ─────────────────────────────────────────────
    ALTOS · Micro-audit 3 minutes
    10 questions → bilan express + PDF
    ───────────────────────────────────────────── */
@@ -18,10 +18,10 @@ const QUESTIONS = [
     title: "Combien d'heures par semaine votre équipe passe-t-elle sur des <i>tâches administratives répétitives</i> ?",
     hint: "Relances, ressaisies, exports, mises à jour de tableurs, reporting manuel. Comptez large : ce qui revient chaque semaine.",
     options: [
-      { label: "Moins de 5 h", score: 0 },
-      { label: "Entre 5 et 15 h", score: 1 },
-      { label: "Entre 15 et 30 h", score: 2 },
-      { label: "Plus de 30 h", small: "(le sujet vous étouffe)", score: 3 },
+      { label: "Moins de 5 h" },
+      { label: "Entre 5 et 15 h" },
+      { label: "Entre 15 et 30 h" },
+      { label: "Plus de 30 h", small: "(le sujet vous étouffe)" },
     ],
     axis: 'admin',
   },
@@ -31,10 +31,10 @@ const QUESTIONS = [
     title: "À quelle fréquence votre équipe doit-elle <i>ressaisir les mêmes données</i> dans plusieurs outils ?",
     hint: "Devis dans un outil, facture dans un autre, CRM à mettre à jour à la main, exports Excel pour la compta...",
     options: [
-      { label: "Jamais ou presque", score: 0 },
-      { label: "Occasionnellement", score: 1 },
-      { label: "Toutes les semaines", score: 2 },
-      { label: "Tous les jours", small: "(plusieurs fois par jour)", score: 3 },
+      { label: "Jamais ou presque" },
+      { label: "Occasionnellement" },
+      { label: "Toutes les semaines" },
+      { label: "Tous les jours", small: "(plusieurs fois par jour)" },
     ],
     axis: 'admin',
   },
@@ -44,10 +44,10 @@ const QUESTIONS = [
     title: "Vos données <i>clients & commerciales</i> sont-elles centralisées dans un outil unique ?",
     hint: "Un seul endroit qui fait foi pour les contacts, l'historique, les opportunités, le pipeline...",
     options: [
-      { label: "Oui, tout est dans un CRM unique", score: 0 },
-      { label: "Réparties entre 2-3 outils connectés", score: 1 },
-      { label: "Surtout Excel et boîtes mail", score: 2 },
-      { label: "Aucun outil dédié", small: "(la mémoire, les fichiers, le téléphone)", score: 3 },
+      { label: "Oui, tout est dans un CRM unique" },
+      { label: "Réparties entre 2-3 outils connectés" },
+      { label: "Surtout Excel et boîtes mail" },
+      { label: "Aucun outil dédié", small: "(la mémoire, les fichiers, le téléphone)" },
     ],
     axis: 'data',
   },
@@ -57,10 +57,10 @@ const QUESTIONS = [
     title: "Disposez-vous d'un <i>tableau de bord temps réel</i> (CA, marge, trésorerie, KPI métier) ?",
     hint: "Un dashboard que vous consultez quand vous voulez, et qui se met à jour sans intervention humaine.",
     options: [
-      { label: "Oui, à jour en continu", score: 0 },
-      { label: "Construit à la main chaque mois", score: 1 },
-      { label: "Reporting ponctuel à la demande", score: 2 },
-      { label: "Aucun — je pilote au feeling", score: 3 },
+      { label: "Oui, à jour en continu" },
+      { label: "Construit à la main chaque mois" },
+      { label: "Reporting ponctuel à la demande" },
+      { label: "Aucun — je pilote au feeling" },
     ],
     axis: 'data',
   },
@@ -70,10 +70,10 @@ const QUESTIONS = [
     title: "Comment <i>qualifiez-vous vos prospects</i> aujourd'hui ?",
     hint: "Sourcing, scoring, premier contact, relances. À quel point ces étapes sont-elles automatisées ?",
     options: [
-      { label: "Sourcing & qualification 100 % manuels", score: 3 },
-      { label: "Un mix manuel + quelques outils", score: 2 },
-      { label: "Une partie est automatisée", score: 1 },
-      { label: "Pipeline largement automatisé", small: "(scoring, relances, enrichissement)", score: 0 },
+      { label: "Sourcing & qualification 100 % manuels" },
+      { label: "Un mix manuel + quelques outils" },
+      { label: "Une partie est automatisée" },
+      { label: "Pipeline largement automatisé", small: "(scoring, relances, enrichissement)" },
     ],
     axis: 'commercial',
   },
@@ -83,10 +83,10 @@ const QUESTIONS = [
     title: "Sur la <i>production de contenus</i> (réseaux sociaux, newsletter, site)...",
     hint: "Régularité, organisation, autonomie de l'équipe à produire et publier.",
     options: [
-      { label: "On publie régulièrement, process huilé", score: 0 },
-      { label: "Quand on a le temps — irrégulier", score: 2 },
-      { label: "Un freelance ou une agence s'en occupe", score: 1 },
-      { label: "On ne publie pas / plus", small: "(faute de temps ou de ligne éditoriale)", score: 3 },
+      { label: "On publie régulièrement, process huilé" },
+      { label: "Quand on a le temps — irrégulier" },
+      { label: "Un freelance ou une agence s'en occupe" },
+      { label: "On ne publie pas / plus", small: "(faute de temps ou de ligne éditoriale)" },
     ],
     axis: 'commercial',
   },
@@ -96,10 +96,10 @@ const QUESTIONS = [
     title: "Vos comptes rendus, courriers et <i>synthèses de documents</i> sont produits...",
     hint: "Réunions, mails clients, analyses de devis, lecture de PLU ou de contrats, rédaction de notes internes...",
     options: [
-      { label: "À la main par les équipes", score: 3 },
-      { label: "Avec quelques modèles Word", score: 2 },
-      { label: "Avec une transcription IA ou Notion AI", score: 1 },
-      { label: "Workflow IA dédié déjà en place", score: 0 },
+      { label: "À la main par les équipes" },
+      { label: "Avec quelques modèles Word" },
+      { label: "Avec une transcription IA ou Notion AI" },
+      { label: "Workflow IA dédié déjà en place" },
     ],
     axis: 'documents',
   },
@@ -109,10 +109,10 @@ const QUESTIONS = [
     title: "Où en êtes-vous avec l'<i>IA</i> (ChatGPT, Copilot, agents...) ?",
     hint: "Usage réel en production, pas juste curiosité personnelle.",
     options: [
-      { label: "Jamais testé", score: 3 },
-      { label: "Quelques essais individuels", score: 2 },
-      { label: "Déployé sur un cas précis", score: 1 },
-      { label: "Plusieurs cas d'usage en production", score: 0 },
+      { label: "Jamais testé" },
+      { label: "Quelques essais individuels" },
+      { label: "Déployé sur un cas précis" },
+      { label: "Plusieurs cas d'usage en production" },
     ],
     axis: 'ia',
   },
@@ -122,11 +122,11 @@ const QUESTIONS = [
     title: "Quel est le <i>frein principal</i> à l'automatisation chez vous ?",
     hint: "Soyez honnête — ce qui bloque vraiment dans la pratique.",
     options: [
-      { label: "Le temps : on n'arrive pas à s'y mettre", score: 3 },
-      { label: "La compétence : personne en interne", score: 3 },
-      { label: "Le coût : on hésite à investir", score: 2 },
-      { label: "L'utilité : pas sûr du ROI", score: 2 },
-      { label: "Le RGPD / la sécurité des données", score: 1 },
+      { label: "Le temps : on n'arrive pas à s'y mettre" },
+      { label: "La compétence : personne en interne" },
+      { label: "Le coût : on hésite à investir" },
+      { label: "L'utilité : pas sûr du ROI" },
+      { label: "Le RGPD / la sécurité des données" },
     ],
     axis: 'blocker',
   },
@@ -136,10 +136,10 @@ const QUESTIONS = [
     title: "À quel point votre <i>dirigeant·e</i> ressent un goulot d'étranglement opérationnel ?",
     hint: "Sentiment quotidien : journée fragmentée, sujets repoussés, fatigue décisionnelle.",
     options: [
-      { label: "Faible — on tient bien", score: 0 },
-      { label: "Modéré — gérable", score: 1 },
-      { label: "Important — ça pèse", score: 2 },
-      { label: "Critique — étouffement quotidien", score: 3 },
+      { label: "Faible — on tient bien" },
+      { label: "Modéré — gérable" },
+      { label: "Important — ça pèse" },
+      { label: "Critique — étouffement quotidien" },
     ],
     axis: 'pain',
   },
@@ -149,7 +149,7 @@ const TOTAL_QUESTIONS = QUESTIONS.length;
 const TOTAL_STEPS = TOTAL_QUESTIONS + 1; // + contact form
 
 const state = {
-  answers: new Array(TOTAL_QUESTIONS).fill(null), // store score per question
+  answers: new Array(TOTAL_QUESTIONS).fill(null),
   current: 0,
   contact: { firstName: '', lastName: '', email: '', phone: '' },
 };
@@ -182,14 +182,13 @@ QUESTIONS.forEach((q, i) => {
     const btn = document.createElement('button');
     btn.className = 'opt';
     btn.type = 'button';
-    btn.dataset.score = opt.score;
     btn.dataset.optIdx = oi;
     btn.innerHTML = `
       <span class="opt__num">${String.fromCharCode(65 + oi)}</span>
       <span class="opt__label">${opt.label}${opt.small ? `<small>${opt.small}</small>` : ''}</span>
       <svg class="opt__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
     `;
-    btn.addEventListener('click', () => selectOption(i, oi, opt.score));
+    btn.addEventListener('click', () => selectOption(i, oi));
     optsHost.appendChild(btn);
   });
   step.querySelector('[data-action="prev"]').addEventListener('click', () => go(i - 1));
@@ -240,8 +239,8 @@ contactStep.querySelector('[data-action="submit"]').addEventListener('click', su
 stepsEl.appendChild(contactStep);
 
 /* ─── INTERACTIONS ─────────────────────────── */
-function selectOption(qIdx, oIdx, score) {
-  state.answers[qIdx] = { optIdx: oIdx, score };
+function selectOption(qIdx, oIdx) {
+  state.answers[qIdx] = { optIdx: oIdx };
   const stepEl = document.querySelector(`.step[data-idx="${qIdx}"]`);
   stepEl.querySelectorAll('.opt').forEach(b => b.classList.remove('selected'));
   stepEl.querySelectorAll('.opt')[oIdx].classList.add('selected');
@@ -290,8 +289,7 @@ async function submitContact() {
     phone: ph.value.trim(),
   };
 
-  const summary = buildBilanSummary();
-  const payload = buildAuditPayload(summary);
+  const payload = buildAuditPayload();
 
   try {
     if (submitBtn) {
@@ -301,7 +299,7 @@ async function submitContact() {
     }
 
     state.auditSubmission = await submitMicroAudit(payload);
-    state.bilan = summary;
+    state.bilan = buildBilanFromApiResult(state.auditSubmission.result);
   } catch (error) {
     console.error(error);
     alert("Impossible d'enregistrer le micro-audit pour le moment. Veuillez reessayer dans quelques instants.");
@@ -316,133 +314,44 @@ async function submitContact() {
   revealBilan();
 }
 
-/* ─── SCORING ─────────────────────────────── */
-function computeScore() {
-  const axes = { admin: 0, data: 0, commercial: 0, documents: 0, ia: 0, pain: 0, blocker: 0 };
-  let total = 0;
-  state.answers.forEach((a, i) => {
-    if (!a) return;
-    total += a.score;
-    const axis = QUESTIONS[i].axis;
-    axes[axis] = (axes[axis] || 0) + a.score;
-  });
-  // Profile: highest axis among actionable ones
-  const actionable = ['admin', 'data', 'commercial', 'documents'];
-  let topAxis = actionable[0], topVal = -1;
-  actionable.forEach(k => { if (axes[k] > topVal) { topAxis = k; topVal = axes[k]; } });
-  return { total, axes, topAxis };
-}
-
-const PROFILES = {
-  admin:      { name: "Écrasé par l'administratif",       short: "Profil Admin" },
-  data:       { name: "Pilotage à l'aveugle",             short: "Profil Données" },
-  commercial: { name: "Moteur commercial à friction",     short: "Profil Commercial" },
-  documents:  { name: "Surcharge documentaire",           short: "Profil Documents" },
-};
-
-const QUICKWIN_LIB = {
-  admin: {
-    title: "Automatiser les tâches admin & doubles saisies",
-    desc: "Connecter vos outils (CRM, compta, planning) via n8n pour supprimer les ressaisies. Cible : relances devis, exports comptables, suivi de planning, rapprochement bancaire.",
-    stack: "n8n · Airtable · Looker Studio",
-    gain: "8–12 h / mois récupérées",
-  },
-  data: {
-    title: "Centraliser & visualiser les données clés",
-    desc: "Mise en place d'un hub de données (Supabase, Airtable ou Sheets connecté) et d'un tableau de bord temps réel sur CA, marge, trésorerie et indicateurs métier critiques.",
-    stack: "Airtable / Supabase · Looker Studio · n8n",
-    gain: "Décisions x2 plus rapides",
-  },
-  commercial: {
-    title: "Agent IA de qualification commerciale",
-    desc: "Scraping ciblé + scoring sémantique des prospects, enrichissement automatique, alertes Telegram / Slack. Le commercial reçoit des opportunités qualifiées, plus du sourcing à faire.",
-    stack: "Apify · n8n · ChatGPT · Airtable",
-    gain: "−60 à −70 % temps sourcing",
-  },
-  documents: {
-    title: "Studio IA pour comptes rendus & synthèses",
-    desc: "Transcription automatique des réunions, génération de comptes rendus structurés, analyse rapide de documents complexes (devis, contrats, PLU, RGPD).",
-    stack: "Noota · Gemini Gems · n8n · OpenAI",
-    gain: "1h → 15 min par CR",
-  },
-  ia: {
-    title: "Acculturation IA + premier cas d'usage",
-    desc: "Atelier de cadrage 1 jour + déploiement d'un premier assistant IA métier (mails, rédaction, recherche interne). Transfert d'autonomie complet à l'équipe.",
-    stack: "ChatGPT Team · Claude · Gems · prompts métier",
-    gain: "Maturité IA en 4 semaines",
-  },
-  content: {
-    title: "Studio social no-code (multi-canal)",
-    desc: "Interface de génération + planification de contenus Meta / LinkedIn / Newsletter. Une personne non technique pilote toute la production hebdomadaire.",
-    stack: "Lovable · Claude / GPT · Buffer / Meta API",
-    gain: "30 min → 3 min par publication",
-  },
-};
-
-function buildBilanSummary() {
-  const { total, axes, topAxis } = computeScore();
-  const hoursPerWeek = Math.round(total * 0.8);
-  let roi = "+150 à +300 %";
-  if (total >= 18) roi = "+400 à +700 %";
-  else if (total >= 12) roi = "+250 à +450 %";
-
-  const picks = [];
-  picks.push(QUICKWIN_LIB[topAxis]);
-
-  if (state.answers[5] && state.answers[5].score >= 2 && topAxis !== 'commercial') {
-    picks.push(QUICKWIN_LIB.content);
-  } else {
-    const ordered = ['admin', 'data', 'commercial', 'documents']
-      .filter(k => k !== topAxis)
-      .sort((a, b) => (axes[b] || 0) - (axes[a] || 0));
-    picks.push(QUICKWIN_LIB[ordered[0]]);
-  }
-
-  if (state.answers[7] && state.answers[7].score >= 2) {
-    picks.push(QUICKWIN_LIB.ia);
-  } else {
-    const remaining = ['admin', 'data', 'commercial', 'documents']
-      .filter(k => !picks.some(p => p === QUICKWIN_LIB[k]))
-      .sort((a, b) => (axes[b] || 0) - (axes[a] || 0));
-    if (remaining[0]) picks.push(QUICKWIN_LIB[remaining[0]]);
-  }
-
-  return { total, axes, topAxis, picks: picks.slice(0, 3), hoursPerWeek, roi };
-}
-
-function buildAuditPayload(summary) {
+function buildAuditPayload() {
   return {
     contact: state.contact,
     consentAccepted: true,
     consentText: CONSENT_TEXT,
     answers: state.answers.map((answer, index) => {
       const question = QUESTIONS[index];
-      const option = question.options[answer.optIdx];
       return {
         questionId: question.id,
         optionIndex: answer.optIdx,
-        score: answer.score,
-        label: option.label,
-        axis: question.axis,
       };
     }),
-    score: {
-      total: summary.total,
-      max: 30,
-      axes: summary.axes,
-      topAxis: summary.topAxis,
-    },
-    recommendations: summary.picks.map((pick) => ({
-      title: pick.title,
-      desc: pick.desc,
-      stack: pick.stack,
-      gain: pick.gain,
-    })),
-    roi: {
-      label: summary.roi,
-      hoursPerWeek: summary.hoursPerWeek,
-    },
     source: 'micro_audit_web',
+  };
+}
+
+function buildBilanFromApiResult(result) {
+  if (!result || !Array.isArray(result.picks)) {
+    throw new Error('Micro-audit API response is missing computed result.');
+  }
+
+  return {
+    total: Number.isFinite(result.total) ? result.total : 0,
+    axes: result.axes || {},
+    topAxis: result.topAxis || 'admin',
+    profileName: result.profileName || result.topAxis || 'Profil à qualifier',
+    picks: result.picks.map((pick) => ({
+      title: pick.title,
+      desc: pick.desc || pick.description || '',
+      stack: pick.stack || 'À cadrer',
+      gain: pick.gain || 'Gain estimé',
+    })),
+    hoursPerWeek: Number.isFinite(result.hoursPerWeek)
+      ? result.hoursPerWeek
+      : 0,
+    roi: result.roi || 'À qualifier',
+    level: result.level,
+    scoringVersion: result.scoringVersion,
   };
 }
 
@@ -472,7 +381,8 @@ function resolveApiUrl(path) {
 
 /* ─── REVEAL BILAN ─────────────────────────── */
 function revealBilan() {
-  const summary = state.bilan || buildBilanSummary();
+  const summary = state.bilan;
+  if (!summary) return;
   const { total, axes, topAxis, picks, hoursPerWeek, roi } = summary;
   state.bilan = summary;
 
@@ -484,7 +394,7 @@ function revealBilan() {
 
   // Score & profile
   document.getElementById('scoreVal').textContent = total;
-  document.getElementById('profileName').textContent = PROFILES[topAxis].name;
+  document.getElementById('profileName').textContent = summary.profileName || topAxis;
   document.getElementById('bilanName').textContent = `${state.contact.firstName} ${state.contact.lastName}`;
 
   // Estimate
@@ -554,213 +464,7 @@ function downloadPdf() {
     return;
   }
 
-  generatePdf();
-}
-
-function generatePdf() {
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF({ unit: 'mm', format: 'a4' });
-  const W = 210, H = 297;
-  let y = 0;
-
-  // ── COVER STRIP ──
-  doc.setFillColor(10, 10, 10);
-  doc.rect(0, 0, W, 95, 'F');
-
-  doc.setTextColor(255, 91, 20);
-  doc.setFont('helvetica', 'bold');
-  doc.setFontSize(9);
-  doc.text('ALTOS · MICRO-AUDIT 3 MIN · BILAN EXPRESS', 16, 16);
-
-  doc.setTextColor(255, 255, 255);
-  doc.setFont('times', 'normal');
-  doc.setFontSize(34);
-  const titleLines = doc.splitTextToSize('Vos gisements d\u2019automatisation identifiés.', W - 32);
-  doc.text(titleLines, 16, 38);
-
-  doc.setFontSize(10);
-  doc.setTextColor(217, 255, 60);
-  doc.text(`Établi pour ${state.contact.firstName} ${state.contact.lastName}`, 16, 78);
-  doc.setTextColor(180, 180, 180);
-  doc.setFontSize(8);
-  const dateStr = new Date().toLocaleDateString('fr-FR', { day: '2-digit', month: 'long', year: 'numeric' });
-  doc.text(`${dateStr}  ·  ${state.contact.email}  ·  ${state.contact.phone}`, 16, 86);
-
-  y = 110;
-
-  // ── SCORE CARD ──
-  doc.setDrawColor(10, 10, 10);
-  doc.setLineWidth(0.4);
-  doc.rect(16, y, 80, 56);
-
-  doc.setTextColor(120, 120, 120);
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(7);
-  doc.text('SCORE D\u2019OPPORTUNITÉ', 20, y + 7);
-
-  doc.setTextColor(255, 91, 20);
-  doc.setFont('times', 'italic');
-  doc.setFontSize(58);
-  doc.text(String(state.bilan.total), 20, y + 38);
-  doc.setFontSize(14);
-  doc.setTextColor(120, 120, 120);
-  doc.setFont('helvetica', 'normal');
-  doc.text(' / 30', 60, y + 38);
-
-  doc.setTextColor(10, 10, 10);
-  doc.setFont('times', 'normal');
-  doc.setFontSize(11);
-  doc.text(PROFILES[state.bilan.topAxis].name, 20, y + 50);
-
-  // ── ESTIMATE BOX ──
-  doc.rect(100, y, 94, 56);
-  doc.setTextColor(120, 120, 120);
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(7);
-  doc.text('GAIN POTENTIEL ESTIMÉ', 104, y + 7);
-
-  doc.setTextColor(10, 10, 10);
-  doc.setFont('times', 'italic');
-  doc.setFontSize(20);
-  doc.text(`~${state.bilan.hoursPerWeek} h / semaine`, 104, y + 22);
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(9);
-  doc.setTextColor(100, 100, 100);
-  doc.text('récupérables sur les 12 prochains mois', 104, y + 30);
-
-  doc.setFontSize(7);
-  doc.setTextColor(120, 120, 120);
-  doc.text('ROI TYPIQUE (MISSIONS ÉQUIVALENTES)', 104, y + 42);
-  doc.setFont('times', 'italic');
-  doc.setFontSize(14);
-  doc.setTextColor(255, 91, 20);
-  doc.text(state.bilan.roi, 104, y + 52);
-
-  y += 70;
-
-  // ── HEATMAP ──
-  doc.setTextColor(255, 91, 20);
-  doc.setFont('helvetica', 'bold');
-  doc.setFontSize(8);
-  doc.text('§ 01 — CARTOGRAPHIE DES FRICTIONS', 16, y);
-  doc.setTextColor(10, 10, 10);
-  doc.setFont('times', 'normal');
-  doc.setFontSize(16);
-  doc.text('Vos zones de friction.', 16, y + 8);
-
-  y += 16;
-  const heatRows = [
-    { axis: 'admin', label: 'Tâches admin & doubles saisies', max: 6 },
-    { axis: 'data', label: 'Centralisation & pilotage', max: 6 },
-    { axis: 'commercial', label: 'Commercial & contenus', max: 6 },
-    { axis: 'documents', label: 'Synthèses documentaires', max: 3 },
-    { axis: 'ia', label: 'Maturité IA actuelle', max: 3 },
-    { axis: 'pain', label: 'Pression dirigeant', max: 3 },
-  ];
-  heatRows.forEach(r => {
-    const val = state.bilan.axes[r.axis] || 0;
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(9);
-    doc.setTextColor(40, 40, 40);
-    doc.text(r.label, 16, y + 4);
-
-    const startX = 110, cellW = 11, cellH = 5, gap = 1.5;
-    for (let i = 0; i < r.max; i++) {
-      const filled = i < val;
-      let color = [226, 226, 226];
-      if (filled) {
-        const pct = (i + 1) / r.max;
-        if (pct <= 0.34) color = [217, 255, 60];
-        else if (pct <= 0.67) color = [255, 206, 71];
-        else color = [255, 91, 20];
-      }
-      doc.setFillColor(...color);
-      doc.rect(startX + i * (cellW + gap), y, cellW, cellH, 'F');
-    }
-    y += 8;
-  });
-
-  y += 6;
-
-  // ── QUICK WINS ──
-  if (y > 240) { doc.addPage(); y = 20; }
-  doc.setTextColor(255, 91, 20);
-  doc.setFont('helvetica', 'bold');
-  doc.setFontSize(8);
-  doc.text('§ 02 — RECOMMANDATIONS', 16, y);
-  doc.setTextColor(10, 10, 10);
-  doc.setFont('times', 'normal');
-  doc.setFontSize(16);
-  doc.text('Trois quick wins prioritaires.', 16, y + 8);
-  y += 16;
-
-  state.bilan.picks.forEach((q, i) => {
-    if (y > 250) { doc.addPage(); y = 20; }
-    doc.setDrawColor(10, 10, 10);
-    doc.setLineWidth(0.3);
-    doc.rect(16, y, W - 32, 38);
-
-    doc.setTextColor(255, 91, 20);
-    doc.setFont('times', 'italic');
-    doc.setFontSize(22);
-    doc.text(`0${i + 1}`, 20, y + 14);
-
-    doc.setTextColor(10, 10, 10);
-    doc.setFont('times', 'normal');
-    doc.setFontSize(13);
-    doc.text(q.title, 38, y + 9);
-
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(8.5);
-    doc.setTextColor(60, 60, 60);
-    const descLines = doc.splitTextToSize(q.desc, W - 60);
-    doc.text(descLines, 38, y + 16);
-
-    doc.setFontSize(7);
-    doc.setTextColor(120, 120, 120);
-    doc.text(`STACK — ${q.stack}`, 38, y + 33);
-
-    doc.setFont('times', 'italic');
-    doc.setFontSize(10);
-    doc.setTextColor(10, 10, 10);
-    const gainText = q.gain;
-    const gainW = doc.getTextWidth(gainText);
-    doc.text(gainText, W - 16 - gainW, y + 33);
-
-    y += 44;
-  });
-
-  // ── CTA FOOTER ──
-  if (y > 250) { doc.addPage(); y = 20; }
-  y += 4;
-  doc.setFillColor(10, 10, 10);
-  doc.rect(16, y, W - 32, 32, 'F');
-  doc.setTextColor(255, 255, 255);
-  doc.setFont('times', 'normal');
-  doc.setFontSize(14);
-  doc.text('Discutons trente minutes.', 22, y + 13);
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(8.5);
-  doc.setTextColor(200, 200, 200);
-  doc.text('Diagnostic offert, sans engagement. cal.com/nicolas-darcos-uldxct/30min', 22, y + 22);
-  doc.setTextColor(217, 255, 60);
-  doc.setFont('helvetica', 'bold');
-  doc.setFontSize(8);
-  doc.text('BONJOUR@ALTOS.FR', W - 22 - doc.getTextWidth('BONJOUR@ALTOS.FR'), y + 22);
-
-  // ── PAGE FOOTER ──
-  const pages = doc.internal.getNumberOfPages();
-  for (let p = 1; p <= pages; p++) {
-    doc.setPage(p);
-    doc.setFontSize(7);
-    doc.setTextColor(120, 120, 120);
-    doc.setFont('helvetica', 'normal');
-    doc.text(`ALTOS · Groupement d\u2019experts \u2014 Bilan généré le ${dateStr}`, 16, H - 8);
-    doc.text(`${p} / ${pages}`, W - 16 - doc.getTextWidth(`${p} / ${pages}`), H - 8);
-  }
-
-  const safeName = `${state.contact.lastName}-${state.contact.firstName}`.replace(/[^a-z0-9\-]/gi, '').toLowerCase();
-  doc.save(`altos-bilan-${safeName || 'audit'}.pdf`);
+  alert("Le PDF serveur n'est pas encore disponible. Veuillez reessayer dans quelques instants.");
 }
 
 /* ─── INIT ─────────────────────────────────── */

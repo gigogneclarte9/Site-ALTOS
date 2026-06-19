@@ -4,13 +4,26 @@ Toutes les evolutions notables du site ALTOS sont suivies ici.
 
 Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste en pre-production.
 
-## [Non publie]
+## [0.4.2] - 2026-06-19
 
 ### Ajoute
 
 - Regle de deploiement documentee : code et contenus versionnes depuis Git uniquement.
 - Specification du futur moteur de scoring/recommandations micro-audit, avec contrainte de ne pas changer le rendu visuel du site ni du PDF.
 - README racine ajoute pour documenter le projet, la stack, les `.env`, le lancement local et le deploiement.
+- Moteur serveur de scoring/recommandations micro-audit avec version dediee, seuils d'opportunite, cas faible friction et recommandations conditionnelles.
+- Test de differenciation du scoring micro-audit couvrant faible friction, admin, data, commercial et maturite IA faible.
+
+### Change
+
+- L'API recalcule maintenant le score, les axes, le profil, le ROI et les recommandations a partir des reponses, au lieu de faire confiance au score envoye par le navigateur.
+- Le resultat public conserve le meme rendu visuel, mais utilise le bilan recalcule par l'API apres soumission.
+- Le navigateur n'envoie plus que les coordonnees, le consentement et les reponses ; `score`, `recommendations` et `roi` ne sont plus acceptes en entree API.
+
+### Supprime
+
+- Ancien moteur de scoring/recommandations cote navigateur.
+- Ancien generateur PDF navigateur de secours et chargement CDN `jsPDF` sur `micro-audit.html`.
 
 ## [0.4.1] - 2026-06-19
 

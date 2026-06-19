@@ -65,7 +65,7 @@ Le resultat doit permettre de repondre a trois questions :
 - Des parcours differents peuvent produire des bilans tres proches.
 - Un score faible peut quand meme produire des recommandations ambitieuses.
 - Les recommandations secondaires sont parfois choisies par defaut, pas par signal fort.
-- Le serveur ne recalcule pas encore le score : il fait confiance au payload navigateur.
+- Avant reprise, le serveur ne recalculait pas le score et faisait confiance au payload navigateur.
 
 ## Principes cibles
 
@@ -182,7 +182,7 @@ La version du moteur permettra de savoir avec quelle logique un micro-audit anci
 
 La cible est de recalculer le score et les recommandations cote serveur a partir des reponses.
 
-Le navigateur peut continuer a afficher le resultat, mais le serveur doit devenir la source de verite au moment de la soumission.
+Le serveur doit etre la source de verite au moment de la soumission.
 
 Objectifs :
 
@@ -259,4 +259,3 @@ Attendu :
 - Back-office editorial.
 - Connexion a un outil tiers.
 - Utilisation de n8n ou d'un SaaS externe comme source de verite.
-

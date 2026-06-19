@@ -50,27 +50,45 @@ async function main(): Promise<void> {
       answers: [
         {
           questionId: 'admin_hours',
-          optionIndex: 2,
-          score: 2,
-          label: 'Entre 15 et 30 h',
-          axis: 'admin',
+          optionIndex: 3,
+        },
+        {
+          questionId: 'data_resaisie',
+          optionIndex: 3,
         },
         {
           questionId: 'data_central',
+          optionIndex: 0,
+        },
+        {
+          questionId: 'dashboard',
+          optionIndex: 0,
+        },
+        {
+          questionId: 'prospect',
+          optionIndex: 3,
+        },
+        {
+          questionId: 'content',
+          optionIndex: 0,
+        },
+        {
+          questionId: 'docs',
+          optionIndex: 3,
+        },
+        {
+          questionId: 'ia_maturity',
+          optionIndex: 3,
+        },
+        {
+          questionId: 'blocker',
+          optionIndex: 4,
+        },
+        {
+          questionId: 'pain',
           optionIndex: 1,
-          score: 1,
-          label: 'Reparties entre 2-3 outils connectes',
-          axis: 'data',
         },
       ],
-      score: {
-        total: 3,
-        max: 30,
-        axes: { admin: 2, data: 1 },
-        topAxis: 'admin',
-      },
-      recommendations: [{ title: 'Automatiser les relances' }],
-      roi: { hoursPerWeek: 5 },
       source: 'smoke_test',
     };
 
@@ -84,9 +102,20 @@ async function main(): Promise<void> {
       throw new Error(`Expected POST /api/micro-audits 201, got ${created.statusCode}: ${created.payload}`);
     }
 
-    const createdPayload = JSON.parse(created.payload) as { documentId?: string; pdfUrl?: string };
+    const createdPayload = JSON.parse(created.payload) as {
+      documentId?: string;
+      pdfUrl?: string;
+      result?: { total?: number; topAxis?: string; picks?: Array<{ title?: string }> };
+    };
     if (!createdPayload.documentId || !createdPayload.pdfUrl) {
       throw new Error(`Expected document metadata in response, got ${created.payload}`);
+    }
+    if (
+      createdPayload.result?.total !== 8 ||
+      createdPayload.result.topAxis !== 'admin' ||
+      createdPayload.result.picks?.[0]?.title !== 'Automatiser les tâches admin & doubles saisies'
+    ) {
+      throw new Error(`Expected server-side scoring result, got ${created.payload}`);
     }
 
     const downloadedPdf = await app.inject({

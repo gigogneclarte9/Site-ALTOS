@@ -74,7 +74,7 @@ Conserver le front public en HTML/CSS/JS statique pour le premier palier, tout e
 
 - Nginx servira le site public.
 - L'API sera exposee sous `/api`.
-- Le front existant devra etre modifie plus tard pour appeler l'API au lieu de `localStorage`.
+- Le front micro-audit appelle maintenant l'API au lieu de `localStorage`.
 - Une migration vers Eleventy/Astro reste possible plus tard.
 
 ## 2026-06-18 - Stocker les PDF hors base
@@ -425,7 +425,7 @@ Certains services externes peuvent rester, mais ils ne doivent pas devenir la so
 - Cal.com pour la prise de rendez-vous.
 - SMTP pour l'envoi d'emails.
 - Eventuellement Google Fonts ou polices auto-hebergees.
-- Eventuellement CDN temporaire pour `jsPDF`, puis version locale si besoin.
+- `jsPDF` cote serveur via dependance npm pour la generation PDF.
 
 ### Refuses comme coeur applicatif
 

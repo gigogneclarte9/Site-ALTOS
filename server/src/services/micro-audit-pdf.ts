@@ -21,6 +21,9 @@ type MicroAuditPdfBody = {
     max?: number;
     axes?: Record<string, number>;
     topAxis?: string;
+    level?: string;
+    profileName?: string;
+    scoringVersion?: string;
   };
   recommendations?: Array<Record<string, unknown>>;
   roi?: Record<string, unknown>;
@@ -98,7 +101,7 @@ export async function generateMicroAuditPdf({
   let y = 0;
 
   const topAxis = body.score.topAxis || 'admin';
-  const profileName = profiles[topAxis]?.name || topAxis;
+  const profileName = asText(body.score.profileName, profiles[topAxis]?.name || topAxis);
   const hoursPerWeek = asText(body.roi?.hoursPerWeek, '?');
   const roi = asText(body.roi?.label, 'À qualifier');
   const picks = (body.recommendations || []).slice(0, 3).map(toQuickWin);

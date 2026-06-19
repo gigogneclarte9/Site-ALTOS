@@ -10,7 +10,7 @@ Document de reference pour garder en memoire l'etat technique actuel du projet e
 - CSS principalement inline dans chaque page HTML.
 - JavaScript vanilla, sans framework.
 - Quelques scripts separes :
-  - `micro-audit.js` pour le questionnaire et la generation du bilan PDF ;
+  - `micro-audit.js` pour le questionnaire public et l'affichage du bilan renvoye par l'API ;
   - `assets/audit-bot.js`, probablement prototype/ancien composant ;
   - `design-canvas.jsx` et `tweaks-panel.jsx`, probablement lies a Claude Design / prototypage.
 - Pas de React/Vue/Svelte deploye dans le site public.
@@ -34,26 +34,21 @@ Document de reference pour garder en memoire l'etat technique actuel du projet e
 - Filtrage des cas d'usage en JavaScript cote client.
 - Micro-audit avec :
   - questionnaire local ;
-  - scoring local ;
-  - generation de recommandations locales ;
-  - stockage local dans `localStorage` ;
-  - generation PDF via `jsPDF` charge depuis CDN.
+  - soumission vers l'API interne ;
+  - scoring et recommandations calcules cote serveur ;
+  - PDF genere cote serveur.
 - Integration Cal.com via script externe `https://app.cal.com/embed/embed.js`.
 
 ### Donnees
 
-- Aucune base de donnees applicative actuellement.
-- Aucune API serveur interne actuellement.
-- Les leads du micro-audit sont stockes uniquement dans le navigateur visiteur :
-  - cle : `altos_audit_leads`
-  - support : `localStorage`
-  - consequence : ALTOS ne recupere pas les leads en production.
+- Base PostgreSQL applicative en place.
+- API interne Fastify en place.
+- Les leads du micro-audit sont stockes en PostgreSQL via `POST /api/micro-audits`.
 
 ### Services externes actuels
 
 - Cal.com pour la prise de rendez-vous.
 - Google Fonts.
-- CDN cdnjs pour `jsPDF`.
 - Liens publics vers France Num, DGE, LinkedIn, Cal.com.
 
 Ces dependances ne sont pas le coeur applicatif. La cible retenue est de garder les donnees, les PDF et le suivi commercial sur le VPS.
@@ -384,17 +379,11 @@ L'API verifie les droits, puis stream le fichier.
 
 Etat actuel :
 
-- le navigateur calcule tout ;
-- le navigateur garde le lead en `localStorage` ;
-- le PDF est genere cote navigateur.
-
-Cible :
-
 - le navigateur affiche le questionnaire ;
-- a la soumission, il envoie les reponses a l'API ;
+- a la soumission, il envoie les coordonnees, le consentement et les reponses a l'API ;
 - l'API valide les donnees ;
 - l'API stocke le lead et les reponses en PostgreSQL ;
-- l'API calcule ou verifie le score ;
+- l'API calcule le score ;
 - l'API applique le moteur de recommandations documente dans `docs/SPEC_MICRO_AUDIT_SCORING.md` ;
 - l'API genere le PDF cote serveur ;
 - l'API stocke le PDF hors webroot ;
@@ -402,6 +391,8 @@ Cible :
 - l'API retourne `documentId` et `pdfUrl` au front ;
 - l'API retourne un resultat affichable par le front ;
 - une notification email interne peut etre envoyee depuis le backend.
+- le navigateur ne transmet plus `score`, `recommendations` ni `roi` ;
+- le PDF navigateur de secours a ete supprime.
 
 Contrainte de reprise du moteur micro-audit :
 
@@ -424,13 +415,13 @@ Payload type :
     "firstName": "Nicolas",
     "lastName": "Darcos",
     "email": "hello@altos-experts.fr",
-    "phone": "0600000000",
-    "company": "ALTOS"
+    "phone": "0600000000"
   },
-  "consent": true,
+  "consentAccepted": true,
   "answers": [
-    {"questionId": "admin_hours", "optionIndex": 2, "score": 2}
-  ]
+    {"questionId": "admin_hours", "optionIndex": 2}
+  ],
+  "source": "micro_audit_web"
 }
 ```
 

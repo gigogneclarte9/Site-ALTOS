@@ -3,9 +3,10 @@ import type { FastifyInstance } from 'fastify';
 import { config } from '../config.js';
 import { getPool, hasDatabase } from '../db/pool.js';
 import { generateMicroAuditPdf } from '../services/micro-audit-pdf.js';
+import { evaluateMicroAuditAnswers } from '../services/micro-audit-scoring.js';
 import { sendMicroAuditNotification } from '../services/notifications.js';
 
-type MicroAuditBody = {
+type SubmittedMicroAuditBody = {
   contact: {
     firstName: string;
     lastName: string;
@@ -17,24 +18,15 @@ type MicroAuditBody = {
   answers: Array<{
     questionId: string;
     optionIndex: number;
-    score: number;
     label?: string;
     axis?: string;
   }>;
-  score: {
-    total: number;
-    max?: number;
-    axes?: Record<string, number>;
-    topAxis?: string;
-  };
-  recommendations?: Array<Record<string, unknown>>;
-  roi?: Record<string, unknown>;
   source?: string;
 };
 
 const microAuditBodySchema = {
   type: 'object',
-  required: ['contact', 'consentAccepted', 'answers', 'score'],
+  required: ['contact', 'consentAccepted', 'answers'],
   additionalProperties: false,
   properties: {
     contact: {
@@ -52,47 +44,26 @@ const microAuditBodySchema = {
     consentText: { type: 'string', maxLength: 1000 },
     answers: {
       type: 'array',
-      minItems: 1,
-      maxItems: 20,
+      minItems: 10,
+      maxItems: 10,
       items: {
         type: 'object',
-        required: ['questionId', 'optionIndex', 'score'],
+        required: ['questionId', 'optionIndex'],
         additionalProperties: false,
         properties: {
           questionId: { type: 'string', minLength: 1, maxLength: 80 },
           optionIndex: { type: 'integer', minimum: 0, maximum: 10 },
-          score: { type: 'integer', minimum: 0, maximum: 3 },
           label: { type: 'string', maxLength: 500 },
           axis: { type: 'string', maxLength: 80 },
         },
       },
     },
-    score: {
-      type: 'object',
-      required: ['total'],
-      additionalProperties: false,
-      properties: {
-        total: { type: 'integer', minimum: 0, maximum: 30 },
-        max: { type: 'integer', minimum: 1, maximum: 30 },
-        axes: {
-          type: 'object',
-          additionalProperties: { type: 'integer', minimum: 0, maximum: 30 },
-        },
-        topAxis: { type: 'string', maxLength: 80 },
-      },
-    },
-    recommendations: {
-      type: 'array',
-      maxItems: 10,
-      items: { type: 'object', additionalProperties: true },
-    },
-    roi: { type: 'object', additionalProperties: true },
     source: { type: 'string', maxLength: 120 },
   },
 } as const;
 
 export async function registerMicroAuditRoutes(app: FastifyInstance): Promise<void> {
-  app.post<{ Body: MicroAuditBody }>(
+  app.post<{ Body: SubmittedMicroAuditBody }>(
     '/micro-audits',
     {
       schema: {
@@ -107,6 +78,22 @@ export async function registerMicroAuditRoutes(app: FastifyInstance): Promise<vo
               documentId: { type: 'string' },
               pdfUrl: { type: 'string' },
               status: { type: 'string' },
+              result: {
+                type: 'object',
+                additionalProperties: true,
+                properties: {
+                  total: { type: 'integer' },
+                  max: { type: 'integer' },
+                  axes: { type: 'object', additionalProperties: { type: 'integer' } },
+                  topAxis: { type: 'string' },
+                  level: { type: 'string' },
+                  profileName: { type: 'string' },
+                  scoringVersion: { type: 'string' },
+                  picks: { type: 'array', items: { type: 'object', additionalProperties: true } },
+                  hoursPerWeek: { type: 'integer' },
+                  roi: { type: 'string' },
+                },
+              },
             },
           },
         },
@@ -120,7 +107,26 @@ export async function registerMicroAuditRoutes(app: FastifyInstance): Promise<vo
         });
       }
 
-      const body = request.body;
+      const submittedBody = request.body;
+      let scoring: ReturnType<typeof evaluateMicroAuditAnswers>;
+
+      try {
+        scoring = evaluateMicroAuditAnswers(submittedBody.answers);
+      } catch (error) {
+        request.log.warn({ error }, 'Invalid micro-audit scoring payload');
+        return reply.code(400).send({
+          error: 'invalid_micro_audit_answers',
+          message: 'Unable to score submitted answers.',
+        });
+      }
+
+      const body = {
+        ...submittedBody,
+        answers: scoring.answers,
+        score: scoring.score,
+        recommendations: scoring.recommendations,
+        roi: scoring.roi,
+      };
       const leadId = randomUUID();
       const auditId = randomUUID();
       const eventId = randomUUID();
@@ -173,7 +179,7 @@ export async function registerMicroAuditRoutes(app: FastifyInstance): Promise<vo
             body.score.topAxis || null,
             JSON.stringify(body.recommendations || []),
             JSON.stringify(body.roi || {}),
-            JSON.stringify(body),
+            JSON.stringify({ submitted: submittedBody, computed: body }),
           ],
         );
 
@@ -186,7 +192,12 @@ export async function registerMicroAuditRoutes(app: FastifyInstance): Promise<vo
             eventId,
             leadId,
             'micro_audit_submitted',
-            JSON.stringify({ microAuditId: auditId, source: body.source || 'micro_audit' }),
+            JSON.stringify({
+              microAuditId: auditId,
+              source: body.source || 'micro_audit',
+              scoringVersion: body.score.scoringVersion,
+              level: body.score.level,
+            }),
           ],
         );
 
@@ -236,6 +247,19 @@ export async function registerMicroAuditRoutes(app: FastifyInstance): Promise<vo
           documentId,
           pdfUrl,
           status: 'stored',
+          result: {
+            total: body.score.total,
+            max: body.score.max || 30,
+            axes: body.score.axes || {},
+            topAxis: body.score.topAxis || null,
+            level: body.score.level,
+            profileName: body.score.profileName,
+            scoringVersion: body.score.scoringVersion,
+            picks: body.recommendations || [],
+            hoursPerWeek:
+              typeof body.roi?.hoursPerWeek === 'number' ? body.roi.hoursPerWeek : undefined,
+            roi: typeof body.roi?.label === 'string' ? body.roi.label : undefined,
+          },
         });
       } catch (error) {
         await client.query('rollback');

@@ -90,16 +90,22 @@ Analyse initiale realisee sans modification du code applicatif.
 - Page dediee `micro-audit.html`.
 - Questionnaire de 10 questions avec progression.
 - Collecte locale des coordonnees : prenom, nom, email, telephone.
-- Calcul local d'un score d'opportunite sur 30.
+- Calcul serveur d'un score d'opportunite sur 30.
 - Cartographie des frictions par axes : admin, donnees, commercial, documents, maturite IA, pression dirigeant.
-- Generation de 3 quick wins recommandes.
-- Estimation locale de gain hebdomadaire et de ROI indicatif.
+- Generation serveur de 3 quick wins recommandes.
+- Estimation serveur de gain hebdomadaire et de ROI indicatif.
 - Soumission branchee sur `POST /api/micro-audits` en local.
 - Stockage local PostgreSQL des leads, reponses, scores et recommandations.
 - Generation d'un PDF cote serveur et telechargement via API quand la soumission est enregistree.
-- L'ancien PDF navigateur via `jsPDF` reste seulement en secours technique.
+- Le PDF serveur est obligatoire ; l'ancien PDF navigateur via `jsPDF` a ete supprime.
 - Specification scoring/recommandations creee dans `docs/SPEC_MICRO_AUDIT_SCORING.md`.
 - Contrainte : ameliorer le moteur automatique sans changer le rendu visuel du site ni du PDF.
+- Moteur serveur de scoring/recommandations ajoute :
+  - recalcul du score depuis les reponses ;
+  - recommandations conditionnelles ;
+  - cas faible friction ;
+  - tests de differenciation.
+- Le payload public ne transmet plus `score`, `recommendations` ni `roi`.
 
 ### Cas d'usage et references
 
@@ -189,12 +195,12 @@ Analyse initiale realisee sans modification du code applicatif.
 - Stocker les PDF generes hors webroot et enregistrer leurs metadonnees en base. Fait localement.
 - Ajouter consentement explicite et preuve de consentement horodatee.
 - Rendre email et telephone obligatoires avant acces au resultat. Fait cote formulaire et API.
-- Envoyer le payload complet du micro-audit depuis le formulaire public vers `POST /api/micro-audits`. Fait.
+- Envoyer le payload micro-audit depuis le formulaire public vers `POST /api/micro-audits`. Fait ; le payload contient uniquement coordonnees, consentement, reponses et source.
 - Ajouter notification interne quand un micro-audit est complete. Code pret, activation SMTP a faire sur VPS.
 - Generer les PDF cote serveur. Fait localement avec `jsPDF`.
 - Rendre le PDF serveur identique au PDF navigateur initial sur le design et le contenu. Fait via port serveur de l'ancien generateur `jsPDF`.
-- Reprendre le moteur de scoring/recommandations selon `docs/SPEC_MICRO_AUDIT_SCORING.md`, sans changement visuel du resultat public ni du PDF.
-- Ajouter des tests couvrant au moins : faible friction, admin, data, commercial, maturite IA faible.
+- Reprendre le moteur de scoring/recommandations selon `docs/SPEC_MICRO_AUDIT_SCORING.md`, sans changement visuel du resultat public ni du PDF. Fait localement.
+- Ajouter des tests couvrant au moins : faible friction, admin, data, commercial, maturite IA faible. Fait localement via `npm run test:scoring`.
 
 ### P0 - Mettre en place le socle applicatif VPS
 

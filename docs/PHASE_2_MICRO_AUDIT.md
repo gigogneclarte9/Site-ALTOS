@@ -21,11 +21,6 @@ La soumission du micro-audit public est maintenant branchee sur l'API Fastify lo
   - telephone obligatoire ;
   - consentement ;
   - reponses detaillees ;
-  - score total ;
-  - axes ;
-  - profil dominant ;
-  - quick wins ;
-  - estimation ROI ;
   - source `micro_audit_web`.
 - Envoi vers `POST /api/micro-audits`.
 - Affichage du bilan uniquement apres reponse API positive.
@@ -47,15 +42,29 @@ La soumission du micro-audit public est maintenant branchee sur l'API Fastify lo
 - Stockage des PDF dans `DOCUMENTS_PRIVATE_DIR`, hors webroot.
 - Creation d'une ligne `documents` rattachee au lead et au micro-audit.
 - Telechargement du PDF via `GET /api/documents/:id/download`.
-- Le bouton public de telechargement utilise maintenant le PDF serveur quand il est disponible, avec l'ancien PDF navigateur en secours.
+- Le bouton public de telechargement utilise maintenant uniquement le PDF serveur.
 - Notification email interne optionnelle via SMTP :
   - service `server/src/services/notifications.ts` ;
   - variables `SMTP_*`, `NOTIFICATION_FROM`, `NOTIFICATION_TO` ;
   - la soumission ne bloque pas si le SMTP n'est pas configure.
+- Moteur serveur de scoring/recommandations :
+  - service `server/src/services/micro-audit-scoring.ts` ;
+  - recalcul du score et des axes a partir des reponses ;
+  - selection conditionnelle des recommandations ;
+  - cas faible friction ;
+  - version de moteur `scoringVersion` ;
+  - resultat API renvoye au front pour conserver la coherence site / PDF / admin.
+- Le rendu visuel public et le design PDF ne sont pas modifies.
+- L'ancien moteur de scoring/recommandations cote navigateur a ete supprime.
+- Le PDF navigateur de secours et le chargement CDN `jsPDF` ont ete supprimes : le PDF serveur est obligatoire.
+- Le payload public ne transmet plus `score`, `recommendations` ni `roi`; l'API n'accepte plus ces champs en entree.
 
 ## Verification realisee
 
 - `node --check micro-audit.js` : OK.
+- `npm run build` : OK.
+- `npm run test:scoring` : OK, 5 profils et 5 signatures de recommandations.
+- Recherche de nettoyage : plus de `computeScore`, `buildBilanSummary`, `QUICKWIN_LIB`, `generatePdf` ou `jsPDF` cote navigateur.
 - `GET /api/health` : OK, `database.ok: true`.
 - Test HTTP avec header `Origin: http://127.0.0.1:8080` : OK.
 - Reponse API `POST /api/micro-audits` : `201`.
@@ -77,10 +86,7 @@ La soumission du micro-audit public est maintenant branchee sur l'API Fastify lo
 - Tester le parcours complet dans Chrome en remplissant le vrai formulaire.
 - Tester le telechargement PDF dans Chrome via le vrai formulaire.
 - Configurer le SMTP reel sur le VPS pour activer la notification interne.
-- Reprendre le moteur de scoring/recommandations selon `docs/SPEC_MICRO_AUDIT_SCORING.md`.
-- Contrainte pour cette reprise : aucun changement visuel du resultat public ni du PDF, uniquement une meilleure logique automatique.
-- Faire recalculer a terme le score et les recommandations cote serveur pour que l'API soit la source de verite.
-- Ajouter des tests de differenciation entre plusieurs profils de reponses.
+- Valider dans Chrome que le parcours public conserve le meme rendu apres recalcul serveur.
 - Durcir l'acces PDF public dans une iteration suivante :
   - lien opaque temporaire ou session admin selon usage ;
   - journalisation des consultations.
