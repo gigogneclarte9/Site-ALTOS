@@ -395,12 +395,20 @@ Cible :
 - l'API valide les donnees ;
 - l'API stocke le lead et les reponses en PostgreSQL ;
 - l'API calcule ou verifie le score ;
+- l'API applique le moteur de recommandations documente dans `docs/SPEC_MICRO_AUDIT_SCORING.md` ;
 - l'API genere le PDF cote serveur ;
 - l'API stocke le PDF hors webroot ;
 - l'API cree une ligne `documents` avec taille et hash SHA-256 ;
 - l'API retourne `documentId` et `pdfUrl` au front ;
 - l'API retourne un resultat affichable par le front ;
 - une notification email interne peut etre envoyee depuis le backend.
+
+Contrainte de reprise du moteur micro-audit :
+
+- ne pas changer le rendu visuel du resultat public ;
+- ne pas changer le design du PDF ;
+- ameliorer uniquement le calcul, le profil, les recommandations et leur coherence ;
+- conserver la correspondance site / PDF / admin.
 
 Endpoint minimal :
 

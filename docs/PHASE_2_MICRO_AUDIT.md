@@ -77,6 +77,10 @@ La soumission du micro-audit public est maintenant branchee sur l'API Fastify lo
 - Tester le parcours complet dans Chrome en remplissant le vrai formulaire.
 - Tester le telechargement PDF dans Chrome via le vrai formulaire.
 - Configurer le SMTP reel sur le VPS pour activer la notification interne.
+- Reprendre le moteur de scoring/recommandations selon `docs/SPEC_MICRO_AUDIT_SCORING.md`.
+- Contrainte pour cette reprise : aucun changement visuel du resultat public ni du PDF, uniquement une meilleure logique automatique.
+- Faire recalculer a terme le score et les recommandations cote serveur pour que l'API soit la source de verite.
+- Ajouter des tests de differenciation entre plusieurs profils de reponses.
 - Durcir l'acces PDF public dans une iteration suivante :
   - lien opaque temporaire ou session admin selon usage ;
   - journalisation des consultations.

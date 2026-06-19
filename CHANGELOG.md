@@ -4,6 +4,14 @@ Toutes les evolutions notables du site ALTOS sont suivies ici.
 
 Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste en pre-production.
 
+## [Non publie]
+
+### Ajoute
+
+- Regle de deploiement documentee : code et contenus versionnes depuis Git uniquement.
+- Specification du futur moteur de scoring/recommandations micro-audit, avec contrainte de ne pas changer le rendu visuel du site ni du PDF.
+- README racine ajoute pour documenter le projet, la stack, les `.env`, le lancement local et le deploiement.
+
 ## [0.4.1] - 2026-06-19
 
 ### Ajoute

@@ -98,6 +98,8 @@ Analyse initiale realisee sans modification du code applicatif.
 - Stockage local PostgreSQL des leads, reponses, scores et recommandations.
 - Generation d'un PDF cote serveur et telechargement via API quand la soumission est enregistree.
 - L'ancien PDF navigateur via `jsPDF` reste seulement en secours technique.
+- Specification scoring/recommandations creee dans `docs/SPEC_MICRO_AUDIT_SCORING.md`.
+- Contrainte : ameliorer le moteur automatique sans changer le rendu visuel du site ni du PDF.
 
 ### Cas d'usage et references
 
@@ -191,6 +193,8 @@ Analyse initiale realisee sans modification du code applicatif.
 - Ajouter notification interne quand un micro-audit est complete. Code pret, activation SMTP a faire sur VPS.
 - Generer les PDF cote serveur. Fait localement avec `jsPDF`.
 - Rendre le PDF serveur identique au PDF navigateur initial sur le design et le contenu. Fait via port serveur de l'ancien generateur `jsPDF`.
+- Reprendre le moteur de scoring/recommandations selon `docs/SPEC_MICRO_AUDIT_SCORING.md`, sans changement visuel du resultat public ni du PDF.
+- Ajouter des tests couvrant au moins : faible friction, admin, data, commercial, maturite IA faible.
 
 ### P0 - Mettre en place le socle applicatif VPS
 

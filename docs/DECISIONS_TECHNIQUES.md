@@ -284,6 +284,8 @@ Un VPS n'est pas une sauvegarde. Si la base et les PDF vivent sur le serveur, la
 
 Le premier deploiement utilisera un script manuel `deploy.sh`.
 
+Le code applicatif et les contenus versionnes doivent toujours etre deployes depuis Git. Le VPS ne doit pas devenir une source parallele de modifications applicatives.
+
 ### Raisons
 
 - Plus simple pour le demarrage.
@@ -303,6 +305,51 @@ Le premier deploiement utilisera un script manuel `deploy.sh`.
   - reload Nginx si necessaire ;
   - smoke test.
 - GitHub Actions pourra arriver plus tard.
+
+## 2026-06-19 - Git comme source de verite du deploiement
+
+### Decision retenue
+
+Toute modification de code, contenu public, documentation projet, assets versionnes, scripts de deploiement ou configuration exemple doit suivre le flux :
+
+```text
+local -> commit -> push GitHub -> git pull/reset sur VPS -> deploy.sh
+```
+
+Les modifications directes sur le VPS sont reservees a l'infrastructure serveur et aux secrets non versionnes.
+
+### Autorise directement sur le VPS
+
+- `.env` de production ;
+- certificats Let's Encrypt ;
+- configuration Nginx active ;
+- services systemd ;
+- configuration PostgreSQL ;
+- sauvegardes/restaurations ;
+- pare-feu et securite systeme ;
+- comptes systeme et droits fichiers.
+
+### Interdit directement sur le VPS
+
+- pages HTML publiques ;
+- JavaScript/CSS applicatifs ;
+- backend `server/` ;
+- partials ;
+- assets versionnes ;
+- documentation projet ;
+- scripts `deploy/` versionnes ;
+- changelog/versioning.
+
+### Raison
+
+- Eviter les divergences entre GitHub et le serveur.
+- Garder un historique auditable.
+- Permettre un redeploiement reproductible.
+- Eviter de perdre des changements lors d'un `git reset --hard origin/main`.
+
+### Consequence
+
+Si une correction urgente est faite sur le VPS pour restaurer le service, elle doit etre immediatement reproduite localement, commitee, pushee, puis redeployee depuis Git.
 
 ## 2026-06-18 - Securite obligatoire avant production
 

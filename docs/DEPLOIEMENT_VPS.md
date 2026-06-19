@@ -97,6 +97,39 @@ Le script `deploy.sh` :
 
 Il doit etre execute depuis la racine du depot.
 
+## Regle de deploiement Git
+
+Le code et les contenus versionnes sont deployes depuis Git uniquement.
+
+Flux obligatoire :
+
+```text
+local -> commit -> push GitHub -> git pull/reset sur VPS -> deploy.sh
+```
+
+Ne pas modifier directement sur le VPS :
+
+- pages HTML publiques ;
+- JS/CSS applicatifs ;
+- backend `server/` ;
+- partials ;
+- assets versionnes ;
+- documentation projet ;
+- scripts de deploiement versionnes ;
+- changelog/versioning.
+
+Modifications directes VPS autorisees uniquement pour l'infrastructure :
+
+- `/opt/altos-api/app/server/.env` ;
+- `/etc/nginx/sites-available/altos` ;
+- certificats Let's Encrypt ;
+- services systemd ;
+- PostgreSQL ;
+- sauvegardes/restaurations ;
+- firewall et securite systeme.
+
+Si une correction urgente est faite directement sur le VPS, elle doit etre reprise localement, commitee, pushee, puis redeployee depuis Git.
+
 ## Arborescence cible
 
 ```text
