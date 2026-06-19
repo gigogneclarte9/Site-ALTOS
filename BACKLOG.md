@@ -45,7 +45,7 @@ Analyse initiale realisee sans modification du code applicatif.
 - Backend initialise ensuite dans `server/` : Fastify + TypeScript + migration PostgreSQL initiale.
 - Phase 1 terminee cote code/preparation locale : API, PostgreSQL Docker, migrations, smoke test, scripts VPS et recette documentee.
 - Phase 2 en cours : micro-audit branche a l'API, stockage PostgreSQL et PDF serveur localement fonctionnels.
-- Phase 1 reste a executer sur le VPS OVH reel lors de la mise en production.
+- Premier deploiement VPS realise le 2026-06-19 : site public, API, PostgreSQL, Nginx, systemd, UFW et HTTPS actifs sur `https://www.altos-experts.fr/`.
 - Versionnement : depot Git present dans `Site-ALTOS`
 - Phase 3 avancee : back-office commercial HTML/admin local fonctionnel avec auth, liste leads, recherche, filtres, pagination, export CSV, fiche lead, reponses detaillees, notes, statut et PDF admin.
 - Phase 4 terminee localement : site public statique industrialise, composants communs factorises, scripts publics extraits, page journal creee, structure cible des contenus documentee.
@@ -81,7 +81,7 @@ Analyse initiale realisee sans modification du code applicatif.
 
 ### Contact simple
 
-- Contact par email via `mailto:bonjour@altos.fr`.
+- Contact par email via `mailto:hello@altos-experts.fr`.
 - Pas de formulaire serveur.
 - Pas de stockage centralise des demandes.
 
@@ -126,7 +126,7 @@ Analyse initiale realisee sans modification du code applicatif.
 ### SEO et partage social
 
 - Balises title, meta description, Open Graph et Twitter Cards sur les pages principales.
-- Canonicals vers `https://altos.fr/`.
+- Canonicals vers `https://www.altos-experts.fr/`.
 - Sitemap XML present.
 - Robots.txt present.
 - Schema JSON-LD sur au moins l'accueil et la page cas d'usage.
@@ -289,3 +289,5 @@ Analyse initiale realisee sans modification du code applicatif.
 Avant d'ouvrir la Phase 5 editoriale, realiser le premier deploiement VPS OVH et valider le socle en production : site public, API, PostgreSQL, admin, stockage PDF prive, HTTPS, sauvegardes et variables d'environnement.
 
 La Phase 5 ne demarre qu'apres cette validation VPS.
+
+Etat actuel : le premier deploiement applicatif est en place sur `https://www.altos-experts.fr/`. Le micro-audit production et l'acces admin sont valides. Les prochaines validations prioritaires sont le SMTP si souhaite, puis sauvegarde/restauration.

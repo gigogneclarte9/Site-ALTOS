@@ -7,9 +7,9 @@ Objectif : garder une trace claire des versions du site public et de la zone adm
 ## Version courante
 
 ```text
-Site public : 0.4.0
+Site public : 0.4.1
 Admin       : 0.3.0
-Release     : Phase 4 locale terminee
+Release     : 0.4.1 - Deploiement VPS production
 ```
 
 ## Fichiers de reference
@@ -22,7 +22,7 @@ Release     : Phase 4 locale terminee
 
 - Incrementation mineure (`0.x.0`) quand une phase produit est terminee.
 - Incrementation patch (`0.x.y`) pour correctifs, documentation ou ajustements sans changement fonctionnel majeur.
-- Tant que le premier deploiement VPS n'est pas valide, rester en version `0.x`.
+- Tant que le projet reste en pre-production, rester en version `0.x`.
 
 ## Versions separees
 
@@ -30,22 +30,23 @@ Le site public et l'admin peuvent avancer a des rythmes differents :
 
 - `siteVersion` suit le site public, les pages, les assets, le SEO et les contenus statiques.
 - `adminVersion` suit le back-office commercial/editorial et les routes admin.
-- `releaseVersion` permet d'identifier le jalon global visible dans l'admin.
+- `releaseVersion` permet d'identifier le jalon global visible dans `/api/health`.
 
 ## Avant un commit de release
 
 1. Mettre a jour `CHANGELOG.md`.
 2. Mettre a jour `server/src/version.ts`.
-3. Verifier l'affichage dans `/admin/login` ou `/admin/leads`.
-4. Verifier `/api/health`.
-5. Lancer les controles habituels.
+3. Mettre a jour ce document.
+4. Verifier l'affichage dans `/admin/login` ou `/admin/leads`.
+5. Verifier `/api/health`.
+6. Lancer les controles habituels.
 
 ## Affichage admin
 
 La zone admin affiche :
 
 ```text
-Site vX.Y.Z · Admin vX.Y.Z
+Site vX.Y.Z - Admin vX.Y.Z
 ```
 
 Cet affichage sert a verifier rapidement quelle version est en cours sur le VPS apres deploiement.

@@ -6,4 +6,4 @@ Disallow: /uploads/
 Disallow: /mentions-legales.html
 Disallow: /confidentialite.html
 
-Sitemap: https://altos.fr/sitemap.xml
+Sitemap: https://www.altos-experts.fr/sitemap.xml

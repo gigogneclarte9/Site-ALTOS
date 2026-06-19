@@ -415,7 +415,7 @@ Payload type :
   "contact": {
     "firstName": "Nicolas",
     "lastName": "Darcos",
-    "email": "bonjour@altos.fr",
+    "email": "hello@altos-experts.fr",
     "phone": "0600000000",
     "company": "ALTOS"
   },

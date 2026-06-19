@@ -54,7 +54,7 @@ Objectif : ajouter la couche serveur minimale.
 
 Statut : termine cote code/preparation locale, detaille dans `docs/PHASE_1_SOCLE_APPLICATIF.md` et `docs/RECETTE_PHASE_1.md`.
 
-Precision : l'execution sur le VPS OVH reel reste a faire lors de la mise en production.
+Precision : le premier deploiement applicatif sur le VPS OVH a ete realise le 2026-06-19. Le site public, l'API, PostgreSQL, Nginx, systemd, UFW, le domaine canonique, HTTPS, l'acces admin et le test micro-audit production sont en place. Restent a finaliser avant production complete : SMTP si besoin et sauvegarde/restauration.
 
 Livrables :
 
@@ -95,7 +95,7 @@ Critere local deja valide :
 
 Objectif : transformer le micro-audit actuel en vraie source de leads.
 
-Statut : termine cote code local, hors test Chrome utilisateur et configuration SMTP VPS. Detail dans `docs/PHASE_2_MICRO_AUDIT.md`.
+Statut : termine cote code et teste en production sur le VPS, hors configuration SMTP. Detail dans `docs/PHASE_2_MICRO_AUDIT.md`.
 
 Livrables :
 
@@ -281,7 +281,7 @@ Livrables possibles :
 3. Brancher le micro-audit a l'API.
 4. Creer le back-office commercial.
 5. Industrialiser le contenu public.
-6. Realiser et valider le premier deploiement VPS complet.
+6. Finaliser le premier deploiement VPS : SMTP si besoin, sauvegardes et recette complete.
 7. Creer le back-office editorial avec contenu en base et WYSIWYG.
 
 ## Ce que le back-office editorial ne change pas

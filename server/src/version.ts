@@ -1,7 +1,7 @@
 export const appVersion = {
-  releaseVersion: '0.4.0',
-  releaseName: 'Phase 4 locale terminee',
+  releaseVersion: '0.4.1',
+  releaseName: 'Deploiement VPS production',
   releaseDate: '2026-06-19',
-  siteVersion: '0.4.0',
+  siteVersion: '0.4.1',
   adminVersion: '0.3.0',
 } as const;

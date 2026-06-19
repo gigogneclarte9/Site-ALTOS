@@ -68,7 +68,7 @@ Checklist VPS :
 - Nginx configure a partir de `deploy/nginx-altos.conf.example`.
 - HTTPS Let's Encrypt active.
 - `deploy/deploy.sh` execute avec succes.
-- `GET https://altos.fr/api/health` renvoie `database.ok: true`.
+- `GET https://www.altos-experts.fr/api/health` renvoie `database.ok: true`.
 - `deploy/backup-postgres.sh` produit une sauvegarde.
 - `deploy/restore-postgres.sh` teste sur une base de test ou preproduction.
 

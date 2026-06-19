@@ -1,45 +1,67 @@
-# Example Nginx configuration for altos.fr.
-# Adapt paths and server_name on the VPS.
+# Example Nginx configuration for altos-experts.fr.
+# The canonical public domain is https://www.altos-experts.fr/.
+
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    server_name _;
+    return 404;
+}
 
 server {
     listen 80;
     listen [::]:80;
-    server_name altos.fr www.altos.fr;
+    server_name altos-experts.fr www.altos-experts.fr;
 
-    return 301 https://altos.fr$request_uri;
+    root /var/www/altos/current/public;
+
+    location ^~ /.well-known/acme-challenge/ {
+        root /var/www/altos/current/public;
+        default_type "text/plain";
+    }
+
+    location / {
+        return 301 https://www.altos-experts.fr$request_uri;
+    }
 }
 
 server {
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
-    server_name www.altos.fr;
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    http2 on;
+    server_name altos-experts.fr;
 
-    ssl_certificate /etc/letsencrypt/live/altos.fr/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/altos.fr/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/www.altos-experts.fr/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/www.altos-experts.fr/privkey.pem;
 
-    return 301 https://altos.fr$request_uri;
+    return 301 https://www.altos-experts.fr$request_uri;
 }
 
 server {
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
-    server_name altos.fr;
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    http2 on;
+    server_name www.altos-experts.fr;
 
     root /var/www/altos/current/public;
     index index.html;
 
-    ssl_certificate /etc/letsencrypt/live/altos.fr/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/altos.fr/privkey.pem;
-
-    add_header X-Frame-Options "SAMEORIGIN" always;
-    add_header X-Content-Type-Options "nosniff" always;
-    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
-    add_header Permissions-Policy "camera=(), microphone=(), geolocation=()" always;
+    ssl_certificate /etc/letsencrypt/live/www.altos-experts.fr/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/www.altos-experts.fr/privkey.pem;
+    ssl_session_timeout 1d;
+    ssl_session_cache shared:ALTOSSSL:10m;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_prefer_server_ciphers off;
 
     client_max_body_size 2m;
 
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+
     location /api/ {
-        proxy_pass http://127.0.0.1:3001/api/;
+        proxy_pass http://127.0.0.1:3001;
         proxy_http_version 1.1;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
@@ -47,18 +69,25 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 
-    location ~* ^/(uploads|work|audits-raw|audits-extracted|screenshots|private|backups|exports|generated)/ {
-        deny all;
-        return 404;
+    location /admin {
+        proxy_pass http://127.0.0.1:3001;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
     }
 
-    location ~* \.(?:css|js|jpg|jpeg|png|webp|svg|pdf)$ {
-        expires 30d;
-        add_header Cache-Control "public, max-age=2592000";
-        try_files $uri =404;
+    location /documents/ {
+        proxy_pass http://127.0.0.1:3001;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
     }
 
     location / {
-        try_files $uri $uri/ =404;
+        try_files $uri $uri/ /index.html;
     }
 }

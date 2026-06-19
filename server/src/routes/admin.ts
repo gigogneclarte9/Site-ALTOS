@@ -187,7 +187,7 @@ function jsonRecord(value: unknown): Record<string, unknown> {
 }
 
 function adminLayout(title: string, body: string, sessionEmail?: string): string {
-  const versionLabel = `Site v${appVersion.siteVersion} · Admin v${appVersion.adminVersion}`;
+  const versionLabel = `Site v${appVersion.siteVersion} - Admin v${appVersion.adminVersion}`;
 
   return `<!doctype html>
 <html lang="fr">

@@ -9,7 +9,7 @@ const API_BASE_URL = window.ALTOS_API_BASE_URL || (
     : '/api'
 );
 
-const CONSENT_TEXT = "En soumettant ce formulaire, vous acceptez d'etre recontacte par Altos sous 48h ouvrees. Donnees conservees 12 mois, non revendues. Droit a l'effacement sur demande a bonjour@altos.fr.";
+const CONSENT_TEXT = "En soumettant ce formulaire, vous acceptez d'etre recontacte par Altos sous 48h ouvrees. Donnees conservees 12 mois, non revendues. Droit a l'effacement sur demande a hello@altos-experts.fr.";
 
 const QUESTIONS = [
   {
