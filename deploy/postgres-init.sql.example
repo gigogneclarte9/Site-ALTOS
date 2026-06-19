@@ -1,0 +1,14 @@
+-- PostgreSQL initialization template for the OVH VPS.
+-- Run as a PostgreSQL admin user, then set DATABASE_URL in server/.env.
+-- Replace CHANGE_ME_STRONG_PASSWORD before running.
+
+create user altos with encrypted password 'CHANGE_ME_STRONG_PASSWORD';
+create database altos owner altos encoding 'UTF8';
+
+\connect altos
+
+grant all privileges on database altos to altos;
+grant all on schema public to altos;
+alter default privileges in schema public grant all on tables to altos;
+alter default privileges in schema public grant all on sequences to altos;
+alter default privileges in schema public grant all on functions to altos;

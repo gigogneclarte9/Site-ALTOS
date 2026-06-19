@@ -1,0 +1,22 @@
+[Unit]
+Description=ALTOS Fastify API
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=altos
+Group=altos
+WorkingDirectory=/opt/altos-api/app/server
+EnvironmentFile=/opt/altos-api/app/server/.env
+ExecStart=/usr/bin/node dist/server.js
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/var/lib/altos /var/log/altos
+
+[Install]
+WantedBy=multi-user.target

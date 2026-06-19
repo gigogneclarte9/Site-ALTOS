@@ -1,0 +1,211 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Journal IA, automatisation et terrain PME Â· ALTOS</title>
+<meta name="description" content="Le journal ALTOS rassemble les retours de terrain, enseignements d'audits IA et cas concrets d'automatisation pour TPE et PME franÃ§aises." />
+<meta name="author" content="Nicolas Darcos" />
+<link rel="canonical" href="https://altos.fr/journal.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ALTOS" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://altos.fr/journal.html" />
+<meta property="og:title" content="Journal IA, automatisation et terrain PME Â· ALTOS" />
+<meta property="og:description" content="Retours de terrain, enseignements d'audits IA et cas concrets d'automatisation pour TPE et PME franÃ§aises." />
+<meta property="og:image" content="https://altos.fr/assets/og-default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="ALTOS â€” Ambassadeur IA pour PME" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Journal IA, automatisation et terrain PME Â· ALTOS" />
+<meta name="twitter:description" content="Retours de terrain, enseignements d'audits IA et cas concrets d'automatisation pour TPE et PME franÃ§aises." />
+<meta name="twitter:image" content="https://altos.fr/assets/og-default.png" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-weight='900' fill='%23ffffff'%3EA%3C/text%3E%3Ccircle cx='48' cy='52' r='4' fill='%23ff5b14'/%3E%3C/svg%3E" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #fff;
+    --ink: #0a0a0a;
+    --ink-2: #2c2c2c;
+    --ink-3: #767676;
+    --paper: #f4f1ec;
+    --accent: #ff5b14;
+    --acid: #d9ff3c;
+    --display: "Fraunces", "Times New Roman", serif;
+    --sans: "Inter", system-ui, sans-serif;
+    --mono: "DM Mono", ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  body { overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--ink); color: var(--acid); }
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+  .num { color: var(--ink-3); font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
+
+  .hero { border-bottom: 1px solid var(--ink); padding: 72px 0 56px; }
+  .hero__grid { align-items: end; display: grid; gap: 56px; grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr); }
+  h1 { font-family: var(--display); font-size: clamp(56px, 8vw, 128px); font-weight: 400; letter-spacing: -0.04em; line-height: .92; margin-top: 20px; max-width: 9ch; }
+  h1 i { color: var(--accent); font-style: italic; }
+  .hero p { color: var(--ink-2); font-size: 20px; line-height: 1.5; max-width: 34ch; }
+
+  .journal-list { padding: 72px 0 96px; }
+  .journal-grid { background: var(--ink); border: 1px solid var(--ink); display: grid; gap: 1px; }
+  .post { background: var(--bg); display: grid; gap: 28px; grid-template-columns: 190px minmax(0, 1fr) 170px; padding: 34px; transition: background .2s, color .2s; }
+  .post:hover { background: var(--ink); color: var(--bg); }
+  .post__date, .post__meta { color: var(--ink-3); font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .post:hover .post__date, .post:hover .post__meta, .post:hover .post__excerpt { color: rgba(255,255,255,.68); }
+  .post h2 { font-family: var(--display); font-size: clamp(28px, 3.2vw, 46px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.02; max-width: 21ch; }
+  .post h2 i { color: var(--accent); font-style: italic; }
+  .post__excerpt { color: var(--ink-2); font-size: 16px; line-height: 1.6; margin-top: 16px; max-width: 64ch; }
+  .post__meta { align-self: end; text-align: right; }
+
+  .cta-band { background: var(--paper); border-top: 1px solid var(--ink); padding: 56px 0; }
+  .cta-band__inner { align-items: center; display: flex; gap: 24px; justify-content: space-between; }
+  .cta-band h2 { font-family: var(--display); font-size: clamp(34px, 5vw, 72px); font-weight: 400; letter-spacing: -0.03em; line-height: .96; }
+  .cta-band p { color: var(--ink-2); line-height: 1.55; margin-top: 12px; max-width: 54ch; }
+
+  @media (max-width: 980px) {
+    .hero__grid, .post { grid-template-columns: 1fr; }
+    .post__meta { text-align: left; }
+    .cta-band__inner { align-items: flex-start; flex-direction: column; }
+  }
+  @media (max-width: 640px) {
+    .wrap { padding-left: 24px; padding-right: 24px; }
+    .hero { padding-top: 52px; }
+    .post { padding: 26px; }
+  }
+</style>
+<link rel="stylesheet" href="assets/site-components.css" />
+</head>
+<body>
+<!-- SHARED_NAV_START -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="logo">ALTOS<i>.</i></a>
+    <div class="nav__links">
+      <a href="index.html#services">Services</a>
+      <a href="cas-usage.html">Cas d'usage</a>
+      <a href="index.html#process">Méthode</a>
+      <a href="index.html#ambassadeur">Ambassadeur</a>
+      <a href="index.html#about">À propos</a>
+      <a href="micro-audit.html">Micro-audit</a>
+      <a href="journal.html">Journal</a>
+    </div>
+    <div class="nav__cta">
+      <span class="nav__time">FR · 2026</span>
+      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Diagnostic 30 min
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+<!-- SHARED_NAV_END -->
+
+<main>
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <span class="num">Journal ALTOS</span>
+        <h1>Terrain, IA et <i>PME</i>.</h1>
+      </div>
+      <p>Retours d'audits, enseignements rÃ©currents et cas concrets pour comprendre oÃ¹ l'IA et l'automatisation crÃ©ent vraiment de la valeur dans les petites Ã©quipes.</p>
+    </div>
+  </section>
+
+  <section class="journal-list">
+    <div class="wrap">
+      <div class="journal-grid">
+        <a class="post" href="journal/120-audits-ia-quick-wins-pme.html">
+          <div class="post__date">14 mai 2026</div>
+          <div>
+            <h2>120 audits IA plus tard : les 5 <i>quick wins</i> qu'on retrouve dans 80 % des PME.</h2>
+            <p class="post__excerpt">SynthÃ¨se de terrain sur les chantiers qui reviennent presque systÃ©matiquement : tri des demandes, devis, relances, documents et consolidation d'informations.</p>
+          </div>
+          <div class="post__meta">MÃ©thode Â· 12 min</div>
+        </a>
+
+        <a class="post" href="journal/6-audits-6-secteurs-meme-verdict.html">
+          <div class="post__date">12 mai 2026</div>
+          <div>
+            <h2>Six audits flash IA, six secteurs sans rapport, le <i>mÃªme</i> verdict.</h2>
+            <p class="post__excerpt">Coiffure, froid commercial, patrimoine, Ã©vÃ©nementiel, services Ã  la personne : les frictions changent de vocabulaire, mais les leviers opÃ©rationnels se rÃ©pÃ¨tent.</p>
+          </div>
+          <div class="post__meta">Terrain Â· 9 min</div>
+        </a>
+
+        <a class="post" href="journal/pharmacie-officine-ia-audience-oubliee.html">
+          <div class="post__date">10 mai 2026</div>
+          <div>
+            <h2>Pharmacie d'officine et IA : l'<i>audience</i> qu'on oublie.</h2>
+            <p class="post__excerpt">Pourquoi les Ã©quipes officinales peuvent tirer profit d'automatisations simples, sans dÃ©grader la relation patient ni ajouter une couche d'outil inutile.</p>
+          </div>
+          <div class="post__meta">Sectoriel Â· 11 min</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap cta-band__inner">
+      <div>
+        <span class="num">Premier pas</span>
+        <h2>Un sujet Ã  creuser ?</h2>
+        <p>On peut regarder votre activitÃ©, repÃ©rer les tÃ¢ches rÃ©pÃ©titives qui coÃ»tent du temps et dÃ©cider si un audit flash vaut le coup.</p>
+      </div>
+      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Diagnostic 30 min
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </section>
+</main>
+
+<!-- SHARED_FOOTER_START -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <a href="index.html" class="site-footer__logo">ALTOS<i>.</i></a>
+        <p>Groupement d'experts métiers et ambassadeurs IA, au service des TPE et PME françaises.</p>
+      </div>
+      <div>
+        <h4>Parcours</h4>
+        <ul>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="cas-usage.html">Cas d'usage</a></li>
+          <li><a href="micro-audit.html">Micro-audit</a></li>
+          <li><a href="journal.html">Journal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://cal.com/nicolas-darcos-uldxct/30min">Diagnostic 30 min</a></li>
+          <li><a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a></li>
+          <li><a href="https://www.linkedin.com/in/nicolas-darcos-40283035/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Officiel</h4>
+        <ul>
+          <li><a href="assets/charte-ambassadeurs-ia.pdf" target="_blank" rel="noopener">Charte Ambassadeur IA</a></li>
+          <li><a href="https://www.entreprises.gouv.fr/osezlia" target="_blank" rel="noopener">Annuaire Osez l'IA</a></li>
+          <li><a href="https://www.francenum.gouv.fr" target="_blank" rel="noopener">France Num</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© 2026 ALTOS — Groupement</span>
+      <span><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></span>
+    </div>
+  </div>
+</footer>
+<!-- SHARED_FOOTER_END -->
+
+<script src="assets/calcom.js"></script>
+</body>
+</html>

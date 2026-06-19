@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="utf-8" />
@@ -52,32 +52,7 @@
   .wrap { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
   .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 32px; }
   .num { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.1em; text-transform: uppercase; }
-
-  /* NAV */
-  .nav { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--ink); }
-  .nav__inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 18px 32px; max-width: 1320px; margin: 0 auto; }
-  .logo { font-family: var(--display); font-weight: 900; font-size: 22px; letter-spacing: -0.04em; }
-  .logo i { font-style: italic; color: var(--accent); }
-  .nav__links { display: flex; gap: 32px; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
-  .nav__links a:hover { color: var(--accent); }
-  .nav__cta { display: flex; justify-content: flex-end; align-items: center; gap: 14px; }
-  .nav__time { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.08em; }
-  .btn {
-    display: inline-flex; align-items: center; gap: 12px;
-    padding: 16px 26px; font-family: var(--sans);
-    font-weight: 500; font-size: 14px;
-    border: 1px solid var(--ink); background: var(--ink); color: var(--bg);
-    cursor: pointer; position: relative; overflow: hidden; transition: color .3s;
-  }
-  .btn::before { content: ""; position: absolute; inset: 0; background: var(--accent); transform: translateY(101%); transition: transform .4s cubic-bezier(.7,0,.3,1); z-index: -1; }
-  .btn:hover::before { transform: translateY(0); }
-  .btn--ghost { background: transparent; color: var(--ink); }
-  .btn--ghost::before { background: var(--ink); }
-  .btn--ghost:hover { color: var(--bg); }
-  .btn .arrow { transition: transform .3s; }
-  .btn:hover .arrow { transform: translateX(4px); }
-
-  /* HEADER */
+/* HEADER */
   .article-header {
     border-bottom: 1px solid var(--ink);
     padding: 64px 0 56px;
@@ -244,17 +219,7 @@
   .article-cta h2 i { font-style: italic; color: var(--accent); }
   .article-cta p { color: #b3b3b3; max-width: 56ch; margin: 0 auto 32px; line-height: 1.5; }
   .article-cta .btn { border-color: var(--bg); background: var(--accent); border-color: var(--accent); }
-
-  /* FOOTER */
-  footer { background: var(--bg); border-top: 1px solid var(--ink); padding: 48px 0; }
-  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px; }
-  footer .note { max-width: 64ch; font-size: 13px; color: var(--ink-2); line-height: 1.55; }
-  footer .right { font-family: var(--mono); font-size: 11px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.06em; text-align: right; }
-  footer .right a { color: var(--ink); text-transform: none; letter-spacing: 0; }
-  footer .right a:hover { color: var(--accent); }
-
-  @media (max-width: 700px) {
-    .nav__links { display: none; }
+@media (max-width: 700px) {
     .qw__meta { grid-template-columns: 1fr; }
     .qw__meta > div { border-right: none; border-bottom: 1px solid var(--ink); }
     .qw__meta > div:last-child { border-bottom: none; }
@@ -276,27 +241,32 @@
   "inLanguage": "fr-FR"
 }
 </script>
+<link rel="stylesheet" href="../assets/site-components.css" />
 </head>
 <body>
 
-<!-- NAV -->
+<!-- SHARED_NAV_START -->
 <nav class="nav">
   <div class="nav__inner">
     <a href="../index.html" class="logo">ALTOS<i>.</i></a>
     <div class="nav__links">
       <a href="../index.html#services">Services</a>
-      <a href="../cas-usage.html">Réalisations</a>
+      <a href="../cas-usage.html">Cas d'usage</a>
       <a href="../index.html#process">Méthode</a>
-      <a href="../index.html#blog">Journal</a>
+      <a href="../index.html#ambassadeur">Ambassadeur</a>
+      <a href="../index.html#about">À propos</a>
+      <a href="../micro-audit.html">Micro-audit</a>
+      <a href="../journal.html">Journal</a>
     </div>
     <div class="nav__cta">
       <span class="nav__time">FR · 2026</span>
-      <a href="../index.html#contact" class="btn">Prendre RDV
+      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Diagnostic 30 min
         <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
     </div>
   </div>
 </nav>
+<!-- SHARED_NAV_END -->
 
 <!-- HEADER -->
 <header class="article-header">
@@ -463,18 +433,55 @@
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="wrap">
-    <div class="note">
-      <b>À propos —</b> Altos est un studio digital pluridisciplinaire qui accompagne les PME, TPE et organisations professionnelles dans le déploiement d'agents IA et d'automatisations no-code. Les chiffres et cas cités sont issus de bilans réels anonymisés (RGPD).
+<section class="site-page-note">
+  <div class="site-page-note__inner">
+    <div class="site-page-note__body"><b>À propos —</b> Altos est un studio digital pluridisciplinaire qui accompagne les PME, TPE et organisations professionnelles dans le déploiement d'agents IA et d'automatisations no-code. Les chiffres et cas cités sont issus de bilans réels anonymisés (RGPD).</div>
+  </div>
+</section>
+
+<!-- SHARED_FOOTER_START -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <a href="../index.html" class="site-footer__logo">ALTOS<i>.</i></a>
+        <p>Groupement d'experts métiers et ambassadeurs IA, au service des TPE et PME françaises.</p>
+      </div>
+      <div>
+        <h4>Parcours</h4>
+        <ul>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../cas-usage.html">Cas d'usage</a></li>
+          <li><a href="../micro-audit.html">Micro-audit</a></li>
+          <li><a href="../journal.html">Journal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://cal.com/nicolas-darcos-uldxct/30min">Diagnostic 30 min</a></li>
+          <li><a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a></li>
+          <li><a href="https://www.linkedin.com/in/nicolas-darcos-40283035/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Officiel</h4>
+        <ul>
+          <li><a href="../assets/charte-ambassadeurs-ia.pdf" target="_blank" rel="noopener">Charte Ambassadeur IA</a></li>
+          <li><a href="https://www.entreprises.gouv.fr/osezlia" target="_blank" rel="noopener">Annuaire Osez l'IA</a></li>
+          <li><a href="https://www.francenum.gouv.fr" target="_blank" rel="noopener">France Num</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="right">
-      <div>Altos · Journal · 2025/26</div>
-      <div style="margin-top:6px"><a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a></div>
-      <div style="margin-top:6px"><a href="../index.html">← Retour à l'accueil</a></div>
+    <div class="site-footer__bottom">
+      <span>© 2026 ALTOS — Groupement</span>
+      <span><a href="../mentions-legales.html">Mentions légales</a> · <a href="../confidentialite.html">Confidentialité</a></span>
     </div>
   </div>
 </footer>
+<!-- SHARED_FOOTER_END -->
 
+
+<script src="../assets/calcom.js"></script>
 </body>
 </html>

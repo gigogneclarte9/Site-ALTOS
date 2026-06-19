@@ -1,0 +1,39 @@
+# Secrets / environment
+.env
+.env.*
+!.env.example
+
+# Dependencies / build outputs
+node_modules/
+dist/
+build/
+coverage/
+.next/
+.astro/
+.cache/
+.tmp/
+tmp/
+
+# Logs
+*.log
+logs/
+
+# Local or private project data
+/uploads/
+/work/
+/audits-raw/
+/audits-extracted/
+/assets/audit-bot.js
+/private/
+/server/storage/
+/backups/
+/exports/
+/generated/
+
+# Design and capture artifacts
+/screenshots/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp

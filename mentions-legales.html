@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="utf-8" />
@@ -50,27 +50,6 @@
 
   .wrap { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
   .num { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.1em; text-transform: uppercase; }
-
-  .btn {
-    display: inline-flex; align-items: center; gap: 12px;
-    padding: 16px 26px; font-family: var(--sans);
-    font-weight: 500; font-size: 14px;
-    border: 1px solid var(--ink); background: var(--ink); color: var(--bg);
-    cursor: pointer; transition: background .2s, color .2s;
-    text-decoration: none;
-  }
-  .btn:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-
-  /* NAV */
-  .nav { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--ink); }
-  .nav__inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 18px 32px; max-width: 1320px; margin: 0 auto; }
-  .logo { font-family: var(--display); font-weight: 900; font-size: 22px; letter-spacing: -0.04em; text-decoration: none; }
-  .logo i { font-style: italic; color: var(--accent); }
-  .nav__links { display: flex; gap: 32px; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
-  .nav__links a { transition: color .2s; text-decoration: none; }
-  .nav__links a:hover { color: var(--accent); }
-  .nav__cta { display: flex; justify-content: flex-end; align-items: center; gap: 14px; }
-  .nav__time { font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.08em; }
 
   /* HERO */
   .hero {
@@ -199,47 +178,40 @@
     font-size: 13px;
     color: var(--ink);
   }
-
-  /* FOOTER */
-  footer.foot {
-    border-top: 1px solid var(--ink); background: var(--bg);
-    padding: 48px 0 24px;
-  }
-  footer.foot .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px; align-items: end; }
-  footer.foot .note { max-width: 56ch; font-size: 13px; color: var(--ink-3); line-height: 1.55; }
-  footer.foot .right { font-family: var(--mono); font-size: 11px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.06em; text-align: right; line-height: 1.8; }
-  footer.foot .right a { color: var(--ink); text-decoration: none; text-transform: none; letter-spacing: 0; }
-  footer.foot .right a:hover { color: var(--accent); }
-
-  @media (max-width: 900px) {
+@media (max-width: 900px) {
     .doc { grid-template-columns: 1fr; gap: 48px; }
     .toc { position: static; border-left: none; border-top: 1px solid var(--ink); padding: 24px 0 0; }
-    .nav__links { display: none; }
     article.doc__body .id-card { grid-template-columns: 1fr; gap: 6px; }
     article.doc__body .id-card dt { padding-top: 12px; border-top: 1px dashed var(--line); }
     article.doc__body .id-card dt:first-child { padding-top: 0; border-top: none; }
   }
 </style>
+<link rel="stylesheet" href="assets/site-components.css" />
 </head>
 <body>
 
-<!-- NAV -->
+<!-- SHARED_NAV_START -->
 <nav class="nav">
   <div class="nav__inner">
     <a href="index.html" class="logo">ALTOS<i>.</i></a>
     <div class="nav__links">
       <a href="index.html#services">Services</a>
       <a href="cas-usage.html">Cas d'usage</a>
+      <a href="index.html#process">Méthode</a>
       <a href="index.html#ambassadeur">Ambassadeur</a>
+      <a href="index.html#about">À propos</a>
       <a href="micro-audit.html">Micro-audit</a>
-      <a href="index.html#blog">Journal</a>
+      <a href="journal.html">Journal</a>
     </div>
     <div class="nav__cta">
       <span class="nav__time">FR · 2026</span>
-      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Prendre RDV</a>
+      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Diagnostic 30 min
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
     </div>
   </div>
 </nav>
+<!-- SHARED_NAV_END -->
 
 <!-- HERO -->
 <section class="hero">
@@ -396,26 +368,54 @@
 </div>
 
 <!-- FOOTER -->
-<footer class="foot">
-  <div class="wrap">
-    <div class="note">
-      <strong style="color:var(--ink)">ALTOS</strong> — Groupement d'experts métiers et ambassadeurs IA, au service des TPE et PME françaises. Mentions légales à jour au 19/05/2026, conformes à la loi LCEN et au RGPD.
+<section class="site-page-note">
+  <div class="site-page-note__inner">
+    <div class="site-page-note__body"><strong style="color:var(--ink)">ALTOS</strong> — Groupement d'experts métiers et ambassadeurs IA, au service des TPE et PME françaises. Mentions légales à jour au 19/05/2026, conformes à la loi LCEN et au RGPD.</div>
+  </div>
+</section>
+
+<!-- SHARED_FOOTER_START -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <a href="index.html" class="site-footer__logo">ALTOS<i>.</i></a>
+        <p>Groupement d'experts métiers et ambassadeurs IA, au service des TPE et PME françaises.</p>
+      </div>
+      <div>
+        <h4>Parcours</h4>
+        <ul>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="cas-usage.html">Cas d'usage</a></li>
+          <li><a href="micro-audit.html">Micro-audit</a></li>
+          <li><a href="journal.html">Journal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://cal.com/nicolas-darcos-uldxct/30min">Diagnostic 30 min</a></li>
+          <li><a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a></li>
+          <li><a href="https://www.linkedin.com/in/nicolas-darcos-40283035/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Officiel</h4>
+        <ul>
+          <li><a href="assets/charte-ambassadeurs-ia.pdf" target="_blank" rel="noopener">Charte Ambassadeur IA</a></li>
+          <li><a href="https://www.entreprises.gouv.fr/osezlia" target="_blank" rel="noopener">Annuaire Osez l'IA</a></li>
+          <li><a href="https://www.francenum.gouv.fr" target="_blank" rel="noopener">France Num</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="right">
-      <div>Altos · 2025/26</div>
-      <div><a href="index.html">← Retour à l'accueil</a></div>
-      <div><a href="confidentialite.html">Politique de confidentialité</a></div>
-      <div><a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a></div>
+    <div class="site-footer__bottom">
+      <span>© 2026 ALTOS — Groupement</span>
+      <span><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></span>
     </div>
   </div>
 </footer>
-
-<!-- Cal.com embed (popup mode) -->
-<script type="text/javascript">
-(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", "diag30", {origin:"https://cal.com"});
-Cal.ns.diag30("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-</script>
+<!-- SHARED_FOOTER_END -->
+<script src="assets/calcom.js"></script>
 
 </body>
 </html>

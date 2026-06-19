@@ -1,12 +1,9 @@
 User-agent: *
 Allow: /
 Disallow: /uploads/
-Disallow: /assets/charte-ambassadeurs-ia.pdf
 
-# Pas d'indexation des pages légales (déjà noindex en meta)
+# Legal pages already include a noindex meta tag.
 Disallow: /mentions-legales.html
 Disallow: /confidentialite.html
 
 Sitemap: https://altos.fr/sitemap.xml
-
-//alto est passé par là

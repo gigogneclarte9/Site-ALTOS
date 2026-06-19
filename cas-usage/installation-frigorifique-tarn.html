@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="utf-8" />
@@ -42,26 +42,32 @@
   "about": "PME installation technique · froid, clim, chauffage"
 }
 </script>
+<link rel="stylesheet" href="../assets/site-components.css" />
 </head>
 <body>
 
+<!-- SHARED_NAV_START -->
 <nav class="nav">
   <div class="nav__inner">
     <a href="../index.html" class="logo">ALTOS<i>.</i></a>
     <div class="nav__links">
       <a href="../index.html#services">Services</a>
-      <a href="../cas-usage.html">Réalisations</a>
+      <a href="../cas-usage.html">Cas d'usage</a>
       <a href="../index.html#process">Méthode</a>
-      <a href="../index.html#blog">Journal</a>
+      <a href="../index.html#ambassadeur">Ambassadeur</a>
+      <a href="../index.html#about">À propos</a>
+      <a href="../micro-audit.html">Micro-audit</a>
+      <a href="../journal.html">Journal</a>
     </div>
     <div class="nav__cta">
       <span class="nav__time">FR · 2026</span>
-      <a href="../index.html#contact" class="btn">Prendre RDV
+      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Diagnostic 30 min
         <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
     </div>
   </div>
 </nav>
+<!-- SHARED_NAV_END -->
 
 <header class="article-header">
   <div class="wrap-narrow">
@@ -208,24 +214,53 @@
   </div>
 </section>
 
-<footer>
-  <div class="wrap">
-    <div class="note">
-      <b>Note d'anonymisation —</b> Cet audit a été conduit par Altos en 2025 pour une structure réelle. Raison sociale, nom des dirigeants, localisations précises et numéro de dossier ont été retirés ou généralisés (RGPD). Les volumes (équipe, périmètre, outils) sont conformes au rapport d'audit. Les gains chiffrés sont des <b>projections</b>, établies à partir des données observées.
+<section class="site-page-note">
+  <div class="site-page-note__inner">
+    <div class="site-page-note__body"><b>Note d'anonymisation —</b> Cet audit a été conduit par Altos en 2025 pour une structure réelle. Raison sociale, nom des dirigeants, localisations précises et numéro de dossier ont été retirés ou généralisés (RGPD). Les volumes (équipe, périmètre, outils) sont conformes au rapport d'audit. Les gains chiffrés sont des <b>projections</b>, établies à partir des données observées.</div>
+  </div>
+</section>
+
+<!-- SHARED_FOOTER_START -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <a href="../index.html" class="site-footer__logo">ALTOS<i>.</i></a>
+        <p>Groupement d'experts métiers et ambassadeurs IA, au service des TPE et PME françaises.</p>
+      </div>
+      <div>
+        <h4>Parcours</h4>
+        <ul>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../cas-usage.html">Cas d'usage</a></li>
+          <li><a href="../micro-audit.html">Micro-audit</a></li>
+          <li><a href="../journal.html">Journal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://cal.com/nicolas-darcos-uldxct/30min">Diagnostic 30 min</a></li>
+          <li><a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a></li>
+          <li><a href="https://www.linkedin.com/in/nicolas-darcos-40283035/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Officiel</h4>
+        <ul>
+          <li><a href="../assets/charte-ambassadeurs-ia.pdf" target="_blank" rel="noopener">Charte Ambassadeur IA</a></li>
+          <li><a href="https://www.entreprises.gouv.fr/osezlia" target="_blank" rel="noopener">Annuaire Osez l'IA</a></li>
+          <li><a href="https://www.francenum.gouv.fr" target="_blank" rel="noopener">France Num</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="right">
-      <div>Altos · Cas d'usage · 2025/26</div>
-      <div style="margin-top:6px"><a href="mailto:bonjour@altos.fr">bonjour@altos.fr</a></div>
-      <div style="margin-top:6px"><a href="../cas-usage.html">← Tous les cas</a></div>
-      <div style="margin-top:6px"><a href="../mentions-legales.html">Mentions légales</a> · <a href="../confidentialite.html">Confidentialité</a></div>
+    <div class="site-footer__bottom">
+      <span>© 2026 ALTOS — Groupement</span>
+      <span><a href="../mentions-legales.html">Mentions légales</a> · <a href="../confidentialite.html">Confidentialité</a></span>
     </div>
   </div>
 </footer>
-
-<script type="text/javascript">
-(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", "diag30", {origin:"https://cal.com"});
-Cal.ns.diag30("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-</script>
+<!-- SHARED_FOOTER_END -->
+<script src="../assets/calcom.js"></script>
 </body>
 </html>

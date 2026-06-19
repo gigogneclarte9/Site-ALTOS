@@ -1,0 +1,26 @@
+# Public deployment allowlist for the current static site.
+# Anything not listed here should stay out of the Nginx public root.
+
+index.html
+cas-usage.html
+micro-audit.html
+micro-audit.js
+journal.html
+mentions-legales.html
+confidentialite.html
+robots.txt
+sitemap.xml
+
+assets/charte-ambassadeurs-ia.pdf
+assets/nicolas-darcos.jpg
+assets/og-default.png
+assets/case-filters.js
+assets/calcom.js
+assets/reveal.js
+assets/site.css
+assets/site-components.css
+
+cas-usage/*.html
+cas-usage/_case-style.css
+
+journal/*.html

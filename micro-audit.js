@@ -3,6 +3,14 @@
    10 questions → bilan express + PDF
    ───────────────────────────────────────────── */
 
+const API_BASE_URL = window.ALTOS_API_BASE_URL || (
+  ['localhost', '127.0.0.1'].includes(window.location.hostname)
+    ? 'http://127.0.0.1:3001/api'
+    : '/api'
+);
+
+const CONSENT_TEXT = "En soumettant ce formulaire, vous acceptez d'etre recontacte par Altos sous 48h ouvrees. Donnees conservees 12 mois, non revendues. Droit a l'effacement sur demande a bonjour@altos.fr.";
+
 const QUESTIONS = [
   {
     id: 'admin_hours',
@@ -196,7 +204,7 @@ contactStep.dataset.idx = TOTAL_QUESTIONS;
 contactStep.innerHTML = `
   <span class="q-cat">§ Coordonnées</span><span class="q-num">étape finale</span>
   <h2 class="q-title">Vos coordonnées pour <i>recevoir le bilan</i>.</h2>
-  <p class="q-hint">Le PDF est généré localement et téléchargeable immédiatement. Nous gardons vos coordonnées pour vous joindre — jamais revendues, jamais ajoutées à une liste de diffusion automatique.</p>
+  <p class="q-hint">Vos réponses sont enregistrées de façon sécurisée pour permettre à Altos de vous recontacter avec un diagnostic utile. Le bilan reste téléchargeable immédiatement.</p>
   <div class="form-grid">
     <div class="field">
       <label for="firstName">Prénom</label>
@@ -215,7 +223,7 @@ contactStep.innerHTML = `
       <input id="phone" type="tel" autocomplete="tel" required />
     </div>
   </div>
-  <p class="consent">En soumettant ce formulaire, vous acceptez d'être recontacté par Altos sous 48h ouvrées. Données conservées 12 mois, non revendues. Conforme RGPD — droit à l'effacement sur simple demande à bonjour@altos.fr.</p>
+  <p class="consent">${CONSENT_TEXT}</p>
   <div class="step__nav">
     <button class="nav-btn" data-action="prev">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 7H2M6 3L2 7l4 4"/></svg>
@@ -260,11 +268,12 @@ function updateProgress() {
   document.getElementById('progressPct').textContent = pct + ' %';
 }
 
-function submitContact() {
+async function submitContact() {
   const fn = document.getElementById('firstName');
   const ln = document.getElementById('lastName');
   const em = document.getElementById('email');
   const ph = document.getElementById('phone');
+  const submitBtn = document.querySelector('.contact-step [data-action="submit"]');
   let ok = true;
   [fn, ln, em, ph].forEach(input => {
     input.classList.remove('invalid');
@@ -280,15 +289,30 @@ function submitContact() {
     email: em.value.trim(),
     phone: ph.value.trim(),
   };
-  // Persist locally as a contact record (in lieu of backend)
-  const records = JSON.parse(localStorage.getItem('altos_audit_leads') || '[]');
-  records.push({
-    ts: new Date().toISOString(),
-    contact: state.contact,
-    answers: state.answers,
-    score: computeScore().total,
-  });
-  localStorage.setItem('altos_audit_leads', JSON.stringify(records));
+
+  const summary = buildBilanSummary();
+  const payload = buildAuditPayload(summary);
+
+  try {
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.dataset.originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Enregistrement...';
+    }
+
+    state.auditSubmission = await submitMicroAudit(payload);
+    state.bilan = summary;
+  } catch (error) {
+    console.error(error);
+    alert("Impossible d'enregistrer le micro-audit pour le moment. Veuillez reessayer dans quelques instants.");
+    return;
+  } finally {
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = submitBtn.dataset.originalText || 'Generer mon bilan';
+    }
+  }
+
   revealBilan();
 }
 
@@ -355,9 +379,103 @@ const QUICKWIN_LIB = {
   },
 };
 
+function buildBilanSummary() {
+  const { total, axes, topAxis } = computeScore();
+  const hoursPerWeek = Math.round(total * 0.8);
+  let roi = "+150 à +300 %";
+  if (total >= 18) roi = "+400 à +700 %";
+  else if (total >= 12) roi = "+250 à +450 %";
+
+  const picks = [];
+  picks.push(QUICKWIN_LIB[topAxis]);
+
+  if (state.answers[5] && state.answers[5].score >= 2 && topAxis !== 'commercial') {
+    picks.push(QUICKWIN_LIB.content);
+  } else {
+    const ordered = ['admin', 'data', 'commercial', 'documents']
+      .filter(k => k !== topAxis)
+      .sort((a, b) => (axes[b] || 0) - (axes[a] || 0));
+    picks.push(QUICKWIN_LIB[ordered[0]]);
+  }
+
+  if (state.answers[7] && state.answers[7].score >= 2) {
+    picks.push(QUICKWIN_LIB.ia);
+  } else {
+    const remaining = ['admin', 'data', 'commercial', 'documents']
+      .filter(k => !picks.some(p => p === QUICKWIN_LIB[k]))
+      .sort((a, b) => (axes[b] || 0) - (axes[a] || 0));
+    if (remaining[0]) picks.push(QUICKWIN_LIB[remaining[0]]);
+  }
+
+  return { total, axes, topAxis, picks: picks.slice(0, 3), hoursPerWeek, roi };
+}
+
+function buildAuditPayload(summary) {
+  return {
+    contact: state.contact,
+    consentAccepted: true,
+    consentText: CONSENT_TEXT,
+    answers: state.answers.map((answer, index) => {
+      const question = QUESTIONS[index];
+      const option = question.options[answer.optIdx];
+      return {
+        questionId: question.id,
+        optionIndex: answer.optIdx,
+        score: answer.score,
+        label: option.label,
+        axis: question.axis,
+      };
+    }),
+    score: {
+      total: summary.total,
+      max: 30,
+      axes: summary.axes,
+      topAxis: summary.topAxis,
+    },
+    recommendations: summary.picks.map((pick) => ({
+      title: pick.title,
+      desc: pick.desc,
+      stack: pick.stack,
+      gain: pick.gain,
+    })),
+    roi: {
+      label: summary.roi,
+      hoursPerWeek: summary.hoursPerWeek,
+    },
+    source: 'micro_audit_web',
+  };
+}
+
+async function submitMicroAudit(payload) {
+  const response = await fetch(`${API_BASE_URL}/micro-audits`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+
+  if (!response.ok) {
+    const details = await response.text();
+    throw new Error(`Micro-audit API failed with ${response.status}: ${details}`);
+  }
+
+  return response.json();
+}
+
+function resolveApiUrl(path) {
+  if (!path) return '';
+  if (/^https?:\/\//i.test(path)) return path;
+  if (path.startsWith('/api') && API_BASE_URL.endsWith('/api')) {
+    return `${API_BASE_URL}${path.slice('/api'.length)}`;
+  }
+  return path;
+}
+
 /* ─── REVEAL BILAN ─────────────────────────── */
 function revealBilan() {
-  const { total, axes, topAxis } = computeScore();
+  const summary = state.bilan || buildBilanSummary();
+  const { total, axes, topAxis, picks, hoursPerWeek, roi } = summary;
+  state.bilan = summary;
+
   document.getElementById('audit-app').classList.add('hidden');
   document.getElementById('progressWrap').classList.add('hidden');
   document.getElementById('quiz').classList.add('hidden');
@@ -370,11 +488,7 @@ function revealBilan() {
   document.getElementById('bilanName').textContent = `${state.contact.firstName} ${state.contact.lastName}`;
 
   // Estimate
-  const hoursPerWeek = Math.round(total * 0.8); // rough heuristic
   document.getElementById('estimateHours').textContent = `~${hoursPerWeek} h / semaine sur 12 mois`;
-  let roi = "+150 à +300 %";
-  if (total >= 18) roi = "+400 à +700 %";
-  else if (total >= 12) roi = "+250 à +450 %";
   document.getElementById('estimateRoi').textContent = roi;
 
   // Heatmap
@@ -410,32 +524,9 @@ function revealBilan() {
     `);
   });
 
-  // Quick wins: top axis + content if Q5/Q6 high + IA acculturation if low IA maturity
-  const picks = [];
-  picks.push(QUICKWIN_LIB[topAxis]);
-  // Second: content if Q6 (idx 5) high
-  if (state.answers[5] && state.answers[5].score >= 2 && topAxis !== 'commercial') {
-    picks.push(QUICKWIN_LIB.content);
-  } else {
-    // Second-highest actionable axis
-    const ordered = ['admin', 'data', 'commercial', 'documents']
-      .filter(k => k !== topAxis)
-      .sort((a, b) => (axes[b] || 0) - (axes[a] || 0));
-    picks.push(QUICKWIN_LIB[ordered[0]]);
-  }
-  // Third: IA acculturation if maturity low (Q8 idx 7 high score), else 2nd next axis
-  if (state.answers[7] && state.answers[7].score >= 2) {
-    picks.push(QUICKWIN_LIB.ia);
-  } else {
-    const remaining = ['admin', 'data', 'commercial', 'documents']
-      .filter(k => !picks.some(p => p === QUICKWIN_LIB[k]))
-      .sort((a, b) => (axes[b] || 0) - (axes[a] || 0));
-    if (remaining[0]) picks.push(QUICKWIN_LIB[remaining[0]]);
-  }
-
   const qwHost = document.getElementById('quickwins');
   qwHost.innerHTML = '';
-  picks.slice(0, 3).forEach((q, i) => {
+  picks.forEach((q, i) => {
     qwHost.insertAdjacentHTML('beforeend', `
       <div class="qw">
         <div class="qw__num">0${i + 1}</div>
@@ -449,15 +540,22 @@ function revealBilan() {
     `);
   });
 
-  // Save picks for PDF
-  state.bilan = { total, axes, topAxis, picks: picks.slice(0, 3), hoursPerWeek, roi };
-
   // Scroll to bilan
   window.scrollTo({ top: bilan.offsetTop - 70, behavior: 'smooth' });
 }
 
 /* ─── PDF EXPORT ───────────────────────────── */
-document.getElementById('downloadPdf').addEventListener('click', generatePdf);
+document.getElementById('downloadPdf').addEventListener('click', downloadPdf);
+
+function downloadPdf() {
+  const pdfUrl = state.auditSubmission && state.auditSubmission.pdfUrl;
+  if (pdfUrl) {
+    window.location.href = resolveApiUrl(pdfUrl);
+    return;
+  }
+
+  generatePdf();
+}
 
 function generatePdf() {
   const { jsPDF } = window.jspdf;

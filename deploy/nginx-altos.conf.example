@@ -1,0 +1,64 @@
+# Example Nginx configuration for altos.fr.
+# Adapt paths and server_name on the VPS.
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name altos.fr www.altos.fr;
+
+    return 301 https://altos.fr$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name www.altos.fr;
+
+    ssl_certificate /etc/letsencrypt/live/altos.fr/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/altos.fr/privkey.pem;
+
+    return 301 https://altos.fr$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name altos.fr;
+
+    root /var/www/altos/current/public;
+    index index.html;
+
+    ssl_certificate /etc/letsencrypt/live/altos.fr/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/altos.fr/privkey.pem;
+
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+    add_header Permissions-Policy "camera=(), microphone=(), geolocation=()" always;
+
+    client_max_body_size 2m;
+
+    location /api/ {
+        proxy_pass http://127.0.0.1:3001/api/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location ~* ^/(uploads|work|audits-raw|audits-extracted|screenshots|private|backups|exports|generated)/ {
+        deny all;
+        return 404;
+    }
+
+    location ~* \.(?:css|js|jpg|jpeg|png|webp|svg|pdf)$ {
+        expires 30d;
+        add_header Cache-Control "public, max-age=2592000";
+        try_files $uri =404;
+    }
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
