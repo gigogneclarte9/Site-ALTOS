@@ -27,6 +27,7 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 - Title de 51 caracteres et meta description de 145 caracteres.
 - Donnees JSON-LD valides et coherentes avec le contenu visible.
 - Lighthouse local : SEO 100, performance 99, accessibilite 98.
+- Deploiement production valide : accueil, H1, FAQ, version API, `robots.txt` et 17 URL du sitemap operationnels.
 
 ## [0.4.3] - 2026-08-06
 
