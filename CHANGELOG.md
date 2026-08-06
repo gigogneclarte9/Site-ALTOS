@@ -6,6 +6,27 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 
 ## [Unreleased]
 
+## [0.4.9] - 2026-08-06
+
+### Ajoute
+
+- Resume factuel sur les sept etudes de cas restantes, avec constat observe, solution proposee, gains projetes et liens vers les trois pages piliers.
+
+### Change
+
+- Titles, descriptions, H1 et apercus sociaux des dix etudes de cas desormais harmonises autour de leur secteur, du probleme metier et de la solution.
+- Donnees structurees `Article` enrichies sur les sept cas avec dates, auteur, sujets, services cites et mots-cles.
+- Gains estimatifs reformules comme projections a confirmer, notamment pour la qualite, le SAV, l'immobilier et les contrats d'entretien.
+- Index des cas aligne sur les nouvelles intentions SEO et le statut projete des indicateurs.
+- Dates `lastmod` des sept URL modifiees mises a jour, sans changement du nombre d'URL du sitemap.
+
+### Verifie
+
+- Sept pages avec un H1 unique, un resume factuel, trois liens vers les pages piliers et un schema `Article` valide.
+- Titles de 51 a 59 caracteres et descriptions de 144 a 148 caracteres.
+- Sitemap XML valide avec 20 URL uniques, toutes controlees en `200` local.
+- Liens internes des huit pages modifiees controles sans cible absente.
+
 ## [0.4.8] - 2026-08-06
 
 ### Ajoute
