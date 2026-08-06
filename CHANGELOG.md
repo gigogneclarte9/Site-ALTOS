@@ -25,6 +25,7 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 - Page Agents IA en `200` local avec un H1, title de 55 caracteres, description de 155 caracteres et plus de 1 500 mots dans le contenu principal.
 - Six FAQ visibles identiques aux donnees structurees, sans identifiant duplique.
 - Navigation partagee coherente sur 23 pages et sitemap local de 20 URL uniques, toutes en `200`.
+- Deploiement production valide : page Agents IA, maillage depuis l'accueil, version API `0.4.7` et 20 URL du sitemap operationnels.
 
 ## [0.4.6] - 2026-08-06
 
