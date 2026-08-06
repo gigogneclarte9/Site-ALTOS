@@ -27,6 +27,7 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 - Page Audit IA : un H1, title de 49 caracteres, description de 145 caracteres et six FAQ visibles identiques aux donnees structurees.
 - Sitemap local : 18 URL uniques, toutes en `200`.
 - TypeScript, build serveur et cinq cas de test du scoring valides.
+- Deploiement production valide : page Audit IA, navigation mobile, version API et 18 URL du sitemap operationnelles.
 
 ## [0.4.4] - 2026-08-06
 

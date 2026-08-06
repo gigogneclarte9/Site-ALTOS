@@ -46,7 +46,7 @@ https://www.altos-experts.fr/
 Etat valide :
 
 - depot clone dans `/opt/altos-deploy/Site-ALTOS` ;
-- commit deploye : `d1caff1` (release `0.4.4`) ;
+- commit deploye : `cfcda3a` (release `0.4.5`) ;
 - site public servi par Nginx depuis `/var/www/altos/current/public` ;
 - API Fastify servie en local sur `127.0.0.1:3001` ;
 - Nginx proxyfie `/api/`, `/admin` et `/documents/` vers l'API ;
@@ -63,12 +63,14 @@ Etat valide :
 - redirection HTTP -> HTTPS active ;
 - redirection `altos-experts.fr` -> `www.altos-experts.fr` active ;
 - certificat Let's Encrypt valide jusqu'au 2026-09-17 avec renouvellement automatique Certbot ;
-- `/api/health` repond avec `database.ok = true` et version `0.4.4` ;
+- `/api/health` repond avec `database.ok = true` et version `0.4.5` ;
 - `/index.html` redirige en `301` vers `/` ;
 - les URL inexistantes renvoient la page personnalisee avec un statut `404` ;
-- l'accueil public expose le H1, les six reponses FAQ et les metadonnees SEO/GEO de la release `0.4.4` ;
+- l'accueil public expose le H1, les six reponses FAQ et les metadonnees SEO/GEO de la release `0.4.5` ;
+- la page `/audit-ia-tpe-pme.html` repond en `200` avec un H1, six FAQ et des donnees structurees `Service` coherentes ;
+- la navigation mobile partagee est chargee sur les 21 pages publiques avec son script accessible ;
 - `robots.txt` autorise explicitement `OAI-SearchBot` et `PerplexityBot` ;
-- le sitemap public contient les 17 URL canoniques attendues, toutes verifiees en `200` ;
+- le sitemap public contient les 18 URL canoniques attendues, toutes verifiees en `200` ;
 - la configuration Nginx precedente est sauvegardee dans `/etc/nginx/sites-available/altos.bak-20260806-seo`.
 
 Points volontairement restants avant production complete :
