@@ -9,6 +9,7 @@ const rootPages = [
   'index.html',
   '404.html',
   'audit-ia-tpe-pme.html',
+  'automatisation-processus-pme.html',
   'cas-usage.html',
   'micro-audit.html',
   'journal.html',

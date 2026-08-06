@@ -1,4 +1,4 @@
-/* Page pilier Audit IA — extensions au langage visuel ALTOS. */
+/* Pages piliers SEO/GEO — extensions au langage visuel ALTOS. */
 
 .audit-hero-actions {
   display: flex;
@@ -78,6 +78,12 @@
 .answer-copy strong {
   color: var(--ink);
   font-weight: 600;
+}
+
+.answer-copy a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .answer-card {

@@ -6,6 +6,26 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 
 ## [Unreleased]
 
+## [0.4.6] - 2026-08-06
+
+### Ajoute
+
+- Page pilier `automatisation-processus-pme.html` consacree aux processus automatisables, a la difference entre workflow et agent IA, a la methode de deploiement et aux controles de fiabilite.
+- Exemples relies aux audits SAV, commandes B2B et recherche documentaire, avec statut de projection explicite.
+- Donnees structurees `Service`, `WebPage`, `BreadcrumbList`, `Organization`, `Person` et `FAQPage` alignees sur le contenu visible.
+
+### Change
+
+- Service `Automatisation` de l'accueil transforme en lien HTML vers la nouvelle page pilier.
+- Liens contextuels ajoutes depuis la page Audit IA et trois etudes de cas directement pertinentes.
+- Navigation mobile, footer, sitemap et liste blanche de deploiement etendus a la nouvelle page.
+
+### Verifie
+
+- Page Automatisation en `200` local avec un H1, title de 57 caracteres et description de 143 caracteres.
+- Six FAQ visibles identiques aux donnees structurees, sans identifiant duplique ni ancre manquante.
+- Navigation partagee coherente sur 22 pages et sitemap local de 19 URL uniques, toutes en `200`.
+
 ## [0.4.5] - 2026-08-06
 
 ### Ajoute
