@@ -26,6 +26,7 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 - Titles de 51 a 59 caracteres et descriptions de 144 a 148 caracteres.
 - Sitemap XML valide avec 20 URL uniques, toutes controlees en `200` local.
 - Liens internes des huit pages modifiees controles sans cible absente.
+- Deploiement production valide : version API `0.4.9`, sept nouveaux cas optimises et 20 URL du sitemap en `200`.
 
 ## [0.4.8] - 2026-08-06
 
