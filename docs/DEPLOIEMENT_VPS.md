@@ -33,7 +33,7 @@ ssh -i "C:\Users\Admin\.ssh\altos_vps_ed25519" -o BatchMode=yes ubuntu@51.210.45
 
 Cette cle ne doit pas etre committee. Seul le chemin local est documente pour faciliter les interventions depuis la machine de developpement.
 
-## Etat du VPS au 2026-06-19
+## Etat du VPS au 2026-08-06
 
 Premier deploiement applicatif realise sur le VPS OVH.
 
@@ -46,7 +46,7 @@ https://www.altos-experts.fr/
 Etat valide :
 
 - depot clone dans `/opt/altos-deploy/Site-ALTOS` ;
-- commit deploye : `baf06ea` ;
+- commit deploye : `b339984` ;
 - site public servi par Nginx depuis `/var/www/altos/current/public` ;
 - API Fastify servie en local sur `127.0.0.1:3001` ;
 - Nginx proxyfie `/api/`, `/admin` et `/documents/` vers l'API ;
@@ -63,7 +63,11 @@ Etat valide :
 - redirection HTTP -> HTTPS active ;
 - redirection `altos-experts.fr` -> `www.altos-experts.fr` active ;
 - certificat Let's Encrypt valide jusqu'au 2026-09-17 avec renouvellement automatique Certbot ;
-- `/api/health` repond avec `database.ok = true` et version `0.4.1` apres deploiement du commit correspondant.
+- `/api/health` repond avec `database.ok = true` et version `0.4.3` ;
+- `/index.html` redirige en `301` vers `/` ;
+- les URL inexistantes renvoient la page personnalisee avec un statut `404` ;
+- le sitemap public contient les 17 URL canoniques attendues ;
+- la configuration Nginx precedente est sauvegardee dans `/etc/nginx/sites-available/altos.bak-20260806-seo`.
 
 Points volontairement restants avant production complete :
 
