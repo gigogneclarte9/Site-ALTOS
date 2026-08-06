@@ -6,6 +6,26 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 
 ## [Unreleased]
 
+## [0.4.8] - 2026-08-06
+
+### Ajoute
+
+- Resume factuel en tete des cas froid commercial, agence evenementielle et quincaillerie rurale, avec constat observe, solution proposee et statut explicite des gains.
+- Maillage direct de chaque resume vers les pages piliers Audit IA, Automatisation et Agents IA.
+
+### Change
+
+- Titles, descriptions, H1 et apercus sociaux des trois etudes de cas alignes sur le secteur, le probleme metier et la solution recherchee.
+- Donnees structurees `Article` enrichies avec description, dates, auteur identifie, sujets, services cites et mots-cles.
+- Cartes de l'index des cas reformulees et statuts des gains projetes rendus visibles.
+- Dates `lastmod` des trois URL mises a jour dans le sitemap, sans ajout ni suppression d'URL.
+
+### Verifie
+
+- Trois pages en `200` local avec un H1 chacune, titles de 54 a 56 caracteres et descriptions de 148 a 156 caracteres.
+- Schemas `Article` valides avec dates, trois services cites et cinq mots-cles par cas.
+- Resumes factuels responsives, trois liens vers les pages piliers par cas et sitemap maintenu a 20 URL uniques.
+
 ## [0.4.7] - 2026-08-06
 
 ### Ajoute
