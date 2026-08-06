@@ -1,7 +1,7 @@
 export const appVersion = {
-  releaseVersion: '0.4.2',
-  releaseName: 'Scoring micro-audit serveur',
-  releaseDate: '2026-06-19',
-  siteVersion: '0.4.2',
+  releaseVersion: '0.4.3',
+  releaseName: 'SEO technique et indexation',
+  releaseDate: '2026-08-06',
+  siteVersion: '0.4.3',
   adminVersion: '0.3.0',
 } as const;

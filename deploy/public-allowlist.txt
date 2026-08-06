@@ -2,6 +2,7 @@
 # Anything not listed here should stay out of the Nginx public root.
 
 index.html
+404.html
 cas-usage.html
 micro-audit.html
 micro-audit.js

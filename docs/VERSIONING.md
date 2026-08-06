@@ -1,15 +1,15 @@
 # Versioning ALTOS
 
-Date : 2026-06-19
+Date : 2026-08-06
 
 Objectif : garder une trace claire des versions du site public et de la zone admin, visible dans l'admin et documentee avant chaque commit/release.
 
 ## Version courante
 
 ```text
-Site public : 0.4.1
+Site public : 0.4.3
 Admin       : 0.3.0
-Release     : 0.4.1 - Deploiement VPS production
+Release     : 0.4.3 - SEO technique et indexation
 ```
 
 ## Fichiers de reference

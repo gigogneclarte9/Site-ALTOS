@@ -4,6 +4,28 @@ Toutes les evolutions notables du site ALTOS sont suivies ici.
 
 Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste en pre-production.
 
+## [0.4.3] - 2026-08-06
+
+### Ajoute
+
+- Audit SEO complet date du 2026-08-06 avec priorites, plan 90 jours et indicateurs de suivi.
+- Page 404 publique, navigable et non indexable.
+- Dix etudes de cas detaillees dans le sitemap XML.
+
+### Change
+
+- Liens partages vers l'accueil normalises sur l'URL canonique `/`.
+- Pages legales laissees explorables dans `robots.txt` afin que leur balise `noindex` puisse etre lue.
+- Configuration Nginx de reference preparee pour rediriger `/index.html` vers `/` et renvoyer de vraies erreurs 404.
+- Dates `lastmod` du sitemap alignees sur les dernieres modifications versionnees.
+
+### Verifie
+
+- Les 17 URL du sitemap sont uniques et repondent localement en `200`.
+- Une URL inexistante repond localement en `404`.
+- Aucun lien vers `index.html` ne subsiste sur les pages publiques prioritaires.
+- Les composants partages sont synchronises.
+
 ## [0.4.2] - 2026-06-19
 
 ### Ajoute

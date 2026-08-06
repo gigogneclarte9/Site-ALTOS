@@ -7,6 +7,7 @@ const checkOnly = process.argv.includes('--check');
 
 const rootPages = [
   'index.html',
+  '404.html',
   'cas-usage.html',
   'micro-audit.html',
   'journal.html',
@@ -26,11 +27,10 @@ const footerTemplate = readFileSync(join(rootDir, 'partials/site-footer.html'), 
 
 function pageContext(page) {
   const isNested = page.includes('/');
-  const isHome = page === 'index.html';
   const root = isNested ? '../' : '';
   return {
     root,
-    homeAnchor: isHome ? '' : `${root}index.html`,
+    homeAnchor: '/',
     cssHref: `${root}assets/site-components.css`,
   };
 }
