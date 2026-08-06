@@ -6,6 +6,28 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 
 ## [Unreleased]
 
+## [0.4.5] - 2026-08-06
+
+### Ajoute
+
+- Page pilier `audit-ia-tpe-pme.html` consacree a la methode, aux livrables, a la priorisation et aux questions frequentes d'un audit IA.
+- Exemples terrain relies aux etudes de cas, avec distinction explicite entre observations, resultats mesures et projections.
+- Donnees structurees `Service`, `WebPage`, `BreadcrumbList`, `Organization`, `Person` et `FAQPage` coherentes avec le contenu visible.
+- Menu mobile partage avec bouton hamburger, liens principaux, CTA et navigation clavier accessible.
+
+### Change
+
+- Service `Audit IA` de l'accueil transforme en lien HTML vers la page pilier.
+- Maillage interne enrichi depuis l'index des cas d'usage et le footer partage.
+- Sitemap et liste blanche de deploiement etendus a la nouvelle page et a sa feuille de style.
+
+### Verifie
+
+- Navigation mobile synchronisee sur les 21 pages publiques, script valide et ressources locales en `200`.
+- Page Audit IA : un H1, title de 49 caracteres, description de 145 caracteres et six FAQ visibles identiques aux donnees structurees.
+- Sitemap local : 18 URL uniques, toutes en `200`.
+- TypeScript, build serveur et cinq cas de test du scoring valides.
+
 ## [0.4.4] - 2026-08-06
 
 ### Change

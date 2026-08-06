@@ -1,7 +1,11 @@
 <!-- SHARED_NAV_START -->
-<nav class="nav">
+<nav class="nav" aria-label="Navigation principale">
   <div class="nav__inner">
     <a href="{{homeAnchor}}" class="logo">ALTOS<i>.</i></a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-mobile-menu" aria-label="Ouvrir le menu">
+      <span class="nav__toggle-lines" aria-hidden="true"><span></span><span></span></span>
+      <span class="nav__toggle-label">Menu</span>
+    </button>
     <div class="nav__links">
       <a href="{{homeAnchor}}#services">Services</a>
       <a href="{{root}}cas-usage.html">Cas d'usage</a>
@@ -14,6 +18,27 @@
     <div class="nav__cta">
       <span class="nav__time">FR · 2026</span>
       <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Diagnostic IA 30 min
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="nav__mobile" id="site-mobile-menu" hidden>
+    <div class="nav__mobile-inner">
+      <div class="nav__mobile-head">
+        <span>Navigation</span>
+        <span>ALTOS · 2026</span>
+      </div>
+      <div class="nav__mobile-links">
+        <a href="{{homeAnchor}}#services"><span>01</span>Services</a>
+        <a href="{{root}}audit-ia-tpe-pme.html"><span>02</span>Audit IA</a>
+        <a href="{{root}}cas-usage.html"><span>03</span>Cas d'usage</a>
+        <a href="{{homeAnchor}}#process"><span>04</span>Méthode</a>
+        <a href="{{homeAnchor}}#ambassadeur"><span>05</span>Ambassadeur IA</a>
+        <a href="{{homeAnchor}}#about"><span>06</span>À propos</a>
+        <a href="{{root}}micro-audit.html"><span>07</span>Micro-audit</a>
+        <a href="{{root}}journal.html"><span>08</span>Journal</a>
+      </div>
+      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn btn--diag nav__mobile-cta" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Diagnostic IA 30 min
         <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
     </div>

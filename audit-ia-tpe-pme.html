@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Audit IA pour TPE et PME : méthode et cas | ALTOS</title>
+<meta name="description" content="Audit IA pour TPE et PME : analyse des processus, priorisation des cas d'usage, feuille de route et exemples terrain. Diagnostic ALTOS en France." />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="author" content="Nicolas Darcos" />
+<link rel="canonical" href="https://www.altos-experts.fr/audit-ia-tpe-pme.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ALTOS" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://www.altos-experts.fr/audit-ia-tpe-pme.html" />
+<meta property="og:title" content="Audit IA pour TPE et PME : méthode et cas | ALTOS" />
+<meta property="og:description" content="Un audit IA transforme les irritants métier d'une TPE ou PME en feuille de route priorisée, chiffrée et directement exploitable." />
+<meta property="og:image" content="https://www.altos-experts.fr/assets/og-default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="ALTOS — Audit IA pour TPE et PME" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Audit IA pour TPE et PME : méthode et cas | ALTOS" />
+<meta name="twitter:description" content="Méthode, livrables et exemples terrain d'un audit IA conçu pour les TPE et PME." />
+<meta name="twitter:image" content="https://www.altos-experts.fr/assets/og-default.png" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-weight='900' fill='%23ffffff'%3EA%3C/text%3E%3Ccircle cx='48' cy='52' r='4' fill='%23ff5b14'/%3E%3C/svg%3E" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="cas-usage/_case-style.css" />
+<link rel="stylesheet" href="assets/site-components.css" />
+<link rel="stylesheet" href="assets/audit-page.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.altos-experts.fr/#org",
+      "name": "ALTOS",
+      "url": "https://www.altos-experts.fr/",
+      "logo": "https://www.altos-experts.fr/assets/og-default.png",
+      "email": "hello@altos-experts.fr",
+      "founder": { "@id": "https://www.altos-experts.fr/#nicolas-darcos" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.altos-experts.fr/#nicolas-darcos",
+      "name": "Nicolas Darcos",
+      "jobTitle": "Consultant IA et automatisation pour TPE et PME",
+      "image": "https://www.altos-experts.fr/assets/nicolas-darcos.jpg",
+      "worksFor": { "@id": "https://www.altos-experts.fr/#org" },
+      "sameAs": ["https://www.linkedin.com/in/nicolas-darcos-40283035/"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.altos-experts.fr/audit-ia-tpe-pme.html#webpage",
+      "url": "https://www.altos-experts.fr/audit-ia-tpe-pme.html",
+      "name": "Audit IA pour TPE et PME : méthode et cas | ALTOS",
+      "description": "Méthode, livrables et exemples terrain d'un audit IA pour TPE et PME.",
+      "dateModified": "2026-08-06",
+      "inLanguage": "fr-FR",
+      "about": { "@id": "https://www.altos-experts.fr/audit-ia-tpe-pme.html#service" },
+      "author": { "@id": "https://www.altos-experts.fr/#nicolas-darcos" },
+      "publisher": { "@id": "https://www.altos-experts.fr/#org" },
+      "breadcrumb": { "@id": "https://www.altos-experts.fr/audit-ia-tpe-pme.html#breadcrumb" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.altos-experts.fr/audit-ia-tpe-pme.html#service",
+      "name": "Audit IA pour TPE et PME",
+      "serviceType": "Audit IA et feuille de route d'automatisation",
+      "description": "Analyse des processus, outils, données et tâches répétitives d'une TPE ou PME afin de prioriser des cas d'usage IA et d'automatisation selon leur impact, leur faisabilité, leurs risques et l'effort nécessaire.",
+      "provider": { "@id": "https://www.altos-experts.fr/#org" },
+      "areaServed": { "@type": "Country", "name": "France" },
+      "audience": { "@type": "BusinessAudience", "audienceType": "Dirigeants de TPE et PME" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.altos-experts.fr/audit-ia-tpe-pme.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.altos-experts.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "Audit IA pour TPE et PME", "item": "https://www.altos-experts.fr/audit-ia-tpe-pme.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.altos-experts.fr/audit-ia-tpe-pme.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce qu'un audit IA pour une TPE ou une PME ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un audit IA analyse les processus, outils, données et tâches répétitives de l'entreprise. Il débouche sur une feuille de route qui priorise les cas d'usage selon leur impact, leur faisabilité, leurs risques et l'effort nécessaire." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps dure un audit IA ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Le format flash ALTOS se déroule généralement sur cinq jours. La durée est ajustée au nombre de métiers, de sites et de processus à observer." }
+        },
+        {
+          "@type": "Question",
+          "name": "Faut-il déjà utiliser des outils d'intelligence artificielle ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Non. L'audit part de l'activité, des irritants et des outils déjà utilisés. Il peut conclure qu'une automatisation classique est plus pertinente qu'un agent IA." }
+        },
+        {
+          "@type": "Question",
+          "name": "Faut-il remplacer les logiciels existants ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Non. Les recommandations cherchent d'abord à mieux relier et exploiter les outils existants. Un remplacement n'est proposé que si une limite métier ou technique le justifie." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels livrables sont remis ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "La restitution comprend une cartographie des irritants, une liste de cas d'usage priorisés, les prérequis liés aux données et aux risques, des estimations de gains et une feuille de route de mise en œuvre." }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il après l'audit ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "L'entreprise peut mettre en œuvre la feuille de route seule, avec ALTOS ou avec un autre prestataire. Un premier chantier court et mesurable est généralement recommandé avant un déploiement plus large." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- SHARED_NAV_START -->
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav__inner">
+    <a href="/" class="logo">ALTOS<i>.</i></a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-mobile-menu" aria-label="Ouvrir le menu">
+      <span class="nav__toggle-lines" aria-hidden="true"><span></span><span></span></span>
+      <span class="nav__toggle-label">Menu</span>
+    </button>
+    <div class="nav__links">
+      <a href="/#services">Services</a>
+      <a href="cas-usage.html">Cas d'usage</a>
+      <a href="/#process">Méthode</a>
+      <a href="/#ambassadeur">Ambassadeur</a>
+      <a href="/#about">À propos</a>
+      <a href="micro-audit.html">Micro-audit</a>
+      <a href="journal.html">Journal</a>
+    </div>
+    <div class="nav__cta">
+      <span class="nav__time">FR · 2026</span>
+      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Diagnostic IA 30 min
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="nav__mobile" id="site-mobile-menu" hidden>
+    <div class="nav__mobile-inner">
+      <div class="nav__mobile-head">
+        <span>Navigation</span>
+        <span>ALTOS · 2026</span>
+      </div>
+      <div class="nav__mobile-links">
+        <a href="/#services"><span>01</span>Services</a>
+        <a href="audit-ia-tpe-pme.html"><span>02</span>Audit IA</a>
+        <a href="cas-usage.html"><span>03</span>Cas d'usage</a>
+        <a href="/#process"><span>04</span>Méthode</a>
+        <a href="/#ambassadeur"><span>05</span>Ambassadeur IA</a>
+        <a href="/#about"><span>06</span>À propos</a>
+        <a href="micro-audit.html"><span>07</span>Micro-audit</a>
+        <a href="journal.html"><span>08</span>Journal</a>
+      </div>
+      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn btn--diag nav__mobile-cta" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Diagnostic IA 30 min
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+<!-- SHARED_NAV_END -->
+
+<header class="article-header">
+  <div class="wrap-narrow">
+    <div class="crumbs">
+      <a href="/">Accueil</a>
+      <span class="sep">/</span>
+      <a href="/#services">Services</a>
+      <span class="sep">/</span>
+      <span class="tag-sector">Audit IA</span>
+      <span class="tag-year">TPE · PME · France</span>
+    </div>
+
+    <h1 class="title">
+      Audit <i>IA</i> pour<br/><span class="accent">TPE et PME</span> :<br/>du constat à la <mark>feuille de route</mark>.
+    </h1>
+
+    <p class="article-lede">
+      <i>Un audit IA analyse vos processus, vos outils, vos données et vos tâches répétitives.</i> Il transforme les irritants du quotidien en cas d'usage priorisés, chiffrés et suffisamment cadrés pour décider quoi automatiser — et dans quel ordre.
+    </p>
+
+    <div class="audit-hero-actions">
+      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn btn--diag" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Parler de votre audit IA
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+      <a href="cas-usage.html" class="btn btn--ghost">Voir les cas d'usage
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+
+    <div class="hero-meta-row">
+      <div class="cell">
+        <div class="k"><i>5 jours</i></div>
+        <div class="l">Format flash type</div>
+      </div>
+      <div class="cell">
+        <div class="k">Terrain + données</div>
+        <div class="l">Point de départ</div>
+      </div>
+      <div class="cell">
+        <div class="k"><i>Impact · risque</i></div>
+        <div class="l">Priorisation</div>
+      </div>
+      <div class="cell">
+        <div class="k">30 minutes</div>
+        <div class="l">Premier diagnostic</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section-block" id="definition">
+    <div class="wrap">
+      <div class="section-intro">
+        <div>
+          <span class="num">§ 01 — Définition</span>
+          <h2>À quoi sert un <i>audit IA</i> ?</h2>
+        </div>
+        <p>L'objectif n'est pas de dresser une liste d'outils à la mode. Il est de décider, à partir de votre fonctionnement réel, où l'intelligence artificielle et l'automatisation peuvent produire un gain utile sans fragiliser l'activité.</p>
+      </div>
+
+      <div class="answer-grid">
+        <div class="answer-copy">
+          <p><strong>Un audit IA est une analyse opérationnelle de l'entreprise.</strong> Le consultant observe comment l'information entre, circule, se transforme et ressort : demandes clients, devis, commandes, documents, comptes rendus, relances, SAV, reporting ou contrôle qualité.</p>
+          <p>Chaque opportunité est ensuite qualifiée. Certaines relèvent d'une automatisation déterministe, d'autres d'un agent IA, d'une application métier ou simplement d'une meilleure organisation des données. L'audit peut aussi conclure qu'un processus n'est pas assez stable, que les données sont insuffisantes ou que le risque impose une validation humaine.</p>
+          <p>Le résultat attendu est une <strong>feuille de route compréhensible par la direction et exploitable par les équipes</strong>, avec un ordre de priorité et des critères de mesure.</p>
+        </div>
+
+        <aside class="answer-card" aria-label="Résumé de l'audit IA ALTOS">
+          <h3>L'audit IA, en bref</h3>
+          <dl>
+            <div><dt>Pour qui</dt><dd>Dirigeants et équipes de TPE/PME</dd></div>
+            <div><dt>Entrées</dt><dd>Processus, outils, données, irritants et volumes</dd></div>
+            <div><dt>Analyse</dt><dd>Impact, faisabilité, effort, risque et adoption</dd></div>
+            <div><dt>Sortie</dt><dd>Cas d'usage priorisés et feuille de route</dd></div>
+            <div><dt>Périmètre</dt><dd>Aude, Occitanie et France, sur site ou à distance</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-block--paper" id="signaux">
+    <div class="wrap">
+      <div class="section-intro">
+        <div>
+          <span class="num">§ 02 — Signaux</span>
+          <h2>Quand l'audit devient <i>utile</i>.</h2>
+        </div>
+        <p>Les meilleurs sujets ne commencent généralement pas par « nous voulons de l'IA », mais par une tâche répétitive, une information introuvable, un délai trop long ou une coordination qui dépend de quelques personnes.</p>
+      </div>
+
+      <div class="signals-grid">
+        <article class="signal">
+          <span class="num">01</span>
+          <h3>La même donnée est ressaisie.</h3>
+          <p>Un formulaire, un email ou un fichier contient déjà l'information, mais elle est recopiée dans un ERP, un CRM, un tableau ou un document.</p>
+        </article>
+        <article class="signal">
+          <span class="num">02</span>
+          <h3>Les demandes arrivent partout.</h3>
+          <p>Téléphone, email, messagerie et formulaires alimentent le même processus sans qualification ni tableau de suivi commun.</p>
+        </article>
+        <article class="signal">
+          <span class="num">03</span>
+          <h3>La connaissance reste dans les têtes.</h3>
+          <p>Une réponse, une décision ou une recherche dépend toujours de la même personne, de sa mémoire et de sa disponibilité.</p>
+        </article>
+        <article class="signal">
+          <span class="num">04</span>
+          <h3>Les documents prennent le dessus.</h3>
+          <p>Comptes rendus, contrats, appels d'offres, factures ou rapports mobilisent plus de temps pour être préparés que pour être relus et décidés.</p>
+        </article>
+        <article class="signal">
+          <span class="num">05</span>
+          <h3>Les relances sont manuelles.</h3>
+          <p>Clients, fournisseurs ou prestataires doivent être suivis à la main, avec un risque d'oubli et peu de visibilité collective.</p>
+        </article>
+        <article class="signal">
+          <span class="num">06</span>
+          <h3>La croissance augmente la friction.</h3>
+          <p>Le chiffre d'affaires ou l'équipe progresse, mais la coordination invisible augmente au même rythme et commence à saturer l'organisation.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block" id="methode">
+    <div class="wrap">
+      <div class="section-intro">
+        <div>
+          <span class="num">§ 03 — Méthode</span>
+          <h2>Une méthode en <i>cinq temps</i>.</h2>
+        </div>
+        <p>Le format flash tient généralement sur cinq jours. Il est ajusté au nombre de métiers, de sites et de processus à examiner : le calendrier doit servir l'analyse, pas l'inverse.</p>
+      </div>
+
+      <div class="method-steps">
+        <article class="method-step">
+          <h3>Cadrer la décision.</h3>
+          <p>Objectifs, périmètre, interlocuteurs, contraintes et indicateurs sont fixés dès le départ. L'audit doit répondre à une décision précise, pas produire un rapport générique.</p>
+        </article>
+        <article class="method-step">
+          <h3>Observer le travail réel.</h3>
+          <p>Entretiens, démonstrations d'outils et suivi des flux permettent de comprendre les étapes, les volumes, les exceptions et les validations humaines.</p>
+        </article>
+        <article class="method-step">
+          <h3>Cartographier les opportunités.</h3>
+          <p>Chaque irritant est relié à une cause, des données disponibles, un scénario cible et une famille de solution : automatisation, IA, application métier ou organisation.</p>
+        </article>
+        <article class="method-step">
+          <h3>Prioriser sans effet de mode.</h3>
+          <p>Les cas d'usage sont comparés selon le gain potentiel, la fréquence, la faisabilité, l'effort, le risque, la dépendance aux outils et l'acceptabilité pour les équipes.</p>
+        </article>
+        <article class="method-step">
+          <h3>Restituer une feuille de route.</h3>
+          <p>La direction reçoit des recommandations ordonnées, les prérequis, les indicateurs de succès et un premier chantier suffisamment délimité pour passer à l'action.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-block--ink" id="livrables">
+    <div class="wrap">
+      <div class="section-intro">
+        <div>
+          <span class="num">§ 04 — Livrables</span>
+          <h2>Ce que l'entreprise peut <i>décider</i>.</h2>
+        </div>
+        <p>La restitution doit permettre d'arbitrer : lancer, différer, simplifier ou écarter un cas d'usage. Elle sépare les gains observés, les gains projetés et les hypothèses à confirmer.</p>
+      </div>
+
+      <div class="deliverables-grid">
+        <article class="deliverable">
+          <span class="num">01</span>
+          <h3>Cartographie des irritants</h3>
+          <p>Processus concernés, personnes impliquées, outils, volumes, ruptures de flux et dépendances critiques.</p>
+        </article>
+        <article class="deliverable">
+          <span class="num">02</span>
+          <h3>Matrice de cas d'usage</h3>
+          <p>Opportunités classées selon l'impact, la faisabilité, l'effort, les risques et la disponibilité des données.</p>
+        </article>
+        <article class="deliverable">
+          <span class="num">03</span>
+          <h3>Scénarios de solution</h3>
+          <p>Automatisation, agent IA ou application métier, avec les outils à connecter, les contrôles et les validations nécessaires.</p>
+        </article>
+        <article class="deliverable">
+          <span class="num">04</span>
+          <h3>Feuille de route actionnable</h3>
+          <p>Ordre de lancement, prérequis, responsables, indicateurs, points de vigilance et périmètre du premier chantier.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block" id="preuves">
+    <div class="wrap">
+      <div class="section-intro">
+        <div>
+          <span class="num">§ 05 — Terrain</span>
+          <h2>Des processus <i>réels</i>, pas des promesses abstraites.</h2>
+        </div>
+        <p>Les audits ALTOS couvrent des métiers différents, mais les mêmes familles d'irritants reviennent : ressaisie, qualification, recherche, production documentaire, relance et coordination.</p>
+      </div>
+
+      <p class="proof-note"><strong>Lecture des chiffres :</strong> les exemples ci-dessous sont des projections issues d'audits réels et fondées sur les volumes observés. Ils ne constituent pas une garantie de résultat. Les résultats mesurés et les projections sont distingués dans chaque étude de cas.</p>
+
+      <div class="proof-grid">
+        <a class="proof-card" href="cas-usage/cabinet-gestion-patrimoine.html">
+          <span class="sector">Conseil · gestion de patrimoine</span>
+          <div class="value">2 h → 30 min</div>
+          <h3>Préparation d'un compte rendu d'analyse patrimoniale</h3>
+          <p>Projection d'audit · ouvrir l'étude de cas →</p>
+        </a>
+        <a class="proof-card" href="cas-usage/distribution-froid-commercial.html">
+          <span class="sector">Distribution B2B · SAV</span>
+          <div class="value">60–80 %</div>
+          <h3>Temps administratif gagné par demande SAV</h3>
+          <p>Projection d'audit · ouvrir l'étude de cas →</p>
+        </a>
+        <a class="proof-card" href="cas-usage/chocolatier-multicanal.html">
+          <span class="sector">Commerce · commandes B2B</span>
+          <div class="value">5 min → 1 min</div>
+          <h3>Temps d'intégration par commande professionnelle</h3>
+          <p>Projection d'audit · ouvrir l'étude de cas →</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-block--paper" id="priorisation">
+    <div class="wrap">
+      <div class="section-intro">
+        <div>
+          <span class="num">§ 06 — Arbitrage</span>
+          <h2>Tout n'a pas vocation à être <i>automatisé</i>.</h2>
+        </div>
+        <p>Une bonne recommandation peut être de commencer autrement, de conserver une validation humaine ou de ne rien automatiser tant que le processus et les données ne sont pas stabilisés.</p>
+      </div>
+
+      <div class="decision-grid">
+        <article class="decision-card">
+          <h3>Impact</h3>
+          <p>Fréquence, temps mobilisé, erreurs, délai client, revenu ou qualité de service concernés.</p>
+        </article>
+        <article class="decision-card">
+          <h3>Faisabilité</h3>
+          <p>Accès aux données, API disponibles, stabilité des règles, qualité des documents et compatibilité des outils.</p>
+        </article>
+        <article class="decision-card">
+          <h3>Risque</h3>
+          <p>Données sensibles, décisions à conséquence, sécurité, confidentialité, traçabilité et besoin de contrôle humain.</p>
+        </article>
+        <article class="decision-card">
+          <h3>Adoption</h3>
+          <p>Charge de changement, clarté de l'interface, compétences internes, documentation et capacité à maintenir la solution.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block" id="questions">
+    <div class="wrap">
+      <div class="section-intro">
+        <div>
+          <span class="num">§ 07 — Questions fréquentes</span>
+          <h2>L'audit IA, <i>en clair</i>.</h2>
+        </div>
+        <p>Des réponses directes aux questions posées avant de lancer un audit IA dans une TPE ou une PME.</p>
+      </div>
+
+      <div class="faq-grid">
+        <article class="faq-item">
+          <h3>Qu'est-ce qu'un audit IA pour une TPE ou une PME ?</h3>
+          <p>Un audit IA analyse les processus, outils, données et tâches répétitives de l'entreprise. Il débouche sur une feuille de route qui priorise les cas d'usage selon leur impact, leur faisabilité, leurs risques et l'effort nécessaire.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Combien de temps dure un audit IA ?</h3>
+          <p>Le format flash ALTOS se déroule généralement sur cinq jours. La durée est ajustée au nombre de métiers, de sites et de processus à observer.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Faut-il déjà utiliser des outils d'intelligence artificielle ?</h3>
+          <p>Non. L'audit part de l'activité, des irritants et des outils déjà utilisés. Il peut conclure qu'une automatisation classique est plus pertinente qu'un agent IA.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Faut-il remplacer les logiciels existants ?</h3>
+          <p>Non. Les recommandations cherchent d'abord à mieux relier et exploiter les outils existants. Un remplacement n'est proposé que si une limite métier ou technique le justifie.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Quels livrables sont remis ?</h3>
+          <p>Une cartographie des irritants, des cas d'usage priorisés, les prérequis liés aux données et aux risques, des estimations de gains et une feuille de route de mise en œuvre.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Que se passe-t-il après l'audit ?</h3>
+          <p>L'entreprise peut mettre en œuvre la feuille de route seule, avec ALTOS ou avec un autre prestataire. Un premier chantier court et mesurable est généralement recommandé avant un déploiement plus large.</p>
+        </article>
+      </div>
+
+      <aside class="author-card" aria-label="À propos du consultant">
+        <img src="assets/nicolas-darcos.jpg" width="640" height="640" alt="Nicolas Darcos, consultant IA et automatisation pour TPE et PME" loading="lazy" />
+        <div>
+          <h2>Nicolas Darcos</h2>
+          <p>Consultant IA et automatisation, fondateur d'ALTOS et membre du réseau des Ambassadeurs IA. Vingt-trois ans d'expérience auprès de dirigeants de TPE et PME, de l'analyse des organisations au déploiement de solutions métier.</p>
+        </div>
+        <a href="/#about" class="btn btn--ghost">Découvrir le parcours</a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<section class="article-cta" id="contact">
+  <div class="wrap-narrow">
+    <h2>Quel processus mérite d'être <i>audité</i> en premier ?</h2>
+    <p>Trente minutes pour examiner votre contexte, identifier les premiers signaux et vérifier si un audit IA est pertinent. Sans engagement.</p>
+    <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Réserver le diagnostic IA
+      <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+    </a>
+  </div>
+</section>
+
+<section class="site-page-note">
+  <div class="site-page-note__inner">
+    <div class="site-page-note__body"><b>Méthode et transparence —</b> Les exemples cités proviennent d'audits conduits par ALTOS en 2025 et 2026 auprès de structures réelles anonymisées. Les volumes observés sont conservés ; les résultats futurs restent présentés comme des <b>projections</b> tant qu'un bilan de déploiement ne les a pas confirmés. Page mise à jour le 6 août 2026.</div>
+  </div>
+</section>
+
+<!-- SHARED_FOOTER_START -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <a href="/" class="site-footer__logo">ALTOS<i>.</i></a>
+        <p>Groupement d'experts métiers et ambassadeurs IA, au service des TPE et PME françaises.</p>
+      </div>
+      <div>
+        <h4>Parcours</h4>
+        <ul>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="audit-ia-tpe-pme.html">Audit IA</a></li>
+          <li><a href="cas-usage.html">Cas d'usage</a></li>
+          <li><a href="micro-audit.html">Micro-audit</a></li>
+          <li><a href="journal.html">Journal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://cal.com/nicolas-darcos-uldxct/30min">Diagnostic IA 30 min</a></li>
+          <li><a href="mailto:hello@altos-experts.fr">hello@altos-experts.fr</a></li>
+          <li><a href="https://www.linkedin.com/in/nicolas-darcos-40283035/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Officiel</h4>
+        <ul>
+          <li><a href="assets/charte-ambassadeurs-ia.pdf" target="_blank" rel="noopener">Charte Ambassadeur IA</a></li>
+          <li><a href="https://www.entreprises.gouv.fr/osezlia" target="_blank" rel="noopener">Annuaire Osez l'IA</a></li>
+          <li><a href="https://www.francenum.gouv.fr" target="_blank" rel="noopener">France Num</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© 2026 ALTOS — Groupement</span>
+      <span><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></span>
+    </div>
+  </div>
+</footer>
+<!-- SHARED_FOOTER_END -->
+
+<script src="assets/calcom.js"></script>
+<script src="assets/site-nav.js"></script>
+</body>
+</html>

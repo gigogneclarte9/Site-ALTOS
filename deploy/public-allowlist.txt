@@ -3,6 +3,7 @@
 
 index.html
 404.html
+audit-ia-tpe-pme.html
 cas-usage.html
 micro-audit.html
 micro-audit.js
@@ -18,6 +19,8 @@ assets/og-default.png
 assets/case-filters.js
 assets/calcom.js
 assets/reveal.js
+assets/site-nav.js
+assets/audit-page.css
 assets/site.css
 assets/site-components.css
 

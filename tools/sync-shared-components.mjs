@@ -8,6 +8,7 @@ const checkOnly = process.argv.includes('--check');
 const rootPages = [
   'index.html',
   '404.html',
+  'audit-ia-tpe-pme.html',
   'cas-usage.html',
   'micro-audit.html',
   'journal.html',
@@ -32,6 +33,7 @@ function pageContext(page) {
     root,
     homeAnchor: '/',
     cssHref: `${root}assets/site-components.css`,
+    navScriptSrc: `${root}assets/site-nav.js`,
   };
 }
 
@@ -55,6 +57,11 @@ function ensureComponentsCss(html, cssHref) {
   return html.replace('</head>', `<link rel="stylesheet" href="${cssHref}" />\n</head>`);
 }
 
+function ensureNavScript(html, navScriptSrc) {
+  if (html.includes(navScriptSrc)) return html;
+  return html.replace('</body>', `<script src="${navScriptSrc}"></script>\n</body>`);
+}
+
 const changed = [];
 
 for (const page of pages) {
@@ -66,6 +73,7 @@ for (const page of pages) {
   try {
     after = replaceSharedBlock(after, 'NAV', /(?:<!-- NAV -->\s*)?<nav class="nav">[\s\S]*?<\/nav>/, render(navTemplate, context));
     after = replaceSharedBlock(after, 'FOOTER', /<footer class="site-footer">[\s\S]*?<\/footer>/, render(footerTemplate, context));
+    after = ensureNavScript(after, context.navScriptSrc);
   } catch (error) {
     throw new Error(`${page}: ${error.message}`);
   }

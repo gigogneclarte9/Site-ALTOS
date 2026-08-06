@@ -9,13 +9,20 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.altos-experts.fr/assets/og-default.png</image:loc>
-      <image:title>ALTOS — Ambassadeur IA pour PME</image:title>
+      <image:title>ALTOS — Consultant IA et automatisation pour TPE et PME</image:title>
     </image:image>
   </url>
 
   <url>
+    <loc>https://www.altos-experts.fr/audit-ia-tpe-pme.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
     <loc>https://www.altos-experts.fr/cas-usage.html</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

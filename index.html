@@ -906,9 +906,13 @@
 <body>
 
 <!-- SHARED_NAV_START -->
-<nav class="nav">
+<nav class="nav" aria-label="Navigation principale">
   <div class="nav__inner">
     <a href="/" class="logo">ALTOS<i>.</i></a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-mobile-menu" aria-label="Ouvrir le menu">
+      <span class="nav__toggle-lines" aria-hidden="true"><span></span><span></span></span>
+      <span class="nav__toggle-label">Menu</span>
+    </button>
     <div class="nav__links">
       <a href="/#services">Services</a>
       <a href="cas-usage.html">Cas d'usage</a>
@@ -921,6 +925,27 @@
     <div class="nav__cta">
       <span class="nav__time">FR · 2026</span>
       <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Diagnostic IA 30 min
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="nav__mobile" id="site-mobile-menu" hidden>
+    <div class="nav__mobile-inner">
+      <div class="nav__mobile-head">
+        <span>Navigation</span>
+        <span>ALTOS · 2026</span>
+      </div>
+      <div class="nav__mobile-links">
+        <a href="/#services"><span>01</span>Services</a>
+        <a href="audit-ia-tpe-pme.html"><span>02</span>Audit IA</a>
+        <a href="cas-usage.html"><span>03</span>Cas d'usage</a>
+        <a href="/#process"><span>04</span>Méthode</a>
+        <a href="/#ambassadeur"><span>05</span>Ambassadeur IA</a>
+        <a href="/#about"><span>06</span>À propos</a>
+        <a href="micro-audit.html"><span>07</span>Micro-audit</a>
+        <a href="journal.html"><span>08</span>Journal</a>
+      </div>
+      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn btn--diag nav__mobile-cta" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Diagnostic IA 30 min
         <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
     </div>
@@ -1157,14 +1182,14 @@
       <p class="why__lead reveal">Un interlocuteur unique analyse vos processus, priorise les opportunités et mobilise les compétences nécessaires pour automatiser durablement votre activité.</p>
     </div>
 
-    <div class="service-row reveal">
+    <a class="service-row reveal" href="audit-ia-tpe-pme.html" aria-label="Découvrir l'audit IA pour TPE et PME">
       <div class="service-row__num">01</div>
       <div class="service-row__title">Audit <i>IA</i></div>
       <div class="service-row__desc">Analyse des processus, outils, données et irritants. Priorisation des cas d'usage selon le gain, le risque et l'effort, puis feuille de route actionnable.</div>
       <div class="service-row__plus">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12"/></svg>
       </div>
-    </div>
+    </a>
     <div class="service-row reveal">
       <div class="service-row__num">02</div>
       <div class="service-row__title">Auto<i>matisation</i></div>
@@ -1513,6 +1538,7 @@
         <h4>Parcours</h4>
         <ul>
           <li><a href="/#services">Services</a></li>
+          <li><a href="audit-ia-tpe-pme.html">Audit IA</a></li>
           <li><a href="cas-usage.html">Cas d'usage</a></li>
           <li><a href="micro-audit.html">Micro-audit</a></li>
           <li><a href="journal.html">Journal</a></li>
@@ -1545,5 +1571,6 @@
 
 <script src="assets/reveal.js"></script>
 <script src="assets/calcom.js"></script>
+<script src="assets/site-nav.js"></script>
 </body>
 </html>
