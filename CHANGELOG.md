@@ -6,6 +6,26 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 
 ## [Unreleased]
 
+## [0.4.7] - 2026-08-06
+
+### Ajoute
+
+- Page pilier `agents-ia-pme.html` consacree aux usages, differences, donnees, controles et limites des agents IA pour TPE et PME.
+- Six questions-reponses visibles et donnees structurees `Service`, `WebPage`, `BreadcrumbList`, `Organization`, `Person` et `FAQPage`.
+- References institutionnelles CNIL, ANSSI et Commission europeenne pour renforcer la qualite documentaire et le GEO.
+
+### Change
+
+- Service `Agents IA` de l'accueil transforme en lien HTML vers la nouvelle page pilier.
+- Liens contextuels ajoutes depuis les pages Audit IA, Automatisation et trois etudes de cas directement pertinentes.
+- Navigation mobile, footer, sitemap et liste blanche de deploiement etendus a la nouvelle page.
+
+### Verifie
+
+- Page Agents IA en `200` local avec un H1, title de 55 caracteres, description de 155 caracteres et plus de 1 500 mots dans le contenu principal.
+- Six FAQ visibles identiques aux donnees structurees, sans identifiant duplique.
+- Navigation partagee coherente sur 23 pages et sitemap local de 20 URL uniques, toutes en `200`.
+
 ## [0.4.6] - 2026-08-06
 
 ### Ajoute

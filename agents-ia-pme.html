@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Agent IA pour PME : usages, méthode et limites | ALTOS</title>
+<meta name="description" content="Agent IA pour TPE et PME : usages concrets, données, méthode, sécurité et validation humaine. Conseil et déploiement d'agents IA sur mesure par ALTOS." />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="author" content="Nicolas Darcos" />
+<link rel="canonical" href="https://www.altos-experts.fr/agents-ia-pme.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ALTOS" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:url" content="https://www.altos-experts.fr/agents-ia-pme.html" />
+<meta property="og:title" content="Agent IA pour PME : usages, méthode et limites | ALTOS" />
+<meta property="og:description" content="Comprendre ce qu'un agent IA peut faire dans une PME, quand l'utiliser et comment encadrer ses données, ses actions et ses décisions." />
+<meta property="og:image" content="https://www.altos-experts.fr/assets/og-default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="ALTOS — Agents IA pour TPE et PME" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Agent IA pour PME : usages, méthode et limites | ALTOS" />
+<meta name="twitter:description" content="Usages, architecture, contrôles et cas terrain pour déployer un agent IA utile dans une TPE ou une PME." />
+<meta name="twitter:image" content="https://www.altos-experts.fr/assets/og-default.png" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-weight='900' fill='%23ffffff'%3EA%3C/text%3E%3Ccircle cx='48' cy='52' r='4' fill='%23ff5b14'/%3E%3C/svg%3E" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="cas-usage/_case-style.css" />
+<link rel="stylesheet" href="assets/site-components.css" />
+<link rel="stylesheet" href="assets/audit-page.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.altos-experts.fr/#org",
+      "name": "ALTOS",
+      "url": "https://www.altos-experts.fr/",
+      "logo": "https://www.altos-experts.fr/assets/og-default.png",
+      "email": "hello@altos-experts.fr",
+      "founder": { "@id": "https://www.altos-experts.fr/#nicolas-darcos" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.altos-experts.fr/#nicolas-darcos",
+      "name": "Nicolas Darcos",
+      "jobTitle": "Consultant IA et automatisation pour TPE et PME",
+      "image": "https://www.altos-experts.fr/assets/nicolas-darcos.jpg",
+      "worksFor": { "@id": "https://www.altos-experts.fr/#org" },
+      "sameAs": ["https://www.linkedin.com/in/nicolas-darcos-40283035/"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.altos-experts.fr/agents-ia-pme.html#webpage",
+      "url": "https://www.altos-experts.fr/agents-ia-pme.html",
+      "name": "Agent IA pour PME : usages, méthode et limites | ALTOS",
+      "description": "Usages, architecture, contrôles et cas terrain pour déployer un agent IA utile dans une TPE ou une PME.",
+      "dateModified": "2026-08-06",
+      "inLanguage": "fr-FR",
+      "about": { "@id": "https://www.altos-experts.fr/agents-ia-pme.html#service" },
+      "author": { "@id": "https://www.altos-experts.fr/#nicolas-darcos" },
+      "publisher": { "@id": "https://www.altos-experts.fr/#org" },
+      "breadcrumb": { "@id": "https://www.altos-experts.fr/agents-ia-pme.html#breadcrumb" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.altos-experts.fr/agents-ia-pme.html#service",
+      "name": "Agents IA sur mesure pour TPE et PME",
+      "serviceType": "Conseil et déploiement d'agents IA métier",
+      "description": "Cadrage, conception et déploiement d'agents IA spécialisés pour rechercher, qualifier, synthétiser, rédiger ou préparer une action à partir des données et règles autorisées d'une TPE ou PME.",
+      "provider": { "@id": "https://www.altos-experts.fr/#org" },
+      "areaServed": { "@type": "Country", "name": "France" },
+      "audience": { "@type": "BusinessAudience", "audienceType": "Dirigeants et équipes de TPE et PME" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.altos-experts.fr/agents-ia-pme.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.altos-experts.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "Agents IA pour PME", "item": "https://www.altos-experts.fr/agents-ia-pme.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.altos-experts.fr/agents-ia-pme.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce qu'un agent IA pour une PME ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un agent IA pour PME est un système logiciel chargé d'une mission précise. Il interprète des informations, utilise uniquement les données et outils autorisés, puis propose ou exécute une action dans des limites définies." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle différence entre un chatbot, un assistant IA et un agent IA ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un chatbot répond dans une conversation. Un assistant aide une personne à produire ou retrouver une information. Un agent IA peut enchaîner plusieurs étapes et utiliser des outils pour atteindre un objectif, sous réserve des autorisations et contrôles prévus." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels usages d'agent IA sont adaptés aux TPE et PME ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Les usages fréquents sont la qualification de demandes, la recherche documentaire, la synthèse de dossiers, la préparation de réponses, le tri d'emails, l'extraction d'informations et la préparation d'actions dans un ERP ou un CRM." }
+        },
+        {
+          "@type": "Question",
+          "name": "Un agent IA peut-il utiliser les données de l'entreprise ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, si les sources, les finalités, les droits d'accès, la durée de conservation et les conditions de réutilisation par les fournisseurs sont vérifiés. L'agent ne doit accéder qu'aux données nécessaires à sa mission." }
+        },
+        {
+          "@type": "Question",
+          "name": "Un agent IA peut-il agir sans validation humaine ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Seulement pour des actions réversibles, peu sensibles et correctement testées. Une validation humaine reste nécessaire avant un paiement, un engagement contractuel, une décision concernant une personne ou toute action difficile à annuler." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps faut-il pour créer un premier agent IA ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un premier prototype ciblé peut généralement être présenté en sept à quatorze jours lorsque la mission, les données, les accès et les critères de réussite sont disponibles. La mise en production dépend ensuite des tests, des risques et des intégrations." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- SHARED_NAV_START -->
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav__inner">
+    <a href="/" class="logo">ALTOS<i>.</i></a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-mobile-menu" aria-label="Ouvrir le menu">
+      <span class="nav__toggle-lines" aria-hidden="true"><span></span><span></span></span>
+      <span class="nav__toggle-label">Menu</span>
+    </button>
+    <div class="nav__links">
+      <a href="/#services">Services</a>
+      <a href="cas-usage.html">Cas d'usage</a>
+      <a href="/#process">Méthode</a>
+      <a href="/#ambassadeur">Ambassadeur</a>
+      <a href="/#about">À propos</a>
+      <a href="micro-audit.html">Micro-audit</a>
+      <a href="journal.html">Journal</a>
+    </div>
+    <div class="nav__cta">
+      <span class="nav__time">FR · 2026</span>
+      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Diagnostic IA 30 min
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="nav__mobile" id="site-mobile-menu" hidden>
+    <div class="nav__mobile-inner">
+      <div class="nav__mobile-head">
+        <span>Navigation</span>
+        <span>ALTOS · 2026</span>
+      </div>
+      <div class="nav__mobile-links">
+        <a href="/#services"><span>01</span>Services</a>
+        <a href="audit-ia-tpe-pme.html"><span>02</span>Audit IA</a>
+        <a href="automatisation-processus-pme.html"><span>03</span>Automatisation</a>
+        <a href="agents-ia-pme.html"><span>04</span>Agents IA</a>
+        <a href="cas-usage.html"><span>05</span>Cas d'usage</a>
+        <a href="/#process"><span>06</span>Méthode</a>
+        <a href="/#ambassadeur"><span>07</span>Ambassadeur IA</a>
+        <a href="/#about"><span>08</span>À propos</a>
+        <a href="micro-audit.html"><span>09</span>Micro-audit</a>
+        <a href="journal.html"><span>10</span>Journal</a>
+      </div>
+      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn btn--diag nav__mobile-cta" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Diagnostic IA 30 min
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+<!-- SHARED_NAV_END -->
+
+<header class="article-header">
+  <div class="wrap-narrow">
+    <div class="crumbs">
+      <a href="/">Accueil</a>
+      <span class="sep">/</span>
+      <a href="/#services">Services</a>
+      <span class="sep">/</span>
+      <span class="tag-sector">Agents IA</span>
+      <span class="tag-year">TPE · PME · France</span>
+    </div>
+
+    <h1 class="title">
+      Agents <i>IA</i> pour<br/><span class="accent">TPE et PME</span> :<br/><mark>comprendre, agir, contrôler</mark>.
+    </h1>
+
+    <p class="article-lede">
+      <i>Un agent IA n'est pas un chatbot auquel on donne tous les accès.</i> C'est un système spécialisé, chargé d'une mission précise, relié aux seules données utiles et capable de s'arrêter lorsqu'une situation dépasse son cadre.
+    </p>
+
+    <div class="audit-hero-actions">
+      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn btn--diag" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Cadrer un cas d'usage
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+      <a href="audit-ia-tpe-pme.html" class="btn btn--ghost">Commencer par un audit IA
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+
+    <div class="hero-meta-row">
+      <div class="cell">
+        <div class="k"><i>1 mission</i></div>
+        <div class="l">Périmètre explicite</div>
+      </div>
+      <div class="cell">
+        <div class="k">Données · outils</div>
+        <div class="l">Accès limités</div>
+      </div>
+      <div class="cell">
+        <div class="k"><i>Tests + journal</i></div>
+        <div class="l">Contrôle continu</div>
+      </div>
+      <div class="cell">
+        <div class="k">7–14 jours</div>
+        <div class="l">Premier prototype ciblé</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section-block" id="definition">
+    <div class="wrap">
+      <div class="section-intro">
+        <div>
+          <span class="num">§ 01 — Définition</span>
+          <h2>Qu'est-ce qu'un <i>agent IA</i> ?</h2>
+        </div>
+        <p>Un agent devient utile lorsqu'il ne se contente pas de générer du texte : il reçoit un objectif, consulte un contexte autorisé, choisit une étape et utilise un outil dans un cadre vérifiable.</p>
+      </div>
+
+      <div class="answer-grid">
+        <div class="answer-copy">
+          <p><strong>Un agent IA pour PME est un système logiciel chargé d'une mission précise.</strong> Il peut interpréter un email, rechercher une information, comparer des éléments, préparer une réponse ou appeler un outil métier. Son autonomie n'est jamais absolue : elle est définie par les permissions, les règles et les validations prévues.</p>
+          <p>Le modèle de langage apporte la compréhension et la génération. Les données de l'entreprise fournissent le contexte. Les connecteurs donnent accès à un CRM, un ERP, une base documentaire ou une messagerie. Enfin, une <a href="automatisation-processus-pme.html">automatisation de processus</a> orchestre les étapes, les contrôles et les reprises.</p>
+          <p>La bonne question n'est donc pas « quel agent installer ? », mais <strong>quelle mission répétitive exige assez d'interprétation pour justifier une brique IA</strong>, avec quel niveau de risque et quel résultat mesurable.</p>
+        </div>
+
+        <aside class="answer-card" aria-label="Résumé d'un agent IA métier">
+          <h3>L'agent IA, en bref</h3>
+          <dl>
+            <div><dt>Mission</dt><dd>Un objectif métier borné et mesurable</dd></div>
+            <div><dt>Contexte</dt><dd>Des données sélectionnées et à jour</dd></div>
+            <div><dt>Outils</dt><dd>Recherche, email, CRM, ERP ou API autorisés</dd></div>
+            <div><dt>Limites</dt><dd>Actions interdites, seuils et règles d'arrêt</dd></div>
+            <div><dt>Contrôle</dt><dd>Tests, journal et validation humaine</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-block--paper" id="usages">
+    <div class="wrap">
+      <div class="section-intro">
+        <div>
+          <span class="num">§ 02 — Usages</span>
+          <h2>Que peut faire un agent IA dans une <i>PME</i> ?</h2>
+        </div>
+        <p>Les cas les plus solides portent sur un volume réel, des informations accessibles et une décision que l'équipe sait déjà expliquer. L'agent accélère le travail ; il ne remplace pas une règle métier absente.</p>
+      </div>
+
+      <div class="signals-grid">
+        <article class="signal">
+          <span class="num">01</span>
+          <h3>Qualifier une demande</h3>
+          <p>Identifier le client, le sujet, l'urgence, les pièces reçues et les informations manquantes avant d'affecter le dossier.</p>
+        </article>
+        <article class="signal">
+          <span class="num">02</span>
+          <h3>Rechercher dans les documents</h3>
+          <p>Retrouver un passage dans des procédures, contrats, comptes rendus ou catalogues et restituer la source utilisée.</p>
+        </article>
+        <article class="signal">
+          <span class="num">03</span>
+          <h3>Synthétiser un dossier</h3>
+          <p>Rassembler les faits, décisions, échéances et points ouverts provenant de plusieurs documents ou échanges.</p>
+        </article>
+        <article class="signal">
+          <span class="num">04</span>
+          <h3>Préparer une réponse</h3>
+          <p>Proposer un email, un compte rendu, une fiche d'intervention ou une première trame à partir du contexte métier.</p>
+        </article>
+        <article class="signal">
+          <span class="num">05</span>
+          <h3>Comparer et contrôler</h3>
+          <p>Repérer une incohérence, un champ absent ou un écart entre une demande, une procédure et les données disponibles.</p>
+        </article>
+        <article class="signal">
+          <span class="num">06</span>
+          <h3>Préparer une action</h3>
+          <p>Créer un brouillon de fiche CRM, renseigner les champs proposés ou préparer une commande, puis demander confirmation.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block" id="differences">
+    <div class="wrap">
+      <div class="section-intro">
+        <div>
+          <span class="num">§ 03 — Vocabulaire</span>
+          <h2>Chatbot, assistant, automatisation ou <i>agent</i> ?</h2>
+        </div>
+        <p>Ces termes décrivent des niveaux d'interaction différents. Les distinguer évite de construire une solution complexe quand une règle simple ou un assistant suffit.</p>
+      </div>
+
+      <div class="decision-grid">
+        <article class="decision-card">
+          <h3>Chatbot</h3>
+          <p>Il répond à une personne dans une conversation. Il peut informer sans accéder aux outils internes ni déclencher d'action.</p>
+        </article>
+        <article class="decision-card">
+          <h3>Assistant IA</h3>
+          <p>Il aide à rechercher, résumer ou rédiger. L'utilisateur pilote chaque demande et reste à l'origine de l'action.</p>
+        </article>
+        <article class="decision-card">
+          <h3>Automatisation</h3>
+          <p>Elle exécute un chemin prévu à partir d'un déclencheur et de règles stables, sans choisir librement la prochaine étape.</p>
+        </article>
+        <article class="decision-card">
+          <h3>Agent IA</h3>
+          <p>Il peut interpréter une situation, sélectionner une étape et appeler un outil pour atteindre un objectif dans un périmètre donné.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-block--ink" id="methode">
+    <div class="wrap">
+      <div class="section-intro">
+        <div>
+          <span class="num">§ 04 — Méthode</span>
+          <h2>Construire l'agent autour du <i>travail réel</i>.</h2>
+        </div>
+        <p>ALTOS cadre d'abord la mission, les données et les situations d'échec. Le modèle et les outils sont choisis ensuite, sur un périmètre testable par les utilisateurs.</p>
+      </div>
+
+      <div class="deliverables-grid">
+        <article class="deliverable">
+          <span class="num">01</span>
+          <h3>Définir la mission</h3>
+          <p>Entrées, résultat attendu, utilisateurs, fréquence, indicateurs et cas que l'agent ne doit pas traiter sont explicités.</p>
+        </article>
+        <article class="deliverable">
+          <span class="num">02</span>
+          <h3>Préparer le contexte</h3>
+          <p>Sources autorisées, qualité, fraîcheur, confidentialité et droits d'accès sont vérifiés avant toute connexion.</p>
+        </article>
+        <article class="deliverable">
+          <span class="num">03</span>
+          <h3>Limiter les outils</h3>
+          <p>Chaque lecture ou action dispose du droit minimal, d'un format attendu et d'une règle claire en cas d'erreur.</p>
+        </article>
+        <article class="deliverable">
+          <span class="num">04</span>
+          <h3>Tester et superviser</h3>
+          <p>Cas normaux, ambigus et adverses sont évalués ; les réponses, actions et validations restent consultables.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block" id="exemples">
+    <div class="wrap">
+      <div class="section-intro">
+        <div>
+          <span class="num">§ 05 — Terrain</span>
+          <h2>Trois agents issus des <i>audits</i>.</h2>
+        </div>
+        <p>Ces scénarios partent de structures réelles anonymisées. Ils illustrent des missions bornées où l'IA interprète, tandis que le workflow et l'humain conservent le contrôle.</p>
+      </div>
+
+      <p class="proof-note"><strong>Lecture des chiffres :</strong> les valeurs ci-dessous sont des projections établies pendant les audits à partir des volumes observés. Elles doivent être confirmées après déploiement et ne constituent pas une garantie de résultat.</p>
+
+      <div class="proof-grid">
+        <a class="proof-card" href="cas-usage/distribution-froid-commercial.html">
+          <span class="sector">Agent SAV · distribution B2B</span>
+          <div class="value">16–22 h/mois</div>
+          <h3>Qualifier les emails, extraire les pièces et préparer le bon d'intervention</h3>
+          <p>Projection d'audit · ouvrir l'étude de cas →</p>
+        </a>
+        <a class="proof-card" href="cas-usage/agence-evenementielle-b2b.html">
+          <span class="sector">Assistant projet · événementiel</span>
+          <div class="value">~70 %</div>
+          <h3>De temps projeté en moins sur la production des comptes rendus</h3>
+          <p>Projection d'audit · ouvrir l'étude de cas →</p>
+        </a>
+        <a class="proof-card" href="cas-usage/quincaillerie-rurale-multimetiers.html">
+          <span class="sector">Recherche assistée · métier technique</span>
+          <div class="value">Validation métier</div>
+          <h3>Synthétiser références OEM, prix et délais sans remplacer le technicien</h3>
+          <p>Scénario d'audit · ouvrir l'étude de cas →</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-block--paper" id="controle">
+    <div class="wrap">
+      <div class="section-intro">
+        <div>
+          <span class="num">§ 06 — Contrôle</span>
+          <h2>Donner moins de droits, obtenir plus de <i>confiance</i>.</h2>
+        </div>
+        <p>Un agent peut produire une réponse plausible mais inexacte, recevoir une instruction hostile dans un document ou utiliser une donnée hors contexte. Le dispositif doit limiter l'impact d'une erreur.</p>
+      </div>
+
+      <div class="decision-grid">
+        <article class="decision-card">
+          <h3>Droits minimaux</h3>
+          <p>Lecture avant écriture, sources nécessaires seulement et comptes techniques séparés limitent les conséquences d'une erreur.</p>
+        </article>
+        <article class="decision-card">
+          <h3>Validation humaine</h3>
+          <p>Paiement, contrat, décision concernant une personne et action irréversible restent soumis à une approbation explicite.</p>
+        </article>
+        <article class="decision-card">
+          <h3>Sources visibles</h3>
+          <p>Une réponse documentaire indique les éléments utilisés et signale lorsqu'aucune source suffisante n'a été trouvée.</p>
+        </article>
+        <article class="decision-card">
+          <h3>Évaluation continue</h3>
+          <p>Qualité, erreurs, refus, délais et corrections humaines sont suivis sur un jeu de cas représentatif du métier.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block" id="references">
+    <div class="wrap">
+      <div class="section-intro">
+        <div>
+          <span class="num">§ 07 — Références</span>
+          <h2>Trois repères <i>officiels</i>.</h2>
+        </div>
+        <p>La conception est rapprochée des recommandations publiques sur l'IA agentique, la sécurité des systèmes d'IA générative et la transparence envers les personnes.</p>
+      </div>
+
+      <div class="proof-grid">
+        <a class="proof-card" href="https://www.cnil.fr/fr/ia-agentique-cnil-cianum-note" target="_blank" rel="noopener">
+          <span class="sector">Données personnelles</span>
+          <div class="value">CNIL</div>
+          <h3>Note exploratoire sur l'IA agentique et les chaînes de traitement</h3>
+          <p>Source institutionnelle · consulter →</p>
+        </a>
+        <a class="proof-card" href="https://messervices.cyber.gouv.fr/guides/recommandations-de-securite-pour-un-systeme-dia-generative" target="_blank" rel="noopener">
+          <span class="sector">Cybersécurité</span>
+          <div class="value">ANSSI</div>
+          <h3>Recommandations de sécurité pour un système d'IA générative</h3>
+          <p>Guide officiel · consulter →</p>
+        </a>
+        <a class="proof-card" href="https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems" target="_blank" rel="noopener">
+          <span class="sector">Transparence</span>
+          <div class="value">UE</div>
+          <h3>Lignes directrices pour les fournisseurs et déployeurs de systèmes d'IA</h3>
+          <p>Commission européenne · consulter →</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-block--paper" id="questions">
+    <div class="wrap">
+      <div class="section-intro">
+        <div>
+          <span class="num">§ 08 — Questions fréquentes</span>
+          <h2>Les agents IA, <i>en clair</i>.</h2>
+        </div>
+        <p>Six réponses pour cadrer un premier projet d'agent IA dans une TPE ou une PME.</p>
+      </div>
+
+      <div class="faq-grid">
+        <article class="faq-item">
+          <h3>Qu'est-ce qu'un agent IA pour une PME ?</h3>
+          <p>Un agent IA pour PME est un système logiciel chargé d'une mission précise. Il interprète des informations, utilise uniquement les données et outils autorisés, puis propose ou exécute une action dans des limites définies.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Quelle différence entre un chatbot, un assistant IA et un agent IA ?</h3>
+          <p>Un chatbot répond dans une conversation. Un assistant aide une personne à produire ou retrouver une information. Un agent IA peut enchaîner plusieurs étapes et utiliser des outils pour atteindre un objectif, sous réserve des autorisations et contrôles prévus.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Quels usages d'agent IA sont adaptés aux TPE et PME ?</h3>
+          <p>Les usages fréquents sont la qualification de demandes, la recherche documentaire, la synthèse de dossiers, la préparation de réponses, le tri d'emails, l'extraction d'informations et la préparation d'actions dans un ERP ou un CRM.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Un agent IA peut-il utiliser les données de l'entreprise ?</h3>
+          <p>Oui, si les sources, les finalités, les droits d'accès, la durée de conservation et les conditions de réutilisation par les fournisseurs sont vérifiés. L'agent ne doit accéder qu'aux données nécessaires à sa mission.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Un agent IA peut-il agir sans validation humaine ?</h3>
+          <p>Seulement pour des actions réversibles, peu sensibles et correctement testées. Une validation humaine reste nécessaire avant un paiement, un engagement contractuel, une décision concernant une personne ou toute action difficile à annuler.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Combien de temps faut-il pour créer un premier agent IA ?</h3>
+          <p>Un premier prototype ciblé peut généralement être présenté en sept à quatorze jours lorsque la mission, les données, les accès et les critères de réussite sont disponibles. La mise en production dépend ensuite des tests, des risques et des intégrations.</p>
+        </article>
+      </div>
+
+      <aside class="author-card" aria-label="À propos du consultant">
+        <img src="assets/nicolas-darcos.jpg" width="640" height="640" alt="Nicolas Darcos, consultant IA et automatisation pour TPE et PME" loading="lazy" />
+        <div>
+          <h2>Nicolas Darcos</h2>
+          <p>Consultant IA et automatisation, fondateur d'ALTOS et membre du réseau des Ambassadeurs IA. L'accompagnement relie cadrage métier, données, intégration, sécurité et adoption par les équipes.</p>
+        </div>
+        <a href="/#about" class="btn btn--ghost">Découvrir le parcours</a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<section class="article-cta" id="contact">
+  <div class="wrap-narrow">
+    <h2>Quelle mission confier à votre premier <i>agent</i> ?</h2>
+    <p>Trente minutes pour décrire le besoin, vérifier les données disponibles et distinguer ce qui relève d'un agent IA, d'un assistant ou d'une automatisation plus simple.</p>
+    <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Réserver le diagnostic IA
+      <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+    </a>
+  </div>
+</section>
+
+<section class="site-page-note">
+  <div class="site-page-note__inner">
+    <div class="site-page-note__body"><b>Méthode et transparence —</b> Les exemples cités proviennent d'audits conduits par ALTOS en 2025 et 2026 auprès de structures réelles anonymisées. Les gains chiffrés restent des <b>projections</b> tant qu'un bilan après déploiement ne les a pas confirmés. Les références institutionnelles ont été vérifiées le 6 août 2026.</div>
+  </div>
+</section>
+
+<!-- SHARED_FOOTER_START -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <a href="/" class="site-footer__logo">ALTOS<i>.</i></a>
+        <p>Groupement d'experts métiers et ambassadeurs IA, au service des TPE et PME françaises.</p>
+      </div>
+      <div>
+        <h4>Parcours</h4>
+        <ul>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="audit-ia-tpe-pme.html">Audit IA</a></li>
+          <li><a href="automatisation-processus-pme.html">Automatisation</a></li>
+          <li><a href="agents-ia-pme.html">Agents IA</a></li>
+          <li><a href="cas-usage.html">Cas d'usage</a></li>
+          <li><a href="micro-audit.html">Micro-audit</a></li>
+          <li><a href="journal.html">Journal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://cal.com/nicolas-darcos-uldxct/30min">Diagnostic IA 30 min</a></li>
+          <li><a href="mailto:hello@altos-experts.fr">hello@altos-experts.fr</a></li>
+          <li><a href="https://www.linkedin.com/in/nicolas-darcos-40283035/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Officiel</h4>
+        <ul>
+          <li><a href="assets/charte-ambassadeurs-ia.pdf" target="_blank" rel="noopener">Charte Ambassadeur IA</a></li>
+          <li><a href="https://www.entreprises.gouv.fr/osezlia" target="_blank" rel="noopener">Annuaire Osez l'IA</a></li>
+          <li><a href="https://www.francenum.gouv.fr" target="_blank" rel="noopener">France Num</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© 2026 ALTOS — Groupement</span>
+      <span><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></span>
+    </div>
+  </div>
+</footer>
+<!-- SHARED_FOOTER_END -->
+
+<script src="assets/calcom.js"></script>
+<script src="assets/site-nav.js"></script>
+</body>
+</html>

@@ -54,6 +54,12 @@
   max-width: 54ch;
 }
 
+.section-intro p a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .section-block--ink .section-intro p {
   color: #b3b3b3;
 }
