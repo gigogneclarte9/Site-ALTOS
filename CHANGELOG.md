@@ -6,6 +6,25 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 
 ## [Unreleased]
 
+## [0.4.10] - 2026-08-06
+
+### Ajoute
+
+- Liens contextuels entre les trois articles du Journal, les pages piliers Audit IA, Automatisation et Agents IA, et les etudes de cas sectorielles pertinentes.
+- Liens retour depuis chaque article vers l'index du Journal.
+
+### Change
+
+- Introduction du Journal enrichie avec trois parcours descriptifs vers les offres IA principales.
+- Dates de modification des articles et `lastmod` des quatre URL du Journal actualisees.
+
+### Verifie
+
+- Les 20 pages du sitemap recoivent des liens contextuels depuis au moins deux pages publiques distinctes.
+- Trois articles relies aux pages piliers, aux cas sectoriels pertinents et a l'index du Journal.
+- Liens internes sans cible absente, un H1 par page et 20 URL controlees en `200` local.
+- Sitemap XML valide maintenu a 20 URL uniques.
+
 ## [0.4.9] - 2026-08-06
 
 ### Ajoute

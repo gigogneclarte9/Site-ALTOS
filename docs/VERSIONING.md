@@ -7,9 +7,9 @@ Objectif : garder une trace claire des versions du site public et de la zone adm
 ## Version courante
 
 ```text
-Site public : 0.4.9
+Site public : 0.4.10
 Admin       : 0.3.0
-Release     : 0.4.9 - Optimisation SEO GEO des dix etudes de cas
+Release     : 0.4.10 - Maillage interne SEO GEO
 ```
 
 ## Fichiers de reference
