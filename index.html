@@ -2,24 +2,24 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8" />
-<title>ALTOS — Ambassadeur IA · Automatisation no-code pour PME France</title>
-<meta name="description" content="Studio numérique français : automatisation no-code, agents IA, vibe coding, sites internet, SEO local. Membre du réseau Ambassadeurs IA reconnu par l'État. Diagnostic 30 minutes offert." />
-<meta name="keywords" content="ambassadeur IA, automatisation PME, agents IA France, vibe coding, n8n, France Num, IA TPE, DGE Osez l'IA" />
+<title>Consultant IA & automatisation pour TPE/PME | ALTOS</title>
+<meta name="description" content="Consultant IA pour TPE et PME, ALTOS audite vos processus et déploie automatisations, agents IA et outils métier. Diagnostic gratuit en France." />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="author" content="Nicolas Darcos" />
 <link rel="canonical" href="https://www.altos-experts.fr/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="ALTOS" />
 <meta property="og:locale" content="fr_FR" />
 <meta property="og:url" content="https://www.altos-experts.fr/" />
-<meta property="og:title" content="ALTOS — Ambassadeur IA · Automatisation no-code pour PME France" />
-<meta property="og:description" content="Studio numérique français : automatisation no-code, agents IA, vibe coding, sites internet, SEO local. Membre du réseau Ambassadeurs IA reconnu par l'État. Diagnostic 30 minutes offert." />
+<meta property="og:title" content="Consultant IA & automatisation pour TPE/PME | ALTOS" />
+<meta property="og:description" content="Audit IA, automatisation des processus, agents IA et outils métier pour les TPE et PME françaises." />
 <meta property="og:image" content="https://www.altos-experts.fr/assets/og-default.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="ALTOS — Ambassadeur IA pour PME" />
+<meta property="og:image:alt" content="ALTOS — Consultant IA et automatisation pour TPE et PME" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="ALTOS — Ambassadeur IA · Automatisation no-code pour PME France" />
-<meta name="twitter:description" content="Studio numérique français : automatisation no-code, agents IA, vibe coding, sites internet, SEO local. Membre du réseau Ambassadeurs IA reconnu par l'État. Diagnostic 30 minutes offert." />
+<meta name="twitter:title" content="Consultant IA & automatisation pour TPE/PME | ALTOS" />
+<meta name="twitter:description" content="Audit IA, automatisation des processus, agents IA et outils métier pour les TPE et PME françaises." />
 <meta name="twitter:image" content="https://www.altos-experts.fr/assets/og-default.png" />
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-weight='900' fill='%23ffffff'%3EA%3C/text%3E%3Ccircle cx='48' cy='52' r='4' fill='%23ff5b14'/%3E%3C/svg%3E" />
 
@@ -477,6 +477,30 @@
   .post:nth-child(1) h3 { font-size: 36px; }
   .post__meta { font-family: var(--mono); font-size: 11px; color: var(--ink-3); margin-top: auto; padding-top: 12px; }
 
+  /* ─── FAQ / REPONSES ─────────────────────── */
+  .faq { padding: 100px 0; border-bottom: 1px solid var(--ink); }
+  .faq__head {
+    display: grid; grid-template-columns: 1.15fr .85fr;
+    gap: 64px; align-items: end; margin-bottom: 56px;
+  }
+  .faq h2 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(48px, 7vw, 96px); line-height: .94;
+    letter-spacing: -.03em; margin-top: 16px;
+  }
+  .faq h2 i { font-style: italic; }
+  .faq__intro { font-size: 17px; line-height: 1.6; color: var(--ink-2); max-width: 48ch; }
+  .faq__grid { display: grid; grid-template-columns: repeat(2, 1fr); border: 1px solid var(--ink); }
+  .faq__item { padding: 36px; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+  .faq__item:nth-child(2n) { border-right: 0; }
+  .faq__item:nth-last-child(-n+2) { border-bottom: 0; }
+  .faq__item h3 {
+    font-family: var(--display); font-size: 28px; font-weight: 600;
+    line-height: 1.12; letter-spacing: -.01em; margin-bottom: 16px;
+  }
+  .faq__item p { color: var(--ink-2); font-size: 15px; line-height: 1.65; }
+  .faq__item strong { color: var(--ink); font-weight: 600; }
+
   /* ─── CTA ───────────────────────────────── */
   .cta {
     padding: 120px 0;
@@ -762,7 +786,7 @@
   }
 
   @media (max-width: 900px) {
-    .hero__sub, .why__head, .services__head, .testi__head, .blog__grid, .cases__grid, .testi__grid, .why__grid, .process__steps { grid-template-columns: 1fr !important; gap: 28px; }
+    .hero__sub, .why__head, .services__head, .testi__head, .blog__grid, .cases__grid, .testi__grid, .why__grid, .process__steps, .faq__head, .faq__grid { grid-template-columns: 1fr !important; gap: 28px; }
     .why__cell { grid-column: span 1 !important; }
     .case-tile { grid-column: span 6 !important; }
     .testi__cell { border-right: none !important; }
@@ -773,6 +797,9 @@
     .amba__disclaimer { text-align: left; max-width: none; }
     .about__grid { grid-template-columns: 1fr !important; gap: 48px; }
     .about__stats { grid-template-columns: 1fr 1fr !important; }
+    .faq__grid { gap: 0 !important; }
+    .faq__item { border-right: 0 !important; border-bottom: 1px solid var(--ink) !important; }
+    .faq__item:last-child { border-bottom: 0 !important; }
   }
 </style>
 
@@ -789,8 +816,8 @@
       "url": "https://www.altos-experts.fr",
       "logo": "https://www.altos-experts.fr/assets/og-default.png",
       "image": "https://www.altos-experts.fr/assets/og-default.png",
-      "description": "Studio numérique français spécialisé en automatisation no-code, agents IA, vibe coding, sites internet et SEO local pour TPE et PME.",
-      "founder": { "@type": "Person", "name": "Nicolas Darcos" },
+      "description": "Cabinet de conseil IA et d'automatisation qui accompagne les TPE et PME françaises de l'audit au déploiement d'agents IA et d'outils métier.",
+      "founder": { "@id": "https://www.altos-experts.fr/#nicolas-darcos" },
       "foundingDate": "2003-02-24",
       "email": "hello@altos-experts.fr",
       "address": {
@@ -806,12 +833,24 @@
         "name": "Réseau des Ambassadeurs IA · DGE — Plan « Osez l'IA »",
         "url": "https://www.entreprises.gouv.fr/osezlia"
       },
-      "knowsAbout": ["Intelligence artificielle","Automatisation no-code","n8n","Agents IA","Vibe coding","SEO local","RGPD"],
+      "sameAs": ["https://www.linkedin.com/in/nicolas-darcos-40283035/"],
+      "knowsAbout": ["Audit IA","Conseil en intelligence artificielle","Automatisation des processus","Automatisation no-code","n8n","Agents IA","Applications métier","Transformation numérique des TPE et PME","RGPD"],
       "identifier": [
         {"@type":"PropertyValue","propertyID":"SIREN","value":"352258479"},
         {"@type":"PropertyValue","propertyID":"SIRET","value":"35225847900042"},
         {"@type":"PropertyValue","propertyID":"NAF/APE","value":"70.22Z"}
       ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.altos-experts.fr/#nicolas-darcos",
+      "name": "Nicolas Darcos",
+      "jobTitle": "Consultant IA et automatisation pour TPE et PME",
+      "url": "https://www.altos-experts.fr/#about",
+      "image": "https://www.altos-experts.fr/assets/nicolas-darcos.jpg",
+      "worksFor": { "@id": "https://www.altos-experts.fr/#org" },
+      "sameAs": ["https://www.linkedin.com/in/nicolas-darcos-40283035/"],
+      "knowsAbout": ["Audit IA","Automatisation des processus","Agents IA","Conseil aux dirigeants de TPE et PME"]
     },
     {
       "@type": "WebSite",
@@ -822,19 +861,40 @@
       "inLanguage": "fr-FR"
     },
     {
+      "@type": "WebPage",
+      "@id": "https://www.altos-experts.fr/#webpage",
+      "url": "https://www.altos-experts.fr/",
+      "name": "Consultant IA & automatisation pour TPE/PME | ALTOS",
+      "description": "Audit IA, automatisation des processus, agents IA et outils métier pour les TPE et PME françaises.",
+      "isPartOf": { "@id": "https://www.altos-experts.fr/#website" },
+      "about": [
+        { "@id": "https://www.altos-experts.fr/#org" },
+        { "@id": "https://www.altos-experts.fr/#nicolas-darcos" },
+        { "@id": "https://www.altos-experts.fr/#service" }
+      ],
+      "dateModified": "2026-08-06",
+      "inLanguage": "fr-FR"
+    },
+    {
       "@type": "ProfessionalService",
       "@id": "https://www.altos-experts.fr/#service",
-      "name": "ALTOS — Conseil et déploiement IA pour PME",
+      "name": "ALTOS — Consultant IA et automatisation pour TPE/PME",
+      "description": "Conseil, audit IA et déploiement d'automatisations, d'agents IA et d'applications métier pour les TPE et PME.",
       "provider": { "@id": "https://www.altos-experts.fr/#org" },
-      "areaServed": "France",
+      "serviceType": ["Audit IA","Conseil IA","Automatisation des processus","Agents IA","Applications métier"],
+      "areaServed": [
+        { "@type": "Country", "name": "France" },
+        { "@type": "AdministrativeArea", "name": "Occitanie" },
+        { "@type": "AdministrativeArea", "name": "Aude" }
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Quatre spécialités",
+        "name": "Conseil IA et automatisation pour TPE/PME",
         "itemListElement": [
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Automatisation no-code","description":"Workflows n8n, agents IA sur-mesure"}},
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Vibe coding","description":"Apps métier sur-mesure livrées en jours"}},
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Sites internet","description":"Vitrines, e-commerce, prise de rendez-vous"}},
-          {"@type":"Offer","itemOffered":{"@type":"Service","name":"SEO local","description":"Google My Business, contenu, technique"}}
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Audit IA pour TPE et PME","description":"Analyse des processus, priorisation des usages et feuille de route IA"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Automatisation des processus métier","description":"Workflows n8n, intégrations et automatisations no-code"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Agents IA sur mesure","description":"Assistants IA de recherche, qualification, classement et rédaction"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Applications métier avec IA","description":"Outils internes, tableaux de bord et applications métier sur mesure"}}
         ]
       }
     }
@@ -860,7 +920,7 @@
     </div>
     <div class="nav__cta">
       <span class="nav__time">FR · 2026</span>
-      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Diagnostic 30 min
+      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Diagnostic IA 30 min
         <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
     </div>
@@ -871,32 +931,32 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero__top">
-    <div>Issue n°01 — Groupement</div>
-    <div>Toute la France</div>
-    <div>Groupement</div>
+    <div>Conseil IA · Automatisation</div>
+    <div>Aude · Occitanie · France</div>
+    <div>TPE · PME</div>
   </div>
 
   <h1 class="hero__title reveal">
-    <span class="row reveal-line"><span>Studio <i>numérique</i></span></span>
-    <span class="row reveal-line"><span>qui s'occupe</span></span>
-    <span class="row reveal-line"><span><span class="strike">enfin</span> de</span></span>
-    <span class="row reveal-line"><span><i class="accent">votre</i> activité.</span></span>
+    <span class="row reveal-line"><span>Consultant <i>IA</i></span></span>
+    <span class="row reveal-line"><span style="font-size:.66em">& <i class="accent">automatisation</i></span></span>
+    <span class="row reveal-line"><span>pour les <i class="accent">TPE</i></span></span>
+    <span class="row reveal-line"><span><i class="accent">et PME</i>.</span></span>
   </h1>
 
   <div class="hero__sub">
-    <p><strong>Un groupement d'experts métiers</strong> — automatisation, vibe coding, sites internet, SEO. Quatre savoir-faire au service des TPE et commerces qui veulent du résultat, pas du jargon.</p>
+    <p><strong>ALTOS accompagne les dirigeants de TPE et PME</strong> pour identifier, prioriser et déployer des usages concrets de l'intelligence artificielle : audit IA, automatisation des processus, agents IA et applications métier. Basé dans l'Aude, nous intervenons en Occitanie et partout en France.</p>
     <div class="hero__cta">
       <a class="btn btn--big btn--diag" href="https://cal.com/nicolas-darcos-uldxct/30min" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>
-        Diagnostic 30 minutes
+        Diagnostic IA 30 minutes
         <svg class="arrow" width="18" height="18" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
       <a class="btn btn--big btn--audit" href="micro-audit.html">
-        Micro-audit 3 minutes
+        Micro-audit IA 3 minutes
         <svg class="arrow" width="18" height="18" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
     </div>
     <div class="hero__meta">
-      Groupement<br/>d'ambassadeurs IA<br/>· · ·<br/>4 spécialités<br/>1 conversation
+      Consultant IA<br/>TPE / PME<br/>· · ·<br/>audit · automatisation<br/>déploiement
     </div>
   </div>
 </section>
@@ -907,16 +967,16 @@
 <!-- STRIP -->
 <div class="strip">
   <div class="strip__track">
-    <span><i>automatisation</i></span>
-    <span><i>vibe coding</i></span>
-    <span><i>sites internet</i></span>
-    <span><i>SEO local</i></span>
+    <span><i>consultant IA</i></span>
+    <span><i>audit IA</i></span>
+    <span><i>automatisation métier</i></span>
     <span><i>agents IA</i></span>
-    <span><i>automatisation</i></span>
-    <span><i>vibe coding</i></span>
-    <span><i>sites internet</i></span>
-    <span><i>SEO local</i></span>
+    <span><i>applications métier</i></span>
+    <span><i>consultant IA</i></span>
+    <span><i>audit IA</i></span>
+    <span><i>automatisation métier</i></span>
     <span><i>agents IA</i></span>
+    <span><i>applications métier</i></span>
   </div>
 </div>
 
@@ -926,20 +986,20 @@
     <div class="why__head">
       <div>
         <span class="num reveal">§ 01 — Pourquoi</span>
-        <h2 class="reveal">Un <i>groupement</i> d'experts,<br/>au service de votre <mark>activité</mark>.</h2>
+        <h2 class="reveal">Un <i>consultant IA</i> qui part<br/>de votre <mark>activité</mark>.</h2>
       </div>
-      <p class="why__lead reveal">Six raisons concrètes — pas du marketing — pour lesquelles les dirigeants de TPE nous choisissent et reviennent.</p>
+      <p class="why__lead reveal">Six principes concrets pour transformer les irritants quotidiens des TPE et PME en solutions IA utiles, mesurables et adoptées.</p>
     </div>
     <div class="why__grid">
       <div class="why__cell reveal">
         <span class="num">01</span>
-        <h3><i>Experts</i> métiers,<br/>pas généralistes.</h3>
-        <p>Chaque mission est confiée à la personne dont c'est le métier — un développeur dev, un référenceur référence. Pas de pseudo-couteau-suisse.</p>
+        <h3><i>Consultant IA</i>,<br/>mais d'abord métier.</h3>
+        <p>On analyse vos processus, vos outils et vos contraintes avant de parler technologie. L'IA répond à un besoin opérationnel précis.</p>
       </div>
       <div class="why__cell reveal">
         <span class="num">02</span>
-        <h3>Ambassadeurs <i>IA</i>.</h3>
-        <p>On utilise l'IA quand elle vous fait gagner. Pas pour le gadget, pas pour le buzz.</p>
+        <h3>Audit <i>IA</i><br/>orienté terrain.</h3>
+        <p>Chaque audit IA identifie les tâches répétitives, les données disponibles, les risques et les gains attendus avant de prioriser les actions.</p>
       </div>
       <div class="why__cell reveal">
         <span class="num">03</span>
@@ -948,18 +1008,18 @@
       </div>
       <div class="why__cell reveal">
         <span class="num">04</span>
-        <h3>Périmètre <i>cadré</i>.</h3>
-        <p>Périmètre clair, livraisons hebdo. Vous savez ce qui va être livré, semaine après semaine.</p>
+        <h3>Automatisations <i>cadrées</i>.</h3>
+        <p>Périmètre clair, données identifiées et livraisons hebdomadaires. Vous savez ce qui sera automatisé et comment le résultat sera contrôlé.</p>
       </div>
       <div class="why__cell reveal">
         <span class="num">05</span>
-        <h3><i>Rapide</i>, sérieux.</h3>
-        <p>Premier livrable en 7-14 jours. On préfère itérer vite que pondre des PowerPoint.</p>
+        <h3>Déploiement <i>rapide</i>.</h3>
+        <p>Premier livrable en 7 à 14 jours. Nous testons avec les utilisateurs, mesurons les résultats et améliorons par itérations courtes.</p>
       </div>
       <div class="why__cell reveal">
         <span class="num">06</span>
-        <h3>Sans <i>jargon</i>.</h3>
-        <p>On parle votre langue. Démos vidéo, comptes-rendus simples, doc utilisable.</p>
+        <h3>Adoption sans <i>jargon</i>.</h3>
+        <p>Démonstrations, documentation simple et formation des équipes : l'automatisation doit rester compréhensible et utilisable au quotidien.</p>
       </div>
     </div>
   </div>
@@ -1049,11 +1109,11 @@
       <div class="about__body">
         <h2 class="reveal">Vingt-trois ans à <i>écouter</i><br/>des dirigeants de <mark>TPE/PME</mark>.</h2>
 
-        <p class="about__lede reveal">Avant l'IA, il y a eu <strong>vingt-trois ans de terrain</strong> — en conseil stratégie et ressources humaines, aux côtés de dirigeants de TPE et PME qui n'avaient ni le temps, ni l'envie d'écouter du <i>jargon</i>.</p>
+        <p class="about__lede reveal">Avant de devenir consultant IA, il y a eu <strong>vingt-trois ans de terrain</strong> — en conseil stratégique et ressources humaines, aux côtés de dirigeants de TPE et PME qui n'avaient ni le temps, ni l'envie d'écouter du <i>jargon</i>.</p>
 
         <p class="reveal">J'ai accompagné des transmissions, des recrutements de cadres dirigeants, des restructurations, des plans de développement. À chaque fois, le même constat : les dirigeants ne demandent pas une méthode ; ils demandent <strong>du temps</strong>, <strong>de la clarté</strong> et <strong>un interlocuteur qui comprend leur métier</strong>.</p>
 
-        <p class="reveal">ALTOS est né de ce constat. L'intelligence artificielle et l'automatisation ne sont qu'un nouvel outil — puissant, mais un outil. Ce qui compte, c'est l'écoute, le cadrage et la promesse tenue. C'est ce que je mets dans chaque mission, et c'est ce que mes pairs du groupement apportent dans leur spécialité.</p>
+        <p class="reveal">ALTOS est né de ce constat. L'intelligence artificielle, les agents IA et l'automatisation sont des leviers puissants, mais ils ne valent que par leur utilité réelle. Mon rôle de consultant IA consiste à relier la technologie au métier, cadrer le déploiement et rendre le résultat mesurable.</p>
 
         <div class="about__stats reveal">
           <div class="about__stat">
@@ -1073,7 +1133,7 @@
         <div class="about__sign">
           <div>
             <div class="about__sign__name">Nicolas Darcos</div>
-            <div class="about__sign__role">Fondateur · Ambassadeur IA · Consultant</div>
+            <div class="about__sign__role">Fondateur · Consultant IA & automatisation</div>
           </div>
           <div style="margin-left:auto">
             <a class="btn btn--ghost" href="https://cal.com/nicolas-darcos-uldxct/30min" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Échanger 30 min
@@ -1092,39 +1152,39 @@
     <div class="services__head">
       <div>
         <span class="num reveal">§ 03 — Services</span>
-        <h2 class="reveal">Quatre <i>spécialités</i>,<br/>une seule conversation.</h2>
+        <h2 class="reveal">De l'<i>audit IA</i><br/>au déploiement.</h2>
       </div>
-      <p class="why__lead reveal">Vous parlez à un seul interlocuteur. En coulisses, l'expert qu'il faut prend la main au bon moment.</p>
+      <p class="why__lead reveal">Un interlocuteur unique analyse vos processus, priorise les opportunités et mobilise les compétences nécessaires pour automatiser durablement votre activité.</p>
     </div>
 
     <div class="service-row reveal">
       <div class="service-row__num">01</div>
-      <div class="service-row__title">Auto<i>matisation</i></div>
-      <div class="service-row__desc">Vos tâches répétitives s'exécutent toutes seules — relances, planning, stock, reporting. n8n, agents IA sur-mesure.</div>
+      <div class="service-row__title">Audit <i>IA</i></div>
+      <div class="service-row__desc">Analyse des processus, outils, données et irritants. Priorisation des cas d'usage selon le gain, le risque et l'effort, puis feuille de route actionnable.</div>
       <div class="service-row__plus">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12"/></svg>
       </div>
     </div>
     <div class="service-row reveal">
       <div class="service-row__num">02</div>
-      <div class="service-row__title">Vibe <i>coding</i></div>
-      <div class="service-row__desc">Apps métier sur-mesure livrées en jours, pas en mois. Outils internes, dashboards, mini-saas pour votre activité.</div>
+      <div class="service-row__title">Auto<i>matisation</i></div>
+      <div class="service-row__desc">Relances, saisies, devis, comptes rendus, SAV et reporting : des workflows n8n et no-code relient vos outils et réduisent les tâches répétitives.</div>
       <div class="service-row__plus">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12"/></svg>
       </div>
     </div>
     <div class="service-row reveal">
       <div class="service-row__num">03</div>
-      <div class="service-row__title">Sites <i>internet</i></div>
-      <div class="service-row__desc">Vitrines, e-commerces, prises de rendez-vous. Rapides, beaux, faciles à mettre à jour vous-même.</div>
+      <div class="service-row__title">Agents <i>IA</i></div>
+      <div class="service-row__desc">Des assistants spécialisés pour rechercher, classer, qualifier, synthétiser ou rédiger à partir de vos règles et de vos informations métier.</div>
       <div class="service-row__plus">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12"/></svg>
       </div>
     </div>
     <div class="service-row reveal">
       <div class="service-row__num">04</div>
-      <div class="service-row__title">SEO <i>local</i></div>
-      <div class="service-row__desc">Apparaissez quand vos clients vous cherchent. Google My Business, contenu, technique.</div>
+      <div class="service-row__title">Apps <i>métier</i></div>
+      <div class="service-row__desc">Applications internes, tableaux de bord et outils sur mesure pour intégrer l'IA dans un parcours simple, sécurisé et adapté aux équipes.</div>
       <div class="service-row__plus">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12"/></svg>
       </div>
@@ -1140,19 +1200,19 @@
     <div class="process__steps">
       <div class="pstep reveal">
         <h3><i>Diagnostic</i></h3>
-        <p>30 minutes en visio. On comprend votre activité, on identifie les gisements de temps et de revenus.</p>
+        <p>30 minutes pour comprendre l'activité, les outils et les irritants, puis identifier les premiers gisements d'automatisation et de valeur.</p>
       </div>
       <div class="pstep reveal">
         <h3><i>Cadrage</i></h3>
-        <p>Périmètre cadré, planning semaine par semaine. Vous savez précisément ce qui va se passer.</p>
+        <p>Processus, données, responsabilités, risques et indicateurs sont cadrés. La feuille de route précise ce qui sera livré et mesuré.</p>
       </div>
       <div class="pstep reveal">
         <h3><i>Construction</i></h3>
-        <p>L'expert métier prend la main. Démo chaque vendredi, vous validez au fil de l'eau.</p>
+        <p>Automatisation, agent IA ou application métier : une démonstration régulière permet de valider le résultat avec les utilisateurs.</p>
       </div>
       <div class="pstep reveal">
         <h3><i>Mise en route</i></h3>
-        <p>Formation, documentation, support 30 jours. Et on reste joignables, vraiment.</p>
+        <p>Formation, documentation, suivi des indicateurs et support 30 jours facilitent l'adoption et la maîtrise de la solution.</p>
       </div>
     </div>
   </div>
@@ -1344,29 +1404,69 @@
       <a href="journal.html" class="btn btn--ghost">Tous les articles</a>
     </div>
     <div class="blog__grid">
-      <article class="post reveal" style="cursor:pointer" onclick="window.location.href='journal/120-audits-ia-quick-wins-pme.html'">
+      <a class="post reveal" href="journal/120-audits-ia-quick-wins-pme.html" aria-label="Lire : 120 audits IA, les 5 quick wins des PME">
         <div class="post__cover post__cover-1">
           <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><circle cx="50" cy="50" r="30"/><path d="M30 50h40M50 30v40"/></svg>
         </div>
         <div class="post__cat">Méthode</div>
         <h3>120 audits IA plus tard : les 5 <i>quick wins</i> qu'on retrouve dans 80 % des PME.</h3>
         <div class="post__meta">12 min · 14 mai 2026</div>
-      </article>
-      <article class="post reveal" style="cursor:pointer" onclick="window.location.href='journal/6-audits-6-secteurs-meme-verdict.html'">
+      </a>
+      <a class="post reveal" href="journal/6-audits-6-secteurs-meme-verdict.html" aria-label="Lire : six audits flash IA dans six secteurs">
         <div class="post__cover post__cover-2">
           <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><path d="M30 30l-15 20 15 20M70 30l15 20-15 20M55 25L45 75"/></svg>
         </div>
         <div class="post__cat">Retours de terrain</div>
         <h3>Six audits flash IA, six secteurs sans rapport, le <i>même</i> verdict.</h3>
         <div class="post__meta">9 min · 12 mai 2026</div>
-      </article>
-      <article class="post reveal" style="cursor:pointer" onclick="window.location.href='journal/pharmacie-officine-ia-audience-oubliee.html'">
+      </a>
+      <a class="post reveal" href="journal/pharmacie-officine-ia-audience-oubliee.html" aria-label="Lire : pharmacie d'officine et intelligence artificielle">
         <div class="post__cover post__cover-3">
           <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"><circle cx="40" cy="40" r="20"/><path d="M55 55l20 20"/></svg>
         </div>
         <div class="post__cat">Sectoriel</div>
         <h3>Pharmacie d'officine et IA : l'<i>audience</i> qu'on oublie.</h3>
         <div class="post__meta">11 min · 10 mai 2026</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ / REPONSES -->
+<section class="faq" id="questions">
+  <div class="wrap">
+    <div class="faq__head">
+      <div>
+        <span class="num reveal">§ 08 — Questions fréquentes</span>
+        <h2 class="reveal">IA et automatisation<br/>pour PME : <i>en clair</i>.</h2>
+      </div>
+      <p class="faq__intro reveal">Des réponses directes aux questions que posent les dirigeants avant un audit IA ou un premier projet d'automatisation.</p>
+    </div>
+
+    <div class="faq__grid">
+      <article class="faq__item reveal">
+        <h3>Qu'est-ce qu'un audit IA pour une TPE ou une PME ?</h3>
+        <p>Un <strong>audit IA</strong> analyse les processus, les outils, les données et les tâches répétitives de l'entreprise. Il aboutit à une feuille de route qui classe les cas d'usage selon leur impact, leur faisabilité, leurs risques et l'effort nécessaire.</p>
+      </article>
+      <article class="faq__item reveal">
+        <h3>Quelles tâches une PME peut-elle automatiser ?</h3>
+        <p>Une PME peut automatiser le tri des demandes, la saisie, les devis, les relances, les comptes rendus, le suivi SAV, la production de documents ou le reporting. Le bon point de départ est une tâche fréquente, stable et mesurable.</p>
+      </article>
+      <article class="faq__item reveal">
+        <h3>Quelle différence entre automatisation et agent IA ?</h3>
+        <p>Une <strong>automatisation</strong> exécute un enchaînement défini de règles. Un <strong>agent IA</strong> peut interpréter une demande, rechercher une information ou produire une réponse dans un cadre contrôlé. Les deux approches sont souvent combinées.</p>
+      </article>
+      <article class="faq__item reveal">
+        <h3>Comment ALTOS accompagne-t-il un projet IA ?</h3>
+        <p>ALTOS commence par un diagnostic, cadre le processus et les données, construit un premier livrable, puis le teste avec les utilisateurs. La mission comprend la documentation, la formation et un suivi après la mise en route.</p>
+      </article>
+      <article class="faq__item reveal">
+        <h3>Où intervient le consultant IA ALTOS ?</h3>
+        <p>ALTOS est basé à <strong>Montferrand, dans l'Aude</strong>. Les missions sont réalisées en Occitanie et partout en France, à distance ou sur site selon les besoins de la TPE ou de la PME.</p>
+      </article>
+      <article class="faq__item reveal">
+        <h3>Quels résultats peut-on attendre d'une automatisation ?</h3>
+        <p>Les résultats recherchés sont le temps gagné, la baisse des erreurs, une information mieux structurée et un meilleur suivi de l'activité. Les gains sont mesurés sur les missions livrées et clairement distingués des projections d'un audit.</p>
       </article>
     </div>
   </div>
@@ -1375,19 +1475,19 @@
 <!-- CTA -->
 <section class="cta" id="contact">
   <div class="wrap">
-    <span class="num reveal" style="color: var(--accent)">§ 08 — Premier pas</span>
+    <span class="num reveal" style="color: var(--accent)">§ 09 — Premier pas</span>
     <h2 class="reveal" style="margin-top: 20px;">
-      <span class="row">Discutons</span>
-      <span class="row"><span class="acid">trente</span> <i>minutes</i>.</span>
+      <span class="row">Parlons de</span>
+      <span class="row">votre <span class="acid">audit</span> <i>IA</i>.</span>
     </h2>
-    <p class="cta__sub reveal">Diagnostic gratuit, sans engagement. On regarde votre activité, on identifie 1 à 3 chantiers à fort impact, et vous repartez avec une feuille de route — qu'on travaille ensemble ou non.</p>
+    <p class="cta__sub reveal">Diagnostic gratuit de 30 minutes, sans engagement. Nous examinons votre activité et identifions un à trois processus où l'IA ou l'automatisation peut créer un impact concret.</p>
     <div class="cta__btns reveal">
       <a class="btn btn--big btn--diag" href="https://cal.com/nicolas-darcos-uldxct/30min" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>
-        Réserver un créneau
+        Réserver un diagnostic IA
         <svg class="arrow" width="18" height="18" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
       <a class="btn btn--big btn--audit" href="micro-audit.html">
-        Micro-audit 3 minutes
+        Micro-audit IA 3 minutes
         <svg class="arrow" width="18" height="18" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
       <a class="btn btn--ghost" href="mailto:hello@altos-experts.fr">Nous écrire</a>
@@ -1421,7 +1521,7 @@
       <div>
         <h4>Contact</h4>
         <ul>
-          <li><a href="https://cal.com/nicolas-darcos-uldxct/30min">Diagnostic 30 min</a></li>
+          <li><a href="https://cal.com/nicolas-darcos-uldxct/30min">Diagnostic IA 30 min</a></li>
           <li><a href="mailto:hello@altos-experts.fr">hello@altos-experts.fr</a></li>
           <li><a href="https://www.linkedin.com/in/nicolas-darcos-40283035/" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>

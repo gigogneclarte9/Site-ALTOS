@@ -1,3 +1,11 @@
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /uploads/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /uploads/
+
 User-agent: *
 Allow: /
 Disallow: /uploads/

@@ -4,6 +4,30 @@ Toutes les evolutions notables du site ALTOS sont suivies ici.
 
 Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste en pre-production.
 
+## [Unreleased]
+
+## [0.4.4] - 2026-08-06
+
+### Change
+
+- Page d'accueil recentree sur le champ semantique consultant IA, audit IA, automatisation, agents IA et applications metier pour TPE/PME.
+- Title, description, Open Graph, Twitter Cards, H1, hero, services, methode et CTA alignes sur l'intention de recherche principale.
+- Mention `TPE` du H1 harmonisee visuellement avec `PME`, sans texte barre.
+- Entites `Organization`, `Person`, `WebPage` et `ProfessionalService` clarifiees dans les donnees structurees.
+- Cartes du journal transformees en liens HTML explorables.
+- Libelles de diagnostic harmonises en `Diagnostic IA` dans les composants partages.
+
+### Ajoute
+
+- Section de six questions-reponses factuelles pour le SEO, le GEO et les visiteurs.
+- Autorisations explicites de `OAI-SearchBot` et `PerplexityBot` dans `robots.txt`.
+
+### Verifie
+
+- Title de 51 caracteres et meta description de 145 caracteres.
+- Donnees JSON-LD valides et coherentes avec le contenu visible.
+- Lighthouse local : SEO 100, performance 99, accessibilite 98.
+
 ## [0.4.3] - 2026-08-06
 
 ### Ajoute
