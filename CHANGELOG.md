@@ -24,6 +24,7 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 - Trois articles relies aux pages piliers, aux cas sectoriels pertinents et a l'index du Journal.
 - Liens internes sans cible absente, un H1 par page et 20 URL controlees en `200` local.
 - Sitemap XML valide maintenu a 20 URL uniques.
+- Deploiement production valide : version API `0.4.10`, maillage visible sur le Journal et les pages piliers, 20 URL en `200`.
 
 ## [0.4.9] - 2026-08-06
 
