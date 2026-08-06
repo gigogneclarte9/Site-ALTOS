@@ -46,7 +46,7 @@ https://www.altos-experts.fr/
 Etat valide :
 
 - depot clone dans `/opt/altos-deploy/Site-ALTOS` ;
-- commit deploye : `5c7c6ff` (release `0.4.7`) ;
+- commit deploye : `5a510a2` (release `0.4.8`) ;
 - site public servi par Nginx depuis `/var/www/altos/current/public` ;
 - API Fastify servie en local sur `127.0.0.1:3001` ;
 - Nginx proxyfie `/api/`, `/admin` et `/documents/` vers l'API ;
@@ -63,13 +63,14 @@ Etat valide :
 - redirection HTTP -> HTTPS active ;
 - redirection `altos-experts.fr` -> `www.altos-experts.fr` active ;
 - certificat Let's Encrypt valide jusqu'au 2026-09-17 avec renouvellement automatique Certbot ;
-- `/api/health` repond avec `database.ok = true` et version `0.4.7` ;
+- `/api/health` repond avec `database.ok = true` et version `0.4.8` ;
 - `/index.html` redirige en `301` vers `/` ;
 - les URL inexistantes renvoient la page personnalisee avec un statut `404` ;
-- l'accueil public expose le H1, les six reponses FAQ et les metadonnees SEO/GEO de la release `0.4.7` ;
+- l'accueil public expose le H1, les six reponses FAQ et les metadonnees SEO/GEO de la release `0.4.8` ;
 - la page `/audit-ia-tpe-pme.html` repond en `200` avec un H1, six FAQ et des donnees structurees `Service` coherentes ;
 - la page `/automatisation-processus-pme.html` repond en `200` avec un H1, six FAQ et des donnees structurees `Service` coherentes ;
 - la page `/agents-ia-pme.html` repond en `200` avec un H1, six FAQ et des donnees structurees `Service` coherentes ;
+- les cas froid commercial, agence evenementielle et quincaillerie rurale repondent en `200` avec un H1, un resume factuel et des donnees structurees `Article` enrichies ;
 - la navigation mobile partagee est chargee sur les 23 pages publiques avec son script accessible ;
 - `robots.txt` autorise explicitement `OAI-SearchBot` et `PerplexityBot` ;
 - le sitemap public contient les 20 URL canoniques attendues, toutes verifiees en `200` ;

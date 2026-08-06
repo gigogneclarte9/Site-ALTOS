@@ -25,6 +25,7 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 - Trois pages en `200` local avec un H1 chacune, titles de 54 a 56 caracteres et descriptions de 148 a 156 caracteres.
 - Schemas `Article` valides avec dates, trois services cites et cinq mots-cles par cas.
 - Resumes factuels responsives, trois liens vers les pages piliers par cas et sitemap maintenu a 20 URL uniques.
+- Deploiement production valide : trois cas optimises, index des cas, version API `0.4.8` et 20 URL du sitemap operationnels.
 
 ## [0.4.7] - 2026-08-06
 
