@@ -25,6 +25,7 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 - Page Automatisation en `200` local avec un H1, title de 57 caracteres et description de 143 caracteres.
 - Six FAQ visibles identiques aux donnees structurees, sans identifiant duplique ni ancre manquante.
 - Navigation partagee coherente sur 22 pages et sitemap local de 19 URL uniques, toutes en `200`.
+- Deploiement production valide : page Automatisation, maillage depuis l'accueil, version API `0.4.6` et 19 URL du sitemap operationnels.
 
 ## [0.4.5] - 2026-08-06
 
