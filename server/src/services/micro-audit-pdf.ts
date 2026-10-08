@@ -64,11 +64,13 @@ function asText(value: unknown, fallback = ''): string {
 }
 
 function toQuickWin(value: Record<string, unknown>, index: number): QuickWin {
+  // Core PDF fonts do not contain Unicode arrows or the mathematical minus.
+  const pdfText = (text: string) => text.replace(/[−–‑]/g, '-').replace(/→/g, '=>');
   return {
-    title: asText(value.title, `Quick win ${index + 1}`),
-    desc: asText(value.desc || value.description),
-    stack: asText(value.stack, 'À cadrer'),
-    gain: asText(value.gain, 'Gain estimé'),
+    title: pdfText(asText(value.title, `Quick win ${index + 1}`)),
+    desc: pdfText(asText(value.desc || value.description)),
+    stack: pdfText(asText(value.stack, 'À cadrer')),
+    gain: pdfText(asText(value.gain, 'Gain estimé')),
   };
 }
 
@@ -159,7 +161,7 @@ export async function generateMicroAuditPdf({
   doc.setTextColor(10, 10, 10);
   doc.setFont('times', 'normal');
   doc.setFontSize(11);
-  doc.text(profileName, 20, y + 50);
+  doc.text(doc.splitTextToSize(profileName, 72), 20, y + 47);
 
   doc.rect(100, y, 94, 56);
   doc.setTextColor(120, 120, 120);
@@ -248,13 +250,30 @@ export async function generateMicroAuditPdf({
   y += 16;
 
   picks.forEach((quickWin, index) => {
-    if (y > 250) {
+    const textX = 38;
+    const right = W - 22;
+    const textWidth = right - textX;
+    doc.setFont('times', 'normal');
+    doc.setFontSize(13);
+    const titleLines = doc.splitTextToSize(quickWin.title, textWidth);
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(8.5);
+    const descLines = doc.splitTextToSize(quickWin.desc, textWidth);
+    doc.setFontSize(7);
+    const stackLines = doc.splitTextToSize(`STACK — ${quickWin.stack}`, 88);
+    doc.setFont('times', 'italic');
+    doc.setFontSize(10);
+    const gainLines = doc.splitTextToSize(quickWin.gain, textWidth - 94);
+    const descOffset = 9 + titleLines.length * 5.3 + 2;
+    const metaOffset = descOffset + descLines.length * 3.8 + 5;
+    const cardHeight = Math.max(38, metaOffset + Math.max(stackLines.length * 3.2, gainLines.length * 4.2) + 5);
+    if (y + cardHeight > H - 20) {
       doc.addPage();
       y = 20;
     }
     doc.setDrawColor(10, 10, 10);
     doc.setLineWidth(0.3);
-    doc.rect(16, y, W - 32, 38);
+    doc.rect(16, y, W - 32, cardHeight);
 
     doc.setTextColor(255, 91, 20);
     doc.setFont('times', 'italic');
@@ -264,34 +283,32 @@ export async function generateMicroAuditPdf({
     doc.setTextColor(10, 10, 10);
     doc.setFont('times', 'normal');
     doc.setFontSize(13);
-    doc.text(quickWin.title, 38, y + 9);
+    doc.text(titleLines, textX, y + 9, { lineHeightFactor: 1.15 });
 
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(8.5);
     doc.setTextColor(60, 60, 60);
-    const descLines = doc.splitTextToSize(quickWin.desc, W - 60);
-    doc.text(descLines, 38, y + 16);
+    doc.text(descLines, textX, y + descOffset, { lineHeightFactor: 1.25 });
 
     doc.setFontSize(7);
     doc.setTextColor(120, 120, 120);
-    doc.text(`STACK — ${quickWin.stack}`, 38, y + 33);
+    doc.text(stackLines, textX, y + metaOffset, { lineHeightFactor: 1.25 });
 
     doc.setFont('times', 'italic');
     doc.setFontSize(10);
     doc.setTextColor(10, 10, 10);
-    const gainW = doc.getTextWidth(quickWin.gain);
-    doc.text(quickWin.gain, W - 16 - gainW, y + 33);
+    doc.text(gainLines, right, y + metaOffset, { align: 'right', lineHeightFactor: 1.15 });
 
-    y += 44;
+    y += cardHeight + 6;
   });
 
-  if (y > 250) {
+  if (y + 44 > H - 20) {
     doc.addPage();
     y = 20;
   }
   y += 4;
   doc.setFillColor(10, 10, 10);
-  doc.rect(16, y, W - 32, 32, 'F');
+  doc.rect(16, y, W - 32, 40, 'F');
   doc.setTextColor(255, 255, 255);
   doc.setFont('times', 'normal');
   doc.setFontSize(14);
@@ -299,11 +316,18 @@ export async function generateMicroAuditPdf({
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(8.5);
   doc.setTextColor(200, 200, 200);
-  doc.text('Diagnostic offert, sans engagement. cal.com/nicolas-darcos-uldxct/30min', 22, y + 22);
+  doc.text('Diagnostic offert, sans engagement.', 22, y + 22);
+  doc.setFontSize(8);
+  doc.textWithLink('cal.com/nicolas-darcos-uldxct/30min', 22, y + 32, {
+    url: 'https://cal.com/nicolas-darcos-uldxct/30min',
+  });
   doc.setTextColor(217, 255, 60);
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(8);
-  doc.text('BONJOUR@ALTOS.FR', W - 22 - doc.getTextWidth('BONJOUR@ALTOS.FR'), y + 22);
+  const contactEmail = 'hello@altos-experts.fr';
+  doc.textWithLink(contactEmail, W - 22 - doc.getTextWidth(contactEmail), y + 32, {
+    url: `mailto:${contactEmail}`,
+  });
 
   const pages = doc.getNumberOfPages();
   for (let p = 1; p <= pages; p += 1) {

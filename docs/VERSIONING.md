@@ -1,15 +1,15 @@
 # Versioning ALTOS
 
-Date : 2026-08-06
+Date : 2026-10-08
 
 Objectif : garder une trace claire des versions du site public et de la zone admin, visible dans l'admin et documentee avant chaque commit/release.
 
 ## Version courante
 
 ```text
-Site public : 0.4.10
+Site public : 0.4.11
 Admin       : 0.3.0
-Release     : 0.4.10 - Maillage interne SEO GEO
+Release     : 0.4.11 - Contact et mise en page du mini-audit PDF
 ```
 
 ## Fichiers de reference
@@ -17,6 +17,9 @@ Release     : 0.4.10 - Maillage interne SEO GEO
 - `CHANGELOG.md` : historique lisible des versions.
 - `server/src/version.ts` : source utilisee par l'admin et par `/api/health`.
 - `server/package.json` : version technique du package backend Node.
+
+La version technique du package backend reste independante de la release du site.
+La version du site est affichee dans l'administration et exposee par `/api/health`, sans badge sur les pages publiques.
 
 ## Regle pratique
 

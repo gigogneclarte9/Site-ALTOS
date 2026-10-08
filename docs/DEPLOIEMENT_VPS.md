@@ -33,7 +33,17 @@ ssh -i "C:\Users\Admin\.ssh\altos_vps_ed25519" -o BatchMode=yes ubuntu@51.210.45
 
 Cette cle ne doit pas etre committee. Seul le chemin local est documente pour faciliter les interventions depuis la machine de developpement.
 
-## Etat du VPS au 2026-08-06
+## Release 0.4.11 du 2026-10-08
+
+- Cible confirmee par SSH : `ubuntu@51.210.45.209`, hote `vps-a3f8ea05`.
+- Depot : `/opt/altos-deploy/Site-ALTOS`, branche `main`.
+- Publication : commit/push GitHub, `git pull --ff-only`, puis `sudo bash deploy/deploy.sh`.
+- Correctifs : contact `hello@altos-experts.fr`, marges et hauteur des cadres du PDF, liens de contact cliquables.
+- Versions attendues apres deploiement : site/release `0.4.11`, admin `0.3.0`.
+- Controles : `/api/health`, affichage `/admin/login`, pages publiques et generation PDF avec le module compile du VPS, sans creation de prospect ni envoi d'email.
+- Les documents historiques stockes restent inchanges ; le correctif s'applique aux nouvelles generations.
+
+## Etat historique du VPS au 2026-08-06
 
 Premier deploiement applicatif realise sur le VPS OVH.
 

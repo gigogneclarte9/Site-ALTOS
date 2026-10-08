@@ -221,9 +221,13 @@ Le suivi se fait dans :
 - [docs/VERSIONING.md](docs/VERSIONING.md)
 - `server/src/version.ts`
 
-La zone admin affiche les versions site/admin afin de savoir ce qui est deploye.
+La zone admin affiche les versions site/admin afin de savoir ce qui est deploye. `/api/health` expose les memes versions. Les pages publiques n'affichent pas de badge de version.
 
-Les changements non encore publies doivent rester dans la section `Non publie` du changelog jusqu'a creation d'une nouvelle version.
+Release courante : **0.4.11** (2026-10-08), admin **0.3.0**. Cette release corrige l'adresse de contact et la mise en page des nouveaux PDF de mini-audit. Les PDF deja stockes ne sont pas regeneres automatiquement.
+
+Verification du generateur PDF : `cd server` puis `npm run test:pdf` (six profils, fichiers de controle sous `server/tmp/pdf-regression/`).
+
+Les changements non encore publies doivent rester dans la section `Unreleased` du changelog jusqu'a creation d'une nouvelle version.
 
 ## Documentation utile
 
@@ -233,4 +237,3 @@ Les changements non encore publies doivent rester dans la section `Non publie` d
 - [docs/STRUCTURE_CONTENU_PUBLIC.md](docs/STRUCTURE_CONTENU_PUBLIC.md)
 - [docs/MODELE_DONNEES.md](docs/MODELE_DONNEES.md)
 - [docs/AUDIT_SECURITE_DEPOT.md](docs/AUDIT_SECURITE_DEPOT.md)
-

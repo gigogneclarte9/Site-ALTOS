@@ -13,7 +13,8 @@
     "db:cleanup-test-data": "tsx src/db/cleanup-test-data.ts",
     "admin:create": "tsx src/admin/create-user.ts",
     "test:smoke": "tsx src/test/smoke.ts",
-    "test:scoring": "tsx src/test/micro-audit-scoring.ts"
+    "test:scoring": "tsx src/test/micro-audit-scoring.ts",
+    "test:pdf": "tsx src/test/micro-audit-pdf.ts"
   },
   "dependencies": {
     "@fastify/cors": "^11.0.0",

@@ -6,6 +6,19 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 
 ## [Unreleased]
 
+## [0.4.11] - 2026-10-08
+
+### Corrige
+
+- Adresse de contact du PDF micro-audit : `hello@altos-experts.fr`, avec lien cliquable. Verification des adresses publiques des pages HTML.
+- Marges interieures des recommandations, retours a la ligne et hauteur des cadres adaptes au contenu ; pagination calculee selon la hauteur des blocs.
+- Separation du lien de rendez-vous et de l'email ; remplacement des symboles non pris en charge par les polices PDF.
+
+### Verifie
+
+- TypeScript, tests de scoring et generation de six profils PDF (`npm run test:pdf`).
+- Controle des marges du texte dans les six PDF et inspection visuelle des rendus.
+
 ## [0.4.10] - 2026-08-06
 
 ### Ajoute
