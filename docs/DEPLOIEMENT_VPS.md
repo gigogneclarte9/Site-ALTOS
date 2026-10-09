@@ -33,6 +33,13 @@ ssh -i "C:\Users\Admin\.ssh\altos_vps_ed25519" -o BatchMode=yes ubuntu@51.210.45
 
 Cette cle ne doit pas etre committee. Seul le chemin local est documente pour faciliter les interventions depuis la machine de developpement.
 
+## Release 0.4.12 du 2026-10-09
+
+- Publication depuis `/opt/altos-deploy/Site-ALTOS`, branche `main`, via `git pull --ff-only` puis `sudo bash deploy/deploy.sh`.
+- Correctifs : TVA `FR 25 352 258 479`, telephone `06 61 57 00 19` et suppression du surlignage jaune dans `/mentions-legales.html`.
+- Versions attendues apres deploiement : site/release `0.4.12`, admin `0.3.0`.
+- Controles : `/api/health`, version dans `/admin/login` et valeurs publiees des mentions legales sans placeholder.
+
 ## Release 0.4.11 du 2026-10-08
 
 - Cible confirmee par SSH : `ubuntu@51.210.45.209`, hote `vps-a3f8ea05`.

@@ -1,15 +1,15 @@
 # Versioning ALTOS
 
-Date : 2026-10-08
+Date : 2026-10-09
 
 Objectif : garder une trace claire des versions du site public et de la zone admin, visible dans l'admin et documentee avant chaque commit/release.
 
 ## Version courante
 
 ```text
-Site public : 0.4.11
+Site public : 0.4.12
 Admin       : 0.3.0
-Release     : 0.4.11 - Contact et mise en page du mini-audit PDF
+Release     : 0.4.12 - Coordonnees des mentions legales
 ```
 
 ## Fichiers de reference

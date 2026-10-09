@@ -6,6 +6,14 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 
 ## [Unreleased]
 
+## [0.4.12] - 2026-10-09
+
+### Corrige
+
+- TVA intracommunautaire des mentions legales renseignee : `FR 25 352 258 479`.
+- Telephone de l'editeur renseigne : `06 61 57 00 19`.
+- Suppression des mentions « A completer » et du style de surlignage jaune associe.
+
 ## [0.4.11] - 2026-10-08
 
 ### Corrige

@@ -223,7 +223,7 @@ Le suivi se fait dans :
 
 La zone admin affiche les versions site/admin afin de savoir ce qui est deploye. `/api/health` expose les memes versions. Les pages publiques n'affichent pas de badge de version.
 
-Release courante : **0.4.11** (2026-10-08), admin **0.3.0**. Cette release corrige l'adresse de contact et la mise en page des nouveaux PDF de mini-audit. Les PDF deja stockes ne sont pas regeneres automatiquement.
+Release courante : **0.4.12** (2026-10-09), admin **0.3.0**. Cette release renseigne la TVA intracommunautaire (`FR 25 352 258 479`) et le telephone (`06 61 57 00 19`) dans les mentions legales, et supprime leur surlignage jaune.
 
 Verification du generateur PDF : `cd server` puis `npm run test:pdf` (six profils, fichiers de controle sous `server/tmp/pdf-regression/`).
 
