@@ -37,4 +37,4 @@ Le [rapport de production](verification-production-0.4.15.json) conserve les vé
 
 Sauvegarde protégée : `/var/lib/altos/backups-local/releases/20261116-before-0.4.15/`. Aucune migration en attente ; seul `altos-api` a été redémarré. Radar : 74 fichiers de release hors dépendances inchangés, même processus et date de démarrage ; accueil et API de session en HTTP 200. Nginx et PostgreSQL non redémarrés.
 
-La demande d’indexation Search Console reste à effectuer depuis un accès authentifié ; sa réalisation ne doit pas être déduite de la présence de l’URL dans le sitemap.
+**Demande d’indexation effectuée le 16 novembre 2026**, confirmée par l’utilisateur dans Search Console pour `https://www.altos-experts.fr/consultant-ia-occitanie.html`. L’heure exacte n’a pas été relevée. Cette confirmation concerne l’envoi de la demande ; l’indexation effective par Google reste à vérifier dans l’inspection d’URL. Conserver la date du premier constat d’indexation lors du prochain contrôle.
