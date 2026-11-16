@@ -1,0 +1,125 @@
+{
+  "checked_at_utc": "2026-11-16T16:34:33.337923+00:00",
+  "pages": [
+    {
+      "path": "cas-usage/groupe-coiffure-multisite.html",
+      "status": 200,
+      "final_url": "https://www.altos-experts.fr/cas-usage/groupe-coiffure-multisite.html",
+      "canonical": [
+        "https://www.altos-experts.fr/cas-usage/groupe-coiffure-multisite.html"
+      ],
+      "robots_meta": [
+        {
+          "name": "robots",
+          "content": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        }
+      ],
+      "x_robots_tag": null,
+      "googlebot_allowed": true,
+      "in_sitemap": true,
+      "incoming_pages": [
+        "https://www.altos-experts.fr/cas-usage.html",
+        "https://www.altos-experts.fr/cas-usage/agence-evenementielle-b2b.html",
+        "https://www.altos-experts.fr/cas-usage/services-personne-anomalies.html",
+        "https://www.altos-experts.fr/journal/6-audits-6-secteurs-meme-verdict.html"
+      ]
+    },
+    {
+      "path": "cas-usage/cabinet-gestion-patrimoine.html",
+      "status": 200,
+      "final_url": "https://www.altos-experts.fr/cas-usage/cabinet-gestion-patrimoine.html",
+      "canonical": [
+        "https://www.altos-experts.fr/cas-usage/cabinet-gestion-patrimoine.html"
+      ],
+      "robots_meta": [
+        {
+          "name": "robots",
+          "content": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        }
+      ],
+      "x_robots_tag": null,
+      "googlebot_allowed": true,
+      "in_sitemap": true,
+      "incoming_pages": [
+        "https://www.altos-experts.fr/audit-ia-tpe-pme.html",
+        "https://www.altos-experts.fr/cas-usage.html",
+        "https://www.altos-experts.fr/cas-usage/agence-evenementielle-b2b.html",
+        "https://www.altos-experts.fr/cas-usage/immobilier-3-poles.html",
+        "https://www.altos-experts.fr/journal/120-audits-ia-quick-wins-pme.html"
+      ]
+    },
+    {
+      "path": "cas-usage/immobilier-3-poles.html",
+      "status": 200,
+      "final_url": "https://www.altos-experts.fr/cas-usage/immobilier-3-poles.html",
+      "canonical": [
+        "https://www.altos-experts.fr/cas-usage/immobilier-3-poles.html"
+      ],
+      "robots_meta": [
+        {
+          "name": "robots",
+          "content": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        }
+      ],
+      "x_robots_tag": null,
+      "googlebot_allowed": true,
+      "in_sitemap": true,
+      "incoming_pages": [
+        "https://www.altos-experts.fr/automatisation-processus-pme.html",
+        "https://www.altos-experts.fr/cas-usage.html",
+        "https://www.altos-experts.fr/cas-usage/groupe-coiffure-multisite.html",
+        "https://www.altos-experts.fr/cas-usage/cabinet-gestion-patrimoine.html",
+        "https://www.altos-experts.fr/cas-usage/agence-evenementielle-b2b.html",
+        "https://www.altos-experts.fr/cas-usage/chocolatier-multicanal.html",
+        "https://www.altos-experts.fr/journal/6-audits-6-secteurs-meme-verdict.html"
+      ]
+    },
+    {
+      "path": "mentions-legales.html",
+      "status": 200,
+      "final_url": "https://www.altos-experts.fr/mentions-legales.html",
+      "canonical": [
+        "https://www.altos-experts.fr/mentions-legales.html"
+      ],
+      "robots_meta": [
+        {
+          "name": "robots",
+          "content": "noindex, follow"
+        }
+      ],
+      "x_robots_tag": null,
+      "googlebot_allowed": true,
+      "in_sitemap": false
+    },
+    {
+      "path": "confidentialite.html",
+      "status": 200,
+      "final_url": "https://www.altos-experts.fr/confidentialite.html",
+      "canonical": [
+        "https://www.altos-experts.fr/confidentialite.html"
+      ],
+      "robots_meta": [
+        {
+          "name": "robots",
+          "content": "noindex, follow"
+        }
+      ],
+      "x_robots_tag": null,
+      "googlebot_allowed": true,
+      "in_sitemap": false
+    }
+  ],
+  "redirects": [
+    {
+      "url": "https://altos-experts.fr/",
+      "status": 301,
+      "location": "https://www.altos-experts.fr/"
+    },
+    {
+      "url": "http://altos-experts.fr/",
+      "status": 301,
+      "location": "https://www.altos-experts.fr/"
+    }
+  ],
+  "source": "Public HTTP checks, not an authenticated Google indexing inspection"
+}

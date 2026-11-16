@@ -14,7 +14,7 @@ La priorité confirmée avec l’utilisateur est d’amener des visiteurs pertin
 
 | Ordre | Chantier | Résultat attendu |
 | --- | --- | --- |
-| 1 | Indexation, sitemap et obstacles techniques | Motifs des cinq URL exclues compris dès réception ; corrections des seuls problèmes avérés. Les 20 URL du sitemap étaient accessibles le 13 novembre. |
+| 1 | Indexation, sitemap et obstacles techniques | URL précisées le 16 novembre : trois cas (coiffure multisite, patrimoine, immobilier) à diagnostiquer avec leurs motifs Search Console exacts. HTTP 200, canonical, robots, sitemap et liens entrants vérifiés ; aucun blocage public constaté. Deux pages légales en noindex et deux accueils redirigés : exclusions attendues. Voir le complément de l’audit technique. |
 | 2 | Recherches et intentions prioritaires | Liste courte de recherches pertinentes reliées aux pages, après analyse Search Console et comparaison ciblée des résultats concurrents. Peut avancer sans attendre les cinq URL. |
 | 3 | Pages existantes | Audit IA et Agents IA renforcées en premier, puis Automatisation : offres claires, contenu utile, preuves clients et maillage adaptés. |
 | 4 | Page Occitanie | Première version validée et publiée en 0.4.15 ; état avant publication archivé. Suivre indexation et résultats à J+14/J+28 après consolidation. Implantation et références réelles, pages nationales conservées. |

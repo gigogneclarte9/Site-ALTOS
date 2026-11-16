@@ -1,5 +1,25 @@
 # Contrôle technique SEO ALTOS du 16 novembre 2026
 
+## Complément après réception des URL exclues
+
+Le 16 novembre, l’utilisateur a identifié trois pages de cas non indexées, deux pages légales en noindex et deux variantes d’accueil redirigées. Cette liste remplace l’attente d’une liste de « cinq URL » dans le diagnostic initial ci-dessous ; elle ne constitue pas un nouvel export exhaustif de Search Console. Le motif exact des trois exclusions de cas reste demandé.
+
+Le [contrôle public horodaté](suivi/2026-11-16-indexation-cas/controle-public.json), effectué à 16:34 UTC après la release 0.4.15, donne :
+
+| URL relative | Résultat public | Liens entrants depuis des pages distinctes du sitemap |
+| --- | --- | ---: |
+| `cas-usage/groupe-coiffure-multisite.html` | HTTP 200 direct, index autorisé, canonical vers elle-même, présente au sitemap | 4 |
+| `cas-usage/cabinet-gestion-patrimoine.html` | HTTP 200 direct, index autorisé, canonical vers elle-même, présente au sitemap | 5 |
+| `cas-usage/immobilier-3-poles.html` | HTTP 200 direct, index autorisé, canonical vers elle-même, présente au sitemap | 7 |
+
+Sur ces trois URL, aucune directive noindex dans les meta robots/googlebot ou l’en-tête X-Robots-Tag ; robots.txt autorise Googlebot. Elles ne sont pas orphelines. Ce contrôle public ne mesure ni le dernier passage réel de Googlebot ni la canonical retenue par Google : aucun blocage technique n’est constaté, mais la cause de non-indexation n’est pas encore établie.
+
+Les deux pages légales sont en HTTP 200 avec `noindex, follow`, hors sitemap, conformément au choix existant. Les accueils `https://altos-experts.fr/` et `http://altos-experts.fr/` répondent en 301 directement vers `https://www.altos-experts.fr/`. Ces quatre exclusions sont attendues et n’appellent aucune correction. [Interprétation des exclusions dans Search Console](https://support.google.com/webmasters/answer/7440203?hl=fr).
+
+Prochaine étape : relever pour chaque cas le motif exact dans l’inspection d’URL, la dernière exploration et la canonical choisie par Google. Distinguer « Détectée, actuellement non indexée », « Explorée, actuellement non indexée » et un problème de canonical avant de choisir une action. Aucune réécriture, modification de robots/sitemap ou demande d’indexation n’a été effectuée pour ces cas pendant ce contrôle.
+
+## Diagnostic initial avant les publications du 16 novembre
+
 Le contrôle du site publié ne révèle aucun obstacle technique majeur à l’indexation des 20 pages du sitemap. Les corrections d’août sont effectives : pages accessibles, adresses canoniques cohérentes, redirections permanentes et véritable réponse 404 pour une page inexistante. La suite prioritaire est le ciblage des recherches et le renforcement des pages offres, avec quelques améliorations ponctuelles à intégrer au prochain lot.
 
 Le statut réel dans Google reste à compléter avec les cinq URL exclues et leurs motifs Search Console. Un accès HTTP 200 et une absence de blocage technique ne prouvent pas l’indexation ; un sitemap ne la garantit pas non plus. [Google sur les sitemaps](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview).
