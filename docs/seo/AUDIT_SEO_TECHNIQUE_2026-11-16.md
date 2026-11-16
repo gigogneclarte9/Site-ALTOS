@@ -2,7 +2,7 @@
 
 ## Complément après réception des URL exclues
 
-Le 16 novembre, l’utilisateur a identifié trois pages de cas non indexées, deux pages légales en noindex et deux variantes d’accueil redirigées. Cette liste remplace l’attente d’une liste de « cinq URL » dans le diagnostic initial ci-dessous ; elle ne constitue pas un nouvel export exhaustif de Search Console. Le motif exact des trois exclusions de cas reste demandé.
+Le 16 novembre, l’utilisateur a identifié trois pages de cas non indexées, deux pages légales en noindex et deux variantes d’accueil redirigées. Cette liste remplace l’attente d’une liste de « cinq URL » dans le diagnostic initial ci-dessous ; elle ne constitue pas un nouvel export exhaustif de Search Console. L’utilisateur a confirmé le motif **« Explorée, actuellement non indexée » pour les trois cas**. Google les a donc explorés, sans les retenir dans son index à la date du rapport communiqué. Ce statut n’établit pas à lui seul un défaut de contenu ou une pénalité.
 
 Le [contrôle public horodaté](suivi/2026-11-16-indexation-cas/controle-public.json), effectué à 16:34 UTC après la release 0.4.15, donne :
 
@@ -16,7 +16,7 @@ Sur ces trois URL, aucune directive noindex dans les meta robots/googlebot ou l�
 
 Les deux pages légales sont en HTTP 200 avec `noindex, follow`, hors sitemap, conformément au choix existant. Les accueils `https://altos-experts.fr/` et `http://altos-experts.fr/` répondent en 301 directement vers `https://www.altos-experts.fr/`. Ces quatre exclusions sont attendues et n’appellent aucune correction. [Interprétation des exclusions dans Search Console](https://support.google.com/webmasters/answer/7440203?hl=fr).
 
-Prochaine étape : relever pour chaque cas le motif exact dans l’inspection d’URL, la dernière exploration et la canonical choisie par Google. Distinguer « Détectée, actuellement non indexée », « Explorée, actuellement non indexée » et un problème de canonical avant de choisir une action. Aucune réécriture, modification de robots/sitemap ou demande d’indexation n’a été effectuée pour ces cas pendant ce contrôle.
+Prochaine étape : vérifier l’état actuel de chaque cas dans l’inspection d’URL, noter la dernière exploration et la canonical choisie par Google lorsqu’elle est disponible, puis lancer le test de l’URL active pour confirmer ce que Google peut récupérer aujourd’hui. Le rapport agrégé peut être en retard sur l’inspection individuelle. Si la page est toujours non indexée et le test valide, une demande ponctuelle d’indexation peut être faite ; elle n’est ni une correction ni une garantie, et ne doit pas être répétée sans changement utile. Consigner ensuite la date du contrôle et suivre le résultat à J+7/J+14. Aucune réécriture, modification de robots/sitemap ou demande d’indexation n’a été effectuée pour ces cas pendant ce contrôle. Si le statut persiste, examiner les différences utiles entre les cas et leurs preuves avant de décider d’une amélioration éditoriale ciblée.
 
 ## Diagnostic initial avant les publications du 16 novembre
 
