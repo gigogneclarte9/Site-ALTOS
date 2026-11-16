@@ -6,6 +6,20 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 
 ## [Unreleased]
 
+## [0.4.14] - 2026-11-16
+
+### Securite
+
+- DOMPurify, dépendance optionnelle de jsPDF côté serveur, passe de 3.4.11 à 3.4.17 pour retirer l’alerte critique GHSA-cg2g-xh64-v4q7. Mise à jour ciblée du lockfile ; jsPDF et les autres dépendances conservent leurs versions.
+- Correction préventive : ALTOS génère les bilans par primitives PDF de texte/dessin, sans appeler la fonction HTML concernée par la faille. Site public 0.4.13 et admin 0.3.0 inchangés ; release applicative 0.4.14.
+- Périmètre de déploiement limité à ALTOS, sans mise à jour de Node.js ni modification des services partagés ou de Radar.
+
+### Verifie
+
+- Installation propre avec `npm ci`, compilation TypeScript, cinq scénarios de scoring et six scénarios PDF réussis.
+- Une seule entrée de dépendance modifiée : DOMPurify. Audit complet et audit production : zéro alerte critique ; quatre alertes élevées de production restent à qualifier séparément.
+- Vérification de retrait de la version vulnérable et de l’alerte npm, sans prétendre avoir reproduit une exploitation du site.
+
 ## [0.4.13] - 2026-11-16
 
 ### Corrige

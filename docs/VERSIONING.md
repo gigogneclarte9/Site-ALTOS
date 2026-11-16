@@ -9,7 +9,7 @@ Objectif : garder une trace claire des versions du site public et de la zone adm
 ```text
 Site public : 0.4.13
 Admin       : 0.3.0
-Release     : 0.4.13 - Pages offres SEO et suivi avant-apres
+Release     : 0.4.14 - Correctif preventif DOMPurify
 ```
 
 ## Fichiers de reference
