@@ -234,7 +234,7 @@ Conserver les chiffres de cet export comme historique, puis enregistrer une réf
 
 Lire d’abord l’évolution des impressions et positions, puis celle des clics et de la pertinence des demandes. Un CTR faible à une position moyenne éloignée ne prouve pas que le titre est seul responsable. Aucun objectif chiffré de trafic ni délai de gain n’est garanti par ce plan. Les contacts qualifiés restent l’objectif commercial final ; la mesure détaillée et la refonte du micro-audit restent dans leur lot ultérieur.
 
-**État actualisé : trois pages publiées en 0.4.13, contrôles statiques et HTTP de production terminés. Contrôle visuel restant. Suivre les pages dans Search Console selon le protocole archivé. Le lot Occitanie ci-dessous est maintenant intégré localement, sans publication.**
+**État actualisé : trois pages publiées en 0.4.13 et lot Occitanie publié en 0.4.15 après validation de la première version par l’utilisateur. Contrôles statiques et HTTP de production terminés. Le rendu navigateur n’a pas été vérifié automatiquement. Suivre les pages dans Search Console selon les protocoles archivés.**
 
 ## Lot Occitanie — intégration locale
 
@@ -253,6 +253,6 @@ Maillage : liens depuis l’accueil et chacune des trois offres ; lien réciproq
 
 Vérifications locales : six pages concernées en HTTP 200, 279 occurrences de liens/ressources et ancres contrôlées, HTML équilibré, identifiants uniques et un H1 par page. FAQ visibles et JSON-LD identiques (quatre sur Occitanie, huit sur chaque offre). Nouvelle page : title de 50 caractères, description de 156 caractères. Composants partagés synchronisés. Le serveur de prévisualisation sert les fichiers modifiés.
 
-Restant : relecture visuelle ordinateur/mobile et parcours de rendez-vous, puis publication selon la procédure du projet. L’hôte navigateur est encore indisponible lors de cette session ; les vérifications HTTP et de code ne valident pas le rendu. Prévisualisation : `http://127.0.0.1:8087/consultant-ia-occitanie.html`. Aucun déploiement ni bump de version applicative effectué pour ce lot.
+Première version validée par l’utilisateur puis publiée en **0.4.15 le 16 novembre à 17 h 15 min 09 s (Paris)**. Les 39 fichiers publics correspondent au commit et les 21 URL du sitemap répondent en HTTP 200. L’hôte navigateur était indisponible pendant les contrôles ; les vérifications HTTP et de code ne valident pas le rendu ni le parcours externe de rendez-vous. [Suivi SEO du lot](suivi/2026-11-16-avant-0.4.15/README.md) : référence avant publication conservée, comparaisons à J+14 et J+28 après consolidation. Demande d’indexation à effectuer depuis Search Console authentifiée.
 
 Après publication : relever la date de mise en ligne, contrôler l’indexabilité de la nouvelle URL et suivre impressions/clics/recherches régionales dans Search Console. Conserver le suivi des trois offres et ne pas attribuer automatiquement une variation à une seule modification. Les exports manquants et les cinq exclusions Search Console restent à compléter séparément.

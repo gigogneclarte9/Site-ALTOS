@@ -8,6 +8,8 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 
 ## [0.4.15] - 2026-11-16
 
+- Publiée à 17 h 15 min 09 s (Paris). Contrôles de production réussis : 39 fichiers publics conformes au commit, 21 URL du sitemap en HTTP 200, API/base et versions valides. Radar inchangé ; seul `altos-api` redémarré.
+
 - Page régionale `consultant-ia-occitanie.html` : implantation à Montferrand, intervention en Occitanie, préparation du diagnostic, cas d’audit du Tarn et quatre FAQ synchronisées avec le JSON-LD. Métadonnées SEO et de partage dédiées.
 - Liens vers la page depuis l’accueil, les trois offres et le cas du Tarn ; sitemap de 21 URL, liste de déploiement et synchronisation des composants mis à jour. Contrôles statiques/HTTP locaux réussis. Première version validée par l’utilisateur ; aucun contrôle visuel automatisé revendiqué.
 - Deux lots de maintenance sécurité consignés dans la roadmap : Fastify et dépendances, puis Nodemailer ; aucune correction supplémentaire dans ce lot SEO.

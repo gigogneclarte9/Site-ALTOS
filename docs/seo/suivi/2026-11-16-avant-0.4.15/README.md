@@ -31,4 +31,10 @@ Les offres 0.4.13 et le maillage régional 0.4.15 sont publiés le même jour. L
 
 ## Publication et contrôles
 
-Le résultat du déploiement et son horodatage exact seront ajoutés après vérification. La demande d’indexation Search Console reste à effectuer depuis un accès authentifié ; sa réalisation ne doit pas être déduite de la présence de l’URL dans le sitemap.
+Publication effectuée le **16 novembre 2026 à 17 h 15 min 09 s (Paris), soit 16:15:09 UTC** : release/site **0.4.15**, admin 0.3.0, commit applicatif `4bf07730a69518d526cd2f952ef8ad44f41fb4c9`. Version et changelog mis à jour, commit poussé puis déployé selon la procédure VPS.
+
+Le [rapport de production](verification-production-0.4.15.json) conserve les vérifications horodatées : 39 fichiers publics conformes au commit, health et base valides, version admin vérifiée, chemins privés inaccessibles. Les 21 URL du sitemap répondent en HTTP 200. Les quatre FAQ régionales visibles correspondent au JSON-LD. Ces contrôles HTTP/source ne constituent pas une vérification du rendu navigateur ni du parcours externe de rendez-vous.
+
+Sauvegarde protégée : `/var/lib/altos/backups-local/releases/20261116-before-0.4.15/`. Aucune migration en attente ; seul `altos-api` a été redémarré. Radar : 74 fichiers de release hors dépendances inchangés, même processus et date de démarrage ; accueil et API de session en HTTP 200. Nginx et PostgreSQL non redémarrés.
+
+La demande d’indexation Search Console reste à effectuer depuis un accès authentifié ; sa réalisation ne doit pas être déduite de la présence de l’URL dans le sitemap.

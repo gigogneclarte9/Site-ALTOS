@@ -2,7 +2,7 @@
 
 ## Priorite actuelle — visibilite organique (16 novembre 2026)
 
-**Lot Occitanie intégré en local, non publié.** `consultant-ia-occitanie.html` présente l’implantation à Montferrand (Aude), les modalités sur site/à distance à convenir, les trois prestations et le cas d’audit du Tarn. Liens ajoutés depuis l’accueil, les trois offres et le cas régional ; sitemap local de 21 URL et liste de déploiement actualisés. HTML, liens, métadonnées et FAQ contrôlés ; rendu navigateur restant. [Bilan et sources](seo/PLAN_SEO_PAGES_OFFRES_2026-11-16.md#lot-occitanie--intégration-locale).
+**Lot Occitanie validé et publié en 0.4.15 le 16 novembre à 17 h 15 min 09 s (Paris).** `consultant-ia-occitanie.html` présente l’implantation à Montferrand (Aude), les modalités sur site/à distance à convenir, les trois prestations et le cas d’audit du Tarn. Liens depuis l’accueil, les trois offres et le cas régional ; 21 URL du sitemap en HTTP 200 et 39 fichiers publics conformes au commit. HTML, liens, métadonnées et FAQ contrôlés ; rendu navigateur non vérifié automatiquement. [Bilan et sources](seo/PLAN_SEO_PAGES_OFFRES_2026-11-16.md#lot-occitanie--intégration-locale), [suivi avant/après](seo/suivi/2026-11-16-avant-0.4.15/README.md).
 
 **Publication 0.4.13 effectuée le 16 novembre à 16 h 41 min 58 s (Paris).** Les quatre corrections autorisées sont déployées (CSS, grille Audit IA, domaine du visuel social et CTA des cas). Contrôles de fichiers et HTTP réussis en production ; inspection du rendu et du calendrier toujours à effectuer.
 
@@ -17,7 +17,7 @@ La priorité confirmée avec l’utilisateur est d’amener des visiteurs pertin
 | 1 | Indexation, sitemap et obstacles techniques | Motifs des cinq URL exclues compris dès réception ; corrections des seuls problèmes avérés. Les 20 URL du sitemap étaient accessibles le 13 novembre. |
 | 2 | Recherches et intentions prioritaires | Liste courte de recherches pertinentes reliées aux pages, après analyse Search Console et comparaison ciblée des résultats concurrents. Peut avancer sans attendre les cinq URL. |
 | 3 | Pages existantes | Audit IA et Agents IA renforcées en premier, puis Automatisation : offres claires, contenu utile, preuves clients et maillage adaptés. |
-| 4 | Page Occitanie | Intégration locale terminée ; relire le rendu ordinateur/mobile, puis publier et dater le suivi. Implantation et références réelles, pages nationales conservées. |
+| 4 | Page Occitanie | Première version validée et publiée en 0.4.15 ; état avant publication archivé. Suivre indexation et résultats à J+14/J+28 après consolidation. Implantation et références réelles, pages nationales conservées. |
 | 5 | Contenus et références externes | Contenus par problème métier et relais pertinents préparés ; préparation possible pendant les étapes 3 et 4. |
 | 6 | Conversion du micro-audit | Parcours cohérent et mesurable, bilan et suivi commercial exploitables ; chantier à reprendre après les premières améliorations SEO publiées, sans seuil de trafic préalable. |
 
@@ -27,7 +27,7 @@ Le lot conversion conserve les incohérences identifiées : dix questions/compte
 
 Les améliorations SEO d’août sont déjà réalisées : pages offres, optimisation des études de cas, données structurées et maillage. La priorité n’est pas une reconstruction du sitemap ni le back-office éditorial. Le détail opérationnel est dans le [backlog actualisé](../BACKLOG.md) ; les preuves et questions ouvertes sont conservées dans la [note de reprise](../../REPRISE_PROJET_ALTOS.md).
 
-État au 16 novembre : trois pages publiées, FAQ/métadonnées/liens contrôlés ; contrôle visuel restant. Aucun outil de mesure installé ni campagne engagée. [Référence SEO archivée et protocole de comparaison](seo/suivi/2026-11-16-avant-0.4.13/README.md) : première lecture le 23 novembre, comparaisons les 30 novembre et 14 décembre après consolidation. Compléter l’export Search Console, qui s’arrête au 10 novembre ; aucun rang Google France certifié disponible avant publication. La page Occitanie reste la priorité éditoriale suivante.
+État au 16 novembre : trois offres et page Occitanie publiées, FAQ/métadonnées/liens contrôlés ; rendu navigateur non vérifié automatiquement. Aucun outil de mesure installé ni campagne engagée. [Référence SEO des offres](seo/suivi/2026-11-16-avant-0.4.13/README.md) et [suivi régional](seo/suivi/2026-11-16-avant-0.4.15/README.md) : première lecture le 23 novembre, comparaisons des périodes terminant les 30 novembre et 14 décembre après consolidation. Compléter l’export Search Console, qui s’arrête au 10 novembre ; aucun rang Google France certifié disponible avant publication. Prochaine priorité éditoriale : contenus par problème métier et références externes pertinentes.
 
 ## Maintenance sécurité — suivi du 16 novembre 2026
 
@@ -37,7 +37,7 @@ La release 0.4.14 a retiré l’alerte critique DOMPurify d’ALTOS. Il reste qu
 - [ ] **Lot 2 — Notifications email** : traiter Nodemailer séparément, avec revue de compatibilité de la version majeure corrigée et tests SMTP sur un serveur de capture local. Les visiteurs ne contrôlent ni les destinataires ni la configuration SMTP. Un risque conditionnel de blocage persiste face à un serveur SMTP malveillant ou compromis ; la production utilise TLS dès l’ouverture de connexion. Ne pas envoyer d’emails de test à des tiers.
 - [ ] Pour chaque lot : sauvegarde, contrôles locaux, version/changelog, commit/push, déploiement ALTOS uniquement, contrôles après publication et retour arrière préparé. Aucun changement de Radar, Node.js global, Nginx ou PostgreSQL ; vérifier Radar avant/après sans le redémarrer.
 
-Ces lots sont consignés pour traitement ultérieur. La priorité active redevient l’optimisation SEO avec la page Occitanie ; aucune de ces quatre dépendances n’a été modifiée pendant leur qualification.
+Ces lots sont consignés pour traitement ultérieur. La priorité active reste l’optimisation SEO et le suivi des offres et de la page Occitanie publiée ; aucune de ces quatre dépendances n’a été modifiée pendant leur qualification.
 
 ## Roadmap produit historique
 

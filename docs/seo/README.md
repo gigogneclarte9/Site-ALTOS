@@ -18,4 +18,4 @@ Chaque publication SEO dispose d’un dossier `suivi/YYYY-MM-DD-avant-VERSION/` 
 
 Une position moyenne Search Console, une position Google observée sur une recherche précise et l’ordre des résultats d’un outil web sont trois mesures différentes. Les rapports les séparent. Une hausse après publication ne suffit pas, à elle seule, à attribuer l’effet aux modifications.
 
-La première version de la page Occitanie est validée pour publication en 0.4.15. Le chantier suivant porte sur des contenus par problème métier et des références externes pertinentes, pendant le suivi des pages déjà publiées.
+La première version de la page Occitanie, validée par l’utilisateur, est publiée en 0.4.15 le 16 novembre à 17 h 15 min 09 s (Paris). Le suivi conserve l’état avant publication et les comparaisons à J+14 et J+28 après consolidation. Le chantier suivant porte sur des contenus par problème métier et des références externes pertinentes, pendant le suivi des pages déjà publiées.

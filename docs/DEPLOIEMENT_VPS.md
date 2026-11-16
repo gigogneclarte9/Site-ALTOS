@@ -33,6 +33,15 @@ ssh -i "C:\Users\Admin\.ssh\altos_vps_ed25519" -o BatchMode=yes ubuntu@51.210.45
 
 Cette cle ne doit pas etre committee. Seul le chemin local est documente pour faciliter les interventions depuis la machine de developpement.
 
+## Release 0.4.15 du 2026-11-16
+
+- Page Occitanie et liens internes publiés à 17 h 15 min 09 s (Paris), soit 16:15:09 UTC. Commit applicatif `4bf07730a69518d526cd2f952ef8ad44f41fb4c9` ; release/site 0.4.15, admin 0.3.0.
+- Sauvegarde root uniquement : `/var/lib/altos/backups-local/releases/20261116-before-0.4.15/`, contenant `api-0.4.14.tar.gz`, `public-0.4.13.tar.gz`, `altos.dump` et `before.json`.
+- Déploiement habituel après push et pull fast-forward, destinations explicitement fixées à ALTOS. Installation et build réussis, aucune migration en attente, seul `altos-api` redémarré. Audit production : zéro alerte critique ; quatre élevées déjà qualifiées et consignées dans la roadmap.
+- Contrôles : 39 fichiers publics conformes au commit, 21 URL du sitemap en HTTP 200, health/base et versions correctes, chemins privés inaccessibles. Vérifications HTTP/source ; rendu navigateur et calendrier externe non contrôlés automatiquement.
+- Radar : 74 fichiers de release hors `node_modules` identiques, même PID et date de démarrage ; accueil et `/api/auth/me` HTTP 200. Services Nginx/PostgreSQL non redémarrés.
+- [État avant publication, rapport et calendrier SEO](seo/suivi/2026-11-16-avant-0.4.15/README.md). Comparaisons à J+14 et J+28 après consolidation ; demande d’indexation Search Console encore à effectuer depuis un accès authentifié.
+
 ## Release 0.4.14 du 2026-11-16
 
 - Publiée à 16 h 59 min 23 s (Paris), commit applicatif `95ab960ab6d196aadff515193fbc613ceb65b174`. Release 0.4.14 ; site public 0.4.13 et admin 0.3.0 conservés.
