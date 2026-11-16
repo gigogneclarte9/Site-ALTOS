@@ -7,9 +7,9 @@ Objectif : garder une trace claire des versions du site public et de la zone adm
 ## Version courante
 
 ```text
-Site public : 0.4.13
+Site public : 0.4.15
 Admin       : 0.3.0
-Release     : 0.4.14 - Correctif preventif DOMPurify
+Release     : 0.4.15 - Accompagnement IA en Occitanie
 ```
 
 ## Fichiers de reference

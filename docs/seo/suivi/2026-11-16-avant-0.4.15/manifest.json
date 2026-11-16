@@ -1,0 +1,73 @@
+{
+  "captured_at_utc": "2026-11-16T16:14:01.520830+00:00",
+  "previous_commit": "501dbb19d38bafba0c602741e70ab16c37da0f02",
+  "previous_release": "0.4.14",
+  "previous_site": "0.4.13",
+  "files": [
+    {
+      "url": "https://www.altos-experts.fr/",
+      "file": "production-avant/index.html",
+      "status": 200,
+      "sha256": "22050c96c93e0b2f17517acd8e243476230cfee18a082a1f9171ca3eb702b516",
+      "captured_at_utc": "2026-11-16T16:14:01.907496+00:00"
+    },
+    {
+      "url": "https://www.altos-experts.fr/consultant-ia-occitanie.html",
+      "file": "production-avant/consultant-ia-occitanie.html",
+      "status": 404,
+      "sha256": "c0f0c085e4aa10e4dc9adb2a365fe5a3eedf530e956ec761097e0c4301291173",
+      "captured_at_utc": "2026-11-16T16:14:02.026159+00:00"
+    },
+    {
+      "url": "https://www.altos-experts.fr/audit-ia-tpe-pme.html",
+      "file": "production-avant/audit-ia-tpe-pme.html",
+      "status": 200,
+      "sha256": "cd803097d99149cdbe11c39f2611d01b0f9a989df3ff893ea28ac2c0433997de",
+      "captured_at_utc": "2026-11-16T16:14:02.189503+00:00"
+    },
+    {
+      "url": "https://www.altos-experts.fr/agents-ia-pme.html",
+      "file": "production-avant/agents-ia-pme.html",
+      "status": 200,
+      "sha256": "57dbbb871ad6b53dac249248bd7ca1ab04512d576a8557cfa85b6825295d5593",
+      "captured_at_utc": "2026-11-16T16:14:02.406701+00:00"
+    },
+    {
+      "url": "https://www.altos-experts.fr/automatisation-processus-pme.html",
+      "file": "production-avant/automatisation-processus-pme.html",
+      "status": 200,
+      "sha256": "9e3c41f77d718720fe946cb84219ce45eb358f1f3f67b646b2117d5eafbafd9b",
+      "captured_at_utc": "2026-11-16T16:14:02.562056+00:00"
+    },
+    {
+      "url": "https://www.altos-experts.fr/cas-usage/installation-frigorifique-tarn.html",
+      "file": "production-avant/cas-usage__installation-frigorifique-tarn.html",
+      "status": 200,
+      "sha256": "bff25b3d2f8ea1520dd4445e1909c3427e100eff4e4deb84f230335a08038e5e",
+      "captured_at_utc": "2026-11-16T16:14:02.694330+00:00"
+    },
+    {
+      "url": "https://www.altos-experts.fr/sitemap.xml",
+      "file": "production-avant/sitemap.xml",
+      "status": 200,
+      "sha256": "2c6b2496608b0496a7335d12ad256e171d1024b2f2383c0448c6bbf21917b8f2",
+      "captured_at_utc": "2026-11-16T16:14:02.810753+00:00"
+    },
+    {
+      "url": "https://www.altos-experts.fr/robots.txt",
+      "file": "production-avant/robots.txt",
+      "status": 200,
+      "sha256": "12ff80b2689b267dc3474fe37c545beacdcbaafe693933db53cd5aad7aa92121",
+      "captured_at_utc": "2026-11-16T16:14:02.923522+00:00"
+    },
+    {
+      "url": "https://www.altos-experts.fr/api/health",
+      "file": "production-avant/api__health.json",
+      "status": 200,
+      "sha256": "c039f40766a19eafdef6379d9ccaf7aee7cb624941a314c9564d346a0bfd7067",
+      "captured_at_utc": "2026-11-16T16:14:03.064919+00:00"
+    }
+  ],
+  "search_console_latest_available_day": "2026-11-10",
+  "google_rank_observed": null
+}

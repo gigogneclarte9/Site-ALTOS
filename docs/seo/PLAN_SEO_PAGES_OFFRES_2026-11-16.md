@@ -234,4 +234,25 @@ Conserver les chiffres de cet export comme historique, puis enregistrer une réf
 
 Lire d’abord l’évolution des impressions et positions, puis celle des clics et de la pertinence des demandes. Un CTR faible à une position moyenne éloignée ne prouve pas que le titre est seul responsable. Aucun objectif chiffré de trafic ni délai de gain n’est garanti par ce plan. Les contacts qualifiés restent l’objectif commercial final ; la mesure détaillée et la refonte du micro-audit restent dans leur lot ultérieur.
 
-**État actualisé : trois pages publiées en 0.4.13, contrôles statiques et HTTP de production terminés. Contrôle visuel restant. Suivre les pages dans Search Console selon le protocole archivé et poursuivre avec la page Occitanie.**
+**État actualisé : trois pages publiées en 0.4.13, contrôles statiques et HTTP de production terminés. Contrôle visuel restant. Suivre les pages dans Search Console selon le protocole archivé. Le lot Occitanie ci-dessous est maintenant intégré localement, sans publication.**
+
+## Lot Occitanie — intégration locale
+
+Page préparée le 16 novembre : [consultant-ia-occitanie.html](../../consultant-ia-occitanie.html). Intention principale proposée : « consultant IA Occitanie » ; variantes secondaires « consultant IA Aude » et « accompagnement IA TPE PME Occitanie ». Ces cibles ne sont pas des volumes ni des positions mesurés. La page répond au choix d’un interlocuteur régional ; les méthodes et livrables détaillés restent dans les pages nationales des offres.
+
+Sources internes utilisées :
+
+- [Accueil](../../index.html), définition et FAQ d’intervention : ALTOS basé à Montferrand, Aude ; missions sur site ou à distance en Occitanie et en France.
+- [Mentions légales](../../mentions-legales.html) : implantation 11320 Montferrand et identité Nicolas Darcos. Aucune autre adresse, agence régionale, disponibilité de déplacement ou condition tarifaire inventée.
+- [Cas d’installation frigorifique dans le Tarn](../../cas-usage/installation-frigorifique-tarn.html) : audit en 2025, 16 salariés, Google Form et suivi manuel. Il s’agit d’un audit avec projections, pas d’une nouvelle preuve de résultats déployés. Les autres missions livrées sont citées sans leur attribuer une localisation non documentée.
+- Formats confirmés : quiz gratuit, diagnostic de contact gratuit de 30 minutes, audit complet payant de cinq jours. Les modalités de déplacement, calendrier et maintenance sont à convenir.
+
+Intégration : contenu régional propre, title/description/canonical et Open Graph/X alignés, WebPage/Service/BreadcrumbList et quatre FAQ concordant avec le texte visible. Service limité à la zone Occitanie sur cette page ; identité de l’organisation conservée. Navigation, pied de page, boutons et styles communs réutilisés. Aucun prix, avis client ou promesse de progression SEO ajouté.
+
+Maillage : liens depuis l’accueil et chacune des trois offres ; lien réciproque avec le cas du Tarn. Page ajoutée à `deploy/public-allowlist.txt` et à la liste de synchronisation des composants. Sitemap local : 21 URL. Dates de modification des pages concernées alignées au 16 novembre. Ce maillage modifiera aussi les pages suivies depuis la release 0.4.13 : dater sa publication séparément pour interpréter les prochaines mesures.
+
+Vérifications locales : six pages concernées en HTTP 200, 279 occurrences de liens/ressources et ancres contrôlées, HTML équilibré, identifiants uniques et un H1 par page. FAQ visibles et JSON-LD identiques (quatre sur Occitanie, huit sur chaque offre). Nouvelle page : title de 50 caractères, description de 156 caractères. Composants partagés synchronisés. Le serveur de prévisualisation sert les fichiers modifiés.
+
+Restant : relecture visuelle ordinateur/mobile et parcours de rendez-vous, puis publication selon la procédure du projet. L’hôte navigateur est encore indisponible lors de cette session ; les vérifications HTTP et de code ne valident pas le rendu. Prévisualisation : `http://127.0.0.1:8087/consultant-ia-occitanie.html`. Aucun déploiement ni bump de version applicative effectué pour ce lot.
+
+Après publication : relever la date de mise en ligne, contrôler l’indexabilité de la nouvelle URL et suivre impressions/clics/recherches régionales dans Search Console. Conserver le suivi des trois offres et ne pas attribuer automatiquement une variation à une seule modification. Les exports manquants et les cinq exclusions Search Console restent à compléter séparément.

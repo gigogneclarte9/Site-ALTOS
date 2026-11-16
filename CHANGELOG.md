@@ -6,6 +6,13 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 
 ## [Unreleased]
 
+## [0.4.15] - 2026-11-16
+
+- Page régionale `consultant-ia-occitanie.html` : implantation à Montferrand, intervention en Occitanie, préparation du diagnostic, cas d’audit du Tarn et quatre FAQ synchronisées avec le JSON-LD. Métadonnées SEO et de partage dédiées.
+- Liens vers la page depuis l’accueil, les trois offres et le cas du Tarn ; sitemap de 21 URL, liste de déploiement et synchronisation des composants mis à jour. Contrôles statiques/HTTP locaux réussis. Première version validée par l’utilisateur ; aucun contrôle visuel automatisé revendiqué.
+- Deux lots de maintenance sécurité consignés dans la roadmap : Fastify et dépendances, puis Nodemailer ; aucune correction supplémentaire dans ce lot SEO.
+- État avant publication et protocole de comparaison conservés dans `docs/seo/suivi/2026-11-16-avant-0.4.15/`. La publication des trois offres en 0.4.13 et celle du lot régional interviennent le même jour : les variations quotidiennes ne permettent pas de séparer leurs effets.
+
 ## [0.4.14] - 2026-11-16
 
 ### Securite

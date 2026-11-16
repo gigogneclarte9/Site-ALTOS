@@ -11,6 +11,7 @@ const rootPages = [
   'audit-ia-tpe-pme.html',
   'automatisation-processus-pme.html',
   'agents-ia-pme.html',
+  'consultant-ia-occitanie.html',
   'cas-usage.html',
   'micro-audit.html',
   'journal.html',
