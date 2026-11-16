@@ -87,6 +87,38 @@ Les recherches web du 16 novembre portent sur `audit ia pme`, `diagnostic ia tpe
 
 ## Recherches à affecter aux pages
 
+### Relecture après publication et prochaine priorité proposée
+
+Relecture du ZIP original le 16 novembre, après publication des offres et de la page Occitanie. L’analyse des requêtes figurait déjà dans le présent plan et avait servi à prioriser les offres ; elle ne constitue donc pas un chantier à recommencer. L’export porte sur 92 jours, du 11 août au 10 novembre, et non sur les seuls 30 derniers jours. Les 79 requêtes visibles totalisent 1 082 impressions et 2 clics, contre 1 455 impressions et 18 clics pour la propriété entière. Les impressions indiquent les apparitions du site, pas le volume total des recherches sur Google.
+
+| Requête exacte | Impressions | Clics | Position moyenne historique | Situation après publication |
+| --- | ---: | ---: | ---: | --- |
+| agent ia pme | 196 | 1 | 44,89 | Offre Agents IA retravaillée ; mesurer son évolution |
+| diagnostic ia tpe | 109 | 0 | 64,86 | Formats et prestations clarifiés dans Audit IA |
+| audit ia pme | 64 | 0 | 84,42 | Offre Audit IA retravaillée |
+| pilotage des agents ia | 36 | 0 | 42,39 | Section dédiée déjà présente dans Agents IA ; pas de nouvelle page similaire à lancer immédiatement |
+| automatisation tâches pme | 30 | 0 | 85,40 | Offre Automatisation retravaillée |
+| automatisation processus pme | 10 | 0 | 25,70 | Offre Automatisation retravaillée ; échantillon faible |
+| ia et tpe pme cas d'usage | 10 | 0 | 26,40 | Cible proposée pour améliorer la page de cas existante |
+| cas d'usage ia pme | 5 | 0 | 32,00 | Même cible éditoriale |
+| cas d'usage ia tpe | 2 | 0 | 26,00 | Même cible éditoriale |
+
+Les trois recherches de cas d’usage représentent **17 impressions et aucun clic**. Indépendamment, `cas-usage.html` compte **28 impressions, aucun clic et une position moyenne de 14,32** dans le tableau Pages. Ces tableaux séparés ne prouvent pas que cette page apparaît sur ces trois recherches, et sa moyenne ne décrit pas leur classement.
+
+**Prochaine priorité proposée : améliorer `cas-usage.html` avant de créer un nouvel article.** Ce choix repose sur un signal de recherche modeste, l’existence de vingt cas et leur utilité pour choisir une prestation. Il ne prétend pas désigner le sujet au plus fort potentiel de trafic. Le prochain lot peut préparer :
+
+1. Un titre principal exprimant clairement les cas d’usage IA pour TPE/PME, avec la distinction entre missions livrées et audits projetés dès le haut de page. Le titre actuel « Vingt projets IA […] des résultats mesurés » ne porte pas à lui seul cette distinction, même si le paragraphe suivant la précise.
+2. Une entrée par problème métier (traitement des demandes, comptes rendus, veille commerciale, suivi administratif), en complément des filtres sectoriels existants. Chaque entrée renvoie aux cas déjà documentés.
+3. Une orientation vers Audit IA, Agents IA ou Automatisation adaptée à chaque exemple, et une vérification des preuves derrière les chiffres repris. Les projections restent explicitement séparées des gains constatés.
+
+Les contenus originaux et l’expérience directe sont cohérents avec les [critères de contenu utile de Google](https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=fr), consultés le 16 novembre ; ces critères ne garantissent pas un gain de classement. Aucun changement du site n’est effectué dans cette relecture. Le lot et son état avant publication devront être datés s’il est retenu.
+
+Autres signaux à conserver : les six requêtes commençant par « test » cumulent **177 impressions, aucun clic** ; elles concernent le micro-audit, dont le chantier reste distinct. Les cinq recherches commençant par « risques » ou « dangers » totalisent **14 impressions, aucun clic**, insuffisantes pour faire passer un article généraliste sur les risques en priorité. Aucun terme « Occitanie », « Aude » ou « Toulouse » n’apparaît dans les 79 requêtes visibles ; la page régionale relève du ciblage commercial décidé, pas d’une demande mesurée dans cet export. « agence airtable montpellier » compte 18 impressions, mais ne justifie ni une implantation ni une offre supplémentaire.
+
+L’export ne permet pas de sélectionner entre un futur article sur les relances, les devis ou les comptes rendus à partir de leurs performances : ces requêtes métier précises n’y figurent pas. Après consolidation, les filtres page + requête permettront de préciser la prochaine création éditoriale. Les trois offres et Occitanie conservent leur suivi J+14/J+28.
+
+### Affectation initiale des recherches aux offres
+
 | Page cible proposée | Recherche observée | Impressions | Position | Usage dans le contenu |
 | --- | --- | ---: | ---: | --- |
 | Audit IA | audit ia pme | 64 | 84,42 | Intention commerciale principale |
