@@ -2,9 +2,9 @@
 
 ## Priorite actuelle — visibilite organique (16 novembre 2026)
 
-**Après audit local :** les quatre corrections autorisées sont appliquées (CSS à déployer, grille Audit IA, domaine du visuel social et CTA des cas). Contrôles de fichiers et HTTP réussis. Aucune publication ; inspection du rendu et du calendrier toujours à effectuer.
+**Publication 0.4.13 effectuée le 16 novembre à 16 h 41 min 58 s (Paris).** Les quatre corrections autorisées sont déployées (CSS, grille Audit IA, domaine du visuel social et CTA des cas). Contrôles de fichiers et HTTP réussis en production ; inspection du rendu et du calendrier toujours à effectuer.
 
-**Dernière étape : trois pages offres intégrées localement, non publiées.** Audit IA, Agents IA et Automatisation enrichies ; cas livrés reliés aux offres par des ancres publiques. Quiz et diagnostic de 30 minutes gratuits, audit complet payant de cinq jours ; aucun montant ajouté. Contrôles statiques et HTTP local réussis. Prochaine étape : rendu ordinateur/mobile et parcours de rendez-vous, puis préparation de la publication. L’accès navigateur est indisponible pour la vérification visuelle.
+**Trois pages offres publiées.** Audit IA, Agents IA et Automatisation enrichies ; cas livrés reliés aux offres par des ancres publiques. Quiz et diagnostic de 30 minutes gratuits, audit complet payant de cinq jours ; aucun montant ajouté. Contrôles statiques et HTTP réussis. L’accès navigateur est indisponible pour la vérification visuelle.
 
 **Avancement :** [contrôle technique public](seo/AUDIT_SEO_TECHNIQUE_2026-11-16.md) et [ciblage avec bilan d’intégration](seo/PLAN_SEO_PAGES_OFFRES_2026-11-16.md) disponibles. Les 20 pages du sitemap public étaient accessibles sans blocage détecté ; les cinq exclusions Google restent à qualifier. Les contenus locaux précisent les postes de coûts et l’organisation du suivi, sans promettre de forfait ou de maintenance inclus par défaut.
 
@@ -25,7 +25,7 @@ Le lot conversion conserve les incohérences identifiées : dix questions/compte
 
 Les améliorations SEO d’août sont déjà réalisées : pages offres, optimisation des études de cas, données structurées et maillage. La priorité n’est pas une reconstruction du sitemap ni le back-office éditorial. Le détail opérationnel est dans le [backlog actualisé](../BACKLOG.md) ; les preuves et questions ouvertes sont conservées dans la [note de reprise](../../REPRISE_PROJET_ALTOS.md).
 
-État au 16 novembre : analyse et intégration locale des trois pages réalisées, FAQ/métadonnées/liens contrôlés ; contrôle visuel restant. Aucun outil de mesure installé, déploiement ou campagne engagé. Après publication et enregistrement de la référence Search Console, la page Occitanie reste la priorité suivante.
+État au 16 novembre : trois pages publiées, FAQ/métadonnées/liens contrôlés ; contrôle visuel restant. Aucun outil de mesure installé ni campagne engagée. [Référence SEO archivée et protocole de comparaison](seo/suivi/2026-11-16-avant-0.4.13/README.md) : première lecture le 23 novembre, comparaisons les 30 novembre et 14 décembre après consolidation. Compléter l’export Search Console, qui s’arrête au 10 novembre ; aucun rang Google France certifié disponible avant publication. La page Occitanie reste la priorité éditoriale suivante.
 
 ## Roadmap produit historique
 

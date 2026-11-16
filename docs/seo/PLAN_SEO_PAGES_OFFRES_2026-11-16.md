@@ -4,11 +4,11 @@ Analyse du 16 novembre 2026. Ordre de travail conservé : **Audit IA, Agents IA,
 
 **Précisions confirmées par l’utilisateur :** micro-audit gratuit par quiz ; premier diagnostic gratuit de 30 minutes pour établir le contact ; audit complet payant de cinq jours. Ces offres ne sont pas contradictoires. La mention erronée d’une journée dans la note du quiz est corrigée localement. Aucun montant ni grille tarifaire ajouté. Les [textes retenus pour Audit IA](PROPOSITION_TEXTES_AUDIT_IA_2026-11-16.md) sont intégrés et prévalent sur les formulations initiales ci-dessous. Les deux autres offres expliquent les postes de coûts et le suivi à convenir, sans promettre de forfait ou de maintenance inclus.
 
-**État d’intégration au 16 novembre : les trois pages offres sont modifiées localement, sans publication.** Le plan initial ci-dessous est conservé comme référence ; le bilan suivant indique ce qui a réellement été intégré. Le [contrôle technique](AUDIT_SEO_TECHNIQUE_2026-11-16.md) n’a identifié aucun blocage majeur sur les 20 pages du sitemap public ; les cinq exclusions Google restent à qualifier séparément.
+**État au 16 novembre : les trois pages offres sont publiées en 0.4.13 depuis 16 h 41 min 58 s (Paris).** [Compte rendu de déploiement](suivi/2026-11-16-avant-0.4.13/DEPLOIEMENT.md) et [référence avant/après](suivi/2026-11-16-avant-0.4.13/README.md). Le plan initial ci-dessous est conservé comme référence ; le bilan suivant indique ce qui a réellement été intégré. Le [contrôle technique](AUDIT_SEO_TECHNIQUE_2026-11-16.md) n’a identifié aucun blocage majeur sur les 20 pages du sitemap public ; les cinq exclusions Google restent à qualifier séparément.
 
 ## Bilan de l’intégration locale
 
-**Mise à jour après accord de l’utilisateur : les quatre corrections relevées sont appliquées localement.** CSS ajouté à la liste de déploiement, grille Audit IA corrigée, domaine de l’image sociale rectifié et CTA de la page des cas harmonisé. Les constats de l’audit ci-dessous sont conservés comme historique. Aucun déploiement ; contrôle navigateur encore à réaliser.
+**Les quatre corrections relevées sont appliquées et déployées.** CSS ajouté à la liste de déploiement, grille Audit IA corrigée, domaine de l’image sociale rectifié et CTA de la page des cas harmonisé. Les constats de l’audit ci-dessous sont conservés comme historique ; contrôle navigateur encore à réaliser.
 
 - **Audit IA** : textes retenus intégrés, trois formats distincts, livrables et exemple patrimoine détaillés, huit FAQ alignées avec le JSON-LD. Mention d’une journée corrigée dans le quiz.
 - **Agents IA** : introduction centrée sur les missions, cas livré du cabinet de recrutement placé avant les définitions, contenu d’un projet, pilotage quotidien et postes de coûts. Le délai de prototype reste conditionnel et distinct de la production. Aucun tarif ni engagement de support ajouté ; les modalités sont à convenir.
@@ -20,7 +20,7 @@ Analyse du 16 novembre 2026. Ordre de travail conservé : **Audit IA, Agents IA,
 
 **Contrôles effectués :** cinq pages en HTTP 200 local, structure HTML et identifiants, 223 occurrences de liens/ressources locales et leurs ancres, JSON-LD, métadonnées des trois offres, FAQ, configuration déclarative des liens Cal.com, sitemap XML de vingt URL et composants partagés. Résultats dans `../../../output/seo-offres-2026-11-16/verification.json`.
 
-**Restant avant publication :** inspection visuelle ordinateur/mobile, tableau défilant, accès aux missions et ouverture du calendrier. L’accès navigateur automatisé est indisponible ; les contrôles de fichiers ne valident pas le rendu ni le fonctionnement du calendrier externe. Prévisualisations locales : `http://127.0.0.1:8087/agents-ia-pme.html` et `http://127.0.0.1:8087/automatisation-processus-pme.html`. Rien n’a été déployé ; aucun effet SEO n’est mesurable à ce stade.
+**Vérifications restantes après publication :** inspection visuelle ordinateur/mobile, tableau défilant, accès aux missions et ouverture du calendrier. L’accès navigateur automatisé est indisponible ; les contrôles de fichiers ne valident pas le rendu ni le fonctionnement du calendrier externe. Les fichiers servis sont conformes au commit publié ; aucun effet SEO n’est encore mesuré.
 
 ## Plan initial — référence éditoriale
 
@@ -234,4 +234,4 @@ Conserver les chiffres de cet export comme historique, puis enregistrer une réf
 
 Lire d’abord l’évolution des impressions et positions, puis celle des clics et de la pertinence des demandes. Un CTR faible à une position moyenne éloignée ne prouve pas que le titre est seul responsable. Aucun objectif chiffré de trafic ni délai de gain n’est garanti par ce plan. Les contacts qualifiés restent l’objectif commercial final ; la mesure détaillée et la refonte du micro-audit restent dans leur lot ultérieur.
 
-**État actualisé : intégration locale des trois pages et contrôles statiques terminés. Contrôle visuel et publication restent à faire. Après publication, suivre les pages dans Search Console puis poursuivre avec la page Occitanie.**
+**État actualisé : trois pages publiées en 0.4.13, contrôles statiques et HTTP de production terminés. Contrôle visuel restant. Suivre les pages dans Search Console selon le protocole archivé et poursuivre avec la page Occitanie.**

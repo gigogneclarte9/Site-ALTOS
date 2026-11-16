@@ -2,7 +2,7 @@
 
 Référence constituée le 16 novembre 2026 **avant le déploiement**, sur le site public encore en `0.4.12`, commit `5cc2c6912863e359a0fff905c528bbf16d92d011`. Les instants exacts UTC et empreintes figurent dans [le manifeste](manifest.json). Fuseau de restitution : Europe/Paris.
 
-La mise en production et son résultat seront datés séparément dans [DEPLOIEMENT.md](DEPLOIEMENT.md). Les instantanés ci-dessous restent immuables.
+La mise en production a été réalisée le 16 novembre à 16 h 41 min 58 s (Paris) ; son résultat est consigné dans [DEPLOIEMENT.md](DEPLOIEMENT.md). Les instantanés ci-dessous restent immuables.
 
 ## Sources conservées
 

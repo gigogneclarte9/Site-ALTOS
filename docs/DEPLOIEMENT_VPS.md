@@ -36,10 +36,10 @@ Cette cle ne doit pas etre committee. Seul le chemin local est documente pour fa
 ## Release 0.4.13 du 2026-11-16
 
 - Lot : trois pages offres SEO, formats d’audit, cas documentés, métadonnées de partage et correctifs de contraste des boutons.
-- Versions attendues : site/release `0.4.13`, admin `0.3.0`. Package technique backend inchangé.
+- Versions publiées le 16 novembre à 16 h 41 min 58 s (Paris) : site/release `0.4.13`, admin `0.3.0`. Commit applicatif `279a082`. Package technique backend inchangé.
 - Référence avant publication conservée dans [le dossier SEO](seo/suivi/2026-11-16-avant-0.4.13/README.md), hors liste de déploiement public.
 - Procédure autorisée : commit/push `main`, `git pull --ff-only` dans `/opt/altos-deploy/Site-ALTOS`, puis `sudo bash deploy/deploy.sh` ; sauvegarde du webroot avant copie.
-- Vérifications prévues : health/base, version admin, empreintes des fichiers publics par rapport au commit, CSS ajouté à la liste publique, robots/sitemap et absence d’exposition des dossiers privés.
+- Vérifications réussies : health/base, version admin, empreintes des fichiers publics par rapport au commit, CSS ajouté à la liste publique, robots/sitemap et chemins privés testés en 404. Les trois services sont actifs. Rendu navigateur et calendrier externe non vérifiés.
 - Le constat final horodaté est conservé dans [le suivi de mise en ligne](seo/suivi/2026-11-16-avant-0.4.13/DEPLOIEMENT.md).
 
 ## Release 0.4.12 du 2026-10-09

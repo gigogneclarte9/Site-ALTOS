@@ -35,7 +35,8 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 - Quatre corrections contrôlées localement ; visuel corrigé inspecté, fichiers liés inclus au déploiement et métadonnées de l’image cohérentes avec son export réel.
 
 - HTML, liens et ancres locales, fichiers liés, canonical, données structurées, huit FAQ synchronisées par page offre et sitemap de vingt URL ; cinq pages servies en HTTP 200 localement.
-- Navigation et pied de page partagés synchronisés. Contrôle visuel ordinateur/mobile encore à effectuer : accès navigateur indisponible. Modifications locales, non publiées.
+- Navigation et pied de page partagés synchronisés. Contrôle visuel ordinateur/mobile encore à effectuer : accès navigateur indisponible.
+- Release publiée le 16 novembre à 16 h 41 min 58 s (Paris), commit applicatif `279a082` : fichiers publics conformes au commit, health/base et versions admin vérifiés, services actifs. [Compte rendu et limites](docs/seo/suivi/2026-11-16-avant-0.4.13/DEPLOIEMENT.md).
 
 ## [0.4.12] - 2026-10-09
 

@@ -2,9 +2,13 @@
 
 ## Priorites visibilite confirmees le 16 novembre 2026
 
+**Publication effectuée : release 0.4.13 en ligne le 16 novembre à 16 h 41 min 58 s (Paris).** Les trois offres et les corrections sont déployées ; contrôles HTTP, fichiers, API et base réussis. [Référence avant/après et calendrier](docs/seo/suivi/2026-11-16-avant-0.4.13/README.md). Prochaine priorité éditoriale : Occitanie ; suivi indicatif le 23 novembre, comparaisons les 30 novembre et 14 décembre après consolidation. Compléter les données Search Console des 11–15 novembre et les filtres page/requête. Aucun rang Google France certifié avant publication disponible.
+
+- [ ] Qualifier les 5 alertes npm de production (4 élevées, 1 critique) signalées au déploiement ; dépendances inchangées dans ce lot SEO. Voir le [compte rendu](docs/seo/suivi/2026-11-16-avant-0.4.13/DEPLOIEMENT.md).
+
 **Retour visuel utilisateur corrigé :** texte invisible au survol de « Voir les cas d’usage » sur Audit IA. Le pseudo-élément de fond sortait du contexte d’empilement du bouton. Correction du composant partagé, couleurs de texte/fond synchronisées sans transition intermédiaire, focus clavier visible et palettes orange/violet/brun prises en compte. Contrastes calculés sur les 23 pages utilisant le composant et CSS servi localement ; preuve dans `../output/seo-offres-2026-11-16/controle-contrastes-boutons.json`. La vérification de rendu navigateur reste distincte.
 
-**Dernière intervention : les quatre corrections demandées après l’audit sont appliquées et contrôlées localement.** [Constats et suivi](docs/seo/PLAN_SEO_PAGES_OFFRES_2026-11-16.md#contrôle-complémentaire-local-seo-smo-et-geo--16-novembre-2026). Aucun déploiement effectué ; rendu navigateur et calendrier restent à vérifier.
+**Les quatre corrections demandées après l’audit sont appliquées, contrôlées et déployées.** [Constats et suivi](docs/seo/PLAN_SEO_PAGES_OFFRES_2026-11-16.md#contrôle-complémentaire-local-seo-smo-et-geo--16-novembre-2026). Rendu navigateur et calendrier restent à vérifier.
 
 - [x] Ajouter `assets/offer-details.css` à la liste de déploiement : omission de l’intégration des deux offres.
 - [x] Corriger la règle de grille à deux cartes sur Audit IA par un sélecteur plus spécifique.
@@ -14,9 +18,9 @@
 
 L’utilisateur a autorisé ces quatre corrections après le contrôle. Preuves : `../output/seo-offres-2026-11-16/corrections-verifiees.json`. Les chiffres historiques des cas restent un sujet distinct ; ils n’ont pas été modifiés.
 
-**Dernière étape : les trois pages offres sont intégrées localement, non publiées.** Audit IA, Agents IA et Automatisation ont leurs contenus, métadonnées et FAQ alignés. Les missions recrutement et bilans disposent d’ancres publiques et de liens réciproques. La note du quiz évoque désormais l’audit complet payant de cinq jours. Aucun montant ajouté. Contrôles statiques et HTTP local réussis ; contrôle visuel ordinateur/mobile encore à effectuer, accès navigateur indisponible.
+**Les trois pages offres sont publiées en 0.4.13.** Audit IA, Agents IA et Automatisation ont leurs contenus, métadonnées et FAQ alignés. Les missions recrutement et bilans disposent d’ancres publiques et de liens réciproques. La note du quiz évoque désormais l’audit complet payant de cinq jours. Aucun montant ajouté. Contrôles statiques et HTTP réussis ; contrôle visuel ordinateur/mobile encore à effectuer, accès navigateur indisponible.
 
-**Avancement :** [contrôle technique public](docs/seo/AUDIT_SEO_TECHNIQUE_2026-11-16.md), [plan SEO et bilan d’intégration](docs/seo/PLAN_SEO_PAGES_OFFRES_2026-11-16.md) disponibles. Le point 1 reste partiellement ouvert pour les exclusions Search Console ; l’association requête/page reste à vérifier. Prochaine action : vérifier le rendu et le parcours de rendez-vous, puis préparer la publication selon le processus du projet. Les changements ne sont pas en production.
+**Avancement :** [contrôle technique public](docs/seo/AUDIT_SEO_TECHNIQUE_2026-11-16.md), [plan SEO et bilan d’intégration](docs/seo/PLAN_SEO_PAGES_OFFRES_2026-11-16.md) disponibles. Le point 1 reste partiellement ouvert pour les exclusions Search Console ; l’association requête/page reste à vérifier. Publication terminée ; vérification du rendu et du parcours de rendez-vous toujours ouverte.
 
 - [x] Contrôler en production les 20 pages du sitemap, robots, canonical, directives d’indexation, liens internes, redirections et vraie réponse 404.
 - [ ] Compléter avec les cinq URL exclues et leurs motifs Google dès réception.
@@ -24,11 +28,11 @@ L’utilisateur a autorisé ces quatre corrections après le contrôle. Preuves 
 - [ ] Resserrer les métadonnées des trois articles du Journal lors de leur lot.
 - [ ] Pour le lot mesure, préserver les paramètres de campagne lors de la redirection /index.html vers /.
 
-Cette section prévaut sur l’ordre des anciens P0/P1/P2 ci-dessous pour le chantier acquisition. Décision : priorité au référencement naturel ; amélioration complète du micro-audit ensuite. Intégration locale autorisée, sans déploiement. Diagnostic de référence : 13 novembre 2026, 1 455 impressions et 18 clics Google du 11 août au 10 novembre ; ces clics ne constituent pas un décompte de visiteurs ou de prospects.
+Cette section prévaut sur l’ordre des anciens P0/P1/P2 ci-dessous pour le chantier acquisition. Décision : priorité au référencement naturel ; amélioration complète du micro-audit ensuite. Publication autorisée et effectuée le 16 novembre. Diagnostic de référence : 13 novembre 2026, 1 455 impressions et 18 clics Google du 11 août au 10 novembre ; ces clics ne constituent pas un décompte de visiteurs ou de prospects.
 
 - [ ] **1. Indexation** : examiner les cinq URL exclues et leurs motifs Search Console dès réception ; comparer pages importantes, sitemap et indexation ; corriger les obstacles réellement identifiés. Les 20 URL du sitemap répondaient en HTTP 200 au dernier contrôle : pas de refonte systématique du sitemap.
 - [x] **2. Ciblage et plan éditorial** : recherches prioritaires sélectionnées, comparaison ciblée réalisée, intentions affectées aux pages dans le [plan du 16 novembre](docs/seo/PLAN_SEO_PAGES_OFFRES_2026-11-16.md). Correspondances proposées à confirmer avec un filtre page + requête ; aucun volume de marché ni classement Google France certifié déduit des résultats web.
-- [ ] **3. Pages existantes** : intégration locale des trois pages terminée ; finaliser le contrôle visuel, puis publier. Formats confirmés et harmonisés ; aucun gain SEO mesuré avant publication.
+- [x] **3. Pages existantes** : trois pages intégrées et publiées en 0.4.13 ; formats confirmés et harmonisés. Le contrôle visuel restant est suivi séparément ci-dessous ; aucun gain SEO encore mesuré.
 - [ ] **4. Occitanie** : créer une page régionale utile, ancrée dans l’Aude, avec modalités d’intervention et références réelles ; maintenir les pages nationales, sans duplication par ville.
 - [ ] **5. Contenus et liens externes** : préparer les contenus par problème métier et les relais pertinents de partenaires/réseaux. Préparation possible pendant 3 et 4 ; aucun envoi de campagne ou message externe n’est autorisé par cette mise à jour.
 - [ ] **6. Conversion du micro-audit** : après les premières améliorations SEO publiées, traiter promesse, compteur, formulaire, bilan, emails et suivi commercial, sans attendre un seuil de trafic arbitraire.
@@ -42,7 +46,7 @@ Sous-lots éditoriaux :
 - [x] Automatisation : flux avant/après des bilans, choix du premier processus, intégrations, transmission et exploitation. Pas de nouvelle mise en avant des gains chiffrés sans périmètre de mesure clarifié.
 - [x] Maillage des preuves : ancres publiques et liens réciproques, sans liens vers les Markdown privés.
 - [x] Contrôles locaux : FAQ visible/JSON-LD, métadonnées, dates, liens, ancres, HTML et composants partagés. Preuves : `../output/seo-offres-2026-11-16/verification.json`.
-- [ ] Avant publication : vérifier visuellement ordinateur/mobile, tableau défilant et accès aux missions, ainsi que l’ouverture du rendez-vous. Relire la version locale ; ajuster la date de modification si le contenu change ultérieurement.
+- [ ] Vérification visuelle restante après publication : ordinateur/mobile, tableau défilant, accès aux missions et ouverture du rendez-vous ; accès navigateur automatisé indisponible lors du déploiement.
 
 Points conservés pour le lot 6 : compteur dix questions/onze étapes ; articulation « aucune obligation »/recontact sous 48 heures ouvrées ; consentement enregistré automatiquement sans choix distinct ; promesse de réception du bilan sans envoi automatique au prospect identifié ; origine actuellement fixe `micro_audit_web`. Téléphone facultatif, outil de mesure, configuration email et modalités du suivi par le collègue restent à décider. Mesurer les enregistrements réussis, puis les contacts qualifiés et rendez-vous confirmés ; ne pas assimiler ces derniers aux clics sur les boutons.
 

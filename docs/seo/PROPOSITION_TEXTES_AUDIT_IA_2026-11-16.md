@@ -1,6 +1,6 @@
 # Proposition de textes pour la page Audit IA
 
-Textes du 16 novembre 2026, intégrés localement après accord de l’utilisateur. Non publiés ; contrôle visuel restant. Cette proposition conserve les formulations retenues et remplace celles du plan initial qui laissaient la durée et la gratuité du premier échange à confirmer.
+Textes du 16 novembre 2026, intégrés après accord de l’utilisateur et publiés en 0.4.13 à 16 h 41 min 58 s (Paris). Contrôle visuel restant. Cette proposition conserve les formulations retenues et remplace celles du plan initial qui laissaient la durée et la gratuité du premier échange à confirmer. Voir le [compte rendu de publication](suivi/2026-11-16-avant-0.4.13/DEPLOIEMENT.md).
 
 Décisions confirmées : micro-audit gratuit par questionnaire ; premier diagnostic gratuit de 30 minutes sur rendez-vous ; audit complet payant de cinq jours. Aucun montant ni grille tarifaire à ajouter dans ce lot. Le rendez-vous constitue le premier contact commercial ; il ne promet pas la restitution d’un audit complet en 30 minutes.
 
