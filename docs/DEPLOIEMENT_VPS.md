@@ -33,6 +33,17 @@ ssh -i "C:\Users\Admin\.ssh\altos_vps_ed25519" -o BatchMode=yes ubuntu@51.210.45
 
 Cette cle ne doit pas etre committee. Seul le chemin local est documente pour faciliter les interventions depuis la machine de developpement.
 
+## Release 0.4.14 du 2026-11-16
+
+- Publiée à 16 h 59 min 23 s (Paris), commit applicatif `95ab960ab6d196aadff515193fbc613ceb65b174`. Release 0.4.14 ; site public 0.4.13 et admin 0.3.0 conservés.
+- Seule dépendance mise à jour : DOMPurify 3.4.11 → 3.4.17, compatible avec la plage de jsPDF 4.2.1. Aucun changement du HTML, CSS, des migrations ou du comportement applicatif.
+- Installation propre, build TypeScript, cinq scénarios de scoring et six scénarios PDF réussis localement ; six scénarios PDF compilés également exécutés sur le VPS dans un répertoire temporaire, sans lead ni email de test.
+- Sauvegarde protégée : `/var/lib/altos/backups-local/releases/20261116-before-0.4.14/`, contenant `api-0.4.13.tar.gz` (code, dist et dépendances installées), `public-0.4.13.tar.gz`, `altos.dump` et `before.json` (commit et empreintes). Accès root uniquement ; ne pas publier ces archives.
+- Procédure Git habituelle, avec destinations explicitement fixées à `/var/www/altos/current/public`, `/opt/altos-api/app` et service `altos-api`. Base cible `altos` sur loopback vérifiée ; aucune migration en attente. Seul `altos-api` redémarré.
+- Après publication : DOMPurify 3.4.17 installé, audit production zéro critique (quatre élevées restantes), health/base valides, page de connexion admin HTTP 200. Les 38 fichiers publics sont identiques à l’état avant ce correctif : la référence SEO reste celle de la release 0.4.13.
+- Radar : 74 fichiers de release contrôlés hors `node_modules` identiques, lockfile et configurations service/Nginx inchangés, même PID `1685255` et même date de démarrage. Accueil et `/api/auth/me` HTTP 200 avec corps identiques avant/après. Services Nginx/PostgreSQL non redémarrés. Pas de modification du projet Radar ni de mise à jour globale de Node.js.
+- Retour arrière préparé : arrêter uniquement `altos-api`, extraire l’archive API dans un dossier de restauration dédié, vérifier le contenu puis synchroniser son sous-dossier `server/` vers `/opt/altos-api/app/server/` (en préservant `.env`), et redémarrer uniquement `altos-api`. Vérifier ensuite health/base et Radar. Aucune restauration de base nécessaire pour ce correctif sans migration ; ne pas restaurer le dump sur des données plus récentes sans analyse séparée.
+
 ## Release 0.4.13 du 2026-11-16
 
 - Lot : trois pages offres SEO, formats d’audit, cas documentés, métadonnées de partage et correctifs de contraste des boutons.

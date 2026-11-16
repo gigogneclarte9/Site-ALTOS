@@ -4,7 +4,8 @@
 
 **Publication effectuée : release 0.4.13 en ligne le 16 novembre à 16 h 41 min 58 s (Paris).** Les trois offres et les corrections sont déployées ; contrôles HTTP, fichiers, API et base réussis. [Référence avant/après et calendrier](docs/seo/suivi/2026-11-16-avant-0.4.13/README.md). Prochaine priorité éditoriale : Occitanie ; suivi indicatif le 23 novembre, comparaisons les 30 novembre et 14 décembre après consolidation. Compléter les données Search Console des 11–15 novembre et les filtres page/requête. Aucun rang Google France certifié avant publication disponible.
 
-- [ ] Qualifier les 5 alertes npm de production (4 élevées, 1 critique) signalées au déploiement ; dépendances inchangées dans ce lot SEO. Voir le [compte rendu](docs/seo/suivi/2026-11-16-avant-0.4.13/DEPLOIEMENT.md).
+- [x] Retirer l’alerte critique DOMPurify : dépendance 3.4.17 déployée en release 0.4.14 le 16 novembre, tests PDF et audit vérifiés. Scénario HTML vulnérable non utilisé par ALTOS ; correction préventive demandée. Radar contrôlé sans modification.
+- [ ] Qualifier séparément les 4 alertes npm élevées de production restantes. L’audit complet de développement conserve également une alerte modérée. [Déploiement du correctif](docs/DEPLOIEMENT_VPS.md#release-0414-du-2026-11-16).
 
 **Retour visuel utilisateur corrigé :** texte invisible au survol de « Voir les cas d’usage » sur Audit IA. Le pseudo-élément de fond sortait du contexte d’empilement du bouton. Correction du composant partagé, couleurs de texte/fond synchronisées sans transition intermédiaire, focus clavier visible et palettes orange/violet/brun prises en compte. Contrastes calculés sur les 23 pages utilisant le composant et CSS servi localement ; preuve dans `../output/seo-offres-2026-11-16/controle-contrastes-boutons.json`. La vérification de rendu navigateur reste distincte.
 

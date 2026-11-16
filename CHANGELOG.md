@@ -19,6 +19,7 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 - Installation propre avec `npm ci`, compilation TypeScript, cinq scénarios de scoring et six scénarios PDF réussis.
 - Une seule entrée de dépendance modifiée : DOMPurify. Audit complet et audit production : zéro alerte critique ; quatre alertes élevées de production restent à qualifier séparément.
 - Vérification de retrait de la version vulnérable et de l’alerte npm, sans prétendre avoir reproduit une exploitation du site.
+- Déployé le 16 novembre à 16 h 59 min 23 s (Paris), commit applicatif `95ab960`. Audit de production : zéro critique ; six scénarios PDF réussis sur le VPS, health/base et connexion admin accessibles. Radar conserve son processus et ses fichiers contrôlés ; Nginx/PostgreSQL non redémarrés. [Détails de déploiement](docs/DEPLOIEMENT_VPS.md#release-0414-du-2026-11-16).
 
 ## [0.4.13] - 2026-11-16
 
