@@ -33,6 +33,15 @@ ssh -i "C:\Users\Admin\.ssh\altos_vps_ed25519" -o BatchMode=yes ubuntu@51.210.45
 
 Cette cle ne doit pas etre committee. Seul le chemin local est documente pour faciliter les interventions depuis la machine de developpement.
 
+## Release 0.4.13 du 2026-11-16
+
+- Lot : trois pages offres SEO, formats d’audit, cas documentés, métadonnées de partage et correctifs de contraste des boutons.
+- Versions attendues : site/release `0.4.13`, admin `0.3.0`. Package technique backend inchangé.
+- Référence avant publication conservée dans [le dossier SEO](seo/suivi/2026-11-16-avant-0.4.13/README.md), hors liste de déploiement public.
+- Procédure autorisée : commit/push `main`, `git pull --ff-only` dans `/opt/altos-deploy/Site-ALTOS`, puis `sudo bash deploy/deploy.sh` ; sauvegarde du webroot avant copie.
+- Vérifications prévues : health/base, version admin, empreintes des fichiers publics par rapport au commit, CSS ajouté à la liste publique, robots/sitemap et absence d’exposition des dossiers privés.
+- Le constat final horodaté est conservé dans [le suivi de mise en ligne](seo/suivi/2026-11-16-avant-0.4.13/DEPLOIEMENT.md).
+
 ## Release 0.4.12 du 2026-10-09
 
 - Publication depuis `/opt/altos-deploy/Site-ALTOS`, branche `main`, via `git pull --ff-only` puis `sudo bash deploy/deploy.sh`.

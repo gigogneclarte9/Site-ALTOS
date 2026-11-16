@@ -1,0 +1,64 @@
+{
+  "audit-ia-tpe-pme.html": {
+    "html_balanced": true,
+    "unique_ids": true,
+    "h1_count": 1,
+    "canonical": "https://www.altos-experts.fr/audit-ia-tpe-pme.html",
+    "local_links_and_assets_checked": 48,
+    "jsonld_valid": 1,
+    "faq_visible_jsonld_equal": 8,
+    "title_length": 65,
+    "description_length": 147,
+    "metadata_aligned": true,
+    "local_http": 200
+  },
+  "agents-ia-pme.html": {
+    "html_balanced": true,
+    "unique_ids": true,
+    "h1_count": 1,
+    "canonical": "https://www.altos-experts.fr/agents-ia-pme.html",
+    "local_links_and_assets_checked": 46,
+    "jsonld_valid": 1,
+    "faq_visible_jsonld_equal": 8,
+    "title_length": 55,
+    "description_length": 148,
+    "metadata_aligned": true,
+    "local_http": 200
+  },
+  "automatisation-processus-pme.html": {
+    "html_balanced": true,
+    "unique_ids": true,
+    "h1_count": 1,
+    "canonical": "https://www.altos-experts.fr/automatisation-processus-pme.html",
+    "local_links_and_assets_checked": 47,
+    "jsonld_valid": 1,
+    "faq_visible_jsonld_equal": 8,
+    "title_length": 57,
+    "description_length": 149,
+    "metadata_aligned": true,
+    "local_http": 200
+  },
+  "cas-usage.html": {
+    "html_balanced": true,
+    "unique_ids": true,
+    "h1_count": 1,
+    "canonical": "https://www.altos-experts.fr/cas-usage.html",
+    "local_links_and_assets_checked": 49,
+    "jsonld_valid": 1,
+    "local_http": 200
+  },
+  "micro-audit.html": {
+    "html_balanced": true,
+    "unique_ids": true,
+    "h1_count": 1,
+    "canonical": "https://www.altos-experts.fr/micro-audit.html",
+    "local_links_and_assets_checked": 33,
+    "jsonld_valid": 1,
+    "local_http": 200
+  },
+  "sitemap": {
+    "urls": 20,
+    "modified_page_dates_aligned": 5
+  },
+  "visual_review": "Pending; browser automation unavailable during previous turn. Static checks do not validate rendering."
+}

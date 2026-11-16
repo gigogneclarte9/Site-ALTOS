@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8" />
-<title>Agent IA pour PME : usages, méthode et limites | ALTOS</title>
-<meta name="description" content="Agent IA pour TPE et PME : usages concrets, données, méthode, sécurité et validation humaine. Conseil et déploiement d'agents IA sur mesure par ALTOS." />
+<title>Agent IA pour PME : cas concrets et déploiement | ALTOS</title>
+<meta name="description" content="Qualification des demandes, recherche documentaire, réponses préparées : ALTOS conçoit des agents IA pour TPE et PME, avec contrôle humain et suivi." />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="author" content="Nicolas Darcos" />
 <link rel="canonical" href="https://www.altos-experts.fr/agents-ia-pme.html" />
@@ -11,16 +11,17 @@
 <meta property="og:site_name" content="ALTOS" />
 <meta property="og:locale" content="fr_FR" />
 <meta property="og:url" content="https://www.altos-experts.fr/agents-ia-pme.html" />
-<meta property="og:title" content="Agent IA pour PME : usages, méthode et limites | ALTOS" />
-<meta property="og:description" content="Comprendre ce qu'un agent IA peut faire dans une PME, quand l'utiliser et comment encadrer ses données, ses actions et ses décisions." />
+<meta property="og:title" content="Agent IA pour PME : cas concrets et déploiement | ALTOS" />
+<meta property="og:description" content="Qualification des demandes, recherche documentaire, réponses préparées : ALTOS conçoit des agents IA pour TPE et PME, avec contrôle humain et suivi." />
 <meta property="og:image" content="https://www.altos-experts.fr/assets/og-default.png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="ALTOS — Agents IA pour TPE et PME" />
+<meta property="og:image:width" content="1731" />
+<meta property="og:image:height" content="909" />
+<meta property="og:image:alt" content="ALTOS — Ambassadeur IA pour PME. Diagnostic de 30 minutes offert. altos-experts.fr." />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Agent IA pour PME : usages, méthode et limites | ALTOS" />
-<meta name="twitter:description" content="Usages, architecture, contrôles et cas terrain pour déployer un agent IA utile dans une TPE ou une PME." />
+<meta name="twitter:title" content="Agent IA pour PME : cas concrets et déploiement | ALTOS" />
+<meta name="twitter:description" content="Qualification des demandes, recherche documentaire, réponses préparées : ALTOS conçoit des agents IA pour TPE et PME, avec contrôle humain et suivi." />
 <meta name="twitter:image" content="https://www.altos-experts.fr/assets/og-default.png" />
+<meta name="twitter:image:alt" content="ALTOS — Ambassadeur IA pour PME. Diagnostic de 30 minutes offert. altos-experts.fr." />
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-weight='900' fill='%23ffffff'%3EA%3C/text%3E%3Ccircle cx='48' cy='52' r='4' fill='%23ff5b14'/%3E%3C/svg%3E" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,6 +30,7 @@
 <link rel="stylesheet" href="cas-usage/_case-style.css" />
 <link rel="stylesheet" href="assets/site-components.css" />
 <link rel="stylesheet" href="assets/audit-page.css" />
+<link rel="stylesheet" href="assets/offer-details.css" />
 
 <script type="application/ld+json">
 {
@@ -41,7 +43,9 @@
       "url": "https://www.altos-experts.fr/",
       "logo": "https://www.altos-experts.fr/assets/og-default.png",
       "email": "hello@altos-experts.fr",
-      "founder": { "@id": "https://www.altos-experts.fr/#nicolas-darcos" }
+      "founder": {
+        "@id": "https://www.altos-experts.fr/#nicolas-darcos"
+      }
     },
     {
       "@type": "Person",
@@ -49,21 +53,33 @@
       "name": "Nicolas Darcos",
       "jobTitle": "Consultant IA et automatisation pour TPE et PME",
       "image": "https://www.altos-experts.fr/assets/nicolas-darcos.jpg",
-      "worksFor": { "@id": "https://www.altos-experts.fr/#org" },
-      "sameAs": ["https://www.linkedin.com/in/nicolas-darcos-40283035/"]
+      "worksFor": {
+        "@id": "https://www.altos-experts.fr/#org"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/nicolas-darcos-40283035/"
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://www.altos-experts.fr/agents-ia-pme.html#webpage",
       "url": "https://www.altos-experts.fr/agents-ia-pme.html",
-      "name": "Agent IA pour PME : usages, méthode et limites | ALTOS",
-      "description": "Usages, architecture, contrôles et cas terrain pour déployer un agent IA utile dans une TPE ou une PME.",
-      "dateModified": "2026-08-06",
+      "name": "Agent IA pour PME : cas concrets et déploiement | ALTOS",
+      "description": "Qualification des demandes, recherche documentaire, réponses préparées : ALTOS conçoit des agents IA pour TPE et PME, avec contrôle humain et suivi.",
+      "dateModified": "2026-11-16",
       "inLanguage": "fr-FR",
-      "about": { "@id": "https://www.altos-experts.fr/agents-ia-pme.html#service" },
-      "author": { "@id": "https://www.altos-experts.fr/#nicolas-darcos" },
-      "publisher": { "@id": "https://www.altos-experts.fr/#org" },
-      "breadcrumb": { "@id": "https://www.altos-experts.fr/agents-ia-pme.html#breadcrumb" }
+      "about": {
+        "@id": "https://www.altos-experts.fr/agents-ia-pme.html#service"
+      },
+      "author": {
+        "@id": "https://www.altos-experts.fr/#nicolas-darcos"
+      },
+      "publisher": {
+        "@id": "https://www.altos-experts.fr/#org"
+      },
+      "breadcrumb": {
+        "@id": "https://www.altos-experts.fr/agents-ia-pme.html#breadcrumb"
+      }
     },
     {
       "@type": "Service",
@@ -71,16 +87,34 @@
       "name": "Agents IA sur mesure pour TPE et PME",
       "serviceType": "Conseil et déploiement d'agents IA métier",
       "description": "Cadrage, conception et déploiement d'agents IA spécialisés pour rechercher, qualifier, synthétiser, rédiger ou préparer une action à partir des données et règles autorisées d'une TPE ou PME.",
-      "provider": { "@id": "https://www.altos-experts.fr/#org" },
-      "areaServed": { "@type": "Country", "name": "France" },
-      "audience": { "@type": "BusinessAudience", "audienceType": "Dirigeants et équipes de TPE et PME" }
+      "provider": {
+        "@id": "https://www.altos-experts.fr/#org"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "France"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Dirigeants et équipes de TPE et PME"
+      }
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://www.altos-experts.fr/agents-ia-pme.html#breadcrumb",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.altos-experts.fr/" },
-        { "@type": "ListItem", "position": 2, "name": "Agents IA pour PME", "item": "https://www.altos-experts.fr/agents-ia-pme.html" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://www.altos-experts.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Agents IA pour PME",
+          "item": "https://www.altos-experts.fr/agents-ia-pme.html"
+        }
       ]
     },
     {
@@ -90,32 +124,66 @@
         {
           "@type": "Question",
           "name": "Qu'est-ce qu'un agent IA pour une PME ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Un agent IA pour PME est un système logiciel chargé d'une mission précise. Il interprète des informations, utilise uniquement les données et outils autorisés, puis propose ou exécute une action dans des limites définies." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un agent IA pour PME est un système logiciel chargé d'une mission précise. Il interprète des informations, utilise uniquement les données et outils autorisés, puis propose ou exécute une action dans des limites définies."
+          }
         },
         {
           "@type": "Question",
           "name": "Quelle différence entre un chatbot, un assistant IA et un agent IA ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Un chatbot répond dans une conversation. Un assistant aide une personne à produire ou retrouver une information. Un agent IA peut enchaîner plusieurs étapes et utiliser des outils pour atteindre un objectif, sous réserve des autorisations et contrôles prévus." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un chatbot répond dans une conversation. Un assistant aide une personne à produire ou retrouver une information. Un agent IA peut enchaîner plusieurs étapes et utiliser des outils pour atteindre un objectif, sous réserve des autorisations et contrôles prévus."
+          }
         },
         {
           "@type": "Question",
           "name": "Quels usages d'agent IA sont adaptés aux TPE et PME ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Les usages fréquents sont la qualification de demandes, la recherche documentaire, la synthèse de dossiers, la préparation de réponses, le tri d'emails, l'extraction d'informations et la préparation d'actions dans un ERP ou un CRM." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les usages fréquents sont la qualification de demandes, la recherche documentaire, la synthèse de dossiers, la préparation de réponses, le tri d'emails, l'extraction d'informations et la préparation d'actions dans un ERP ou un CRM."
+          }
         },
         {
           "@type": "Question",
           "name": "Un agent IA peut-il utiliser les données de l'entreprise ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Oui, si les sources, les finalités, les droits d'accès, la durée de conservation et les conditions de réutilisation par les fournisseurs sont vérifiés. L'agent ne doit accéder qu'aux données nécessaires à sa mission." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, si les sources, les finalités, les droits d'accès, la durée de conservation et les conditions de réutilisation par les fournisseurs sont vérifiés. L'agent ne doit accéder qu'aux données nécessaires à sa mission."
+          }
         },
         {
           "@type": "Question",
           "name": "Un agent IA peut-il agir sans validation humaine ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Seulement pour des actions réversibles, peu sensibles et correctement testées. Une validation humaine reste nécessaire avant un paiement, un engagement contractuel, une décision concernant une personne ou toute action difficile à annuler." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Seulement pour des actions réversibles, peu sensibles et correctement testées. Une validation humaine reste nécessaire avant un paiement, un engagement contractuel, une décision concernant une personne ou toute action difficile à annuler."
+          }
         },
         {
           "@type": "Question",
           "name": "Combien de temps faut-il pour créer un premier agent IA ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Un premier prototype ciblé peut généralement être présenté en sept à quatorze jours lorsque la mission, les données, les accès et les critères de réussite sont disponibles. La mise en production dépend ensuite des tests, des risques et des intégrations." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un premier prototype ciblé peut généralement être présenté en sept à quatorze jours lorsque la mission, les données, les accès et les critères de réussite sont disponibles. La mise en production dépend ensuite des tests, des risques et des intégrations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels coûts faut-il prévoir pour un agent IA ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le budget distingue la conception initiale des frais d’exploitation : hébergement, abonnements aux outils, consommation des modèles et maintenance. Il dépend de la mission, des connexions et du volume traité. Le devis précise ce qui est inclus et ce qui reste facturé séparément."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qui supervise l’agent après sa mise en service ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un référent doit suivre les résultats, les alertes et les corrections. La répartition des responsabilités entre votre équipe et le prestataire, la reprise après erreur et les modalités de maintenance sont à convenir avant la mise en service."
+          }
         }
       ]
     }
@@ -123,7 +191,7 @@
 }
 </script>
 </head>
-<body>
+<body class="service-offer-page">
 
 <!-- SHARED_NAV_START -->
 <nav class="nav" aria-label="Navigation principale">
@@ -187,21 +255,23 @@
     </div>
 
     <h1 class="title">
-      Agents <i>IA</i> pour<br/><span class="accent">TPE et PME</span> :<br/><mark>comprendre, agir, contrôler</mark>.
+      Agents <i>IA</i> pour <span class="accent">TPE et PME</span> : des missions concrètes dans vos outils.
     </h1>
 
     <p class="article-lede">
-      <i>Un agent IA n'est pas un chatbot auquel on donne tous les accès.</i> C'est un système spécialisé, chargé d'une mission précise, relié aux seules données utiles et capable de s'arrêter lorsqu'une situation dépasse son cadre.
+      <i>Qualifier une demande, rechercher une information dans vos documents ou préparer une réponse à partir de vos données.</i> ALTOS définit la mission de votre agent IA, les outils accessibles et les validations nécessaires, puis construit un prototype à tester avec votre équipe.
     </p>
 
     <div class="audit-hero-actions">
-      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn btn--diag" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Cadrer un cas d'usage
+      <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn btn--diag" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'><span>Diagnostic gratuit de 30 minutes</span>
         <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
       <a href="audit-ia-tpe-pme.html" class="btn btn--ghost">Commencer par un audit IA
         <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
       </a>
     </div>
+
+    <p class="offer-helper">Un premier échange gratuit et sans engagement pour comprendre votre besoin. La conception de l’agent fait l’objet d’une prestation distincte.</p>
 
     <div class="hero-meta-row">
       <div class="cell">
@@ -218,13 +288,33 @@
       </div>
       <div class="cell">
         <div class="k">7–14 jours</div>
-        <div class="l">Premier prototype ciblé</div>
+        <div class="l">Prototype ciblé, selon prérequis</div>
       </div>
     </div>
+    <p class="offer-helper">Le délai indicatif de 7 à 14 jours suppose une mission définie, des données et des accès disponibles. La mise en production intervient après les tests et la validation des intégrations.</p>
   </div>
 </header>
 
 <main>
+  <section class="section-block section-block--paper" id="mission-recrutement">
+    <div class="wrap">
+      <div class="section-intro">
+        <div>
+          <span class="num">Mission livrée · cabinet de recrutement</span>
+          <h2>Repérer les bonnes <i>opportunités commerciales</i>.</h2>
+        </div>
+        <p>Un cabinet de chasse de têtes souhaitait réduire sa veille manuelle sur les plateformes d’emploi. ALTOS a relié la collecte des annonces, leur qualification par IA et une base de prospection. Le système analyse des offres d’emploi pour identifier les entreprises à prospecter ; il ne sélectionne pas de candidats.</p>
+      </div>
+      <ol class="offer-flow">
+        <li><h3>Collecter les annonces</h3><p>Apify récupère les offres selon les mots-clés et les zones retenus. n8n organise leur passage vers l’analyse.</p></li>
+        <li><h3>Qualifier les opportunités</h3><p>L’IA examine le descriptif et le niveau de responsabilité recherché. Les critères écartent les offres hors périmètre : juniors, intérim ou cabinets concurrents.</p></li>
+        <li><h3>Centraliser dans Airtable</h3><p>Les informations et les scores alimentent une base commune avec des vues, des filtres et des listes d’exclusion.</p></li>
+        <li><h3>Garder la main</h3><p>Les scores intermédiaires passent par une validation humaine. L’équipe a été formée à modifier les critères et à piloter la base.</p></li>
+      </ol>
+      <p class="offer-source">Mission réalisée en 2025, cas anonymisé. <a href="cas-usage.html#mission-cabinet-recrutement">Consulter le détail du cabinet de recrutement</a>.</p>
+    </div>
+  </section>
+
   <section class="section-block" id="definition">
     <div class="wrap">
       <div class="section-intro">
@@ -367,12 +457,27 @@
     </div>
   </section>
 
+  <section class="section-block" id="projet">
+    <div class="wrap">
+      <div class="section-intro">
+        <div><span class="num">Projet · périmètre à convenir</span><h2>Ce que comprend un premier projet <i>d’agent IA</i>.</h2></div>
+        <p>Le projet part d’une mission et d’un résultat vérifiable. Les livrables, les connexions et les modalités de transmission sont précisés au cadrage selon votre besoin.</p>
+      </div>
+      <div class="signals-grid">
+        <article class="signal"><h3>Une mission délimitée</h3><p>Les informations à traiter, le résultat attendu, les actions autorisées et les situations à transmettre à une personne.</p></article>
+        <article class="signal"><h3>Des connexions et un prototype</h3><p>Les sources et outils retenus, avec les droits nécessaires et un premier fonctionnement que l’équipe peut essayer.</p></article>
+        <article class="signal"><h3>Des cas de test et un contrôle</h3><p>Des exemples représentatifs, y compris incomplets ou ambigus, et un moyen de consulter, corriger ou valider les résultats.</p></article>
+        <article class="signal"><h3>Une transmission organisée</h3><p>La documentation des règles, les consignes de reprise et la prise en main sont définies avec les personnes qui utiliseront et suivront la solution.</p></article>
+      </div>
+    </div>
+  </section>
+
   <section class="section-block" id="exemples">
     <div class="wrap">
       <div class="section-intro">
         <div>
           <span class="num">§ 05 — Terrain</span>
-          <h2>Trois agents issus des <i>audits</i>.</h2>
+          <h2>Trois scénarios issus des <i>audits</i>.</h2>
         </div>
         <p>Ces scénarios partent de structures réelles anonymisées. Le retour sur un <a href="journal/pharmacie-officine-ia-audience-oubliee.html">assistant IA en pharmacie</a> illustre pourquoi le workflow et l'humain doivent conserver le contrôle.</p>
       </div>
@@ -433,6 +538,25 @@
     </div>
   </section>
 
+  <section class="section-block" id="pilotage">
+    <div class="wrap">
+      <div class="section-intro">
+        <div><span class="num">Pilotage des agents IA</span><h2>Qui suit l’agent <i>au quotidien</i> ?</h2></div>
+        <p>Avant la mise en service, il faut attribuer le suivi à un référent et préciser qui intervient en cas de problème. La répartition entre votre équipe et le prestataire, ainsi que les modalités de maintenance, sont à convenir.</p>
+      </div>
+      <div class="decision-grid">
+        <article class="decision-card"><h3>Relire les résultats</h3><p>Suivre les corrections humaines, les réponses sans source et les cas mal qualifiés sur un échantillon régulier.</p></article>
+        <article class="decision-card"><h3>Traiter les erreurs</h3><p>Identifier qui reçoit l’alerte, suspend une action et reprend le dossier après un accès expiré ou une donnée manquante.</p></article>
+        <article class="decision-card"><h3>Faire évoluer les règles</h3><p>Retester les cas de référence avant de changer les critères métier, les instructions, le modèle ou une connexion.</p></article>
+        <article class="decision-card"><h3>Suivre l’usage</h3><p>Comparer volume traité, temps de relecture, qualité et consommation des services pour ajuster le périmètre.</p></article>
+      </div>
+      <div class="offer-budget">
+        <h3>Quels coûts faut-il prévoir ?</h3>
+        <p>Le budget distingue la conception initiale — cadrage, connexions, tests et mise en service — des frais d’exploitation : hébergement, abonnements aux outils, consommation des modèles et maintenance. Leur montant dépend du périmètre et du volume traité. Le devis précise les éléments inclus, les services facturés séparément et les modalités de suivi.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="section-block" id="references">
     <div class="wrap">
       <div class="section-intro">
@@ -473,7 +597,7 @@
           <span class="num">§ 08 — Questions fréquentes</span>
           <h2>Les agents IA, <i>en clair</i>.</h2>
         </div>
-        <p>Six réponses pour cadrer un premier projet d'agent IA dans une TPE ou une PME.</p>
+        <p>Des réponses pour cadrer un premier projet d’agent IA dans une TPE ou une PME et organiser son suivi.</p>
       </div>
 
       <div class="faq-grid">
@@ -501,6 +625,14 @@
           <h3>Combien de temps faut-il pour créer un premier agent IA ?</h3>
           <p>Un premier prototype ciblé peut généralement être présenté en sept à quatorze jours lorsque la mission, les données, les accès et les critères de réussite sont disponibles. La mise en production dépend ensuite des tests, des risques et des intégrations.</p>
         </article>
+        <article class="faq-item">
+          <h3>Quels coûts faut-il prévoir pour un agent IA ?</h3>
+          <p>Le budget distingue la conception initiale des frais d’exploitation : hébergement, abonnements aux outils, consommation des modèles et maintenance. Il dépend de la mission, des connexions et du volume traité. Le devis précise ce qui est inclus et ce qui reste facturé séparément.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Qui supervise l’agent après sa mise en service ?</h3>
+          <p>Un référent doit suivre les résultats, les alertes et les corrections. La répartition des responsabilités entre votre équipe et le prestataire, la reprise après erreur et les modalités de maintenance sont à convenir avant la mise en service.</p>
+        </article>
       </div>
 
       <aside class="author-card" aria-label="À propos du consultant">
@@ -518,7 +650,7 @@
 <section class="article-cta" id="contact">
   <div class="wrap-narrow">
     <h2>Quelle mission confier à votre premier <i>agent</i> ?</h2>
-    <p>Trente minutes pour décrire le besoin, vérifier les données disponibles et distinguer ce qui relève d'un agent IA, d'un assistant ou d'une automatisation plus simple.</p>
+    <p>Un premier échange gratuit de 30 minutes pour parler de votre activité, de la mission envisagée et des outils utilisés. Sans engagement.</p>
     <a href="https://cal.com/nicolas-darcos-uldxct/30min" class="btn" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>Réserver le diagnostic IA
       <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
     </a>
@@ -527,7 +659,7 @@
 
 <section class="site-page-note">
   <div class="site-page-note__inner">
-    <div class="site-page-note__body"><b>Méthode et transparence —</b> Les exemples cités proviennent d'audits conduits par ALTOS en 2025 et 2026 auprès de structures réelles anonymisées. Les gains chiffrés restent des <b>projections</b> tant qu'un bilan après déploiement ne les a pas confirmés. Les références institutionnelles ont été vérifiées le 6 août 2026.</div>
+    <div class="site-page-note__body"><b>Méthode et transparence —</b> Le cabinet de recrutement illustre une mission livrée en 2025. Les trois scénarios d’audit sont distincts : leurs gains chiffrés restent des <b>projections</b> à confirmer après déploiement. Les structures sont anonymisées. Page mise à jour le 16 novembre 2026 ; références institutionnelles vérifiées le 6 août 2026.</div>
   </div>
 </section>
 

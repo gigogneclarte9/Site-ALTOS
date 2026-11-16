@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <title>Vingt cas d'usage IA en TPE/PME — missions et audits 2025/26 · ALTOS</title>
-<meta name="description" content="Vingt cas d'usage IA documentés en 2025/26 : dix missions livrées (ROI, gains de temps, stacks n8n, Apify, Lovable, Supabase) et dix audits flash 2026 avec feuilles de route projetées. Filtrage par secteur — services, distribution, conseil, immobilier. Anonymisé RGPD." />
+<meta name="description" content="Vingt cas d’usage IA pour TPE et PME : missions livrées, automatisations et audits. Découvrez les solutions déployées et les gains projetés avec ALTOS." />
 <meta name="keywords" content="cas d'usage IA, audit IA PME, automatisation PME France, ROI IA, n8n exemples, agents IA cas concrets, audit flash IA, automatisation sur-mesure" />
 <meta name="author" content="Nicolas Darcos" />
 <link rel="canonical" href="https://www.altos-experts.fr/cas-usage.html" />
@@ -12,15 +12,16 @@
 <meta property="og:locale" content="fr_FR" />
 <meta property="og:url" content="https://www.altos-experts.fr/cas-usage.html" />
 <meta property="og:title" content="Vingt cas d'usage IA en TPE/PME — missions et audits 2025/26 · ALTOS" />
-<meta property="og:description" content="Vingt cas d'usage IA documentés en 2025/26 : missions livrées et audits flash, filtrables par secteur. Coiffure, froid commercial, patrimoine, événementiel, services à la personne, immobilier…" />
+<meta property="og:description" content="Vingt cas d’usage IA pour TPE et PME : missions livrées, automatisations et audits. Découvrez les solutions déployées et les gains projetés avec ALTOS." />
 <meta property="og:image" content="https://www.altos-experts.fr/assets/og-default.png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="ALTOS — Ambassadeur IA pour PME" />
+<meta property="og:image:width" content="1731" />
+<meta property="og:image:height" content="909" />
+<meta property="og:image:alt" content="ALTOS — Ambassadeur IA pour PME. Diagnostic de 30 minutes offert. altos-experts.fr." />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Vingt cas d'usage IA en TPE/PME — missions et audits 2025/26 · ALTOS" />
-<meta name="twitter:description" content="Vingt cas d'usage IA documentés : missions livrées + audits flash, filtrables par secteur. Anonymisé RGPD." />
+<meta name="twitter:description" content="Vingt cas d’usage IA pour TPE et PME : missions livrées, automatisations et audits. Découvrez les solutions déployées et les gains projetés avec ALTOS." />
 <meta name="twitter:image" content="https://www.altos-experts.fr/assets/og-default.png" />
+<meta name="twitter:image:alt" content="ALTOS — Ambassadeur IA pour PME. Diagnostic de 30 minutes offert. altos-experts.fr." />
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-weight='900' fill='%23ffffff'%3EA%3C/text%3E%3Ccircle cx='48' cy='52' r='4' fill='%23ff5b14'/%3E%3C/svg%3E" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -36,6 +37,7 @@
     --line: #e2e2e2;
     --paper: #f4f1ec;
     --accent: #4a3aff;
+    --on-accent: #fff;
     --acid: #d9ff3c;
     --display: "Fraunces", "Times New Roman", serif;
     --sans: "Inter", system-ui, sans-serif;
@@ -695,7 +697,7 @@
     </div>
 
     <!-- CASE 01 -->
-    <article class="case reveal" data-sector="services" data-type="mission">
+    <article class="case reveal" id="mission-bilans-services-personne" style="scroll-margin-top:100px" data-sector="services" data-type="mission">
       <div class="case__idx">
         <span class="num-big">01</span>cas
       </div>
@@ -703,7 +705,7 @@
         <span class="case__tag">Services à la personne · maintien à domicile</span>
         <h3>Bilans annuels et événements indésirables <i>générés automatiquement</i>.</h3>
         <p class="case__summary">
-          Un réseau de services à la personne croulait sous les rapports à remplir chaque année et voulait être plus visible sur Google. Une chaîne n8n + ChatGPT + OpenForm + WordPress lit les formulaires, rédige les rapports tout seuls et publie aussi des articles sur leur site.
+          Un réseau de services à la personne souhaitait réduire le travail consacré aux bilans et améliorer sa visibilité web. La chaîne n8n + ChatGPT + OpenForm prépare les rapports ; les articles destinés à WordPress restent en brouillon pour validation humaine. Cette mission illustre notre accompagnement en <a href="automatisation-processus-pme.html#bilan-avant-apres" style="text-decoration:underline">automatisation des processus pour PME</a>.
         </p>
         <div class="case__pills">
           <span class="pill solid">n8n</span>
@@ -907,7 +909,7 @@
     </article>
 
     <!-- CASE 04 -->
-    <article class="case reveal" data-sector="conseil" data-type="mission">
+    <article class="case reveal" id="mission-cabinet-recrutement" style="scroll-margin-top:100px" data-sector="conseil" data-type="mission">
       <div class="case__idx">
         <span class="num-big">04</span>cas
       </div>
@@ -915,7 +917,7 @@
         <span class="case__tag">Recrutement de cadres dirigeants · chasse de têtes</span>
         <h3>Un agent IA qui qualifie les piges <i>24h/24</i> et ne remonte que les opportunités <mark>CODIR/COMEX</mark>.</h3>
         <p class="case__summary">
-          Le cabinet voulait arrêter de scruter LinkedIn à la main et passer plus de temps avec ses clients. Une chaîne Apify → n8n → ChatGPT → Airtable va chercher les annonces toute seule, fait le tri, donne une note à chacune et ne remonte que les meilleures.
+          Le cabinet souhaitait réduire sa veille manuelle sur LinkedIn. Une chaîne Apify → n8n → ChatGPT → Airtable collecte les annonces, qualifie les opportunités commerciales et les centralise pour l’équipe. Les scores intermédiaires nécessitent une validation humaine. Il s’agit de prospection d’entreprises, pas de sélection de candidats. Découvrez le fonctionnement de cet <a href="agents-ia-pme.html#mission-recrutement" style="text-decoration:underline">agent IA pour PME</a>.
         </p>
         <div class="case__pills">
           <span class="pill solid">Apify · LinkedIn Jobs</span>
@@ -1412,7 +1414,7 @@
     <h2 class="reveal" style="margin-top: 20px;">
       Discutons<br/><span class="acid">trente</span> <i>minutes</i>.
     </h2>
-    <p class="cta__sub reveal">Diagnostic sans engagement. On regarde votre activité, on identifie 1 à 3 chantiers à fort impact, et vous repartez avec une feuille de route — qu'on travaille ensemble ou non.</p>
+    <p class="cta__sub reveal">Un premier échange gratuit de 30 minutes pour parler de votre activité, comprendre votre besoin et envisager la suite. Sans engagement. L’audit complet de cinq jours, avec sa feuille de route, est une prestation payante distincte.</p>
     <div class="cta__btns reveal">
       <a class="btn btn--big btn--diag" href="https://cal.com/nicolas-darcos-uldxct/30min" data-cal-namespace="diag30" data-cal-link="nicolas-darcos-uldxct/30min" data-cal-config='{"layout":"month_view"}'>
         Diagnostic 30 minutes

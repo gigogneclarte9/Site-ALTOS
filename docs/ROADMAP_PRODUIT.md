@@ -1,5 +1,34 @@
 # Roadmap produit ALTOS
 
+## Priorite actuelle — visibilite organique (16 novembre 2026)
+
+**Après audit local :** les quatre corrections autorisées sont appliquées (CSS à déployer, grille Audit IA, domaine du visuel social et CTA des cas). Contrôles de fichiers et HTTP réussis. Aucune publication ; inspection du rendu et du calendrier toujours à effectuer.
+
+**Dernière étape : trois pages offres intégrées localement, non publiées.** Audit IA, Agents IA et Automatisation enrichies ; cas livrés reliés aux offres par des ancres publiques. Quiz et diagnostic de 30 minutes gratuits, audit complet payant de cinq jours ; aucun montant ajouté. Contrôles statiques et HTTP local réussis. Prochaine étape : rendu ordinateur/mobile et parcours de rendez-vous, puis préparation de la publication. L’accès navigateur est indisponible pour la vérification visuelle.
+
+**Avancement :** [contrôle technique public](seo/AUDIT_SEO_TECHNIQUE_2026-11-16.md) et [ciblage avec bilan d’intégration](seo/PLAN_SEO_PAGES_OFFRES_2026-11-16.md) disponibles. Les 20 pages du sitemap public étaient accessibles sans blocage détecté ; les cinq exclusions Google restent à qualifier. Les contenus locaux précisent les postes de coûts et l’organisation du suivi, sans promettre de forfait ou de maintenance inclus par défaut.
+
+La priorité confirmée avec l’utilisateur est d’amener des visiteurs pertinents par le référencement naturel, d’abord en Occitanie avec un ancrage dans l’Aude, puis au niveau national. Cette séquence prévaut sur la proposition du 13 novembre de commencer par la conversion du micro-audit et sur l’ordre historique des phases produit ci-dessous.
+
+| Ordre | Chantier | Résultat attendu |
+| --- | --- | --- |
+| 1 | Indexation, sitemap et obstacles techniques | Motifs des cinq URL exclues compris dès réception ; corrections des seuls problèmes avérés. Les 20 URL du sitemap étaient accessibles le 13 novembre. |
+| 2 | Recherches et intentions prioritaires | Liste courte de recherches pertinentes reliées aux pages, après analyse Search Console et comparaison ciblée des résultats concurrents. Peut avancer sans attendre les cinq URL. |
+| 3 | Pages existantes | Audit IA et Agents IA renforcées en premier, puis Automatisation : offres claires, contenu utile, preuves clients et maillage adaptés. |
+| 4 | Page Occitanie | Présentation régionale utile avec implantation, modalités d’intervention et références réelles ; pages nationales conservées. |
+| 5 | Contenus et références externes | Contenus par problème métier et relais pertinents préparés ; préparation possible pendant les étapes 3 et 4. |
+| 6 | Conversion du micro-audit | Parcours cohérent et mesurable, bilan et suivi commercial exploitables ; chantier à reprendre après les premières améliorations SEO publiées, sans seuil de trafic préalable. |
+
+Mesure minimale transversale dès le départ : référence Search Console, suivi impressions/clics/positions des pages et recherches ciblées, dates des modifications et mesure simple des visites/sources à choisir. La mesure détaillée du questionnaire est conservée pour le lot conversion. Les premiers résultats seront indicatifs compte tenu du faible trafic ; aucun calendrier de résultat SEO n’est garanti.
+
+Le lot conversion conserve les incohérences identifiées : dix questions/compteur onze, « aucune obligation »/recontact sous 48 heures ouvrées, consentement automatiquement enregistré, réception du bilan suggérée sans envoi automatique au prospect identifié. La mention d’une journée dans le quiz a été corrigée localement : l’audit complet dure cinq jours. Le téléphone facultatif reste une proposition, pas une décision acquise.
+
+Les améliorations SEO d’août sont déjà réalisées : pages offres, optimisation des études de cas, données structurées et maillage. La priorité n’est pas une reconstruction du sitemap ni le back-office éditorial. Le détail opérationnel est dans le [backlog actualisé](../BACKLOG.md) ; les preuves et questions ouvertes sont conservées dans la [note de reprise](../../REPRISE_PROJET_ALTOS.md).
+
+État au 16 novembre : analyse et intégration locale des trois pages réalisées, FAQ/métadonnées/liens contrôlés ; contrôle visuel restant. Aucun outil de mesure installé, déploiement ou campagne engagé. Après publication et enregistrement de la référence Search Console, la page Occitanie reste la priorité suivante.
+
+## Roadmap produit historique
+
 Roadmap de reference pour transformer le site statique actuel en plateforme commerciale autonome sur VPS OVH.
 
 ## Vision

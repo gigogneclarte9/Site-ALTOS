@@ -1,0 +1,1571 @@
+{
+  "summary": {
+    "source": "output\\reprise-altos-2026-11-13\\altos-experts.fr-Performance-on-Search-2026-11-13.zip",
+    "sha256": "c38a8f240eb6c075bba9ec09ffb525414acbfd22f42ed2a71e756b3b977adecf",
+    "period_start": "2026-08-11",
+    "period_end": "2026-11-10",
+    "days": 92,
+    "global_clicks": 18,
+    "global_impressions": 1455,
+    "visible_queries": 79,
+    "visible_query_clicks": 2,
+    "visible_query_impressions": 1082,
+    "page_query_join_available": false
+  },
+  "tables": {
+    "Graphique.csv": [
+      {
+        "Date": "2026-08-11",
+        "Clics": "1",
+        "Impressions": "13",
+        "CTR": "7.69%",
+        "Position": "56"
+      },
+      {
+        "Date": "2026-08-12",
+        "Clics": "0",
+        "Impressions": "15",
+        "CTR": "0%",
+        "Position": "57.9"
+      },
+      {
+        "Date": "2026-08-13",
+        "Clics": "0",
+        "Impressions": "10",
+        "CTR": "0%",
+        "Position": "70.8"
+      },
+      {
+        "Date": "2026-08-14",
+        "Clics": "0",
+        "Impressions": "13",
+        "CTR": "0%",
+        "Position": "64.8"
+      },
+      {
+        "Date": "2026-08-15",
+        "Clics": "0",
+        "Impressions": "13",
+        "CTR": "0%",
+        "Position": "76"
+      },
+      {
+        "Date": "2026-08-16",
+        "Clics": "0",
+        "Impressions": "10",
+        "CTR": "0%",
+        "Position": "73.8"
+      },
+      {
+        "Date": "2026-08-17",
+        "Clics": "0",
+        "Impressions": "12",
+        "CTR": "0%",
+        "Position": "69.7"
+      },
+      {
+        "Date": "2026-08-18",
+        "Clics": "0",
+        "Impressions": "16",
+        "CTR": "0%",
+        "Position": "69.4"
+      },
+      {
+        "Date": "2026-08-19",
+        "Clics": "0",
+        "Impressions": "14",
+        "CTR": "0%",
+        "Position": "73.9"
+      },
+      {
+        "Date": "2026-08-20",
+        "Clics": "0",
+        "Impressions": "12",
+        "CTR": "0%",
+        "Position": "79"
+      },
+      {
+        "Date": "2026-08-21",
+        "Clics": "0",
+        "Impressions": "26",
+        "CTR": "0%",
+        "Position": "85"
+      },
+      {
+        "Date": "2026-08-22",
+        "Clics": "0",
+        "Impressions": "18",
+        "CTR": "0%",
+        "Position": "81.7"
+      },
+      {
+        "Date": "2026-08-23",
+        "Clics": "1",
+        "Impressions": "13",
+        "CTR": "7.69%",
+        "Position": "70.2"
+      },
+      {
+        "Date": "2026-08-24",
+        "Clics": "0",
+        "Impressions": "26",
+        "CTR": "0%",
+        "Position": "85.6"
+      },
+      {
+        "Date": "2026-08-25",
+        "Clics": "1",
+        "Impressions": "19",
+        "CTR": "5.26%",
+        "Position": "61.9"
+      },
+      {
+        "Date": "2026-08-26",
+        "Clics": "2",
+        "Impressions": "35",
+        "CTR": "5.71%",
+        "Position": "74.4"
+      },
+      {
+        "Date": "2026-08-27",
+        "Clics": "0",
+        "Impressions": "20",
+        "CTR": "0%",
+        "Position": "78"
+      },
+      {
+        "Date": "2026-08-28",
+        "Clics": "0",
+        "Impressions": "26",
+        "CTR": "0%",
+        "Position": "73.2"
+      },
+      {
+        "Date": "2026-08-29",
+        "Clics": "1",
+        "Impressions": "25",
+        "CTR": "4%",
+        "Position": "64.7"
+      },
+      {
+        "Date": "2026-08-30",
+        "Clics": "0",
+        "Impressions": "18",
+        "CTR": "0%",
+        "Position": "71.6"
+      },
+      {
+        "Date": "2026-08-31",
+        "Clics": "0",
+        "Impressions": "20",
+        "CTR": "0%",
+        "Position": "76.8"
+      },
+      {
+        "Date": "2026-09-01",
+        "Clics": "1",
+        "Impressions": "27",
+        "CTR": "3.7%",
+        "Position": "51.2"
+      },
+      {
+        "Date": "2026-09-02",
+        "Clics": "1",
+        "Impressions": "22",
+        "CTR": "4.55%",
+        "Position": "66.4"
+      },
+      {
+        "Date": "2026-09-03",
+        "Clics": "0",
+        "Impressions": "23",
+        "CTR": "0%",
+        "Position": "64.7"
+      },
+      {
+        "Date": "2026-09-04",
+        "Clics": "0",
+        "Impressions": "27",
+        "CTR": "0%",
+        "Position": "60.1"
+      },
+      {
+        "Date": "2026-09-05",
+        "Clics": "0",
+        "Impressions": "19",
+        "CTR": "0%",
+        "Position": "69.6"
+      },
+      {
+        "Date": "2026-09-06",
+        "Clics": "0",
+        "Impressions": "23",
+        "CTR": "0%",
+        "Position": "58.7"
+      },
+      {
+        "Date": "2026-09-07",
+        "Clics": "0",
+        "Impressions": "24",
+        "CTR": "0%",
+        "Position": "66.1"
+      },
+      {
+        "Date": "2026-09-08",
+        "Clics": "0",
+        "Impressions": "25",
+        "CTR": "0%",
+        "Position": "57.8"
+      },
+      {
+        "Date": "2026-09-09",
+        "Clics": "0",
+        "Impressions": "19",
+        "CTR": "0%",
+        "Position": "63.3"
+      },
+      {
+        "Date": "2026-09-10",
+        "Clics": "1",
+        "Impressions": "18",
+        "CTR": "5.56%",
+        "Position": "61.3"
+      },
+      {
+        "Date": "2026-09-11",
+        "Clics": "0",
+        "Impressions": "25",
+        "CTR": "0%",
+        "Position": "61.6"
+      },
+      {
+        "Date": "2026-09-12",
+        "Clics": "0",
+        "Impressions": "16",
+        "CTR": "0%",
+        "Position": "58.8"
+      },
+      {
+        "Date": "2026-09-13",
+        "Clics": "0",
+        "Impressions": "22",
+        "CTR": "0%",
+        "Position": "59"
+      },
+      {
+        "Date": "2026-09-14",
+        "Clics": "0",
+        "Impressions": "18",
+        "CTR": "0%",
+        "Position": "58.1"
+      },
+      {
+        "Date": "2026-09-15",
+        "Clics": "0",
+        "Impressions": "20",
+        "CTR": "0%",
+        "Position": "51.6"
+      },
+      {
+        "Date": "2026-09-16",
+        "Clics": "0",
+        "Impressions": "27",
+        "CTR": "0%",
+        "Position": "57.3"
+      },
+      {
+        "Date": "2026-09-17",
+        "Clics": "1",
+        "Impressions": "9",
+        "CTR": "11.11%",
+        "Position": "47.7"
+      },
+      {
+        "Date": "2026-09-18",
+        "Clics": "0",
+        "Impressions": "6",
+        "CTR": "0%",
+        "Position": "55"
+      },
+      {
+        "Date": "2026-09-19",
+        "Clics": "0",
+        "Impressions": "5",
+        "CTR": "0%",
+        "Position": "33.6"
+      },
+      {
+        "Date": "2026-09-20",
+        "Clics": "0",
+        "Impressions": "3",
+        "CTR": "0%",
+        "Position": "34.3"
+      },
+      {
+        "Date": "2026-09-21",
+        "Clics": "0",
+        "Impressions": "6",
+        "CTR": "0%",
+        "Position": "52.5"
+      },
+      {
+        "Date": "2026-09-22",
+        "Clics": "0",
+        "Impressions": "7",
+        "CTR": "0%",
+        "Position": "33.3"
+      },
+      {
+        "Date": "2026-09-23",
+        "Clics": "1",
+        "Impressions": "10",
+        "CTR": "10%",
+        "Position": "28.8"
+      },
+      {
+        "Date": "2026-09-24",
+        "Clics": "0",
+        "Impressions": "10",
+        "CTR": "0%",
+        "Position": "22"
+      },
+      {
+        "Date": "2026-09-25",
+        "Clics": "0",
+        "Impressions": "13",
+        "CTR": "0%",
+        "Position": "25.4"
+      },
+      {
+        "Date": "2026-09-26",
+        "Clics": "0",
+        "Impressions": "17",
+        "CTR": "0%",
+        "Position": "36.5"
+      },
+      {
+        "Date": "2026-09-27",
+        "Clics": "0",
+        "Impressions": "15",
+        "CTR": "0%",
+        "Position": "49.5"
+      },
+      {
+        "Date": "2026-09-28",
+        "Clics": "0",
+        "Impressions": "15",
+        "CTR": "0%",
+        "Position": "24.6"
+      },
+      {
+        "Date": "2026-09-29",
+        "Clics": "3",
+        "Impressions": "12",
+        "CTR": "25%",
+        "Position": "29.6"
+      },
+      {
+        "Date": "2026-09-30",
+        "Clics": "0",
+        "Impressions": "9",
+        "CTR": "0%",
+        "Position": "19.8"
+      },
+      {
+        "Date": "2026-10-01",
+        "Clics": "0",
+        "Impressions": "32",
+        "CTR": "0%",
+        "Position": "65.5"
+      },
+      {
+        "Date": "2026-10-02",
+        "Clics": "0",
+        "Impressions": "38",
+        "CTR": "0%",
+        "Position": "67.1"
+      },
+      {
+        "Date": "2026-10-03",
+        "Clics": "0",
+        "Impressions": "13",
+        "CTR": "0%",
+        "Position": "35.6"
+      },
+      {
+        "Date": "2026-10-04",
+        "Clics": "0",
+        "Impressions": "9",
+        "CTR": "0%",
+        "Position": "69.3"
+      },
+      {
+        "Date": "2026-10-05",
+        "Clics": "0",
+        "Impressions": "29",
+        "CTR": "0%",
+        "Position": "61.1"
+      },
+      {
+        "Date": "2026-10-06",
+        "Clics": "1",
+        "Impressions": "16",
+        "CTR": "6.25%",
+        "Position": "65.5"
+      },
+      {
+        "Date": "2026-10-07",
+        "Clics": "0",
+        "Impressions": "14",
+        "CTR": "0%",
+        "Position": "72.9"
+      },
+      {
+        "Date": "2026-10-08",
+        "Clics": "0",
+        "Impressions": "4",
+        "CTR": "0%",
+        "Position": "33.8"
+      },
+      {
+        "Date": "2026-10-09",
+        "Clics": "0",
+        "Impressions": "4",
+        "CTR": "0%",
+        "Position": "44.2"
+      },
+      {
+        "Date": "2026-10-10",
+        "Clics": "0",
+        "Impressions": "7",
+        "CTR": "0%",
+        "Position": "49.6"
+      },
+      {
+        "Date": "2026-10-11",
+        "Clics": "0",
+        "Impressions": "6",
+        "CTR": "0%",
+        "Position": "33"
+      },
+      {
+        "Date": "2026-10-12",
+        "Clics": "0",
+        "Impressions": "7",
+        "CTR": "0%",
+        "Position": "53.3"
+      },
+      {
+        "Date": "2026-10-13",
+        "Clics": "0",
+        "Impressions": "22",
+        "CTR": "0%",
+        "Position": "44.7"
+      },
+      {
+        "Date": "2026-10-14",
+        "Clics": "0",
+        "Impressions": "26",
+        "CTR": "0%",
+        "Position": "54.3"
+      },
+      {
+        "Date": "2026-10-15",
+        "Clics": "0",
+        "Impressions": "21",
+        "CTR": "0%",
+        "Position": "53"
+      },
+      {
+        "Date": "2026-10-16",
+        "Clics": "0",
+        "Impressions": "13",
+        "CTR": "0%",
+        "Position": "65.7"
+      },
+      {
+        "Date": "2026-10-17",
+        "Clics": "0",
+        "Impressions": "20",
+        "CTR": "0%",
+        "Position": "63.5"
+      },
+      {
+        "Date": "2026-10-18",
+        "Clics": "0",
+        "Impressions": "15",
+        "CTR": "0%",
+        "Position": "62.7"
+      },
+      {
+        "Date": "2026-10-19",
+        "Clics": "0",
+        "Impressions": "18",
+        "CTR": "0%",
+        "Position": "66.7"
+      },
+      {
+        "Date": "2026-10-20",
+        "Clics": "1",
+        "Impressions": "18",
+        "CTR": "5.56%",
+        "Position": "57.3"
+      },
+      {
+        "Date": "2026-10-21",
+        "Clics": "0",
+        "Impressions": "19",
+        "CTR": "0%",
+        "Position": "68.1"
+      },
+      {
+        "Date": "2026-10-22",
+        "Clics": "0",
+        "Impressions": "9",
+        "CTR": "0%",
+        "Position": "58.4"
+      },
+      {
+        "Date": "2026-10-23",
+        "Clics": "0",
+        "Impressions": "10",
+        "CTR": "0%",
+        "Position": "45"
+      },
+      {
+        "Date": "2026-10-24",
+        "Clics": "0",
+        "Impressions": "9",
+        "CTR": "0%",
+        "Position": "44.8"
+      },
+      {
+        "Date": "2026-10-25",
+        "Clics": "1",
+        "Impressions": "21",
+        "CTR": "4.76%",
+        "Position": "39.9"
+      },
+      {
+        "Date": "2026-10-26",
+        "Clics": "0",
+        "Impressions": "13",
+        "CTR": "0%",
+        "Position": "14.3"
+      },
+      {
+        "Date": "2026-10-27",
+        "Clics": "0",
+        "Impressions": "12",
+        "CTR": "0%",
+        "Position": "32.1"
+      },
+      {
+        "Date": "2026-10-28",
+        "Clics": "0",
+        "Impressions": "6",
+        "CTR": "0%",
+        "Position": "12.3"
+      },
+      {
+        "Date": "2026-10-29",
+        "Clics": "0",
+        "Impressions": "5",
+        "CTR": "0%",
+        "Position": "39.8"
+      },
+      {
+        "Date": "2026-10-30",
+        "Clics": "0",
+        "Impressions": "9",
+        "CTR": "0%",
+        "Position": "23"
+      },
+      {
+        "Date": "2026-10-31",
+        "Clics": "0",
+        "Impressions": "8",
+        "CTR": "0%",
+        "Position": "19"
+      },
+      {
+        "Date": "2026-11-01",
+        "Clics": "0",
+        "Impressions": "15",
+        "CTR": "0%",
+        "Position": "37.9"
+      },
+      {
+        "Date": "2026-11-02",
+        "Clics": "1",
+        "Impressions": "15",
+        "CTR": "6.67%",
+        "Position": "24.9"
+      },
+      {
+        "Date": "2026-11-03",
+        "Clics": "0",
+        "Impressions": "11",
+        "CTR": "0%",
+        "Position": "48.8"
+      },
+      {
+        "Date": "2026-11-04",
+        "Clics": "0",
+        "Impressions": "18",
+        "CTR": "0%",
+        "Position": "17.3"
+      },
+      {
+        "Date": "2026-11-05",
+        "Clics": "0",
+        "Impressions": "9",
+        "CTR": "0%",
+        "Position": "12.2"
+      },
+      {
+        "Date": "2026-11-06",
+        "Clics": "0",
+        "Impressions": "11",
+        "CTR": "0%",
+        "Position": "23.8"
+      },
+      {
+        "Date": "2026-11-07",
+        "Clics": "0",
+        "Impressions": "9",
+        "CTR": "0%",
+        "Position": "41.8"
+      },
+      {
+        "Date": "2026-11-08",
+        "Clics": "0",
+        "Impressions": "13",
+        "CTR": "0%",
+        "Position": "25.8"
+      },
+      {
+        "Date": "2026-11-09",
+        "Clics": "0",
+        "Impressions": "16",
+        "CTR": "0%",
+        "Position": "28.2"
+      },
+      {
+        "Date": "2026-11-10",
+        "Clics": "0",
+        "Impressions": "19",
+        "CTR": "0%",
+        "Position": "22.8"
+      }
+    ],
+    "Requêtes.csv": [
+      {
+        "Requêtes les plus fréquentes": "agent ia pme",
+        "Clics": "1",
+        "Impressions": "196",
+        "CTR": "0.51%",
+        "Position": "44.89"
+      },
+      {
+        "Requêtes les plus fréquentes": "micro audit",
+        "Clics": "1",
+        "Impressions": "8",
+        "CTR": "12.5%",
+        "Position": "3.12"
+      },
+      {
+        "Requêtes les plus fréquentes": "diagnostic ia tpe",
+        "Clics": "0",
+        "Impressions": "109",
+        "CTR": "0%",
+        "Position": "64.86"
+      },
+      {
+        "Requêtes les plus fréquentes": "audit ia pme",
+        "Clics": "0",
+        "Impressions": "64",
+        "CTR": "0%",
+        "Position": "84.42"
+      },
+      {
+        "Requêtes les plus fréquentes": "test ia tpe",
+        "Clics": "0",
+        "Impressions": "59",
+        "CTR": "0%",
+        "Position": "80.02"
+      },
+      {
+        "Requêtes les plus fréquentes": "diagnostic ia générative tpe",
+        "Clics": "0",
+        "Impressions": "54",
+        "CTR": "0%",
+        "Position": "73.43"
+      },
+      {
+        "Requêtes les plus fréquentes": "diagnostic ia pme",
+        "Clics": "0",
+        "Impressions": "53",
+        "CTR": "0%",
+        "Position": "94.75"
+      },
+      {
+        "Requêtes les plus fréquentes": "diagnostic intelligence artificielle tpe",
+        "Clics": "0",
+        "Impressions": "50",
+        "CTR": "0%",
+        "Position": "85.96"
+      },
+      {
+        "Requêtes les plus fréquentes": "test intelligence artificielle tpe",
+        "Clics": "0",
+        "Impressions": "41",
+        "CTR": "0%",
+        "Position": "87"
+      },
+      {
+        "Requêtes les plus fréquentes": "pilotage des agents ia",
+        "Clics": "0",
+        "Impressions": "36",
+        "CTR": "0%",
+        "Position": "42.39"
+      },
+      {
+        "Requêtes les plus fréquentes": "test ia pme",
+        "Clics": "0",
+        "Impressions": "31",
+        "CTR": "0%",
+        "Position": "94.97"
+      },
+      {
+        "Requêtes les plus fréquentes": "automatisation tâches pme",
+        "Clics": "0",
+        "Impressions": "30",
+        "CTR": "0%",
+        "Position": "85.4"
+      },
+      {
+        "Requêtes les plus fréquentes": "agent ia pour pme",
+        "Clics": "0",
+        "Impressions": "28",
+        "CTR": "0%",
+        "Position": "66.57"
+      },
+      {
+        "Requêtes les plus fréquentes": "test intelligence artificielle pme",
+        "Clics": "0",
+        "Impressions": "28",
+        "CTR": "0%",
+        "Position": "94.54"
+      },
+      {
+        "Requêtes les plus fréquentes": "diagnostic intelligence artificielle pme",
+        "Clics": "0",
+        "Impressions": "26",
+        "CTR": "0%",
+        "Position": "89.12"
+      },
+      {
+        "Requêtes les plus fréquentes": "audit ia entreprise",
+        "Clics": "0",
+        "Impressions": "26",
+        "CTR": "0%",
+        "Position": "98.58"
+      },
+      {
+        "Requêtes les plus fréquentes": "diagnostic ia générative pme",
+        "Clics": "0",
+        "Impressions": "24",
+        "CTR": "0%",
+        "Position": "97.79"
+      },
+      {
+        "Requêtes les plus fréquentes": "audit intelligence artificielle pme",
+        "Clics": "0",
+        "Impressions": "19",
+        "CTR": "0%",
+        "Position": "90.32"
+      },
+      {
+        "Requêtes les plus fréquentes": "agence airtable montpellier",
+        "Clics": "0",
+        "Impressions": "18",
+        "CTR": "0%",
+        "Position": "73.44"
+      },
+      {
+        "Requêtes les plus fréquentes": "altos entreprise",
+        "Clics": "0",
+        "Impressions": "13",
+        "CTR": "0%",
+        "Position": "32.62"
+      },
+      {
+        "Requêtes les plus fréquentes": "altoscan",
+        "Clics": "0",
+        "Impressions": "11",
+        "CTR": "0%",
+        "Position": "14.64"
+      },
+      {
+        "Requêtes les plus fréquentes": "alto ia",
+        "Clics": "0",
+        "Impressions": "10",
+        "CTR": "0%",
+        "Position": "8.4"
+      },
+      {
+        "Requêtes les plus fréquentes": "automatisation processus pme",
+        "Clics": "0",
+        "Impressions": "10",
+        "CTR": "0%",
+        "Position": "25.7"
+      },
+      {
+        "Requêtes les plus fréquentes": "ia et tpe pme cas d'usage",
+        "Clics": "0",
+        "Impressions": "10",
+        "CTR": "0%",
+        "Position": "26.4"
+      },
+      {
+        "Requêtes les plus fréquentes": "test ia générative tpe",
+        "Clics": "0",
+        "Impressions": "9",
+        "CTR": "0%",
+        "Position": "83.56"
+      },
+      {
+        "Requêtes les plus fréquentes": "test ia générative pme",
+        "Clics": "0",
+        "Impressions": "9",
+        "CTR": "0%",
+        "Position": "94.44"
+      },
+      {
+        "Requêtes les plus fréquentes": "ia pour tpe pme",
+        "Clics": "0",
+        "Impressions": "8",
+        "CTR": "0%",
+        "Position": "57.25"
+      },
+      {
+        "Requêtes les plus fréquentes": "dangers ia tpe",
+        "Clics": "0",
+        "Impressions": "6",
+        "CTR": "0%",
+        "Position": "63.17"
+      },
+      {
+        "Requêtes les plus fréquentes": "risques ia pme",
+        "Clics": "0",
+        "Impressions": "5",
+        "CTR": "0%",
+        "Position": "8.6"
+      },
+      {
+        "Requêtes les plus fréquentes": "cas d'usage ia pme",
+        "Clics": "0",
+        "Impressions": "5",
+        "CTR": "0%",
+        "Position": "32"
+      },
+      {
+        "Requêtes les plus fréquentes": "audit des usages ia entreprise",
+        "Clics": "0",
+        "Impressions": "4",
+        "CTR": "0%",
+        "Position": "28.75"
+      },
+      {
+        "Requêtes les plus fréquentes": "agent experience audit",
+        "Clics": "0",
+        "Impressions": "4",
+        "CTR": "0%",
+        "Position": "29.5"
+      },
+      {
+        "Requêtes les plus fréquentes": "audit officine",
+        "Clics": "0",
+        "Impressions": "4",
+        "CTR": "0%",
+        "Position": "61"
+      },
+      {
+        "Requêtes les plus fréquentes": "audit ia entreprise gratuit",
+        "Clics": "0",
+        "Impressions": "4",
+        "CTR": "0%",
+        "Position": "67.75"
+      },
+      {
+        "Requêtes les plus fréquentes": "agent ia tpe",
+        "Clics": "0",
+        "Impressions": "4",
+        "CTR": "0%",
+        "Position": "75.25"
+      },
+      {
+        "Requêtes les plus fréquentes": "agent ia 24/7 pour pme",
+        "Clics": "0",
+        "Impressions": "4",
+        "CTR": "0%",
+        "Position": "77"
+      },
+      {
+        "Requêtes les plus fréquentes": "agents ia pme",
+        "Clics": "0",
+        "Impressions": "3",
+        "CTR": "0%",
+        "Position": "12.67"
+      },
+      {
+        "Requêtes les plus fréquentes": "automatisation intelligente processus pme",
+        "Clics": "0",
+        "Impressions": "3",
+        "CTR": "0%",
+        "Position": "74.33"
+      },
+      {
+        "Requêtes les plus fréquentes": "diagnostic automatisation pme",
+        "Clics": "0",
+        "Impressions": "3",
+        "CTR": "0%",
+        "Position": "89.67"
+      },
+      {
+        "Requêtes les plus fréquentes": "audit qualité pme",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "2.5"
+      },
+      {
+        "Requêtes les plus fréquentes": "altos consulting group",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "3"
+      },
+      {
+        "Requêtes les plus fréquentes": "altos ai",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "8.5"
+      },
+      {
+        "Requêtes les plus fréquentes": "alto expert",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "9"
+      },
+      {
+        "Requêtes les plus fréquentes": "cas d'usage ia tpe",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "26"
+      },
+      {
+        "Requêtes les plus fréquentes": "audit technique ia",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "37.5"
+      },
+      {
+        "Requêtes les plus fréquentes": "automatisation pme",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "57.5"
+      },
+      {
+        "Requêtes les plus fréquentes": "audit data entreprise pme",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "69.5"
+      },
+      {
+        "Requêtes les plus fréquentes": "agence ia pour pme",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "80"
+      },
+      {
+        "Requêtes les plus fréquentes": "audit agent ia",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "80"
+      },
+      {
+        "Requêtes les plus fréquentes": "workflow automatisé pme",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "84.5"
+      },
+      {
+        "Requêtes les plus fréquentes": "numérisation des processus pme",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "86.5"
+      },
+      {
+        "Requêtes les plus fréquentes": "audit pme",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "93.5"
+      },
+      {
+        "Requêtes les plus fréquentes": "développement agent ia pme",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "3"
+      },
+      {
+        "Requêtes les plus fréquentes": "oui",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "3"
+      },
+      {
+        "Requêtes les plus fréquentes": "son email",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "5"
+      },
+      {
+        "Requêtes les plus fréquentes": "risques ia tpe",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "7"
+      },
+      {
+        "Requêtes les plus fréquentes": "alto scan",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "8"
+      },
+      {
+        "Requêtes les plus fréquentes": "altos consulting",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "9"
+      },
+      {
+        "Requêtes les plus fréquentes": "altos rh",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "9"
+      },
+      {
+        "Requêtes les plus fréquentes": "ia juridique tpe",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "11"
+      },
+      {
+        "Requêtes les plus fréquentes": "agent ia pour tpe pme",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "16"
+      },
+      {
+        "Requêtes les plus fréquentes": "altropia",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "17"
+      },
+      {
+        "Requêtes les plus fréquentes": "agence ia pme",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "18"
+      },
+      {
+        "Requêtes les plus fréquentes": "ia tpe",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "36"
+      },
+      {
+        "Requêtes les plus fréquentes": "risques intelligence artificielle tpe",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "38"
+      },
+      {
+        "Requêtes les plus fréquentes": "agent ia métier",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "41"
+      },
+      {
+        "Requêtes les plus fréquentes": "alto expertise",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "41"
+      },
+      {
+        "Requêtes les plus fréquentes": "audit ia pour entreprises",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "41"
+      },
+      {
+        "Requêtes les plus fréquentes": "risques et opportunités de l'ia pour les pme",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "45"
+      },
+      {
+        "Requêtes les plus fréquentes": "consultant ia tpe",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "47"
+      },
+      {
+        "Requêtes les plus fréquentes": "diagnostic automatisation processus entreprise",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "50"
+      },
+      {
+        "Requêtes les plus fréquentes": "expert ia pme",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "50"
+      },
+      {
+        "Requêtes les plus fréquentes": "altos",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "55"
+      },
+      {
+        "Requêtes les plus fréquentes": "agents ia entreprise",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "56"
+      },
+      {
+        "Requêtes les plus fréquentes": "ia pour tpe",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "84"
+      },
+      {
+        "Requêtes les plus fréquentes": "automatisation workflow pme",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "87"
+      },
+      {
+        "Requêtes les plus fréquentes": "audit marque pme",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "94"
+      },
+      {
+        "Requêtes les plus fréquentes": "alto ai",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "95"
+      },
+      {
+        "Requêtes les plus fréquentes": "agent ia pme saas",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "96"
+      }
+    ],
+    "Pages.csv": [
+      {
+        "Pages les plus populaires": "https://www.altos-experts.fr/",
+        "Clics": "13",
+        "Impressions": "192",
+        "CTR": "6.77%",
+        "Position": "9.48"
+      },
+      {
+        "Pages les plus populaires": "https://www.altos-experts.fr/audit-ia-tpe-pme.html",
+        "Clics": "2",
+        "Impressions": "720",
+        "CTR": "0.28%",
+        "Position": "77.08"
+      },
+      {
+        "Pages les plus populaires": "https://www.altos-experts.fr/micro-audit.html",
+        "Clics": "2",
+        "Impressions": "25",
+        "CTR": "8%",
+        "Position": "12.68"
+      },
+      {
+        "Pages les plus populaires": "https://www.altos-experts.fr/agents-ia-pme.html",
+        "Clics": "1",
+        "Impressions": "339",
+        "CTR": "0.29%",
+        "Position": "45.14"
+      },
+      {
+        "Pages les plus populaires": "https://www.altos-experts.fr/automatisation-processus-pme.html",
+        "Clics": "0",
+        "Impressions": "83",
+        "CTR": "0%",
+        "Position": "61.89"
+      },
+      {
+        "Pages les plus populaires": "https://www.altos-experts.fr/journal/pharmacie-officine-ia-audience-oubliee.html",
+        "Clics": "0",
+        "Impressions": "32",
+        "CTR": "0%",
+        "Position": "39.78"
+      },
+      {
+        "Pages les plus populaires": "https://www.altos-experts.fr/cas-usage.html",
+        "Clics": "0",
+        "Impressions": "28",
+        "CTR": "0%",
+        "Position": "14.32"
+      },
+      {
+        "Pages les plus populaires": "https://www.altos-experts.fr/journal.html",
+        "Clics": "0",
+        "Impressions": "27",
+        "CTR": "0%",
+        "Position": "7.93"
+      },
+      {
+        "Pages les plus populaires": "https://www.altos-experts.fr/cas-usage/immobilier-3-poles.html",
+        "Clics": "0",
+        "Impressions": "23",
+        "CTR": "0%",
+        "Position": "58.7"
+      },
+      {
+        "Pages les plus populaires": "https://www.altos-experts.fr/journal/6-audits-6-secteurs-meme-verdict.html",
+        "Clics": "0",
+        "Impressions": "16",
+        "CTR": "0%",
+        "Position": "11.88"
+      },
+      {
+        "Pages les plus populaires": "https://www.altos-experts.fr/journal/120-audits-ia-quick-wins-pme.html",
+        "Clics": "0",
+        "Impressions": "12",
+        "CTR": "0%",
+        "Position": "14.42"
+      },
+      {
+        "Pages les plus populaires": "https://www.altos-experts.fr/cas-usage/distribution-froid-commercial.html",
+        "Clics": "0",
+        "Impressions": "6",
+        "CTR": "0%",
+        "Position": "9"
+      },
+      {
+        "Pages les plus populaires": "https://www.altos-experts.fr/cas-usage/agence-evenementielle-b2b.html",
+        "Clics": "0",
+        "Impressions": "6",
+        "CTR": "0%",
+        "Position": "9.67"
+      },
+      {
+        "Pages les plus populaires": "https://www.altos-experts.fr/cas-usage/pme-froid-commercial-climatisation.html",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "2"
+      },
+      {
+        "Pages les plus populaires": "https://www.altos-experts.fr/cas-usage/cabinet-gestion-patrimoine.html",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "9"
+      },
+      {
+        "Pages les plus populaires": "https://www.altos-experts.fr/cas-usage/services-personne-anomalies.html",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "9"
+      },
+      {
+        "Pages les plus populaires": "https://www.altos-experts.fr/cas-usage/installation-frigorifique-tarn.html",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "25"
+      }
+    ],
+    "Pays.csv": [
+      {
+        "Pays": "France",
+        "Clics": "17",
+        "Impressions": "1374",
+        "CTR": "1.24%",
+        "Position": "58.19"
+      },
+      {
+        "Pays": "Maroc",
+        "Clics": "1",
+        "Impressions": "6",
+        "CTR": "16.67%",
+        "Position": "5.17"
+      },
+      {
+        "Pays": "États-Unis",
+        "Clics": "0",
+        "Impressions": "28",
+        "CTR": "0%",
+        "Position": "13.11"
+      },
+      {
+        "Pays": "Royaume-Uni",
+        "Clics": "0",
+        "Impressions": "5",
+        "CTR": "0%",
+        "Position": "15.4"
+      },
+      {
+        "Pays": "Pays-Bas",
+        "Clics": "0",
+        "Impressions": "4",
+        "CTR": "0%",
+        "Position": "6.25"
+      },
+      {
+        "Pays": "Espagne",
+        "Clics": "0",
+        "Impressions": "4",
+        "CTR": "0%",
+        "Position": "30.5"
+      },
+      {
+        "Pays": "Belgique",
+        "Clics": "0",
+        "Impressions": "3",
+        "CTR": "0%",
+        "Position": "3"
+      },
+      {
+        "Pays": "Brésil",
+        "Clics": "0",
+        "Impressions": "3",
+        "CTR": "0%",
+        "Position": "20.67"
+      },
+      {
+        "Pays": "Inde",
+        "Clics": "0",
+        "Impressions": "3",
+        "CTR": "0%",
+        "Position": "33"
+      },
+      {
+        "Pays": "République démocratique du Congo",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "4.5"
+      },
+      {
+        "Pays": "Italie",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "5"
+      },
+      {
+        "Pays": "Allemagne",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "6"
+      },
+      {
+        "Pays": "Kenya",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "21"
+      },
+      {
+        "Pays": "Mexique",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "44"
+      },
+      {
+        "Pays": "Russie",
+        "Clics": "0",
+        "Impressions": "2",
+        "CTR": "0%",
+        "Position": "69"
+      },
+      {
+        "Pays": "Côte d'Ivoire",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "1"
+      },
+      {
+        "Pays": "Madagascar",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "1"
+      },
+      {
+        "Pays": "Tunisie",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "2"
+      },
+      {
+        "Pays": "Canada",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "5"
+      },
+      {
+        "Pays": "Autriche",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "6"
+      },
+      {
+        "Pays": "Palestine",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "8"
+      },
+      {
+        "Pays": "Suisse",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "9"
+      },
+      {
+        "Pays": "Irak",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "17"
+      },
+      {
+        "Pays": "Grèce",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "18"
+      },
+      {
+        "Pays": "Bangladesh",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "66"
+      },
+      {
+        "Pays": "Malaisie",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "76"
+      },
+      {
+        "Pays": "Géorgie",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "89"
+      },
+      {
+        "Pays": "Belize",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "97"
+      }
+    ],
+    "Appareils.csv": [
+      {
+        "Appareil": "Ordinateur",
+        "Clics": "10",
+        "Impressions": "1311",
+        "CTR": "0.76%",
+        "Position": "59.3"
+      },
+      {
+        "Appareil": "Mobile",
+        "Clics": "8",
+        "Impressions": "143",
+        "CTR": "5.59%",
+        "Position": "25.76"
+      },
+      {
+        "Appareil": "Tablette",
+        "Clics": "0",
+        "Impressions": "1",
+        "CTR": "0%",
+        "Position": "7"
+      }
+    ],
+    "Apparence dans les résultats de recherche.csv": [],
+    "Filtres.csv": [
+      {
+        "Filtre": "Type de recherche",
+        "Valeur": "Web (textuel)"
+      },
+      {
+        "Filtre": "Date",
+        "Valeur": "Les 3 derniers mois"
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "query": "diagnostic ia tpe",
+  "checked_at_utc": "2026-11-16 15:38:46 UTC",
+  "engine": "web search tool; underlying provider/location unspecified",
+  "google_france_organic_position": null,
+  "query_page_join_confirmed": false,
+  "urls_returned": [
+    "https://iarama.fr/",
+    "https://www.francenum.gouv.fr/guides-et-conseils/intelligence-artificielle/comprendre-et-adopter-lia/lintelligence-artificielle-6",
+    "https://marteloai.com/solutions/diagnostic-ia/",
+    "https://www.francenum.gouv.fr/guides-et-conseils/strategie-numerique/diagnostic-numerique/autodiag-ia-evaluez-la-capacite-de",
+    "https://www.clariguard.fr/services/diagnostic-ia-express/",
+    "https://kappteo.com/services/diagnostic-ia/",
+    "https://www.effet-i-media.com/diagnostic-ia/",
+    "https://globecreateur.fr/services/diagnostic-ia-pme",
+    "https://comeup.com/fr/service/564181/identifier-un-premier-usage-ia-utile-pour-votre-tpe",
+    "https://www.francenum.gouv.fr/aides-financieres/guides-et-conseils-financiers/quelles-sont-les-aides-financieres-pour-aider-les",
+    "https://www.pixel-competences.com/formation-ia-artisans-tpe-gagner-du-temps-simplement",
+    "https://www.francenum.gouv.fr/guides-et-conseils/strategie-numerique/diagnostic-numerique/quel-est-le-niveau-de-maturite-de-votre",
+    "https://www.grandest.fr/wp-content/uploads/2023/12/liste-prestataires-modules-numerique-industrie-1.pdf",
+    "https://respiratory-research.biomedcentral.com/counter/pdf/10.1186/s12931-025-03130-y",
+    "https://pypi.org/project/tpeai/",
+    "https://les-aides.fr/aide/aVkfGYwYjCTB4y8/bpifrance.diagnostic-data-intelligence-artificielle.pdf",
+    "https://edih-bretagne.eu/wp-content/uploads/2024/05/fiche-diag-ia-edih-maj-4.pdf",
+    "https://www.ntechconseil.fr/docs/programmes/FICHE_NTech_IA_TPEPME_V3J.pdf",
+    "https://diaginno.bpifrance.fr/storage/sites/2/2023/10/Catalogue-Diagnostics-Innovation_v6.pdf",
+    "https://fr.wikipedia.org/wiki/Diagnostic_%28intelligence_artificielle%29",
+    "https://arxiv.org/abs/2401.05654"
+  ],
+  "altos_in_returned_urls": [],
+  "limitations": "URLs are a discovery sample, not a complete Google SERP or rank. Absence is not proof of absence in Google."
+}

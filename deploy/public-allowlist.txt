@@ -23,6 +23,7 @@ assets/calcom.js
 assets/reveal.js
 assets/site-nav.js
 assets/audit-page.css
+assets/offer-details.css
 assets/site.css
 assets/site-components.css
 

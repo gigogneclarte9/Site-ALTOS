@@ -1,0 +1,110 @@
+/* Détails des offres Agents IA et Automatisation. */
+.service-offer-page h1.title {
+  font-size: clamp(32px, 5.8vw, 72px);
+  overflow-wrap: break-word;
+}
+
+.service-offer-page .offer-helper {
+  color: var(--ink-2);
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 18px;
+}
+
+.service-offer-page .btn .arrow { flex-shrink: 0; }
+.service-offer-page [id] { scroll-margin-top: 100px; }
+.service-offer-page .hero-meta-row { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.service-offer-page .hero-meta-row .l { overflow-wrap: anywhere; }
+
+.offer-flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  list-style: none;
+  counter-reset: offer-step;
+  margin: 32px 0 0;
+  padding: 0;
+}
+
+.offer-flow > li {
+  counter-increment: offer-step;
+  border-top: 3px solid var(--accent);
+  padding-top: 20px;
+}
+
+.offer-flow > li::before {
+  content: "0" counter(offer-step);
+  display: block;
+  font-family: var(--mono);
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.offer-flow h3,
+.offer-comparison h3,
+.offer-budget h3 {
+  font-family: var(--display);
+  font-size: clamp(25px, 2.5vw, 34px);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.offer-flow p,
+.offer-comparison p,
+.offer-budget p {
+  color: var(--ink-2);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.offer-source {
+  border-top: 1px solid var(--line);
+  margin-top: 32px;
+  padding-top: 20px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.offer-source a { text-decoration: underline; text-underline-offset: 4px; }
+
+.offer-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.offer-comparison article,
+.offer-budget {
+  border: 1px solid var(--ink);
+  padding: clamp(24px, 3vw, 36px);
+}
+
+.offer-comparison article:last-child { background: var(--acid); }
+.offer-budget { margin-top: 40px; background: var(--paper); }
+
+.offer-table-scroll { overflow-x: auto; }
+.offer-table-scroll:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.offer-table { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.6; }
+.offer-table caption { text-align: left; margin-bottom: 18px; }
+.offer-table th,
+.offer-table td { text-align: left; vertical-align: top; border: 1px solid var(--ink); padding: 20px; }
+.offer-table thead { background: var(--ink); color: var(--bg); }
+.offer-table tbody th { width: 22%; }
+.offer-table td { width: 39%; }
+
+@media (max-width: 900px) {
+  .offer-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .offer-flow,
+  .offer-comparison { grid-template-columns: 1fr; }
+  .service-offer-page .hero-meta-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .service-offer-page .audit-hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .offer-table { min-width: 560px; }
+}

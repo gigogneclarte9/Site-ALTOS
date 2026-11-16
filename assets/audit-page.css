@@ -1,5 +1,127 @@
 /* Pages piliers SEO/GEO — extensions au langage visuel ALTOS. */
 
+/* Compléments propres à l'offre Audit IA. */
+.audit-offer-page h1.title {
+  font-size: clamp(34px, 5.8vw, 72px);
+  overflow-wrap: break-word;
+}
+
+.audit-offer-summary {
+  color: var(--ink-2);
+  font-size: 17px;
+  line-height: 1.65;
+  margin-top: 22px;
+}
+
+.audit-offer-page .audit-cta-note {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
+.audit-offer-page .btn .arrow {
+  flex-shrink: 0;
+}
+
+.audit-formats h2,
+.audit-example > h3 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(30px, 3.4vw, 44px);
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.audit-formats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-left: 1px solid var(--ink);
+  border-top: 1px solid var(--ink);
+}
+
+.audit-format {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.audit-format--diagnostic {
+  background: var(--acid);
+}
+
+.audit-format h3 {
+  font-family: var(--display);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.audit-format h3 span {
+  display: block;
+  font-family: var(--mono);
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.audit-format p,
+.audit-example dd {
+  color: var(--ink-2);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.audit-format p { margin: 22px 0; }
+
+.audit-format > a,
+.audit-example > a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.audit-format > a { margin-top: auto; }
+
+.audit-example {
+  border: 1px solid var(--ink);
+  padding: clamp(24px, 4vw, 48px);
+  margin-bottom: 28px;
+}
+
+.audit-example > h3 { max-width: 30ch; margin-bottom: 18px; }
+.audit-example-caption { font-size: 14px; line-height: 1.6; color: var(--ink-2); }
+.audit-example dl { margin: 30px 0; }
+.audit-example dl > div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 28px;
+  border-top: 1px solid var(--line);
+  padding: 22px 0;
+}
+.audit-example dt { font-weight: 600; font-size: 15px; line-height: 1.5; }
+
+@media (min-width: 901px) {
+  .proof-grid.audit-other-proofs { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .audit-formats-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .audit-offer-page .audit-hero-actions .btn,
+  .audit-offer-page .article-cta .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .audit-example dl > div { grid-template-columns: 1fr; gap: 10px; }
+}
+
 .audit-hero-actions {
   display: flex;
   flex-wrap: wrap;

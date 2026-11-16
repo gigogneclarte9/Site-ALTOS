@@ -1,0 +1,15 @@
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /uploads/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /uploads/
+
+User-agent: *
+Allow: /
+Disallow: /uploads/
+
+# Legal pages stay crawlable so search engines can read their noindex meta tag.
+
+Sitemap: https://www.altos-experts.fr/sitemap.xml

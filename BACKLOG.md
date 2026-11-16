@@ -1,5 +1,57 @@
 # Backlog ALTOS
 
+## Priorites visibilite confirmees le 16 novembre 2026
+
+**Retour visuel utilisateur corrigé :** texte invisible au survol de « Voir les cas d’usage » sur Audit IA. Le pseudo-élément de fond sortait du contexte d’empilement du bouton. Correction du composant partagé, couleurs de texte/fond synchronisées sans transition intermédiaire, focus clavier visible et palettes orange/violet/brun prises en compte. Contrastes calculés sur les 23 pages utilisant le composant et CSS servi localement ; preuve dans `../output/seo-offres-2026-11-16/controle-contrastes-boutons.json`. La vérification de rendu navigateur reste distincte.
+
+**Dernière intervention : les quatre corrections demandées après l’audit sont appliquées et contrôlées localement.** [Constats et suivi](docs/seo/PLAN_SEO_PAGES_OFFRES_2026-11-16.md#contrôle-complémentaire-local-seo-smo-et-geo--16-novembre-2026). Aucun déploiement effectué ; rendu navigateur et calendrier restent à vérifier.
+
+- [x] Ajouter `assets/offer-details.css` à la liste de déploiement : omission de l’intégration des deux offres.
+- [x] Corriger la règle de grille à deux cartes sur Audit IA par un sélecteur plus spécifique.
+- [x] Corriger `ALTOS.FR` dans l’image sociale commune ; dimensions réelles et textes alternatifs alignés dans les 22 pages qui l’utilisent.
+- [x] Aligner le CTA de la page des cas sur le premier diagnostic gratuit sans promesse de feuille de route.
+- [ ] Clarifier le périmètre des chiffres historiques recrutement/bilans avant de les mettre davantage en avant.
+
+L’utilisateur a autorisé ces quatre corrections après le contrôle. Preuves : `../output/seo-offres-2026-11-16/corrections-verifiees.json`. Les chiffres historiques des cas restent un sujet distinct ; ils n’ont pas été modifiés.
+
+**Dernière étape : les trois pages offres sont intégrées localement, non publiées.** Audit IA, Agents IA et Automatisation ont leurs contenus, métadonnées et FAQ alignés. Les missions recrutement et bilans disposent d’ancres publiques et de liens réciproques. La note du quiz évoque désormais l’audit complet payant de cinq jours. Aucun montant ajouté. Contrôles statiques et HTTP local réussis ; contrôle visuel ordinateur/mobile encore à effectuer, accès navigateur indisponible.
+
+**Avancement :** [contrôle technique public](docs/seo/AUDIT_SEO_TECHNIQUE_2026-11-16.md), [plan SEO et bilan d’intégration](docs/seo/PLAN_SEO_PAGES_OFFRES_2026-11-16.md) disponibles. Le point 1 reste partiellement ouvert pour les exclusions Search Console ; l’association requête/page reste à vérifier. Prochaine action : vérifier le rendu et le parcours de rendez-vous, puis préparer la publication selon le processus du projet. Les changements ne sont pas en production.
+
+- [x] Contrôler en production les 20 pages du sitemap, robots, canonical, directives d’indexation, liens internes, redirections et vraie réponse 404.
+- [ ] Compléter avec les cinq URL exclues et leurs motifs Google dès réception.
+- [x] Réaligner localement le lastmod du micro-audit et des pages modifiées ; resserrer les descriptions de cas-usage.html.
+- [ ] Resserrer les métadonnées des trois articles du Journal lors de leur lot.
+- [ ] Pour le lot mesure, préserver les paramètres de campagne lors de la redirection /index.html vers /.
+
+Cette section prévaut sur l’ordre des anciens P0/P1/P2 ci-dessous pour le chantier acquisition. Décision : priorité au référencement naturel ; amélioration complète du micro-audit ensuite. Intégration locale autorisée, sans déploiement. Diagnostic de référence : 13 novembre 2026, 1 455 impressions et 18 clics Google du 11 août au 10 novembre ; ces clics ne constituent pas un décompte de visiteurs ou de prospects.
+
+- [ ] **1. Indexation** : examiner les cinq URL exclues et leurs motifs Search Console dès réception ; comparer pages importantes, sitemap et indexation ; corriger les obstacles réellement identifiés. Les 20 URL du sitemap répondaient en HTTP 200 au dernier contrôle : pas de refonte systématique du sitemap.
+- [x] **2. Ciblage et plan éditorial** : recherches prioritaires sélectionnées, comparaison ciblée réalisée, intentions affectées aux pages dans le [plan du 16 novembre](docs/seo/PLAN_SEO_PAGES_OFFRES_2026-11-16.md). Correspondances proposées à confirmer avec un filtre page + requête ; aucun volume de marché ni classement Google France certifié déduit des résultats web.
+- [ ] **3. Pages existantes** : intégration locale des trois pages terminée ; finaliser le contrôle visuel, puis publier. Formats confirmés et harmonisés ; aucun gain SEO mesuré avant publication.
+- [ ] **4. Occitanie** : créer une page régionale utile, ancrée dans l’Aude, avec modalités d’intervention et références réelles ; maintenir les pages nationales, sans duplication par ville.
+- [ ] **5. Contenus et liens externes** : préparer les contenus par problème métier et les relais pertinents de partenaires/réseaux. Préparation possible pendant 3 et 4 ; aucun envoi de campagne ou message externe n’est autorisé par cette mise à jour.
+- [ ] **6. Conversion du micro-audit** : après les premières améliorations SEO publiées, traiter promesse, compteur, formulaire, bilan, emails et suivi commercial, sans attendre un seuil de trafic arbitraire.
+- [ ] **Transversal dès le départ** : conserver la référence Search Console, dater les changements et suivre impressions/clics/positions par page et recherche ciblée ; choisir une mesure simple des visites et sources. Aucun outil choisi ou installé ; le suivi détaillé du questionnaire vient avec le lot conversion.
+
+Sous-lots éditoriaux :
+
+- [x] Audit IA : préparer les textes exacts à relire avec les trois formats confirmés et une synthèse du cas patrimoine, sans prix affiché.
+- [x] Audit IA : textes intégrés, FAQ/métadonnées alignées et note du quiz corrigée ; audit complet de cinq jours, payant, sans prix affiché.
+- [x] Agents IA : mission du cabinet de recrutement, contenu du projet, coûts initiaux/récurrents et pilotage ; maintenance à convenir et prototype distinct de la production.
+- [x] Automatisation : flux avant/après des bilans, choix du premier processus, intégrations, transmission et exploitation. Pas de nouvelle mise en avant des gains chiffrés sans périmètre de mesure clarifié.
+- [x] Maillage des preuves : ancres publiques et liens réciproques, sans liens vers les Markdown privés.
+- [x] Contrôles locaux : FAQ visible/JSON-LD, métadonnées, dates, liens, ancres, HTML et composants partagés. Preuves : `../output/seo-offres-2026-11-16/verification.json`.
+- [ ] Avant publication : vérifier visuellement ordinateur/mobile, tableau défilant et accès aux missions, ainsi que l’ouverture du rendez-vous. Relire la version locale ; ajuster la date de modification si le contenu change ultérieurement.
+
+Points conservés pour le lot 6 : compteur dix questions/onze étapes ; articulation « aucune obligation »/recontact sous 48 heures ouvrées ; consentement enregistré automatiquement sans choix distinct ; promesse de réception du bilan sans envoi automatique au prospect identifié ; origine actuellement fixe `micro_audit_web`. Téléphone facultatif, outil de mesure, configuration email et modalités du suivi par le collègue restent à décider. Mesurer les enregistrements réussis, puis les contacts qualifiés et rendez-vous confirmés ; ne pas assimiler ces derniers aux clics sur les boutons.
+
+Déjà réalisé en août : socle SEO technique, trois pages offres, optimisation des dix études de cas, données structurées et maillage du Journal. Ne pas recommencer ces travaux sans besoin identifié. Les observations du 13 novembre ne valent pas nouveau contrôle de production au 16 novembre.
+
+Contexte complet et historique : [note de reprise](../REPRISE_PROJET_ALTOS.md). Ordre également repris dans la [roadmap](docs/ROADMAP_PRODUIT.md).
+
+## Backlog historique
+
 Analyse initiale realisee sans modification du code applicatif.
 
 ## Documents associes
@@ -294,7 +346,7 @@ Analyse initiale realisee sans modification du code applicatif.
 - Generation dynamique/publication des pages cas d'usage depuis les contenus en base.
 - Recherche ou filtres avances sur les cas d'usage.
 
-## Prochaine etape recommandee
+## Prochaine etape historique — voir les priorites du 16 novembre en tete
 
 Avant d'ouvrir la Phase 5 editoriale, realiser le premier deploiement VPS OVH et valider le socle en production : site public, API, PostgreSQL, admin, stockage PDF prive, HTTPS, sauvegardes et variables d'environnement.
 

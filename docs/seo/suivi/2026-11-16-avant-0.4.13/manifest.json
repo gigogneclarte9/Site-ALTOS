@@ -1,0 +1,96 @@
+{
+  "captured_at_utc": "2026-11-16T15:39:18.107067+00:00",
+  "deployment_state": "before 0.4.13",
+  "files": [
+    {
+      "url": "https://www.altos-experts.fr/audit-ia-tpe-pme.html",
+      "status": 200,
+      "content_type": "text/html",
+      "captured_at_utc": "2026-11-16T15:39:19.211776+00:00",
+      "sha256": "70d5752ae79112bd1b21d6b661cf89f3b943beb96d3086ce6273bba70e96dbbc",
+      "file": "production-avant/audit-ia-tpe-pme.html"
+    },
+    {
+      "url": "https://www.altos-experts.fr/agents-ia-pme.html",
+      "status": 200,
+      "content_type": "text/html",
+      "captured_at_utc": "2026-11-16T15:39:20.051700+00:00",
+      "sha256": "ccd95c653a0c82bb3f9e2a53e05c512233cf9374749627d246217627f22ee39d",
+      "file": "production-avant/agents-ia-pme.html"
+    },
+    {
+      "url": "https://www.altos-experts.fr/automatisation-processus-pme.html",
+      "status": 200,
+      "content_type": "text/html",
+      "captured_at_utc": "2026-11-16T15:39:20.658605+00:00",
+      "sha256": "4978557e86f01a0c62fe9aa7f18164a6c6487820b7b4552a7e4916b5cc1ea854",
+      "file": "production-avant/automatisation-processus-pme.html"
+    },
+    {
+      "url": "https://www.altos-experts.fr/cas-usage.html",
+      "status": 200,
+      "content_type": "text/html",
+      "captured_at_utc": "2026-11-16T15:39:21.470326+00:00",
+      "sha256": "3e5455ff48039208e0492cd16cdda567d4cd02a2cf4094e75de6760d0e3f483c",
+      "file": "production-avant/cas-usage.html"
+    },
+    {
+      "url": "https://www.altos-experts.fr/micro-audit.html",
+      "status": 200,
+      "content_type": "text/html",
+      "captured_at_utc": "2026-11-16T15:39:21.660235+00:00",
+      "sha256": "c53e9c2e04c741dc1a8cd1346ae3b0797c566b4e1f6eceaa6d5ae3af537f57bd",
+      "file": "production-avant/micro-audit.html"
+    },
+    {
+      "url": "https://www.altos-experts.fr/assets/site-components.css",
+      "status": 200,
+      "content_type": "text/css",
+      "captured_at_utc": "2026-11-16T15:39:21.843926+00:00",
+      "sha256": "80945eb97cdb64ff94ce539a5cf67c3584b7acc99af9994bc8c3cbd290b71e7d",
+      "file": "production-avant/assets__site-components.css"
+    },
+    {
+      "url": "https://www.altos-experts.fr/assets/audit-page.css",
+      "status": 200,
+      "content_type": "text/css",
+      "captured_at_utc": "2026-11-16T15:39:21.967387+00:00",
+      "sha256": "5e74346ddf45d173b8139e21f5e489c4b38dfa6cc62b47f87644046c7cf8d7c8",
+      "file": "production-avant/assets__audit-page.css"
+    },
+    {
+      "url": "https://www.altos-experts.fr/assets/og-default.png",
+      "status": 200,
+      "content_type": "image/png",
+      "captured_at_utc": "2026-11-16T15:39:22.150142+00:00",
+      "sha256": "370185bcc18fca07216195860e330a042c53391039b8bdc2ac61c79b525cde9f",
+      "file": "production-avant/assets__og-default.png"
+    },
+    {
+      "url": "https://www.altos-experts.fr/robots.txt",
+      "status": 200,
+      "content_type": "text/plain",
+      "captured_at_utc": "2026-11-16T15:39:22.328046+00:00",
+      "sha256": "12ff80b2689b267dc3474fe37c545beacdcbaafe693933db53cd5aad7aa92121",
+      "file": "production-avant/robots.txt"
+    },
+    {
+      "url": "https://www.altos-experts.fr/sitemap.xml",
+      "status": 200,
+      "content_type": "text/xml",
+      "captured_at_utc": "2026-11-16T15:39:22.485885+00:00",
+      "sha256": "58419112525762a145469ec38ef12fa65296a99517a065c0816dc4dddc864768",
+      "file": "production-avant/sitemap.xml"
+    },
+    {
+      "url": "https://www.altos-experts.fr/api/health",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "captured_at_utc": "2026-11-16T15:39:22.663845+00:00",
+      "sha256": "4ecac480b05f019bc95090ab6c4fd506464686d46d35624df0d45936fb0e1c14",
+      "file": "production-avant/api__health.json"
+    }
+  ],
+  "gsc_export_sha256": "c38a8f240eb6c075bba9ec09ffb525414acbfd22f42ed2a71e756b3b977adecf",
+  "search_console_limitation": "No current authenticated connection; provided export ends 2026-11-10, page/query tables are separate."
+}

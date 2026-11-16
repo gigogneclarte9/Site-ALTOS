@@ -1,0 +1,46 @@
+{
+  "four_corrections": {
+    "deploy_css_included": true,
+    "audit_two_column_override_more_specific": true,
+    "image_domain_visually_verified": "ALTOS-EXPERTS.FR",
+    "case_cta_aligned": true
+  },
+  "shared_image": {
+    "path": "assets/og-default.png",
+    "width": 1731,
+    "height": 909,
+    "bytes": 1284245,
+    "sha256": "df859ae39fae8bb462c6dc9813a45b9bba414a6f9cb5f7d7823301b70349155a",
+    "metadata_updated_pages": [
+      "agents-ia-pme.html",
+      "audit-ia-tpe-pme.html",
+      "automatisation-processus-pme.html",
+      "cas-usage.html",
+      "cas-usage/agence-evenementielle-b2b.html",
+      "cas-usage/cabinet-gestion-patrimoine.html",
+      "cas-usage/chocolatier-multicanal.html",
+      "cas-usage/distribution-froid-commercial.html",
+      "cas-usage/groupe-coiffure-multisite.html",
+      "cas-usage/immobilier-3-poles.html",
+      "cas-usage/installation-frigorifique-tarn.html",
+      "cas-usage/pme-froid-commercial-climatisation.html",
+      "cas-usage/quincaillerie-rurale-multimetiers.html",
+      "cas-usage/services-personne-anomalies.html",
+      "confidentialite.html",
+      "index.html",
+      "journal.html",
+      "journal/120-audits-ia-quick-wins-pme.html",
+      "journal/6-audits-6-secteurs-meme-verdict.html",
+      "journal/pharmacie-officine-ia-audience-oubliee.html",
+      "mentions-legales.html",
+      "micro-audit.html"
+    ],
+    "export": "Imagegen native output retained; shared metadata matches actual dimensions."
+  },
+  "validation": "Static checks and local HTTP. Rendered pages and external calendar remain unverified. Not deployed.",
+  "image_edit": {
+    "tool": "built-in image_gen",
+    "prompt_summary": "Replace only bottom-right ALTOS.FR with ALTOS-EXPERTS.FR, retaining all other text, colors and composition.",
+    "backup": "output/seo-offres-2026-11-16/og-default-avant-correction.png"
+  }
+}

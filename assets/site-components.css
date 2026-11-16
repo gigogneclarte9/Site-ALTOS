@@ -9,10 +9,23 @@
   font-size: 14px;
   font-weight: 500;
   gap: 12px;
+  isolation: isolate;
   overflow: hidden;
   padding: 16px 26px;
   position: relative;
-  transition: color .3s;
+}
+
+/* Apply foreground and background together: keep labels readable throughout hover. */
+.btn:hover,
+.btn:focus-visible {
+  background: var(--accent, #ff5b14);
+  color: var(--on-accent, var(--ink, #0a0a0a));
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--ink, #0a0a0a);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px var(--bg, #fff);
 }
 
 .btn::before {
@@ -21,11 +34,11 @@
   inset: 0;
   position: absolute;
   transform: translateY(101%);
-  transition: transform calc(.4s * var(--anim, 1)) cubic-bezier(.7,0,.3,1);
   z-index: -1;
 }
 
-.btn:hover::before {
+.btn:hover::before,
+.btn:focus-visible::before {
   transform: translateY(0);
 }
 
@@ -38,8 +51,17 @@
   background: var(--ink, #0a0a0a);
 }
 
-.btn--ghost:hover {
+.btn--ghost:hover,
+.btn--ghost:focus-visible {
+  background: var(--ink, #0a0a0a);
   color: var(--bg, #fff);
+}
+
+/* Dark CTA sections use the accent overlay for their outlined buttons. */
+.cta .btn--ghost:hover,
+.cta .btn--ghost:focus-visible {
+  background: var(--accent, #ff5b14);
+  color: var(--on-accent, var(--ink, #0a0a0a));
 }
 
 .btn .arrow {
@@ -57,7 +79,7 @@
   font-weight: 600;
   letter-spacing: 0.01em;
   padding: 24px 36px;
-  transition: transform .2s ease, box-shadow .2s ease, color .3s;
+  transition: transform .2s ease, box-shadow .2s ease;
 }
 
 .btn--big:hover {
@@ -73,14 +95,16 @@
 .btn--diag {
   background: var(--accent, #ff5b14);
   border-color: var(--accent, #ff5b14);
-  color: #fff;
+  color: var(--on-accent, var(--ink, #0a0a0a));
 }
 
 .btn--diag::before {
   background: var(--ink, #0a0a0a);
 }
 
-.btn--diag:hover {
+.btn--diag:hover,
+.btn--diag:focus-visible {
+  background: var(--ink, #0a0a0a);
   color: var(--acid, #d9ff3c);
 }
 
@@ -94,8 +118,14 @@
   background: var(--accent, #ff5b14);
 }
 
-.btn--audit:hover {
-  color: var(--bg, #fff);
+.btn--audit:hover,
+.btn--audit:focus-visible {
+  background: var(--accent, #ff5b14);
+  color: var(--on-accent, var(--ink, #0a0a0a));
+}
+
+.article-cta .btn {
+  color: var(--on-accent, var(--ink, #0a0a0a));
 }
 
 .reveal {

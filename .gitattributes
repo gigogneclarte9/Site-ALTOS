@@ -1,0 +1,2 @@
+# Preserve exact HTTP snapshot bytes for the pre-release SHA-256 manifests.
+docs/seo/suivi/*/production-avant/** -text

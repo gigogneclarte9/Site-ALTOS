@@ -6,6 +6,37 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 
 ## [Unreleased]
 
+## [0.4.13] - 2026-11-16
+
+### Corrige
+
+- Boutons partagés : fond de survol contenu dans le bouton, texte et fond changés simultanément, suppression de la transition de fond susceptible de masquer le texte à l’entrée ou à la sortie. Focus clavier visible.
+- Contrastes des boutons sur fonds orange, violet et brun adaptés ; « Voir les cas d’usage » passe en blanc sur noir au survol et au focus clavier.
+
+- Ajout de la feuille de style des nouvelles offres à la liste de déploiement public.
+- Priorité CSS de la grille des deux cartes Audit IA corrigée sur ordinateur.
+- Domaine du visuel social corrigé en `ALTOS-EXPERTS.FR` ; dimensions et textes alternatifs du visuel partagé alignés dans les 22 pages concernées.
+- CTA des cas d’usage aligné : échange gratuit de 30 minutes, audit complet et feuille de route distincts et payants.
+
+### Modifie
+
+- Analyses regroupées dans `docs/seo/`, avec état avant publication, export Search Console original, fenêtres historiques de 7/28/92 jours et protocole de comparaison. Les relevés web ne sont pas présentés comme des rangs Google France.
+
+- Pages Audit IA, Agents IA et Automatisation enrichies pour le référencement naturel : offres, livrables, exemples documentés et suivi des projets. Aucun prix ajouté.
+- Audit IA : distinction quiz gratuit / diagnostic gratuit de 30 minutes / audit complet payant de cinq jours ; correction de la note du micro-audit.
+- Agents IA : mission du cabinet de recrutement, contenu du projet, pilotage et postes de coûts ; prototype distingué de la production.
+- Automatisation : préparation des bilans avant/après, choix du premier processus, intégrations, transmission et maintenance à convenir.
+- Ancres publiques et liens réciproques vers les deux missions livrées ; métadonnées, FAQ et dates du sitemap alignées avec les modifications locales.
+
+### Verifie
+
+- Palettes des boutons contrôlées sur les 23 pages publiques utilisant le composant : contraste calculé minimal 5,36:1 pour les combinaisons vérifiées, 19,8:1 pour le bouton secondaire sur Audit IA. CSS corrigé servi en HTTP 200 local. Calcul sur les sources, sans validation du rendu navigateur.
+
+- Quatre corrections contrôlées localement ; visuel corrigé inspecté, fichiers liés inclus au déploiement et métadonnées de l’image cohérentes avec son export réel.
+
+- HTML, liens et ancres locales, fichiers liés, canonical, données structurées, huit FAQ synchronisées par page offre et sitemap de vingt URL ; cinq pages servies en HTTP 200 localement.
+- Navigation et pied de page partagés synchronisés. Contrôle visuel ordinateur/mobile encore à effectuer : accès navigateur indisponible. Modifications locales, non publiées.
+
 ## [0.4.12] - 2026-10-09
 
 ### Corrige

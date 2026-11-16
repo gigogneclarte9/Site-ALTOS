@@ -1,0 +1,121 @@
+{
+  "method": "Source palette contrast calculation, not browser rendering",
+  "pages": {
+    "404.html": {
+      "ghost_hover_focus": 17.85,
+      "accent_buttons": 5.36,
+      "diagnostic_hover_focus": 15.57
+    },
+    "agents-ia-pme.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "audit-ia-tpe-pme.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "automatisation-processus-pme.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "cas-usage/agence-evenementielle-b2b.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "cas-usage/cabinet-gestion-patrimoine.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "cas-usage/chocolatier-multicanal.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "cas-usage/distribution-froid-commercial.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "cas-usage/groupe-coiffure-multisite.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "cas-usage/immobilier-3-poles.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "cas-usage/installation-frigorifique-tarn.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "cas-usage/pme-froid-commercial-climatisation.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "cas-usage/quincaillerie-rurale-multimetiers.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "cas-usage/services-personne-anomalies.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "cas-usage.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.29,
+      "diagnostic_hover_focus": 17.27
+    },
+    "confidentialite.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "index.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "journal/120-audits-ia-quick-wins-pme.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "journal/6-audits-6-secteurs-meme-verdict.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "journal/pharmacie-officine-ia-audience-oubliee.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "journal.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "mentions-legales.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    },
+    "micro-audit.html": {
+      "ghost_hover_focus": 19.8,
+      "accent_buttons": 6.37,
+      "diagnostic_hover_focus": 17.27
+    }
+  },
+  "local_css_http": 200
+}
