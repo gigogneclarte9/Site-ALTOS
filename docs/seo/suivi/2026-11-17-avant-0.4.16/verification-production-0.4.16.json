@@ -1,0 +1,372 @@
+{
+  "checked_at_utc": "2026-11-17T09:10:07.935002+00:00",
+  "release_commit": "e2f7b020f80860c7255ffe5b2ebb12c79a6f1589",
+  "deployment_start_utc": "2026-11-17T09:09:42Z",
+  "deployment_end_utc": "2026-11-17T09:09:50Z",
+  "public_files": [
+    {
+      "file": "404.html",
+      "http_status": 404,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "c0f0c085e4aa10e4dc9adb2a365fe5a3eedf530e956ec761097e0c4301291173",
+      "matches_release_commit": true
+    },
+    {
+      "file": "agents-ia-pme.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "6eacce68cb36874b1292e9c1009397b4eb0f302c70dd2778a9d205f38b54b839",
+      "matches_release_commit": true
+    },
+    {
+      "file": "assets/audit-page.css",
+      "http_status": 200,
+      "content_type": "text/css",
+      "cache_control": null,
+      "sha256": "d84c7b32fcd30a71f59bacd9cb4e33f68c5e911e82255ed19f79ad7b9d4f6de9",
+      "matches_release_commit": true
+    },
+    {
+      "file": "assets/calcom.js",
+      "http_status": 200,
+      "content_type": "application/javascript",
+      "cache_control": null,
+      "sha256": "08b805da53667f5c4374596a430fdaa6a8558daced52aa038edc6fce19c78c11",
+      "matches_release_commit": true
+    },
+    {
+      "file": "assets/case-filters.js",
+      "http_status": 200,
+      "content_type": "application/javascript",
+      "cache_control": null,
+      "sha256": "c7f7297c68477300bdb5ce4893a32c67b7af2b6c83f95c23c0bf47daa969e2a3",
+      "matches_release_commit": true
+    },
+    {
+      "file": "assets/charte-ambassadeurs-ia.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "cache_control": null,
+      "sha256": "1295c0b637e5e68868e2af2a133f03699cce103f685a0860e9e515f0244a670b",
+      "matches_release_commit": true
+    },
+    {
+      "file": "assets/nicolas-darcos.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "cache_control": null,
+      "sha256": "fe0348d8cb5f9a943da6110104caef91cb52f6dc89d25be74fe70206097226b1",
+      "matches_release_commit": true
+    },
+    {
+      "file": "assets/offer-details.css",
+      "http_status": 200,
+      "content_type": "text/css",
+      "cache_control": null,
+      "sha256": "4df2789dd952d3de2d7116273cab3e725a7f0a4064f572cffbf05ce038b411f9",
+      "matches_release_commit": true
+    },
+    {
+      "file": "assets/og-default.png",
+      "http_status": 200,
+      "content_type": "image/png",
+      "cache_control": null,
+      "sha256": "df859ae39fae8bb462c6dc9813a45b9bba414a6f9cb5f7d7823301b70349155a",
+      "matches_release_commit": true
+    },
+    {
+      "file": "assets/reveal.js",
+      "http_status": 200,
+      "content_type": "application/javascript",
+      "cache_control": null,
+      "sha256": "43e3f9c4d3027311e338d58b05436b8fb3f1984b62ee0d6deee9fa43eb3ef725",
+      "matches_release_commit": true
+    },
+    {
+      "file": "assets/site-components.css",
+      "http_status": 200,
+      "content_type": "text/css",
+      "cache_control": null,
+      "sha256": "b3fc9ae989b4a32b7518624751d2c6b1220eed898ce257b12e4f9e80485d1da0",
+      "matches_release_commit": true
+    },
+    {
+      "file": "assets/site-nav.js",
+      "http_status": 200,
+      "content_type": "application/javascript",
+      "cache_control": null,
+      "sha256": "d1fbc2e4216cb7d75bc317a529d0ad9ea2b5cd307e48e600413fcdbbaf7662c4",
+      "matches_release_commit": true
+    },
+    {
+      "file": "assets/site.css",
+      "http_status": 200,
+      "content_type": "text/css",
+      "cache_control": null,
+      "sha256": "c1f7843b44c91f9b06af37f72474827eab9e237182ac123e6798547d0809fdf4",
+      "matches_release_commit": true
+    },
+    {
+      "file": "audit-ia-tpe-pme.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "1ea39aacd3e985b609e573909ebaa87e835da7f7acec707ddeaefdfb760400ae",
+      "matches_release_commit": true
+    },
+    {
+      "file": "automatisation-processus-pme.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "916c6ebc97798790a177a03c5c281798060c45ba563eda630e4a7961aa8921f0",
+      "matches_release_commit": true
+    },
+    {
+      "file": "cas-usage.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "1f733e8ddfcff82329d8c77b71453750d040e6dc3fdff4ba4152903f457cb70d",
+      "matches_release_commit": true
+    },
+    {
+      "file": "cas-usage/_case-style.css",
+      "http_status": 200,
+      "content_type": "text/css",
+      "cache_control": null,
+      "sha256": "ba048bb79b367b908f2f2872da3a0f4e9f0bdaaddca0a62e58732e0494902849",
+      "matches_release_commit": true
+    },
+    {
+      "file": "cas-usage/agence-evenementielle-b2b.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "f4e0250a6cc0ff2d8c4240f6856f4c258d143b998b3c4e57e9a3eaf82ccea8f0",
+      "matches_release_commit": true
+    },
+    {
+      "file": "cas-usage/cabinet-gestion-patrimoine.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "436be56e69b46f3c38d9401e9a3d5705cc7dcbe2383d0e88418f0cbdac9b44f2",
+      "matches_release_commit": true
+    },
+    {
+      "file": "cas-usage/chocolatier-multicanal.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "adc62ae10a538eca27215156b6a9219f1eee6a29b24216562c163792fbc2e4a4",
+      "matches_release_commit": true
+    },
+    {
+      "file": "cas-usage/distribution-froid-commercial.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "5dbb1880ec859f6eb45bec04c095e1c596e151ed03260828ed54b9c456c4a95e",
+      "matches_release_commit": true
+    },
+    {
+      "file": "cas-usage/groupe-coiffure-multisite.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "8f25ae5a86a6b39d46f4428794857c5a8824adbdcb877f855e07c7fbfde96264",
+      "matches_release_commit": true
+    },
+    {
+      "file": "cas-usage/immobilier-3-poles.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "31535be78273f1d70e21e8fc646e3aba846bd3db979ca8b8f833c202e3be008a",
+      "matches_release_commit": true
+    },
+    {
+      "file": "cas-usage/installation-frigorifique-tarn.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "9e0c7fa13efa54171c8254b388f621c33027171c5abc53b70944fb3244c74c63",
+      "matches_release_commit": true
+    },
+    {
+      "file": "cas-usage/pme-froid-commercial-climatisation.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "2f668fa50fee6df0c186fa480cb6c0f063ae89ff9130b98c1c45139b8ef5162a",
+      "matches_release_commit": true
+    },
+    {
+      "file": "cas-usage/quincaillerie-rurale-multimetiers.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "e08608d295ae7eeebc731cf9a9a110a053adcd5f80284a988762a83b9cfb08a1",
+      "matches_release_commit": true
+    },
+    {
+      "file": "cas-usage/services-personne-anomalies.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "8668954f84e0a1cf760805802f122226ca5b984c4b4ab2dd1254117bb36e2e88",
+      "matches_release_commit": true
+    },
+    {
+      "file": "confidentialite.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "b9fe9725076a9bd522cb02713003a2e11d45e02913203e746848e3abd4cf35b9",
+      "matches_release_commit": true
+    },
+    {
+      "file": "consultant-ia-occitanie.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "e3c3cd9a39bef71e044d46f1bde44439c11cdcbfe0913170cf83275f56a2a67f",
+      "matches_release_commit": true
+    },
+    {
+      "file": "index.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "df8a3f607b9b72da934d980e87f466cc48d8c65774b48d1aa505d30c23bb9a0b",
+      "matches_release_commit": true
+    },
+    {
+      "file": "journal.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "172d8059846cf77688a5ec6220cb8d4e41d4fdcb3e200d01a5a43f9dfd9d68d5",
+      "matches_release_commit": true
+    },
+    {
+      "file": "journal/120-audits-ia-quick-wins-pme.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "e2183a976c078e845cb47d13a54c69237913b6c33d8e79ed1928434e95f82596",
+      "matches_release_commit": true
+    },
+    {
+      "file": "journal/6-audits-6-secteurs-meme-verdict.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "597207a7472ab3b5c7d52c0006c21039098e4a323bf64751ab436129855c13ce",
+      "matches_release_commit": true
+    },
+    {
+      "file": "journal/pharmacie-officine-ia-audience-oubliee.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "983c52ab9dcfe018672a04411ba5c8a3d12094324fa0e8256062263e5bccfe49",
+      "matches_release_commit": true
+    },
+    {
+      "file": "mentions-legales.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "b1c122df1829dac65db63c4e9bcc98b26b878b1466067baea6a831e1a977c63a",
+      "matches_release_commit": true
+    },
+    {
+      "file": "micro-audit.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "cache_control": null,
+      "sha256": "808693795dc12022906c62ab62efd91030f2824ae36b2e88dd88cf3e48aba155",
+      "matches_release_commit": true
+    },
+    {
+      "file": "micro-audit.js",
+      "http_status": 200,
+      "content_type": "application/javascript",
+      "cache_control": null,
+      "sha256": "932bb111113f61ca877e529c4435324392adc31e8e91db5f3c4e96fc687dc8d4",
+      "matches_release_commit": true
+    },
+    {
+      "file": "robots.txt",
+      "http_status": 200,
+      "content_type": "text/plain",
+      "cache_control": null,
+      "sha256": "12ff80b2689b267dc3474fe37c545beacdcbaafe693933db53cd5aad7aa92121",
+      "matches_release_commit": true
+    },
+    {
+      "file": "sitemap.xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "cache_control": null,
+      "sha256": "cb4e80e3fa2f623e1fcbbd7d6d556c87df1ca8d9e571ff66a8ea168e9b08e122",
+      "matches_release_commit": true
+    }
+  ],
+  "health": {
+    "status": "ok",
+    "version": {
+      "releaseVersion": "0.4.16",
+      "releaseName": "Maillage des cas et accompagnement régional",
+      "releaseDate": "2026-11-17",
+      "siteVersion": "0.4.16",
+      "adminVersion": "0.3.0"
+    },
+    "databaseConfigured": true,
+    "database": {
+      "ok": true,
+      "latencyMs": 28
+    },
+    "timestamp": "2026-11-17T09:10:07.173Z"
+  },
+  "admin_login_versions_verified": true,
+  "private_paths_and_404": [
+    {
+      "path": "docs/seo/README.md",
+      "http_status": 404
+    },
+    {
+      "path": "docs/seo/suivi/2026-11-17-avant-0.4.16/manifest.json",
+      "http_status": 404
+    },
+    {
+      "path": "server/src/version.ts",
+      "http_status": 404
+    },
+    {
+      "path": ".git/HEAD",
+      "http_status": 404
+    },
+    {
+      "path": "verification-404-0-4-13-inexistante",
+      "http_status": 404
+    }
+  ],
+  "limits": "HTTP/source checks only; no rendered browser or calendar interaction. No lead or email created.",
+  "sitemap_urls_http_200": 21,
+  "occitanie_incoming_pages": [
+    "https://www.altos-experts.fr/",
+    "https://www.altos-experts.fr/audit-ia-tpe-pme.html",
+    "https://www.altos-experts.fr/automatisation-processus-pme.html",
+    "https://www.altos-experts.fr/agents-ia-pme.html",
+    "https://www.altos-experts.fr/cas-usage.html",
+    "https://www.altos-experts.fr/cas-usage/quincaillerie-rurale-multimetiers.html",
+    "https://www.altos-experts.fr/cas-usage/pme-froid-commercial-climatisation.html",
+    "https://www.altos-experts.fr/cas-usage/immobilier-3-poles.html",
+    "https://www.altos-experts.fr/cas-usage/installation-frigorifique-tarn.html"
+  ]
+}

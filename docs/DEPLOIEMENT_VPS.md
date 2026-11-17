@@ -33,6 +33,14 @@ ssh -i "C:\Users\Admin\.ssh\altos_vps_ed25519" -o BatchMode=yes ubuntu@51.210.45
 
 Cette cle ne doit pas etre committee. Seul le chemin local est documente pour faciliter les interventions depuis la machine de developpement.
 
+## Release 0.4.16 du 2026-11-17
+
+- Publiée à 10 h 09 min 50 s (Paris), commit applicatif `e2f7b02` : dix intitulés de cartes corrigés, bouton du quiz clarifié et quatre liens régionaux ajoutés. Site/release 0.4.16, admin 0.3.0.
+- Sauvegarde root uniquement : `/var/lib/altos/backups-local/releases/20261117-before-0.4.16/`, archives API/public 0.4.15, dump ALTOS et états avant/après des services et de Radar.
+- Déploiement habituel après push/pull fast-forward, chemins et service explicitement fixés à ALTOS. Build réussi, aucune migration en attente, seul `altos-api` redémarré. Dépendances conservées, audit production : zéro critique et quatre élevées déjà consignées dans la roadmap.
+- Vérification : 39 fichiers publics conformes au commit, health/base et version admin corrects, chemins privés inaccessibles. Fichiers et processus Radar inchangés, Nginx/PostgreSQL non redémarrés. Rendu navigateur et parcours connectés non vérifiés.
+- [État avant publication, mesures et rapport](seo/suivi/2026-11-17-avant-0.4.16/README.md). Ce lot est consigné dans la fenêtre de suivi des modifications du 16 novembre.
+
 ## Release 0.4.15 du 2026-11-16
 
 - Page Occitanie et liens internes publiés à 17 h 15 min 09 s (Paris), soit 16:15:09 UTC. Commit applicatif `4bf07730a69518d526cd2f952ef8ad44f41fb4c9` ; release/site 0.4.15, admin 0.3.0.

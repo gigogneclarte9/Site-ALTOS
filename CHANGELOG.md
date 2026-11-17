@@ -8,6 +8,8 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 
 ## [0.4.16] - 2026-11-17
 
+- Publiée le 17 novembre à 10 h 09 min 50 s (Paris). Les 39 fichiers publics correspondent au commit ; API/base et versions vérifiées. État avant publication et rapport conservés dans le suivi SEO. Radar inchangé.
+
 - Quatre liens contextualisés vers la page Occitanie depuis les cas Aveyron, froid commercial dans l’Hérault, immobilier à Montpellier et l’index des cas. Dates de modification de ces quatre pages alignées dans le sitemap, ainsi que dans le JSON-LD lorsqu’il est présent.
 
 - Maillage interne, premier lot : dix intitulés tronqués remplacés par des libellés complets dans les cartes « Autres audits » de huit fiches. Bouton du Journal vers le questionnaire renommé « Faire le micro-audit gratuit ». Destinations des liens conservées.

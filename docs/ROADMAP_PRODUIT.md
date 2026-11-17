@@ -1,5 +1,7 @@
 # Roadmap produit ALTOS
 
+**Maillage publié en 0.4.16 le 17 novembre à 10 h 09 min 50 s (Paris).** Dix intitulés de cartes corrigés, bouton du micro-audit clarifié et quatre liens vers Occitanie ajoutés depuis les cas régionaux et leur index. [Référence avant publication et contrôles](seo/suivi/2026-11-17-avant-0.4.16/README.md). La navigation par problème métier reste à préparer ; le suivi d’indexation et les comparaisons Search Console restent aux échéances documentées.
+
 ## Priorite actuelle — visibilite organique (16 novembre 2026)
 
 **Lot Occitanie validé et publié en 0.4.15 le 16 novembre à 17 h 15 min 09 s (Paris).** `consultant-ia-occitanie.html` présente l’implantation à Montferrand (Aude), les modalités sur site/à distance à convenir, les trois prestations et le cas d’audit du Tarn. Liens depuis l’accueil, les trois offres et le cas régional ; 21 URL du sitemap en HTTP 200 et 39 fichiers publics conformes au commit. HTML, liens, métadonnées et FAQ contrôlés ; rendu navigateur non vérifié automatiquement. [Bilan et sources](seo/PLAN_SEO_PAGES_OFFRES_2026-11-16.md#lot-occitanie--intégration-locale), [suivi avant/après](seo/suivi/2026-11-16-avant-0.4.15/README.md).
