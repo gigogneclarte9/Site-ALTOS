@@ -2,7 +2,18 @@
 
 **Maillage publié en 0.4.16 le 17 novembre à 10 h 09 min 50 s (Paris).** Dix intitulés de cartes corrigés, bouton du micro-audit clarifié et quatre liens vers Occitanie ajoutés depuis les cas régionaux et leur index. [Référence avant publication et contrôles](seo/suivi/2026-11-17-avant-0.4.16/README.md). La navigation par problème métier reste à préparer ; le suivi d’indexation et les comparaisons Search Console restent aux échéances documentées.
 
-## Priorite actuelle — visibilite organique (16 novembre 2026)
+## Finitions SEO à réaliser après la version 0.4.16
+
+Points consignés le 17 novembre 2026, à traiter dans cet ordre :
+
+- [ ] **Vérification visuelle ordinateur et mobile** : relire les pages modifiées, contrôler les cartes « Autres audits », les quatre nouveaux liens régionaux et le bouton « Faire le micro-audit gratuit ». Vérifier la lisibilité au survol, le retour à la ligne et les destinations ; les contrôles HTTP/source déjà réalisés ne remplacent pas cette passe visuelle.
+- [ ] **Article « Six audits, six secteurs »** : ajouter un lien contextualisé vers `agents-ia-pme.html` dans le passage sur l’assistant de gestion des mails. Les liens vers Audit IA et Automatisation existent déjà.
+- [ ] **Article « 120 audits »** : relier les exemples pertinents aux missions détaillées correspondantes sur la page des cas. Vérifier au préalable la concordance de la mission, des descriptions et des chiffres ; créer une ancre de destination si nécessaire et distinguer résultats mesurés et gains projetés.
+- [ ] **Chantier ultérieur, plus conséquent** : préparer une navigation des cas par problème métier (demandes clients, comptes rendus, veille commerciale, tâches administratives), en complément des secteurs existants. Ce chantier n’est pas nécessaire pour terminer les petites corrections ci-dessus.
+- [ ] **Suivi d’indexation** : vérifier la page Occitanie et les trois cas ayant fait l’objet de demandes le 16 novembre lors des points des 23 et 30 novembre ; enregistrer les constats dans le suivi SEO.
+- [ ] **Comparaisons SEO** : analyser les périodes se terminant le 30 novembre puis le 14 décembre, après consolidation Search Console. Tenir compte des publications rapprochées des 16 et 17 novembre. Aucun rappel automatique programmé.
+
+## Priorite actuelle — visibilite organique (17 novembre 2026)
 
 **Lot Occitanie validé et publié en 0.4.15 le 16 novembre à 17 h 15 min 09 s (Paris).** `consultant-ia-occitanie.html` présente l’implantation à Montferrand (Aude), les modalités sur site/à distance à convenir, les trois prestations et le cas d’audit du Tarn. Liens depuis l’accueil, les trois offres et le cas régional ; 21 URL du sitemap en HTTP 200 et 39 fichiers publics conformes au commit. HTML, liens, métadonnées et FAQ contrôlés ; rendu navigateur non vérifié automatiquement. [Bilan et sources](seo/PLAN_SEO_PAGES_OFFRES_2026-11-16.md#lot-occitanie--intégration-locale), [suivi avant/après](seo/suivi/2026-11-16-avant-0.4.15/README.md).
 
@@ -10,14 +21,14 @@
 
 **Trois pages offres publiées.** Audit IA, Agents IA et Automatisation enrichies ; cas livrés reliés aux offres par des ancres publiques. Quiz et diagnostic de 30 minutes gratuits, audit complet payant de cinq jours ; aucun montant ajouté. Contrôles statiques et HTTP réussis. L’accès navigateur est indisponible pour la vérification visuelle.
 
-**Avancement :** [contrôle technique public](seo/AUDIT_SEO_TECHNIQUE_2026-11-16.md) et [ciblage avec bilan d’intégration](seo/PLAN_SEO_PAGES_OFFRES_2026-11-16.md) disponibles. Les 20 pages du sitemap public étaient accessibles sans blocage détecté ; les cinq exclusions Google restent à qualifier. Les contenus locaux précisent les postes de coûts et l’organisation du suivi, sans promettre de forfait ou de maintenance inclus par défaut.
+**Avancement :** [contrôle technique public et qualification des exclusions](seo/AUDIT_SEO_TECHNIQUE_2026-11-16.md) et [ciblage avec bilan d’intégration](seo/PLAN_SEO_PAGES_OFFRES_2026-11-16.md) disponibles. Les 21 pages du sitemap répondent en HTTP 200 au contrôle du 17 novembre. Les exclusions ont été qualifiées : trois cas explorés mais non indexés à suivre ; pages légales en noindex et variantes redirigées conformes au choix du site. Les contenus précisent les postes de coûts et l’organisation du suivi, sans promettre de forfait ou de maintenance inclus par défaut.
 
 La priorité confirmée avec l’utilisateur est d’amener des visiteurs pertinents par le référencement naturel, d’abord en Occitanie avec un ancrage dans l’Aude, puis au niveau national. Cette séquence prévaut sur la proposition du 13 novembre de commencer par la conversion du micro-audit et sur l’ordre historique des phases produit ci-dessous.
 
 | Ordre | Chantier | Résultat attendu |
 | --- | --- | --- |
 | 1 | Indexation, sitemap et obstacles techniques | Trois cas (coiffure multisite, patrimoine, immobilier) : « Explorée, actuellement non indexée ». Aucun blocage public constaté. Demandes d’indexation des trois URL effectuées le 16 novembre, confirmées par l’utilisateur ; indexation effective à contrôler les 23 et 30 novembre. Deux pages légales en noindex et deux accueils redirigés : exclusions attendues. Voir le complément de l’audit technique. |
-| 2 | Recherches et intentions prioritaires | Liste courte de recherches pertinentes reliées aux pages, après analyse Search Console et comparaison ciblée des résultats concurrents. Peut avancer sans attendre les cinq URL. |
+| 2 | Recherches et intentions prioritaires | Analyse des 79 requêtes de l’export disponible réalisée et documentée ; ciblage des offres appliqué. Affiner les priorités avec les prochaines données consolidées, sans recommencer l’analyse historique. |
 | 3 | Pages existantes | Audit IA et Agents IA renforcées en premier, puis Automatisation : offres claires, contenu utile, preuves clients et maillage adaptés. |
 | 4 | Page Occitanie | Première version validée et publiée en 0.4.15 ; état avant publication archivé. Suivre indexation et résultats à J+14/J+28 après consolidation. Implantation et références réelles, pages nationales conservées. |
 | 5 | Contenus et références externes | Contenus par problème métier et relais pertinents préparés ; préparation possible pendant les étapes 3 et 4. |
