@@ -4,6 +4,8 @@ Ce dossier rassemble le diagnostic, les décisions éditoriales et les comparais
 
 ## Point d’entrée
 
+- [Suivi du maillage régional et des intitulés 0.4.16](suivi/2026-11-17-avant-0.4.16/README.md).
+
 - [Suivi de la page Occitanie et du maillage régional 0.4.15](suivi/2026-11-16-avant-0.4.15/README.md).
 - [Référence avant la release 0.4.13 et protocole de mesure](suivi/2026-11-16-avant-0.4.13/README.md).
 - [État du déploiement et vérifications de production](suivi/2026-11-16-avant-0.4.13/DEPLOIEMENT.md).

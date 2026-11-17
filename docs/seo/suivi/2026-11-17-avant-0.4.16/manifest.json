@@ -1,0 +1,98 @@
+{
+  "before_release": "0.4.15",
+  "next_release": "0.4.16",
+  "local_base_commit": "741301e4c8a7d04f52123069981c7fa32652c5eb",
+  "responses": [
+    {
+      "url": "https://www.altos-experts.fr/cas-usage.html",
+      "file": "production-avant/cas-usage.html",
+      "status": 200,
+      "captured_at_utc": "2026-11-17T09:08:20.990142+00:00",
+      "sha256": "e3d278f524eff19e4377adf5ea618d14a7c377d2bb1e9e8304f46ffae5c3e73d"
+    },
+    {
+      "url": "https://www.altos-experts.fr/cas-usage/agence-evenementielle-b2b.html",
+      "file": "production-avant/cas-usage__agence-evenementielle-b2b.html",
+      "status": 200,
+      "captured_at_utc": "2026-11-17T09:08:20.917250+00:00",
+      "sha256": "a8bccf15000f773e52fb966de5f7ad14939c8c47eda4f6846b52e5ddedee3444"
+    },
+    {
+      "url": "https://www.altos-experts.fr/cas-usage/cabinet-gestion-patrimoine.html",
+      "file": "production-avant/cas-usage__cabinet-gestion-patrimoine.html",
+      "status": 200,
+      "captured_at_utc": "2026-11-17T09:08:20.959741+00:00",
+      "sha256": "eecb4e0bbfa6780e15ea7f73fae3b66788c55cc39eab177d72555de73b84d8bf"
+    },
+    {
+      "url": "https://www.altos-experts.fr/cas-usage/chocolatier-multicanal.html",
+      "file": "production-avant/cas-usage__chocolatier-multicanal.html",
+      "status": 200,
+      "captured_at_utc": "2026-11-17T09:08:20.979323+00:00",
+      "sha256": "3e360c8c2909c806d90541cc4af2ae68c3e02248e0c3765db71f5b3e3e19ff97"
+    },
+    {
+      "url": "https://www.altos-experts.fr/cas-usage/groupe-coiffure-multisite.html",
+      "file": "production-avant/cas-usage__groupe-coiffure-multisite.html",
+      "status": 200,
+      "captured_at_utc": "2026-11-17T09:08:20.910979+00:00",
+      "sha256": "f2c6b2e5a037edb0206dc819a1c8074d88d5b61c13167a87a1277536c2ba0aa3"
+    },
+    {
+      "url": "https://www.altos-experts.fr/cas-usage/immobilier-3-poles.html",
+      "file": "production-avant/cas-usage__immobilier-3-poles.html",
+      "status": 200,
+      "captured_at_utc": "2026-11-17T09:08:21.088988+00:00",
+      "sha256": "8be5be7e9ab3f81bcf48ca2bda0d44589d6dc49ec5231c66c35d2ed02279fe39"
+    },
+    {
+      "url": "https://www.altos-experts.fr/cas-usage/installation-frigorifique-tarn.html",
+      "file": "production-avant/cas-usage__installation-frigorifique-tarn.html",
+      "status": 200,
+      "captured_at_utc": "2026-11-17T09:08:21.103280+00:00",
+      "sha256": "835569bffb432a37b652cd3bff9cd4eeafb3a5f417bd2156498aa595461b4af0"
+    },
+    {
+      "url": "https://www.altos-experts.fr/cas-usage/pme-froid-commercial-climatisation.html",
+      "file": "production-avant/cas-usage__pme-froid-commercial-climatisation.html",
+      "status": 200,
+      "captured_at_utc": "2026-11-17T09:08:22.181584+00:00",
+      "sha256": "5a6f492c974c65511138bbaf104c583ab77011cab667c7080689a2911152bb02"
+    },
+    {
+      "url": "https://www.altos-experts.fr/cas-usage/quincaillerie-rurale-multimetiers.html",
+      "file": "production-avant/cas-usage__quincaillerie-rurale-multimetiers.html",
+      "status": 200,
+      "captured_at_utc": "2026-11-17T09:08:21.170401+00:00",
+      "sha256": "6a1868544d4e50b91ce81758fba615d2bcaab2b4998aa5c75a307e0ce8412b7e"
+    },
+    {
+      "url": "https://www.altos-experts.fr/cas-usage/services-personne-anomalies.html",
+      "file": "production-avant/cas-usage__services-personne-anomalies.html",
+      "status": 200,
+      "captured_at_utc": "2026-11-17T09:08:21.112603+00:00",
+      "sha256": "a529bbc5b1605a4e10479e4a939f66db88c57288a1bbcafaea3d5b03052ee21f"
+    },
+    {
+      "url": "https://www.altos-experts.fr/journal/120-audits-ia-quick-wins-pme.html",
+      "file": "production-avant/journal__120-audits-ia-quick-wins-pme.html",
+      "status": 200,
+      "captured_at_utc": "2026-11-17T09:08:21.287721+00:00",
+      "sha256": "2ccfe079ab56f26b6f17b3ee8a563175f19a5076465336a2c9d0d9dd77f1c5dd"
+    },
+    {
+      "url": "https://www.altos-experts.fr/sitemap.xml",
+      "file": "production-avant/sitemap.xml",
+      "status": 200,
+      "captured_at_utc": "2026-11-17T09:08:21.249258+00:00",
+      "sha256": "f243f2abbb045cc55ea357f343ba3c1dc6574d611e98daef8114e45e3c012dec"
+    },
+    {
+      "url": "https://www.altos-experts.fr/api/health",
+      "file": "production-avant/api__health",
+      "status": 200,
+      "captured_at_utc": "2026-11-17T09:08:21.263963+00:00",
+      "sha256": "2de9e6e9e0f3b13591d76d96faa8f8993e612108c1e745ecfdbb0ce7f9c745c0"
+    }
+  ]
+}

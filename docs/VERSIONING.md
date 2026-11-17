@@ -1,15 +1,15 @@
 # Versioning ALTOS
 
-Date : 2026-11-16
+Date : 2026-11-17
 
 Objectif : garder une trace claire des versions du site public et de la zone admin, visible dans l'admin et documentee avant chaque commit/release.
 
 ## Version courante
 
 ```text
-Site public : 0.4.15
+Site public : 0.4.16
 Admin       : 0.3.0
-Release     : 0.4.15 - Accompagnement IA en Occitanie
+Release     : 0.4.16 - Maillage des cas et accompagnement régional
 ```
 
 ## Fichiers de reference

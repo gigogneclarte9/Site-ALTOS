@@ -6,6 +6,12 @@ Format inspire de Keep a Changelog, avec version SemVer tant que le projet reste
 
 ## [Unreleased]
 
+## [0.4.16] - 2026-11-17
+
+- Quatre liens contextualisés vers la page Occitanie depuis les cas Aveyron, froid commercial dans l’Hérault, immobilier à Montpellier et l’index des cas. Dates de modification de ces quatre pages alignées dans le sitemap, ainsi que dans le JSON-LD lorsqu’il est présent.
+
+- Maillage interne, premier lot : dix intitulés tronqués remplacés par des libellés complets dans les cartes « Autres audits » de huit fiches. Bouton du Journal vers le questionnaire renommé « Faire le micro-audit gratuit ». Destinations des liens conservées.
+
 ## [0.4.15] - 2026-11-16
 
 - Publiée à 17 h 15 min 09 s (Paris). Contrôles de production réussis : 39 fichiers publics conformes au commit, 21 URL du sitemap en HTTP 200, API/base et versions valides. Radar inchangé ; seul `altos-api` redémarré.
